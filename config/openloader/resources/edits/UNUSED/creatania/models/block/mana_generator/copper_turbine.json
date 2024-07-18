@@ -1,0 +1,52 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "creatania:block/mana_generator/mixer_head"
+	},
+	"elements": [
+		{
+			"name": "MixerCenter",
+			"from": [7.25, 6.75, 2],
+			"to": [9.25, 8.75, 10],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7, 8]},
+			"faces": {
+				"east": {"uv": [12, 3, 14, 11], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [12, 12, 14, 14], "texture": "#1"},
+				"west": {"uv": [12, 3, 14, 11], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [12, 3, 14, 11], "texture": "#1"},
+				"down": {"uv": [12, 3, 14, 11], "rotation": 180, "texture": "#1"}
+			}
+		},
+		{
+			"name": "Mixer wire 2",
+			"from": [8.25, 3.75, 2],
+			"to": [8.25, 11.75, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 8, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 8, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Mixer wire 2",
+			"from": [4.25, 7.75, 2],
+			"to": [12.25, 7.75, 10],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 1, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 8, 8], "rotation": 270, "texture": "#1"},
+				"down": {"uv": [0, 0, 8, 8], "rotation": 270, "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "turbine",
+			"origin": [8, 8, 7.5],
+			"color": 0,
+			"children": []
+		},
+		0,
+		1,
+		2
+	]
+}
