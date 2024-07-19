@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "kubejs:item/trade/purchase_agreement_0",
+		"layer1": "kubejs:item/trade/purchase_agreement_1",
+		"layer2": "kubejs:item/trade/purchase_agreement_2"
+	}
+}
