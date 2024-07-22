@@ -144,7 +144,7 @@ event.create('incomplete_calculation_mechanism', 'create:sequenced_assembly').te
 event.create('netherite_saw').parentModel("kubejs:item/tool/netherite_saw").displayName('下界合金手锯').maxDamage(2653)
 event.create('chromatic_resonator').texture("kubejs:item/tool/chromatic_resonator").displayName('异彩共鸣器').maxDamage(512).rarity(RARITY_UNCOMMON)
 event.create('calculator').texture("kubejs:item/tool/calculator").displayName('计算器').maxDamage(256).rarity(RARITY_UNCOMMON)
-event.create('boot_medium').texture("kubejs:item/tool/boot_medium").displayName('闪存盘').maxDamage(256).rarity(RARITY_UNCOMMON)
+event.create('flash_drive').texture("kubejs:item/tool/boot_medium").displayName('闪存盘').maxDamage(256).rarity(RARITY_UNCOMMON)
 // event.create('thermal_grease').texture("kubejs:item/tool/thermal_grease").displayName('散热硅脂').maxDamage(192).rarity(RARITY_UNCOMMON)
 // event.create('hop_slime').texture("kubejs:item/tool/hop_slime").displayName('高定向热解石莱姆').maxDamage(256).rarity(RARITY_UNCOMMON)
 // event.create('metamorphic_lich_rod').texture("kubejs:item/tool/metamorphic_lich_rod").displayName('巫妖腐化法杖').maxDamage(256).rarity(RARITY_EPIC)
