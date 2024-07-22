@@ -1,0 +1,13 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "creatania:mana/blocks/real"
+    }
+  ],
+  "results": [
+    {
+      "item": "creatania:mana_gel"
+    }
+  ]
+}

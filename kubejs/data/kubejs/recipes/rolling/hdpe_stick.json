@@ -1,0 +1,10 @@
+{
+	"type":"createaddition:rolling",
+	"input": {
+      	"item": "kubejs:matter_plastics"
+	},
+	"result": {
+		"item": "mekanism:hdpe_stick",
+		"count": 2
+	}
+}

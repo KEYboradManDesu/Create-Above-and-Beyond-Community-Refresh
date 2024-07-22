@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "tag": "twilightforest:liveroot"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "results": [
+    {
+      "item": "twilightforest:raw_ironwood",
+      "count": 2
+    }
+  ],
+  "heatRequirement":"lowheated"
+}

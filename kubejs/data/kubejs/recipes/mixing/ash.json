@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "thermal:sawdust"
+    }
+  ],
+  "results": [
+    {
+      "item": "supplementaries:ash",
+      "count": 1
+    }
+  ],
+  "heatRequirement":"lowheated"
+}

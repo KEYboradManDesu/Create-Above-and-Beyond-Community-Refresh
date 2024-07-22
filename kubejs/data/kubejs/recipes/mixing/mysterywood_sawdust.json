@@ -1,0 +1,20 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "kubejs:mysterywood_sawdust",
+      "count": 6
+    }
+  ],
+  "results": [
+    {
+      "item": "forbidden_arcanus:arcane_gold_nugget",
+      "count": 2
+    },
+    {
+      "item": "supplementaries:ash",
+      "count": 4
+    }
+  ],
+  "heatRequirement":"lowheated"
+}

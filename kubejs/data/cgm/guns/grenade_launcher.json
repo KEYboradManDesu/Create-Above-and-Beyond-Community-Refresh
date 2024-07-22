@@ -1,0 +1,36 @@
+{
+  "general": {
+    "rate": 20,
+    "gripType": "cgm:two_handed",
+    "maxAmmo": 2,
+    "recoilAngle": 5.0,
+    "recoilKick": 1.0,
+    "recoilDurationOffset": 0.25
+  },
+  "projectile": {
+    "item": "cgm:grenade",
+    "visible": true,
+    "damage": 20.0,
+    "size": 0.1,
+    "speed": 3,
+    "life": 200,
+    "gravity": true
+  },
+  "sounds": {
+    "fire": "cgm:item.grenade_launcher.fire",
+    "reload": "minecraft:item.bottle.fill_dragonbreath"
+  },
+  "modules": {
+    "zoom": {
+      "yOffset": 5.7,
+      "zOffset": 5.0,
+      "fovModifier": 0.6
+    },
+    "attachments": {
+      "stock": {
+        "yOffset": 8.2,
+        "zOffset": 0.2
+      }
+    }
+  }
+}

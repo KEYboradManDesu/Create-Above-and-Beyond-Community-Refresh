@@ -1,0 +1,502 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": 1,
+			"conditions": [
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 0.075
+				}
+			],
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:apple",
+					"weight": 5,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "奖励你一个苹果",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cookie",
+					"weight": 5,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "奖励你一个曲奇",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pufferfish",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "奖励你一个河豚",
+								"italic": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"conditions": [
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 0.09
+				}
+			],
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "继续。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "一起开箱子。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "在成为骄傲前，不要停下。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "心怀大志。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "种瓜得瓜，种豆得豆。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "成为你自己。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "冒险，或失去机会。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "你比你想象中更为强大。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "永不放弃。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "万事皆有可能。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "你总是在完成它之前觉得它不可能。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "相信自己。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "到那里……",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "你得到了这个。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "证明他们是错的。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "失败是进步中的成功。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "不要放手。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "勇敢点。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "继续尝试。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "比你的借口更为强大。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "现在的每一分钟……",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "对不起。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "坚持是关键。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "今天是个好日子。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "下一个箱子可能就是那个。",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "很近，但又很远……",
+								"italic": false
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:paper",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "打包这个需要很长时间。",
+								"italic": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 2500000,
+					"name": "minecraft:barrel",
+					"functions": [
+						{
+							"function": "minecraft:set_loot_table",
+							"name": "custom:chests/patience_1"
+						},
+						{
+							"function": "minecraft:set_lore",
+							"lore": [
+								{
+									"text": "传说中的奖品在下面等着你。",
+									"italic": true,
+									"color": "gray"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:barrel",
+					"functions": [
+						{
+							"function": "minecraft:set_loot_table",
+							"name": "custom:chests/patience_2"
+						},
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "耐心的奖赏",
+								"italic": false,
+								"color": "dark_green"
+							}
+						},
+						{
+							"function": "minecraft:set_lore",
+							"lore": [
+								{
+									"text": "传说中的奖品……",
+									"italic": true,
+									"color": "gray"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

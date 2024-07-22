@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mekanism:pellet_plutonium"
+    },
+    {
+      "item": "mekanism:pellet_polonium"
+    },
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "item": "avaritia:cosmic_meatballs"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "experience": 10.0,
+  "cookingtime": 200
+}
