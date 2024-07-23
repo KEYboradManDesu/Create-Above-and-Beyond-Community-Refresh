@@ -116,4 +116,10 @@ event.get('forge:circuit_press').add('ae2:calculation_processor_press')
 event.get('forge:circuit_press').add('ae2:engineering_processor_press')
 event.get('forge:circuit_press').add('ae2:logic_processor_press')
 event.get('forge:circuit_press').add('ae2:silicon_press')
+
+event.get('thermal:crafting/dies').add('kubejs:press_rod_die')
+
+event.get('vintageimprovements:curving_heads')
+	.add('#forge:circuit_press')
+	.add('#thermal:crafting/dies')
 })
