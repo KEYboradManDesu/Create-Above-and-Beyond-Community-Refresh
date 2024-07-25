@@ -1,0 +1,1202 @@
+{
+	id: "052B4DEA706D3A24"
+	group: "331B6409EF6A7840"
+	order_index: 3
+	filename: "stage_3"
+	title: "3 &r异彩净化"
+	icon: "thermal:machine_frame"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "章节3开始！"
+			icon: "create:precision_mechanism"
+			x: -1.5d
+			y: -1.0d
+			shape: "hexagon"
+			description: [
+				"在前往光辉感应线圈自动化的路上，你一定会遇到一些新的、不熟悉的任务。"
+				""
+				"再一次抓起你的扳手、填满工具箱、清理一块地皮。"
+				""
+				"建造快乐！"
+			]
+			dependencies: ["780E8AE86250C73D"]
+			hide: true
+			size: 2.0d
+			id: "397232F676CB621B"
+			tasks: [{
+				id: "2236686383D4E61B"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "296358DF5AEC671C"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+		}
+		{
+			title: "神说，要有光"
+			icon: "minecraft:torch"
+			x: -6.5d
+			y: 3.5d
+			shape: "circle"
+			subtitle: "装置 27"
+			description: [
+				"光辉石的转化需要稳定的光源：发光方块或信标光柱。"
+				""
+				"选择你喜欢的方式，并提供必要的准备/自动化。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "3025B5861FE17ADF"
+			tasks: [{
+				id: "7FB92D9DB34672AE"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "你最喜欢的颜色"
+			icon: "minecraft:rose_bush"
+			x: 0.0d
+			y: 7.0d
+			subtitle: "装置 25"
+			description: ["为了生产异彩材料，你需要一种染料，而这个染料正是你需要自动化的。唯一不能生效的是白色。（注：黑、灰、淡灰也不能生效。为尊重原作者，不对任务要求作修改）"]
+			dependencies: ["402F89CABF6BCDA4"]
+			id: "27C191346BB14D9D"
+			tasks: [
+				{
+					id: "6C47C95A06683D71"
+					type: "item"
+					title: "除白色外的染料"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "minecraft:light_blue_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:magenta_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:gray_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:light_gray_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:pink_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:lime_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:yellow_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:orange_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:cyan_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:purple_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:blue_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:brown_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:green_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:red_dye"
+									Count: 1b
+								}
+								{
+									id: "minecraft:black_dye"
+									Count: 1b
+								}
+							]
+						}
+					}
+					consume_items: false
+				}
+				{
+					id: "32E697E9386ABF17"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "光谱校正（红色）"
+			x: -0.85d
+			y: 9.0d
+			shape: "circle"
+			description: [
+				"粉碎异彩奇点有概率获得红色的小球。"
+				""
+				"因为这不是异彩化合物所需的颜色，你可以使用分液池来进行频率校正。"
+			]
+			dependencies: ["2CCD84D55DE71EB2"]
+			id: "3B421C8F7947E542"
+			tasks: [{
+				id: "26CA0A31856D4445"
+				type: "item"
+				item: "appliedenergistics2:red_paint_ball"
+				consume_items: false
+			}]
+		}
+		{
+			title: "光谱校正（黄色）"
+			x: -2.0d
+			y: 9.0d
+			shape: "circle"
+			description: [
+				"同样，粉碎异彩奇点有概率获得黄色的小球。"
+				""
+				"就像红色的那些，它们必须再次被分液，以将频率移向正确的方向。"
+			]
+			dependencies: [
+				"2CCD84D55DE71EB2"
+				"3B421C8F7947E542"
+			]
+			id: "381F8F373605BB97"
+			tasks: [{
+				id: "629CDAD0644963F4"
+				type: "item"
+				item: "appliedenergistics2:yellow_paint_ball"
+				consume_items: false
+			}]
+		}
+		{
+			title: "光谱校正（绿色）"
+			x: -3.0d
+			y: 8.5d
+			shape: "circle"
+			description: ["继续分液。"]
+			dependencies: [
+				"2CCD84D55DE71EB2"
+				"381F8F373605BB97"
+			]
+			id: "6A76E65324F0ACC0"
+			tasks: [{
+				id: "4BBF150A1DD3A0AF"
+				type: "item"
+				item: "appliedenergistics2:green_paint_ball"
+				consume_items: false
+			}]
+		}
+		{
+			title: "光谱校正（蓝色）"
+			x: -3.5d
+			y: 7.5d
+			shape: "circle"
+			description: ["马上就要完成了，所有蓝色染色球都只需要最后再通过一次分液池。"]
+			dependencies: [
+				"2CCD84D55DE71EB2"
+				"6A76E65324F0ACC0"
+			]
+			id: "302FCD205CC2F708"
+			tasks: [{
+				id: "16C40B4F7D56B9C9"
+				type: "item"
+				item: "appliedenergistics2:blue_paint_ball"
+				consume_items: false
+			}]
+		}
+		{
+			title: "光谱校正（品红色）"
+			icon: "appliedenergistics2:magenta_paint_ball"
+			x: -3.5d
+			y: 6.35d
+			subtitle: "装置 26-2"
+			description: ["品红色染色球拥有制作异彩化合物需要的颜色精华。虽然有一部分可以直接从异彩奇点中粉碎获得，但是绝大部分可以通过光谱校正获得。"]
+			dependencies: [
+				"2CCD84D55DE71EB2"
+				"302FCD205CC2F708"
+			]
+			id: "3BE15AA5C237AB80"
+			tasks: [
+				{
+					id: "5DF1A84700EB5D15"
+					type: "item"
+					item: "appliedenergistics2:magenta_paint_ball"
+					consume_items: false
+				}
+				{
+					id: "27D5CBB137116AB1"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "颜色精炼"
+			icon: {
+				id: "create:chromatic_compound"
+				Count: 1b
+				tag: { }
+			}
+			x: -5.0d
+			y: 6.35d
+			subtitle: "装置 26-3"
+			description: ["动力合成器可以让染色球精炼为异彩化合物。"]
+			dependencies: ["3BE15AA5C237AB80"]
+			id: "7B23C933D76458BA"
+			tasks: [
+				{
+					id: "2F334C3D67DE059C"
+					type: "item"
+					item: {
+						id: "create:chromatic_compound"
+						Count: 1b
+						tag: { }
+					}
+					consume_items: false
+				}
+				{
+					id: "27A8B7785CAB07C8"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "A1高闪"
+			icon: "create:refined_radiance"
+			x: -6.5d
+			y: 6.35d
+			subtitle: "装置 28-1"
+			description: [
+				"当掉落成物品时，异彩化合物会吸收周围的光源最终变为光辉石。在下列3种方法选择一种："
+				""
+				"- 在异彩化合物的掉落物周围自动放置光源方块（中间不能有方块阻挡）"
+				""
+				"- 在置物台/传送带附近提供发光方块的掉落物（中间不能有方块阻挡）"
+				""
+				"- 将异彩化合物扔到信标光柱中，零消耗瞬间转化"
+			]
+			dependencies: [
+				"3025B5861FE17ADF"
+				"7B23C933D76458BA"
+			]
+			id: "286510750C333C1F"
+			tasks: [
+				{
+					id: "7EF8C778FDE54DC1"
+					type: "item"
+					item: "create:refined_radiance"
+					consume_items: false
+				}
+				{
+					id: "2DC30322D81D9999"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "霓虹灯光"
+			icon: "kubejs:radiant_coil"
+			x: -4.0d
+			y: 11.0d
+			subtitle: "装置 28-3"
+			description: ["最后，一个动力合成器可以将光辉薄板切割，再卷成一个感应线圈。"]
+			dependencies: ["410FF28B63E0FC0C"]
+			id: "626A7D9947D82B89"
+			tasks: [
+				{
+					id: "3AF0E2934C047AA3"
+					type: "item"
+					item: "kubejs:radiant_coil"
+					consume_items: false
+				}
+				{
+					id: "27C737E08A9027A5"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "更多的圆石"
+			icon: "minecraft:cobblestone"
+			x: -1.5d
+			y: 1.0d
+			subtitle: "装置 20-1"
+			description: ["可靠而廉价的多用途圆石卷土重来。"]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "5C277D27606F64DA"
+			tasks: [
+				{
+					id: "35C10E79F8F1E0DF"
+					type: "item"
+					title: "任意圆石"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "forge:cobblestone"
+						}
+					}
+					consume_items: false
+				}
+				{
+					id: "36BD580312C8177B"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "部署有效载荷"
+			icon: "kubejs:inductive_mechanism"
+			x: -1.5d
+			y: 11.5d
+			subtitle: "装置 29"
+			description: ["你知道怎么做了，是时候升级以前的精密构件到下一个阶段！"]
+			dependencies: [
+				"59D2104DB6AE93FD"
+				"626A7D9947D82B89"
+			]
+			id: "6CBA3D97CAD5DB63"
+			tasks: [
+				{
+					id: "153D599D82983310"
+					type: "item"
+					item: "kubejs:inductive_mechanism"
+					consume_items: false
+				}
+				{
+					id: "057A05C13C55ABC4"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "章节3完成！"
+			x: -1.5d
+			y: 13.5d
+			shape: "hexagon"
+			description: [
+				"祝贺！感应构件可以自动化生产了。这打开了令人兴奋的新科技和使用魔法的大门！"
+				""
+				"当你对装配线感到满意时，请返回概要。将会有新的选择让你去探索！"
+			]
+			dependencies: ["6CBA3D97CAD5DB63"]
+			size: 2.0d
+			id: "3A63A48662F352CB"
+			tasks: [{
+				id: "6F268D7B84CB1DB7"
+				type: "item"
+				item: "thermal:machine_frame"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "002FAA00240A80FD"
+					type: "item"
+					item: "kubejs:inductive_mechanism"
+					count: 16
+				}
+				{
+					id: "494BEA0CE2C8AF74"
+					type: "item"
+					item: "minecraft:glowstone_dust"
+					random_bonus: 4
+				}
+				{
+					id: "5E5F5C257C45D344"
+					type: "item"
+					item: "thermal:invar_ingot"
+					random_bonus: 4
+				}
+			]
+		}
+		{
+			title: "开端"
+			icon: "ae2:singularity"
+			x: -1.5d
+			y: 4.0d
+			subtitle: "装置 20-3"
+			description: ["当用粉碎轮粉碎粉碎轮时，一个悖论将会产生并以物品形式掉出。这东西对我们大有用处。"]
+			dependencies: ["7AAE71F57FB89BCC"]
+			id: "2C81D358594C4352"
+			tasks: [
+				{
+					id: "5BF8BF7A24029B57"
+					type: "item"
+					item: "ae2:singularity"
+					consume_items: false
+				}
+				{
+					id: "09AAD9853B976D69"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "反应堆"
+			icon: "appliedenergistics2:quantum_entangled_singularity"
+			x: -1.5d
+			y: 5.5d
+			subtitle: "装置 24"
+			description: [
+				"这里是在整个生产线起最重要用途的地方：反应堆。"
+				""
+				"在生产光辉感应线圈的过程中，需要一个可控的爆炸在其周围炸奇点和末影粉。你可以设计一个电路来不断炸这些掉落物堆。"
+				""
+				"注：奇点和末影粉的需求为1:1，但它们不一定要在同一个位置，一个TNT也可以转换多份材料，最后的结果将会生成在奇点的位置。"
+			]
+			dependencies: [
+				"02B2E249421FAE58"
+				"2C81D358594C4352"
+				"375C9A43FE5620B6"
+			]
+			id: "5A199B898D41A309"
+			tasks: [
+				{
+					id: "63C5611154B9B124"
+					type: "item"
+					item: "appliedenergistics2:quantum_entangled_singularity"
+					consume_items: false
+				}
+				{
+					id: "3A68EA184DE4D9B4"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "棋盘格合成"
+			icon: "minecraft:tnt"
+			x: 0.0d
+			y: 4.0d
+			subtitle: "装置 23-2"
+			description: ["使用动力合成器来制作TNT。由于配方中的物品都不相邻，所以你可能需要动力臂来完成此项工作。"]
+			dependencies: [
+				"5F9BA7BA46D2E5B8"
+				"050A20198A80CF1A"
+			]
+			id: "02B2E249421FAE58"
+			tasks: [
+				{
+					id: "39C8F3F28C7A271C"
+					type: "item"
+					item: "minecraft:tnt"
+					consume_items: false
+				}
+				{
+					id: "2AD912C0E25F5D65"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "烤一些火药"
+			icon: "minecraft:gunpowder"
+			x: 1.5d
+			y: 4.0d
+			subtitle: "装置 22-2"
+			description: [
+				"转化绿色的活性史莱姆粉末需要非常特殊的加热条件，只有营火和炉灶可以满足它。"
+				""
+				"这个装置将需要特殊的方法来放置粉末和收集产物。"
+			]
+			dependencies: [
+				"3D1EEB596FDBE4E7"
+				"016864AD0C9247B9"
+			]
+			dependency_requirement: "one_completed"
+			id: "050A20198A80CF1A"
+			tasks: [
+				{
+					id: "65AD93315DC72371"
+					type: "item"
+					item: "minecraft:gunpowder"
+					consume_items: false
+				}
+				{
+					id: "34EFEE60A6755C01"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "更多的沙子"
+			icon: "minecraft:sand"
+			x: 0.0d
+			y: 1.0d
+			subtitle: "装置 23-1"
+			description: ["沙子可以用来合成反应堆必要的爆炸物。还好，新的科技可以让你解锁了粉碎轮，这样就可以轻松获得沙子。"]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "5F9BA7BA46D2E5B8"
+			tasks: [
+				{
+					id: "1127E4C296ED5A31"
+					type: "item"
+					item: "minecraft:sand"
+					consume_items: false
+				}
+				{
+					id: "2A3EAC60765E5C7A"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "烤一些末影粉"
+			icon: "appliedenergistics2:ender_dust"
+			x: 1.5d
+			y: 5.5d
+			subtitle: "装置 22-3"
+			description: [
+				"转化紫色的活性史莱姆粉末需要非常特殊的加热条件，只有营火和炉灶可以满足它。"
+				""
+				"这个装置将需要特殊的方法来放置粉末和收集产物。"
+			]
+			dependencies: [
+				"3D1EEB596FDBE4E7"
+				"016864AD0C9247B9"
+			]
+			dependency_requirement: "one_completed"
+			id: "375C9A43FE5620B6"
+			tasks: [
+				{
+					id: "74E8DBEBD9AA5D72"
+					type: "item"
+					item: "appliedenergistics2:ender_dust"
+					consume_items: false
+				}
+				{
+					id: "37A6393C0AD6E861"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "为空间上色"
+			icon: "kubejs:dye_entangled_singularity"
+			x: -1.5d
+			y: 7.0d
+			subtitle: "装置 26-1"
+			description: ["将量子缠绕态奇点和你选择的那个染料混合来制造颜色的精华！这正是为了我们需要制作的异彩化合物。"]
+			dependencies: [
+				"27C191346BB14D9D"
+				"5A199B898D41A309"
+			]
+			id: "2CCD84D55DE71EB2"
+			tasks: [
+				{
+					id: "1A034719E3B94207"
+					type: "item"
+					item: "kubejs:dye_entangled_singularity"
+					consume_items: false
+				}
+				{
+					id: "4B4BDAA9DFB0518A"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "附加章节3A完成！"
+			x: -1.5d
+			y: 21.0d
+			shape: "hexagon"
+			description: ["不可思议！瞬间传送的能力已被你掌握！当然，你的工厂中的某些地方可以用它来加速。"]
+			dependencies: ["6DBEF7A11890ADF8"]
+			size: 2.0d
+			id: "4EDD9A8F14E48EAE"
+			tasks: [{
+				id: "314DEBB9F9DE70F4"
+				type: "item"
+				item: "kubejs:enderium_machine"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "2445637181E32B19"
+					type: "item"
+					item: "kubejs:abstruse_mechanism"
+					count: 16
+				}
+				{
+					id: "6884BD55CF5F5676"
+					type: "item"
+					item: "minecraft:ender_pearl"
+					random_bonus: 4
+				}
+				{
+					id: "1383A8E9F3AC725D"
+					type: "item"
+					item: "thermal:enderium_ingot"
+					random_bonus: 4
+				}
+			]
+		}
+		{
+			title: "末影注入"
+			x: -1.5d
+			y: 19.0d
+			shape: "circle"
+			description: ["之后，使用感应炉升级你一部分感应构件和新生产的合金。"]
+			dependencies: ["7B080B5C87247EA1"]
+			id: "6DBEF7A11890ADF8"
+			tasks: [{
+				id: "6F8624E071829779"
+				type: "item"
+				item: "kubejs:abstruse_mechanism"
+				consume_items: false
+			}]
+		}
+		{
+			title: "折跃探险"
+			x: 0.0d
+			y: 17.5d
+			shape: "circle"
+			description: [
+				"击败了末影龙之后，你就可以通过折跃门前往末地外岛了。"
+				""
+				"你可以在那里找到制作末影合金需要的幽仪菌丛。"
+			]
+			dependencies: ["05C7E580ED88B556"]
+			id: "794B3C10C6110CB5"
+			tasks: [{
+				id: "7E7DF9C3DCFF0724"
+				type: "item"
+				item: "endergetic:tall_poise_bush"
+				consume_items: false
+			}]
+		}
+		{
+			title: "幽仪循环"
+			icon: "endergetic:poise_cluster"
+			x: 0.0d
+			y: 19.5d
+			shape: "circle"
+			description: ["多亏了感应技术，你可以使用更稳定、更方便的方式复制幽仪菌从，从而制作一个稳定的末影锭来源。"]
+			dependencies: ["794B3C10C6110CB5"]
+			id: "1CCDA748B237F6F5"
+			tasks: [{
+				id: "05F0DE924816E7F5"
+				type: "item"
+				item: "thermal:machine_insolator"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "6B1ECF8BD760D03E"
+				type: "item"
+				item: "thermal:phytogro"
+				count: 16
+			}]
+		}
+		{
+			title: "外星合金"
+			x: -1.5d
+			y: 18.0d
+			shape: "circle"
+			description: [
+				"启动感应炉，进行两次合成："
+				""
+				"首先，将银锭、末影粉和幽仪菌从合金。"
+			]
+			dependencies: [
+				"0D146AD9FE774F8B"
+				"794B3C10C6110CB5"
+				"3BFC4DFCE765F3EA"
+			]
+			id: "7B080B5C87247EA1"
+			tasks: [{
+				id: "0EC104535857B542"
+				type: "item"
+				item: "thermal:enderium_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			title: "投币"
+			x: -3.0d
+			y: 15.0d
+			shape: "circle"
+			description: [
+				"银的特殊性质可见其在制作末影合金的过程中是有用的。"
+				""
+				"事实证明，你唯一的银来源就是你的银币。这不由得让你思考官方铸币厂哪来的银。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"2BB2C7B95E3C89AE"
+				"6CBA3D97CAD5DB63"
+			]
+			hide: true
+			id: "38B063C8DE71E86D"
+			tasks: [{
+				id: "3B8AF2614A9EE681"
+				type: "item"
+				item: "thermal:silver_coin"
+				consume_items: false
+			}]
+		}
+		{
+			title: "熔化"
+			x: -1.5d
+			y: 15.5d
+			shape: "circle"
+			description: ["把你的钱币扔到冶炼炉中。注意：这是个不可逆的过程。"]
+			dependencies: ["38B063C8DE71E86D"]
+			id: "0C11EC34D5FA508B"
+			tasks: [{
+				id: "1E9F96D2152F7384"
+				type: "item"
+				title: "Copper Can (Molten Silver)"
+				item: {
+					id: "tconstruct:copper_can"
+					Count: 1b
+					tag: {
+						fluid: "tconstruct:molten_silver"
+					}
+				}
+			}]
+		}
+		{
+			title: "并非结束"
+			icon: "minecraft:end_portal_frame"
+			x: 0.0d
+			y: 15.0d
+			shape: "circle"
+			description: ["瞬间传送的秘密就在末地传送门后面。"]
+			hide_dependency_lines: true
+			dependencies: [
+				"6CBA3D97CAD5DB63"
+				"2BB2C7B95E3C89AE"
+			]
+			hide: true
+			id: "05C7E580ED88B556"
+			tasks: [{
+				id: "4E429C9E118BA2C7"
+				type: "item"
+				item: "minecraft:end_stone"
+				consume_items: false
+			}]
+		}
+		{
+			title: "装备机械手III"
+			x: 0.0d
+			y: 11.5d
+			shape: "circle"
+			description: [
+				"为了感应构件生产，先存储一些异彩共振器是一个好主意。"
+				"不过，你也不要担心它们的完全自动化。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["626A7D9947D82B89"]
+			id: "59D2104DB6AE93FD"
+			tasks: [{
+				id: "6334526E14C21487"
+				type: "item"
+				item: {
+					id: "kubejs:chromatic_resonator"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				consume_items: false
+			}]
+		}
+		{
+			title: "分发木棍"
+			icon: "minecraft:stick"
+			x: -3.0d
+			y: 1.0d
+			subtitle: "装置 19"
+			description: ["下一步就是一个木棍来源了。你可以做一个新的树场，或是从装置1中导出木棍。"]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "194B973EAF17809C"
+			tasks: [
+				{
+					id: "293DC3FF985B575B"
+					type: "item"
+					item: "minecraft:stick"
+					consume_items: false
+				}
+				{
+					id: "435C3E443BCC9176"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "合成器之墙"
+			icon: "create:crushing_wheel"
+			x: -1.5d
+			y: 2.5d
+			subtitle: "装置 20-2"
+			description: [
+				"下一步，我们需要粉碎轮。它不仅仅是机器，同时也是材料。"
+				""
+				"动力合成器的墙很容易挡住道路和一些其他基础设施，所以一定要给它们预留一些空间。"
+			]
+			dependencies: [
+				"194B973EAF17809C"
+				"5C277D27606F64DA"
+			]
+			id: "7AAE71F57FB89BCC"
+			tasks: [
+				{
+					id: "716CDC854FF1E8C2"
+					type: "item"
+					item: "create:crushing_wheel"
+					consume_items: false
+				}
+				{
+					id: "764E76A93ED07203"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "剧毒副产物"
+			icon: "tconstruct:molten_ender_bucket"
+			x: 0.5d
+			y: 9.0d
+			shape: "circle"
+			description: ["对染色球进行分液会产出大量的液体副产物，在它堵塞生产线之前必须快速把它处理掉。"]
+			dependencies: ["3B421C8F7947E542"]
+			id: "2C40901DB42DD8F8"
+			tasks: [{
+				id: "7058D1CE264D6769"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "烤一些骨粉"
+			icon: "minecraft:bone_meal"
+			x: 1.5d
+			y: 7.0d
+			subtitle: "装置 22-4"
+			description: [
+				"转化蓝色的活性史莱姆粉末需要非常特殊的加热条件，只有营火和炉灶可以满足它。"
+				""
+				"这个装置将需要特殊的方法来放置粉末和收集产物。"
+			]
+			dependencies: [
+				"3D1EEB596FDBE4E7"
+				"016864AD0C9247B9"
+			]
+			dependency_requirement: "one_completed"
+			id: "402F89CABF6BCDA4"
+			tasks: [
+				{
+					id: "0B625314B34801AA"
+					type: "item"
+					item: "minecraft:bone_meal"
+					consume_items: false
+				}
+				{
+					id: "4002627D52C3A616"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "神秘生物质"
+			icon: "kubejs:sky_slime_fern_paste"
+			x: 3.5d
+			y: 4.0d
+			subtitle: "装置 22-1"
+			description: ["将多出来的粘性蕨叶片粉碎，为将来的魔法发展做准备。"]
+			dependencies: ["38D19F4EC634F33B"]
+			id: "3D1EEB596FDBE4E7"
+			tasks: [
+				{
+					id: "3EB8C2219D74126B"
+					type: "item"
+					item: "kubejs:ender_slime_fern_paste"
+					consume_items: false
+				}
+				{
+					id: "4CB87BE063DACC5F"
+					type: "item"
+					item: "kubejs:earth_slime_fern_paste"
+					consume_items: false
+				}
+				{
+					id: "1F0B0F9D72A6F611"
+					type: "item"
+					item: "kubejs:sky_slime_fern_paste"
+					consume_items: false
+				}
+				{
+					id: "65864C0AE5B28091"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "灵魂循环"
+			icon: "kubejs:sky_slimy_fern_leaf"
+			x: 3.5d
+			y: 2.5d
+			subtitle: "装置 21"
+			description: [
+				"粘性蕨叶片可以在灵火中瞬间再生，这就跟工厂另一处的石英复制器一样，我们可以用灵火来复制粘性蕨。"
+				""
+				"循环的本质很简单：使用机械手将粘性蕨切成两半，然后扔一片叶子到灵火中。建议所有颜色的粘性蕨都以相同比例复制。"
+				""
+				"将魔鬼之梦果实扔在地上，然后用一个打火石在扔出去的位置点火，就可以产生灵火。"
+				""
+				"对了，记得再安全的地方找存放粘性蕨的备份。"
+			]
+			dependencies: ["01BE1A7FCE79C63D"]
+			id: "38D19F4EC634F33B"
+			tasks: [
+				{
+					id: "135871C95B811F71"
+					type: "item"
+					item: "kubejs:sky_slimy_fern_leaf"
+					consume_items: false
+				}
+				{
+					id: "315328866377A0DC"
+					type: "item"
+					item: "kubejs:ender_slimy_fern_leaf"
+					consume_items: false
+				}
+				{
+					id: "65D5A32F475D78B6"
+					type: "item"
+					item: "kubejs:earth_slimy_fern_leaf"
+					consume_items: false
+				}
+				{
+					id: "40B23393B8A6D2E8"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "再处理"
+			icon: "kubejs:radiant_sheet"
+			x: -6.0d
+			y: 9.0d
+			subtitle: "装置 28-2"
+			description: [
+				"主要的工作完成了，剩下的就是一个小的生产线将光辉石转化为光辉感应线圈了。"
+				""
+				"以一个动力辊压机开始。"
+			]
+			dependencies: ["286510750C333C1F"]
+			id: "410FF28B63E0FC0C"
+			tasks: [
+				{
+					id: "0B3A86351C4C94D9"
+					type: "item"
+					item: "kubejs:radiant_sheet"
+					consume_items: false
+				}
+				{
+					id: "37BF06FF4255C1B1"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "昂贵砖块"
+			x: -1.5d
+			y: 16.5d
+			shape: "circle"
+			description: ["将熔融银浇筑成锭，欣赏它是多么闪亮。"]
+			dependencies: ["0C11EC34D5FA508B"]
+			id: "0D146AD9FE774F8B"
+			tasks: [{
+				id: "7A7EE0DF809CEDC8"
+				type: "item"
+				title: "Silver Ingot"
+				icon: "thermal:silver_ingot"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:ingots/silver"
+					}
+				}
+				consume_items: false
+			}]
+		}
+		{
+			title: "末影配料"
+			x: -3.0d
+			y: 17.5d
+			shape: "circle"
+			description: ["从你的反应堆中取出一些堵塞的末影粉，你也可以把末影珍珠磨成粉。"]
+			hide_dependency_lines: true
+			dependencies: [
+				"2BB2C7B95E3C89AE"
+				"6CBA3D97CAD5DB63"
+			]
+			hide: true
+			id: "3BFC4DFCE765F3EA"
+			tasks: [{
+				id: "56C6D2D683E35E74"
+				type: "item"
+				item: "appliedenergistics2:ender_dust"
+				consume_items: false
+			}]
+		}
+		{
+			title: "粘性蕨"
+			icon: "tconstruct:sky_slime_fern"
+			x: 3.5d
+			y: 1.0d
+			shape: "circle"
+			description: [
+				"为了生产火药、骨粉和末影粉，这种奇特的“黏性蕨类植物”可以作为刷怪塔的替代品。"
+				""
+				"在大地上漫步片刻，寻找植被中异常鲜艳的色彩点，也别忘了带一把剪刀。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "01BE1A7FCE79C63D"
+			tasks: [
+				{
+					id: "2967A771F32C223D"
+					type: "item"
+					item: "tconstruct:earth_slime_fern"
+					consume_items: false
+				}
+				{
+					id: "2A559C5996DF8E69"
+					type: "item"
+					item: "tconstruct:sky_slime_fern"
+					consume_items: false
+				}
+				{
+					id: "1EE76BAC230B9232"
+					type: "item"
+					item: "tconstruct:ender_slime_fern"
+					consume_items: false
+				}
+			]
+		}
+		{
+			title: "过度校正"
+			icon: "appliedenergistics2:black_paint_ball"
+			x: -3.5d
+			y: 5.0d
+			shape: "circle"
+			description: ["哦！过多地分液颜色精华会让染色球变为普通的染色球，它不能用于进一步的处理。"]
+			dependencies: ["3BE15AA5C237AB80"]
+			id: "03B7909623F97843"
+			tasks: [{
+				id: "07521D1C50A8B75F"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "没错，我喜欢生物"
+			icon: "minecraft:zombie_head"
+			x: 3.5d
+			y: 5.5d
+			shape: "circle"
+			subtitle: "装置 21  22"
+			description: [
+				"灵魂循环的另一个自动化方式就是改造刷怪笼/建造刷怪塔。"
+				""
+				"点击检查标记来跳过粘性蕨复制装置。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["397232F676CB621B"]
+			id: "016864AD0C9247B9"
+			tasks: [{
+				id: "53728BDEA8F1938C"
+				type: "checkmark"
+				title: "检查标记"
+			}]
+		}
+		{
+			title: "控制产量"
+			x: -3.5d
+			y: -1.0d
+			shape: "circle"
+			description: [
+				"本章节的一些装置需要处理掉落物。若一个配方不会在溢出时堆积（例：传送带在堆积会停下等待），那么你就有必要在输出时设置缓存，当达到阈值时停止生产。"
+				""
+				"更具体地说：当缓存达到75%时，停止生产；当缓存降至25%时，重新开始生产。这样就可以防止物品溢出的情况，也不用担心机器把物品喷得到处都是了。"
+				""
+				"存量转换器就是为这个用途设计的。"
+			]
+			dependencies: ["397232F676CB621B"]
+			id: "472FB03D0E5A38D6"
+			tasks: [{
+				id: "3C38C38462B73396"
+				type: "item"
+				item: "create:stockpile_switch"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "1DADD3BF4F389910"
+				type: "item"
+				item: "create:redstone_link"
+				count: 2
+			}]
+		}
+		{
+			title: "自动机械锤"
+			icon: "thermal:invar_ingot"
+			x: 0.5d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "装置 30"
+			description: [
+				"除了感应构件，殷钢机械装置需要一种铁和镍制造的坚韧合金。"
+				""
+				"由于殷钢的完整制造过程需要几个漫长的步骤，建议使用自动化。"
+			]
+			dependencies: ["397232F676CB621B"]
+			id: "26A1E68DA7ACB025"
+			tasks: [{
+				id: "428A5B60D9C268BD"
+				type: "checkmark"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

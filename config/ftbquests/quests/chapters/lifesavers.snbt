@@ -1,0 +1,791 @@
+{
+	id: "0D0BC5B3F6623669"
+	group: "331B6409EF6A7840"
+	order_index: 8
+	filename: "lifesavers"
+	title: " 护肝员"
+	icon: "minecraft:totem_of_undying"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "呜——呜——"
+			icon: "minecraft:chest_minecart"
+			x: -2.0d
+			y: 1.0d
+			description: ["矿车是最灵活的中距离物品运输方式。讲真，如果你建造了第一条连接两个地方的铁路，那你肯定会忍不住去造更多。并且矿车装载/卸载器的便利性是史无前例的。"]
+			id: "2A2FA80784667833"
+			tasks: [
+				{
+					id: "66503A543285BEFD"
+					type: "item"
+					item: "moreminecarts:minecart_loader"
+					consume_items: false
+				}
+				{
+					id: "2191410CA7781B53"
+					type: "item"
+					item: "moreminecarts:powered_locking_rail"
+					consume_items: false
+				}
+				{
+					id: "04948068050357CD"
+					type: "item"
+					item: "moreminecarts:minecart_unloader"
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "4BD894A359074AFC"
+				type: "item"
+				item: "minecraft:chest_minecart"
+			}]
+		}
+		{
+			title: "控制中心"
+			icon: "projectred-illumination:red_inverted_fixture_light"
+			x: -4.0d
+			y: 1.0d
+			description: [
+				"有了新的线路和排线能力，你可以让你的工厂更加智能，你可以做的灯同样也可以很漂亮。"
+				""
+				"给出一个切实的建议：在你的工厂的几个地方设计一个简单的小电路，它可以用来检测一个物品是否在一段时间内没有被生产了。你可以使用无线红石将这些信号传输到到中央控制室，从而大概知道哪些部分需要维护"
+				""
+				"实装电路一般是一个低频计时器和物品侦测器之间的一场拉锯战。你也可以使用切石机，快速把电路板做成计时器。"
+			]
+			invisible: true
+			id: "1127129CBA2B5E6F"
+			tasks: [
+				{
+					id: "19CF5DA7A8547E17"
+					type: "item"
+					item: "projectred-core:platformed_plate"
+					consume_items: false
+				}
+				{
+					id: "457F0290A225EEA9"
+					type: "item"
+					item: "projectred-transmission:red_alloy_wire"
+					consume_items: false
+				}
+				{
+					id: "17B93B8634BC1C2D"
+					type: "item"
+					title: "任意荧光粉"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "projectred-core:illumars"
+						}
+					}
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "66E867F9537437F1"
+				type: "item"
+				item: "projectred-core:red_ingot"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "工程师的好伙伴"
+			x: -5.0d
+			y: -1.0d
+			description: ["当你在制作新的装置时，这个小工具尤为实用。与其用组件装满你的口袋，不如从作坊里拿出工具箱随身携带。"]
+			id: "26C39961F2E2ABF2"
+			tasks: [{
+				id: "5E687A6CBD96D0EF"
+				type: "item"
+				title: "任意工具箱"
+				icon: "create:blue_toolbox"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "create:toolboxes"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "2AC846CB2DF485C8"
+				type: "item"
+				item: "create:golden_sheet"
+			}]
+		}
+		{
+			title: "沉浸式小地图"
+			x: -6.0d
+			y: -3.0d
+			description: [
+				"可爱的古地图是全能小地图的替代品。"
+				""
+				"除了完美的视觉设计，这个地图也可以被复制再交给别人。如果有任何一个人探索的新的地方或标记了新的地点，其他人也会看到。"
+			]
+			id: "0B8816319F81C12A"
+			tasks: [{
+				id: "180D1CB1BB7EB0AA"
+				type: "item"
+				item: "antiqueatlas:empty_antique_atlas"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "2F5DF773BBBA2725"
+					type: "item"
+					item: "minecraft:map"
+				}
+				{
+					id: "4958596378CDE1F3"
+					type: "item"
+					item: "minecraft:item_frame"
+				}
+			]
+		}
+		{
+			title: "大桶 II"
+			x: 1.0d
+			y: 3.0d
+			description: ["如果你正在寻找个超大且特别的储物方块，那就去试试储物抽屉吧。"]
+			id: "382EBC32AC27C839"
+			tasks: [{
+				id: "4BE344E1F204A43D"
+				type: "item"
+				title: "任意储物抽屉"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "storagedrawers:drawers"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "2285D6CE87319B4A"
+				type: "item"
+				item: "storagedrawers:upgrade_template"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "烹饪的乐趣"
+			x: 0.0d
+			y: -3.0d
+			description: ["炉灶是一种好看而且非常有用的营火替代品。它可以和一个锅一起为你制作出游戏内最美味的饭菜。"]
+			id: "0E4476BA80B316F6"
+			tasks: [{
+				id: "72F2D3B586A81A2B"
+				type: "item"
+				item: "farmersdelight:stove"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "02BA7C4E293DD955"
+				type: "item"
+				item: "minecraft:salmon"
+			}]
+		}
+		{
+			title: "热替换"
+			x: -3.0d
+			y: -1.0d
+			description: ["方块交换器是一个替换方块的好工具。它会让你节省很多挖掘时间。"]
+			id: "6D7D504E9DC22590"
+			tasks: [{
+				id: "4BE0CCD6F383D961"
+				type: "item"
+				title: "任意方块交换器"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "exchangers:end_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:leadstone_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:hardened_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:reinforced_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:signalum_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:resonant_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:tuberous_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:creative_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:wooden_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:stone_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:golden_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:iron_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:diamond_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:emerald_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "12B2F2F9A6A257FE"
+				type: "item"
+				item: "forbidden_arcanus:ender_pearl_fragment"
+			}]
+		}
+		{
+			title: "方块叠放器"
+			x: -1.0d
+			y: -1.0d
+			description: ["建筑手杖可以一键延伸一整个方块平面。"]
+			id: "2F469F6F1511D9C4"
+			tasks: [{
+				id: "039DD9EBD46B2C23"
+				type: "item"
+				title: "任意建筑手杖"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "constructionwand:stone_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+							{
+								id: "constructionwand:infinity_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+								}
+							}
+							{
+								id: "constructionwand:diamond_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+							{
+								id: "constructionwand:iron_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "5B7C253D05152423"
+				type: "item"
+				item: "minecraft:scaffolding"
+				count: 16
+			}]
+		}
+		{
+			title: "帮我夹下菜"
+			x: 3.0d
+			y: -1.0d
+			description: ["人类的手臂还没有进化到可以高效地制造机器。还好，这个小工具可以通过显著增加你触及范围来弥补缺点。"]
+			id: "7061F42CF050ADCA"
+			tasks: [{
+				id: "0710C744349D2090"
+				type: "item"
+				item: {
+					id: "create:extendo_grip"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "40E5D8DBF58086BB"
+				type: "item"
+				item: "create:cogwheel"
+				count: 8
+			}]
+		}
+		{
+			title: "自然指南针"
+			x: -4.0d
+			y: -3.0d
+			description: ["有时候你想去找一个特殊的生物群系，而自然指南针至少可以帮助你找到正确的方向。"]
+			id: "45E7810E21F6F9AE"
+			tasks: [{
+				id: "7AD38BD1318A493B"
+				type: "item"
+				item: {
+					id: "naturescompass:naturescompass"
+					Count: 1b
+					tag: { }
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "482338485BF4B3B0"
+				type: "item"
+				item: "biomesoplenty:spanish_moss"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "大桶"
+			x: -1.0d
+			y: 3.0d
+			description: ["如果你需要一个可以在一格内储存大量物品的方块，那么你可以考虑一下升级后的木桶。"]
+			id: "50E2D6459F3D68C0"
+			tasks: [{
+				id: "6D6CDA4DEFD5795F"
+				type: "item"
+				title: "任意升级木桶"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "metalbarrels:gold_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:iron_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:silver_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:copper_barrel"
+								Count: 1b
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "390AF1049C411219"
+				type: "item"
+				item: "minecraft:barrel"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "造房子的大炮"
+			x: 1.0d
+			y: -1.0d
+			description: ["你可以使用蓝图加农炮将任何.nbt的蓝图文件建造到你的世界中。你可以用它来放置你的一些建筑，你甚至也可以提前在别的世界中先建造好。"]
+			id: "09EB29F838620371"
+			tasks: [{
+				id: "103E6982FCFE8B6C"
+				type: "item"
+				item: "create:schematicannon"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "7AF62EF3656DD4E3"
+				type: "item"
+				item: "create:empty_schematic"
+			}]
+		}
+		{
+			title: "远大计划"
+			x: 2.0d
+			y: -3.0d
+			description: [
+				"合成蓝图可以配置一些合成的配方，当你右键时，它可以将你的手持物品进行合成。"
+				""
+				"最快最高效的方法就是使用JEI将合成配方添加进蓝图的UI内，点击JEI配方右下角的“+”将配方转移入蓝图内部。"
+			]
+			id: "6D900619B1967D72"
+			tasks: [{
+				id: "006D992D77A782EF"
+				type: "item"
+				item: "create:crafting_blueprint"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "47ADAFAB537F63CE"
+				type: "item"
+				item: "minecraft:painting"
+			}]
+		}
+		{
+			title: "压力管道"
+			x: 0.0d
+			y: 1.0d
+			description: [
+				"传送带和机械臂非常方便，但是有时候，你依然会使用物品管道。"
+				""
+				"然而，这些管道甚至可以作为一个相当复杂的物流基础设施。像物品/合成终端终端这样的方块将能够从任何连接到它们的箱子中请求物品。"
+			]
+			id: "334146C815B304DB"
+			tasks: [{
+				id: "461F9FF1732B308F"
+				type: "item"
+				item: "prettypipes:pipe"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "35445550FFC9B565"
+				type: "item"
+				item: "kubejs:pipe_module_tier_1"
+			}]
+		}
+		{
+			title: "感应管道"
+			x: 2.0d
+			y: 1.0d
+			description: [
+				"随着感应机械的兴起，你想把能源炉和机器连接在一起组成能源网络。"
+				""
+				"需要注意的是，这些管道并不总是知道何时该从方块中抽取能量。你可以使用扳手潜行右键这些管道的连接处来启用/禁用能量抽取。"
+			]
+			id: "6BC864CC7CB2C316"
+			tasks: [{
+				id: "4912723B6A264380"
+				type: "item"
+				item: "pipez:energy_pipe"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "5EA5B33DA2E47592"
+				type: "item"
+				item: "thermal:signalum_ingot"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "底朝天！"
+			x: -7.0d
+			y: -1.0d
+			description: ["你可以使用啤酒桶来酿造你喜欢的啤酒，不要贪杯哦。"]
+			id: "7D63FF6A2243A06B"
+			tasks: [{
+				id: "3AD6B6675D0D19D0"
+				type: "item"
+				item: "drinkbeer:beer_mug"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "43B1D0036D231078"
+				type: "item"
+				item: "minecraft:wheat"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "伙伴？"
+			x: 1.0d
+			y: -5.0d
+			description: ["在干草堆上放一个南瓜头可以做出一个稻草人，它可以照料你的作物。"]
+			id: "1DBFD0B34659A8F9"
+			tasks: [
+				{
+					id: "7596BE1437EA002D"
+					type: "item"
+					item: "minecraft:hay_block"
+					consume_items: false
+				}
+				{
+					id: "7986E1E6575F2C25"
+					type: "item"
+					item: "minecraft:carved_pumpkin"
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "7BD14F5479FAB194"
+				type: "item"
+				item: "minecraft:sweet_berries"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "智者的游戏"
+			x: 4.0d
+			y: -3.0d
+			description: ["有时，你很难决定要做什么事。还好，我们有一些可以帮助你做决定的手段。"]
+			id: "087659F192F41C6E"
+			tasks: [{
+				id: "0F82D1FCCA10EFBC"
+				type: "item"
+				title: "任意骰子"
+				icon: "dice:white_d6"
+				item: {
+					id: "itemfilters:mod"
+					Count: 1b
+					tag: {
+						value: "dice"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "3D69B03DFCB41179"
+				type: "item"
+				item: "randomium:randomium_ore"
+			}]
+		}
+		{
+			title: "飞行模式"
+			icon: "magicfeather:magicfeather"
+			x: 3.0d
+			y: 3.0d
+			description: ["魔法羽毛可以让你创造飞行，但这一功能只在信标光柱范围内生效。即便如此，它也会在你建造大工厂时起到很大帮助。"]
+			id: "0F4B0608CBF966E6"
+			tasks: [
+				{
+					id: "18A86C2CE288A35A"
+					type: "item"
+					item: "magicfeather:magicfeather"
+					consume_items: false
+				}
+				{
+					id: "6D2E7DBD75292896"
+					type: "item"
+					item: "minecraft:beacon"
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "3E31A943AAC038E9"
+				type: "item"
+				item: "minecraft:iron_block"
+				count: 9
+			}]
+		}
+	]
+	quest_links: [ ]
+}
