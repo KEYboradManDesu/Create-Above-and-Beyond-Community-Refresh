@@ -35,6 +35,11 @@ onEvent('recipes', event => {
 	brassMachine(event)
 
 	zincMachine(event)
+
+	obsidianMachine(event)
+
+	radiant_coil(event)
+	invarMachine(event)
 })
 
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -605,7 +610,7 @@ tweak_casing(CR('copper_casing'), 'minecraft:copper_ingot', '#forge:stripped_log
 tweak_casing(CR('brass_casing'), 'create:brass_ingot', '#forge:stripped_wood')
 tweak_casing(CR('brass_casing'), 'create:brass_ingot', '#forge:stripped_logs')
 tweak_casing('create_dd:overburden_casing', 'create_dd:lapis_sheet', 'create:andesite_casing')
-tweak_casing('kubejs:matter_casing', '#materialis:plastic_material', 'create_dd:steel_casing')
+tweak_casing('kubejs:matter_casing', 'kubejs:matter_plastics', 'create_dd:steel_casing')
 tweak_casing('kubejs:zinc_casing', 'create:zinc_ingot', '#forge:stone')
 tweak_casing('kubejs:invar_casing', 'thermal:invar_ingot', 'minecraft:basalt')
 tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian')
@@ -1321,7 +1326,22 @@ copper_machine('create:steam_engine', 1, 'createdieselgenerators:engine_piston')
 copper_machine('create:steam_whistle', 1, F('#plates/gold'))
 copper_machine('cookingforblockheads:sink', 1, MC('heart_of_the_sea'))
 copper_machine('create_dd:hydraulic_press', 1, 'create_dd:reinforcement_plating')
-copper_machine('createdieselgenerators:pumpjack_hole', 1, '#supplementaries:chains')
+
+event.remove({ output: 'createdieselgenerators:pumpjack_hole' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "kubejs:copper_machine"
+		}
+	],
+	"results": [
+		{
+			"item": "createdieselgenerators:pumpjack_hole",
+			"count": 1
+		}
+	]
+})
 
 }
 
@@ -1564,10 +1584,278 @@ zinc_machine('storagedrawers:controller', 1, MC('diamond'))
 zinc_machine('storagedrawers:controller_slave', 1, MC('gold_ingot'))
 zinc_machine('torchmaster:megatorch', 1, MC('torch'))
 zinc_machine('thermal:upgrade_augment_2', 1, MC('redstone'))
-zinc_machine('createdieselgenerators:pumpjack_bearing', 1)
-zinc_machine('createdieselgenerators:pumpjack_head', 1)
-zinc_machine('createdieselgenerators:pumpjack_crank', 1)
-zinc_machine('createdieselgenerators:distillation_controller', 2)
+zinc_machine('createdieselgenerators:distillation_controller', 1)
+
+event.remove({ output: 'createdieselgenerators:pumpjack_crank' })
+event.remove({ output: 'createdieselgenerators:pumpjack_head' })
+event.remove({ output: 'createdieselgenerators:pumpjack_bearing' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "kubejs:zinc_machine"
+		}
+	],
+	"results": [
+		{
+			"item": "createdieselgenerators:pumpjack_crank",
+			"count": 1
+		}
+	]
+})
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "kubejs:zinc_machine"
+		}
+	],
+	"results": [
+		{
+			"item": "createdieselgenerators:pumpjack_head",
+			"count": 1
+		}
+	]
+})
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "kubejs:zinc_machine"
+		}
+	],
+	"results": [
+		{
+			"item": "createdieselgenerators:pumpjack_bearing",
+			"count": 1
+		}
+	]
+})
+
+}
+
+function obsidianMachine(event) {
+
+// 坚固板
+event.remove({ id: 'create:sequenced_assembly/sturdy_sheet' })
+
+let ss = 'create:unprocessed_obsidian_sheet'
+event.recipes.createSequencedAssembly([
+	Item.of(CR('sturdy_sheet')).withChance(0.5),
+	Item.of('create:unprocessed_obsidian_sheet', '{SequencedAssembly:{Progress:0.33333334f,Step:1,id:"kubejs:sturdy_sheet"}}').withChance(0.5),
+], CR('powdered_obsidian'), [
+	event.recipes.createFilling(ss, [ss, Fluid.of(MC("lava"), 500)]),
+	event.recipes.createPressing(ss, ss),
+	event.recipes.createPressing(ss, ss)
+]).transitionalItem(ss)
+	.loops(1)
+	.id("kubejs:sturdy_sheet")
+
+event.custom({
+	"type":"vintageimprovements:vacuumizing",
+	"ingredients": [ 
+		{
+			"item": "create:powdered_obsidian"
+		},
+		{
+		    "fluid": "minecraft:lava",
+			"amount": 500
+		}
+	],
+	"results": [
+		{
+			"item": "create:sturdy_sheet",
+			"count": 1
+		}
+	],
+	"processingTime": 400
+})
+
+//
+
+let sm = KJ('incomplete_sturdy_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('sturdy_mechanism'),
+], CR('precision_mechanism'), [
+	event.recipes.createDeploying(sm, [sm, CR('sturdy_sheet')]),
+	event.recipes.createDeploying(sm, [sm, CR('sturdy_sheet')])
+]).transitionalItem(sm)
+	.loops(1)
+	.id('kubejs:sturdy_mechanism')
+
+event.shaped(KJ("obsidian_machine"), [
+	"SSS",
+	"SCS",
+	"SSS"
+], {
+	C: [CR("railway_casing")],
+	S: KJ("sturdy_mechanism")
+})
+
+let obsidian_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), "kubejs:obsidian_machine", other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: "kubejs:obsidian_machine", B: other_ingredient })
+	}
+	else
+		event.stonecutting(Item.of(id, amount), "kubejs:obsidian_machine")
+	}
+obsidian_machine(CR("track_station"), 1, MC("compass"))
+obsidian_machine(CR("track_signal"), 1, CR("electron_tube"))
+obsidian_machine(CR("track_observer"), 1, MC("observer"))
+obsidian_machine(CR("controls"), 1, MC("lever"))
+obsidian_machine("toms_storage:ts.storage_terminal", 1, CR("item_vault"))
+}
+
+function radiant_coil(event) {
+
+let chop = (type, output) => {
+event.custom({
+	"type": "farmersdelight:cutting",
+	"ingredients": [{ "item": TC(type + "_slime_fern") }],
+	"tool": { "tag": "forge:tools/knives" },
+	"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
+})
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": KJ(type + "_slimy_fern_leaf") },
+	"result": { "item": TC(type + "_slime_fern") }
+})
+event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives"))
+event.recipes.createMilling([KJ(type + "_slimy_fern_paste")], KJ(type + "_slimy_fern_leaf"))
+event.campfireCooking(output, KJ(type + "_slimy_fern_paste")).cookingTime(300)
+}
+
+let fern1 = KJ("ender_slimy_fern_leaf")
+let fern2 = KJ("sky_slimy_fern_leaf")
+let fern3 = KJ("earth_slimy_fern_leaf")
+event.shapeless(fern1, ["forbidden_arcanus:rune", fern2, fern2, fern2, fern2, fern3, fern3, fern3, fern3])
+event.shapeless(fern2, ["forbidden_arcanus:rune", fern3, fern3, fern3, fern3, fern1, fern1, fern1, fern1])
+event.shapeless(fern3, ["forbidden_arcanus:rune", fern2, fern2, fern2, fern2, fern1, fern1, fern1, fern1])
+
+chop("earth", MC('gunpowder'))
+chop("sky", MC('bone_meal'))
+chop("ender", AE2('ender_dust'))
+
+event.campfireCooking(MC("torch"), MC("stick")).cookingTime(20)
+
+event.shapeless(KJ('nickel_compound'), [TE('nickel_ingot'), TE("iron_dust"), TE("iron_dust"), TE("iron_dust"), TE("iron_dust")])
+event.blasting(KJ('invar_compound'), KJ('nickel_compound'))
+let s = KJ('invar_compound')
+event.recipes.createSequencedAssembly([
+	TE('invar_ingot'),
+], KJ('invar_compound'), [
+	event.recipes.createPressing(s, s)
+]).transitionalItem(s)
+	.loops(16)
+	.id('kubejs:invar')
+
+event.remove({ id: CR("mechanical_crafting/crushing_wheel") })
+event.recipes.createMechanicalCrafting(Item.of(CR('crushing_wheel'), 2), [
+	' AAA ',
+	'AABAA',
+	'ABBBA',
+	'AABAA',
+	' AAA '
+], {
+	A: F('#cobblestone'),
+	B: MC('stick')
+})
+
+event.recipes.createCrushing([Item.of(AE2("singularity")).withChance(1)], CR('crushing_wheel')).processingTime(250)
+
+let dyes = [MC('orange_dye'), MC('magenta_dye'), MC('light_blue_dye'), MC('yellow_dye'), MC('lime_dye'), MC('pink_dye'), MC('cyan_dye'), MC('purple_dye'), MC('blue_dye'), MC('brown_dye'), MC('green_dye'), MC('red_dye')]
+event.recipes.createCompacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(AE2('quantum_entangled_singularity'), 1)])
+event.recipes.createConversion([AE2('quantum_entangled_singularity')], AE2("singularity"))
+event.recipes.createCrushing([
+	Item.of(AE2("red_paint_ball"), 1).withChance(.90),
+	Item.of(AE2("yellow_paint_ball"), 1).withChance(.80),
+	Item.of(AE2("green_paint_ball"), 1).withChance(.70),
+	Item.of(AE2("blue_paint_ball"), 1).withChance(.60),
+	Item.of(AE2("magenta_paint_ball"), 1).withChance(.50)],
+	KJ('dye_entangled_singularity')).processingTime(50)
+
+let colors = ["red", "yellow", "green", "blue", "magenta", "black"]
+for (let index = 0; index < colors.length; index++) {
+	var element = colors[index];
+if (index == colors.length - 1)
+	continue;
+event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(TC('molten_ender'), 250)], AE2(element + '_paint_ball'))
+}
+
+event.recipes.createMechanicalCrafting(CR('chromatic_compound'), [
+	'AA',
+	'AA'
+], {
+	A: AE2('magenta_paint_ball')
+})
+
+event.recipes.createPressing(KJ("radiant_sheet"), CR("refined_radiance"))
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: KJ('radiant_sheet') })
+}
+
+function invarMachine(event) {
+
+let t = KJ('incomplete_inductive_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('inductive_mechanism'),
+], CR('precision_mechanism'), [
+	event.recipes.createDeploying(t, [t, KJ('radiant_coil')]),
+	event.recipes.createDeploying(t, [t, KJ('radiant_coil')]),
+	event.recipes.createDeploying(t, [t, F('#chromatic_resonators')])
+]).transitionalItem(t)
+	.loops(1)
+	.id('kubejs:inductive_mechanism')
+
+event.remove({ output: TE('machine_frame') })
+event.shaped(TE('machine_frame'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+	C: KJ('invar_casing'),
+	S: KJ('inductive_mechanism')
+})
+
+event.shaped(KJ('chromatic_resonator'), [
+	' R ',
+	'R S',
+	'LS '
+], {
+	R: TE('ruby'),
+	L: TE('lead_ingot'),
+	S: TE('sapphire')
+})
+
+let invar_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+if (other_ingredient) {
+	event.smithing(Item.of(id, amount), TE('machine_frame'), other_ingredient)
+	event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: TE('machine_frame'), B: other_ingredient })
+}
+else
+	event.stonecutting(Item.of(id, amount), TE('machine_frame'))
+}
+
+invar_machine(TE('dynamo_compression'), 1, TE('rf_coil'))
+invar_machine('kubejs:pipe_module_tier_2', 4)
+
+event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingots/iron"), TE("lead_plate"))
+
+// invar_machine(TE('machine_crucible'), 1, MC('nether_bricks'))
+// invar_machine(TE('machine_furnace'), 1, MC('bricks'))
+// invar_machine(TE('machine_chiller'), 1, MC('packed_ice'))
+// invar_machine(TE('machine_pyrolyzer'), 1, MC('blaze_rod'))
+// invar_machine(TE('machine_bottler'), 1, MC('bucket'))
+// invar_machine(TE('machine_centrifuge'), 1, MC('compass'))
+// invar_machine(TE('machine_refinery'), 1, '#forge:glass')
+// invar_machine(TE('machine_pulverizer'), 1, MC('flint'))
+// invar_machine(TE('machine_smelter'), 1, MC('blast_furnace'))
+// invar_machine(TE('machine_sawmill'), 1, TE('saw_blade'))
+// invar_machine(TE('machine_brewer'), 1, MC('brewing_stand'))
+// invar_machine(TE('machine_insolator'), 1, MC('dirt'))
+
 }
 
 let float_and_lights = (event, item) => { // 光辉石漂浮效果
@@ -1581,5 +1869,8 @@ onEvent('entity.spawned', event => {
     float_and_lights(event, KJ("radiant_coil"))
 	float_and_lights(event, KJ("radiant_wire"))
 	float_and_lights(event, KJ("radiant_rod"))
+	float_and_lights(event, KJ("radiant_sheet"))
+	float_and_lights(event, KJ("small_radiant_spring"))
+	float_and_lights(event, KJ("radiant_spring"))
 	float_and_lights(event, KJ("shadow_rod"))
 })

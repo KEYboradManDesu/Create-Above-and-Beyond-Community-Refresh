@@ -236,7 +236,7 @@ event.create('steel_block_compound', 'create:sequenced_assembly').parentModel("k
 // event.create('pigiron_compound').texture("kubejs:item/compound/pigiron_compound").displayName('生铁混合物')
 // event.create('manasteel_compound').texture("kubejs:item/compound/manasteel_compound").displayName('魔力钢混合物')
 
-//// 背包
+// 背包
 event.create('sewing_spool').texture("kubejs:item/backpack/sewing_spool").displayName('缝纫线轴').maxDamage(12)
 event.create('incomplete_upgrade_base', 'create:sequenced_assembly').texture("kubejs:item/backpack/incomplete_upgrade_base").displayName('空白背包升级（半成品）')
 
@@ -245,7 +245,9 @@ event.create('radiant_coil').glow(true).texture("kubejs:item/radiant_coil").disp
 event.create('radiant_wire').glow(true).texture("kubejs:item/radiant_wire").displayName('光辉线').rarity(RARITY_UNCOMMON)
 event.create('radiant_rod').glow(true).texture("kubejs:item/radiant_rod").displayName('光辉杆').rarity(RARITY_UNCOMMON)
 event.create('shadow_steel_rod').texture("kubejs:item/shadow_steel_rod").displayName('暗影杆').rarity(RARITY_UNCOMMON)
-//event.create('radiant_sheet').glow(true).texture("kubejs:item/radiant_sheet").displayName('光辉板').rarity(RARITY_UNCOMMON)
+event.create('radiant_sheet').glow(true).texture("kubejs:item/radiant_sheet").displayName('光辉板').rarity(RARITY_UNCOMMON)
+event.create('small_radiant_spring').glow(true).texture("kubejs:item/small_radiant_spring").displayName('光辉小弹簧').rarity(RARITY_UNCOMMON)
+event.create('radiant_spring').glow(true).texture("kubejs:item/radiant_spring").displayName('光辉弹簧').rarity(RARITY_UNCOMMON)
 // event.create('radiance_control_circuit').glow(true).texture("kubejs:item/radiance_control_circuit").displayName('光辉控制电路').rarity(RARITY_UNCOMMON)
 // event.create('component_refined_radiance').glow(true).texture("kubejs:item/component_refined_radiance").displayName('光辉机械零件').rarity(RARITY_UNCOMMON)
 
