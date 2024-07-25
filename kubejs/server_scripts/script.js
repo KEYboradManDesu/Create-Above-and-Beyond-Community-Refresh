@@ -27,6 +27,14 @@ onEvent('recipes', event => {
 	algalAndesite(event)
 	andesiteMachine(event)
 
+	rubberMatters(event)
+	copperMachine(event)
+
+	electronTube(event)
+	redstoneTransmute(event)
+	brassMachine(event)
+
+	zincMachine(event)
 })
 
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -592,8 +600,10 @@ let tweak_casing = (output, input1, input2) => {
 }
 tweak_casing(CR('andesite_casing'), 'create:andesite_alloy', '#forge:stripped_wood')
 tweak_casing(CR('andesite_casing'), 'create:andesite_alloy', '#forge:stripped_logs')
-tweak_casing(CR('copper_casing'), 'minecraft:copper_ingot', '#forge:treated_wood')
-tweak_casing(CR('brass_casing'), 'create:brass_ingot', '#forge:treated_wood')
+tweak_casing(CR('copper_casing'), 'minecraft:copper_ingot', '#forge:stripped_wood')
+tweak_casing(CR('copper_casing'), 'minecraft:copper_ingot', '#forge:stripped_logs')
+tweak_casing(CR('brass_casing'), 'create:brass_ingot', '#forge:stripped_wood')
+tweak_casing(CR('brass_casing'), 'create:brass_ingot', '#forge:stripped_logs')
 tweak_casing('create_dd:overburden_casing', 'create_dd:lapis_sheet', 'create:andesite_casing')
 tweak_casing('kubejs:matter_casing', '#materialis:plastic_material', 'create_dd:steel_casing')
 tweak_casing('kubejs:zinc_casing', 'create:zinc_ingot', '#forge:stone')
@@ -739,66 +749,66 @@ function drawersop(event) {
 
 function pipes(event) {
 
-	event.remove({ output: PP('pipe') })
-	event.remove({ output: PP('blank_module') })
-	event.remove({ output: 'pipez:item_pipe' })
-	event.remove({ output: 'pipez:fluid_pipe' })
-	event.remove({ output: 'pipez:gas_pipe' })
-	event.remove({ output: 'pipez:energy_pipe' })
-	event.remove({ output: 'pipez:universal_pipe' })
+event.remove({ output: PP('pipe') })
+event.remove({ output: PP('blank_module') })
+event.remove({ output: 'pipez:item_pipe' })
+event.remove({ output: 'pipez:fluid_pipe' })
+event.remove({ output: 'pipez:gas_pipe' })
+event.remove({ output: 'pipez:energy_pipe' })
+event.remove({ output: 'pipez:universal_pipe' })
 	
-		event.shaped(PP("pipe", 8), [
-			'PMP'
-		], {
-			P: CR('brass_sheet'),
-			M: CR('brass_ingot')
-		})
+event.shaped(PP("pipe", 8), [
+	'PMP'
+], {
+	P: CR('brass_sheet'),
+	M: CR('brass_ingot')
+})
 	
-		event.shaped("8x pipez:energy_pipe", [
-			'PMP'
-		], {
-			P: TE('invar_ingot'),
-			M: MC('redstone')
-		})
+event.shaped("8x pipez:energy_pipe", [
+		'PMP'
+], {
+	P: TE('invar_ingot'),
+	M: MC('redstone')
+})
 	
-		// event.shaped("8x pipez:gas_pipe", [
-		// 	'PMP'
-		// ], {
-		// 	P: 'create_dd:steel_ingot',
-		// 	M: 'mekanism:ingot_osmium'
-		// })
+// event.shaped("8x pipez:gas_pipe", [
+// 	'PMP'
+// ], {
+// 	P: 'create_dd:steel_ingot',
+// 	M: 'mekanism:ingot_osmium'
+// })
+
+let module = (type, result) => {
+	event.remove({ output: PP(result) })
+	event.stonecutting(PP(result), 'kubejs:pipe_module_' + type)
+}
 	
-		let module = (type, result) => {
-			event.remove({ output: PP(result) })
-			event.stonecutting(PP(result), 'kubejs:pipe_module_' + type)
-		}
-	
-		module('utility', 'filter_increase_modifier')
-		module('utility', 'tag_filter_modifier')
-		module('utility', 'mod_filter_modifier')
-		module('utility', 'nbt_filter_modifier')
-		module('utility', 'damage_filter_modifier')
-		module('utility', 'round_robin_sorting_modifier')
-		module('utility', 'random_sorting_modifier')
-		module('utility', 'redstone_module')
-		module('utility', 'stack_size_module')
-		module('utility', 'low_high_priority_module')
-		module('utility', 'medium_high_priority_module')
-		module('utility', 'high_high_priority_module')
-		module('utility', 'low_low_priority_module')
-		module('utility', 'medium_low_priority_module')
-		module('utility', 'high_low_priority_module')
-	
-		let tiers = ['low', 'medium', 'high']
-		for (var i = 0; i < tiers.length; i++) {
-			let tier = 'tier_' + (i + 1)
-			let prefix = tiers[i] + "_"
-			module(tier, prefix + 'extraction_module')
-			module(tier, prefix + 'retrieval_module')
-			module(tier, prefix + 'speed_module')
-			module(tier, prefix + 'filter_module')
-			module(tier, prefix + 'crafting_module')
-		}
+module('utility', 'filter_increase_modifier')
+module('utility', 'tag_filter_modifier')
+module('utility', 'mod_filter_modifier')
+module('utility', 'nbt_filter_modifier')
+module('utility', 'damage_filter_modifier')
+module('utility', 'round_robin_sorting_modifier')
+module('utility', 'random_sorting_modifier')
+module('utility', 'redstone_module')
+module('utility', 'stack_size_module')
+module('utility', 'low_high_priority_module')
+module('utility', 'medium_high_priority_module')
+module('utility', 'high_high_priority_module')
+module('utility', 'low_low_priority_module')
+module('utility', 'medium_low_priority_module')
+module('utility', 'high_low_priority_module')
+
+let tiers = ['low', 'medium', 'high']
+for (var i = 0; i < tiers.length; i++) {
+	let tier = 'tier_' + (i + 1)
+	let prefix = tiers[i] + "_"
+	module(tier, prefix + 'extraction_module')
+	module(tier, prefix + 'retrieval_module')
+	module(tier, prefix + 'speed_module')
+	module(tier, prefix + 'filter_module')
+	module(tier, prefix + 'crafting_module')
+}
 	
 }
 
@@ -1042,7 +1052,31 @@ wood_types.forEach(wood => {
 })
 // tips这个待翻新
 
-// 前期配方
+// 安山合金齿轮
+event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "thermal:press_gear_die",
+	"ingredients": [
+		{
+		  "item": "create:andesite_alloy"
+		}
+	],
+	"results": [
+		{
+		  "item": "kubejs:andesite_alloy_gear"
+		}
+	]
+})
+// 无序合成
+event.shapeless(KJ('andesite_alloy_gear'), [
+	F('#saws'), 
+	CR('andesite_alloy'), 
+	CR('andesite_alloy')
+]).id("kubejs:andesite_alloy_gear_manual_only")
+.damageIngredient(Item.of(KJ('netherite_saw')))
+.damageIngredient(Item.of('#forge:saws'))
+.damageIngredient(Item.of('create_dd:deforester_saw'))
+
 let transitional = 'kubejs:incomplete_kinetic_mechanism'
 event.recipes.createSequencedAssembly([
 	'kubejs:kinetic_mechanism',
@@ -1054,7 +1088,6 @@ event.recipes.createSequencedAssembly([
 	.loops(1)
 	.id('kubejs:kinetic_mechanism')
 
-// 中期配方
 let transitional2 = 'kubejs:incomplete_kinetic_mechanism'
 event.recipes.createSequencedAssembly([
 	'kubejs:kinetic_mechanism',
@@ -1156,6 +1189,386 @@ event.recipes.createMechanicalCrafting('create_dd:bronze_drill', "AB", { A: 'cre
 
 }
 
+
+function rubberMatters(event) {
+event.remove({ id: 'thermal:rubber_3' })
+event.remove({ id: 'thermal:rubber_from_dandelion' })
+event.remove({ id: 'thermal:rubber_from_vine' })
+event.remove({ id: /create_dd:emptying\/sap_from_.*/ })
+event.remove({ id: 'create_dd:mixing/rubber' })
+event.remove({ id: 'create_dd:compacting/crystallized_sap' })
+event.remove({ input: 'create_dd:raw_rubber' })
+event.remove({ input: 'create_dd:rubber' })
+
+
+let overrideTreeOutput = (id, trunk, leaf, fluid, count) => {
+	event.remove({ id: id })
+	event.custom({
+		"type": "thermal:tree_extractor",
+		"trunk": trunk,
+		"leaves": leaf,
+		"result": {
+			"fluid": fluid,
+			"amount": count
+	}
+});
+}
+
+overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'), "thermal:resin", 25)
+overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'), "thermal:resin", 25)
+overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'), "thermal:resin", 25)
+overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_acacia'), MC('acacia_log'), MC('acacia_leaves'), "thermal:resin", 35)
+overrideTreeOutput(TE('compat/biomesoplenty/tree_extractor_bop_maple'), MC('oak_log'), 'biomesoplenty:maple_leaves', "thermal:syrup", 25)
+overrideTreeOutput("", 'create_dd:rubber_log', 'create_dd:rubber_leaves', "thermal:resin", 50)
+
+
+event.remove({ id: CR('crafting/kinetics/belt_connector') })
+event.shaped(CR('belt_connector', 3), [
+	'SSS',
+	'SSS'
+], {
+	S: TE('cured_rubber')
+})
+
+event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), F("#vines", 4)])
+event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), '4x #minecraft:flowers'])
+event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(TE('resin'), 250)])
+event.recipes.createCompacting('1x ' + CRD("crystallized_sap"), [Fluid.of(TE('resin'), 500)])
+
+event.recipes.createEmptying(Fluid.of(TE("resin"), 500), CRD("crystallized_sap"))
+}
+
+function copperMachine(event) {
+
+let t = KJ('incomplete_sealed_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('sealed_mechanism'),
+], KJ('kinetic_mechanism'), [
+	event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
+	event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
+	// event.recipes.createDeploying(t, [t, F('#super_glues')])
+]).transitionalItem(t)
+	.loops(1)
+	.id('kubejs:sealed_mechanism')
+
+event.shaped(KJ('sealed_mechanism'), [
+	'SCS'
+], {
+	C: KJ('kinetic_mechanism'),
+	S: TE('cured_rubber')
+})
+
+event.custom({
+	"type":"vintageimprovements:vacuumizing",
+	"ingredients": [ 
+		{
+			"item": "kubejs:kinetic_mechanism"
+		},
+		{
+			"item": "thermal:cured_rubber"
+		},
+		{
+			"item": "thermal:cured_rubber"
+		}
+	],
+	"results": [
+		{
+			"item": "kubejs:sealed_mechanism",
+			"count": 1
+		}
+	],
+	"processingTime": 200
+})
+
+
+event.shaped(KJ('copper_machine'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+	C: CR('copper_casing'),
+	S: KJ('sealed_mechanism')
+})
+
+//治炼炉核心
+event.remove({ id: TC("smeltery/casting/seared/smeltery_controller") })
+event.remove({ id: TC("smeltery/melting/copper/smeltery_controller") })
+donutCraft(event, TC('smeltery_controller'), TC('seared_bricks'), KJ('sealed_mechanism'))
+
+let copper_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), 'kubejs:copper_machine', other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:copper_machine', B: other_ingredient })
+	}
+	else
+		event.stonecutting(Item.of(id, amount), 'kubejs:copper_machine')
+}
+
+copper_machine('create:copper_backtank', 1, MC("copper_block"))
+copper_machine('create:portable_fluid_interface', 2)
+copper_machine('create:spout', 1, MC('hopper'))
+copper_machine('thermal:upgrade_augment_1', 1, MC('redstone'))
+copper_machine('create:hose_pulley', 1)
+copper_machine('create:item_drain', 1, MC("iron_bars"))
+copper_machine('thermal:dynamo_magmatic', 1, TE('rf_coil'))
+copper_machine('thermal:device_water_gen', 1, MC('bucket'))
+copper_machine('create:smart_fluid_pipe', 2)
+copper_machine('vintageimprovements:vacuum_chamber', 1, CR('mechanical_pump'))
+copper_machine('create_enchantment_industry:disenchanter', 1, CR('#sandpaper'))
+copper_machine('create_enchantment_industry:printer', 1, F('#plates/iron'))
+copper_machine('create:steam_engine', 1, 'createdieselgenerators:engine_piston')
+copper_machine('create:steam_whistle', 1, F('#plates/gold'))
+copper_machine('cookingforblockheads:sink', 1, MC('heart_of_the_sea'))
+copper_machine('create_dd:hydraulic_press', 1, 'create_dd:reinforcement_plating')
+copper_machine('createdieselgenerators:pumpjack_hole', 1, '#supplementaries:chains')
+
+}
+
+function electronTube(event) {
+
+event.recipes.createFilling(CR("electron_tube"), [CR('polished_rose_quartz'), Fluid.of(TC('molten_iron'), 20)])
+
+let redstone = MC('redstone')
+event.shapeless('create:rose_quartz', [[MC('quartz'), KJ('purified_nether_quartz_crystal') , AE2('certus_quartz_crystal'), AE2('charged_certus_quartz_crystal')], redstone, redstone, redstone, redstone])
+
+event.remove({ id: CR('compat/ae2/milling/sky_stone_block') })
+event.remove({ id: CR('compat/ae2/milling/nether_quartz') })
+event.remove({ id: CR('compat/ae2/milling/certus_quartz') })
+event.remove({ id: CR('crafting/materials/electron_tube') })
+event.remove({ id: CR('crafting/materials/rose_quartz') })
+
+event.recipes.createMechanicalCrafting(Item.of(AE2('certus_crystal_seed'), 2), ['A'], { A: F('#gems/certus_quartz') })
+event.recipes.createMechanicalCrafting(Item.of(AE2('fluix_crystal_seed'), 2), ['A'], { A: F('#gems/fluix') })
+event.recipes.createMechanicalCrafting(Item.of(KJ('nether_seed'), 2), ['A'], { A: F('#gems/quartz') })
+
+let grow = (from, via, to) => {
+	event.recipes.createSequencedAssembly([to], from, [
+		event.recipes.createFilling(via, [via, Fluid.of(MC("water"), 500)]),
+	]).transitionalItem(via)
+		.loops(4)
+		.id('kubejs:grow_' + to.split(':')[1])
+}
+
+grow(AE2("certus_crystal_seed"), KJ('growing_certus_seed'), KJ('tiny_certus_crystal'))
+grow(AE2("fluix_crystal_seed"), KJ('growing_fluix_seed'), KJ('tiny_fluix_crystal'))
+grow(KJ("nether_seed"), KJ('growing_nether_seed'), KJ('tiny_nether_crystal'))
+// grow(KJ("arcane_crystal_seed"), KJ('growing_arcane_seed'), KJ('tiny_arcane_crystal'))
+
+grow(KJ("tiny_certus_crystal"), KJ('growing_tiny_certus_crystal'), KJ('small_certus_crystal'))
+grow(KJ("tiny_fluix_crystal"), KJ('growing_tiny_fluix_crystal'), KJ('small_fluix_crystal'))
+grow(KJ("tiny_nether_crystal"), KJ('growing_tiny_nether_crystal'), KJ('small_nether_crystal'))
+// grow(KJ("tiny_arcane_crystal"), KJ('growing_tiny_arcane_crystal'), KJ('small_arcane_crystal'))
+
+grow(KJ("small_certus_crystal"), KJ('growing_small_certus_crystal'), KJ('purified_certus_quartz_crystal'))
+grow(KJ("small_fluix_crystal"), KJ('growing_small_fluix_crystal'), AE2('fluix_crystal'))
+grow(KJ("small_nether_crystal"), KJ('growing_small_nether_crystal'), KJ('purified_nether_quartz_crystal'))
+// grow(KJ("small_arcane_crystal"), KJ('growing_small_arcane_crystal'), KJ('purified_arcane_crystal'))
+
+event.recipes.createMixing(Fluid.of(KJ("sky_stone"), 500), [AE2('sky_dust', 4), Fluid.of(MC('water'), 500)])
+event.recipes.createMixing(CR('polished_rose_quartz'), [[AE2('certus_quartz_crystal'), KJ('purified_certus_quartz_crystal')], Fluid.of(TE("redstone"), 250)])
+event.custom({
+	"type":"vintageimprovements:centrifugation",
+	"ingredients": [ 
+		{
+			"item": "ae2:charged_certus_quartz_crystal"
+		},
+		{
+			"fluid": "kubejs:sky_stone",
+			"amount": 250
+		}
+	],
+	"results": [
+		{
+			"item": "ae2:certus_quartz_crystal"
+		},
+		{
+		    "fluid": "thermal:redstone",
+			"amount": 250
+		}
+	],
+	"processingTime": 200
+})
+event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE('redstone'), 100)], [AE2('charged_certus_quartz_crystal'), Fluid.of(KJ('sky_stone'), 100)])
+// event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE('glowstone'), 500)], [AE2('charged_certus_quartz_crystal'), MC('glowstone_dust'), Fluid.of(KJ('sky_stone'), 500)])
+}
+
+function redstoneTransmute(event) {
+event.replaceInput(
+	"create:electron_tube",
+	Ingredient.of([Item.of("immersiveengineering:electron_tube"), "create:electron_tube"])
+);
+event.replaceInput({ id: TE('redstone_servo') }, MC('iron_ingot'), TE('lead_ingot'))
+
+//红石浇筑
+// event.recipes.createFilling(BO("redstone_root"), [[BO("living_root"), 'twilightforest:liveroot'], Fluid.of(TE('redstone'), 100)])
+event.recipes.createFilling(TE("redprint"), [MC('paper'), Fluid.of(TE('redstone'), 200)])
+event.recipes.createFilling(TE("redstone_servo"), [TE('lead_plate'), Fluid.of(TE('redstone'), 200)])
+
+let redstoneTransmute = (input, output, type, amount) => {
+	event.custom({
+		"type": "tconstruct:" + type,
+		"cast": { "item": input },
+		"cast_consumed": true,
+		"fluid": {
+			"name": "thermal:redstone",
+			"amount": amount
+		},
+		"result": output,
+		"cooling_time": 30
+	})
+}
+redstoneTransmute(MC("cobblestone"), MC("netherrack"), "casting_basin", 50)
+redstoneTransmute(MC("sand"), MC("red_sand"), "casting_basin", 50)
+// redstoneTransmute('twilightforest:liveroot', BO("redstone_root"), "casting_table", 100)
+// redstoneTransmute(BO("living_root"), BO("redstone_root"), "casting_table", 100)
+redstoneTransmute(TE('lead_plate'), TE("redstone_servo"), "casting_table", 200)
+redstoneTransmute(MC('paper'), TE("redprint"), "casting_table", 200)
+}
+
+function brassMachine(event) {
+
+event.recipes.createMilling([AE2('sky_dust'), AE2('sky_stone_block')], AE2('sky_stone_block')).processingTime(1000)
+
+event.remove({ id: CR("sequenced_assembly/precision_mechanism") })
+let t = CR('incomplete_precision_mechanism')
+event.recipes.createSequencedAssembly([
+	CR('precision_mechanism'),
+], KJ('kinetic_mechanism'), [
+	event.recipes.createDeploying(t, [t, CR('electron_tube')]),
+	event.recipes.createDeploying(t, [t, CR('electron_tube')]),
+	event.recipes.createDeploying(t, [t, F('#screwdrivers')])
+]).transitionalItem(t)
+	.loops(1)
+	.id('kubejs:precision_mechanism')
+
+event.shaped(KJ('brass_machine'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+	C: CR('brass_casing'),
+	S: CR('precision_mechanism')
+})
+
+let brass_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), 'kubejs:brass_machine', other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:brass_machine', B: other_ingredient })
+	}
+	else
+		event.stonecutting(Item.of(id, amount), 'kubejs:brass_machine')
+}
+
+brass_machine('create:mechanical_crafter', 3, MC('crafting_table'))
+brass_machine('create:sequenced_gearshift', 2)
+brass_machine('create:rotation_speed_controller', 1)
+brass_machine('create:mechanical_arm', 1)
+brass_machine('create:stockpile_switch', 2)
+brass_machine('create:content_observer', 2)
+brass_machine('thermal:machine_press', 1, MC('dropper'))
+brass_machine('torchmaster:feral_flare_lantern', 1, MC('glowstone_dust'))
+brass_machine('thermal:dynamo_numismatic', 1, TE('rf_coil'))
+brass_machine(PP('item_terminal'), 1, TE('diamond_gear'))
+brass_machine(PP('pressurizer'), 1, CR('propeller'))
+brass_machine('create:brass_funnel', 4)
+brass_machine('create:brass_tunnel', 4)
+brass_machine('kubejs:pipe_module_tier_1', 4)
+brass_machine('create:elevator_pulley', 1, SP('#ropes'))
+brass_machine('createdieselgenerators:diesel_engine', 1, 'createdieselgenerators:engine_piston')
+brass_machine('createaddition:portable_energy_interface', 2, 'createaddition:copper_spool')
+brass_machine('vintageimprovements:laser', 1, 'vintageimprovements:laser_item')
+
+event.stonecutting(Item.of('create:brass_funnel'), 'create:brass_tunnel')
+event.stonecutting(Item.of('create:brass_tunnel'), 'create:brass_funnel')
+
+event.remove({ output: 'createdieselgenerators:large_diesel_engine' })	
+event.smithing('createdieselgenerators:large_diesel_engine', 'createdieselgenerators:diesel_engine', 'create_dd:reinforcement_plating')
+event.recipes.createMechanicalCrafting('createdieselgenerators:large_diesel_engine', "AB", { A: 'createdieselgenerators:diesel_engine', B: 'create_dd:reinforcement_plating' })
+event.remove({ output: 'createdieselgenerators:huge_diesel_engine' })	
+event.smithing('createdieselgenerators:huge_diesel_engine', 'createdieselgenerators:large_diesel_engine', 'create_dd:reinforcement_plating')
+event.recipes.createMechanicalCrafting('createdieselgenerators:huge_diesel_engine', "AB", { A: 'createdieselgenerators:large_diesel_engine', B: 'create_dd:reinforcement_plating' })
+
+}
+
+function zincMachine(event) {
+
+// event.custom({
+// 	"type": "tconstruct:casting_basin",
+// 	"cast": {
+// 		"item": "minecraft:basalt"
+// 	},
+// 	"cast_consumed": true,
+// 	"fluid": {
+// 		"name": "minecraft:lava",
+// 		"amount": 1000
+// 	},
+// 	"result": Item.of(TE("basalz_rod"), 2),
+// 	"cooling_time": 15
+// })
+
+// event.remove({ id: TE('basalz_powder') })
+// event.remove({ id: TC('smeltery/casting/scorched/stone_from_magma') })
+event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
+// event.remove({ id: TC('smeltery/scorched/scorched_brick_kiln') })
+// event.remove({ id: TC('smeltery/scorched/scorched_brick') })
+// event.remove({ id: TC('smeltery/melting/scorched/grout') })
+event.remove({ id: TC('smeltery/melting/soul/sand') })
+// event.recipes.createMilling([Item.of(TE('basalz_powder'), 1)], TE("basalz_rod")).processingTime(300)
+
+//焦黑炉核心
+donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
+
+event.recipes.createMixing(Fluid.of(TC("liquid_soul"), 500), [MC('twisting_vines'), MC('weeping_vines')]).heated()
+
+
+//
+
+let t = KJ('incomplete_infernal_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('infernal_mechanism'),
+], CR('precision_mechanism'), [
+	event.recipes.createFilling(t, [t, Fluid.of(TC("liquid_soul"), 500)]),
+	event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)]),
+	event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)]),
+	event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)])
+]).transitionalItem(t)
+	.loops(1)
+	.id('kubejs:infernal_mechanism')
+
+event.shaped(KJ('zinc_machine'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+	C: KJ('zinc_casing'),
+	S: KJ('infernal_mechanism')
+})
+
+let zinc_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), 'kubejs:zinc_machine', other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:zinc_machine', B: other_ingredient })
+	}
+	else
+		event.stonecutting(Item.of(id, amount), 'kubejs:zinc_machine')
+}
+
+zinc_machine(TE('device_rock_gen'), 1, MC('piston'))
+zinc_machine(TE('device_collector'), 1, MC('ender_pearl'))
+zinc_machine(TE('device_nullifier'), 1, MC('lava_bucket'))
+zinc_machine(TE('device_potion_diffuser'), 1, MC('glass_bottle'))
+zinc_machine('storagedrawers:controller', 1, MC('diamond'))
+zinc_machine('storagedrawers:controller_slave', 1, MC('gold_ingot'))
+zinc_machine('torchmaster:megatorch', 1, MC('torch'))
+zinc_machine('thermal:upgrade_augment_2', 1, MC('redstone'))
+zinc_machine('createdieselgenerators:pumpjack_bearing', 1)
+zinc_machine('createdieselgenerators:pumpjack_head', 1)
+zinc_machine('createdieselgenerators:pumpjack_crank', 1)
+zinc_machine('createdieselgenerators:distillation_controller', 2)
+}
 
 let float_and_lights = (event, item) => { // 光辉石漂浮效果
     if (event.entity.type == 'minecraft:item' && event.entity.item == item) {

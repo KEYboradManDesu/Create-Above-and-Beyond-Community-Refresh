@@ -195,6 +195,7 @@ event.create('andesite_alloy_gear').texture("kubejs:item/andesite_alloy_gear").d
 event.create('andesite_alloy_ingot').texture("kubejs:item/andesite_alloy_classic").displayName('安山合金锭')
 event.create('wood_gear').texture("kubejs:item/wood_gear").displayName('木齿轮')
 event.create('arcane_gold_gear').texture("kubejs:item/arcane_gold_gear").displayName('神秘金齿轮')
+event.create('matter_plastics').texture("kubejs:item/matter_plastics").displayName('物质塑料').rarity(RARITY_UNCOMMON)
 // event.create('zinc_wire').texture("kubejs:item/zinc_wire").displayName('锌线')
 // event.create('nickel_wire').texture("kubejs:item/nickel_wire").displayName('镍线')
 // event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('杂酚油滴')
@@ -213,7 +214,6 @@ event.create('arcane_gold_gear').texture("kubejs:item/arcane_gold_gear").display
 // event.create('incomplete_component_electronic', 'create:sequenced_assembly').texture("kubejs:item/incomplete_component_electronic").displayName('电子元件（未完成）')
 // event.create('incomplete_component_electronic_adv', 'create:sequenced_assembly').texture("kubejs:item/incomplete_component_electronic_adv").displayName('高级电子元件（未完成）')
 // event.create('iron_compressed_sheet').texture("kubejs:item/iron_compressed_sheet").displayName('压缩铁板')
-// event.create('matter_plastics').texture("kubejs:item/matter_plastics").displayName('物质塑料').rarity(RARITY_UNCOMMON)
 
 // 矿物
 event.create('crushed_raw_cobalt').texture("kubejs:item/ore/crushed_raw_cobalt").displayName('粉碎钴矿石')

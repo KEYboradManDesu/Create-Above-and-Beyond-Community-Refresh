@@ -112,6 +112,9 @@ event.get('forge:dusts/brass').add(KJ('brass_dust'))
 event.get('forge:dusts/zinc').add(KJ('zinc_dust'))
 event.get('forge:dusts/cobalt').add(KJ('cobalt_dust'))
 
+event.get('forge:gears/andesite_alloy').add(KJ('andesite_alloy_gear'))
+event.get('forge:gears').add(KJ('andesite_alloy_gear'))
+
 event.get('forge:circuit_press').add('ae2:calculation_processor_press')
 event.get('forge:circuit_press').add('ae2:engineering_processor_press')
 event.get('forge:circuit_press').add('ae2:logic_processor_press')
