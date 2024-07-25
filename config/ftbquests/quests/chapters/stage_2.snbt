@@ -1,0 +1,750 @@
+{
+	id: "3CEC7BECE6B40994"
+	group: "331B6409EF6A7840"
+	order_index: 2
+	filename: "stage_2"
+	title: "2 &r一时之快"
+	icon: "kubejs:brass_machine"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "章节2开始！"
+			icon: "kubejs:kinetic_mechanism"
+			x: -1.0d
+			y: 2.0d
+			shape: "hexagon"
+			description: [
+				"本阶段的自动化目标是电子管。将他们装配在动力构件上以帮助你解锁下一阶段。"
+				""
+				"发明快乐！"
+			]
+			dependencies: ["28C41C062843C2CA"]
+			hide: true
+			size: 2.0d
+			id: "727B43FD95C4A512"
+			tasks: [{
+				id: "2B249158FB9D453B"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "05FBDFB7D5A9B322"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+		}
+		{
+			title: "暂时的沙子"
+			x: -5.0d
+			y: 4.0d
+			shape: "circle"
+			description: ["最初，赛特斯石英种子的合成需要沙子。然而，对于完全自动化来讲，这个需求是可以使用动力合成器绕过的。"]
+			hide_dependency_lines: true
+			dependencies: ["727B43FD95C4A512"]
+			id: "0AF5F19F5D9FB5C9"
+			tasks: [{
+				id: "4F4219EDA9C5F9F7"
+				type: "item"
+				item: "minecraft:sand"
+				consume_items: false
+			}]
+		}
+		{
+			title: "石英种子"
+			x: -6.0d
+			y: 6.5d
+			shape: "circle"
+			subtitle: "装置 12-1"
+			description: [
+				"这块石英太小了。如果有足够的水，我们也许能到达某个大小。"
+				""
+				"如果你不想花上几小时等待晶体生长，你可以使用注液器大大加速这一过程。"
+			]
+			dependencies: [
+				"0AF5F19F5D9FB5C9"
+				"2FFFE1C5366930BB"
+			]
+			dependency_requirement: "one_completed"
+			id: "345B94F6D17605CD"
+			tasks: [{
+				id: "4D592B701A2AE0BC"
+				type: "item"
+				item: "ae2:certus_crystal_seed"
+				consume_items: false
+			}]
+		}
+		{
+			title: "开始生长"
+			icon: "kubejs:tiny_certus_crystal"
+			x: -5.5d
+			y: 8.0d
+			shape: "circle"
+			subtitle: "装置 12-2"
+			description: ["需要更多的水。"]
+			dependencies: ["345B94F6D17605CD"]
+			id: "34A1D176C78FB64E"
+			tasks: [{
+				id: "28DDF51DB85DCF7D"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "继续生长"
+			icon: "kubejs:small_certus_crystal"
+			x: -4.0d
+			y: 8.5d
+			shape: "circle"
+			subtitle: "装置 12-3"
+			description: ["继续注液。"]
+			dependencies: ["34A1D176C78FB64E"]
+			id: "1642A27606A34984"
+			tasks: [{
+				id: "30E8BB6958ED4A44"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "完全生长"
+			icon: "ae2:certus_quartz_crystal"
+			x: -2.5d
+			y: 8.0d
+			subtitle: "装置 12-4"
+			description: ["最终，你得到了一个完全生长的水晶。不要忘记把另一份送回去来进行种子生产。"]
+			dependencies: ["1642A27606A34984"]
+			id: "1861E583C9DAA0BA"
+			tasks: [
+				{
+					id: "68D808533C34AB5C"
+					type: "item"
+					item: "ae2:certus_quartz_crystal"
+					consume_items: false
+				}
+				{
+					id: "5143762A67B81B7E"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "水源"
+			icon: "minecraft:water_bucket"
+			x: -3.0d
+			y: 4.5d
+			description: ["第2章的大部分机械都需要稳定的水资源。最好的水资源获取方法是使用动力泵和流体网络直接从水源抽取。"]
+			hide_dependency_lines: true
+			dependencies: ["727B43FD95C4A512"]
+			id: "2FFFE1C5366930BB"
+			tasks: [
+				{
+					id: "1A9DB3A538856229"
+					type: "item"
+					item: "minecraft:water_bucket"
+					consume_items: false
+				}
+				{
+					id: "2DC358D8174FC867"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "陨石无限磨"
+			icon: "ae2:sky_dust"
+			x: -1.0d
+			y: 4.0d
+			subtitle: "装置 11"
+			description: [
+				"你可以不断地磨粉，陨石似乎不会在磨粉的过程中损失质量，我们生活在一个多好的世界中啊！"
+				""
+				"在陨石坑里可以找到陨石。如果你到现在都没有找到一个，那么既可以使用陨石罗盘来尝试找一个。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["727B43FD95C4A512"]
+			id: "4F95D5136E944ADB"
+			tasks: [
+				{
+					id: "69C6513B25BB6ABA"
+					type: "item"
+					item: "ae2:sky_dust"
+					consume_items: false
+				}
+				{
+					id: "3C8D449468C6DD27"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "陨石混合"
+			icon: "tconstruct:molten_obsidian_bucket"
+			x: -1.0d
+			y: 5.5d
+			subtitle: "装置 13-1"
+			description: ["把这种奇怪的活性粉末溶解在水里，就会产生一种有趣而有用的液体。"]
+			dependencies: [
+				"2FFFE1C5366930BB"
+				"4F95D5136E944ADB"
+			]
+			id: "1256352748B93449"
+			tasks: [
+				{
+					id: "36E36D584FCBC358"
+					type: "item"
+					item: "tconstruct:molten_obsidian_bucket"
+					consume_items: false
+				}
+				{
+					id: "1CB43671DBA7EBB6"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "充能搅拌器"
+			icon: "thermal:redstone_bucket"
+			x: -0.5d
+			y: 7.0d
+			subtitle: "装置 13-2"
+			description: [
+				"将充能赛特斯石英水晶中的能量释放到陨石溶液中，产生的液体让你想到了液态红石。"
+				""
+				"注：混合过程返回未充能石英需要使用装置14充能。"
+			]
+			dependencies: [
+				"1256352748B93449"
+				"24FFFE0FC9EAEF8D"
+			]
+			dependency_requirement: "one_completed"
+			id: "619E34A7DE48B991"
+			tasks: [
+				{
+					id: "5F47790124641B2D"
+					type: "item"
+					item: "thermal:redstone_bucket"
+					consume_items: false
+				}
+				{
+					id: "4B98217B670ECA57"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "熔化"
+			icon: {
+				id: "tconstruct:copper_can"
+				Count: 1b
+				tag: {
+					fluid: "tconstruct:molten_iron"
+				}
+			}
+			x: 1.0d
+			y: 9.5d
+			subtitle: "装置 15-4"
+			description: ["将铁粒导入高温熔化设备——例如匠魂的熔化炉。"]
+			dependencies: ["53735DC4231AB566"]
+			id: "2167272204B6627B"
+			tasks: [
+				{
+					id: "611F921F94FAE142"
+					type: "item"
+					title: "铜罐（熔融铁）"
+					item: {
+						id: "tconstruct:copper_can"
+						Count: 1b
+						tag: {
+							fluid: "tconstruct:molten_iron"
+						}
+					}
+					consume_items: false
+				}
+				{
+					id: "75C982848F2CEA85"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "第二涂层"
+			icon: "create:electron_tube"
+			x: -0.5d
+			y: 10.0d
+			subtitle: "装置 15-5"
+			description: ["将熔融铁喷到玫瑰石英上以制作一个多功能的电子管"]
+			dependencies: [
+				"2167272204B6627B"
+				"06B061C0EE94BC90"
+			]
+			id: "5351AF6CA73CB8E0"
+			tasks: [
+				{
+					id: "163B1579092E6BD3"
+					type: "item"
+					item: "create:electron_tube"
+					consume_items: false
+				}
+				{
+					id: "1D7C84803766FD04"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "（再）充能"
+			icon: "ae2:charged_certus_quartz_crystal"
+			x: 1.0d
+			y: 6.0d
+			subtitle: "装置 14"
+			description: [
+				"在装置13-2中设置一个小循环来给用作催化剂的赛特斯石英水晶充能。"
+				""
+				"AE2的充能站可以用在这里，你还可以选择多种传输物品的方法。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["1256352748B93449"]
+			id: "24FFFE0FC9EAEF8D"
+			tasks: [
+				{
+					id: "23DAE14596F025DF"
+					type: "item"
+					item: "ae2:charged_certus_quartz_crystal"
+					consume_items: false
+				}
+				{
+					id: "56F78EAD35D1046E"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "刷铁机"
+			icon: "minecraft:cobblestone"
+			x: 3.5d
+			y: 7.0d
+			subtitle: "装置 15-1"
+			description: [
+				"这就是耳熟能详的“刷铁机”，你现在可以从圆石创造金属。"
+				""
+				"用钻头挖掘生成的圆石。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["727B43FD95C4A512"]
+			id: "0E46C1FCE5AEB1DF"
+			tasks: [
+				{
+					id: "7E68B8C4958FB0B5"
+					type: "item"
+					item: "minecraft:cobblestone"
+					consume_items: false
+				}
+				{
+					id: "5E676D2CC5975AEA"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "继续装配"
+			icon: "create:precision_mechanism"
+			x: -1.0d
+			y: 11.5d
+			subtitle: "装置 16"
+			description: ["将电子管和动力构件带到一起，然后用一排机械手完成你的第二条生产线。"]
+			dependencies: [
+				"5351AF6CA73CB8E0"
+				"6D8BB2D6A75ABB16"
+			]
+			id: "19715EBCBBA1B4AD"
+			tasks: [
+				{
+					id: "4DF52040884AB28D"
+					type: "item"
+					item: "create:precision_mechanism"
+					consume_items: false
+				}
+				{
+					id: "002032AE65148DBD"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "章节2完成！"
+			x: -1.0d
+			y: 13.5d
+			shape: "hexagon"
+			description: [
+				"祝贺！你现在有一个精密构件的来源了，你可以查看你所拥有的选择！"
+				""
+				"在清理和简单扫描有没有堵塞之后，继续发展并查看概要。"
+			]
+			dependencies: ["19715EBCBBA1B4AD"]
+			size: 2.0d
+			id: "7FC4D1E69377271D"
+			tasks: [{
+				id: "4C32A887DA89A75C"
+				type: "item"
+				item: "kubejs:brass_machine"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "54E81DC78E539FDD"
+					type: "item"
+					item: "create:precision_mechanism"
+					count: 16
+				}
+				{
+					id: "7A797A069B28AE89"
+					type: "item"
+					item: "appliedenergistics2:certus_quartz_crystal"
+					random_bonus: 4
+				}
+				{
+					id: "11BF1DF6EF76569B"
+					type: "item"
+					item: "create:brass_ingot"
+					random_bonus: 4
+				}
+			]
+		}
+		{
+			title: "碎石机"
+			icon: "minecraft:gravel"
+			x: 4.0d
+			y: 9.0d
+			subtitle: "装置 15-2"
+			description: ["圆石需要被磨成砂砾"]
+			dependencies: ["0E46C1FCE5AEB1DF"]
+			id: "1139F2E4E6FCFE29"
+			tasks: [
+				{
+					id: "517441AE19EF30E2"
+					type: "item"
+					item: "minecraft:gravel"
+					consume_items: false
+				}
+				{
+					id: "63F3877902E01590"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "铁的痕迹"
+			icon: "minecraft:iron_nugget"
+			x: 2.5d
+			y: 10.0d
+			subtitle: "装置 15-3"
+			description: ["使用鼓风机清洗砂砾可以让你获得铁粒和燧石。"]
+			dependencies: ["1139F2E4E6FCFE29"]
+			id: "53735DC4231AB566"
+			tasks: [
+				{
+					id: "591D709D1E4EE97A"
+					type: "item"
+					item: "minecraft:iron_nugget"
+					consume_items: false
+				}
+				{
+					id: "64B405696E96FFCD"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "彩绘搅拌"
+			icon: "create:polished_rose_quartz"
+			x: -1.0d
+			y: 8.5d
+			subtitle: "装置 13-3"
+			description: [
+				"第三次也是最后一次搅拌，新鲜生长的水晶将会被重新绘制出美好的图案。"
+				"（向所有矿物学家致歉。）"
+			]
+			dependencies: [
+				"1861E583C9DAA0BA"
+				"619E34A7DE48B991"
+			]
+			id: "06B061C0EE94BC90"
+			tasks: [
+				{
+					id: "0AD0021818A0BB33"
+					type: "item"
+					item: "create:polished_rose_quartz"
+					consume_items: false
+				}
+				{
+					id: "0F6DB8FCC5C16A94"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "加热处理"
+			x: -1.0d
+			y: 17.5d
+			shape: "circle"
+			subtitle: "装置 18-2"
+			description: [
+				"把液体注入精密构件，它将会转变为变成下界的构件。"
+				""
+				"再说一遍，不强制要求自动化附加构件，因为它们除了自身可以制作的机械以外，没有任何更多的发展空间。"
+				"你可以制作一个将精密构件随时转化为下界构件的半自动生产线。"
+			]
+			dependencies: [
+				"239C64263B91350D"
+				"1D9D65FBD06DD481"
+			]
+			id: "3C50B4556375178E"
+			tasks: [{
+				id: "24070D354D67A3DF"
+				type: "item"
+				item: "kubejs:infernal_mechanism"
+				consume_items: false
+			}]
+		}
+		{
+			title: "亿桶熔岩"
+			icon: "minecraft:lava_bucket"
+			x: -2.5d
+			y: 17.0d
+			subtitle: "装置 18-1"
+			description: [
+				""
+				"每一个锌制机械装置都需要24桶熔岩。这可能对生态不是很好，但是一个软管滑轮可以快速解决这一问题。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"19715EBCBBA1B4AD"
+				"21753CBB528EAADF"
+			]
+			hide: true
+			id: "1D9D65FBD06DD481"
+			tasks: [
+				{
+					id: "4A9BF979E823D4CB"
+					type: "item"
+					item: "minecraft:lava_bucket"
+					consume_items: false
+				}
+				{
+					id: "73BF4F3B488FBC83"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "灵魂酿造厂"
+			icon: "tconstruct:liquid_soul_bucket"
+			x: -1.0d
+			y: 16.0d
+			subtitle: "装置 17-3"
+			description: ["将所有收割来的藤蔓放进一个加热搅拌的工作盆。"]
+			dependencies: [
+				"223BB57AD0239511"
+				"7E59B7DC239E621E"
+				"5DCF9C8212AA3BE3"
+			]
+			id: "239C64263B91350D"
+			tasks: [
+				{
+					id: "7BBC2AAED0A77FDC"
+					type: "item"
+					item: "tconstruct:liquid_soul_bucket"
+					consume_items: false
+				}
+				{
+					id: "21C241D2335C67E4"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "双层巴士-I"
+			icon: "minecraft:twisting_vines"
+			x: -3.0d
+			y: 15.5d
+			subtitle: "装置 17-1"
+			description: [
+				"对于全能的下界构件，一个丰富的灵魂精华的来源是必要的。"
+				""
+				"缠怨藤会向上生长，你可以使用动力收割机来收割它们。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"19715EBCBBA1B4AD"
+				"21753CBB528EAADF"
+			]
+			hide: true
+			id: "223BB57AD0239511"
+			tasks: [
+				{
+					id: "70EA8B8349BC13D1"
+					type: "item"
+					item: "minecraft:twisting_vines"
+					consume_items: false
+				}
+				{
+					id: "6F7A49C7C377ABF1"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "双层巴士-II"
+			icon: "minecraft:weeping_vines"
+			x: 1.0d
+			y: 15.5d
+			subtitle: "装置 17-2"
+			description: [
+				"垂泪藤向下生长，你也可以使用动力收割机收割它们。"
+				""
+				"在设计时，你可以使用同一个装置来收获这两种藤蔓。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"19715EBCBBA1B4AD"
+				"21753CBB528EAADF"
+			]
+			hide: true
+			id: "7E59B7DC239E621E"
+			tasks: [
+				{
+					id: "57EC8E4703FADF5E"
+					type: "item"
+					item: "minecraft:weeping_vines"
+					consume_items: false
+				}
+				{
+					id: "6149AB838FC42C17"
+					type: "checkmark"
+					title: "已自动化"
+				}
+			]
+		}
+		{
+			title: "装备机械手II"
+			x: -2.5d
+			y: 11.5d
+			shape: "circle"
+			description: [
+				"为了精密构件生产，先存储一些螺丝刀是一个好主意。"
+				""
+				"如上次，它不需要自动化生产。"
+			]
+			hide_dependency_lines: true
+			dependencies: ["5351AF6CA73CB8E0"]
+			id: "6D8BB2D6A75ABB16"
+			tasks: [{
+				id: "7DF53EF0CF55B5D7"
+				type: "item"
+				item: {
+					id: "projectred_core:screwdriver"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				consume_items: false
+			}]
+		}
+		{
+			title: "附加章节2A完成！"
+			x: -1.0d
+			y: 19.5d
+			shape: "hexagon"
+			description: ["干得漂亮！你已经完成了下界的挑战，你肯定为即将到来的生产线做好了完全的准备。"]
+			dependencies: ["3C50B4556375178E"]
+			size: 2.0d
+			id: "047FD4E54147D8F7"
+			tasks: [{
+				id: "5D828A5601F86224"
+				type: "item"
+				item: "kubejs:zinc_machine"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "5868F4AF0FBE0295"
+					type: "item"
+					item: "kubejs:infernal_mechanism"
+					count: 16
+				}
+				{
+					id: "02A669ED33AA71DC"
+					type: "item"
+					item: "minecraft:blaze_powder"
+					random_bonus: 4
+				}
+				{
+					id: "2BAEB1D62B8D3701"
+					type: "item"
+					item: "minecraft:gold_ingot"
+					random_bonus: 4
+				}
+			]
+		}
+		{
+			title: "合金搅拌机"
+			icon: "create:brass_ingot"
+			x: 1.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "装置 10"
+			description: [
+				"这并不是构件生产线的一部分，但对制作相关机器非常重要。"
+				""
+				"使用熔化炉、流体管道和动力搅拌器，你可以制造多种不同的合金，黄铜就是其中之一。"
+				""
+				"将熔化的合金泵入铸造台或浇筑盆将其凝固成有用的锭。"
+				""
+				"为了减少手搓的麻烦，建议使用上面的步骤来建造由锭到锭的半自动化生产线来制作合金。"
+			]
+			hide_dependency_lines: false
+			dependencies: ["727B43FD95C4A512"]
+			id: "174E3A810535CAAC"
+			tasks: [{
+				id: "4418A795B9FB076D"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "烈焰常伴"
+			x: 0.5d
+			y: 17.0d
+			shape: "circle"
+			description: ["这是你第一次使用烈焰人燃烧室。手持空的烈焰人燃烧室，对着烈焰人或它们的刷怪笼使用，就可以捕捉一只烈焰人。"]
+			hide_dependency_lines: true
+			dependencies: [
+				"19715EBCBBA1B4AD"
+				"21753CBB528EAADF"
+			]
+			hide: true
+			id: "5DCF9C8212AA3BE3"
+			tasks: [{
+				id: "3BBAFB33D9E2BB24"
+				type: "item"
+				item: "create:blaze_burner"
+				consume_items: false
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "0810E42B2DD79973", title: "远程交易" }
+		{ id: "331B6409EF6A7840", title: "工厂指引" }
+	]
+}
