@@ -242,12 +242,12 @@ event.create('incomplete_upgrade_base', 'create:sequenced_assembly').texture("ku
 
 // 电路板相关
 event.create('radiant_coil').glow(true).texture("kubejs:item/radiant_coil").displayName('光辉线圈').rarity(RARITY_UNCOMMON)
-event.create('radiant_wire').glow(true).texture("kubejs:item/radiant_wire").displayName('光辉线').rarity(RARITY_UNCOMMON)
-event.create('radiant_rod').glow(true).texture("kubejs:item/radiant_rod").displayName('光辉杆').rarity(RARITY_UNCOMMON)
-event.create('shadow_steel_rod').texture("kubejs:item/shadow_steel_rod").displayName('暗影杆').rarity(RARITY_UNCOMMON)
-event.create('radiant_sheet').glow(true).texture("kubejs:item/radiant_sheet").displayName('光辉板').rarity(RARITY_UNCOMMON)
-event.create('small_radiant_spring').glow(true).texture("kubejs:item/small_radiant_spring").displayName('光辉小弹簧').rarity(RARITY_UNCOMMON)
-event.create('radiant_spring').glow(true).texture("kubejs:item/radiant_spring").displayName('光辉弹簧').rarity(RARITY_UNCOMMON)
+// event.create('radiant_wire').glow(true).texture("kubejs:item/radiant_wire").displayName('光辉线').rarity(RARITY_UNCOMMON)
+// event.create('radiant_rod').glow(true).texture("kubejs:item/radiant_rod").displayName('光辉杆').rarity(RARITY_UNCOMMON)
+// event.create('shadow_steel_rod').texture("kubejs:item/shadow_steel_rod").displayName('暗影杆').rarity(RARITY_UNCOMMON)
+// event.create('radiant_sheet').glow(true).texture("kubejs:item/radiant_sheet").displayName('光辉板').rarity(RARITY_UNCOMMON)
+// event.create('small_radiant_spring').glow(true).texture("kubejs:item/small_radiant_spring").displayName('光辉小弹簧').rarity(RARITY_UNCOMMON)
+// event.create('radiant_spring').glow(true).texture("kubejs:item/radiant_spring").displayName('光辉弹簧').rarity(RARITY_UNCOMMON)
 // event.create('radiance_control_circuit').glow(true).texture("kubejs:item/radiance_control_circuit").displayName('光辉控制电路').rarity(RARITY_UNCOMMON)
 // event.create('component_refined_radiance').glow(true).texture("kubejs:item/component_refined_radiance").displayName('光辉机械零件').rarity(RARITY_UNCOMMON)
 
@@ -264,6 +264,8 @@ event.create('radiant_spring').glow(true).texture("kubejs:item/radiant_spring").
 
 // 弹药
 event.create('complex_bullet').texture("kubejs:item/arms/complex_bullet").displayName('复合弹药')
+event.create('shell_empty').texture("kubejs:item/arms/shell_empty").displayName('空霰弹壳')
+event.create('bullet_casing').texture("kubejs:item/arms/bullet_casing").displayName('空弹壳')
 event.create('advanced_bullet_casing').texture("kubejs:item/arms/advanced_bullet_casing").displayName('高级空弹壳')
 event.create('complex_bullet_casing').texture("kubejs:item/arms/complex_bullet_casing").displayName('复合空弹壳')
 event.create('incomplete_advanced_bullet', 'create:sequenced_assembly').texture("kubejs:item/arms/incomplete_advanced_bullet").displayName('高级弹药（未完成）')

@@ -83,7 +83,7 @@ onEvent('block.registry', event => {
 	reagent(0xC7A94A, 0xEEF071, "sulfur", "硫磺", "thermal:sulfur_dust")
 	reagent(0x735A65, 0xB8AFAF, "niter", "硝石", "thermal:niter_dust")
 	reagent(0x91C5FC, 0xA7CBCF, "certus", "赛特斯石英", "ae2:certus_quartz_dust")
-	reagent(0xB19E8F, 0xE7E2DB, "quartz", "下界石英", "ae2:nether_quartz_dust")
+	reagent(0xB19E8F, 0xE7E2DB, "quartz", "下界石英", "thermal:quartz_dust")
 	category()
 	reagent(0x616A60, 0xD0D2C5, "zinc", "锌", "kubejs:zinc_dust")
 	reagent(0xDD7E5D, 0xFCEFBA, "copper", "铜", "thermal:copper_dust")

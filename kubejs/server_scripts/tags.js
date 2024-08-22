@@ -126,3 +126,9 @@ event.get('vintageimprovements:curving_heads')
 	.add('#forge:circuit_press')
 	.add('#thermal:crafting/dies')
 })
+
+onEvent('fluid.tags', event => {
+
+event.get('forge:crude_oil').add('beyond_earth:oil')
+
+})

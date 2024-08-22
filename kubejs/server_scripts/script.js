@@ -40,6 +40,17 @@ onEvent('recipes', event => {
 
 	radiant_coil(event)
 	invarMachine(event)
+
+	enderMachine(event)
+
+	circuits(event)
+	fluixMachine(event)
+
+	madMaths(event)
+
+	alchemy(event)
+
+	trading(event)
 })
 
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -48,6 +59,16 @@ let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purp
 // let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'tin'] 
 let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted'), 'phantasm:pream', 'phantasm:ebony', ]
 
+
+let replaceIO = (event, tag, item) => {
+  event.replaceInput(tag, item);
+  event.replaceOutput(tag, item);
+};
+
+let removeIO = (event, item) => {
+  event.remove({ input: item });
+  event.remove({ output: item });
+};
 
 function ifiniDeploying(output, input, tool) {
 	return {
@@ -478,123 +499,150 @@ event.shaped('waterstrainer:strainer_fisherman_reinforced', [
 }
 
 function project_red(event) {
-	let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 
-	event.remove({ output: PR_C('red_ingot') })
-	event.remove({ output: PR_C('red_iron_comp') })
-	event.remove({ input: PR_C('plate') })
-	event.remove({ mod: 'projectred_illumination' })
-	event.remove({ id: PR_T('red_alloy_wire') })
+event.custom({
+	"type": "tconstruct:melting",
+	"ingredient": {
+		"item": MC('redstone')
+	},
+	"result": {
+		"fluid": TE('redstone'),
+		"amount": 100
+	},
+	"temperature": 300,
+	"time": 10
+});
 
-	//红石合金锭
-	event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), Fluid.of(TE("redstone"), 250)])
-	event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), MC("redstone"), MC("redstone"), MC("redstone"), MC("redstone")])
-	event.recipes.thermal.smelter(PR_C('red_ingot'), [MC("copper_ingot"), MC("redstone")])
+event.custom({
+	"type": "tconstruct:melting",
+	"ingredient": {
+		"item": MC('redstone_block')
+	},
+	"result": {
+		"fluid": TE('redstone'),
+		"amount": 900
+	},
+	"temperature": 500,
+	"time": 90
+});	
 
-    //红石合金导线
-	event.recipes.createCompacting([PR_T('red_alloy_wire', 4)], ['createaddition:copper_wire', Fluid.of(TE("redstone"), 250)])
-	event.recipes.createCompacting([PR_T('red_alloy_wire', 4)], ['createaddition:copper_wire', MC("redstone"), MC("redstone"), MC("redstone"), MC("redstone")])
-	event.recipes.thermal.smelter(PR_T('red_alloy_wire', 4), ['createaddition:copper_wire', MC("redstone")])
-	event.custom({
-		"type":"createaddition:rolling",
-		"input": {
-			  "item": "projectred_core:red_ingot"
-		},
-		"result": {
-			"item": "projectred_transmission:red_alloy_wire",
-			"count": 4
-		}
+let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+
+event.remove({ output: PR_C('red_ingot') })
+event.remove({ output: PR_C('red_iron_comp') })
+event.remove({ input: PR_C('plate') })
+event.remove({ mod: 'projectred_illumination' })
+event.remove({ id: PR_T('red_alloy_wire') })
+
+//红石合金锭
+event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), Fluid.of(TE("redstone"), 250)])
+event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), MC("redstone"), MC("redstone"), MC("redstone"), MC("redstone")])
+event.recipes.thermal.smelter(PR_C('red_ingot'), [MC("copper_ingot"), MC("redstone")])
+
+//红石合金导线
+event.recipes.createCompacting([PR_T('red_alloy_wire', 4)], ['createaddition:copper_wire', Fluid.of(TE("redstone"), 250)])
+event.recipes.createCompacting([PR_T('red_alloy_wire', 4)], ['createaddition:copper_wire', MC("redstone"), MC("redstone"), MC("redstone"), MC("redstone")])
+event.recipes.thermal.smelter(PR_T('red_alloy_wire', 4), ['createaddition:copper_wire', MC("redstone")])
+event.custom({
+	"type":"createaddition:rolling",
+	"input": {
+		  "item": "projectred_core:red_ingot"
+	},
+	"result": {
+		"item": "projectred_transmission:red_alloy_wire",
+		"count": 4
+	}
+})
+
+// event.recipes.immersiveengineeringMetalPress(
+// 	"4x projectred_transmission:red_alloy_wire",
+// 	"projectred_core:red_ingot",
+// 	"immersiveengineering:mold_wire"
+// )
+// event.shapeless("4x projectred_transmission:red_alloy_wire", [
+// 	"projectred_core:red_ingot",
+// 	Item.of("immersiveengineering:wirecutter").ignoreNBT(),
+// ]);
+
+event.shapeless(PR_C('platformed_plate'), [PR_C('plate'), PR_T('red_alloy_wire'), CR("andesite_alloy")])
+
+let convert = (c, id) => {
+	event.shapeless(PR_I(c + "_inverted" + id), [PR_I(c + id)])
+	event.shapeless(PR_I(c + id), [PR_I(c + "_inverted" + id)])
+}
+
+colours.forEach(c => {
+	event.shaped(PR_I(c + '_illumar_lamp', 1), [
+		'G',
+		'C',
+		'S'
+	], {
+		G: F('#glass/colorless'),
+		C: PR_C(c + '_illumar'),
+		S: MC('redstone')
 	})
 
-	// event.recipes.immersiveengineeringMetalPress(
-	// 	"4x projectred_transmission:red_alloy_wire",
-	// 	"projectred_core:red_ingot",
-	// 	"immersiveengineering:mold_wire"
-	// )
-	// event.shapeless("4x projectred_transmission:red_alloy_wire", [
-	// 	"projectred_core:red_ingot",
-	// 	Item.of("immersiveengineering:wirecutter").ignoreNBT(),
-	// ]);
+	event.stonecutting(PR_I(c + '_fixture_light', 4), PR_I(c + '_illumar_lamp'))
+	event.stonecutting(PR_I(c + '_fallout_light', 4), PR_I(c + '_illumar_lamp'))
+	event.stonecutting(PR_I(c + '_lantern', 4), PR_I(c + '_illumar_lamp'))
+	event.stonecutting(PR_I(c + '_cage_light', 4), PR_I(c + '_illumar_lamp'))
+	convert(c, '_illumar_lamp')
+	convert(c, '_fallout_light')
+	convert(c, '_lantern')
+	convert(c, '_cage_light')
+	convert(c, '_fixture_light')
+})
 
-	event.shapeless(PR_C('platformed_plate'), [PR_C('plate'), PR_T('red_alloy_wire'), CR("andesite_alloy")])
+let circuit = (id, override) => {
+	if (override)
+		event.remove({ output: id })
+	event.stonecutting(Item.of(id, 1), PR_C('platformed_plate'))
+}
 
-	let convert = (c, id) => {
-		event.shapeless(PR_I(c + "_inverted" + id), [PR_I(c + id)])
-		event.shapeless(PR_I(c + id), [PR_I(c + "_inverted" + id)])
-	}
+let p_circuit = (id) => circuit("projectred_integration:" + id + "_gate", true)
 
-	colours.forEach(c => {
-		event.shaped(PR_I(c + '_illumar_lamp', 1), [
-			'G',
-			'C',
-			'S'
-		], {
-			G: F('#glass/colorless'),
-			C: PR_C(c + '_illumar'),
-			S: MC('redstone')
-		})
+circuit(MC("repeater"), false)
+circuit(MC("comparator"), false)
+circuit(CR("pulse_repeater"), true)
+circuit(CR("powered_latch"), true)
+circuit(CR("powered_toggle_latch"), true)
+circuit('createaddition:redstone_relay', true)
+circuit('quark:redstone_randomizer', true)
 
-		event.stonecutting(PR_I(c + '_fixture_light', 4), PR_I(c + '_illumar_lamp'))
-		event.stonecutting(PR_I(c + '_fallout_light', 4), PR_I(c + '_illumar_lamp'))
-		event.stonecutting(PR_I(c + '_lantern', 4), PR_I(c + '_illumar_lamp'))
-		event.stonecutting(PR_I(c + '_cage_light', 4), PR_I(c + '_illumar_lamp'))
-		convert(c, '_illumar_lamp')
-		convert(c, '_fallout_light')
-		convert(c, '_lantern')
-		convert(c, '_cage_light')
-		convert(c, '_fixture_light')
-	})
-
-	let circuit = (id, override) => {
-		if (override)
-			event.remove({ output: id })
-		event.stonecutting(Item.of(id, 1), PR_C('platformed_plate'))
-	}
-
-	let p_circuit = (id) => circuit("projectred_integration:" + id + "_gate", true)
-
-	circuit(MC("repeater"), false)
-	circuit(MC("comparator"), false)
-	circuit(CR("pulse_repeater"), true)
-	circuit(CR("powered_latch"), true)
-	circuit(CR("powered_toggle_latch"), true)
-	circuit('createaddition:redstone_relay', true)
-	circuit('quark:redstone_randomizer', true)
-
-	p_circuit("or")
-	p_circuit("nor")
-	p_circuit("not")
-	p_circuit("and")
-	p_circuit("nand")
-	p_circuit("xor")
-	p_circuit("xnor")
-	p_circuit("buffer")
-	p_circuit("multiplexer")
-	p_circuit("pulse")
-	p_circuit("repeater")
-	p_circuit("randomizer")
-	p_circuit("sr_latch")
-	p_circuit("toggle_latch")
-	p_circuit("transparent_latch")
-	p_circuit("light_sensor")
-	p_circuit("rain_sensor")
-	p_circuit("timer")
-	p_circuit("sequencer")
-	p_circuit("counter")
-	p_circuit("state_cell")
-	p_circuit("synchronizer")
-	p_circuit("bus_transceiver")
-	p_circuit("null_cell")
-	p_circuit("invert_cell")
-	p_circuit("buffer_cell")
-	p_circuit("comparator")
-	p_circuit("and_cell")
-	p_circuit("bus_randomizer")
-	p_circuit("bus_converter")
-	p_circuit("bus_input_panel")
-	p_circuit("stacking_latch")
-	p_circuit("segment_display")
-	p_circuit("dec_randomizer")
+p_circuit("or")
+p_circuit("nor")
+p_circuit("not")
+p_circuit("and")
+p_circuit("nand")
+p_circuit("xor")
+p_circuit("xnor")
+p_circuit("buffer")
+p_circuit("multiplexer")
+p_circuit("pulse")
+p_circuit("repeater")
+p_circuit("randomizer")
+p_circuit("sr_latch")
+p_circuit("toggle_latch")
+p_circuit("transparent_latch")
+p_circuit("light_sensor")
+p_circuit("rain_sensor")
+p_circuit("timer")
+p_circuit("sequencer")
+p_circuit("counter")
+p_circuit("state_cell")
+p_circuit("synchronizer")
+p_circuit("bus_transceiver")
+p_circuit("null_cell")
+p_circuit("invert_cell")
+p_circuit("buffer_cell")
+p_circuit("comparator")
+p_circuit("and_cell")
+p_circuit("bus_randomizer")
+p_circuit("bus_converter")
+p_circuit("bus_input_panel")
+p_circuit("stacking_latch")
+p_circuit("segment_display")
+p_circuit("dec_randomizer")
 	
 }
 
@@ -1194,7 +1242,6 @@ event.recipes.createMechanicalCrafting('create_dd:bronze_drill', "AB", { A: 'cre
 
 }
 
-
 function rubberMatters(event) {
 event.remove({ id: 'thermal:rubber_3' })
 event.remove({ id: 'thermal:rubber_from_dandelion' })
@@ -1709,6 +1756,17 @@ obsidian_machine("toms_storage:ts.storage_terminal", 1, CR("item_vault"))
 }
 
 function radiant_coil(event) {
+event.remove({ id: CRD("mixing/chromatic_compound") })
+
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:small_refined_radiance_spring' })
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
+	
+event.shaped(CRD('chromatic_compound'), ['S'], {S: CR('chromatic_compound')})
+event.shaped(CR('chromatic_compound'), ['S'], {S: CRD('chromatic_compound')})
+
+}
+
+function invarMachine(event) {
 
 let chop = (type, output) => {
 event.custom({
@@ -1750,6 +1808,20 @@ event.recipes.createSequencedAssembly([
 ]).transitionalItem(s)
 	.loops(16)
 	.id('kubejs:invar')
+event.custom({
+	"type": "vintageimprovements:hammering",
+	"hammerBlows": 2,
+	"ingredients": [
+		{
+		  "item": "kubejs:invar_compound"
+		}
+	],
+	"results": [
+		{
+		  "item": "thermal:invar_ingot"
+		}
+	]
+})
 
 event.remove({ id: CR("mechanical_crafting/crushing_wheel") })
 event.recipes.createMechanicalCrafting(Item.of(CR('crushing_wheel'), 2), [
@@ -1784,18 +1856,14 @@ if (index == colors.length - 1)
 event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(TC('molten_ender'), 250)], AE2(element + '_paint_ball'))
 }
 
-event.recipes.createMechanicalCrafting(CR('chromatic_compound'), [
+event.recipes.createMechanicalCrafting(CRD('chromatic_compound'), [
 	'AA',
 	'AA'
 ], {
 	A: AE2('magenta_paint_ball')
 })
 
-event.recipes.createPressing(KJ("radiant_sheet"), CR("refined_radiance"))
-event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: KJ('radiant_sheet') })
-}
-
-function invarMachine(event) {
+//
 
 let t = KJ('incomplete_inductive_mechanism')
 event.recipes.createSequencedAssembly([
@@ -1856,6 +1924,741 @@ event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingo
 // invar_machine(TE('machine_brewer'), 1, MC('brewing_stand'))
 // invar_machine(TE('machine_insolator'), 1, MC('dirt'))
 
+}
+
+function enderMachine(event) {
+
+// event.remove({ id: TE("machine/crucible/crucible_ender_pearl") })
+// event.recipes.createMixing(Fluid.of(TE("ender"), 360), [Fluid.of('tconstruct:molten_silver', 90), Fluid.of('tconstruct:ender_slime', 1000)]).heated()
+
+event.custom({
+	"type": "tconstruct:melting",
+	"ingredient": { "tag": "forge:coins/silver" },
+	"result": {
+		"fluid": "tconstruct:molten_silver",
+		"amount": 10
+	},
+	"temperature": 790,
+	"time": 40
+})
+
+event.custom({ // worth it!
+	"type": "tconstruct:melting",
+	"ingredient": { "tag": "forge:coins/gold" },
+	"result": {
+		"fluid": "tconstruct:molten_gold",
+		"amount": 10
+	},
+	"temperature": 790,
+	"time": 40
+})
+
+// event.custom({
+// 	"type": "tconstruct:casting_table",
+// 	"cast": { "tag": "tconstruct:casts/multi_use/ingot" },
+// 	"fluid": {
+// 		"name": "thermal:ender",
+// 		"amount": 90
+// 	},
+// 	"result": { "item": TE("enderium_ingot") },
+// 	"cooling_time": 50
+// })
+
+// event.custom({
+// 	"type": "tconstruct:casting_table",
+// 	"cast": { "tag": "tconstruct:casts/single_use/ingot" },
+// 	"cast_consumed": true,
+// 	"fluid": {
+// 		"name": "thermal:ender",
+// 		"amount": 90
+// 	},
+// 	"result": { "item": TE("enderium_ingot") },
+// 	"cooling_time": 50
+// })
+
+// event.custom({
+// 	"type": "tconstruct:casting_table",
+// 	"cast": { "tag": "tconstruct:casts/multi_use/gear" },
+// 	"fluid": {
+// 		"name": TE("ender"),
+// 		"amount": 360
+// 	},
+// 	"result": { "item": TE("enderium_gear") },
+// 	"cooling_time": 90
+// })
+
+// event.custom({
+// 	"type": "tconstruct:casting_table",
+// 	"cast": { "tag": "tconstruct:casts/single_use/gear" },
+// 	"cast_consumed": true,
+// 	"fluid": {
+// 		"name": TE("ender"),
+// 		"amount": 360
+// 	},
+// 	"result": { "item": TE("enderium_gear") },
+// 	"cooling_time": 90
+// })
+
+event.recipes.thermal.insolator(['phantasm:hanging_pream_berry'], 'phantasm:hanging_pream_leaves').water(1000)
+event.recipes.thermal.insolator(['phantasm:pream_berry'], 'phantasm:hanging_pream_berry').water(1000)
+event.recipes.thermal.insolator(['tconstruct:ender_slime_ball', '3x phantasm:hanging_pream_leaves'], 'phantasm:pream_berry').water(1000)
+
+// let t = KJ('incomplete_abstruse_mechanism')
+// event.recipes.createSequencedAssembly([
+// 	KJ('abstruse_mechanism'),
+// ], KJ('inductive_mechanism'), [
+//	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
+// 	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
+// 	event.recipes.createDeploying(t, [t, F('#ender_staffs')])
+// ]).transitionalItem(t)
+// 	.loops(1)
+// 	.id('kubejs:abstruse_mechanism')
+
+event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", MC("ender_pearl")]).energy(10000)
+event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", AE2("ender_dust", 4)]).energy(10000)
+event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
+
+event.shaped(KJ('enderium_machine'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+		C: KJ('enderium_casing'),
+		S: KJ('abstruse_mechanism')
+})
+
+let ender_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), 'kubejs:enderium_machine', other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:enderium_machine', B: other_ingredient })
+	}
+	else
+		event.stonecutting(Item.of(id, amount), 'kubejs:enderium_machine')
+}
+
+ender_machine("enderstorage:ender_chest", 1, MC('chest'))
+ender_machine("enderstorage:ender_tank", 1, CR('fluid_tank'))
+ender_machine("portality:controller", 1, MC('diamond'))
+ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
+ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
+ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
+ender_machine('kubejs:pipe_module_tier_3', 4)
+
+}
+
+function circuits(event) {
+event.remove({ type: AE2('inscriber') })
+
+event.custom({
+	"type": "tconstruct:casting_table",
+	"cast": { "item": AE2("calculation_processor_press") },
+	"cast_consumed": false,
+	"fluid": { "tag": "tconstruct:molten_copper", "amount": 90 },
+	"result": { "item": AE2("printed_calculation_processor") },
+	"cooling_time": 150
+})
+
+event.custom({
+	"type": "tconstruct:casting_table",
+	"cast": { "item": AE2("logic_processor_press") },
+	"cast_consumed": false,
+	"fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
+	"result": { "item": AE2("printed_logic_processor") },
+	"cooling_time": 150
+})
+
+event.custom({
+	"type": "tconstruct:casting_table",
+	"cast": { "item": AE2("engineering_processor_press") },
+	"cast_consumed": false,
+	"fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
+	"result": { "item": AE2("printed_engineering_processor") },
+	"cooling_time": 150
+})
+
+event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 100), MC("diamond")).energy(10000)
+
+event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 90), AE2("calculation_processor_press")]).energy(5000)
+event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")]).energy(5000)
+event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 100), AE2("engineering_processor_press")]).energy(5000)
+
+// event.custom(ifiniDeploying(AE2("printed_silicon"), AE2("silicon"), AE2("silicon_press")))
+event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "ae2:silicon_press",
+	"ingredients": [
+		{
+		  "item": "ae2:silicon"
+		}
+	],
+	"results": [
+		{
+		  "item": "ae2:printed_silicon"
+		}
+	]
+})
+event.custom({
+	"type":"vintageimprovements:laser_cutting",
+	"ingredients": [
+		{
+		  "item": "ae2:silicon"
+		}
+	],
+	"results": [
+		{
+		  "item": "ae2:printed_silicon"
+		},
+		{
+			"item": "ae2:printed_silicon",
+			"chance": 0.1
+		}
+	],
+	"energy": 2000,
+	"maxChargeRate": 50
+})
+
+
+let types = ["calculation", "logic", "engineering"]
+types.forEach(e => {
+	let t = KJ('incomplete_' + e + '_processor')
+	event.recipes.createSequencedAssembly([
+		AE2(e + '_processor'),
+	], AE2('printed_silicon'), [
+		event.recipes.createDeploying(t, [t, AE2('printed_' + e + "_processor")]),
+		event.recipes.createFilling(t, [t, Fluid.of(TE("redstone"), 250)]),
+		event.recipes.createPressing(t, t),
+		event.custom({
+			"type":"vintageimprovements:laser_cutting",
+			"ingredients": [
+				{
+				  "item": t
+				}
+			],
+			"results": [
+				{
+					  "item": t
+				}
+			],
+			"energy": 2000,
+			"maxChargeRate": 50
+		})
+	]).transitionalItem(t)
+		.loops(1)
+		.id('kubejs:' + e + "_processor")
+})
+
+event.recipes.thermal.smelter(AE2('quartz_glass'), AE2("certus_quartz_dust"))
+
+}
+
+function fluixMachine(event) {
+
+event.shaped(KJ('flash_drive'), [
+	'SCA'
+], {
+	A: TC('cobalt_ingot'),
+	C: AE2('logic_processor'),
+	S: MC('iron_ingot')
+})
+
+let t = KJ('incomplete_calculation_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('calculation_mechanism'),
+], KJ('inductive_mechanism'), [
+	event.recipes.createDeploying(t, [t, AE2('printed_silicon')]),
+	event.recipes.createDeploying(t, [t, AE2('printed_silicon')]),
+	event.recipes.createDeploying(t, [t, F('#flash_drives')])
+]).transitionalItem(t)
+	.loops(1)
+	.id('kubejs:calculation_mechanism')
+
+event.remove({ output: AE2('controller') })
+event.shaped(AE2('controller'), [
+	'SSS',
+	'SCS',
+	'SSS'
+], {
+	C: [KJ('fluix_casing'),KJ('matter_casing')],
+	S: KJ('calculation_mechanism')
+})
+
+let fluix_machine = (id, amount, other_ingredient) => {
+	event.remove({ output: id })
+	if (other_ingredient) {
+		event.smithing(Item.of(id, amount), AE2('controller'), other_ingredient)
+		event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: AE2('controller'), B: other_ingredient })
+	}
+	else
+			event.stonecutting(Item.of(id, amount), AE2('controller'))
+}
+
+fluix_machine(AE2('condenser'), 1, AE2("fluix_pearl"))
+fluix_machine(AE2('drive'), 1, AE2("engineering_processor"))
+fluix_machine(AE2('formation_core'), 4, AE2("logic_processor"))
+fluix_machine(AE2('annihilation_core'), 4, AE2("calculation_processor"))
+fluix_machine(AE2('chest'), 1, MC('chest'))
+
+event.replaceInput({ id: AE2("network/cells/storage_components_cell_1k_part") }, MC("redstone"), KJ('calculation_mechanism'))
+event.replaceInput({ id: AE2("network/cells/storage_components_cell_1k_part") }, AE2("logic_processor"), F('#dusts/redstone'))
+event.replaceInput({ id: AE2("network/cells/fluid_storage_components_cell_1k_part") }, MC("green_dye"), KJ('calculation_mechanism'))
+event.replaceInput({ id: AE2("network/cells/fluid_storage_components_cell_1k_part") }, AE2("logic_processor"), F('#dyes/green'))
+event.replaceInput({ id: AE2("network/cells/spatial_components") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
+event.replaceInput({ id: AE2("network/cells/spatial_components") }, AE2("engineering_processor"), F('#dusts/glowstone'))
+event.replaceInput({ id: AE2("network/crafting/patterns_blank") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
+event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [F("#gems/certus_quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
+
+}
+
+function madMaths(event) {
+event.remove({ output: TE('chiller_ball_cast') })
+event.remove({ output: TE('chiller_rod_cast') })
+event.remove({ output: TE('chiller_ingot_cast') })
+event.remove({ output: PC('programming_puzzle') })
+
+event.stonecutting(TE('chiller_ball_cast'), F('#plates/bronze'))
+event.stonecutting(TE('chiller_rod_cast'), F('#plates/bronze'))
+event.stonecutting(TE('chiller_ingot_cast'), F('#plates/bronze'))
+
+// event.recipes.createCrushing([Item.of(PC('programming_puzzle', 1))], KJ('calculation_mechanism')).processingTime(30)
+
+let types = ["three", "eight", "plus", "minus", "multiply", "divide"]
+	types.forEach(e => {
+		event.stonecutting(KJ(e + '_cast'), F('#plates/bronze'))
+		event.custom({
+			"type": "tconstruct:casting_table",
+			"cast": {
+				"item": KJ(e + '_cast')
+			},
+			"fluid": {
+				"name": "kubejs:raw_logic",
+				"amount": 1
+			},
+			"result": Item.of(KJ(e)).toResultJson(),
+			"cooling_time": 10
+		})
+		event.custom({
+			"type": "thermal:chiller",
+			"ingredients": [
+				Fluid.of(KJ('raw_logic'), 1).toJson(),
+				Item.of(KJ(e + '_cast')).toJson()
+			],
+			"result": [
+				Item.of(KJ(e)).toResultJson()
+			],
+			"energy": 100,
+		})
+	})
+
+	let meltOrCrucible = (id, out, outAmount) => {
+		event.recipes.thermal.crucible(Fluid.of(out, outAmount), [id]).energy(20)
+		event.custom({
+			"type": "tconstruct:melting",
+			"ingredient": { "item": id },
+			"result": {
+				"fluid": out,
+				"amount": outAmount
+			},
+			"temperature": 200,
+			"time": 20
+		})
+	}
+
+let alloyAmount = 10
+let outAmount = 50
+event.custom({
+	"type": "tconstruct:alloy",
+	"inputs": [
+		{ "name": "kubejs:number_0", "amount": alloyAmount },
+		{ "name": "kubejs:number_1", "amount": alloyAmount },
+		{ "name": "kubejs:number_2", "amount": alloyAmount },
+		{ "name": "kubejs:number_3", "amount": alloyAmount },
+		{ "name": "kubejs:number_4", "amount": alloyAmount },
+		{ "name": "kubejs:number_5", "amount": alloyAmount },
+		{ "name": "kubejs:number_6", "amount": alloyAmount },
+		{ "name": "kubejs:number_7", "amount": alloyAmount },
+		{ "name": "kubejs:number_8", "amount": alloyAmount },
+		{ "name": "kubejs:number_9", "amount": alloyAmount }
+	],
+	"result": {
+		"fluid": "kubejs:matrix",
+		"amount": outAmount
+	},
+	"temperature": 200
+})
+
+meltOrCrucible(KJ("calculation_mechanism"), KJ("raw_logic"), 30)
+// meltOrCrucible(PC("programming_puzzle"), KJ("programming"), 50)
+meltOrCrucible(KJ("zero"), KJ("number_0"), 1)
+meltOrCrucible(KJ("one"), KJ("number_1"), 1)
+meltOrCrucible(KJ("two"), KJ("number_2"), 1)
+meltOrCrucible(KJ("three"), KJ("number_3"), 1)
+meltOrCrucible(KJ("four"), KJ("number_4"), 1)
+meltOrCrucible(KJ("five"), KJ("number_5"), 1)
+meltOrCrucible(KJ("six"), KJ("number_6"), 1)
+meltOrCrucible(KJ("seven"), KJ("number_7"), 1)
+meltOrCrucible(KJ("eight"), KJ("number_8"), 1)
+meltOrCrucible(KJ("nine"), KJ("number_9"), 1)
+
+event.custom({
+	"type": "tconstruct:casting_basin",
+	"cast_consumed": true,
+	"fluid": {
+		"name": "kubejs:matrix",
+		"amount": 1000
+	},
+	"result": Item.of(KJ("computation_matrix")).toResultJson(),
+	"cooling_time": 20
+})
+
+// event.custom({
+// 	"type": "tconstruct:casting_basin",
+// 	"fluid": {
+// 		"name": "kubejs:programming",
+// 		"amount": 400
+// 	},
+// 	"result": Item.of(KJ("programming_matrix")).toResultJson(),
+// 	"cooling_time": 20
+// })
+
+let nums = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+let ops = [(a, b) => a + b, (a, b) => a - b, (a, b) => a * b, (a, b) => b == 0 ? 'error' : a / b]
+let opNames = ['plus', 'minus', 'multiply', 'divide']
+
+for (var a = 0; a < 10; a++) {
+	for (var b = 0; b < 10; b++) {
+		for (var op = 0; op < ops.length; op++) {
+
+			let result = ops[op](a, b)
+			var output;
+
+			if (result == 'error')
+				output = KJ('missingno')
+			else if (result < 0)
+					continue
+			else if (result > 9)
+				continue
+			else if (result % 1 != 0)
+				continue
+			else
+				output = KJ(nums[result])
+
+			event.custom({
+				"type": "create:mechanical_crafting",
+				"pattern": [
+					"AOB"
+				],
+				"key": {
+					"A": {
+						"item": KJ(nums[a])
+					},
+					"O": {
+						"item": KJ(opNames[op])
+					},
+					"B": {
+						"item": KJ(nums[b])
+					}
+				},
+				"result": {
+					"item": output
+				},
+				"acceptMirrored": false
+			})
+
+		}
+	}
+}
+}
+
+function alchemy(event) {
+
+event.recipes.thermal.pyrolyzer([MC("charcoal", 2), Fluid.of(TE('creosote'), 50)], MC("#logs")).energy(1000)
+event.recipes.thermal.pyrolyzer([TE("coal_coke"), Fluid.of(TE('creosote'), 50)], MC("charcoal")).energy(2000)
+let t = KJ('incomplete_coke_chunk')
+event.recipes.createSequencedAssembly([
+	KJ('coke_chunk'),
+], TE('coal_coke'), [
+	event.recipes.createFilling(t, [t, Fluid.of(MC("water"), 250)]),
+	event.recipes.createCutting(t, t).processingTime(100)
+]).transitionalItem(t)
+	.loops(2)
+	.id('kubejs:coke_cutting')
+
+event.recipes.createSplashing([
+	Item.of(KJ("sand_ball")).withChance(0.125)
+], 'minecraft:sandstone')
+event.recipes.thermal.bottler(KJ("sand_ball"), [Fluid.of(MC("water"), 50), F("#sand/colorless")]).energy(1000)
+// event.recipes.thermal.chiller(KJ("creosote_pellet"), [Fluid.of(TE("creosote"), 50)]).energy(1000)
+// event.recipes.thermal.crucible(Fluid.of(KJ("liquid_smoke"), 250), KJ("creosote_pellet")).energy(3000)
+// event.remove({ id: TE("blitz_powder") })
+// event.recipes.createPressing(TE("lightning_charge"), TE("blitz_powder"))
+event.remove({ output: TE("basalz_powder") })
+event.remove({ output: TE("blizz_powder") })
+
+event.custom({
+	"type": "thermal:pulverizer",
+	"ingredient": { "item": "thermal:basalz_rod" },
+	"energy": 800,
+	"result": [
+		{ "item": "thermal:basalz_powder", "chance": 2.5 },
+		{ "item": "thermal:slag", "chance": 0.125 }
+	]
+})
+
+event.custom({
+	"type": "thermal:pulverizer",
+	"ingredient": { "item": "thermal:blizz_rod" },
+	"energy": 800,
+	"result": [
+		{ "item": "thermal:blizz_powder", "chance": 2.5 },
+		{ "item": "thermal:niter", "chance": 0.125 }
+	]
+})
+
+event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_glass", 1000), F("#sand")).energy(6000)
+event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_glass", 1000), F("#glass/colorless")).energy(3000)
+event.recipes.thermal.pulverizer([CR("powdered_obsidian")], F("#obsidian")).energy(7000)
+
+let blizz = TE("blizz_powder")
+let basalz = TE("basalz_powder")
+let blitz = TE("blitz_powder")
+event.recipes.createEmptying([KJ("rough_sand"), Fluid.of(KJ("fine_sand"), 500)], KJ("sand_ball"))
+event.recipes.createCrushing([Item.of(blizz, 1), Item.of(blizz, 1).withChance(.5)], TE("blizz_rod"))
+event.recipes.createCrushing([Item.of(basalz, 1), Item.of(basalz, 1).withChance(.5)], TE("basalz_rod"))
+event.recipes.createCrushing([Item.of(blitz, 1), Item.of(blitz, 1).withChance(.5)], TE("blitz_rod"))
+event.recipes.createCompacting(TE("ice_charge"), [blizz, blizz, blizz, blizz, blizz, blizz, blizz, blizz])
+event.recipes.createCompacting(TE("earth_charge"), [basalz, basalz, basalz, basalz, basalz, basalz, basalz, basalz])
+event.recipes.createCompacting(TE("lightning_charge"), [blitz, blitz, blitz, blitz, blitz, blitz, blitz, blitz])
+
+event.recipes.createCompacting(KJ("silicon_compound"), [Fluid.of(KJ("fine_sand"), 500), KJ("purified_sand"), KJ("coke_chunk")])
+// event.recipes.createCompacting(KJ("smoke_mote"), [Fluid.of(KJ("liquid_smoke"), 500)])
+
+// event.remove({ output: "desolation:activatedcharcoal" })
+// event.recipes.thermal.smelter(
+// 	["desolation:activatedcharcoal"],
+// 	[KJ("coke_chunk"), TE("lightning_charge")])
+// .energy(5000)
+
+event.recipes.thermal.smelter(
+	[KJ("purified_sand")],
+	[KJ("rough_sand"), TE("earth_charge")])
+.energy(5000)
+
+event.recipes.thermal.smelter(
+	[AE2("silicon")],
+	[KJ("silicon_compound"), TE("ice_charge")])
+.energy(5000)
+
+event.recipes.thermal.numismatic_fuel(TE('silver_coin')).energy(100000)
+event.recipes.thermal.numismatic_fuel(TE('gold_coin')).energy(6400000)
+
+event.remove({ id: TE("machine/pyrolyzer/pyrolyzer_logs") })
+event.remove({ id: CR("crushing/obsidian") })
+// event.remove({ type: TE("sawmill") })
+// event.remove({ type: TE("centrifuge") })
+event.remove({ output: AE2("silicon") })
+
+let alchemy_mix = (output, catalyst, r1, r2, amount) => {
+	event.recipes.createMixing([Item.of(KJ("substrate_" + output, amount ? amount : 1)), KJ("substrate_" + catalyst)], [KJ("substrate_" + catalyst), KJ("substrate_" + r1, 2), KJ("substrate_" + r2)]).heated()
+}
+
+let alchemy_smelt = (output, catalyst, r1, r2, amount) => {
+	event.recipes.thermal.smelter([Item.of(KJ("substrate_" + output, amount ? amount : 1)), KJ("substrate_" + catalyst)], [KJ("substrate_" + r1, 2), KJ("substrate_" + catalyst), KJ("substrate_" + r2)]).energy(4000)
+}
+
+alchemy_mix("red", "herbal", "diorite", "andesite")
+alchemy_mix("orange", "herbal", "granite", "diorite")
+alchemy_mix("yellow", "herbal", "cobblestone", "granite")
+alchemy_mix("green", "herbal", "basalt", "cobblestone")
+alchemy_mix("blue", "herbal", "gabbro", "basalt")
+alchemy_mix("magenta", "herbal", "andesite", "gabbro")
+
+alchemy_smelt("nether", "volatile", "red", "gabbro")
+alchemy_smelt("blaze", "volatile", "orange", "andesite")
+alchemy_smelt("gunpowder", "volatile", "yellow", "diorite")
+alchemy_smelt("slime", "volatile", "green", "granite")
+alchemy_smelt("prismarine", "volatile", "blue", "cobblestone")
+alchemy_smelt("obsidian", "volatile", "magenta", "basalt")
+
+alchemy_mix("arcane", "crystal", "nether", "magenta")
+alchemy_mix("niter", "crystal", "blaze", "red")
+alchemy_mix("quartz", "crystal", "gunpowder", "orange")
+alchemy_mix("sulfur", "crystal", "slime", "yellow")
+alchemy_mix("apatite", "crystal", "prismarine", "green")
+alchemy_mix("certus", "crystal", "obsidian", "blue")
+
+alchemy_smelt("lead", "metal", "arcane", "obsidian")
+alchemy_smelt("copper", "metal", "niter", "nether")
+alchemy_smelt("gold", "metal", "quartz", "blaze")
+alchemy_smelt("nickel", "metal", "sulfur", "gunpowder")
+alchemy_smelt("zinc", "metal", "apatite", "slime")
+alchemy_smelt("iron", "metal", "certus", "prismarine")
+
+alchemy_mix("emerald", "gem", "lead", "certus")
+alchemy_mix("sapphire", "gem", "copper", "arcane")
+alchemy_mix("diamond", "gem", "gold", "niter")
+alchemy_mix("lapis", "gem", "nickel", "quartz")
+alchemy_mix("ruby", "gem", "zinc", "sulfur")
+alchemy_mix("cinnabar", "gem", "iron", "apatite")
+
+alchemy_smelt("andesite", "igneous", "emerald", "iron", 20)
+alchemy_smelt("diorite", "igneous", "sapphire", "lead", 20)
+alchemy_smelt("granite", "igneous", "diamond", "copper", 20)
+alchemy_smelt("cobblestone", "igneous", "lapis", "gold", 20)
+alchemy_smelt("basalt", "igneous", "ruby", "nickel", 20)
+alchemy_smelt("gabbro", "igneous", "cinnabar", "zinc", 20)
+
+let mundane = (id, outputs) => {
+	let jsonOut = []
+	if (outputs[0] > 0)
+		jsonOut.push({
+			"item": "darkerdepths:ash",
+			"count": outputs[0]
+		})
+	if (outputs[1] > 0)
+		jsonOut.push({
+			"item": MC("redstone"),
+			"count": outputs[1]
+		})
+	if (outputs[2] > 0)
+		jsonOut.push({
+			"item": MC("glowstone_dust"),
+			"count": outputs[2]
+		})
+	event.custom({
+		"type": "thermal:centrifuge",
+		"ingredient": {
+			"item": KJ(`failed_alchemy_${id}`)
+		},
+		"result": jsonOut
+	})
+}
+
+let i = 0;
+
+mundane(i++, [4, 0, 0])
+mundane(i++, [3, 1, 0])
+mundane(i++, [3, 0, 1])
+mundane(i++, [2, 2, 0])
+mundane(i++, [2, 0, 2])
+
+mundane(i++, [2, 1, 1])
+mundane(i++, [1, 3, 0])
+mundane(i++, [1, 0, 3])
+mundane(i++, [1, 2, 1])
+mundane(i++, [1, 1, 2])
+
+mundane(i++, [0, 4, 0])
+mundane(i++, [0, 0, 4])
+mundane(i++, [0, 3, 1])
+mundane(i++, [0, 1, 3])
+mundane(i++, [0, 2, 2])
+
+// let recompact = (id, id2) => {
+// 	event.recipes.createCompacting(id2, [id])
+// }
+
+// recompact(CR("powdered_obsidian"), MC("obsidian"))
+// recompact(TE("diamond_dust"), MC("diamond"))
+// recompact(TE("emerald_dust"), MC("emerald"))
+// recompact(TE("lapis_dust"), MC("lapis_lazuli"))
+// recompact(TE("sulfur_dust"), TE("sulfur"))
+// recompact(TE("apatite_dust"), TE("apatite"))
+// recompact(TE("niter_dust"), TE("niter"))
+// recompact(TE("sapphire_dust"), TE("sapphire"))
+// recompact(TE("ruby_dust"), TE("ruby"))
+// recompact("forbidden_arcanus:arcane_crystal_dust", "forbidden_arcanus:arcane_crystal")
+
+// event.recipes.createCrushing(CR("powdered_obsidian"), MC("obsidian"))
+
+global.substrates.forEach(a => {
+	a.forEach(e => {
+		if (!e.ingredient)
+			return
+		event.custom({
+			"type": "thermal:bottler",
+			"ingredients": [Ingredient.of(e.ingredient).toJson(), { "fluid": "tconstruct:molten_glass", "amount": 100 }],
+			"result": [{ "item": e.id }]
+		})
+		event.custom({
+			"type": "thermal:sawmill",
+			"ingredient": { "item": e.id },
+			"result": [{ "item": e.outputItem ? e.outputItem : typeof e.ingredient == "string" ? e.ingredient : e.ingredient[0], "chance": 0.75 }],
+			"energy": 2000
+		})
+	})
+})
+
+event.custom({
+	"type": "thermal:sawmill",
+	"ingredient": { "item": "kubejs:substrate_silicon" },
+	"result": [{ "item": AE2("silicon"), "count": 1 }],
+	"energy": 2000
+})
+
+event.custom({
+	"type": "thermal:sawmill",
+	"ingredient": { "item": "kubejs:substrate_silver" },
+	"result": [{ "item": TE("silver_dust"), "count": 1 }],
+	"energy": 2000
+})
+
+event.custom({
+	"type": "thermal:bottler",
+	"ingredients": [
+		{ "item": TE("signalum_nugget") },
+		{ "fluid": "tconstruct:molten_glass", "amount": 100 }
+	],
+	"result": [{ "item": "kubejs:accellerator_redstone" }]
+})
+
+event.custom({
+	"type": "thermal:bottler",
+	"ingredients": [
+		{ "item": TE("silver_dust") },
+		{ "fluid": "tconstruct:molten_glass", "amount": 100 }
+	],
+	"result": [{ "item": "kubejs:substrate_silver" }]
+})
+
+event.custom({
+	"type": "thermal:bottler",
+	"ingredients": [
+		{ "item": TE("lumium_nugget") },
+		{ "fluid": "tconstruct:molten_glass", "amount": 100 }
+	],
+	"result": [{ "item": "kubejs:accellerator_glowstone" }]
+})
+}
+
+function trading(event) {
+let trade = (card_id, ingredient, output) => {
+	event.custom({
+		type: 'thermal:press',
+		ingredients: [
+			Ingredient.of(ingredient).toJson(),
+			Ingredient.of(card_id).toJson(),
+		],
+		result: [
+			Item.of(output).toResultJson()
+		],
+		energy: 1000
+	})
+}
+
+global.trades.forEach(element => {
+	if (global.transactions[element])
+		global.transactions[element].forEach(transaction => {
+			trade(KJ('trade_card_' + element), transaction.in, transaction.out)
+		})
+});
+
+global.professions.forEach(element => {
+	if (global.transactions[element])
+		global.transactions[element].forEach(transaction => {
+			trade(KJ('profession_card_' + element), transaction.in, transaction.out)
+		})
+});
 }
 
 let float_and_lights = (event, item) => { // 光辉石漂浮效果
