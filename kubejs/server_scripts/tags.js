@@ -125,6 +125,21 @@ event.get('thermal:crafting/dies').add('kubejs:press_rod_die')
 event.get('vintageimprovements:curving_heads')
 	.add('#forge:circuit_press')
 	.add('#thermal:crafting/dies')
+
+
+event.get('forge:dusts/saltpeter')
+	.add('thermal:niter_dust')
+	.add('createbigcannons:nitropowder')
+
+event.get('createbigcannons:nitropowder')
+	.add('#forge:dusts/saltpeter')
+
+event.get('forge:dusts/niter')
+	.add('#forge:dusts/saltpeter')
+
+event.get('forge:plates/bronze').add('create_dd:bronze_sheet')
+event.get('forge:ingots/bronze').add('create_dd:bronze_ingot')
+
 })
 
 onEvent('fluid.tags', event => {
