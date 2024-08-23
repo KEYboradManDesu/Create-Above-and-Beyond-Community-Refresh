@@ -10,7 +10,7 @@
     "spread": 4.0
   },
   "projectile": {
-    "item": "cgm:advanced_bullet",
+    "item": "createbigcannons:machine_gun_round",
     "damage": 7.0,
     "size": 0.2,
     "speed": 20.0,

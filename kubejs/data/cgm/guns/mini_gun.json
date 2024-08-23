@@ -11,7 +11,7 @@
     "spread": 4.5
   },
   "projectile": {
-    "item": "kubejs:complex_bullet",
+    "item": "createbigcannons:machine_gun_round",
     "damage": 12.0,
     "size": 0.0625,
     "speed": 20.0,

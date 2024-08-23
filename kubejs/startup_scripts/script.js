@@ -263,16 +263,17 @@ event.create('radiant_coil').glow(true).texture("kubejs:item/radiant_coil").disp
 // event.create('incomplete_engineering_processor', 'create:sequenced_assembly').texture("kubejs:item/processor/incomplete_engineering_processor").displayName('工程处理器（半成品）')
 
 // 弹药
-event.create('complex_bullet').texture("kubejs:item/arms/complex_bullet").displayName('复合弹药')
-event.create('shell_empty').texture("kubejs:item/arms/shell_empty").displayName('空霰弹壳')
-event.create('bullet_casing').texture("kubejs:item/arms/bullet_casing").displayName('空弹壳')
-event.create('advanced_bullet_casing').texture("kubejs:item/arms/advanced_bullet_casing").displayName('高级空弹壳')
-event.create('complex_bullet_casing').texture("kubejs:item/arms/complex_bullet_casing").displayName('复合空弹壳')
-event.create('incomplete_advanced_bullet', 'create:sequenced_assembly').texture("kubejs:item/arms/incomplete_advanced_bullet").displayName('高级弹药（未完成）')
-event.create('incomplete_basic_bullet', 'create:sequenced_assembly').texture("kubejs:item/arms/incomplete_basic_bullet").displayName('初级弹药（未完成）')
-event.create('incomplete_complex_bullet', 'create:sequenced_assembly').texture("kubejs:item/arms/incomplete_complex_bullet").displayName('复合弹药（未完成）')
-event.create('incomplete_shell', 'create:sequenced_assembly').texture("kubejs:item/arms/incomplete_shell").displayName('霰弹（未完成）')
-event.create('unarmed_missile', 'create:sequenced_assembly').texture("kubejs:item/arms/unarmed_missile").displayName('导弹（待组装）')
+event.create('basic_gun_kit').texture("alloyedguns:item/basic_gun_kit").displayName('枪械部件')
+event.create('complex_bullet').texture("alloyedguns:item/complex_bullet").displayName('复合弹药')
+event.create('shell_empty').texture("alloyedguns:item/shell_empty").displayName('空霰弹壳')
+event.create('bullet_casing').texture("alloyedguns:item/bullet_casing").displayName('空弹壳')
+// event.create('advanced_bullet_casing').texture("alloyedguns:item/advanced_bullet_casing").displayName('高级空弹壳')
+event.create('complex_bullet_casing').texture("alloyedguns:item/complex_bullet_casing").displayName('复合空弹壳')
+event.create('incomplete_advanced_bullet', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_advanced_bullet").displayName('高级弹药（未完成）')
+event.create('incomplete_basic_bullet', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_basic_bullet").displayName('初级弹药（未完成）')
+event.create('incomplete_complex_bullet', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_complex_bullet").displayName('复合弹药（未完成）')
+event.create('incomplete_shell', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_shell").displayName('霰弹（未完成）')
+event.create('unarmed_missile', 'create:sequenced_assembly').texture("alloyedguns:item/unarmed_missile").displayName('导弹（待组装）')
 
 
 })
@@ -364,24 +365,24 @@ onEvent('item.modification', event => {
 	});
 
 	event.modify('cgm:basic_bullet', item => {
-		item.maxStackSize = 48
+		item.maxStackSize = 64
 	});
 	event.modify('kubejs:complex_bullet', item => {
 		item.maxStackSize = 32
 	});
 	event.modify('cgm:advanced_bullet', item => {
-		item.maxStackSize = 32
+		item.maxStackSize = 48
 	});
 	event.modify('cgm:shell', item => {
-		item.maxStackSize = 16
+		item.maxStackSize = 48
 	});
 	event.modify('cgm:grenade', item => {
-		item.maxStackSize = 8
+		item.maxStackSize = 16
 	});
 	event.modify('cgm:stun_grenade', item => {
-		item.maxStackSize = 8
+		item.maxStackSize = 16
 	});
 	event.modify('cgm:missile', item => {
-		item.maxStackSize = 8
+		item.maxStackSize = 16
 	});
 })

@@ -22,7 +22,8 @@ onEvent('recipes', event => {
 	leather(event)
 	backpack(event)
 	barrels(event)
-	// alloys(event)
+	firearm(event)
+	alloys(event)
 
 	algalAndesite(event)
 	andesiteMachine(event)
@@ -51,6 +52,11 @@ onEvent('recipes', event => {
 	alchemy(event)
 
 	trading(event)
+
+	oil(event)
+	rocketScience(event)
+
+	unify(event)
 })
 
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -58,17 +64,6 @@ let ConversionRecipe = java('com.simibubi.create.compat.jei.ConversionRecipe')
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 // let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'tin'] 
 let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted'), 'phantasm:pream', 'phantasm:ebony', ]
-
-
-let replaceIO = (event, tag, item) => {
-  event.replaceInput(tag, item);
-  event.replaceOutput(tag, item);
-};
-
-let removeIO = (event, item) => {
-  event.remove({ input: item });
-  event.remove({ output: item });
-};
 
 function ifiniDeploying(output, input, tool) {
 	return {
@@ -452,10 +447,6 @@ event.custom({
 	"temperature": 790,
 	"time": 40
 })
-
-event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("sand")).withChance(0.25)], TE("oil_sand"))
-event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("red_sand")).withChance(0.25)], TE("oil_red_sand"))
-
 }
 
 function waterstrainer(event) {
@@ -1021,10 +1012,613 @@ event.shapeless("metalbarrels:wood_to_silver", ["metalbarrels:silver_barrel"])
 event.shapeless("metalbarrels:wood_to_gold", ["metalbarrels:gold_barrel"])
 }
 
-// function alloys(event) {
-// tips
-// }
+function firearm(event) {
+event.remove({ mod: ('cgm') })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "createbigcannons:nethersteel_block"
+		}
+	],
+	"results": [
+		{
+			"item": "cgm:workbench",
+			"count": 1
+		}
+	]
+})
 
+// 枪械部件
+event.shapeless('kubejs:basic_gun_kit', [
+	'3x createbigcannons:nethersteel_ingot',
+	'2x kubejs:infernal_mechanism',
+	'vintageimprovements:nethersteel_spring',
+	'createdieselgenerators:kelp_handle',
+	'#create_dd:smoked_logs',
+])
+
+// 包装火药
+event.remove({ output: 'createbigcannons:packed_gunpowder' })
+event.recipes.createCompacting('createbigcannons:packed_gunpowder', [MC('gunpowder'), MC('gunpowder')])
+
+// 霰弹丸
+event.remove({ output: 'createbigcannons:shot_balls' })
+event.shapeless('createbigcannons:shot_balls', [
+	[MC('iron_nugget'), TE('nickel_nugget'), CR('zinc_nugget'), TE('lead_nugget')],
+	[MC('iron_nugget'), TE('nickel_nugget'), CR('zinc_nugget'), TE('lead_nugget')], 
+	[MC('iron_nugget'), TE('nickel_nugget'), CR('zinc_nugget'), TE('lead_nugget')],
+])
+
+// 弹壳冲压板
+event.remove({ output: 'createbigcannons:autocannon_cartridge_sheet' })
+event.recipes.createCompacting("createbigcannons:autocannon_cartridge_sheet", [CR("brass_nugget"), CR("brass_nugget")])
+event.recipes.createCompacting("createbigcannons:autocannon_cartridge_sheet", [MC("gold_nugget"), MC("gold_nugget"), MC("gold_nugget")])
+event.recipes.createCompacting("createbigcannons:autocannon_cartridge_sheet", [F("#nuggets/copper"), F("#nuggets/copper"), F("#nuggets/copper")])
+
+// 小型空弹壳
+event.remove({ output: 'createbigcannons:packed_gunpowder' })
+event.custom({
+	"type": "vintageimprovements:curving",
+	"mode": 2,
+	"ingredients": [
+		{
+		  "item": "createbigcannons:autocannon_cartridge_sheet"
+		}
+	],
+	"results": [
+		{
+		  "item": "kubejs:bullet_casing"
+		}
+	]
+})
+
+// 霰弹壳
+event.recipes.createDeploying('kubejs:shell_empty', ['kubejs:bullet_casing', 'minecraft:dried_kelp'])
+event.shapeless('kubejs:shell_empty', ['kubejs:bullet_casing', 'minecraft:dried_kelp'])
+
+// 机枪弹壳
+event.remove({ output: 'createbigcannons:empty_machine_gun_round' })
+event.custom({
+	"type": "vintageimprovements:curving",
+	"mode": 2,
+	"ingredients": [
+		{
+		  "item": "kubejs:bullet_casing"
+		}
+	],
+	"results": [
+		{
+		  "item": "createbigcannons:empty_machine_gun_round"
+		}
+	]
+})
+
+// 机炮弹壳
+event.remove({ output: 'createbigcannons:empty_autocannon_cartridge' })
+event.custom({
+	"type": "vintageimprovements:curving",
+	"mode": 2,
+	"ingredients": [
+		{
+		  "item": "createbigcannons:empty_machine_gun_round"
+		}
+	],
+	"results": [
+		{
+		  "item": "createbigcannons:empty_autocannon_cartridge"
+		}
+	]
+})
+
+// 大型弹壳
+event.remove({ id: 'createbigcannons:sequenced_assembly/pressing_big_cartridge' })
+let cartridge = 'createbigcannons:big_cartridge_sheet'
+event.recipes.createSequencedAssembly([
+	'createbigcannons:big_cartridge',
+], 'createbigcannons:big_cartridge_sheet', [
+	event.custom({
+		"type": "vintageimprovements:curving",
+		"mode": 2,
+		"ingredients": [
+			{
+			  "item": cartridge
+			}
+		],
+		"results": [
+			{
+			  "item": cartridge
+			}
+		]
+	})
+]).transitionalItem(cartridge)
+	.loops(5)
+	.id('kubejs:big_cartridge')
+
+
+
+//
+
+
+// 霰弹
+event.shaped('cgm:shell', [
+	' S ',
+	' C ',
+	' B '
+], {
+	C: 'createbigcannons:gunpowder_pinch',
+	S: 'createbigcannons:shot_balls',
+	B: KJ('shell_empty')
+})
+
+let ammo1 = 'kubejs:incomplete_shell'
+	event.recipes.createSequencedAssembly([
+		'cgm:shell',
+	], KJ('shell_empty'), [
+		event.recipes.createDeploying(ammo1, [ammo1, 'createbigcannons:gunpowder_pinch']),
+		event.recipes.createDeploying(ammo1, [ammo1, 'createbigcannons:shot_balls']),
+		event.custom({
+			"type": "vintageimprovements:curving",
+			"mode": 4,
+			"ingredients": [
+				{
+				  "item": ammo1
+				}
+			],
+			"results": [
+				{
+				  "item": ammo1
+				}
+			]
+		})
+	]).transitionalItem(ammo1)
+		.loops(1)
+		.id('kubejs:shell')
+
+
+// 机枪弹药
+event.remove({ id: 'createbigcannons:sequenced_assembly/assembling_machine_gun_round' })
+let ammo2 = 'kubejs:incomplete_advanced_bullet'
+	event.recipes.createSequencedAssembly([
+		'createbigcannons:machine_gun_round',
+	], 'createbigcannons:empty_machine_gun_round', [
+		event.recipes.createDeploying(ammo2, [ammo2, 'createbigcannons:gunpowder_pinch']),
+		event.recipes.createDeploying(ammo2, [ammo2, F('#nuggets/copper')]),
+		event.custom({
+			"type": "vintageimprovements:curving",
+			"mode": 4,
+			"ingredients": [
+				{
+				  "item": ammo2
+				}
+			],
+			"results": [
+				{
+				  "item": ammo2
+				}
+			]
+		})
+	]).transitionalItem(ammo2)
+		.loops(1)
+		.id('kubejs:advanced_bullet')
+
+
+// 初级弹药
+event.shaped('cgm:basic_bullet', [
+	' S ',
+	' C ',
+	' B '
+], {
+	C: 'createbigcannons:gunpowder_pinch',
+	S: CR('zinc_nugget'),
+	B: KJ('bullet_casing')
+})
+
+let ammo3 = 'kubejs:incomplete_basic_bullet'
+	event.recipes.createSequencedAssembly([
+		'cgm:basic_bullet',
+	], 'kubejs:bullet_casing', [
+		event.recipes.createDeploying(ammo3, [ammo3, 'createbigcannons:gunpowder_pinch']),
+		event.recipes.createDeploying(ammo3, [ammo3, CR('zinc_nugget')]),
+		event.custom({
+			"type": "vintageimprovements:curving",
+			"mode": 4,
+			"ingredients": [
+				{
+				  "item": ammo3
+				}
+			],
+			"results": [
+				{
+				  "item": ammo3
+				}
+			]
+		})
+	]).transitionalItem(ammo3)
+		.loops(1)
+		.id('kubejs:basic_bullet')
+
+
+// 导弹
+let ammo4 = 'kubejs:unarmed_missile'
+	event.recipes.createSequencedAssembly([
+		'cgm:missile',
+	], 'createbigcannons:empty_autocannon_cartridge', [
+		event.recipes.createDeploying(ammo3, [ammo4, 'createbigcannons:packed_gunpowder']),
+		event.recipes.createDeploying(ammo4, [ammo4, AE2('tiny_tnt')]),
+		event.custom({
+			"type": "vintageimprovements:curving",
+			"mode": 4,
+			"ingredients": [
+				{
+				  "item": ammo4
+				}
+			],
+			"results": [
+				{
+				  "item": ammo4
+				}
+			]
+		})
+	]).transitionalItem(ammo4)
+		.loops(1)
+		.id('kubejs:missile')
+
+
+// 手榴弹
+let g = 'minecraft:glass_bottle'
+	event.recipes.createSequencedAssembly([
+		Item.of('cgm:grenade', 2),
+	], 'minecraft:glass_bottle', [
+		event.recipes.createDeploying(g, [g, 'createbigcannons:packed_gunpowder']),
+		event.recipes.createDeploying(g, [g, '#forge:nuggets/iron']),
+	]).transitionalItem(g)
+		.loops(1)
+		.id('kubejs:grenade')
+
+
+// 闪光弹
+let g1 = 'minecraft:glass_bottle'
+	event.recipes.createSequencedAssembly([
+		Item.of('cgm:stun_grenade', 2),
+	], 'minecraft:glass_bottle', [
+		event.recipes.createDeploying(g1, [g1, ['#forge:dusts/glowstone', 'thermal:lumium_dust']]),
+		event.recipes.createDeploying(g1, [g1, '#forge:nuggets/iron']),
+	]).transitionalItem(g1)
+		.loops(1)
+		.id('kubejs:stun_grenade')
+
+
+//
+
+
+//瞄具
+event.stonecutting('cgm:short_scope', MC("spyglass"))
+event.custom({//近程
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "minecraft:spyglass",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:short_scope",
+    "count": 1
+  }
+})
+event.stonecutting('cgm:medium_scope', MC("spyglass"))
+event.custom({//中程
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "minecraft:spyglass",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:medium_scope",
+    "count": 1
+  }
+})
+event.stonecutting('cgm:long_scope', MC("spyglass"))
+event.custom({//远程
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "minecraft:spyglass",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:long_scope",
+    "count": 1
+  }
+})
+
+//枪托
+event.custom({//重型
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "createbigcannons:nethersteel_ingot",
+      "count": 1
+    },
+    {
+      "item": "create_dd:smoked_planks",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "cgm:weighted_stock",
+    "count": 1
+  }
+})
+event.custom({//战术
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "createbigcannons:nethersteel_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "cgm:tactical_stock",
+    "count": 1
+  }
+})
+event.custom({//轻型
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "createbigcannons:nethersteel_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:light_stock",
+    "count": 1
+  }
+})
+
+//握把
+event.custom({//轻型
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "createbigcannons:nethersteel_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "cgm:light_grip",
+    "count": 1
+  }
+})
+event.custom({//特种
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "createbigcannons:nethersteel_ingot",
+      "count": 1
+    },
+	{
+      "item": "thermal:cured_rubber",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:specialised_grip",
+    "count": 1
+  }
+})
+
+//消音器
+event.custom({
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "vintageimprovements:nethersteel_rod",
+      "count": 1
+    },
+	{
+      "item": "minecraft:sponge",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:silencer",
+    "count": 1
+  }
+})
+
+
+//
+
+
+// 手枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 1
+	  }
+	],
+	"result": {
+	  "item": "cgm:pistol"
+	}
+})
+
+// 冲锋枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 2
+	  }
+	],
+	"result": {
+	  "item": "cgm:machine_pistol"
+	}
+})
+
+// 霰弹枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 3
+	  }
+	],
+	"result": {
+	  "item": "cgm:shotgun"
+	}
+})
+
+// 突击步枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 6
+	  }
+	],
+	"result": {
+	  "item": "cgm:assault_rifle"
+	}
+})
+
+// 步枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 6
+	  }
+	],
+	"result": {
+	  "item": "cgm:rifle"
+	}
+})
+
+// 榴弹发射器
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 10
+	  }
+	],
+	"result": {
+	  "item": "cgm:grenade_launcher"
+	}
+})
+
+// 加特林
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 32
+	  }
+	],
+	"result": {
+	  "item": "cgm:mini_gun"
+	}
+})
+
+// 重型步枪
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 32
+	  }
+	],
+	"result": {
+	  "item": "cgm:heavy_rifle"
+	}
+})
+
+// 巴祖卡
+event.custom({
+	"type": "cgm:workbench",
+	"materials": [
+	  {
+		"item": "kubejs:basic_gun_kit",
+		"count": 32
+	  }
+	],
+	"result": {
+	  "item": "cgm:bazooka"
+	}
+})
+
+}
+
+function alloys(event) {
+
+event.remove({ id: TC('smeltery/alloys/molten_bronze') })
+event.remove({ id: TC('smeltery/alloys/molten_brass') })
+event.remove({ id: TC('smeltery/alloys/molten_invar') })
+event.remove({ id: TC('smeltery/alloys/molten_electrum') })
+event.remove({ id: TC('smeltery/alloys/molten_constantan') })
+event.remove({ id: TC('smeltery/alloys/molten_rose_gold') })
+event.remove({ id: TC('smeltery/alloys/molten_netherite') })
+// event.remove({ id: TC('smeltery/alloys/molten_enderium') })
+// event.remove({ id: TC('smeltery/alloys/molten_lumium') })
+// event.remove({ id: TC('smeltery/alloys/molten_signalum') })
+event.remove({ id: 'createaddition:compat/tconstruct/rose_gold' })
+
+
+
+
+// 青铜
+event.recipes.createMixing(Fluid.of(TC('molten_bronze'), 5), [
+	Fluid.of(TC('molten_copper'), 5), 
+	Fluid.of(TC('molten_tin'), 5)
+]).processingTime(1)
+
+// 黄铜
+event.recipes.createMixing(Fluid.of(TC('molten_brass'), 10), [
+	Fluid.of(TC('molten_copper'), 5), 
+	Fluid.of(TC('molten_zinc'), 5)
+]).processingTime(1)
+
+// 琥珀金
+event.recipes.createMixing(Fluid.of(TC('molten_electrum'), 10), [
+	Fluid.of(TC('molten_gold'), 5), 
+	Fluid.of(TC('molten_silver'), 5)
+]).processingTime(1)
+
+// 康铜
+event.recipes.createMixing(Fluid.of(TC('molten_constantan'), 10), [
+	Fluid.of(TC('molten_copper'), 5), 
+	Fluid.of(TC('molten_nickel'), 5)
+]).processingTime(1)
+
+// 玫瑰金
+event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 10), [
+	Fluid.of(TC('molten_copper'), 5), 
+	Fluid.of(TC('molten_gold'), 5)
+]).processingTime(1)
+
+// 下界合金
+event.recipes.createMixing(Fluid.of(TC('molten_netherite'), 1), [
+	Fluid.of(TC('molten_debris'), 4), 
+	Fluid.of(TC('molten_gold'), 2)
+]).processingTime(1)
+
+
+}
 
 function algalAndesite(event) {
 event.remove({ id: TC('compat/create/andesite_alloy_iron') })
@@ -1546,6 +2140,7 @@ brass_machine('create:elevator_pulley', 1, SP('#ropes'))
 brass_machine('createdieselgenerators:diesel_engine', 1, 'createdieselgenerators:engine_piston')
 brass_machine('createaddition:portable_energy_interface', 2, 'createaddition:copper_spool')
 brass_machine('vintageimprovements:laser', 1, 'vintageimprovements:laser_item')
+brass_machine('create_dd:accelerator_motor', 1, 'createaddition:electrum_spool')
 
 event.stonecutting(Item.of('create:brass_funnel'), 'create:brass_tunnel')
 event.stonecutting(Item.of('create:brass_tunnel'), 'create:brass_funnel')
@@ -1631,6 +2226,7 @@ zinc_machine('storagedrawers:controller', 1, MC('diamond'))
 zinc_machine('storagedrawers:controller_slave', 1, MC('gold_ingot'))
 zinc_machine('torchmaster:megatorch', 1, MC('torch'))
 zinc_machine('thermal:upgrade_augment_2', 1, MC('redstone'))
+zinc_machine('create_dd:industrial_fan', 1, 'beyond_earth:engine_fan')
 zinc_machine('createdieselgenerators:distillation_controller', 1)
 
 event.remove({ output: 'createdieselgenerators:pumpjack_crank' })
@@ -2014,9 +2610,22 @@ event.recipes.thermal.insolator(['tconstruct:ender_slime_ball', '3x phantasm:han
 // 	.loops(1)
 // 	.id('kubejs:abstruse_mechanism')
 
+event.remove({ id: TE("machines/smelter/smelter_alloy_enderium") })
+
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", MC("ender_pearl")]).energy(10000)
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", AE2("ender_dust", 4)]).energy(10000)
 event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
+
+event.remove({ id: TE("enderium_dust_2") })
+event.shapeless(TE('enderium_dust'), [
+	TE('silver_dust'), 
+	AE2('ender_dust'),
+	AE2('ender_dust'),
+	AE2('ender_dust'),
+	AE2('ender_dust'),
+	'phantasm:hanging_pream_berry'
+]).id("kubejs:enderium_dust")
+
 
 event.shaped(KJ('enderium_machine'), [
 	'SSS',
@@ -2569,8 +3178,6 @@ mundane(i++, [0, 2, 2])
 // recompact(TE("ruby_dust"), TE("ruby"))
 // recompact("forbidden_arcanus:arcane_crystal_dust", "forbidden_arcanus:arcane_crystal")
 
-// event.recipes.createCrushing(CR("powdered_obsidian"), MC("obsidian"))
-
 global.substrates.forEach(a => {
 	a.forEach(e => {
 		if (!e.ingredient)
@@ -2631,6 +3238,624 @@ event.custom({
 })
 }
 
+function oil(event) {
+
+// 沥青沙
+event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("sand")).withChance(0.25)], TE("oil_sand"))
+event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("red_sand")).withChance(0.25)], TE("oil_red_sand"))
+event.custom({
+	"type":"vintageimprovements:vibrating",
+	"ingredients": [ {
+      "item": "thermal:oil_sand"
+    }
+  ],
+	"results": [
+	{
+		"item": "thermal:bitumen",
+		"count": 4
+	},
+	{
+		"item": "minecraft:sand"
+	}
+	],
+  "processingTime": 300
+})
+event.custom({
+	"type":"vintageimprovements:vibrating",
+	"ingredients": [ {
+      "item": "thermal:oil_red_sand"
+    }
+  ],
+	"results": [
+	{
+		"item": "thermal:bitumen",
+		"count": 4
+	},
+	{
+		"item": "minecraft:red_sand"
+	}
+	],
+  "processingTime": 300
+})
+// 沥青
+event.recipes.createCompacting(TE("bitumen"), [Fluid.of(TE('crude_oil'), 100)])
+event.recipes.createCompacting(TE("bitumen"), [Fluid.of('beyond_earth:oil', 100)])
+event.recipes.createCompacting(TE("bitumen"), [Fluid.of('createdieselgenerators:crude_oil', 100)])
+
+// 石油
+event.remove({ id: "createdieselgenerators:distillation/crude_oil" })
+event.custom({
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "fluidTag": "forge:crude_oil",
+      "amount": 100
+    }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 100,
+  "results": [
+    {
+      "fluid": "thermal:light_oil",
+      "amount": 60
+    },
+    {
+      "fluid": "thermal:heavy_oil",
+      "amount": 40
+    }
+  ]
+})
+
+// 汽油
+event.remove({ id: "thermal:machines/refinery/refinery_light_oil" })
+// 机动蒸馏
+event.custom({
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "fluid": "thermal:light_oil",
+      "amount": 100
+    }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 100,
+  "results": [
+    {
+      "fluid": "createdieselgenerators:gasoline",
+      "amount": 100
+    }
+  ]
+})
+// 热力蒸馏
+event.custom({
+	"type": "thermal:refinery",
+	"ingredient": {
+		"fluid": "thermal:light_oil",
+		"amount": 100
+	},
+	"result": [
+		{
+			"fluid": "createdieselgenerators:gasoline",
+			"amount": 100
+		},
+		{
+			"item": "thermal:sulfur_dust",
+			"chance": 0.20
+		}
+	],
+	"energy": 6000
+})
+
+// 柴油
+event.remove({ id: "thermal:machines/refinery/refinery_heavy_oil" })
+// 机动蒸馏
+event.custom({
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "fluid": "thermal:heavy_oil",
+      "amount": 100
+    }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 100,
+  "results": [
+    {
+      "fluid": "createdieselgenerators:diesel",
+      "amount": 100
+    }
+  ]
+})
+// 热力蒸馏
+event.custom({
+	"type": "thermal:refinery",
+	"ingredient": {
+		"fluid": "thermal:heavy_oil",
+		"amount": 100
+	},
+	"result": [
+		{
+			"fluid": "createdieselgenerators:diesel",
+			"amount": 100
+		},
+		{
+			"item": "thermal:tar",
+			"chance": 0.20
+		}
+	],
+	"energy": 6000
+})
+
+
+// 航空燃油
+event.remove({ id: "beyond_earth:fuel_refining/fuel_from_oil" })
+// 机动蒸馏
+event.custom({
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "fluid": "createdieselgenerators:gasoline",
+      "amount": 10
+    }
+  ],
+  "heatRequirement": "superheated",
+  "processingTime": 30,
+  "results": [
+    {
+      "fluid": "beyond_earth:fuel",
+      "amount": 10
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "fluid": "createdieselgenerators:diesel",
+      "amount": 10
+    }
+  ],
+  "heatRequirement": "superheated",
+  "processingTime": 30,
+  "results": [
+    {
+      "fluid": "beyond_earth:fuel",
+      "amount": 10
+    }
+  ]
+})
+// 热力蒸馏
+event.custom({
+	"type": "thermal:refinery",
+	"ingredient": {
+		"fluid": "createdieselgenerators:gasoline",
+		"amount": 100
+	},
+	"result": [
+		{
+			"fluid": "beyond_earth:fuel",
+			"amount": 100
+		  }
+	],
+	"energy": 8000
+})
+event.custom({
+	"type": "thermal:refinery",
+	"ingredient": {
+		"fluid": "createdieselgenerators:diesel",
+		"amount": 100
+	},
+	"result": [
+		{
+			"fluid": "beyond_earth:fuel",
+			"amount": 100
+		  }
+	],
+	"energy": 8000
+})
+
+//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
+//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
+
+}
+
+function rocketScience(event) {
+event.remove({ output: 'beyond_earth:solar_panel' })
+event.remove({ output: 'beyond_earth:coal_generator' })
+event.remove({ output: 'beyond_earth:compressor' })
+event.remove({ output: 'beyond_earth:fuel_refinery' })
+event.remove({ output: 'beyond_earth:oxygen_gear' })
+event.remove({ output: 'beyond_earth:water_pump' })
+event.remove({ output: 'beyond_earth:nasa_workbench' })
+event.remove({ output: 'beyond_earth:rocket_nose_cone' })
+event.remove({ output: 'beyond_earth:rocket_fin' })
+event.remove({ output: 'beyond_earth:iron_stick' })
+event.remove({ output: 'beyond_earth:oxygen_tank' }) 
+event.remove({ type: 'beyond_earth:compressor' })
+
+let gear = TE("diamond_gear")
+let plastic = KJ("matter_plastics")
+let casing = KJ("matter_casing")
+let controller = AE2("controller")
+let matrix = KJ("computation_matrix")
+
+// 物质塑料
+event.recipes.createCompacting(KJ("matter_plastics"), [
+	AE2("matter_ball"), 
+	AE2("matter_ball"), 
+	AE2("matter_ball"), 
+	AE2("matter_ball"),
+	AE2("matter_ball"), 
+	AE2("matter_ball"), 
+	AE2("matter_ball"), 
+	AE2("matter_ball"), 
+	AE2("matter_ball")
+]).superheated()
+
+// 引擎框架
+event.remove({ id: 'beyond_earth:engine_frame' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "create_dd:steel_block"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:engine_frame",
+			"count": 1
+		}
+	]
+})
+
+// 引擎风扇
+event.remove({ id: 'beyond_earth:engine_fan' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "create_dd:steel_block"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:engine_fan",
+			"count": 1
+		}
+	]
+})
+
+// 车轮
+event.remove({ id: 'beyond_earth:wheel' })
+event.shaped("2x beyond_earth:wheel", [
+	' S ',
+	'SPS',
+	' S '
+], { 
+	S: TE("cured_rubber"), 
+	P: CRD("steel_ingot") 
+})
+
+// 压缩板
+let compressor = (id, amount, ingredient) => {
+	event.remove({ output: id })
+	event.custom({
+		"type": "vintageimprovements:hammering",
+		"hammerBlows": 4,
+		"ingredients": [
+			{
+			  "item": ingredient
+			}
+		],
+		"results": [
+			{
+			  "item": id,
+			  "count": amount
+			}
+		]
+	})
+}
+
+compressor('beyond_earth:compressed_desh', 1, 'beyond_earth:desh_ingot')
+compressor('beyond_earth:compressed_ostrum', 1, 'beyond_earth:ostrum_ingot')
+compressor('beyond_earth:compressed_calorite', 1, 'beyond_earth:calorite_ingot')
+
+
+// 钢引擎
+event.remove({ id: 'beyond_earth:iron_engine' })
+event.recipes.createMechanicalCrafting("beyond_earth:steel_engine", [
+	'ABC',
+], {
+	A: 'kubejs:matter_plastics',
+	B: 'beyond_earth:engine_fan',
+	C: 'beyond_earth:engine_frame',
+})
+
+// 钢储罐
+event.remove({ id: 'beyond_earth:iron_tank' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "kubejs:matter_casing"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:steel_tank",
+			"count": 1
+		}
+	]
+})
+
+
+// 戴斯引擎
+event.remove({ id: 'beyond_earth:gold_engine' })
+event.recipes.createMechanicalCrafting("beyond_earth:desh_engine", [
+	'ABC',
+], {
+	A: 'beyond_earth:desh_ingot',
+	B: 'beyond_earth:engine_fan',
+	C: 'beyond_earth:engine_frame',
+})
+
+// 戴斯储罐
+event.remove({ id: 'beyond_earth:gold_tank' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "beyond_earth:desh_block"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:desh_tank",
+			"count": 1
+		}
+	]
+})
+
+
+// 紫金引擎
+event.remove({ id: 'beyond_earth:diamond_engine' })
+event.recipes.createMechanicalCrafting("beyond_earth:ostrum_engine", [
+	'ABC',
+], {
+	A: 'beyond_earth:ostrum_ingot',
+	B: 'beyond_earth:engine_fan',
+	C: 'beyond_earth:engine_frame',
+})
+
+// 紫金储罐
+event.remove({ id: 'beyond_earth:diamond_tank' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "beyond_earth:ostrum_block"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:ostrum_tank",
+			"count": 1
+		}
+	]
+})
+
+
+// 耐热金属引擎
+event.remove({ id: 'beyond_earth:calorite_engine' })
+event.recipes.createMechanicalCrafting("beyond_earth:calorite_engine", [
+	'ABC',
+], {
+	A: 'beyond_earth:calorite_ingot',
+	B: 'beyond_earth:engine_fan',
+	C: 'beyond_earth:engine_frame',
+})
+
+// 耐热金属储罐
+event.remove({ id: 'beyond_earth:calorite_tank' })
+event.custom({
+	"type":"vintageimprovements:turning",
+	"ingredients": [
+		{
+			"item": "beyond_earth:calorite_block"
+		}
+	],
+	"results": [
+		{
+			"item": "beyond_earth:calorite_tank",
+			"count": 1
+		}
+	]
+})
+
+
+//
+
+
+event.remove({ id: "beyond_earth:oxygen_loader" })
+event.recipes.createMechanicalCrafting("beyond_earth:oxygen_loader", [
+	'AAA',
+	'GSG',
+	'AMA'
+], {
+	A: plastic,
+	M: controller,
+	G: gear,
+	S: MC("bucket")
+})
+
+event.remove({ id: "beyond_earth:oxygen_bubble_distributor" })
+event.recipes.createMechanicalCrafting("beyond_earth:oxygen_bubble_distributor", [
+	'AAA',
+	'GSG',
+	'AMA'
+], {
+	A: plastic,
+	M: controller,
+	G: gear,
+	S: CR("propeller")
+})
+
+let pattern = [
+	' A ',
+	'GSG',
+	' A '
+];
+
+event.remove({ id: "beyond_earth:space_suit" })
+event.recipes.createMechanicalCrafting("beyond_earth:space_suit", pattern,
+	{
+		A: plastic,
+		G: CR("golden_sheet"),
+		S: CR("netherite_backtank")
+	})
+
+event.remove({ id: "beyond_earth:oxygen_mask" })	
+event.recipes.createMechanicalCrafting("beyond_earth:oxygen_mask", pattern,
+	{
+		A: plastic,
+		G: CR("golden_sheet"),
+		S: CR("netherite_diving_helmet")
+	})
+
+event.remove({ id: "beyond_earth:space_leggings" })	
+event.recipes.createMechanicalCrafting("beyond_earth:space_pants", pattern,
+	{
+		A: plastic,
+		G: CR("golden_sheet"),
+		S: MC("iron_leggings")
+	})
+
+event.remove({ id: "beyond_earth:space_boots" })		
+event.recipes.createMechanicalCrafting("beyond_earth:space_boots", pattern,
+	{
+		A: plastic,
+		G: CR("golden_sheet"),
+		S: MC("iron_boots")
+	})
+
+event.remove({ id: "beyond_earth:rocket_launch_pad" })	
+let smithAndMechCraft = (r, i1, i2) => {
+	event.smithing(r, i1, i2)
+	event.recipes.createMechanicalCrafting(r, "AB", { A: i1, B: i2 })
+}
+
+smithAndMechCraft("9x beyond_earth:rocket_launch_pad", 'create_dd:steel_block', plastic)
+
+//
+
+// 漫游车
+event.remove({ id: "beyond_earth:rover", })
+event.recipes.createMechanicalCrafting("beyond_earth:rover", [
+	'C    ',
+	'BDDEF',
+	'ABBBA',
+], {
+	A: 'beyond_earth:wheel',
+	B: plastic,
+	C: 'kubejs:calculation_mechanism',
+	D: '#interiors:floor_chairs',
+	E: 'beyond_earth:steel_tank',
+	F: '#forge:chests'
+})
+
+// 一级火箭
+event.remove({ id: "beyond_earth:nasa_workbenching/tier1", })
+event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
+	'  G  ',
+	' AYA ',
+	' YEY ',
+	' SES ',
+	' YEY ',
+	'GYYYG',
+	'ABMBA',
+	'A D A'
+], {
+	A: plastic,
+	M: controller,
+	G: gear,
+	S: matrix,
+	B: 'beyond_earth:steel_tank',
+	D: 'beyond_earth:steel_engine',
+	E: '#thermal:glass/hardened',
+	Y: casing
+})
+
+// 二级火箭
+event.remove({ id: "beyond_earth:nasa_workbenching/tier2", })
+event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
+	'  G  ',
+	' AYA ',
+	' YEY ',
+	' SES ',
+	' YEY ',
+	'GYYYG',
+	'ABMBA',
+	'A D A'
+], {
+	A: plastic,
+	M: controller,
+	G: 'beyond_earth:desh_plate',
+	S: matrix,
+	B: 'beyond_earth:desh_tank',
+	D: 'beyond_earth:desh_engine',
+	E: '#thermal:glass/hardened',
+	Y: casing
+})
+
+// 三级火箭
+event.remove({ id: "beyond_earth:nasa_workbenching/tier3", })
+event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
+	'  G  ',
+	' AYA ',
+	' YEY ',
+	' SES ',
+	' YEY ',
+	'GYYYG',
+	'ABMBA',
+	'A D A'
+], {
+	A: plastic,
+	M: controller,
+	G: 'beyond_earth:compressed_ostrum',
+	S: matrix,
+	B: 'beyond_earth:ostrum_tank',
+	D: 'beyond_earth:ostrum_engine',
+	E: '#thermal:glass/hardened',
+	Y: casing
+})
+
+// 四级火箭
+event.remove({ id: "beyond_earth:nasa_workbenching/tier4", })
+event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
+	'  G  ',
+	' AYA ',
+	' YYY ',
+	' YEY ',
+	' SES ',
+	' YEY ',
+	'GYYYG',
+	'ABMBA',
+	'A D A'
+], {
+	A: plastic,
+	M: controller,
+	G: 'beyond_earth:compressed_calorite',
+	S: matrix,
+	B: 'beyond_earth:calorite_tank',
+	D: 'beyond_earth:calorite_engine',
+	E: '#thermal:glass/hardened',
+	Y: casing
+})
+
+
+}
+
 function trading(event) {
 let trade = (card_id, ingredient, output) => {
 	event.custom({
@@ -2660,6 +3885,1853 @@ global.professions.forEach(element => {
 		})
 });
 }
+
+function unify(event) {
+
+event.remove({ input: "darkerdepths:aridrock_gold_ore" });
+event.remove({ input: "darkerdepths:aridrock_iron_ore" });
+event.remove({ input: "darkerdepths:limestone_gold_ore" });
+event.remove({ input: "darkerdepths:limestone_iron_ore" });
+event.remove({ input: "beyond_earth:hammer" });
+
+event.remove({ output: "beyond_earth:hammer" });
+
+event.remove({ output: "create_dd:integrated_mechanism" });
+event.remove({ output: "create_dd:infernal_mechanisms" });
+event.remove({ output: "create_dd:inductive_mechanism" });
+event.remove({ output: "create_dd:calculation_mechanism" });
+
+const dontReplaceMe = {
+	
+    not: [
+	  { id: /.*yellow*./ },
+
+      { id: "tconstruct:smeltery/casts/gold_casts/ingots" },
+      { id: "tconstruct:smeltery/casts/gold_casts/nuggets" },
+      { id: "tconstruct:smeltery/casts/gold_casts/rods" },
+      { id: "tconstruct:smeltery/casts/gold_casts/plates" },
+      { id: "tconstruct:smeltery/casts/gold_casts/gears" },
+      { id: "tconstruct:smeltery/casts/gold_casts/wires" },
+	  { id: "minecraft:quartz_pillar" },
+      { id: "minecraft:cut_copper_from_copper_block_stonecutting" },
+      { id: "minecraft:cut_copper_stairs_from_cut_copper_stonecutting" },
+      { id: "minecraft:cut_copper_slab_from_cut_copper_stonecutting" },
+      { id: "minecraft:cut_copper" },
+      { id: "minecraft:cut_copper_stairs" },
+      { id: "minecraft:cut_copper_slab" },
+      { id: "minecraft:copper_ingot" },
+      { id: "minecraft:cut_copper_stairs_from_copper_block_stonecutting" },
+      { id: "minecraft:cut_copper_slab_from_copper_block_stonecutting" },
+      { id: "minecraft:waxed_copper_block_from_honeycomb" },
+      { id: "minecraft:waxed_cut_copper_from_honeycomb" },
+    ],
+};
+
+let removeIO = (item) => {
+	event.remove({ input: item });
+	event.remove({ output: item });
+};
+
+let replaceIO = (tag, item) => {
+  event.replaceInput(dontReplaceMe, tag, item);
+  event.replaceOutput(dontReplaceMe, tag, item);
+};
+
+
+let stone = Item.of(MC("cobblestone"), 1).withChance(.5);
+let limestone = Item.of("darkerdepths:limestone", 1).withChance(.5);
+let aridrock = Item.of("darkerdepths:aridrock", 1).withChance(.5);
+let otherstone = Item.of(OC("otherstone"), 1).withChance(.5);
+
+event.recipes.createCrushing([Item.of("forbidden_arcanus:stellarite_piece", 1), Item.of("forbidden_arcanus:stellarite_piece", 1).withChance(.25), stone], "forbidden_arcanus:stella_arcanum");
+event.recipes.createCrushing([Item.of("forbidden_arcanus:xpetrified_orb", 2), Item.of("forbidden_arcanus:xpetrified_orb", 1).withChance(.25), stone], "forbidden_arcanus:xpetrified_ore");
+event.recipes.createCrushing([Item.of("buddycards:luminis_crystal", 2), Item.of("buddycards:luminis_crystal", 1).withChance(.25), stone], "buddycards:luminis_ore");
+event.recipes.createCrushing([Item.of("forbidden_arcanus:arcane_crystal", 2), Item.of("forbidden_arcanus:arcane_crystal_dust", 1).withChance(.25), stone], "forbidden_arcanus:arcane_crystal_ore");
+event.recipes.createCrushing([Item.of(OC("iesnium_dust"), 2), Item.of(OC("iesnium_dust"), 1).withChance(.25), otherstone], OC("iesnium_ore"));
+event.recipes.createCrushing([Item.of(TE("sapphire"), 2), Item.of(TE("sapphire"), 1).withChance(.25), stone], TE("sapphire_ore"));
+event.recipes.createCrushing([Item.of(TE("ruby"), 2), Item.of(TE("ruby"), 1).withChance(.25), stone], TE("ruby_ore"));
+event.recipes.createCrushing([Item.of(MC("diamond"), 2), Item.of(MC("diamond"), 1).withChance(.25), limestone], "darkerdepths:limestone_diamond_ore");
+event.recipes.createCrushing([Item.of(MC("diamond"), 2), Item.of(MC("diamond"), 1).withChance(.25), aridrock], "darkerdepths:aridrock_diamond_ore");
+event.recipes.createCrushing([Item.of(MC("coal"), 2), Item.of(MC("coal"), 2).withChance(.5), limestone], "darkerdepths:limestone_coal_ore");
+event.recipes.createCrushing([Item.of(MC("coal"), 2), Item.of(MC("coal"), 2).withChance(.5), aridrock], "darkerdepths:aridrock_coal_ore");
+event.recipes.createCrushing([Item.of(MC("lapis_lazuli"), 12), Item.of(MC("lapis_lazuli"), 8).withChance(.25), limestone], "darkerdepths:limestone_lapis_ore");
+event.recipes.createCrushing([Item.of(MC("lapis_lazuli"), 12), Item.of(MC("lapis_lazuli"), 8).withChance(.25), aridrock], "darkerdepths:aridrock_lapis_ore");
+event.recipes.createCrushing([Item.of(CR('crushed_raw_iron'), 1), limestone], "darkerdepths:limestone_iron_ore");
+event.recipes.createCrushing([Item.of(CR('crushed_raw_iron'), 1), aridrock], "darkerdepths:aridrock_iron_ore");
+event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), limestone], "darkerdepths:limestone_gold_ore");
+event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), aridrock], "darkerdepths:aridrock_gold_ore");
+event.recipes.createCrushing([Item.of(TE('sulfur'), 1).withChance(.15)], "biomesoplenty:brimstone");
+
+// 硫粉
+replaceIO("#forge:dusts/sulfur", "thermal:sulfur_dust");
+event.recipes.createMilling(["thermal:sulfur_dust"], "#forge:gems/sulfur").processingTime(200);
+
+// 硝粉
+replaceIO("#forge:dusts/saltpeter", "thermal:niter_dust");
+event.recipes.createMilling(["thermal:niter_dust"], "#forge:gems/niter").processingTime(200);
+
+// 磷灰石粉
+replaceIO("#forge:dusts/apatite", "thermal:apatite_dust");
+event.recipes.createMilling(["thermal:apatite_dust"], "#forge:gems/apatite").processingTime(200);
+
+// 石英粉
+replaceIO("#forge:dusts/quartz", "thermal:quartz_dust");
+event.recipes.createMilling(["thermal:quartz_dust"], "#forge:gems/quartz").processingTime(200);
+
+// 福禄伊克斯石英粉
+replaceIO("#forge:dusts/fluix", "ae2:fluix_dust");
+event.recipes.createMilling(["ae2:fluix_dust"], "#forge:gems/fluix").processingTime(200);
+
+// 赛特斯石英粉
+replaceIO("#forge:dusts/certus_quartz", "ae2:certus_quartz_dust");
+event.recipes.createMilling(["ae2:certus_quartz_dust"], "#forge:gems/certus_quartz").processingTime(200);
+
+// 黑曜石粉
+replaceIO("#forge:dusts/obsidian", "create:powdered_obsidian");
+event.recipes.createCrushing(CR("powdered_obsidian"), MC("obsidian"));
+
+// 朱砂粉（红石粉）
+event.recipes.createMilling(['4x ' + MC('redstone')], TE('cinnabar')).processingTime(700);
+event.recipes.createCrushing(['6x ' + MC('redstone')], TE('cinnabar')).processingTime(500);
+event.recipes.thermal.pulverizer(['8x ' + MC('redstone')], TE('cinnabar')).energy(10000);
+
+// 萤石粉
+event.recipes.createMilling(['3x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(700);
+event.recipes.createCrushing(['6x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(500);
+event.recipes.thermal.pulverizer(['9x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').energy(10000);
+
+replaceIO("create_dd:integrated_mechanism", "create:precision_mechanism");
+replaceIO("create_dd:infernal_mechanism", "kubejs:infernal_mechanism");
+replaceIO("create_dd:inductive_mechanism", "kubejs:kinetic_mechanism");
+replaceIO("create_dd:calculation_mechanism", "kubejs:calculation_mechanism");
+
+//
+
+
+event.replaceInput(MC("quartz"), AE2("#all_nether_quartz"));
+event.replaceInput(F("#gems/quartz"), AE2("#all_nether_quartz"));
+
+replaceIO("#forge:silicon", "ae2:silicon");
+replaceIO("#forge:dusts/ender_pearl", "ae2:ender_dust");
+replaceIO("#forge:sawdust", "thermal:sawdust");
+replaceIO("#forge:slag", "thermal:slag");
+replaceIO("#forge:storage_blocks/charcoal", "mekanism:block_charcoal");
+replaceIO("#forge:coal_coke", "thermal:coal_coke");
+replaceIO("#forge:fuels/bio", "createaddition:biomass");
+replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
+replaceIO('create_dd:chromatic_compound', 'create:chromatic_compound');
+replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
+replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
+
+function unifyAllTheMetal(
+    name,
+    ore,
+    deepslateOre,
+    rawOre,
+    rawOreBlock,
+    block,
+    ingot,
+    nugget,
+    gem,
+    dust,
+    fluid,
+    gear,
+    plate,
+    rod,
+    crushed,
+    wire,
+	spring,
+    byproduct,
+    fluid_byproduct) {
+    let obj = {
+      name: name,
+      ore: ore,
+      deepslateOre: deepslateOre,
+      rawOre: rawOre,
+      rawOreBlock: rawOreBlock,
+      block: block,
+      ingot: ingot,
+      nugget: nugget,
+      gem: gem,
+      dust: dust,
+      fluid: fluid,
+      gear: gear,
+      plate: plate,
+      rod: rod,
+      crushed: crushed,
+      wire: wire,
+	  spring: spring,
+      byproduct: byproduct,
+      fluid_byproduct: fluid_byproduct,
+    };
+
+    if (rawOre) {
+      replaceIO(`#forge:raw_materials/${name}`, rawOre);
+    }
+    if (rawOreBlock) {
+      replaceIO(`#forge:storage_blocks/raw_${name}`, rawOreBlock);
+    }
+    if (block) {
+      replaceIO(`#forge:storage_blocks/${name}`, block);
+    }
+    if (ingot) {
+      replaceIO(`#forge:ingots/${name}`, ingot);
+    }
+    if (nugget) {
+      replaceIO(`#forge:nuggets/${name}`, nugget);
+    }
+    if (gem) {
+      replaceIO(`#forge:gems/${name}`, gem);
+    }
+    if (dust) {
+      replaceIO(`#forge:dusts/${name}`, dust);
+    }
+    if (gear) {
+      replaceIO(`#forge:gears/${name}`, gear);
+    }
+    if (plate) {
+      replaceIO(`#forge:plates/${name}`, plate);
+    }
+    if (rod) {
+      replaceIO(`#forge:rods/${name}`, rod);
+    }
+	if (spring) {
+      replaceIO(`#forge:springs/${name}`, spring);
+    };
+    if (wire) {
+      replaceIO(`#forge:wires/${name}`, wire);
+    }
+    
+    processing(obj, event);
+};
+
+unifyAllTheMetal(
+    "amethyst_bronze",
+    "",
+    "",
+    "",
+    "",
+    "tconstruct:amethyst_bronze_block",
+    "tconstruct:amethyst_bronze_ingot",
+    "tconstruct:amethyst_bronze_nugget",
+    "",
+    "",
+    "tconstruct:molten_amethyst_bronze",
+    "",
+    "vintageimprovements:amethyst_bronze_sheet",
+    "vintageimprovements:amethyst_bronze_rod",
+    "",
+    "vintageimprovements:amethyst_bronze_wire",
+    "vintageimprovements:amethyst_bronze_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "brass",
+    "",
+    "",
+    "",
+    "",
+    "create:brass_block",
+    "create:brass_ingot",
+    "create:brass_nugget",
+    "",
+    "kubejs:brass_dust",
+    "tconstruct:molten_brass",
+    "",
+    "create:brass_sheet",
+    "createaddition:brass_rod",
+    "",
+    "vintageimprovements:brass_wire",
+    "vintageimprovements:brass_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "bronze",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:bronze_block",
+    "create_dd:bronze_ingot",
+    "create_dd:bronze_nugget",
+    "",
+    "thermal:bronze_dust",
+    "tconstruct:molten_bronze",
+    "thermal:bronze_gear",
+    "create_dd:bronze_sheet",
+    "vintageimprovements:bronze_rod",
+    "",
+    "vintageimprovements:bronze_wire",
+    "vintageimprovements:bronze_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "constantan",
+    "",
+    "",
+    "",
+    "",
+    "thermal:constantan_block",
+    "thermal:constantan_ingot",
+    "thermal:constantan_nugget",
+    "",
+    "thermal:constantan_dust",
+    "tconstruct:molten_constantan",
+    "thermal:constantan_gear",
+    "thermal:constantan_plate",
+    "vintageimprovements:constantan_rod",
+    "",
+    "vintageimprovements:constantan_wire",
+    "vintageimprovements:constantan_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "copper",
+    "minecraft:copper_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:raw_copper",
+    "minecraft:raw_copper_block",
+    "minecraft:copper_block",
+    "minecraft:copper_ingot",
+    "create:copper_nugget",
+    "",
+    "thermal:copper_dust",
+    "tconstruct:molten_copper",
+    "thermal:copper_gear",
+    "create:copper_sheet",
+    "createaddition:copper_rod",
+    "create:crushed_raw_copper",
+    "createaddition:copper_wire",
+	"vintageimprovements:copper_spring",
+    "minecraft:gold_nugget",
+    "tconstruct:molten_gold"
+);
+
+unifyAllTheMetal(
+    "diamond",
+    "minecraft:diamond_ore",
+    "minecraft:deepslate_diamond_ore",
+    "",
+    "",
+    "minecraft:diamond_block",
+    "",
+    "",
+    "minecraft:diamond",
+    "thermal:diamond_dust",
+    "tconstruct:molten_diamond",
+    "thermal:diamond_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "electrum",
+    "",
+    "",
+    "",
+    "",
+    "thermal:electrum_block",
+    "thermal:electrum_ingot",
+    "thermal:electrum_nugget",
+    "",
+    "thermal:electrum_dust",
+    "tconstruct:molten_electrum",
+    "thermal:electrum_gear",
+    "thermal:electrum_plate",
+    "createaddition:electrum_rod",
+    "",
+    "",
+    "createaddition:electrum_wire",
+    "vintageimprovements:electrum_spring",
+    "",
+	""
+);
+
+unifyAllTheMetal(
+    "emerald",
+    "minecraft:emerald_ore",
+    "minecraft:deepslate_emerald_ore",
+    "",
+    "",
+    "minecraft:emerald_block",
+    "",
+    "",
+    "minecraft:emerald",
+    "thermal:emerald_dust",
+    "tconstruct:molten_emerald",
+    "thermal:emerald_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+	"",
+    ""
+);
+
+unifyAllTheMetal(
+    "enderium",
+    "",
+    "",
+    "",
+    "",
+    "thermal:enderium_block",
+    "thermal:enderium_ingot",
+    "thermal:enderium_nugget",
+    "",
+    "thermal:enderium_dust",
+    "tconstruct:molten_enderium",
+    "thermal:enderium_gear",
+    "thermal:enderium_plate",
+    "vintageimprovements:enderium_rod",
+    "",
+    "vintageimprovements:enderium_wire",
+    "vintageimprovements:enderium_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "signalum",
+    "",
+    "",
+    "",
+    "",
+    "thermal:signalum_block",
+    "thermal:signalum_ingot",
+    "thermal:signalum_nugget",
+    "",
+    "thermal:signalum_dust",
+    "tconstruct:molten_signalum",
+    "thermal:signalum_gear",
+    "thermal:signalum_plate",
+    "vintageimprovements:signalum_rod",
+    "",
+    "vintageimprovements:signalum_wire",
+    "vintageimprovements:signalum_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "gold",
+    "minecraft:gold_ore",
+    "minecraft:deepslate_gold_ore",
+    "minecraft:raw_gold",
+    "minecraft:raw_gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_ingot",
+    "minecraft:gold_nugget",
+    "",
+    "thermal:gold_dust",
+    "tconstruct:molten_gold",
+    "thermal:gold_gear",
+    "create:golden_sheet",
+    "createaddition:gold_rod",
+    "create:crushed_raw_gold",
+    "createaddition:gold_wire",
+	"vintageimprovements:golden_spring",
+    "create:zinc_nugget",
+    "tconstruct:molten_zinc"
+);
+
+unifyAllTheMetal(
+    "invar",
+    "",
+    "",
+    "",
+    "",
+    "thermal:invar_block",
+    "thermal:invar_ingot",
+    "thermal:invar_nugget",
+    "",
+    "thermal:invar_dust",
+    "tconstruct:molten_invar",
+    "thermal:invar_gear",
+    "thermal:invar_plate",
+    "vintageimprovements:invar_rod",
+    "",
+    "vintageimprovements:invar_wire",
+    "vintageimprovements:invar_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "iron",
+    "minecraft:iron_ore",
+    "minecraft:deepslate_iron_ore",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron_block",
+    "minecraft:iron_block",
+    "minecraft:iron_ingot",
+    "minecraft:iron_nugget",
+    "",
+    "thermal:iron_dust",
+    "tconstruct:molten_iron",
+    "thermal:iron_gear",
+    "create:iron_sheet",
+    "createaddition:iron_rod",
+    "create:crushed_raw_iron",
+    "createaddition:iron_wire",
+	"vintageimprovements:iron_spring",
+    "thermal:nickel_nugget",
+    "tconstruct:molten_nickel"
+);
+
+unifyAllTheMetal(
+    "lapis",
+    "",
+    "",
+    "",
+    "",
+    "minecraft:lapis_block",
+    "",
+    "",
+    "minecraft:lapis_lazuli",
+    "thermal:lapis_dust",
+    "",
+    "thermal:lapis_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "lead",
+    "thermal:lead_ore",
+    "thermal:deepslate_lead_ore",
+    "thermal:raw_lead",
+    "thermal:raw_lead_block",
+    "thermal:lead_block",
+    "thermal:lead_ingot",
+    "thermal:lead_nugget",
+    "",
+    "thermal:lead_dust",
+    "tconstruct:molten_lead",
+    "thermal:lead_gear",
+    "thermal:lead_plate",
+    "vintageimprovements:lead_rod",
+    "create:crushed_raw_lead",
+    "vintageimprovements:lead_spring",
+	"vintageimprovements:lead_spring",
+    "minecraft:iron_nugget",
+    "tconstruct:molten_iron"
+);
+
+unifyAllTheMetal(
+    "lumium",
+    "",
+    "",
+    "",
+    "",
+    "thermal:lumium_block",
+    "thermal:lumium_ingot",
+    "thermal:lumium_nugget",
+    "",
+    "thermal:lumium_dust",
+    "tconstruct:molten_lumium",
+    "thermal:lumium_gear",
+    "thermal:lumium_plate",
+    "vintageimprovements:lumium_rod",
+    "",
+    "vintageimprovements:lumium_wire",
+    "vintageimprovements:lumium_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "manyullyn",
+    "",
+    "",
+    "",
+    "",
+    "tconstruct:manyullyn_block",
+    "tconstruct:manyullyn_ingot",
+    "tconstruct:manyullyn_nugget",
+    "",
+    "",
+    "tconstruct:molten_manyullyn",
+    "",
+    "vintageimprovements:manyullyn_sheet",
+    "vintageimprovements:manyullyn_rod",
+    "",
+    "vintageimprovements:manyullyn_wire",
+    "vintageimprovements:manyullyn_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "netherite",
+    "",
+    "",
+    "",
+    "",
+    "minecraft:netherite_block",
+    "minecraft:netherite_ingot",
+    "thermal:netherite_nugget",
+    "",
+    "thermal:netherite_dust",
+    "tconstruct:molten_netherite",
+    "thermal:netherite_gear",
+    "vintageimprovements:netherite_sheet",
+    "vintageimprovements:netherite_rod",
+    "",
+    "vintageimprovements:netherite_wire",
+    "vintageimprovements:netherite_spring",
+    "occultism:iesnium_nugget",
+    "materialis:molten_iesnium"
+);
+
+unifyAllTheMetal(
+    "nickel",
+    "thermal:nickel_ore",
+    "thermal:deepslate_lead_ore",
+    "thermal:raw_nickel",
+    "thermal:raw_nickel_block",
+    "thermal:nickel_block",
+    "thermal:nickel_ingot",
+    "thermal:nickel_nugget",
+    "",
+    "thermal:nickel_dust",
+    "tconstruct:molten_nickel",
+    "thermal:nickel_gear",
+    "thermal:nickel_plate",
+    "vintageimprovements:nickel_rod",
+    "create:crushed_raw_nickel",
+    "vintageimprovements:nickel_wire",
+	"vintageimprovements:nickel_spring",
+    "create:copper_nugget",
+    "tconstruct:molten_copper"
+);
+
+unifyAllTheMetal(
+    "pig_iron",
+    "",
+    "",
+    "",
+    "",
+    "tconstruct:pig_iron_block",
+    "tconstruct:pig_iron_ingot",
+    "tconstruct:pig_iron_nugget",
+    "",
+    "",
+    "tconstruct:molten_pig_iron",
+    "",
+    "vintageimprovements:pig_iron_sheet",
+    "vintageimprovements:pig_iron_rod",
+    "",
+    "vintageimprovements:pig_iron_wire",
+    "vintageimprovements:pig_iron_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "quartz",
+    "",
+    "",
+    "",
+    "",
+    "minecraft:quartz_block",
+    "",
+    "",
+    "minecraft:quartz",
+    "thermal:quartz_dust",
+    "tconstruct:molten_quartz",
+    "thermal:quartz_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "rose_gold",
+    "",
+    "",
+    "",
+    "",
+    "tconstruct:rose_gold_block",
+    "tconstruct:rose_gold_ingot",
+    "tconstruct:rose_gold_nugget",
+    "",
+    "thermal:rose_gold_dust",
+    "tconstruct:molten_rose_gold",
+    "thermal:rose_gold_gear",
+    "vintageimprovements:rose_gold_sheet",
+    "vintageimprovements:rose_gold_rod",
+    "",
+    "vintageimprovements:rose_gold_wire",
+    "vintageimprovements:rose_gold_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "silver",
+    "thermal:silver_ore",
+    "thermal:deepslate_silver_ore",
+    "thermal:raw_silver",
+    "thermal:raw_silver_block",
+    "thermal:silver_block",
+    "thermal:silver_ingot",
+    "thermal:silver_nugget",
+    "",
+    "thermal:silver_dust",
+    "tconstruct:molten_silver",
+    "thermal:silver_gear",
+    "thermal:silver_plate",
+    "vintageimprovements:silver_rod",
+    "create:crushed_raw_silver",
+    "vintageimprovements:silver_wire",
+    "vintageimprovements:silver_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "steel",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:steel_block",
+    "create_dd:steel_ingot",
+    "create_dd:steel_nugget",
+    "",
+    "thermal:steel_dust",
+    "tconstruct:molten_steel",
+    "thermal:steel_gear",
+    "create_dd:steel_sheet",
+    "vintageimprovements:steel_rod",
+    "",
+    "vintageimprovements:steel_wire",
+    "vintageimprovements:steel_wire",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "tin",
+    "thermal:tin_ore",
+    "thermal:deepslate_tin_ore",
+    "thermal:raw_tin",
+    "thermal:raw_tin_block",
+    "thermal:tin_block",
+    "create_dd:tin_ingot",
+    "create_dd:tin_nugget",
+    "",
+    "thermal:tin_dust",
+    "tconstruct:molten_tin",
+    "thermal:tin_gear",
+    "create_dd:tin_sheet",
+    "vintageimprovements:tin_rod",
+    "create:crushed_raw_tin",
+    "vintageimprovements:tin_wire",
+	"vintageimprovements:tin_spring",
+    "create:copper_nugget",
+    "tconstruct:molten_copper"
+);
+
+unifyAllTheMetal(
+    "zinc",
+    "create:zinc_ore",
+    "create:deepslate_zinc_ore",
+    "create:raw_zinc",
+    "create:raw_zinc_block",
+    "create:zinc_block",
+    "create:zinc_ingot",
+    "create:zinc_nugget",
+    "",
+    "kubejs:zinc_dust",
+    "tconstruct:molten_zinc",
+    "",
+    "create_dd:zinc_sheet",
+    "vintageimprovements:zinc_rod",
+    "create:crushed_raw_zinc",
+    "vintageimprovements:zinc_wire",
+	"vintageimprovements:zinc_spring",
+    "thermal:lead_nugget",
+    "tconstruct:molten_lead"
+);
+
+unifyAllTheMetal(
+    "cobalt",
+    "tconstruct:cobalt_ore",
+    "",
+    "tconstruct:raw_cobalt",
+    "tconstruct:raw_cobalt_block",
+    "tconstruct:cobalt_block",
+    "tconstruct:cobalt_ingot",
+    "tconstruct:cobalt_nugget",
+    "",
+    "kubejs:cobalt_dust",
+    "tconstruct:molten_cobalt",
+    "",
+    "vintageimprovements:cobalt_sheet",
+    "vintageimprovements:cobalt_rod",
+    "kubejs:crushed_raw_cobalt",
+    "vintageimprovements:cobalt_wire",
+    "vintageimprovements:cobalt_spring",
+    "create:powdered_obsidian",
+    "tconstruct:molten_obsidian"
+);
+
+unifyAllTheMetal(
+    "neptunium",
+    "",
+    "",
+    "",
+    "",
+    "aquaculture:neptunium_block",
+    "aquaculture:neptunium_ingot",
+    "aquaculture:neptunium_nugget",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "cast_iron",
+    "",
+    "",
+    "",
+    "",
+    "createbigcannons:cast_iron_block",
+    "createdeco:cast_iron_ingot",
+    "createdeco:cast_iron_nugget",
+    "",
+    "",
+    "createbigcannons:molten_cast_iron",
+    "",
+    "createdeco:cast_iron_sheet",
+    "vintageimprovements:cast_iron_rod",
+    "",
+    "vintageimprovements:cast_iron_wire",
+    "vintageimprovements:cast_iron_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "industrial_iron",
+    "",
+    "",
+    "",
+    "",
+    "create:industrial_iron_block",
+    "create_dd:industrial_iron_ingot",
+    "create_dd:industrial_iron_nugget",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:industrial_iron_sheet",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "arcane_gold",
+    "",
+    "",
+    "",
+    "",
+    "forbidden_arcanus:arcane_gold_block",
+    "forbidden_arcanus:arcane_gold_ingot",
+    "forbidden_arcanus:arcane_gold_nugget",
+    "",
+    "",
+    "",
+    "kubejs:arcane_gold_gear",
+    "kubejs:arcane_golden_sheet",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "arcane_crystal",
+    "forbidden_arcanus:arcane_crystal_ore",
+    "forbidden_arcanus:deepslate_arcane_crystal_ore",
+    "",
+    "",
+    "forbidden_arcanus:deepslate_arcane_crystal_ore",
+    "",
+    "",
+    "forbidden_arcanus:arcane_crystal",
+    "forbidden_arcanus:arcane_crystal_dust",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "refined_radiance",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:refined_radiance_block",
+    "create:refined_radiance",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:refined_radiance_sheet",
+    "kubejs:radiant_rod",
+    "",
+    "vintageimprovements:refined_radiance_wire",
+	"vintageimprovements:refined_radiance_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "shadow_steel",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:shadow_steel_block",
+    "create:shadow_steel",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "create_dd:shadow_steel_sheet",
+    "vintageimprovements:shadow_steel_rod",
+    "",
+    "vintageimprovements:shadow_steel_wire",
+    "vintageimprovements:shadow_steel_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "desh",
+    "",
+    "",
+    "beyond_earth:raw_desh",
+    "beyond_earth:raw_desh_block",
+    "beyond_earth:desh_block",
+    "beyond_earth:desh_ingot",
+    "beyond_earth:desh_nugget",
+    "",
+    "kubejs:desh_dust",
+    "beyond_earth:molten_desh",
+    "",
+    "beyond_earth:desh_plate",
+    "vintageimprovements:desh_rod",
+    "kubejs:crushed_desh_ore",
+    "vintageimprovements:desh_wire",
+    "vintageimprovements:desh_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "ostrum",
+    "",
+    "",
+    "beyond_earth:raw_ostrum",
+    "beyond_earth:raw_ostrum_block",
+    "beyond_earth:ostrum_block",
+    "beyond_earth:ostrum_ingot",
+    "beyond_earth:ostrum_nugget",
+    "",
+    "kubejs:ostrum_dust",
+    "beyond_earth:molten_ostrum",
+    "",
+    "",
+    "vintageimprovements:ostrum_rod",
+    "kubejs:crushed_ostrum_ore",
+    "vintageimprovements:ostrum_wire",
+    "vintageimprovements:ostrum_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "calorite",
+    "",
+    "",
+    "beyond_earth:raw_calorite",
+    "beyond_earth:raw_calorite_block",
+    "beyond_earth:calorite_block",
+    "beyond_earth:calorite_ingot",
+    "beyond_earth:calorite_nugget",
+    "",
+    "kubejs:calorite_dust",
+    "beyond_earth:molten_calorite",
+    "",
+    "",
+    "vintageimprovements:calorite_rod",
+    "kubejs:crushed_calorite_ore",
+    "vintageimprovements:calorite_wire",
+    "vintageimprovements:calorite_spring",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "", //名称
+    "", //矿石
+    "", //深层矿石
+    "", //粗矿
+    "", //粗矿块
+    "", //块
+    "", //锭
+    "", //粒
+    "", //宝石
+    "", //粉
+    "", //熔融流体
+    "", //齿轮
+    "", //板材
+    "", //棍
+    "", //粉碎矿
+    "", //线
+	"", //弹簧
+    "", //副产物
+    ""  //熔融流体副产物
+);
+
+}
+
+const processing = (obj, event) => {
+  CreatePlate(obj.name, obj.plate, obj.ingot, event);
+  tinkersPlate(obj.name, obj.plate, obj.fluid, obj.gem, event);
+
+  CARod(obj.name, obj.rod, obj.ingot, event);
+  thermalsRod(obj.name, obj.rod, event);
+  tinkersRod(obj.name, obj.rod, obj.fluid, event);
+
+  CAWire(obj.name, obj.wire, obj.plate, event);
+  tinkersWire(obj.name, obj.wire, obj.fluid, event);
+
+  CreateGear(obj.name, obj.gear, obj.ingot, obj.gem, event);
+  thermalsGear(obj.name, obj.ingot, obj.gem, obj.gear, event);
+  minecraftGear(obj.name, obj.ingot, obj.gem, obj.gear, event);
+  tinkersGear(obj.name, obj.gear, obj.fluid, obj.gem, event);
+
+  FiuldDust(obj.name, obj.dust, obj.gem, obj.ingot, obj.fluid, obj.fluid_byproduct, event);
+  FiuldIngot(obj.ingot, obj.fluid, event);
+  FiuldNugget(obj.nugget, obj.fluid, event);
+  FiuldBlock(obj.block, obj.gem, obj.ingot, obj.fluid, event);
+  FiuldGem(obj.gem, obj.fluid, event);
+  FiuldGear(obj.name, obj.gear, obj.fluid, event);
+
+  Crusheds(obj.name, obj.crushed, obj.gem, obj.ore, obj.deepslateOre, obj.rawOre, obj.rawOreBlock, event);
+
+  Dusts(obj.name, obj.crushed, obj.gem, obj.ingot, obj.dust, event);
+
+  crafting_to_Nuggets(obj.name, obj.ingot, obj.nugget, event);
+  tinkersIngot(obj.name, obj.ingot, obj.fluid, obj.gem, event);
+  Plate_to_Ingot(obj.name, obj.plate, obj.ingot, event);
+
+  crafting_to_Ingots(obj.name, obj.ingot, obj.nugget, event);
+  nuggets(obj.name, obj.nugget, obj.crushed, obj.dust, obj.byproduct, event);
+};
+
+// 板材
+
+const CreatePlate = (name, plate, ingot, event) => {
+  if (plate === "") return;
+
+  if (ingot) {
+    event.remove({
+      type: "create:pressing",
+      output: `#forge:plates/${name}`,
+    });
+
+    event.recipes.createPressing(plate, [`#forge:ingots/${name}`]);
+  }
+};
+const tinkersPlate = (name, item, fluid, gem, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:plates/${name}`,
+    type: "tconstruct:casting_table",
+  });
+
+  event.recipes
+    .tconstructCastingTable(Item.of(item), fluid, gem ? 100 : 90)
+    .singleUseCast("plate")
+    .coolingTime(60)
+    .id(`unify:tconstruct/plate/single_${name}`);
+
+  event.recipes
+    .tconstructCastingTable(item, fluid, gem ? 100 : 90)
+    .multiUseCast("plate")
+    .coolingTime(60)
+    .id(`unify:tconstruct/plate/multi_${name}`);
+};
+
+// 杆
+
+const CARod = (name, rod, ingot, event) => {
+  if (rod === "") return;
+
+  if (ingot) {
+    event.remove({
+      type: "createaddition:rolling",
+      output: `#forge:rods/${name}`,
+    });
+
+    event.recipes.createaddition.rolling({
+      input: Ingredient.of(`#forge:ingots/${name}`).toJson(),
+      result: Item.of(`2x ${rod}`).toResultJson(),
+    });
+
+	event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "kubejs:press_rod_die",
+	"ingredients": [
+		{
+		  "tag": `forge:ingots/${name}`
+		}
+	],
+	"results": [
+		{
+		  "item": `${rod}`,
+		  "count": 2
+		}
+	]
+　　});
+
+	
+  }
+};
+const thermalsRod = (name, rod, event) => {
+  if (rod === "") return;
+
+  event.recipes.thermalPress(`2x ${rod}`, [
+    `#forge:ingots/${name}`,
+    "kubejs:press_rod_die",
+  ]);
+};
+const tinkersRod = (name, item, fluid, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:rods/${name}`,
+    type: "tconstruct:casting_table",
+  });
+
+  event.recipes
+    .tconstructCastingTable(Item.of(item), fluid, 45)
+    .singleUseCast("rod")
+    .coolingTime(60)
+    .id(`unify:tconstruct/rod/single_${name}`);
+
+  event.recipes
+    .tconstructCastingTable(item, fluid, 45)
+    .multiUseCast("rod")
+    .coolingTime(60)
+    .id(`unify:tconstruct/rod/multi_${name}`);
+};
+
+// 线
+
+const CAWire = (name, wire, plate, event) => {
+  if (wire === "") return;
+
+  if (plate) {
+    event.remove({
+      type: "createaddition:rolling",
+      output: `#forge:wires/${name}`,
+    });
+
+    event.recipes.createaddition.rolling({
+      input: Ingredient.of(`#forge:plates/${name}`).toJson(),
+      result: Item.of(`2x ${wire}`).toResultJson(),
+    });
+  }
+};
+const tinkersWire = (name, item, fluid, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:wires/${name}`,
+    type: "tconstruct:casting_table",
+  });
+
+  event.recipes
+    .tconstructCastingTable(Item.of(item), fluid, 45)
+    .singleUseCast("wire")
+    .coolingTime(60)
+    .id(`unify:tconstruct/wire/single_${name}`);
+
+  event.recipes
+    .tconstructCastingTable(item, fluid, 45)
+    .multiUseCast("wire")
+    .coolingTime(60)
+    .id(`unify:tconstruct/wire/multi_${name}`);
+};
+
+// 齿轮
+
+const CreateGear = (name, gear, ingot, gem, event) => {
+  if (gear === "") return;
+
+  if (ingot !== "") {
+
+	event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "thermal:press_gear_die",
+	"ingredients": [
+		{
+		  "tag": `forge:ingots/${name}`
+		}
+	],
+	"results": [
+		{
+		  "item": `${gear}`,
+		  "count": 1
+		}
+	]
+　　});
+  }
+
+  if (gem !== "") {
+
+	event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "thermal:press_gear_die",
+	"ingredients": [
+		{
+		  "tag": `forge:gems/${name}`
+		}
+	],
+	"results": [
+		{
+		  "item": `${gear}`,
+		  "count": 1
+		}
+	]
+　　});
+}
+};
+const thermalsGear = (name, ingot, gem, gear, event) => {
+  if (gear === "") return;
+
+  event.remove({
+    type: "thermal:press",
+    output: `#forge:gears/${name}`,
+  });
+
+  if (ingot !== "") {
+    event.recipes.thermalPress(gear, [
+      `#forge:ingots/${name}`,
+      "thermal:press_gear_die",
+    ]);
+  }
+
+  if (gem !== "") {
+    event.recipes.thermalPress(gear, [
+      `#forge:gems/${name}`,
+      "thermal:press_gear_die",
+    ]);
+  }
+};
+const tinkersGear = (name, item, fluid, gem, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:gears/${name}`,
+    type: "tconstruct:casting_table",
+  });
+
+  event.recipes
+    .tconstructCastingTable(Item.of(item), fluid, gem ? 100 : 90)
+    .singleUseCast("gear")
+    .coolingTime(60)
+    .id(`unify:tconstruct/gear/single_${name}`);
+
+  event.recipes
+    .tconstructCastingTable(item, fluid, gem ? 100 : 90)
+    .multiUseCast("gear")
+    .coolingTime(60)
+    .id(`unify:tconstruct/gear/multi_${name}`);
+};
+const minecraftGear = (name, ingot, gem, gear, event) => {
+  if (gear === "") return;
+
+  event.remove({
+    type: "minecraft:crafting_shaped",
+    output: `#forge:gears/${name}`,
+  });
+
+  if (ingot !== "") {
+    event
+      .shaped("4x " + gear, [" N ", "NIN", " N "], {
+        N: `#forge:ingots/${name}`,
+        I: [`minecraft:iron_nugget`, `create:zinc_nugget`, `thermal:nickel_nugget`, `thermal:tin_nugget`],
+      })
+      .id(`unify:minecraft/gear/${name}`);
+  }
+
+  if (gem !== "") {
+    event
+      .shaped("4x " + gear, [" N ", "NIN", " N "], {
+        N: `#forge:gems/${name}`,
+        I: [`minecraft:iron_nugget`, `create:zinc_nugget`, `thermal:nickel_nugget`, `thermal:tin_nugget`],
+      })
+      .id(`unify:minecraft/gear/${name}`);
+  }
+};
+
+// 流体
+
+const FiuldDust = (name, dust, gem, ingot, fluid, fluid_byproduct, event) => {
+  if (dust === "" || fluid === "") return;
+  
+  if (fluid_byproduct == "") {
+  event.remove({
+      type: "tconstruct:melting",
+      input: `#forge:dusts/${name}`,
+    });
+    
+  event.custom({
+    "type": "tconstruct:melting",
+    "ingredient": {
+      "item": dust
+    },
+    "result": {
+      "fluid": fluid,
+      "amount": 90
+    },
+    "temperature": 500,
+    "time": 30
+  });
+
+  event.recipes.createMixing([Fluid.of(fluid, 300)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+  }
+
+  if (fluid_byproduct !== "") {
+  event.remove({
+      type: "tconstruct:melting",
+      input: `#forge:dusts/${name}`,
+    });
+    
+    event.custom({
+			"type": "tconstruct:melting",
+			"ingredient": {
+				"item": dust
+			},
+			"result": {
+				"fluid": fluid,
+				"amount": 90
+			},
+			"temperature": 500,
+			"time": 30,
+			"byproducts": [
+				{
+					"fluid": fluid_byproduct,
+					"amount": 30
+				}
+			]
+		});
+
+    event.recipes.createMixing([Fluid.of(fluid, 270), Fluid.of(fluid_byproduct, 30)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+  }
+
+  if (ingot !== "") {
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": dust
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 90
+      }
+    ],
+    "processingTime": 180,
+    "heatRequirement": "heated"
+  });
+  }
+
+  if (gem !== "") {
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": dust
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 100
+      }
+    ],
+    "processingTime": 180,
+    "heatRequirement": "heated"
+  });
+  }
+
+};
+const FiuldIngot = (ingot, fluid, event) => {
+  if (ingot === "" || fluid === "") return;
+
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": ingot
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 90
+      }
+    ],
+    "processingTime": 180,
+    "heatRequirement": "heated"
+  });
+
+};
+const FiuldNugget = (nugget, fluid, event) => {
+  if (nugget === "" || fluid === "") return;
+
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": nugget
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 10
+      }
+    ],
+    "processingTime": 20,
+    "heatRequirement": "heated"
+  });
+
+};
+const FiuldBlock = (block, gem, ingot, fluid, event) => {
+  if (block === "" || fluid === "") return;
+
+  if (gem !== "") {
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": block
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 900
+      }
+    ],
+    "processingTime": 1620,
+    "heatRequirement": "heated"
+  });  
+  }
+  
+  if (ingot !== "") {
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": block
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 810
+      }
+    ],
+    "processingTime": 1620,
+    "heatRequirement": "heated"
+  });
+  }
+  
+};
+const FiuldGem = (gem, fluid, event) => {
+  if (gem === "" || fluid === "") return;
+
+  event.custom({
+    "type": "createbigcannons:melting",
+    "ingredients": [
+      {
+        "item": gem
+      }
+    ],
+    "results": [
+      {
+        "fluid": fluid,
+        "amount": 100
+      }
+    ],
+    "processingTime": 180,
+    "heatRequirement": "heated"
+  });
+
+};
+const FiuldGear = (name, gear, fluid, event) => {
+  if (gear === "" || fluid === "") return;
+
+  event.remove({
+    type: "tconstruct:melting",
+    input: `#forge:gears/${name}`,
+  });
+
+  event.custom({
+    "type": "tconstruct:melting",
+    "conditions": [
+      {
+        "value": {
+          "item": gear,
+          "type": "forge:tag_empty"
+        },
+        "type": "forge:not"
+      }
+    ],
+    "ingredient": {
+      "item": gear
+    },
+    "result": {
+      "fluid": fluid,
+      "amount": 90
+    },
+    "temperature": 700,
+    "time": 57
+  });
+
+};
+
+// 碎矿
+
+const Crusheds = (name, crushed, gem, ore, deepslateOre, rawOre, rawOreBlock, event) => {
+  if (crushed === "") return;
+
+  if (ore) {
+    event.remove({ id: `create:crushing/${name}_ore` });
+
+    if (crushed !== "") {
+      event.remove({ input: "#forge:ores/" + name, type: TE("pulverizer") })
+
+      event.recipes.thermal.pulverizer([crushed], ore).energy(3000)
+
+      event.recipes.createCrushing(
+        [
+          `1x ${crushed}`,
+          Item.of(crushed).withChance(0.75),
+          Item.of(`create:experience_nugget`).withChance(0.75),
+          Item.of(`minecraft:cobblestone`).withChance(0.125),
+        ],
+        ore
+      );
+    }
+
+    if (gem !== "") {
+      event.recipes.createCrushing(
+        [
+          `1x ${gem}`,
+          Item.of(gem).withChance(0.75),
+          Item.of(`create:experience_nugget`).withChance(0.75),
+          Item.of(`minecraft:cobblestone`).withChance(0.125),
+        ],
+        ore
+      );
+    }
+  }
+
+  if (deepslateOre) {
+    event.remove({ id: `create:crushing/deepslate_${name}_ore` });
+
+    if (crushed !== "") {
+      event.remove({ input: "#forge:ores/" + name, type: TE("pulverizer") })
+
+      event.recipes.thermal.pulverizer([`2x ${crushed}`], deepslateOre).energy(3000)
+      event.recipes.createCrushing(
+        [
+          `2x ${crushed}`,
+          Item.of(crushed).withChance(0.25),
+          Item.of(`create:experience_nugget`).withChance(0.75),
+          Item.of(`minecraft:cobbled_deepslate`).withChance(0.125),
+        ],
+        deepslateOre
+      );
+    }
+
+    if (gem !== "") {
+      event.recipes.createCrushing(
+        [
+          `2x ${gem}`,
+          Item.of(gem).withChance(0.25),
+          Item.of(`create:experience_nugget`).withChance(0.75),
+          Item.of(`minecraft:cobbled_deepslate`).withChance(0.125),
+        ],
+        deepslateOre
+      );
+    }
+  }
+
+  if (rawOre) {
+    event.remove({ id: `create:crushing/raw_${name}` });
+    event.remove({ id: `create:crushing/raw_${name}_ore` });
+
+    event.recipes.createMilling(
+      `${crushed}`,
+      `#forge:raw_materials/${name}`
+    );
+
+    event.recipes.createCrushing(
+      [crushed, Item.of(`create:experience_nugget`).withChance(0.75)],
+      `#forge:raw_materials/${name}`
+    );
+  }
+
+  if (rawOreBlock) {
+    event.remove({ id: `create:crushing/raw_${name}_block` });
+
+    event.recipes.createCrushing(
+      [
+        `9x ${crushed}`,
+        Item.of(`create:experience_nugget`, 9).withChance(0.75),
+      ],
+      `#forge:storage_blocks/raw_${name}`
+    );
+  }
+};
+
+// 粉
+
+const Dusts = (name, crushed, gem, ingot, dust, event) => {
+  if (dust === "") return;
+
+  event.remove({
+    type: "create:crushing",
+    output: `#forge:dusts/${name}`,
+  });
+  event.remove({
+    type: "create:milling",
+    output: `#forge:dusts/${name}`,
+  });
+
+  if (crushed !== "") {
+  
+    event.recipes.createMilling( [
+      `2x ${dust}`], 
+      crushed)
+
+		event.recipes.createCrushing( [
+      `2x ${dust}`,
+      Item.of(dust, 2).withChance(0.5)], 
+      crushed)
+
+    event.recipes.thermal.pulverizer([Item.of(dust, 4)], crushed).energy(15000)
+  }
+
+  if (ingot !== "") {
+    event.recipes.createMilling([dust], `#forge:ingots/${name}`);
+  }
+
+  if (gem !== "") {
+    event.recipes.createMilling([dust], gem);
+  }
+
+};
+
+// 锭
+
+const crafting_to_Nuggets = (name, ingot, nugget, event) => {
+  if (ingot === "" || nugget === "") return;
+
+  event.remove({
+    type: "minecraft:crafting_shapeless",
+    input: `#forge:nuggets/${name}`,
+    output: `#forge:ingots/${name}`,
+  });
+
+  event.remove({
+    type: "minecraft:crafting_shaped",
+    input: `#forge:nuggets/${name}`,
+    output: `#forge:ingots/${name}`,
+  });
+
+  event
+    .shaped(ingot, ["NNN", "NNN", "NNN"], { N: `#forge:nuggets/${name}` })
+    .id(`unify:minecraft/ingots/${name}`);
+};
+const tinkersIngot = (name, item, fluid, gem, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:ingots/${name}`,
+    type: "tconstruct:casting_table",
+  });
+
+  event.recipes
+    .tconstructCastingTable(Item.of(item), fluid, gem ? 100 : 90)
+    .singleUseCast("ingot")
+    .coolingTime(90)
+    .id(`unify:tconstruct/ingot/single_${name}`);
+
+  event.recipes
+    .tconstructCastingTable(item, fluid, gem ? 100 : 90)
+    .multiUseCast("ingot")
+    .coolingTime(90)
+    .id(`unify:tconstruct/ingot/multi_${name}`);
+};
+const Plate_to_Ingot = (name, plate, ingot, event) => {
+  if (ingot === "") return;
+  
+  if (plate) {
+    event.remove({
+      type: "minecraft:blasting",
+      output: `#forge:ingots/${name}`,
+    });
+
+    event.blasting(ingot, [`#forge:plates/${name}`])
+  }
+};
+
+// 粒
+
+const crafting_to_Ingots = (name, ingot, nugget, event) => {
+	if (ingot === "" || nugget === "") return;
+  
+	event.remove({
+	  type: "minecraft:crafting_shapeless",
+	  output: `#forge:nuggets/${name}`,
+	  input: `#forge:ingots/${name}`,
+	});
+  
+	event.remove({
+	  type: "minecraft:crafting_shaped",
+	  output: `#forge:nuggets/${name}`,
+	  input: `#forge:ingots/${name}`,
+	});
+  
+	event
+	  .shapeless(`9x ${nugget}`, `#forge:ingots/${name}`)
+	  .id(`unify:minecraft/nuggets/${name}`);
+  };
+const nuggets = (name, nugget, crushed, dust, byproduct, event) => {
+  if (nugget === "") return;
+
+  if (crushed !== "") {
+    event.remove({
+      type: "minecraft:smelting",
+      input: `create:crushed_raw_${name}`,
+    });
+    event.remove({
+      type: "minecraft:blasting",
+      input: `create:crushed_raw_${name}`,
+    });
+    event.remove({
+      type: "create:splashing",
+      input: `create:crushed_raw_${name}`,
+    });
+
+    event.smelting(Item.of(nugget, 3), crushed)
+
+    if (byproduct !== "") {
+      event.custom({
+        "type": "thermal:smelter",
+        "ingredient": {
+          "item": crushed
+        },
+        "result": [
+          {
+            "item": nugget,
+            "chance": 9.0
+          },
+          {
+            "item": byproduct,
+            "chance": (byproduct.endsWith('nugget') ? 1.8 : 0.2)
+          },
+          {
+            "item": "thermal:rich_slag",
+            "chance": 0.2
+          }
+        ],
+        "experience": 0.2,
+        "energy": 20000
+      })
+    }
+  }
+
+  if (dust !== "") {
+    event.remove({
+      type: "minecraft:smelting",
+      input: `#forge:dusts/${name}`,
+    });
+    event.remove({
+      type: "minecraft:blasting",
+      input: `#forge:dusts/${name}`,
+    });
+
+    event.recipes.createSplashing([Item.of(nugget, 2)], dust)
+
+    event.smelting(Item.of(nugget, 1), dust).cookingTime(40)
+    event.blasting(Item.of(nugget, 2), dust).cookingTime(40)
+  }
+};
+
 
 let float_and_lights = (event, item) => { // 光辉石漂浮效果
     if (event.entity.type == 'minecraft:item' && event.entity.item == item) {
