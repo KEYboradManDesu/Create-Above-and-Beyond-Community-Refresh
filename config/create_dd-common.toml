@@ -1,0 +1,136 @@
+
+[worldgen]
+
+	#.
+	#Modify Create: Dreams n' Desire's impact on your terrain
+	[worldgen.v2]
+		#.
+		#Prevents all worldgen added by Create: Dreams n' Desire's from taking effect
+		disableWorldGen = false
+
+		[worldgen.v2.striated_ores_overworld]
+			#.
+			#Range: > 0
+			clusterSize = 32
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.06666667014360428
+			#.
+			#Range: > -2147483648
+			minHeight = 30
+			#.
+			#Range: > -2147483648
+			maxHeight = 128
+
+		[worldgen.v2.striated_ores_savanna]
+			#.
+			#Range: > 0
+			clusterSize = 64
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.20000000298023224
+			#.
+			#Range: > -2147483648
+			minHeight = 30
+			#.
+			#Range: > -2147483648
+			maxHeight = 100
+
+		[worldgen.v2.striated_ores_ocean]
+			#.
+			#Range: > 0
+			clusterSize = 64
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.02083333395421505
+			#.
+			#Range: > -2147483648
+			minHeight = 20
+			#.
+			#Range: > -2147483648
+			maxHeight = 80
+
+		[worldgen.v2.tin_ore]
+			#.
+			#Range: > 0
+			clusterSize = 10
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.0
+			#.
+			#Range: > -2147483648
+			minHeight = -45
+			#.
+			#Range: > -2147483648
+			maxHeight = 128
+
+		[worldgen.v2.gabbro_blob]
+			#.
+			#Range: > 0
+			clusterSize = 32
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 5.0
+			#.
+			#Range: > -2147483648
+			minHeight = -64
+			#.
+			#Range: > -2147483648
+			maxHeight = 24
+
+		[worldgen.v2.striated_ores_badlands]
+			#.
+			#Range: > 0
+			clusterSize = 64
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.1538461595773697
+			#.
+			#Range: > -2147483648
+			minHeight = 30
+			#.
+			#Range: > -2147483648
+			maxHeight = 120
+
+		[worldgen.v2.striated_raw_ores_overworld]
+			#.
+			#Range: > 0
+			clusterSize = 24
+			#.
+			#Amount of clusters generated per Chunk.
+			#  >1 to spawn multiple.
+			#  <1 to make it a chance.
+			#  0 to disable.
+			#Range: 0.0 ~ 512.0
+			frequency = 0.03999999910593033
+			#.
+			#Range: > -2147483648
+			minHeight = 0
+			#.
+			#Range: > -2147483648
+			maxHeight = 200
+
