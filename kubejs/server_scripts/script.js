@@ -1576,9 +1576,20 @@ event.remove({ id: TC('smeltery/alloys/molten_netherite') })
 // event.remove({ id: TC('smeltery/alloys/molten_enderium') })
 // event.remove({ id: TC('smeltery/alloys/molten_lumium') })
 // event.remove({ id: TC('smeltery/alloys/molten_signalum') })
+event.remove({ id: TC('smeltery/alloys/molten_pig_iron') })
+
+event.remove({ id: ('create_dd:mixing/bronze_ingot' )})
 event.remove({ id: 'createaddition:compat/tconstruct/rose_gold' })
+event.remove({ id: 'createaddition:mixing/electrum' })
+event.remove({ id: ('create_dd:compacting/steel_ingot' )})
+event.remove({ id: ('createaddition:compat/tconstruct/pig_iron') })
+event.remove({ id: ('createaddition:compat/tconstruct/pig_iron_2') })
 
+event.remove({ id: TE('machines/smelter/smelter_alloy_bronze') })
+event.remove({ id: TE('machines/smelter/smelter_alloy_steel') })
+event.remove({ id: TE('compat/tconstruct/smelter_alloy_tconstruct_pigiron_ingot') })
 
+event.remove({ id: 'minecraft:netherite_ingot' })
 
 
 // 青铜
@@ -1586,12 +1597,14 @@ event.recipes.createMixing(Fluid.of(TC('molten_bronze'), 5), [
 	Fluid.of(TC('molten_copper'), 5), 
 	Fluid.of(TC('molten_tin'), 5)
 ]).processingTime(1)
+event.recipes.thermal.smelter('2x create_dd:bronze_ingot', [F("#ingots/copper"), F("#ingots/tin")])
 
 // 黄铜
 event.recipes.createMixing(Fluid.of(TC('molten_brass'), 10), [
 	Fluid.of(TC('molten_copper'), 5), 
 	Fluid.of(TC('molten_zinc'), 5)
 ]).processingTime(1)
+event.recipes.thermal.smelter(CR('brass_ingot', 2), [F("#ingots/copper"), F("#ingots/zinc")])
 
 // 琥珀金
 event.recipes.createMixing(Fluid.of(TC('molten_electrum'), 10), [
@@ -1614,9 +1627,28 @@ event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 10), [
 // 下界合金
 event.recipes.createMixing(Fluid.of(TC('molten_netherite'), 1), [
 	Fluid.of(TC('molten_debris'), 4), 
-	Fluid.of(TC('molten_gold'), 2)
+	Fluid.of(TC('molten_gold'), 4)
 ]).processingTime(1)
 
+// 生铁
+event.recipes.createMixing(Fluid.of(TC('molten_pig_iron'), 5), [
+	Fluid.of('createbigcannons:molten_cast_iron', 1), 
+	Fluid.of(('create:honey'), 5)
+]).heated().processingTime(1)
+event.recipes.createMixing(Fluid.of(TC('molten_pig_iron'), 5), [
+	Fluid.of('createbigcannons:molten_cast_iron', 1), 
+	Fluid.of(('tconstruct:blood'), 5)
+]).heated().processingTime(1)
+event.recipes.createMixing(Fluid.of(TC('molten_pig_iron'), 5), [
+	Fluid.of('createbigcannons:molten_cast_iron', 1), 
+	Fluid.of(('biomesoplenty:blood'), 5)
+]).heated().processingTime(1)
+
+// 钢
+event.recipes.createMixing([Fluid.of(TC("molten_steel"), 270), TE('slag')], [
+	Fluid.of(TC("molten_pig_iron"), 270), 
+	KJ('coke_chunk')
+]).heated().processingTime(250)
 
 }
 
@@ -3962,6 +3994,33 @@ event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), limestone], "d
 event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), aridrock], "darkerdepths:aridrock_gold_ore");
 event.recipes.createCrushing([Item.of(TE('sulfur'), 1).withChance(.15)], "biomesoplenty:brimstone");
 
+// 蜂蜜
+event.remove({ id: "tconstruct:smeltery/entity_melting/bee" });
+event.remove({ id: "tconstruct:smeltery/melting/slime/honey_block" });
+event.custom({
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "minecraft:honey_block"
+  },
+  "result": {
+    "fluid": "create:honey",
+    "amount": 1000
+  },
+  "temperature": 1,
+  "time": 94
+});
+event.custom({
+  "type": "tconstruct:entity_melting",
+  "entity": {
+    "type": "minecraft:bee"
+  },
+  "result": {
+    "fluid": "create:honey",
+    "amount": 25
+  },
+  "damage": 2
+});
+
 // 硫粉
 replaceIO("#forge:dusts/sulfur", "thermal:sulfur_dust");
 event.recipes.createMilling(["thermal:sulfur_dust"], "#forge:gems/sulfur").processingTime(200);
@@ -4729,13 +4788,13 @@ unifyAllTheMetal(
     "",
     "",
     "createbigcannons:cast_iron_block",
-    "createdeco:cast_iron_ingot",
-    "createdeco:cast_iron_nugget",
+    "createbigcannons:cast_iron_ingot",
+    "createbigcannons:cast_iron_nugget",
     "",
     "",
     "createbigcannons:molten_cast_iron",
     "",
-    "createdeco:cast_iron_sheet",
+    "vintageimprovements:cast_iron_sheet",
     "vintageimprovements:cast_iron_rod",
     "",
     "vintageimprovements:cast_iron_wire",
