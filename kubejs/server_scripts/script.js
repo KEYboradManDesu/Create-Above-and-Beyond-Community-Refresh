@@ -213,6 +213,30 @@ event.remove({ input: TE('earth_charge') })
 // 	event.remove({ type: TC("melting"), input: F("#dusts/" + e) })
 // })
 
+event.remove({ output: 'projectred_core:electrotine_generator' })
+event.remove({ output: 'projectred_core:sand_coal_comp' })
+event.remove({ output: 'projectred_core:boule' })
+event.remove({ output: 'projectred_core:silicon' })
+event.remove({ output: 'projectred_core:copper_coil' })
+event.remove({ output: 'projectred_core:iron_coil' })
+event.remove({ output: 'projectred_core:gold_coil' })
+event.remove({ output: 'projectred_core:electrotine_iron_comp' })
+event.remove({ output: 'projectred_core:infused_silicon' })
+event.remove({ output: 'projectred_core:energized_silicon' })
+event.remove({ output: 'projectred_core:electrotine_silicon' })
+
+event.remove({ input: 'projectred_core:electrotine_generator' })
+event.remove({ input: 'projectred_core:sand_coal_comp' })
+event.remove({ input: 'projectred_core:boule' })
+event.remove({ input: 'projectred_core:silicon' })
+event.remove({ input: 'projectred_core:copper_coil' })
+event.remove({ input: 'projectred_core:iron_coil' })
+event.remove({ input: 'projectred_core:gold_coil' })
+event.remove({ input: 'projectred_core:infused_silicon' })
+event.remove({ input: 'projectred_core:energized_silicon' })
+event.remove({ input: 'projectred_core:electrotine_silicon' })
+
+
 }
 
 function tweaks(event) {
@@ -2519,9 +2543,9 @@ event.shaped(KJ('chromatic_resonator'), [
 	'R S',
 	'LS '
 ], {
-	R: TE('ruby'),
+	R: '#forge:gems/ruby',
 	L: TE('lead_ingot'),
-	S: TE('sapphire')
+	S: '#forge:gems/sapphire'
 })
 
 let invar_machine = (id, amount, other_ingredient) => {
