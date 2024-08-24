@@ -1,3 +1,6 @@
+// priority: 0
+
+// Mod shortcuts
 let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
 let AE2 = (id, x) => MOD("ae2", id, x)
 let TE = (id, x) => MOD("thermal", id, x)
@@ -31,7 +34,9 @@ let PR_I = (id, x) => MOD("projectred_illumination", id, x)
 let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
+let CRCO = (id, x) => MOD("create_confectionery", id, x)
 //
+
 
 onEvent('item.registry', event => {
 
@@ -47,8 +52,8 @@ onEvent('item.registry', event => {
 			.color(1, c1)
 			.color(2, c2)
 			.parentModel("kubejs:item/profession_card")
-            .texture("kubejs:item/profession_card_0")
-			.displayName(`§7职业铭牌：§f${zhname}`)
+			.texture("kubejs:item/trade/profession_card_0")
+			.displayName(`§6职业铭牌：§r${zhname}`)
 			.unstackable()
 	}
 
@@ -60,13 +65,25 @@ onEvent('item.registry', event => {
 			.color(1, c1)
 			.color(2, c2)
 			.parentModel("kubejs:item/trade_card")
-			.texture("kubejs:item/trade_card_0")
-			.displayName((custom ? "" : "§6购买铭牌：§f") + zhname)
+			.texture("kubejs:item/trade/trade_card_0")
+			.displayName((custom ? "" : "§6产品铭牌：§r") + zhname)
 			.unstackable()
 	}
 
+	//货币
+	let C = (x) => TE('copper_coin', x)
 	let S = (x) => TE('silver_coin', x)
 	let G = (x) => TE('gold_coin', x)
+
+    trade("§6货币兑换卡(铜↔银)", "Exchange Currencies A", 0x9c4529, 0x9fadb4, [
+		{ in: S(1), out: C(64) },
+		{ in: C(64), out: S(1) },
+	], true)
+
+	trade("§6货币兑换卡(银↔金)", "Exchange Currencies B", 0x9fadb4, 0xEBA83A, [
+		{ in: G(1), out: S(64) },
+		{ in: S(64), out: G(1) },
+	], true)
 
 	profession("农民", "Farming", 0xFFCC29, 0x81B214, [
 		{ in: FD('carrot_crate'), out: S(1) },
@@ -118,12 +135,12 @@ onEvent('item.registry', event => {
 	])
 
 	profession("矿工", "Mining", 0x1C1124, 0x88FFF7, [
-		{ in: CR('crushed_iron_ore', 16), out: S(8) },
-		{ in: CR('crushed_copper_ore', 16), out: S(8) },
-		{ in: CR('crushed_zinc_ore', 16), out: S(8) },
-		{ in: CR('crushed_gold_ore', 16), out: S(10) },
-		{ in: CR('crushed_nickel_ore', 16), out: S(12) },
-		{ in: CR('crushed_lead_ore', 16), out: S(12) },
+		{ in: CR('crushed_raw_iron', 16), out: S(8) },
+		{ in: CR('crushed_raw_copper', 16), out: S(8) },
+		{ in: CR('crushed_raw_zinc', 16), out: S(8) },
+		{ in: CR('crushed_raw_gold', 16), out: S(10) },
+		{ in: CR('crushed_raw_nickel', 16), out: S(12) },
+		{ in: CR('crushed_raw_lead', 16), out: S(12) },
 		{ in: MC('andesite', 64), out: S(1) },
 		{ in: MC('granite', 64), out: S(1) },
 		{ in: MC('diorite', 64), out: S(1) },
@@ -133,12 +150,9 @@ onEvent('item.registry', event => {
 		{ in: TE('sulfur', 16), out: S(6) },
 		{ in: TE('niter', 16), out: S(6) },
 		{ in: MC('lapis_lazuli', 16), out: S(6) },
-		{ in: KJ('damascus_steel_ingot', 16), out: S(8) },
-		{ in: KJ('stormyx_ingot', 8), out: S(10) },
-		{ in: KJ('createcoin', 2), out: G(1) },
-		{ in: EX('platinum_ingot', 16), out: S(8) },
 		{ in: TE('apatite', 16), out: S(4) },
 		{ in: TE('sapphire', 1), out: S(10) },
+		{ in: PR_C('peridot', 1), out: S(10) },
 		{ in: TE('ruby', 1), out: S(10) },
 		{ in: MC('diamond', 1), out: S(14) },
 		{ in: MC('coal', 16), out: S(2) }
@@ -252,7 +266,7 @@ onEvent('item.registry', event => {
 		{ in: CRCO('gingerbread_man', 16), out: S(4) },
 		{ in: CRCO('hot_chocolate_bottle', 8), out: S(4) },
 		{ in: CRCO('soothing_hot_chocolate', 8), out: S(8) },
-		{ in: CRCO('marshmallow', 16), out: S(4) },
+		{ in: CRCO('marshmallow', 16), out: S(4) }
 	])
 
 	let quota = 8
@@ -298,30 +312,21 @@ onEvent('item.registry', event => {
 	])
 
 	profession("铁匠", "Smithing", 0xFFC93C, 0xFF7A00, [
-		{ in: MC('iron_boots'), out: S(2) },
-		{ in: MC('iron_leggings'), out: S(4) },
-		{ in: MC('iron_chestplate'), out: S(4) },
+		// { in: MC('iron_boots'), out: S(2) },
+		// { in: MC('iron_leggings'), out: S(4) },
+		// { in: MC('iron_chestplate'), out: S(4) },
 		{ in: TC('ingot_cast'), out: S(2) },
 		{ in: TC('gem_cast'), out: S(4) },
-		{ in: MC('iron_helmet'), out: S(3) },
-		{ in: MC('golden_boots'), out: S(4) },
-		{ in: MC('golden_leggings'), out: S(7) },
-		{ in: MC('golden_chestplate'), out: S(8) },
-		{ in: MC('golden_helmet'), out: S(5) },
+		// { in: MC('iron_helmet'), out: S(3) },
+		// { in: MC('golden_boots'), out: S(4) },
+		// { in: MC('golden_leggings'), out: S(7) },
+		// { in: MC('golden_chestplate'), out: S(8) },
+		// { in: MC('golden_helmet'), out: S(5) },
 		{ in: MC('golden_apple'), out: S(10) },
 		{ in: MC('arrow', 32), out: S(3) },
-		{ in: MC('iron_sword'), out: S(1) },
-		{ in: MC('golden_sword'), out: S(2) }
+		// { in: MC('iron_sword'), out: S(1) },
+		// { in: MC('golden_sword'), out: S(2) }
 	])
-
-	// profession("魔法师", "Mage", 0xD15FEE, 0xCDB5CD, [
-	// 	{ in: BO('#mystical_flowers', 8), out: S(2) },
-	// ])
-
-	trade("货币兑换卡", "Exchange Currencies", 0xEBA83A, 0xF4F4F4, [
-		{ in: G(1), out: S(64) },
-		{ in: S(64), out: G(1) }
-	], true)
 
 	let DATAGEN_QUESTS = false
 
@@ -377,7 +382,7 @@ onEvent('item.registry', event => {
 			x: ${x}d
 			y: ${y}d
 			shape: "hexagon"
-			subtitle: "${coin} ${silver ? "银币" : "金币"}"
+			subtitle: "${coin} ${silver ? "银" : "金"}"
 			tasks: [{
 				type: "item"
 				item: "thermal:silver_coin"
@@ -442,8 +447,8 @@ onEvent('item.registry', event => {
 		simple("镍锭", "Nickel Ingot", TE('nickel_ingot', 8), 32, S, 0x977756, 0xE4D196)
 		simple("铅锭", "Lead Ingot", TE('lead_ingot', 8), 32, S, 0x232456, 0x7C95A4)
 		simple("金锭", "Gold Ingot", MC('gold_ingot', 8), 48, S, 0xD99413, 0xFAF25E)
-		simple("锡锭", "Tin Ingot", CRD('tin_ingot', 8), 48, S, 0x566d7d, 0x33445b)
 		// simple("铝锭", "Aluminum Ingot", IM('ingot_aluminum', 8), 48, S, 0xD99413, 0xFFF5EE)
+		simple("锡锭", "Tin Ingot", CRD('tin_ingot', 8), 48, S, 0xa6bdc6, 0xdcf3f7)
 		
 		simple("安山合金", "Andesite Alloy", CR('andesite_alloy', 16), 8, S, 0x505050, 0x878787)
 		simple("黄铜锭", "Brass Ingot", CR('brass_ingot', 8), 48, S, 0x6F3C2D, 0xFCF085)
@@ -454,9 +459,9 @@ onEvent('item.registry', event => {
 		simple("燧石", "Flint", MC('flint', 16), 4, S, 0x3C3B3B, 0xA6A6A6)
 		simple("朱砂", "Cinnabar", TE('cinnabar', 4), 16, S, 0xFC7781, 0xFCCED0)
 		simple("红石粉", "Redstone Dust", MC('redstone', 16), 8, S, 0xA80F01, 0xFC7781)
-		simple("钻石", "Diamond", CO('raw_diamond', 1), 1, G, 0x20C3B3, 0xD2FCF3)
+		simple("钻石", "Diamond", MC('diamond', 1), 1, G, 0x20C3B3, 0xD2FCF3)
 		simple("青金石", "Lapis Lazuli", MC('lapis_lazuli', 8), 32, S, 0x335DC1, 0x7395E7)
-		simple("绿宝石", "Emerald", CO('raw_emerald', 1), 1, G, 0x00A82B, 0xADFACB)
+		simple("绿宝石", "Emerald", MC('emerald', 1), 1, G, 0x00A82B, 0xADFACB)
 		simple("硫磺", "Sulfur", TE('sulfur', 4), 8, S, 0xC7A94A, 0xEEF071)
 		simple("磷灰石", "Apatite", TE('apatite', 4), 8, S, 0x27A9BB, 0x2CC7C9)
 		simple("硝石", "Niter", TE('niter', 4), 8, S, 0x735A65, 0xB8AFAF)

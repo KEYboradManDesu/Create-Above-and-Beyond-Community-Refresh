@@ -1,11 +1,19 @@
 onEvent('item.tags', event => {
-// global.trades.forEach(element => {
-// 		event.get('forge:trade_cards').add(`kubejs:trade_card_${element}`)
-// 	});
 
-// global.professions.forEach(element => {
-// 		event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
-// 	});
+let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+
+colours.forEach(element => {
+		event.get(F('glazed_terracotta')).add(MC(`${element}_glazed_terracotta`))
+	});
+
+
+global.trades.forEach(element => {
+		event.get('forge:trade_cards').add(`kubejs:trade_card_${element}`)
+	});
+
+global.professions.forEach(element => {
+		event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
+	});
 
 event.get('kubejs:certus_quartz_crystal').add('ae2:certus_quartz_crystal')
 
