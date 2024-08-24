@@ -1,0 +1,61 @@
+{
+  "oreConfig": [
+    {
+      "ore": "thermal:ruby_ore",
+      "fillers": [
+        "STONE_ORE_REPLACEABLES"
+      ],
+      "distribution": "TRIANGLE",
+      "minY": -144,
+      "maxY": 16,
+      "maxVeinSize": 4,
+      "spawnRate": 7.0,
+      "discardChanceOnAirExposure": 0.5,
+      "biomeFilters": {
+        "biomeBlacklist": [],
+        "biomeWhitelist": [
+          "OVERWORLD"
+        ]
+      },
+      "replace": true
+    },
+    {
+      "ore": "thermal:ruby_ore",
+      "fillers": [
+        "STONE_ORE_REPLACEABLES"
+      ],
+      "distribution": "TRIANGLE",
+      "minY": -144,
+      "maxY": 16,
+      "maxVeinSize": 12,
+      "spawnRate": 0.11111111,
+      "discardChanceOnAirExposure": 0.7,
+      "biomeFilters": {
+        "biomeBlacklist": [],
+        "biomeWhitelist": [
+          "OVERWORLD"
+        ]
+      },
+      "replace": true
+    },
+    {
+      "ore": "thermal:ruby_ore",
+      "fillers": [
+        "STONE_ORE_REPLACEABLES"
+      ],
+      "distribution": "TRIANGLE",
+      "minY": -144,
+      "maxY": 16,
+      "maxVeinSize": 8,
+      "spawnRate": 4.0,
+      "discardChanceOnAirExposure": 1.0,
+      "biomeFilters": {
+        "biomeBlacklist": [],
+        "biomeWhitelist": [
+          "OVERWORLD"
+        ]
+      },
+      "replace": true
+    }
+  ]
+}
