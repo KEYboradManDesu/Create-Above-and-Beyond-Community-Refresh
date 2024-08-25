@@ -1707,7 +1707,7 @@ event.shaped(Item.of(AP('algal_blend'), 4), [
 	A: 'minecraft:clay_ball',
 	S: ['minecraft:kelp', 'minecraft:seagrass']
 })
-event.shaped(Item.of(MC('andesite'), 2), [
+event.shaped(Item.of(CR('andesite_alloy'), 2), [
 	'SS',
 	'AA'
 ], {
