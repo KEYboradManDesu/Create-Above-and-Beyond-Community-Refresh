@@ -1674,6 +1674,20 @@ event.recipes.createMixing([Fluid.of(TC("molten_steel"), 270), TE('slag')], [
 	KJ('coke_chunk')
 ]).heated().processingTime(250)
 
+// 信素
+event.recipes.createMixing([Fluid.of(TC("molten_signalum"), 360)], [
+	Fluid.of(TC("molten_copper"), 270), 
+	Fluid.of(TE("redstone"), 400), 
+	TE('silver_coin', 9)
+]).superheated().processingTime(300)
+
+// 流明
+event.recipes.createMixing([Fluid.of(TC("molten_lumium"), 360)], [
+	Fluid.of(TC("molten_tin"), 270), 
+	Fluid.of(TE("glowstone"), 500), 
+	TE('silver_coin', 9)
+]).superheated().processingTime(300)
+
 }
 
 function algalAndesite(event) {
@@ -2084,6 +2098,8 @@ grow(KJ("small_nether_crystal"), KJ('growing_small_nether_crystal'), KJ('purifie
 
 event.recipes.createMixing(Fluid.of(KJ("sky_stone"), 500), [AE2('sky_dust', 4), Fluid.of(MC('water'), 500)])
 event.recipes.createMixing(CR('polished_rose_quartz'), [[AE2('certus_quartz_crystal'), KJ('purified_certus_quartz_crystal')], Fluid.of(TE("redstone"), 250)])
+
+// 不稳红石
 event.custom({
 	"type":"vintageimprovements:centrifugation",
 	"ingredients": [ 
@@ -2107,7 +2123,32 @@ event.custom({
 	"processingTime": 200
 })
 event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE('redstone'), 100)], [AE2('charged_certus_quartz_crystal'), Fluid.of(KJ('sky_stone'), 100)])
-// event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE('glowstone'), 500)], [AE2('charged_certus_quartz_crystal'), MC('glowstone_dust'), Fluid.of(KJ('sky_stone'), 500)])
+
+// 充能萤石
+event.custom({
+	"type":"vintageimprovements:centrifugation",
+	"ingredients": [ 
+		{
+			"item": "ae2:charged_certus_quartz_crystal"
+		},
+		{
+			"fluid": "minecraft:lava",
+			"amount": 500
+		}
+	],
+	"results": [
+		{
+			"item": "ae2:certus_quartz_crystal"
+		},
+		{
+		    "fluid": "thermal:glowstone",
+			"amount": 250
+		}
+	],
+	"processingTime": 200
+})
+event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE('glowstone'), 50)], [AE2('charged_certus_quartz_crystal'), Fluid.of(MC('lava'), 125)])
+
 }
 
 function redstoneTransmute(event) {
