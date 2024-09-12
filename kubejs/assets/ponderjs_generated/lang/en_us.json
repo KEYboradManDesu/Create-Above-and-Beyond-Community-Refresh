@@ -1,0 +1,11 @@
+{
+  "kubejs.ponder.alchemy_setup.header": "混沌炼金",
+  "kubejs.ponder.alchemy_setup.text_1": "从殷钢机器开始",
+  "kubejs.ponder.alchemy_setup.text_2": "安装任何颜色的镭射灯",
+  "kubejs.ponder.alchemy_setup.text_3": "确保灯已激活",
+  "kubejs.ponder.alchemy_setup.text_4": "放置一个以殷钢机器为目标的机械手",
+  "kubejs.ponder.alchemy_setup.text_5": "使用扳手将其设置为击打模式",
+  "kubejs.ponder.alchemy_setup.text_6": "每当机械手激活时...",
+  "kubejs.ponder.alchemy_setup.text_7": "...镭射灯将发出高能光束",
+  "kubejs.ponder.alchemy_setup.text_8": "被光束击中的漏斗矿车将处理其包含的物品"
+}
