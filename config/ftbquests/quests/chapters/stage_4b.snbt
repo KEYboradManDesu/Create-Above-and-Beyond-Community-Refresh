@@ -757,12 +757,25 @@
 				""
 				"镭射是获得催化剂或寻找其正确配方的唯一途径，另一个用途就是将混沌催化剂用于特定反应物，将其嬗变成另一种物质。"
 				""
+				"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。"
+				""
+				" &6/c ponder kubejs:alchemical_laser"
 			]
 			dependencies: ["05446225038D260A"]
 			id: "1D1D1FEAF49C5E11"
 			tasks: [{
 				id: "04CC23968DBD8CC9"
 				type: "checkmark"
+				title: "好的"
+			}]
+			rewards: [{
+				id: "2EC9684867CC5066"
+				type: "command"
+				title: "思索 炼金镭射"
+				icon: "minecraft:writable_book"
+				team_reward: false
+				command: " &6/c ponder kubejs:alchemical_laser"
+				player_command: true
 			}]
 		}
 		{

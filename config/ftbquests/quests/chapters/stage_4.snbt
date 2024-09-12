@@ -810,6 +810,9 @@
 				""
 				"它涉及使用高能光线和催化剂将物质转化成另一种物质。"
 				""
+				"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。"
+				""
+				" &6/c ponder kubejs:alchemical_laser"
 			]
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "21D063D2676E498F"
@@ -817,6 +820,15 @@
 				id: "7CE5907FD62E9EB3"
 				type: "checkmark"
 				title: "好的"
+			}]
+			rewards: [{
+				id: "6B9CEF7FDB1276C4"
+				type: "command"
+				title: "思索 炼金镭射"
+				icon: "minecraft:writable_book"
+				team_reward: false
+				command: "/create ponder kubejs:ponder_laser_lamp"
+				player_command: true
 			}]
 		}
 	]
