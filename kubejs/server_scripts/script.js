@@ -2415,6 +2415,10 @@ event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintagei
 	
 event.shaped(CRD('chromatic_compound'), ['S'], {S: CR('chromatic_compound')})
 event.shaped(CR('chromatic_compound'), ['S'], {S: CRD('chromatic_compound')})
+event.shaped(CRD('refined_radiance'), ['S'], {S: CR('refined_radiance')})
+event.shaped(CR('refined_radiance'), ['S'], {S: CRD('refined_radiance')})
+event.shaped(CRD('shadow_steel'), ['S'], {S: CR('shadow_steel')})
+event.shaped(CR('shadow_steel'), ['S'], {S: CRD('shadow_steel')})
 
 }
 
