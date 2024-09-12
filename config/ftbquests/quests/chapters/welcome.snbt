@@ -3,23 +3,23 @@
 	group: ""
 	order_index: 0
 	filename: "welcome"
-	title: "欢迎"
-	icon: "biomesoplenty:wildflower"
+	title: "&8 向着星辰与深渊"
+	icon: "minecraft:spore_blossom"
+	disable_toast: true
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "永无止境：Re"
+			title: "&f&l无限潜能"
 			icon: "minecraft:gold_ore"
 			disable_toast: true
 			x: -3.5d
 			y: -5.0d
 			shape: "hexagon"
+			subtitle: "一路顺风"
 			description: [
-				"这个整合包为你而做。"
-				""
-				"我们希望你可以从中获得快乐。"
-				""
+				"这是为你准备的世界。我们希望你能徜徉在机械动力等模组的无限可能中，更希望你能玩得开心！"
+				"&7尽情挥洒创意吧！The World Awaits!          &o（整个世界都将为你敞开！）&r"
 			]
 			size: 2.0d
 			id: "09356B3BEF298E06"
@@ -29,28 +29,34 @@
 			}]
 			rewards: [
 				{
-					id: "732AA66A91BA5C2B"
-					type: "item"
-					item: "biomesoplenty:wildflower"
-				}
-				{
 					id: "1EE277823ACFB886"
 					type: "item"
 					item: "minecraft:flower_pot"
 				}
+				{
+					id: "5C2CE7A2FA929728"
+					type: "item"
+					item: "minecraft:cornflower"
+				}
+				{
+					id: "0C5FE046D9FAD48D"
+					type: "item"
+					item: "ftbquests:book"
+				}
 			]
 		}
 		{
-			title: "完全可选"
+			title: "&f&l按需供应"
 			icon: "minecraft:grass_block"
 			disable_toast: true
 			x: -3.5d
 			y: -2.5d
 			shape: "hexagon"
+			subtitle: "图灵测试"
 			description: [
-				"任务系统可以帮助你自选整合包根本玩法：&3交易&r或&6科技流水线&r"
+				"任务系统可以帮助你使用&3交易&r模组和&6科技线&r模组对你的工厂进行深度定制。"
 				""
-				"并不要求完成所有任务。"
+				"当然，这完全不是必要的——你可以随意创造和发挥，但任务系统也许能在你每次迷失的时候将你拉回正轨，并给你些小奖励。"
 			]
 			hide_dependency_lines: true
 			dependencies: ["09356B3BEF298E06"]
@@ -60,19 +66,24 @@
 				id: "0680791525813778"
 				type: "checkmark"
 			}]
+			rewards: [{
+				id: "3CA638263588DC20"
+				type: "item"
+				item: "create:tree_fertilizer"
+				count: 8
+			}]
 		}
 		{
-			title: "I"
+			title: "&f&l壹"
 			icon: "create:cogwheel"
 			disable_toast: true
 			x: -4.0d
 			y: -1.0d
 			shape: "hexagon"
+			subtitle: "简介"
 			description: [
-				"整合包描述："
-				""
-				"魔改颠覆你的想象——准备好建造你最好的机械动力工厂吧！"
-				"&7（首先，你得有那份勇气）"
+				"世界天翻地覆！准备创造最完美的机械工厂吧！"
+				"&7如果你没有足够的勇气的话，不要冲太快。"
 			]
 			dependencies: ["69D55492A8F42A94"]
 			size: 1.5d
@@ -88,16 +99,18 @@
 			}]
 		}
 		{
-			title: "II"
+			title: "&f&l贰"
 			icon: "create:large_cogwheel"
 			disable_toast: true
 			x: -3.5d
 			y: 0.5d
 			shape: "hexagon"
+			subtitle: "有志者事竟成"
 			description: [
-				"你和月球之间大约有50个机械。"
+				"走向深空的路上，有几近半百的全新发明等着你。"
 				""
-				"成千上万的构件将会流经不断增长的流水线，提供探索新科技的机会。"
+				"你将会解锁成千上万用途各异的零件，并需要把它们组装成精密而又庞大的机器。不要害怕失败，否则你将一事无成。"
+				"&7你也可以成为工业革命的先驱！"
 			]
 			dependencies: ["407236D2B1D2257D"]
 			size: 1.5d
@@ -113,16 +126,18 @@
 			}]
 		}
 		{
-			title: "III"
+			title: "&f&l叁"
 			icon: "kubejs:andesite_machine"
 			disable_toast: true
 			x: -2.0d
 			y: 1.0d
 			shape: "hexagon"
+			subtitle: "技术爆炸"
 			description: [
-				"当最终产物流入数据中心时，你的整个工厂都会受到考验——给飞船上的导航电脑编程。"
+				"你的工厂将会制造出精密的智能构件并组装出惊人的航天器，一飞冲天！"
 				""
-				"每一步都是不同的，有一些不同决定于世界生成的种子。"
+				"每个人的每一步都会是不同的，但它们同样重要。如果你恰好有个优秀的世界生成种子，有些事可能会事半功倍！"
+				"&7尽兴的同时也要保持自信。"
 			]
 			dependencies: ["2C7ADB6C11B918B1"]
 			size: 1.5d
@@ -135,23 +150,23 @@
 				id: "4000DE1B90DA84CE"
 				type: "item"
 				item: "minecraft:wheat_seeds"
+				count: 4
 			}]
 		}
 		{
-			title: "IV"
+			title: "&f&l肆"
 			icon: "thermal:machine_press"
 			disable_toast: true
 			x: -0.5d
 			y: 0.5d
 			shape: "hexagon"
+			subtitle: "换种口味"
 			description: [
-				"厌倦了收集材料？"
+				"不想总被死板的科技束缚？"
 				""
-				"你可以从不同的任务中赚取钱币，或选择你的职业。"
+				"在这里，你还可以通过完成任务募集资金，还可以寻求其他玩家的帮助。"
 				""
-				"从农场自动售出产品或邀请别的玩家来帮助你完成任务。"
-				""
-				"之后你可以从市场购买多种资源、饰品、建材，这些可以让你的玩法更加轻松。"
+				"你获得的银币可以在&6市集&r购买许多东西，例如资源、特殊物品和建筑方块...也许合理使用它们能加快进度！"
 			]
 			dependencies: ["1947C6CE179EBAC6"]
 			size: 1.5d
@@ -164,15 +179,16 @@
 				id: "583C35BA7A7B9004"
 				type: "item"
 				item: "thermal:silver_coin"
+				count: 32
 			}]
 		}
 		{
-			title: "任务内容概览"
+			title: "&6&l任务内容"
 			icon: {
 				id: "occultism:book_of_calling_djinni_manage_machine"
 				Count: 1b
 				tag: {
-					spiritName: "Marredaeus"
+					spiritName: "Barsalmared"
 				}
 			}
 			disable_toast: true
@@ -180,18 +196,17 @@
 			y: -1.5d
 			shape: "hexagon"
 			description: [
-				"- &6公告栏&r提供了赚取货币的方法。"
-				"你可以在这里完成不同种类的任务或买一个在交易机使用的许可证。"
+				"&5&l「成就」&r     不断地达成&5成就&r可以振奋人心！"
 				""
-				"- &6市场&r让你可以买到一些有意思或有用的物品和工具。"
+				"&5这些成就和Minecraft的进度不太一样。他们会更加困难，也更加...奇怪。"
 				""
-				"- &6交易列表&r是一个自动使用货币兑换资源的场所。你可以在这里买到交易机上使用的兑换卡。"
+				"&6&l「市集」&r     你可以在&6市集&r购物。"
 				""
-				"- &3工厂指引&r向你提供了科技和自动化的实用信息，所有玩家将要完成的挑战已在这里被组织为章节和任务，你可以选择是否遵循此指导手册。"
+				"&6就和逛商场一样，不过我们包邮。"
 				""
-				"- &3冶金&r展示了如何将原矿处理成锭，不同的处理方式会得到不同数量的产出。"
+				"&7&l「科技树」&r   &7科技树&r会指导你一步步发展科技。"
 				""
-				"- &3护肝员&r提供的这些实用的小工具或许可以帮助你达成你面前的挑战。"
+				"&7这里的所有任务都为你整理好了，保证考虑周全。随着你对这个世界的探索脚步不断前进，你会解锁更多有趣的任务和成就。&8&m当然，还有隐藏任务。&r&7不过你不必被限制在条框中，自由发挥才是真正的乐趣所在！"
 			]
 			dependencies: ["58E38BA6D927409F"]
 			size: 1.5d
@@ -207,13 +222,13 @@
 			}]
 		}
 		{
-			title: "你可以走了"
+			title: "&f&l走你！"
 			icon: "minecraft:gold_block"
 			disable_toast: true
 			x: 2.0d
 			y: -1.5d
 			shape: "hexagon"
-			description: ["你现在或许知道了什么是不是新的，找个地方安家再开启你的科技之旅吧。"]
+			description: ["现在你对你的任务目标有了清楚的了解。从这里你将开始你全新的征程，祝好运！记得时常备份！"]
 			dependencies: ["00003FCBB33E62C4"]
 			size: 2.0d
 			id: "31EDFA6D2FF86CB0"

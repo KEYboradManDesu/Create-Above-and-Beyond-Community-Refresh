@@ -1,0 +1,49 @@
+{
+	id: "4958836B3A14899C"
+	group: ""
+	order_index: 1
+	filename: "thanks"
+	title: "&8 特别感谢"
+	icon: {
+		id: "minecraft:writable_book"
+		Count: 1b
+		tag: {
+			Enchantments: [{
+				id: "minecraft:unbreaking"
+			}]
+		}
+	}
+	disable_toast: true
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		title: "&l&c感&a谢&b游&f玩！"
+		x: -9.0d
+		y: -7.0d
+		shape: "circle"
+		subtitle: "&l&n制作人员表"
+		description: [
+			"&7原著   &fSimibubi，&fYjn024"
+			"&7编著   &fKeyBoardManDesu，Gl0w1amp"
+			"&9&l&o这个整合包没有结束，现在，创造你想创造的吧！"
+		]
+		dependencies: ["7494ABC1DCFC7F69"]
+		hide: true
+		size: 2.2d
+		id: "09842CDC7A331BEE"
+		tasks: [{
+			id: "7C16EA0DB0F54BCB"
+			type: "item"
+			item: "minecraft:stick"
+		}]
+		rewards: [{
+			id: "70BC5824FF4A3B74"
+			type: "item"
+			team_reward: true
+			auto: "enabled"
+			item: "minecraft:debug_stick"
+			only_one: true
+		}]
+	}]
+	quest_links: [ ]
+}

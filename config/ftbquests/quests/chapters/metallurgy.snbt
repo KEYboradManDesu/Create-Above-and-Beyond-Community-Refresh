@@ -1,17 +1,17 @@
 {
 	id: "1B927DD15CF28E13"
-	group: "331B6409EF6A7840"
-	order_index: 7
+	group: "0810E42B2DD79973"
+	order_index: 4
 	filename: "metallurgy"
-	title: " 冶金"
+	title: "▶ 冶金"
 	icon: "thermal:silver_ingot"
-	always_invisible: true
+	subtitle: ["适用于大部分矿物"]
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
 			title: "制作矿石处理工厂："
-			icon: "minecraft:gold_ore"
+			icon: "minecraft:raw_gold"
 			x: -9.0d
 			y: -4.0d
 			shape: "circle"
@@ -47,7 +47,7 @@
 		}
 		{
 			title: "I：粉碎"
-			icon: "create:crushed_gold_ore"
+			icon: "create:crushed_raw_gold"
 			x: -9.0d
 			y: -2.0d
 			shape: "circle"
@@ -144,8 +144,9 @@
 			dependencies: [
 				"21E76761CD3761C2"
 				"2C2E304910D7F33D"
-				"171A0F26C6608E83"
 				"5FCCD2F720115D41"
+				"171A0F26C6608E83"
+				"180F76CFC9369566"
 			]
 			dependency_requirement: "one_completed"
 			id: "29DABB5FDE6356E9"
@@ -198,7 +199,7 @@
 			icon: "create:mechanical_mixer"
 			x: -3.0d
 			y: 1.0d
-			subtitle: "1 -> 6"
+			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
 			dependency_requirement: "one_completed"
 			id: "18EDB4CD525CE110"
@@ -239,7 +240,7 @@
 			icon: "tconstruct:smeltery_controller"
 			x: -7.0d
 			y: 1.0d
-			subtitle: "1 -> 3"
+			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
 			id: "715BBD0DF0136FF1"
 			tasks: [{
@@ -263,6 +264,11 @@
 			tasks: [{
 				id: "206B68B6B69CC7AD"
 				type: "checkmark"
+			}]
+			rewards: [{
+				id: "238A3D33F5A23F48"
+				type: "item"
+				item: "kubejs:good_idea"
 			}]
 		}
 		{
@@ -322,12 +328,25 @@
 			icon: "tconstruct:foundry_controller"
 			x: -5.0d
 			y: 1.0d
-			subtitle: "1 -> 3"
+			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
 			id: "409A50CBCDBBA1F0"
 			tasks: [{
 				id: "6EBC75DD42F7BB3E"
 				type: "checkmark"
+			}]
+		}
+		{
+			icon: "minecraft:blast_furnace"
+			x: -11.0d
+			y: 1.0d
+			subtitle: "1 -> 2"
+			dependencies: ["07BE7128982202A7"]
+			id: "180F76CFC9369566"
+			tasks: [{
+				id: "1CBA399F8812D6CD"
+				type: "checkmark"
+				title: "高温熔炼"
 			}]
 		}
 	]

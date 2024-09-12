@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 1
 	filename: "market"
-	title: "&a市场"
+	title: "&a▶ 市场"
 	icon: "minecraft:chest"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -30,61 +30,38 @@
 			}]
 		}
 		{
-			title: "要塞定位器"
-			icon: "create:blaze_burner"
-			x: -7.5d
-			y: 0.5d
-			subtitle: "2金币"
-			description: ["在下界无目的的晃荡是最差的选择，这个指南针将永远指到距离你最近的堡垒。"]
-			id: "252B9DD5BFB8184A"
-			tasks: [{
-				id: "5345AA8760A95127"
-				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
-				item: "thermal:gold_coin"
-				count: 2L
-			}]
-			rewards: [{
-				id: "160328DECC54AD5A"
-				type: "item"
-				item: {
-					id: "structurescompass:structures_compass"
-					Count: 1b
-					tag: {
-						Structure: "minecraft:fortress"
-					}
-				}
-			}]
-		}
-		{
-			title: "锯断一切"
+			title: "绝妙发明：锯断一切"
 			icon: {
-				id: "cb_microblock:diamond_saw"
+				id: "kubejs:netherite_saw"
 				Count: 1b
 				tag: {
-					RepairCost: 0
-					Damage: 0
+					Unbreakable: 1b
+					HideFlags: 1b
 					Enchantments: [{
 						lvl: 3s
-						id: "minecraft:unbreaking"
+						id: "minecraft:mending"
 					}]
 					display: {
-						Name: "{\"text\":\"附魔锯子\"}"
+						Lore: ["[\"千万不要在物品栏中合成\"]"]
+						Name: "[\"附魔手锯\"]"
 					}
+					Damage: 0
+					Modifier: "forbidden_arcanus:eternal"
 				}
 			}
 			x: -8.5d
 			y: -6.5d
-			subtitle: "5金币"
+			subtitle: "2金币"
 			description: ["购买这个小工具来让制作&6动力构件&r的工具消耗降到最低。"]
 			hide_dependency_lines: true
+			can_repeat: true
 			id: "4F953BACF4D1C151"
 			tasks: [
 				{
 					id: "4C77B71D0EC3B2EA"
 					type: "item"
 					item: {
-						id: "cb_microblock:diamond_saw"
+						id: "kubejs:netherite_saw"
 						Count: 1b
 						tag: {
 							Damage: 0
@@ -94,47 +71,58 @@
 				{
 					id: "3EE8736C08EF80F4"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 5b }
+					icon: { id: "thermal:gold_coin", Count: 2b }
 					item: "thermal:gold_coin"
-					count: 5L
+					count: 2L
 				}
 			]
 			rewards: [{
-				id: "56DB21D18FB1FF64"
+				id: "3B47922B4BDB034F"
 				type: "item"
 				item: {
-					id: "cb_microblock:diamond_saw"
+					id: "kubejs:netherite_saw"
 					Count: 1b
 					tag: {
-						Unbreakable: 1
-						RepairCost: 0
-						HideFlags: 1
+						Unbreakable: 1b
+						HideFlags: 1b
 						Enchantments: [{
-							lvl: 10s
-							id: "minecraft:unbreaking"
+							lvl: 3s
+							id: "minecraft:mending"
 						}]
 						display: {
-							Lore: ["{\"text\":\"不要在工作台中使用\"}"]
-							Name: "{\"text\":\"附魔锯子\",\"color\":\"gold\",\"italic\":false}"
+							Lore: ["[\"千万不要在物品栏中合成\"]"]
+							Name: "[\"附魔手锯\"]"
 						}
 						Damage: 0
+						Modifier: "forbidden_arcanus:eternal"
 					}
 				}
 			}]
 		}
 		{
-			title: "不可能出问题"
+			title: "绝妙发明：不可能出问题"
 			icon: {
 				id: "projectred_core:screwdriver"
 				Count: 1b
 				tag: {
+					Unbreakable: 1b
+					HideFlags: 1b
+					Enchantments: [{
+						lvl: 3s
+						id: "minecraft:mending"
+					}]
+					display: {
+						Name: "[\"附魔螺丝刀\"]"
+					}
 					Damage: 0
+					Modifier: "forbidden_arcanus:eternal"
 				}
 			}
 			x: -7.0d
 			y: -6.5d
-			subtitle: "5金币"
+			subtitle: "2金币"
 			description: ["购买这个小工具来让制作&6精密构件&r的工具消耗降到最低。"]
+			can_repeat: true
 			id: "72CACE8F0E4701B1"
 			tasks: [
 				{
@@ -151,34 +139,35 @@
 				{
 					id: "74585BB7E80CF010"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 5b }
+					icon: { id: "thermal:gold_coin", Count: 2b }
 					item: "thermal:gold_coin"
-					count: 5L
+					count: 2L
 				}
 			]
 			rewards: [{
-				id: "743730BBE32A0875"
+				id: "3272863B6DC13FCC"
 				type: "item"
 				item: {
-					id: "projectred-core:screwdriver"
+					id: "projectred_core:screwdriver"
 					Count: 1b
 					tag: {
-						Unbreakable: 1
-						Damage: 0
-						HideFlags: 1
+						Unbreakable: 1b
+						HideFlags: 1b
 						Enchantments: [{
-							lvl: 10s
-							id: "minecraft:unbreaking"
+							lvl: 3s
+							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "{\"text\":\"附魔螺丝刀\",\"color\":\"gold\",\"italic\":false}"
+							Name: "[\"附魔螺丝刀\"]"
 						}
+						Damage: 0
+						Modifier: "forbidden_arcanus:eternal"
 					}
 				}
 			}]
 		}
 		{
-			title: "磁之力"
+			title: "绝妙发明：磁之力"
 			icon: {
 				id: "kubejs:chromatic_resonator"
 				Count: 1b
@@ -192,8 +181,9 @@
 			}
 			x: -5.0d
 			y: -6.5d
-			subtitle: "7金币"
+			subtitle: "3金币"
 			description: ["购买这个小工具来让制作&6感应构件&r的工具消耗降到最低。"]
+			can_repeat: true
 			id: "43FC566E833BE834"
 			tasks: [
 				{
@@ -210,34 +200,35 @@
 				{
 					id: "5B31A98B9EFCCFAB"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 7b }
+					icon: { id: "thermal:gold_coin", Count: 3b }
 					item: "thermal:gold_coin"
-					count: 7L
+					count: 3L
 				}
 			]
 			rewards: [{
-				id: "0F4C7BB4C0ECB4CC"
+				id: "267F51D0A50B8298"
 				type: "item"
 				item: {
 					id: "kubejs:chromatic_resonator"
 					Count: 1b
 					tag: {
-						Unbreakable: 1
-						Damage: 0
-						HideFlags: 1
+						Unbreakable: 1b
+						HideFlags: 1b
 						Enchantments: [{
-							lvl: 10s
-							id: "minecraft:unbreaking"
+							lvl: 3s
+							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "{\"text\":\"附魔共振器\",\"color\":\"gold\",\"italic\":false}"
+							Name: "[\"附魔异彩共鸣器\"]"
 						}
+						Damage: 0
+						Modifier: "forbidden_arcanus:eternal"
 					}
 				}
 			}]
 		}
 		{
-			title: "市场"
+			title: "&f&l市场"
 			icon: "minecraft:chest"
 			x: -6.0d
 			y: -4.0d
@@ -263,40 +254,31 @@
 			subtitle: "金币 -> 银币"
 			description: ["你可以在这里将金币换回成1组银币。"]
 			dependencies: ["0F870BEA235D662D"]
+			can_repeat: true
 			id: "5326F6482C45D22A"
 			tasks: [{
 				id: "772821832EE93341"
 				type: "item"
 				item: "thermal:gold_coin"
 			}]
-			rewards: [
-				{
-					id: "26512E93CE404069"
-					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 64b }
-					auto: "enabled"
-					item: "thermal:silver_coin"
-					count: 64
-				}
-				{
-					id: "6FA6A9A201CA27BE"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "660F46969E3F00EF"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 64b }
+				item: "thermal:silver_coin"
+				count: 64
+			}]
 		}
 		{
 			title: "手动兑换"
-			icon: { id: "thermal:gold_coin", Count: 2b }
+			icon: { id: "thermal:gold_coin", Count: 16b }
 			x: -8.0d
 			y: -4.0d
 			shape: "circle"
 			subtitle: "银币 -> 金币"
 			description: ["有一些交易需要金币，每个金币都等于1组银币。"]
 			dependencies: ["0F870BEA235D662D"]
+			can_repeat: true
 			id: "1A566C74B1F7F050"
 			tasks: [{
 				id: "2387D852CA97AD1A"
@@ -305,22 +287,11 @@
 				item: "thermal:silver_coin"
 				count: 64L
 			}]
-			rewards: [
-				{
-					id: "66BE3DDEC92812C4"
-					type: "item"
-					auto: "enabled"
-					item: "thermal:gold_coin"
-				}
-				{
-					id: "6E78A95786CA5B28"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3EBAEA5F9183651B"
+				type: "item"
+				item: "thermal:gold_coin"
+			}]
 		}
 		{
 			title: "共进晚餐"
@@ -355,6 +326,7 @@
 					type: "item"
 					item: "minecraft:bread"
 					count: 2
+					random_bonus: 32
 				}
 				{
 					id: "51A8014ACD2153F6"
@@ -586,7 +558,7 @@
 			}
 			x: -2.5d
 			y: 1.5d
-			subtitle: "25银币"
+			subtitle: "25 银币"
 			description: ["“我在一间路旁被遗弃的作坊里找到了这个，你想要买它吗？”"]
 			id: "0CCF34BF1C5829AE"
 			tasks: [{
@@ -664,7 +636,7 @@
 			]
 		}
 		{
-			title: "Windows更新"
+			title: "绝妙发明：Windows更新补丁"
 			icon: {
 				id: "kubejs:flash_drive"
 				Count: 1b
@@ -681,8 +653,9 @@
 			}
 			x: -3.5d
 			y: -6.5d
-			subtitle: "7金币"
+			subtitle: "4金币"
 			description: ["购买这个小工具来让制作&6运算构件&r的工具消耗降到最低。"]
+			can_repeat: true
 			id: "00D6DD6AE8E3C014"
 			tasks: [
 				{
@@ -699,47 +672,47 @@
 				{
 					id: "04FA9389D991556D"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 7b }
+					icon: { id: "thermal:gold_coin", Count: 4b }
 					item: "thermal:gold_coin"
-					count: 7L
+					count: 4L
 				}
 			]
 			rewards: [{
-				id: "3EA7518063CBEA5B"
+				id: "7C8BC551D72438AD"
 				type: "item"
 				item: {
 					id: "kubejs:flash_drive"
 					Count: 1b
 					tag: {
-						Unbreakable: 1
-						Damage: 0
-						HideFlags: 1
+						Unbreakable: 1b
+						HideFlags: 1b
 						Enchantments: [{
-							lvl: 10s
-							id: "minecraft:unbreaking"
+							lvl: 3s
+							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "{\"text\":\"附魔闪存盘\",\"color\":\"gold\",\"italic\":false}"
+							Name: "[\"附魔闪存盘\"]"
 						}
+						Damage: 0
+						Modifier: "forbidden_arcanus:eternal"
 					}
 				}
 			}]
 		}
 		{
 			title: "模板压印"
-			icon: "appliedenergistics2:silicon_press"
+			icon: "ae2:silicon_press"
 			x: -1.0d
 			y: 2.0d
-			subtitle: "6金币"
+			subtitle: "2 金币"
 			description: ["真正的信息专家不会出去很长时间，但还好必要的电脑部件可以在这里直接购买到你的背包里！"]
-			invisible: true
 			id: "4BAC95CCC72369AD"
 			tasks: [{
 				id: "3D328A6D69E64EDA"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 12b }
+				icon: { id: "thermal:gold_coin", Count: 2b }
 				item: "thermal:gold_coin"
-				count: 6L
+				count: 2L
 			}]
 			rewards: [{
 				id: "51ABA96DE3477D3B"
@@ -749,52 +722,13 @@
 			}]
 		}
 		{
-			title: "养只鸭"
-			icon: "minecraft:egg"
-			x: -11.0d
-			y: -2.0d
-			subtitle: "5银币"
-			description: ["嘎~"]
-			id: "6C00F2935F27C2AD"
-			tasks: [
-				{
-					id: "491FF95EFE8DCB67"
-					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 5b }
-					item: "thermal:silver_coin"
-					count: 5L
-				}
-				{
-					id: "5F58BA2473FD6DDA"
-					type: "item"
-					item: "rubber_duck:rubber_duck_item"
-				}
-			]
-			rewards: [
-				{
-					id: "500098FD4762A38F"
-					type: "item"
-					auto: "enabled"
-					item: "exoticbirds:duck_spawn_egg"
-				}
-				{
-					id: "79C8307ED8450347"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
-		}
-		{
 			title: "昂贵的兴趣"
-			icon: "buddycards:mystery_pack"
+			icon: "buddycards:buddycard_pack_mystery"
 			x: 0.5d
 			y: 1.5d
-			subtitle: "2金币"
+			subtitle: "2 金币"
 			description: ["集卡的乐趣。"]
-			invisible: true
+			can_repeat: true
 			id: "093FB7B7FEC6B886"
 			tasks: [{
 				id: "30B16CC21946FE8E"
@@ -803,22 +737,12 @@
 				item: "thermal:gold_coin"
 				count: 2L
 			}]
-			rewards: [
-				{
-					id: "198DC310752F341F"
-					type: "item"
-					auto: "enabled"
-					item: "buddycards:mystery_pack"
-				}
-				{
-					id: "423CFA69329BD06E"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "31C613A1894AAB66"
+				type: "item"
+				item: "buddycards:buddycard_pack_mystery"
+				count: 4
+			}]
 		}
 		{
 			title: "玩炸药"
@@ -868,6 +792,7 @@
 			x: -2.5d
 			y: -1.5d
 			subtitle: "24银币"
+			description: ["做好除虫。"]
 			id: "42384DE39AA48976"
 			tasks: [{
 				id: "05BB5DFA82280C0C"
@@ -990,12 +915,6 @@
 			}]
 			rewards: [
 				{
-					id: "738387AED344C59B"
-					type: "item"
-					item: "moreminecarts:powered_locking_rail"
-					count: 8
-				}
-				{
 					id: "4D33B3525FF09C68"
 					type: "item"
 					item: "minecraft:powered_rail"
@@ -1072,7 +991,7 @@
 			icon: "minecraft:oak_leaves"
 			x: 1.0d
 			y: 0.0d
-			subtitle: "24银币"
+			subtitle: "24 银币"
 			description: ["对你的建筑外表不满意？没关系，树叶解决一切！"]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
@@ -1127,6 +1046,7 @@
 			x: -1.0d
 			y: -2.0d
 			subtitle: "48银币"
+			description: ["嗡-嗡嗡-嗡"]
 			id: "003E0D1CE60B166A"
 			tasks: [
 				{
@@ -1139,7 +1059,7 @@
 				{
 					id: "3CCE09D1715B54C7"
 					type: "item"
-					title: "Any Flower"
+					title: "任意 花"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -1152,27 +1072,60 @@
 			]
 			rewards: [
 				{
-					id: "773C4F5E97BD82B8"
+					id: "32B19A18FA3444EE"
 					type: "item"
-					auto: "enabled"
 					item: "minecraft:bee_nest"
-				}
-				{
-					id: "0C8C369DEF6B0FD4"
-					type: "item"
-					auto: "no_toast"
-					item: "minecraft:bee_spawn_egg"
 					count: 2
 				}
 				{
-					id: "6D5E00890DAB64DB"
-					type: "custom"
-					title: "Repeatable"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
+					id: "7090B017444F28FB"
+					type: "item"
+					item: "minecraft:bee_spawn_egg"
+					count: 4
 				}
 			]
+		}
+		{
+			title: "我爱植树"
+			icon: "minecraft:oak_sapling"
+			x: -11.0d
+			y: -2.0d
+			subtitle: "4银币"
+			description: ["树苗盲盒，涵盖了这个世界的大部分树苗。"]
+			id: "7760D0FCCFCE2C6B"
+			tasks: [{
+				id: "6AEDD26D0FFF8963"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 4b }
+				item: "thermal:silver_coin"
+				count: 4L
+			}]
+			rewards: [{
+				id: "0DFA30B6D63CAEB4"
+				type: "loot"
+				exclude_from_claim_all: true
+				table_id: 6807207932646717288L
+			}]
+		}
+		{
+			title: "堡垒定位"
+			icon: "create:blaze_burner"
+			x: -7.5d
+			y: 1.0d
+			subtitle: "24银币"
+			description: ["应该没人愿意在下界到处晃荡吧？这个小玩意可以帮助你快速找到下界要塞。"]
+			id: "3B408BE68E229FD2"
+			tasks: [{
+				id: "2D0391D0E7E9C6AB"
+				type: "item"
+				item: { id: "thermal:silver_coin", Count: 24b }
+				count: 24L
+			}]
+			rewards: [{
+				id: "5030C2BE38C8EC30"
+				type: "item"
+				item: "structures_compass:structures_compass"
+			}]
 		}
 	]
 	quest_links: [ ]

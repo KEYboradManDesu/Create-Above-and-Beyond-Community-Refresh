@@ -1,0 +1,44 @@
+{
+	id: "saplings"
+	order_index: 0
+	title: "&2&l随机树种包"
+	icon: "minecraft:oak_sapling"
+	loot_size: 1
+	rewards: [
+		{ item: "minecraft:oak_sapling", count: 12, weight: 20 }
+		{ item: "minecraft:spruce_sapling", count: 12, weight: 20 }
+		{ item: "minecraft:birch_sapling", count: 12 }
+		{ item: "minecraft:jungle_sapling", count: 6, weight: 15 }
+		{ item: "minecraft:acacia_sapling", count: 12, weight: 15 }
+		{ item: "minecraft:dark_oak_sapling", count: 12, weight: 15 }
+		{ item: "architects_palette:twisted_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:origin_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:flowering_oak_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:yellow_autumn_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:orange_autumn_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:maple_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:fir_sapling", count: 4, weight: 5 }
+		{ item: "biomesoplenty:redwood_sapling", count: 4, weight: 3 }
+		{ item: "biomesoplenty:white_cherry_sapling", count: 4, weight: 3 }
+		{ item: "biomesoplenty:pink_cherry_sapling", count: 4, weight: 2 }
+		{ item: "biomesoplenty:mahogany_sapling", count: 4, weight: 3 }
+		{ item: "biomesoplenty:jacaranda_sapling", count: 4 }
+		{ item: "biomesoplenty:palm_sapling", count: 4, weight: 4 }
+		{ item: "biomesoplenty:willow_sapling", count: 4, weight: 4 }
+		{ item: "biomesoplenty:dead_sapling", count: 4 }
+		{ item: "biomesoplenty:magic_sapling" }
+		{ item: "biomesoplenty:umbran_sapling" }
+		{ item: "biomesoplenty:hellbark_sapling" }
+		{
+			item: {
+				id: "occultism:otherworld_sapling_natural"
+				Count: 1b
+				tag: { }
+			}
+			weight: 7
+		}
+		{ item: "caupona:wolfberry_sapling", count: 2, weight: 3 }
+		{ item: "caupona:fig_sapling", count: 2, weight: 3 }
+		{ item: "caupona:walnut_sapling", count: 2, weight: 3 }
+	]
+}

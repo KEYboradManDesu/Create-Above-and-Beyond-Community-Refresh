@@ -424,7 +424,10 @@ onEvent('item.registry', event => {
 		simple("闪长岩", "Diorite", MC('diorite', 16), 3, S, 0x7F7F7F, 0xD4D4D4)
 		simple("安山岩", "Andesite", MC('andesite', 16), 3, S, 0x5F5F5F, 0x8E8E8E)
 		simple("石灰岩", "Limestone", CR('limestone', 16), 3, S, 0xA7A89E, 0xC0C2BA)
+		simple("风化石灰岩", "Weathered Limestone", CRD('weathered_limestone', 16), 3, S, 0x5E6055, 0x797E74)
+		simple("辉长岩", "Gabbro", CRD('gabbro', 16), 3, S, 0x6B5D4F, 0x7D6B5A)
 		simple("熔渣", "Scoria", CR('scoria', 16), 3, S, 0x2A130C, 0x553427)
+		simple("焦黑熔渣", "Scorchia", CR('scorchia', 16), 3, S, 0x1b1b1e, 0x55655a)
 		simple("黑曜石", "Obsidian", MC('obsidian', 1), 8, S, 0x05030A, 0x36234C)
 		
 		next_group()

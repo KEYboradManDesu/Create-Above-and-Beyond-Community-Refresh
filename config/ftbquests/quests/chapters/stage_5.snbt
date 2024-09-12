@@ -1,22 +1,22 @@
 {
 	id: "75CF8B6BAC6A01EF"
 	group: "331B6409EF6A7840"
-	order_index: 6
+	order_index: 7
 	filename: "stage_5"
-	title: "5 &r简单运算&f"
+	title: "&f&l5&r 简单运算"
 	icon: "kubejs:computation_matrix"
-	always_invisible: true
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "最终章开始！"
+			title: "&6&l简单运算"
 			icon: "kubejs:calculation_mechanism"
-			x: 5.0d
-			y: 15.5d
+			x: 4.0d
+			y: 16.5d
 			shape: "hexagon"
+			subtitle: "&6第五章"
 			description: [
-				"欢迎来到旅途的最终章：建造数据中心。这需要什么？——成千上万的数学计算！"
+				"欢迎来到殖民外星的最后一步：建造数据中心。这需要什么？——成千上万的数学计算！"
 				""
 				"但是不要怕，作为一个发明家，你可以让你的发明来为你完成所有事情。"
 				""
@@ -29,6 +29,7 @@
 			tasks: [{
 				id: "1F6009A328AA0184"
 				type: "checkmark"
+				title: "&6开始！"
 			}]
 			rewards: [{
 				id: "0397D214E0A6CC89"
@@ -37,10 +38,10 @@
 			}]
 		}
 		{
-			title: "起飞！"
-			icon: "advancedrocketry:guidancecomputer"
-			x: 2.0d
-			y: 7.75d
+			title: "&f&l第六章完成！&r"
+			icon: "beyond_earth:earth_globe"
+			x: 1.0d
+			y: 8.75d
 			shape: "hexagon"
 			description: [
 				"当一切就绪、计算矩阵编程完毕时，你可以开始组装导航电脑了，然后给你的飞船装上了。"
@@ -51,23 +52,17 @@
 			]
 			dependencies: [
 				"6BA9A176EDA001A3"
-				"1AE7B6CA4D1DBA6F"
 				"462CE0A4C80442FB"
 				"69311E02A8B3451D"
 				"3AD7553F3C8593F9"
 				"4800892E1E70648D"
-				"25B76A897D97C9F1"
 				"73473DC7269EC5B0"
+				"6A156D11D983661D"
+				"13E3B63C2D69BBC9"
 			]
 			size: 2.0d
 			id: "47965C310D9847DC"
 			tasks: [
-				{
-					id: "05BDC7ACF64D13C2"
-					type: "item"
-					item: "advancedrocketry:guidancecomputer"
-					consume_items: false
-				}
 				{
 					id: "4418C7A289B17158"
 					type: "item"
@@ -181,29 +176,27 @@
 					}
 					consume_items: false
 				}
+				{
+					id: "651374A7A3486148"
+					type: "advancement"
+					title: "制作 一阶火箭"
+					icon: "beyond_earth:steel_engine"
+					advancement: "beyond_earth:rocket_advancement"
+					criterion: ""
+				}
 			]
 			rewards: [{
-				id: "7F4FDBDE58C30C3A"
+				id: "779E480D7099CCD9"
 				type: "item"
-				item: {
-					id: "desolation:charred_fence"
-					Count: 1b
-					tag: {
-						RepairCost: 0
-						display: {
-							Name: "{\"text\":\"旗杆\",\"italic\":false,\"color\":\"aqua\"}"
-						}
-					}
-				}
-				count: 3
+				item: "supplementaries:globe"
 			}]
 		}
 		{
 			title: "计算轨道"
-			x: 2.0d
-			y: 9.5d
+			x: 1.0d
+			y: 10.5d
 			shape: "circle"
-			subtitle: "装置 45"
+			subtitle: "步骤 45"
 			description: [
 				"为了制作导航电脑，你需要很多数字。"
 				""
@@ -253,7 +246,7 @@
 							XferIn: 0b
 						}
 						TankInv: [{
-							FluidName: "kubejs:raw_logic"
+							FluidName: "kubejs:matrix"
 							Capacity: 32000
 							Tank: 0b
 							Amount: 32000
@@ -262,10 +255,10 @@
 					}
 				}
 			}
-			x: 2.0d
-			y: 15.5d
+			x: 1.0d
+			y: 16.5d
 			shape: "square"
-			subtitle: "装置 42"
+			subtitle: "步骤 42"
 			description: ["为了给机械计算器提供数字和运算符，所有的运算构件必须熔化成具象且可被处理的图形化能量。"]
 			dependencies: ["5D0454F977C4F080"]
 			size: 1.5d
@@ -286,9 +279,9 @@
 		}
 		{
 			icon: "kubejs:three"
-			x: 0.5d
-			y: 13.5d
-			subtitle: "装置 43-1"
+			x: -0.5d
+			y: 14.5d
+			subtitle: "步骤 43-1"
 			description: [
 				"作为两种可直接获得的数字之一，“3”可以通过未加工的逻辑浇筑获得。它可以和“8”以及别的运算符来计算出0~9中剩下的所有数字。"
 				""
@@ -312,9 +305,9 @@
 		}
 		{
 			icon: "kubejs:eight"
-			x: 3.5d
-			y: 13.5d
-			subtitle: "装置 43-3"
+			x: 2.5d
+			y: 14.5d
+			subtitle: "步骤 43-3"
 			description: [
 				"第二种可以直接获得的数字是“8”，它也可以使用液态逻辑浇筑获得。"
 				""
@@ -338,9 +331,9 @@
 		}
 		{
 			icon: "kubejs:zero"
-			x: 5.5d
-			y: 11.5d
-			subtitle: "装置 44-8"
+			x: 4.5d
+			y: 12.5d
+			subtitle: "步骤 44-8"
 			description: ["3-3、2-2、8-8……？总共有39种方法算出0。这真是一个艰难的决定！"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -364,9 +357,9 @@
 		}
 		{
 			icon: "kubejs:one"
-			x: -1.5d
-			y: 11.5d
-			subtitle: "装置 44-1"
+			x: -2.5d
+			y: 12.5d
+			subtitle: "步骤 44-1"
 			description: ["3-2、4÷4、8-7……？一共有21种方法算出1。你会选择什么？"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -390,9 +383,9 @@
 		}
 		{
 			icon: "kubejs:two"
-			x: -0.5d
-			y: 11.5d
-			subtitle: "装置 44-2"
+			x: -1.5d
+			y: 12.5d
+			subtitle: "步骤 44-2"
 			description: ["3-1、8÷4、1+1……？总共有17种方式算出2。你最喜欢什么？"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -416,9 +409,9 @@
 		}
 		{
 			icon: "kubejs:four"
-			x: 0.5d
-			y: 11.5d
-			subtitle: "装置 44-3"
+			x: -0.5d
+			y: 12.5d
+			subtitle: "步骤 44-3"
 			description: ["6-2、2×2、3+1……？一共有16种方式算出4。请作出明智的选择。"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -442,9 +435,9 @@
 		}
 		{
 			icon: "kubejs:five"
-			x: 1.5d
-			y: 11.5d
-			subtitle: "装置 44-4"
+			x: 0.5d
+			y: 12.5d
+			subtitle: "步骤 44-4"
 			description: ["3+2、6-1、8-3……？一共有14种方式算出5。你想怎么做？"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -468,9 +461,9 @@
 		}
 		{
 			icon: "kubejs:six"
-			x: 2.5d
-			y: 11.5d
-			subtitle: "装置 44-5"
+			x: 1.5d
+			y: 12.5d
+			subtitle: "步骤 44-5"
 			description: ["3×2、3+3、8-2……？一共有16种方式算出6。祝你一切顺利。"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -494,9 +487,9 @@
 		}
 		{
 			icon: "kubejs:seven"
-			x: 3.5d
-			y: 11.5d
-			subtitle: "装置 44-6"
+			x: 2.5d
+			y: 12.5d
+			subtitle: "步骤 44-6"
 			description: ["9-2、4+3、8-1……？总共有14种方式算出7。手气不错？"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -520,9 +513,9 @@
 		}
 		{
 			icon: "kubejs:nine"
-			x: 4.5d
-			y: 11.5d
-			subtitle: "装置 44-7"
+			x: 3.5d
+			y: 12.5d
+			subtitle: "步骤 44-7"
 			description: ["3×3、4+5、8+1……？一共有15种方式算出9。选择权在你。"]
 			dependencies: [
 				"5550A3E383EFEC90"
@@ -546,10 +539,10 @@
 		}
 		{
 			title: "升级垃圾桶"
-			icon: "appliedenergistics2:matter_ball"
-			x: 2.0d
-			y: 3.0d
-			subtitle: "装置 41"
+			icon: "ae2:matter_ball"
+			x: 1.0d
+			y: 4.0d
+			subtitle: "步骤 41"
 			description: [
 				"火箭设备是由轻质且坚固的材料——物质塑料制成的。物质球可以在物质聚合器中产生。"
 				""
@@ -560,13 +553,13 @@
 			id: "3CBED6B591BCEDEA"
 			tasks: [
 				{
-					id: "245415CFAEFCA7ED"
+					id: "48216CB398BC25AF"
 					type: "item"
-					item: "appliedenergistics2:matter_ball"
+					item: "ae2:matter_ball"
 					consume_items: false
 				}
 				{
-					id: "0811C927283EE155"
+					id: "1BB7AB0880074729"
 					type: "checkmark"
 					title: "已自动化"
 				}
@@ -574,8 +567,8 @@
 		}
 		{
 			title: "昂贵砖块 II"
-			x: 2.0d
-			y: 4.5d
+			x: 1.0d
+			y: 5.5d
 			shape: "circle"
 			description: ["在超级加热时压缩物质球就会得到物质塑料。你会需要一些的。"]
 			dependencies: [
@@ -593,10 +586,10 @@
 		{
 			title: "黑色黄金"
 			icon: "thermal:crude_oil_bucket"
-			x: -2.5d
-			y: 8.0d
+			x: -4.0d
+			y: 9.0d
 			shape: "circle"
-			description: ["为了给火箭提供动力，我们需要一些强力的燃料。你可以在一些温暖的生物群系中寻找原油的来源，它不容错过。"]
+			description: ["为了给火箭提供动力，我们需要一些强力的燃料。你可以使用&6原油探测器&r寻找原油的来源，它不容错过。"]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "4761DAE59CDD93AF"
@@ -625,8 +618,8 @@
 		}
 		{
 			title: "烃分馏机 I"
-			x: -1.0d
-			y: 8.0d
+			x: -3.0d
+			y: 9.0d
 			shape: "circle"
 			description: ["原油可以在流体精炼机中被精炼为重油。"]
 			dependencies: ["4761DAE59CDD93AF"]
@@ -640,8 +633,8 @@
 		}
 		{
 			title: "烃分馏机 II"
-			x: -1.0d
-			y: 9.0d
+			x: -3.0d
+			y: 10.0d
 			shape: "circle"
 			description: ["把原油精炼为重油时，轻油将会作为副产物出现。"]
 			dependencies: ["4761DAE59CDD93AF"]
@@ -655,30 +648,42 @@
 		}
 		{
 			title: "烃分馏机 III"
-			x: 0.5d
-			y: 9.0d
+			x: -2.0d
+			y: 10.0d
 			shape: "circle"
 			subtitle: "装置 46"
-			description: ["重油和轻油都可以被精炼为航空燃油。"]
+			description: ["重油和轻油都可以被精炼为精炼燃油。"]
 			dependencies: [
 				"2BD76CB3F8BC215E"
 				"26DD1CA6A8D4E249"
 			]
 			dependency_requirement: "one_completed"
 			id: "25B76A897D97C9F1"
-			tasks: [{
-				id: "5CAC7E6BDD460233"
-				type: "item"
-				item: "thermal:refined_fuel_bucket"
-				consume_items: false
-			}]
+			tasks: [
+				{
+					id: "4B764F5639AD8054"
+					type: "item"
+					item: "createdieselgenerators:gasoline_bucket"
+					consume_items: false
+				}
+				{
+					id: "6CAA19D8BF396ADD"
+					type: "item"
+					item: "createdieselgenerators:diesel_bucket"
+					consume_items: false
+				}
+			]
 		}
 		{
 			title: "高热甜点"
-			x: 3.5d
-			y: 3.5d
+			x: 2.5d
+			y: 4.5d
 			shape: "circle"
-			description: ["制作物质塑料需要极高的温度，甚至于目前最先进的殷钢机械都达不到其所需。但是，你的烈焰人朋友可能很乐意帮你这个忙……"]
+			description: [
+				"制作物质塑料需要极高的温度，甚至于目前最先进的殷钢机械都达不到其所需。但是，你的烈焰人朋友可能很乐意帮你这个忙……"
+				""
+				"关键是他可能想要点好处。"
+			]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "6F750A66D0A559DE"
@@ -691,175 +696,140 @@
 		}
 		{
 			title: "宇航服"
-			icon: "advancedrocketry:spacehelmet"
-			x: -1.0d
-			y: 6.0d
+			icon: {
+				id: "beyond_earth:oxygen_mask"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -2.0d
+			y: 7.0d
 			shape: "circle"
-			description: ["如果你想在落地之后活下来，一套特殊的宇航服是必要的。"]
+			description: ["如果你想在落地之后活下来，一套特殊的宇航服是必要的。如果你有多余的下界合金，你可以考虑给宇航服加固下。"]
 			dependencies: ["6A156D11D983661D"]
 			id: "6BA9A176EDA001A3"
 			tasks: [
 				{
-					id: "7E45D4E589606928"
+					id: "56A2E1E0A96EACBA"
 					type: "item"
-					item: "advancedrocketry:spacehelmet"
+					item: {
+						id: "beyond_earth:space_suit"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
 					consume_items: false
 				}
 				{
-					id: "00E67717F76ABA56"
+					id: "598FED4FD472DB12"
 					type: "item"
-					item: "advancedrocketry:spacechest"
+					item: {
+						id: "beyond_earth:space_pants"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
 					consume_items: false
 				}
 				{
-					id: "3D1FB475F19FB099"
+					id: "589FEF2FC0E28BB2"
 					type: "item"
-					item: "advancedrocketry:spaceleggings"
+					item: {
+						id: "beyond_earth:space_boots"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
 					consume_items: false
 				}
 				{
-					id: "29F72399D75E555C"
+					id: "3AE9047B212D4AE9"
 					type: "item"
-					item: "advancedrocketry:spaceboots"
+					item: {
+						id: "beyond_earth:oxygen_mask"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
 					consume_items: false
 				}
 			]
 		}
 		{
-			title: "去哪儿？"
-			x: 3.5d
-			y: 9.0d
+			title: "记得呼吸"
+			x: 2.4261904761904702d
+			y: 9.590476190476195d
 			shape: "circle"
-			description: ["为了让你的导航电脑知道你的目的地，一个星球ID芯片是必要的。"]
+			description: ["为了让你在太空中有喘息之地，一个空间站是必要的。"]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "462CE0A4C80442FB"
 			tasks: [{
-				id: "4036EE2984EFEA1A"
+				id: "38E9BC3E7DB087E2"
 				type: "item"
-				item: {
-					id: "advancedrocketry:planet_id_chip"
-					Count: 1b
-					tag: {
-						dimId: "custommoon:moon"
-						DimensionName: " The Moon "
-					}
-				}
+				item: "beyond_earth:oxygen_bubble_distributor"
 				consume_items: false
 			}]
 		}
 		{
 			title: "电解"
-			icon: "advancedrocketry:oxygencharger"
-			x: 0.5d
-			y: 6.0d
+			icon: "beyond_earth:oxygen_loader"
+			x: -0.5d
+			y: 7.0d
 			shape: "circle"
-			subtitle: "装置 48"
-			description: [
-				"为了填充氧气罐，你可以站在一个内部存有氧气的充气台上。"
-				""
-				"通过加热搅拌将水分离为其成分，就可以得到你需要的氧。"
-			]
+			subtitle: "步骤 48"
+			description: ["通过加热搅拌将水分离为其成分，就可以得到你需要的氧。"]
 			dependencies: ["6A156D11D983661D"]
 			id: "3AD7553F3C8593F9"
 			tasks: [
 				{
-					id: "045DB251DB8BB97F"
+					id: "1887BEF1D5E0336A"
 					type: "item"
-					item: "advancedrocketry:oxygencharger"
+					item: "beyond_earth:oxygen_tank"
 					consume_items: false
 				}
 				{
-					id: "23140AC17E9BE946"
+					id: "68DF42669BD15D28"
 					type: "item"
-					item: "advancedrocketry:bucketoxygen"
-					count: 4L
+					item: "beyond_earth:oxygen_loader"
 					consume_items: false
 				}
 			]
 		}
 		{
 			title: "发射台结构"
-			icon: "advancedrocketry:launchpad"
-			x: 2.0d
-			y: 6.0d
+			icon: "beyond_earth:rocket_launch_pad"
+			x: 1.0d
+			y: 7.0d
 			shape: "circle"
-			subtitle: "装置 49"
+			subtitle: "步骤 49"
 			description: [
 				"火箭的发射台需要特殊的材料和加固构成。"
 				""
-				"为了解具体的建造引导，你可以进入导航电脑的思索情景，或使用以下命令："
 				""
-				"&6/c ponder advancedrocketry:guidancecomputer"
+				"使用时，需要搭建成3x3的正方形，结构正确时中心方块会凸起。"
 			]
 			dependencies: ["6A156D11D983661D"]
 			id: "4800892E1E70648D"
-			tasks: [
-				{
-					id: "1F86655043929A18"
-					type: "item"
-					item: "advancedrocketry:launchpad"
-					consume_items: false
-				}
-				{
-					id: "2BC9E126D403902B"
-					type: "item"
-					item: "advancedrocketry:structuretower"
-					consume_items: false
-				}
-				{
-					id: "3D2474BE8BAE28D1"
-					type: "item"
-					item: "advancedrocketry:rocketassembler"
-					consume_items: false
-				}
-			]
-			rewards: [{
-				id: "6023AC8699FE1451"
-				type: "command"
-				title: "打开思索情景"
-				icon: {
-					id: "occultism:book_of_calling_djinni_manage_machine"
-					Count: 1b
-					tag: {
-						spiritName: "Zedzeraeus"
-					}
-				}
-				team_reward: false
-				command: "/c ponder advancedrocketry:guidancecomputer"
-				player_command: true
+			tasks: [{
+				id: "08BC34B95D7F8F34"
+				type: "item"
+				item: "beyond_earth:rocket_launch_pad"
+				count: 9L
+				consume_items: false
 			}]
-		}
-		{
-			title: "无管道填充"
-			icon: "libvulpes:linker"
-			x: 5.0d
-			y: 6.0d
-			shape: "circle"
-			description: ["为了给火箭填充燃料，你需要一些额外的小工具。关于具体用法，请参考导航电脑的思索情景。"]
-			dependencies: ["6A156D11D983661D"]
-			id: "1AE7B6CA4D1DBA6F"
-			tasks: [
-				{
-					id: "4D0D4FCDA84500F4"
-					type: "item"
-					item: "advancedrocketry:fuelingstation"
-					consume_items: false
-				}
-				{
-					id: "0CA84D5F0130C60E"
-					type: "item"
-					item: "libvulpes:linker"
-					consume_items: false
-				}
-			]
 		}
 		{
 			title: "运算符"
 			icon: "kubejs:plus"
-			x: 2.0d
-			y: 14.0d
-			subtitle: "装置 43-2"
+			x: 1.0d
+			y: 15.0d
+			subtitle: "步骤 43-2"
 			description: ["没有运算符，数据中心的数字就无法组合到一起而产生其它的数字。你需要为你的计算装置自动提供任何它们需要的运算符。"]
 			dependencies: ["70D563EF30E9CB97"]
 			id: "4E85C8A2EEEB57C3"
@@ -897,16 +867,15 @@
 		}
 		{
 			title: "飞船"
-			icon: "advancedrocketry:fueltank"
-			x: 3.5d
-			y: 6.0d
+			icon: "beyond_earth:steel_tank"
+			x: 2.5d
+			y: 7.0d
 			shape: "circle"
-			subtitle: "装置 &b50"
+			subtitle: "步骤 &b50"
 			description: [
-				"当你的发射台准备就绪，是时候搭建你的飞船了。"
+				"当你的发射台准备就绪，是时候搭建你的飞船了，其中最重要的是下界钢防火层。"
 				""
 				"尽你最大的努力，毕竟这是你的最终目标。"
-				"&7尽量保证你的火箭颜色单一——即使是有MOD的情况下，最好避免在这里使用一些需要特殊渲染的方块。如果游戏在此阶段崩溃，那么后果将是毁灭性的。"
 			]
 			dependencies: [
 				"6A156D11D983661D"
@@ -915,24 +884,96 @@
 			id: "73473DC7269EC5B0"
 			tasks: [
 				{
-					id: "5A1CC7C1BAFFABBC"
+					id: "6ED8ECC31B62B4A9"
 					type: "item"
-					item: "advancedrocketry:rocketmotor"
+					item: "beyond_earth:rocket_nose_cone"
 					consume_items: false
 				}
 				{
-					id: "303C6C7B357D47D9"
+					id: "0D907D631B901D35"
 					type: "item"
-					item: "advancedrocketry:fueltank"
+					item: "beyond_earth:rocket_fin"
 					consume_items: false
 				}
 				{
-					id: "5140EF835413E2FC"
+					id: "0D48307598BD2D81"
 					type: "item"
-					item: "advancedrocketry:seat"
+					item: "beyond_earth:steel_tank"
+					consume_items: false
+				}
+				{
+					id: "155E056FB67FEA15"
+					type: "item"
+					item: "beyond_earth:compressed_steel"
+					consume_items: false
+				}
+				{
+					id: "347AB49A286633F2"
+					type: "item"
+					item: "beyond_earth:steel_engine"
+					consume_items: false
+				}
+				{
+					id: "40473B272757353C"
+					type: "item"
+					item: "createbigcannons:very_large_steel_cannon_layer"
 					consume_items: false
 				}
 			]
+			rewards: [{
+				id: "63C596DBBDF23B36"
+				type: "item"
+				item: "vanillacookbook:neapolitan_ice_cream"
+			}]
+		}
+		{
+			icon: {
+				id: "beyond_earth:rover"
+				Count: 1b
+				tag: { }
+			}
+			x: 4.0d
+			y: 7.0d
+			shape: "circle"
+			description: ["外星代步工具。"]
+			dependencies: ["6A156D11D983661D"]
+			optional: true
+			id: "13E3B63C2D69BBC9"
+			tasks: [
+				{
+					id: "06D1C5D22D18E554"
+					type: "item"
+					item: {
+						id: "beyond_earth:rover"
+						Count: 1b
+						tag: { }
+					}
+					consume_items: false
+				}
+				{
+					id: "0C395B7D50CDFD7F"
+					type: "checkmark"
+					title: "确认"
+				}
+			]
+		}
+		{
+			title: "烃分馏机 IV"
+			x: -1.0d
+			y: 10.0d
+			shape: "circle"
+			description: ["精炼油可以被加工成航天燃油。"]
+			dependencies: [
+				"25B76A897D97C9F1"
+				"47965C310D9847DC"
+			]
+			id: "146AB3E314AA39B3"
+			tasks: [{
+				id: "589110962F215DA7"
+				type: "item"
+				item: "beyond_earth:fuel_bucket"
+				consume_items: false
+			}]
 		}
 	]
 	quest_links: [ ]
