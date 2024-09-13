@@ -47,7 +47,7 @@
 					id: "0A6DEF2E19943F9F"
 					type: "item"
 					auto: "enabled"
-					item: "kubejs:trade_card_exchange_currencies"
+					item: "kubejs:trade_card_exchange_currencies_b"
 				}
 				{
 					id: "3D6C47FD645D7471"
