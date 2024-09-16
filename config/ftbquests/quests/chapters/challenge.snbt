@@ -46,7 +46,7 @@
 			y: 2.0d
 			shape: "square"
 			subtitle: "火药的味道"
-			description: ["搭建上述所有弹药的全自动生产线。"]
+			description: ["能够武装整个世界的弹药产线。"]
 			hide_dependency_lines: true
 			dependencies: ["58E321BA4B90929F"]
 			optional: true
@@ -99,7 +99,7 @@
 			x: 1.0d
 			y: 2.0d
 			subtitle: "梦幻世界"
-			description: ["尝试搭建&6巧克力&r自动化生产线。"]
+			description: ["想象一片由巧克力制成的大海。"]
 			hide_dependency_lines: true
 			dependencies: ["58E321BA4B90929F"]
 			optional: true
