@@ -1947,6 +1947,12 @@
 					item: "kubejs:crushed_ostrum_ore"
 					count: 5L
 				}
+				{
+					id: "090AC1C3C03BD105"
+					type: "item"
+					item: "kubejs:crushed_calorite_ore"
+					count: 5L
+				}
 			]
 			rewards: [{
 				id: "11BA90EB37F2BFFB"
