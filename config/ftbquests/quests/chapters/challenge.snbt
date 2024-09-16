@@ -55,7 +55,11 @@
 				{
 					id: "094A2E17F8B29BF9"
 					type: "item"
-					item: "cgm:advanced_bullet"
+					item: {
+						id: "createbigcannons:machine_gun_round"
+						Count: 1b
+						tag: { }
+					}
 					consume_items: false
 				}
 				{
