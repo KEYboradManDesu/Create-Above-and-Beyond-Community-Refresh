@@ -920,11 +920,6 @@
 					consume_items: false
 				}
 			]
-			rewards: [{
-				id: "63C596DBBDF23B36"
-				type: "item"
-				item: "vanillacookbook:neapolitan_ice_cream"
-			}]
 		}
 		{
 			icon: {
