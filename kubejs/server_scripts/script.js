@@ -384,6 +384,13 @@ event.recipes.createCrushing([Item.of(AC('neptunium_ingot', 2)), Item.of(AC('nep
 event.replaceInput({ id: "architects_palette:withered_bone_block" }, AP('withered_bone'), TC('necrotic_bone'))
 event.remove({ id: "architects_palette:withered_bone" })
 
+event.recipes.createMixing([Fluid.of('create_confectionery:ruby_chocolate', 250)], [
+	Item.of('minecraft:sugar'), 
+	Item.of('minecraft:cocoa_beans'), 
+	Fluid.of('create_central_kitchen:dragon_breath', 250),
+	Fluid.of('minecraft:milk', 250)
+]).heated()
+
 // event.remove({ output: TC('obsidian_pane') })
 // event.shaped(TC('obsidian_pane', 8), [
 // 		'SSS',
