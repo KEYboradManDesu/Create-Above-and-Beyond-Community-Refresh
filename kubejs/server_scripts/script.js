@@ -344,6 +344,15 @@ event.replaceInput({ id: MC("hopper") }, F('#ingots/iron'), TE('lead_plate'))//�
 event.remove({ id: TE("augments/item_filter_augment") })
 event.shapeless(TE("item_filter_augment"), [CR("filter"), TE("lapis_gear")])
 
+event.shaped(KJ("press_rod_die"), [
+	' S ',
+	'SMS',
+	' S '
+], {
+	M: 'createaddition:gold_rod',
+	S: TE("invar_plate")
+})
+
 //绳子
 event.shapeless('supplementaries:rope', ['#supplementaries:ropes'])
 
