@@ -274,7 +274,7 @@ bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
 bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
 bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
 bedrock_cobblegen(AP("packed_ice_pillar"), MC("dripstone_block"))
-bedrock_cobblegen('chipped:blue_ice_1', CR("limestone"))
+bedrock_cobblegen('minecraft:honey_block', CR("limestone"))
 bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 
 // 前期优化游戏体验
@@ -1702,6 +1702,10 @@ event.remove({ id: TC('compat/create/andesite_alloy_zinc') })
 event.remove({ id: TC('compat/create/andesite_alloy_iron') })
 event.remove({ id: 'create_dd:industrial_iron/andesite_alloy' })
 event.remove({ id: 'create_dd:industrial_iron/andesite_alloy_mixing' })
+
+// 滴水石块
+event.recipes.createCompacting([MC('dripstone_block')], [CR('limestone'), Fluid.of(MC("water"), 500)])
+event.recipes.createSplashing([Item.of(MC("dripstone_block"))], CRD('weathered_limestone'))
 
 event.remove({ output: AP('algal_brick') })
 event.smelting(AP('algal_brick'), AP('algal_blend')).xp(0).cookingTime(120)
