@@ -35,6 +35,9 @@ let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
 let CRCO = (id, x) => MOD("create_confectionery", id, x)
+let TCO = (id, x) => MOD("tools_complement", id, x)
+let CGM = (id, x) => MOD("cgm", id, x)
+let CRB = (id, x) => MOD("createbigcannons", id, x)
 //
 
 
@@ -263,7 +266,7 @@ onEvent('item.registry', event => {
 		{ in: CRCO('black_chocolate_glazed_berries', 16), out: S(6) },
 		{ in: CRCO('honey_candy', 16), out: S(4) },
 		{ in: CRCO('candy_cane', 16), out: S(4) },
-		{ in: CRCO('gingerbread_man', 16), out: S(4) },
+		{ in: CRCO('gingerbread_man', 16), out: S(8) },
 		{ in: CRCO('hot_chocolate_bottle', 8), out: S(4) },
 		{ in: CRCO('soothing_hot_chocolate', 8), out: S(8) },
 		{ in: CRCO('marshmallow', 16), out: S(4) }
@@ -312,20 +315,34 @@ onEvent('item.registry', event => {
 	])
 
 	profession("铁匠", "Smithing", 0xFFC93C, 0xFF7A00, [
-		// { in: MC('iron_boots'), out: S(2) },
-		// { in: MC('iron_leggings'), out: S(4) },
-		// { in: MC('iron_chestplate'), out: S(4) },
+		{ in: MC('iron_boots'), out: S(2) },
+		{ in: MC('iron_leggings'), out: S(4) },
+		{ in: MC('iron_chestplate'), out: S(4) },
+		{ in: MC('iron_helmet'), out: S(3) },
+
+		{ in: MC('golden_boots'), out: S(4) },
+		{ in: MC('golden_leggings'), out: S(7) },
+		{ in: MC('golden_chestplate'), out: S(8) },
+		{ in: MC('golden_helmet'), out: S(5) },
+
+		{ in: TCO('tin_boots'), out: S(3) },
+		{ in: TCO('tin_leggings'), out: S(6) },
+		{ in: TCO('tin_chestplate'), out: S(7) },
+		{ in: TCO('tin_helmet'), out: S(4) },
+
 		{ in: TC('ingot_cast'), out: S(2) },
 		{ in: TC('gem_cast'), out: S(4) },
-		// { in: MC('iron_helmet'), out: S(3) },
-		// { in: MC('golden_boots'), out: S(4) },
-		// { in: MC('golden_leggings'), out: S(7) },
-		// { in: MC('golden_chestplate'), out: S(8) },
-		// { in: MC('golden_helmet'), out: S(5) },
+
 		{ in: MC('golden_apple'), out: S(10) },
 		{ in: MC('arrow', 32), out: S(3) },
-		// { in: MC('iron_sword'), out: S(1) },
-		// { in: MC('golden_sword'), out: S(2) }
+
+		{ in: MC('iron_sword'), out: S(1) },
+		{ in: MC('golden_sword'), out: S(2) },
+
+		{ in: CGM('basic_bullet', 4), out: S(4) },
+		{ in: CRB('machine_gun_round', 4), out: S(8) },
+		{ in: CGM('shell', 4), out: S(6) },
+		{ in: CGM('missile'), out: S(6) }
 	])
 
 	let DATAGEN_QUESTS = false
@@ -454,6 +471,7 @@ onEvent('item.registry', event => {
 		simple("锡锭", "Tin Ingot", CRD('tin_ingot', 8), 48, S, 0xa6bdc6, 0xdcf3f7)
 		
 		simple("安山合金", "Andesite Alloy", CR('andesite_alloy', 16), 8, S, 0x505050, 0x878787)
+		simple("硅钢", "Silica Steel", "8x moreminecarts:silica_steel", 16, S, 0x3E4644, 0xB8DAC8)
 		simple("黄铜锭", "Brass Ingot", CR('brass_ingot', 8), 48, S, 0x6F3C2D, 0xFCF085)
 		simple("殷钢锭", "Invar Ingot", TE('invar_ingot', 4), 64, S, 0x406D6C, 0xC3CAC1)
 		
