@@ -213,11 +213,6 @@
 				type: "checkmark"
 				title: "&6解锁第二章"
 			}]
-			rewards: [{
-				id: "58015A6FBF702171"
-				type: "item"
-				item: "kubejs:good_idea"
-			}]
 		}
 		{
 			title: "&f&l黄铜时代"
@@ -242,11 +237,6 @@
 				item: "create:precision_mechanism"
 				count: 64L
 				consume_items: false
-			}]
-			rewards: [{
-				id: "2BC6927C6C707808"
-				type: "item"
-				item: "kubejs:good_idea"
 			}]
 		}
 		{
