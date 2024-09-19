@@ -386,8 +386,8 @@ event.remove({ id: "architects_palette:withered_bone" })
 
 event.recipes.createMixing([Fluid.of('create_confectionery:ruby_chocolate', 250)], [
 	Item.of('minecraft:sugar'), 
-	Item.of('minecraft:cocoa_beans'), 
 	Fluid.of('create_central_kitchen:dragon_breath', 250),
+	Item.of('minecraft:cocoa_beans'), 
 	Fluid.of('minecraft:milk', 250)
 ]).heated()
 
@@ -2206,6 +2206,7 @@ redstoneTransmute(MC('paper'), TE("redprint"), "casting_table", 200)
 
 function brassMachine(event) {
 
+event.remove({ output: AE2("sky_dust") })
 event.recipes.createMilling([AE2('sky_dust'), AE2('sky_stone_block')], AE2('sky_stone_block')).processingTime(1000)
 
 event.remove({ id: CR("sequenced_assembly/precision_mechanism") })
