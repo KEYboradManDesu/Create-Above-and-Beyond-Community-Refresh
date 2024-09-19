@@ -330,6 +330,11 @@ onEvent('item.registry', event => {
 		{ in: TCO('tin_chestplate'), out: S(7) },
 		{ in: TCO('tin_helmet'), out: S(4) },
 
+		{ in: TCO('lead_boots'), out: S(3) },
+		{ in: TCO('lead_leggings'), out: S(6) },
+		{ in: TCO('lead_chestplate'), out: S(7) },
+		{ in: TCO('lead_helmet'), out: S(4) },
+
 		{ in: TC('ingot_cast'), out: S(2) },
 		{ in: TC('gem_cast'), out: S(4) },
 
