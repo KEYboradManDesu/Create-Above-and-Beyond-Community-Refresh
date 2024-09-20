@@ -2080,10 +2080,8 @@ function electronTube(event) {
 
 event.recipes.createFilling(CR("electron_tube"), [CR('polished_rose_quartz'), Fluid.of(TC('molten_iron'), 20)])
 
-event.recipes.createSandpaperPolishing(AE2('certus_quartz_crystal'), [KJ('raw_certus_quartz_crystal')])
-
 let redstone = MC('redstone')
-event.shapeless('create:rose_quartz', [[MC('quartz'), KJ('raw_certus_quartz_crystal') , AE2('certus_quartz_crystal'), AE2('charged_certus_quartz_crystal')], redstone, redstone, redstone, redstone])
+event.shapeless('create:rose_quartz', [[MC('quartz'), AE2('certus_quartz_crystal'), AE2('charged_certus_quartz_crystal')], redstone, redstone, redstone, redstone])
 
 event.remove({ id: CR('compat/ae2/milling/sky_stone_block') })
 event.remove({ id: CR('compat/ae2/milling/nether_quartz') })
