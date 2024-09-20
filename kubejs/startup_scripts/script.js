@@ -66,7 +66,8 @@ event.create('tiny_fluix_crystal').texture("ae2:item/crystal_seed_fluix2").displ
 event.create('growing_tiny_fluix_crystal', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_fluix2").displayName('微型福鲁伊克斯石英')
 event.create('small_fluix_crystal').texture("ae2:item/crystal_seed_fluix3").displayName('小块福鲁伊克斯石英')
 event.create('growing_small_fluix_crystal', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_fluix3").displayName('小块福鲁伊克斯石英')
-event.create('purified_certus_quartz_crystal').texture("kubejs:item/quartz/purified_certus_quartz_crystal").displayName('高纯赛特斯石英水晶')
+// event.create('purified_certus_quartz_crystal').texture("kubejs:item/quartz/purified_certus_quartz_crystal").displayName('高纯赛特斯石英水晶')
+// event.create('raw_certus_quartz_crystal').texture("kubejs:item/quartz/certus_quartz_crystal").displayName('原始赛特斯石英水晶')
 
 // let types = ['Certus', 'Fluix']
 // 	types.forEach(e => {
