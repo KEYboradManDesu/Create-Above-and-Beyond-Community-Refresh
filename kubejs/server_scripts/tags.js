@@ -148,6 +148,9 @@ event.get('forge:dusts/niter')
 event.get('forge:plates/bronze').add('create_dd:bronze_sheet')
 event.get('forge:ingots/bronze').add('create_dd:bronze_ingot')
 
+event.get('forge:gems').add('kubejs:purified_certus_quartz_crystal')
+event.get('forge:gems/certus_quartz').add('kubejs:purified_certus_quartz_crystal')
+
 })
 
 onEvent('fluid.tags', event => {
