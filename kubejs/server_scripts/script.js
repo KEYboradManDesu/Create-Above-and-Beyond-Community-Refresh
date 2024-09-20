@@ -1789,21 +1789,6 @@ wood_types.forEach(wood => {
 })
 // tips这个待翻新
 
-// 安山合金齿轮
-event.custom({
-	"type": "vintageimprovements:curving",
-	"itemAsHead": "thermal:press_gear_die",
-	"ingredients": [
-		{
-		  "item": "create:andesite_alloy"
-		}
-	],
-	"results": [
-		{
-		  "item": "kubejs:andesite_alloy_gear"
-		}
-	]
-})
 // 无序合成
 event.shapeless(KJ('andesite_alloy_gear'), [
 	F('#saws'), 
@@ -4022,6 +4007,8 @@ event.remove({ output: "create_dd:integrated_mechanism" });
 event.remove({ output: "create_dd:infernal_mechanisms" });
 event.remove({ output: "create_dd:inductive_mechanism" });
 event.remove({ output: "create_dd:calculation_mechanism" });
+event.remove({ output: "create_dd:crafting_inductive_mechanism1" });
+event.remove({ output: "create_dd:crafting_inductive_mechanism2" });
 
 const dontReplaceMe = {
 	
@@ -4253,6 +4240,28 @@ function unifyAllTheMetal(
     
     processing(obj, event);
 };
+
+unifyAllTheMetal(
+    "andesite_alloy",
+    "",
+    "",
+    "",
+    "",
+    "create:andesite_alloy_block",
+    "create:andesite_alloy",
+    "",
+    "",
+    "",
+    "",
+    "kubejs:andesite_alloy_gear",
+    "create_dd:andesite_sheet",
+    "vintageimprovements:andesite_rod",
+    "",
+    "vintageimprovements:andesite_wire",
+    "vintageimprovements:andesite_spring",
+    "",
+    ""
+);
 
 unifyAllTheMetal(
     "amethyst_bronze",
