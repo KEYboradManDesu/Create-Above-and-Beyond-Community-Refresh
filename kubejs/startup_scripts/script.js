@@ -16,8 +16,9 @@ event.create('minus_cast').texture("kubejs:item/minus_cast").displayName('运算
 event.create('multiply_cast').texture("kubejs:item/multiply_cast").displayName('运算符铸模 (x)').unstackable()
 event.create('divide_cast').texture("kubejs:item/divide_cast").displayName('运算符铸模 (÷)').unstackable()
 event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").displayName('计算矩阵').unstackable().rarity(RARITY_EPIC)
-event.create('programming_matrix').parentModel("kubejs:item/programming_matrix").displayName('§c编程矩阵§r').maxStackSize(4)
-event.create('energy_matrix').parentModel("kubejs:item/energy_matrix_c").displayName('§6能量矩阵§r').maxStackSize(2)
+// event.create('programming_matrix').parentModel("kubejs:item/programming_matrix").displayName('§c编程矩阵§r').maxStackSize(4)
+// event.create('energy_matrix').parentModel("kubejs:item/energy_matrix_c").displayName('§6能量矩阵§r').maxStackSize(2)
+
 // 数字
 event.create('zero').texture("kubejs:item/math/zero").displayName('0').glow(true).rarity(RARITY_UNCOMMON)
 event.create('one').texture("kubejs:item/math/one").displayName('1').glow(true).rarity(RARITY_UNCOMMON)
@@ -78,7 +79,7 @@ event.create('growing_small_fluix_crystal', 'create:sequenced_assembly').texture
 // 	event.create('growing_small_' + id + '_crystal', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id + "3").displayName('小块' + e + '石英水晶')
 // });
 
-event.create('purified_nether_quartz_crystal').texture("kubejs:item/quartz/purified_nether_quartz_crystal").displayName('高纯下界石英水晶')
+// event.create('purified_nether_quartz_crystal').texture("kubejs:item/quartz/purified_nether_quartz_crystal").displayName('高纯下界石英水晶')
 event.create('nether_seed').texture("kubejs:item/quartz/crystal_seed_nether").displayName('下界石英种子')
 event.create('growing_nether_seed', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_nether").displayName('下界石英种子')
 event.create('tiny_nether_crystal').texture("kubejs:item/quartz/crystal_seed_nether2").displayName('微型下界石英')
@@ -86,13 +87,13 @@ event.create('growing_tiny_nether_crystal', 'create:sequenced_assembly').texture
 event.create('small_nether_crystal').texture("kubejs:item/quartz/crystal_seed_nether3").displayName('小块下界石英')
 event.create('growing_small_nether_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_nether3").displayName('小块下界石英')
 
-event.create('purified_arcane_crystal').texture("kubejs:item/quartz/purified_arcane_crystal").displayName('高纯神秘水晶')
-event.create('arcane_crystal_seed').texture("kubejs:item/quartz/crystal_seed_arcane").displayName('神秘水晶种子')
-event.create('growing_arcane_seed', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane").displayName('神秘水晶种子')
-event.create('tiny_arcane_crystal').texture("kubejs:item/quartz/crystal_seed_arcane2").displayName('微型神秘水晶')
-event.create('growing_tiny_arcane_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane2").displayName('微型神秘水晶')
-event.create('small_arcane_crystal').texture("kubejs:item/quartz/crystal_seed_arcane3").displayName('小块神秘水晶')
-event.create('growing_small_arcane_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane3").displayName('小块神秘水晶')
+// event.create('purified_arcane_crystal').texture("kubejs:item/quartz/purified_arcane_crystal").displayName('高纯神秘水晶')
+// event.create('arcane_crystal_seed').texture("kubejs:item/quartz/crystal_seed_arcane").displayName('神秘水晶种子')
+// event.create('growing_arcane_seed', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane").displayName('神秘水晶种子')
+// event.create('tiny_arcane_crystal').texture("kubejs:item/quartz/crystal_seed_arcane2").displayName('微型神秘水晶')
+// event.create('growing_tiny_arcane_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane2").displayName('微型神秘水晶')
+// event.create('small_arcane_crystal').texture("kubejs:item/quartz/crystal_seed_arcane3").displayName('小块神秘水晶')
+// event.create('growing_small_arcane_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_arcane3").displayName('小块神秘水晶')
 
 // 构件
 event.create('kinetic_mechanism').texture("kubejs:item/mechanism/kinetic_mechanism").displayName('动力构件')
@@ -194,9 +195,9 @@ event.create('dye_entangled_singularity').texture("kubejs:item/dye_entangled_sin
 event.create('arcane_golden_sheet').texture("kubejs:item/arcane_golden_sheet").displayName('神秘金板')
 event.create('andesite_alloy_gear').texture("kubejs:item/andesite_alloy_gear").displayName('安山合金齿轮')
 event.create('andesite_alloy_ingot').texture("kubejs:item/andesite_alloy_classic").displayName('安山合金锭')
-event.create('wood_gear').texture("kubejs:item/wood_gear").displayName('木齿轮')
 event.create('arcane_gold_gear').texture("kubejs:item/arcane_gold_gear").displayName('神秘金齿轮')
 event.create('matter_plastics').texture("kubejs:item/matter_plastics").displayName('物质塑料').rarity(RARITY_UNCOMMON)
+// event.create('wood_gear').texture("kubejs:item/wood_gear").displayName('木齿轮')
 // event.create('zinc_wire').texture("kubejs:item/zinc_wire").displayName('锌线')
 // event.create('nickel_wire').texture("kubejs:item/nickel_wire").displayName('镍线')
 // event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('杂酚油滴')
@@ -328,8 +329,8 @@ machine('Enderium', "cutout", "lantern", "谐振机器")
 onEvent('fluid.registry', event => {
 
 event.create("fine_sand").displayName("细砂").bucketColor(0xE3DBB0).stillTexture('kubejs:fluid/fine_sand_still').flowingTexture('kubejs:fluid/fine_sand_flow')
-event.create("egg_liquid").displayName("蛋液").bucketColor(0xFFB90F).stillTexture('kubejs:fluid/egg_liquid_still').flowingTexture('kubejs:fluid/egg_liquid_flow')
-event.create("flour_paste").displayName("面糊").bucketColor(0xFFFAF0).stillTexture('kubejs:fluid/flour_paste_still').flowingTexture('kubejs:fluid/flour_paste_flow')
+// event.create("egg_liquid").displayName("蛋液").bucketColor(0xFFB90F).stillTexture('kubejs:fluid/egg_liquid_still').flowingTexture('kubejs:fluid/egg_liquid_flow')
+// event.create("flour_paste").displayName("面糊").bucketColor(0xFFFAF0).stillTexture('kubejs:fluid/flour_paste_still').flowingTexture('kubejs:fluid/flour_paste_flow')
 event.create("waste").displayName("异彩废液").bucketColor(0x123d36).stillTexture('kubejs:fluid/waste_still').flowingTexture('kubejs:fluid/waste_flow')
 event.create("sky_stone").displayName("不稳陨石").bucketColor(0x595959).stillTexture('kubejs:fluid/sky_stone_still').flowingTexture('kubejs:fluid/sky_stone_flowing')
 // event.create("bio").displayName("生物质").bucketColor(0x474344).stillTexture('kubejs:fluid/bio_still').flowingTexture('kubejs:fluid/bio_flow')
