@@ -429,7 +429,7 @@ event.shaped(AE2('entropy_manipulator'), [
 	'  M'
 ], {
 	M: TE("lead_plate"),
-	S: AE2('#crystals/fluix')
+	S: F('#gems/fluix')
 })
 
 event.remove({ output: TC('obsidian_pane') })
