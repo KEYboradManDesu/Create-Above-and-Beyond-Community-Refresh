@@ -1719,6 +1719,10 @@ event.remove({ id: TC('compat/create/andesite_alloy_iron') })
 event.remove({ id: 'create_dd:industrial_iron/andesite_alloy' })
 event.remove({ id: 'create_dd:industrial_iron/andesite_alloy_mixing' })
 
+// 极光海带
+event.replaceInput({ id: CRD("mechanical_crafting/shimmer_bucket") }, CRD('sap_bucket'), TE('resin_bucket'))
+event.recipes.createFilling("upgrade_aquatic:polar_kelp", [MC('kelp'), Fluid.of(CRD('shimmer'), 250)])
+
 // 滴水石块
 event.recipes.createCompacting([MC('dripstone_block')], [CR('limestone'), Fluid.of(MC("water"), 500)])
 event.recipes.createSplashing([Item.of(MC("dripstone_block"))], CRD('weathered_limestone'))
@@ -1775,8 +1779,6 @@ event.shaped(Item.of(AP('algal_blend'), 8), [
 event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
 event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', MC('andesite')]])
 event.recipes.createMixing(Item.of(AP('algal_blend'), 8), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
-
-//tips可以给后期时增加新配方
 
 }
 
@@ -1921,7 +1923,6 @@ event.remove({ id: 'create_dd:compacting/crystallized_sap' })
 event.remove({ input: 'create_dd:raw_rubber' })
 event.remove({ input: 'create_dd:rubber' })
 
-
 let overrideTreeOutput = (id, trunk, leaf, fluid, count) => {
 	event.remove({ id: id })
 	event.custom({
@@ -1957,6 +1958,35 @@ event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(TE('resin'), 250)])
 event.recipes.createCompacting('1x ' + CRD("crystallized_sap"), [Fluid.of(TE('resin'), 500)])
 
 event.recipes.createEmptying(Fluid.of(TE("resin"), 500), CRD("crystallized_sap"))
+
+// 硫化橡胶
+event.custom({
+	"type":"vintageimprovements:pressurizing",
+	"secondaryFluidInput": 0,
+	"secondaryFluidOutput": 0,
+	"heatRequirement": "heated",
+	"ingredients": [ 
+		{
+			"tag": "forge:dusts/sulfur"
+		},
+		{
+			"fluid": "thermal:resin",
+			"amount": 500
+		}
+	],
+	"results": [
+		{
+			"item": "thermal:cured_rubber",
+			"count": 4
+		},
+		{
+			"fluid": "vintageimprovements:sulfur_dioxide",
+			"amount": 250
+		}
+	],
+	"processingTime": 200
+});
+
 }
 
 function copperMachine(event) {
@@ -4098,6 +4128,37 @@ event.custom({
   "damage": 2
 });
 
+// 下界残骸熔融
+event.custom({
+  "type": "tconstruct:ore_melting",
+  "rate": "metal",
+  "ingredient": {
+    "tag": "forge:ores/netherite_scrap"
+  },
+  "result": {
+    "fluid": "tconstruct:molten_debris",
+    "amount": 90
+  },
+  "temperature": 1175,
+  "time": 143,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_diamond",
+      "amount": 100,
+      "rate": "gem"
+    },
+    {
+      "fluid": "tconstruct:molten_gold",
+      "amount": 270,
+      "rate": "metal"
+    }
+  ]
+})
+
+// 硬化硝
+event.remove({ id: "createbigcannons:milling/alloy_nethersteel_cast_iron" });
+event.recipes.createMilling([Item.of('2x thermal:niter_dust')], 'createbigcannons:hardened_nitro').processingTime(100);
+
 // 硫粉
 replaceIO("#forge:dusts/sulfur", "thermal:sulfur_dust");
 event.recipes.createMilling(["thermal:sulfur_dust"], "#forge:gems/sulfur").processingTime(200);
@@ -4798,7 +4859,7 @@ unifyAllTheMetal(
     "thermal:deepslate_tin_ore",
     "thermal:raw_tin",
     "thermal:raw_tin_block",
-    "thermal:tin_block",
+    "create_dd:tin_block",
     "create_dd:tin_ingot",
     "create_dd:tin_nugget",
     "",
@@ -4952,7 +5013,7 @@ unifyAllTheMetal(
     "forbidden_arcanus:deepslate_arcane_crystal_ore",
     "",
     "",
-    "forbidden_arcanus:deepslate_arcane_crystal_ore",
+    "forbidden_arcanus:arcane_crystal_block",
     "",
     "",
     "forbidden_arcanus:arcane_crystal",
@@ -5131,11 +5192,13 @@ const processing = (obj, event) => {
 
   Dusts(obj.name, obj.crushed, obj.gem, obj.ingot, obj.dust, event);
 
-  crafting_to_Nuggets(obj.name, obj.ingot, obj.nugget, event);
+  Blocks(obj.name, obj.block, obj.fluid, obj.gem, event);
+
+  crafting_from_Nuggets(obj.name, obj.ingot, obj.nugget, event);
   tinkersIngot(obj.name, obj.ingot, obj.fluid, obj.gem, event);
   Plate_to_Ingot(obj.name, obj.plate, obj.ingot, event);
 
-  crafting_to_Ingots(obj.name, obj.ingot, obj.nugget, event);
+  crafting_from_Ingots(obj.name, obj.ingot, obj.nugget, event);
   nuggets(obj.name, obj.nugget, obj.crushed, obj.dust, obj.byproduct, event);
 };
 
@@ -5406,13 +5469,13 @@ const FiuldDust = (name, dust, gem, ingot, fluid, fluid_byproduct, event) => {
     },
     "result": {
       "fluid": fluid,
-      "amount": 90
+      "amount": gem ? 100 : 90
     },
     "temperature": 500,
     "time": 30
   });
 
-  event.recipes.createMixing([Fluid.of(fluid, 300)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+  event.recipes.createMixing([Fluid.of(fluid, gem ? 300 : 270)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
   }
 
   if (fluid_byproduct !== "") {
@@ -5428,7 +5491,7 @@ const FiuldDust = (name, dust, gem, ingot, fluid, fluid_byproduct, event) => {
 			},
 			"result": {
 				"fluid": fluid,
-				"amount": 90
+				"amount": gem ? 100 : 90
 			},
 			"temperature": 500,
 			"time": 30,
@@ -5440,7 +5503,7 @@ const FiuldDust = (name, dust, gem, ingot, fluid, fluid_byproduct, event) => {
 			]
 		});
 
-    event.recipes.createMixing([Fluid.of(fluid, 270), Fluid.of(fluid_byproduct, 30)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+    event.recipes.createMixing([Fluid.of(fluid, gem ? 300 : 270), Fluid.of(fluid_byproduct, 30)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
   }
 
   if (ingot !== "") {
@@ -5729,6 +5792,11 @@ const Dusts = (name, crushed, gem, ingot, dust, event) => {
     output: `#forge:dusts/${name}`,
   });
 
+  event.remove({
+    type: "thermal:pulverizer",
+    output: `#forge:dusts/${name}`,
+  });
+
   if (crushed !== "") {
   
     event.recipes.createMilling( [
@@ -5744,7 +5812,7 @@ const Dusts = (name, crushed, gem, ingot, dust, event) => {
   }
 
   if (ingot !== "") {
-    event.recipes.createMilling([dust], `#forge:ingots/${name}`);
+    event.recipes.createMilling([Item.of(dust).withChance(0.5)], `#forge:ingots/${name}`);
   }
 
   if (gem !== "") {
@@ -5753,9 +5821,25 @@ const Dusts = (name, crushed, gem, ingot, dust, event) => {
 
 };
 
+// 块
+const Blocks = (name, item, fluid, gem, event) => {
+  if (item === "" || fluid === "") return;
+
+  event.remove({
+    output: `#forge:storage_blocks/${name}`,
+    type: "tconstruct:casting_basin",
+  });
+
+  event.recipes
+    .tconstructCastingBasin(Item.of(item), fluid, gem ? 900 : 810)
+	.noCast()
+    .coolingTime(200)
+    .id(`unify:tconstruct/storage_block/${name}`);
+};
+
 // 锭
 
-const crafting_to_Nuggets = (name, ingot, nugget, event) => {
+const crafting_from_Nuggets = (name, ingot, nugget, event) => {
   if (ingot === "" || nugget === "") return;
 
   event.remove({
@@ -5809,7 +5893,7 @@ const Plate_to_Ingot = (name, plate, ingot, event) => {
 
 // 粒
 
-const crafting_to_Ingots = (name, ingot, nugget, event) => {
+const crafting_from_Ingots = (name, ingot, nugget, event) => {
 	if (ingot === "" || nugget === "") return;
   
 	event.remove({
