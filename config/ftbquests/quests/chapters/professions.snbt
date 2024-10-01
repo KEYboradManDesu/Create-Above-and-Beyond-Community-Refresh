@@ -14,17 +14,18 @@
 				id: "tconstruct:pickaxe"
 				Count: 1b
 				tag: {
+					tic_persistent: { }
 					tic_stats: {
 						"tconstruct:attack_speed": 1.2f
 						"tconstruct:mining_speed": 7.475f
-						"tconstruct:attack_damage": 2.25f
+						"tconstruct:attack_damage": 3.25f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 721.0f
 					}
 					tic_broken: 0b
 					tic_modifiers: [
 						{
-							name: "tconstruct:piercing"
+							name: "tconstruct:pierce"
 							level: 1s
 						}
 						{
@@ -46,7 +47,7 @@
 						"tconstruct:electrum"
 					]
 					Damage: 0
-					tic_persistent_data: {
+					tic_volatile_data: {
 						abilities: 1
 						upgrades: 3
 					}
@@ -90,6 +91,7 @@
 				id: "tconstruct:kama"
 				Count: 1b
 				tag: {
+					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:attack_damage": 0.5f
 					}
@@ -102,6 +104,10 @@
 					}
 					tic_broken: 0b
 					tic_modifiers: [
+						{
+							name: "tconstruct:tilling"
+							level: 1s
+						}
 						{
 							name: "tconstruct:maintained"
 							level: 1s
@@ -129,7 +135,7 @@
 						"tconstruct:electrum"
 					]
 					Damage: 0
-					tic_persistent_data: {
+					tic_volatile_data: {
 						abilities: 1
 						upgrades: 3
 					}
@@ -173,6 +179,7 @@
 				id: "tconstruct:hand_axe"
 				Count: 1b
 				tag: {
+					tic_persistent: { }
 					tic_stats: {
 						"tconstruct:attack_speed": 0.9f
 						"tconstruct:mining_speed": 7.475f
@@ -182,6 +189,10 @@
 					}
 					tic_broken: 0b
 					tic_modifiers: [
+						{
+							name: "tconstruct:stripping"
+							level: 1s
+						}
 						{
 							name: "tconstruct:maintained"
 							level: 1s
@@ -194,18 +205,6 @@
 							name: "tconstruct:experienced"
 							level: 1s
 						}
-						{
-							name: "tconstruct:stripping"
-							level: 1s
-						}
-						{
-							name: "tconstruct:axe_scrape"
-							level: 1s
-						}
-						{
-							name: "tconstruct:axe_wax_off"
-							level: 1s
-						}
 					]
 					tic_materials: [
 						"tconstruct:bronze"
@@ -213,7 +212,7 @@
 						"tconstruct:electrum"
 					]
 					Damage: 0
-					tic_persistent_data: {
+					tic_volatile_data: {
 						abilities: 1
 						upgrades: 3
 					}
@@ -298,6 +297,7 @@
 				id: "tconstruct:sledge_hammer"
 				Count: 1b
 				tag: {
+					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:mining_speed": 0.4f
 						"tconstruct:attack_damage": 1.35f
@@ -336,7 +336,7 @@
 						"tconstruct:bronze"
 					]
 					Damage: 0
-					tic_persistent_data: {
+					tic_volatile_data: {
 						abilities: 1
 						upgrades: 2
 					}
@@ -380,6 +380,7 @@
 				id: "tconstruct:sword"
 				Count: 1b
 				tag: {
+					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:mining_speed": 0.5f
 						"tconstruct:durability": 1.1f
@@ -412,7 +413,7 @@
 						"tconstruct:constantan"
 					]
 					Damage: 0
-					tic_persistent_data: {
+					tic_volatile_data: {
 						abilities: 1
 						upgrades: 3
 					}

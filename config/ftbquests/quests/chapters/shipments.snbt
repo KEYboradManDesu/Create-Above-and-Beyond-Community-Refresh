@@ -1662,7 +1662,7 @@
 		}
 		{
 			title: "8x 赛特斯石英"
-			icon: "kubejs:purified_certus_quartz_crystal"
+			icon: "ae2:certus_quartz_crystal"
 			disable_toast: true
 			x: 1.0d
 			y: 9.0d
