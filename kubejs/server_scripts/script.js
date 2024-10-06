@@ -4040,6 +4040,13 @@ event.remove({ output: "create_dd:calculation_mechanism" });
 event.remove({ output: "create_dd:crafting_inductive_mechanism1" });
 event.remove({ output: "create_dd:crafting_inductive_mechanism2" });
 
+event.remove({ id: "createbigcannons:melting/melt_bronze_block" });
+event.remove({ id: "createbigcannons:melting/melt_bronze_ingot" });
+event.remove({ id: "createbigcannons:melting/melt_bronze_nugget" });
+event.remove({ id: "createbigcannons:melting/melt_steel_block" });
+event.remove({ id: "createbigcannons:melting/melt_steel_ingot" });
+event.remove({ id: "createbigcannons:melting/melt_steel_nugget" });
+
 const dontReplaceMe = {
 	
     not: [
