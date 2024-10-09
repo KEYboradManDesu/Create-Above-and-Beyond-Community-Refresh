@@ -165,7 +165,6 @@ event.remove({ id: /thermal:machine\/smelter\/.*dust/ })
 event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
 event.remove({ id: "tconstruct:tables/tinkers_forge" })
 event.remove({ id: "tconstruct:tables/scorched_forge" })
-event.remove({ id: /tconstruct:smeltery\/.*\/tin.*/ })
 event.remove({ id: /ae2:tools\/paintballs.*/ })
 event.remove({ id: "grapplemod:repeller" })
 event.remove({ id: "grapplemod:forcefieldupgradeitem" })
@@ -1669,7 +1668,7 @@ event.remove({ id: 'minecraft:netherite_ingot' })
 
 
 // 青铜
-event.recipes.createMixing(Fluid.of(TC('molten_bronze'), 5), [
+event.recipes.createMixing(Fluid.of(TC('molten_bronze'), 10), [
 	Fluid.of(TC('molten_copper'), 5), 
 	Fluid.of(TC('molten_tin'), 5)
 ]).processingTime(1)
