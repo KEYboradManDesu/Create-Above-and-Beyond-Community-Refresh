@@ -271,6 +271,9 @@ event.remove({ input: 'projectred_core:infused_silicon' })
 event.remove({ input: 'projectred_core:energized_silicon' })
 event.remove({ input: 'projectred_core:electrotine_silicon' })
 
+// No more FREE INDUSTRIAL IRON BLOCKS FOR EVERYONE. :(
+event.remove({ output: CR('industrial_iron_block'), type: 'minecraft:stonecutting'}) 
+
 
 }
 
