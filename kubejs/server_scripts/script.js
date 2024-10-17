@@ -5231,7 +5231,7 @@ const processing = (obj, event) => {
   FiuldNugget(obj.nugget, obj.fluid, event);
   FiuldBlock(obj.block, obj.gem, obj.ingot, obj.fluid, event);
   FiuldGem(obj.gem, obj.fluid, event);
-  FiuldGear(obj.name, obj.gear, obj.fluid, event);
+  FiuldGear(obj.name, obj.ingot, obj.gem, obj.gear, obj.fluid, event);
 
   Crusheds(obj.name, obj.crushed, obj.gem, obj.ore, obj.deepslateOre, obj.rawOre, obj.rawOreBlock, event);
 
@@ -5695,7 +5695,7 @@ const FiuldGem = (gem, fluid, event) => {
   });
 
 };
-const FiuldGear = (name, gear, fluid, event) => {
+const FiuldGear = (name, ingot, gem, gear, fluid, event) => {
   if (gear === "" || fluid === "") return;
 
   event.remove({
@@ -5703,27 +5703,88 @@ const FiuldGear = (name, gear, fluid, event) => {
     input: `#forge:gears/${name}`,
   });
 
-  event.custom({
-    "type": "tconstruct:melting",
-    "conditions": [
-      {
-        "value": {
-          "item": gear,
-          "type": "forge:tag_empty"
-        },
-        "type": "forge:not"
-      }
-    ],
-    "ingredient": {
-      "item": gear
-    },
-    "result": {
-      "fluid": fluid,
-      "amount": 90
-    },
-    "temperature": 700,
-    "time": 57
-  });
+  if (gem !== "") {
+	event.custom({
+		"type": "tconstruct:melting",
+		"conditions": [
+		  {
+			"value": {
+			  "item": gear,
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"ingredient": {
+		  "item": gear
+		},
+		"result": {
+		  "fluid": fluid,
+		  "amount": 100
+		},
+		"temperature": 700,
+		"time": 57
+	  });
+
+	  event.custom({
+		"type": "createbigcannons:melting",
+		"ingredients": [
+		  {
+			"item": gear
+		  }
+		],
+		"results": [
+		  {
+			"fluid": fluid,
+			"amount": 100
+		  }
+		],
+		"processingTime": 180,
+		"heatRequirement": "heated"
+	  });
+
+  }
+
+  if (ingot !== "") {
+	event.custom({
+		"type": "tconstruct:melting",
+		"conditions": [
+		  {
+			"value": {
+			  "item": gear,
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"ingredient": {
+		  "item": gear
+		},
+		"result": {
+		  "fluid": fluid,
+		  "amount": 90
+		},
+		"temperature": 700,
+		"time": 57
+	  });
+
+	  event.custom({
+		"type": "createbigcannons:melting",
+		"ingredients": [
+		  {
+			"item": gear
+		  }
+		],
+		"results": [
+		  {
+			"fluid": fluid,
+			"amount": 90
+		  }
+		],
+		"processingTime": 180,
+		"heatRequirement": "heated"
+	  });
+  }
 
 };
 
