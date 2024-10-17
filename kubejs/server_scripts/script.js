@@ -5698,12 +5698,12 @@ const FiuldGem = (gem, fluid, event) => {
 const FiuldGear = (name, ingot, gem, gear, fluid, event) => {
   if (gear === "" || fluid === "") return;
 
-  event.remove({
-    type: "tconstruct:melting",
-    input: `#forge:gears/${name}`,
-  });
-
   if (gem !== "") {
+	event.remove({
+		type: "tconstruct:melting",
+		input: `#forge:gears/${name}`,
+	});
+
 	event.custom({
 		"type": "tconstruct:melting",
 		"conditions": [
@@ -5746,6 +5746,11 @@ const FiuldGear = (name, ingot, gem, gear, fluid, event) => {
   }
 
   if (ingot !== "") {
+	event.remove({
+		type: "tconstruct:melting",
+		input: gear,
+	});
+
 	event.custom({
 		"type": "tconstruct:melting",
 		"conditions": [
