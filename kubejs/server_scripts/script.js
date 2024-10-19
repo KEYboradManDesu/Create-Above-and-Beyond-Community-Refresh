@@ -284,6 +284,17 @@ MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singul
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))
 
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'thermal:cinnabar_ore' },
+	"result": { "item": 'minecraft:redstone_ore' }
+})
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'thermal:deepslate_cinnabar_ore' },
+	"result": { "item": 'minecraft:deepslate_redstone_ore' }
+})
+
 // 特殊风帆
 let sails = (id, amount, other_ingredient) => {
 	event.remove({ output: id })
@@ -4236,6 +4247,19 @@ event.recipes.createCrushing(CR("powdered_obsidian"), MC("obsidian"));
 event.recipes.createMilling(['4x ' + MC('redstone')], TE('cinnabar')).processingTime(700);
 event.recipes.createCrushing(['6x ' + MC('redstone')], TE('cinnabar')).processingTime(500);
 event.recipes.thermal.pulverizer(['8x ' + MC('redstone')], TE('cinnabar')).energy(10000);
+event.custom({
+  "type": "occultism:crushing",
+  "ingredient": {
+    "tag": "forge:ores/cinnabar"
+  },
+  "result": {
+    "tag": "forge:dusts/redstone",
+    "count": 8
+  },
+  "crushing_time": 400,
+  "ignore_crushing_multiplier": false
+})
+
 
 // 萤石粉
 event.recipes.createMilling(['3x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(700);
@@ -4264,6 +4288,8 @@ replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
 replaceIO('create_dd:chromatic_compound', 'create:chromatic_compound');
 replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
 replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
+
+event.remove({ output: "thermal:cinnabar_dust" });
 
 function unifyAllTheMetal(
     name,
