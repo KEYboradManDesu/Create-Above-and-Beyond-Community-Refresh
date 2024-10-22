@@ -226,8 +226,6 @@ event.remove({ id: TE('machine/pulverizer/pulverizer_electrum_ingot_to_dust') })
 event.remove({ id: TE('parts/electrum_gear') })
 event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
 event.remove({ id: 'portality:generator' })
-event.remove({ mod: 'pipez' })
-event.remove({ mod: 'structurescompass' })
 
 // event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 // event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
@@ -889,6 +887,9 @@ event.remove({ output: 'pipez:fluid_pipe' })
 event.remove({ output: 'pipez:gas_pipe' })
 event.remove({ output: 'pipez:energy_pipe' })
 event.remove({ output: 'pipez:universal_pipe' })
+event.remove({ output: 'thermal:fluid_duct_windowed' })
+event.remove({ output: 'thermal:fluid_duct' })
+event.remove({ output: 'thermal:energy_duct' })
 	
 event.shaped(PP("pipe", 8), [
 	'PMP'
@@ -910,6 +911,26 @@ event.shaped("8x pipez:energy_pipe", [
 // 	P: 'create_dd:steel_ingot',
 // 	M: 'mekanism:ingot_osmium'
 // })
+
+event.shaped("16x pipez:universal_pipe", [
+	' E ',
+	'ABC',
+	' D '
+], {
+	A: ['pipez:energy_pipe', TE('energy_duct')],
+	B: KJ('creative_casing'),
+	C: ['prettypipes:pipe', 'pipez:item_pipe'],
+	D: [CR('fluid_pipe'), TE('fluid_duct'), TE('fluid_duct_windowed')],
+	E: CRD('integrated_circuit')
+})
+
+event.shaped(TE("fluid_duct_windowed", 1), ['P'], {P: TE('fluid_duct')})
+event.shaped(TE("fluid_duct", 1), ['P'], {P: TE('fluid_duct_windowed')})
+
+event.stonecutting(Item.of('thermal:energy_duct', 8), 'thermal:energy_cell_frame')
+event.stonecutting(Item.of('thermal:fluid_duct', 8), 'thermal:fluid_cell_frame')
+
+
 
 let module = (type, result) => {
 	event.remove({ output: PP(result) })
@@ -1089,16 +1110,19 @@ smithAndMechCraft(TE("dynamo_lapidary"), TE("dynamo_numismatic"), [TE("lapis_gea
 event.remove({ id: TE("dynamo_disenchantment") })
 smithAndMechCraft(TE("dynamo_disenchantment"), TE("dynamo_compression"), ["forbidden_arcanus:rune"])
 
-smithAndMechCraft("metalbarrels:copper_barrel", MC("barrel"), F("#ingots/strong_bronze"))
+smithAndMechCraft("metalbarrels:copper_barrel", MC("barrel"), F("#ingots/constantan"))
 smithAndMechCraft("metalbarrels:iron_barrel", MC("barrel"), "moreminecarts:silica_steel")
 smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
 smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
-// tips待更新
+smithAndMechCraft("metalbarrels:diamond_barrel", MC("barrel"), F("#ingots/refined_radiance"))
+smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), F("#ingots/shadow_steel"))
 
 event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])
 event.shapeless("metalbarrels:wood_to_iron", ["metalbarrels:iron_barrel"])
 event.shapeless("metalbarrels:wood_to_silver", ["metalbarrels:silver_barrel"])
 event.shapeless("metalbarrels:wood_to_gold", ["metalbarrels:gold_barrel"])
+event.shapeless("metalbarrels:wood_to_diamond", ["metalbarrels:diamond_barrel"])
+event.shapeless("metalbarrels:wood_to_obsidian", ["metalbarrels:obsidian_barrel"])
 }
 
 function firearm(event) {
@@ -2121,6 +2145,7 @@ copper_machine('create:steam_engine', 1, 'createdieselgenerators:engine_piston')
 copper_machine('create:steam_whistle', 1, F('#plates/gold'))
 copper_machine('cookingforblockheads:sink', 1, MC('heart_of_the_sea'))
 copper_machine('create_dd:hydraulic_press', 1, 'create_dd:reinforcement_plating')
+copper_machine('pipez:basic_upgrade', 4, CRD('integrated_circuit'))
 
 event.remove({ output: 'createdieselgenerators:pumpjack_hole' })
 event.custom({
@@ -2323,6 +2348,7 @@ brass_machine('createdieselgenerators:diesel_engine', 1, 'createdieselgenerators
 brass_machine('createaddition:portable_energy_interface', 2, 'createaddition:copper_spool')
 brass_machine('vintageimprovements:laser', 1, 'vintageimprovements:laser_item')
 brass_machine('create_dd:accelerator_motor', 1, 'createaddition:electrum_spool')
+brass_machine('prettypipes:pipe', 8)
 
 event.stonecutting(Item.of('create:brass_funnel'), 'create:brass_tunnel')
 event.stonecutting(Item.of('create:brass_tunnel'), 'create:brass_funnel')
@@ -2410,6 +2436,7 @@ zinc_machine('torchmaster:megatorch', 1, MC('torch'))
 zinc_machine('thermal:upgrade_augment_2', 1, MC('redstone'))
 zinc_machine('create_dd:industrial_fan', 1, 'beyond_earth:engine_fan')
 zinc_machine('createdieselgenerators:distillation_controller', 1)
+zinc_machine('pipez:improved_upgrade', 4, CRD('integrated_circuit'))
 
 event.remove({ output: 'createdieselgenerators:pumpjack_crank' })
 event.remove({ output: 'createdieselgenerators:pumpjack_head' })
@@ -2690,8 +2717,8 @@ else
 
 invar_machine(TE('dynamo_compression'), 1, TE('rf_coil'))
 invar_machine('kubejs:pipe_module_tier_2', 4)
-
-event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingots/iron"), TE("lead_plate"))
+invar_machine('pipez:advanced_upgrade', 4, CRD('integrated_circuit'))
+invar_machine('pipez:energy_pipe', 16)
 
 // invar_machine(TE('machine_crucible'), 1, MC('nether_bricks'))
 // invar_machine(TE('machine_furnace'), 1, MC('bricks'))
@@ -2706,6 +2733,7 @@ event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingo
 // invar_machine(TE('machine_brewer'), 1, MC('brewing_stand'))
 // invar_machine(TE('machine_insolator'), 1, MC('dirt'))
 
+event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingots/iron"), TE("lead_plate"))
 }
 
 function enderMachine(event) {
@@ -2839,6 +2867,8 @@ ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
 ender_machine('kubejs:pipe_module_tier_3', 4)
+ender_machine('pipez:ultimate_upgrade', 4, CRD('integrated_circuit'))
+ender_machine('pipez:item_pipe', 8)
 
 }
 
@@ -5106,8 +5136,6 @@ unifyAllTheMetal(
     "",
     "",
     "",
-    "",
-    "",
     "create_dd:refined_radiance_block",
     "create:refined_radiance",
     "",
@@ -5116,7 +5144,7 @@ unifyAllTheMetal(
     "",
     "",
     "create_dd:refined_radiance_sheet",
-    "kubejs:radiant_rod",
+    "vintageimprovements:refined_radiance_rod",
     "",
     "vintageimprovements:refined_radiance_wire",
 	"vintageimprovements:refined_radiance_spring",
