@@ -14,8 +14,11 @@ let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${
 	holds('copper', 5 * 9)
 	holds('iron', 6 * 9)
 	holds('silver', 8 * 9)
+	holds('gold', 9 * 9)
 	holds('obsidian', 12 * 9)
 	holds('diamond', 12 * 9)
+	holds('crystal', 12 * 9)
+	holds('netherite', 15 * 9)
 //
 
 //第一章
