@@ -1080,9 +1080,9 @@
 			hide: true
 			id: "3BFC4DFCE765F3EA"
 			tasks: [{
-				id: "5FE5D17EE7AAC1B8"
+				id: "01ECF73058386038"
 				type: "item"
-				item: "thermal:ender_pearl_dust"
+				item: "ae2:ender_dust"
 				consume_items: false
 			}]
 		}
