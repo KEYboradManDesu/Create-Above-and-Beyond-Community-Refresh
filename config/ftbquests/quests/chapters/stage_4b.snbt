@@ -759,7 +759,7 @@
 				""
 				"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。"
 				""
-				" &6/c ponder kubejs:alchemical_laser"
+				"&6 /c ponder kubejs:ponder_laser_lamp"
 			]
 			dependencies: ["05446225038D260A"]
 			id: "1D1D1FEAF49C5E11"
@@ -774,7 +774,7 @@
 				title: "思索 炼金镭射"
 				icon: "minecraft:writable_book"
 				team_reward: false
-				command: " &6/c ponder kubejs:alchemical_laser"
+				command: "/c ponder kubejs:ponder_laser_lamp"
 				player_command: true
 			}]
 		}
