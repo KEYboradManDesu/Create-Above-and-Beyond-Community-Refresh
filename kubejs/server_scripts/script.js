@@ -1853,6 +1853,27 @@ event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball'
 event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', MC('andesite')]])
 event.recipes.createMixing(Item.of(AP('algal_blend'), 8), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
 
+event.recipes.thermalPress("kubejs:andesite_alloy_gear", [
+	"create:andesite_alloy",
+	"thermal:press_gear_die",
+]);
+
+event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "thermal:press_gear_die",
+	"ingredients": [
+		{
+		  "item": "create:andesite_alloy"
+		}
+	],
+	"results": [
+		{
+		  "item": "kubejs:andesite_alloy_gear",
+		  "count": 1
+		}
+	]
+});
+
 }
 
 function andesiteMachine(event) {
@@ -4419,7 +4440,8 @@ unifyAllTheMetal(
     "",
     "",
     "",
-    "kubejs:andesite_alloy_gear",
+    // "kubejs:andesite_alloy_gear",
+	"",
     "create_dd:andesite_sheet",
     "vintageimprovements:andesite_rod",
     "",
