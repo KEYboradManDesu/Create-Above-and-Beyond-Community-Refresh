@@ -1995,6 +1995,8 @@ event.remove({ id: 'create_dd:mixing/rubber' })
 event.remove({ id: 'create_dd:compacting/crystallized_sap' })
 event.remove({ input: 'create_dd:raw_rubber' })
 event.remove({ input: 'create_dd:rubber' })
+event.remove({ output: 'create_dd:raw_rubber' })
+event.remove({ output: 'create_dd:rubber' })
 
 let overrideTreeOutput = (id, trunk, leaf, fluid, count) => {
 	event.remove({ id: id })
@@ -2024,6 +2026,8 @@ event.shaped(CR('belt_connector', 3), [
 ], {
 	S: TE('cured_rubber')
 })
+
+event.blasting(Item.of('thermal:cured_rubber', 6), 'rubber_duck:rubber_duck_item').cookingTime(100)
 
 event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), F("#vines", 4)])
 event.recipes.createMixing('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), '4x #minecraft:flowers'])
