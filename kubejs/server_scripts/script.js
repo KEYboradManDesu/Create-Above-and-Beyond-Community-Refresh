@@ -1431,6 +1431,15 @@ let g1 = 'minecraft:glass_bottle'
 		.loops(1)
 		.id('kubejs:stun_grenade')
 
+let g2 = 'minecraft:glass_bottle'
+	event.recipes.createSequencedAssembly([
+		Item.of('cgm:stun_grenade', 2),
+	], 'minecraft:glass_bottle', [
+		event.recipes.createFilling(g2, [g2, Fluid.of(TE("glowstone"), 500)]),
+		event.recipes.createDeploying(g2, [g2, '#forge:nuggets/iron']),
+	]).transitionalItem(g2)
+		.loops(1)
+		.id('kubejs:stun_grenade2')
 
 //
 
