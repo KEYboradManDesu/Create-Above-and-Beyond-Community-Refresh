@@ -60,6 +60,7 @@ onEvent('recipes', event => {
 	barrels(event)
 	firearm(event)
 	alloys(event)
+	chestFix(event)
 
 	algalAndesite(event)
 	andesiteMachine(event)
@@ -98,8 +99,8 @@ onEvent('recipes', event => {
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
 let ConversionRecipe = java('com.simibubi.create.compat.jei.ConversionRecipe')
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
-// let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'tin'] 
 let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted'), 'phantasm:pream', 'phantasm:ebony', ]
+// let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'tin'] 
 
 function ifiniDeploying(output, input, tool) {
 	return {
@@ -306,6 +307,23 @@ sails('create_dd:blasting_sail', 1, MC('lava_bucket'))
 sails('create_dd:freezing_sail', 1, MC('powder_snow_bucket'))
 
 event.blasting(TE('coal_coke'), MC('coal'))
+
+// 厨刀配方冲突解决
+let knife = (id, material) => {
+	event.remove({ output: id })
+	event.shaped(id, [
+		' S',
+		'P '
+	], {
+		P: MC("stick"),
+		S: material
+	})
+}
+knife(FD('flint_knife'), MC('flint'))
+knife(FD('iron_knife'), MC('iron_ingot'))
+knife(FD('golden_knife'), MC('gold_ingot'))
+knife(FD('diamond_knife'), MC('diamond'))
+knife(FD('netherite_knife'), MC('netherite_ingot'))
 
 // 热力刷石机
 let bedrock_cobblegen = (adjacent, output) => {
@@ -844,37 +862,51 @@ event.replaceInput({ id: "toms_storage:level_emitter" }, MC("#planks"), CR("bras
 }
 
 function drawersop(event) {
-	let drawer_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'warped', 'crimson']
-	let drawer_sizes = ['1', '2', '4']
-	event.replaceInput({ id: SD('compacting_drawers_3') }, MC('iron_ingot'), CR('zinc_ingot'))
-	event.remove({ output: SD("upgrade_template") })
+let drawer_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'warped', 'crimson']
+let drawer_sizes = ['1', '2', '4']
+event.replaceInput({ id: SD('compacting_drawers_3') }, MC('iron_ingot'), CR('zinc_ingot'))
+event.remove({ output: SD("upgrade_template") })
 
-	drawer_types.forEach(e => {
+drawer_types.forEach(e => {
 
-		let trim = SD(`${e}_trim`)
-		let plank = MC(`${e}_planks`)
-		event.remove({ id: trim })
-		event.shaped(Item.of(trim, 4), [
-			'SSS',
-			'PMP',
-			'SSS'
-		], {
-			P: CR('zinc_ingot'),
-			M: '#forge:chests/wooden',
-			S: plank
-		})
+let trim = SD(`${e}_trim`)
+// let plank = MC(`${e}_planks`)
+let chest = Q(`${e}_chest`)
+let trapped_chest = Q(`${e}_trapped_chest`)
 
-		event.stonecutting(SD("upgrade_template"), trim)
+event.remove({ id: trim })
+event.shaped(Item.of(trim, 4), [
+	'SSS',
+	'PMP',
+	'SSS'
+], {
+	P: CR('zinc_ingot'),
+	M: [chest, trapped_chest],
+	S: '#minecraft:planks'
+})
 
-		drawer_sizes.forEach(size => {
-			let full = SD(`${e}_full_drawers_${size}`)
-			let half = SD(`${e}_half_drawers_${size}`)
-			event.remove({ id: full })
-			event.remove({ id: half })
-			event.stonecutting(full, trim)
-			event.stonecutting(Item.of(half, 2), trim)
-		})
-	})
+event.shaped(Item.of('storagedrawers:oak_trim', 4), [
+	'SSS',
+	'PMP',
+	'SSS'
+], {
+	P: CR('zinc_ingot'),
+	M: 'minecraft:chest',
+	S: '#minecraft:planks'
+})
+
+
+event.stonecutting(SD("upgrade_template"), trim)
+
+drawer_sizes.forEach(size => {
+	let full = SD(`${e}_full_drawers_${size}`)
+	let half = SD(`${e}_half_drawers_${size}`)
+	event.remove({ id: full })
+	event.remove({ id: half })
+	event.stonecutting(full, trim)
+	event.stonecutting(Item.of(half, 2), trim)
+})
+})
 
 }
 
@@ -1815,6 +1847,24 @@ event.recipes.createMixing([Fluid.of(TC("molten_lumium"), 360)], [
 	Fluid.of(TE("glowstone"), 500), 
 	TE('silver_coin', 9)
 ]).superheated().processingTime(300)
+
+}
+
+function chestFix(event) {
+event.remove({ output: "#quark:revertable_chests" })
+event.shaped(MC("chest"), [
+	'PPP',
+	'P P',
+	'PPP'
+], {
+	P: MC("#planks")
+})
+
+let woodCanMakeChest = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), MC('warped'), 'quark:azalea', 'quark:blossom']
+let woodChest = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped', 'warped', 'azalea', 'blossom']
+for (let i = 0; i <= (woodCanMakeChest.length - 1); i++) {
+	event.recipes.create.itemApplication("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
+}
 
 }
 
@@ -4193,8 +4243,7 @@ event.remove({ id: "createbigcannons:melting/melt_steel_nugget" });
 const dontReplaceMe = {
 	
     not: [
-	  { id: /.*yellow*./ },
-
+	//   { id: /.*yellow*./ },
       { id: "tconstruct:smeltery/casts/gold_casts/ingots" },
       { id: "tconstruct:smeltery/casts/gold_casts/nuggets" },
       { id: "tconstruct:smeltery/casts/gold_casts/rods" },
@@ -4225,7 +4274,6 @@ let replaceIO = (tag, item) => {
   event.replaceInput(dontReplaceMe, tag, item);
   event.replaceOutput(dontReplaceMe, tag, item);
 };
-
 
 let stone = Item.of(MC("cobblestone"), 1).withChance(.5);
 let limestone = Item.of("darkerdepths:limestone", 1).withChance(.5);
