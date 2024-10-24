@@ -1019,10 +1019,10 @@ event.custom({
 	],
 	"key": {
 	  "I": {
-		"tag": "forge:ingots/iron"
+		"tag": "forge:plates/iron"
 	  },
 	  "B": {
-		"item": "sophisticatedbackpacks:backpack"
+		"item": "sophisticatedbackpacks:copper_backpack"
 	  },
 	  "S": {
 		"item": "sophisticatedbackpacks:upgrade_base"
