@@ -999,7 +999,7 @@ event.shaped('sophisticatedbackpacks:backpack', [
 
 ], {
 	C: F('#chests/wooden'),
-	B: CR('golden_sheet'),
+	B: CR('zinc_ingot'),
 	S: 'sophisticatedbackpacks:upgrade_base'
 })
 //铁背包
@@ -1019,7 +1019,7 @@ event.custom({
 	],
 	"key": {
 	  "I": {
-		"tag": "forge:plates/iron"
+		"item": "create:iron_sheet"
 	  },
 	  "B": {
 		"item": "sophisticatedbackpacks:copper_backpack"
@@ -1030,6 +1030,36 @@ event.custom({
 	},
 	"result": {
 	  "item": "sophisticatedbackpacks:iron_backpack"
+	}
+})
+//铜背包
+event.remove({ output: 'sophisticatedbackpacks:copper_backpack' })
+event.custom({
+	"type": "sophisticatedbackpacks:backpack_upgrade",
+	"conditions": [
+	  {
+		"itemRegistryName": "sophisticatedbackpacks:copper_backpack",
+		"type": "sophisticatedcore:item_enabled"
+	  }
+	],
+	"pattern": [
+	  "SSS",
+	  "IBI",
+	  "SSS"
+	],
+	"key": {
+	  "I": {
+		"item": "create:copper_sheet"
+	  },
+	  "B": {
+		"item": "sophisticatedbackpacks:backpack"
+	  },
+	  "S": {
+		"item": "sophisticatedbackpacks:upgrade_base"
+	  }
+	},
+	"result": {
+	  "item": "sophisticatedbackpacks:copper_backpack"
 	}
 })
 //金背包
@@ -1079,7 +1109,7 @@ event.custom({
 	],
 	"key": {
 	  "I": {
-		"item": "thermal:diamond_gear"
+		"item": "minecraft:diamond"
 	  },
 	  "B": {
 		"item": "sophisticatedbackpacks:gold_backpack"
