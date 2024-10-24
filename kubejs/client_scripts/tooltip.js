@@ -6,6 +6,10 @@ tooltip.add("cookingforblockheads:sink", [`§a小时候家里的水槽忘了关�
 tooltip.add("minecraft:redstone_ore", [`§6原版红石矿石已被朱砂矿石替代`]);
 tooltip.add("minecraft:deepslate_redstone_ore", [`§6原版红石矿石已被朱砂矿石替代`]);
 
+tooltip.add("create_dd:rubber_sapling", [`§6该品种树苗提供双倍树脂产量`]);
+
+tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
+
 let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} 格`])
     let main_assembly = (id, stage) => tooltip.add(id, [`§7主目标: ${stage == "4" ? "§6最终章" : "§6章节 " + stage}`, '§8思考一下如何自动化制作此物品'])
 	let bonus_assembly = (id, stage) => tooltip.add(id, [`§7附加目标: §6章节 ${stage}`])
