@@ -2692,8 +2692,9 @@ obsidian_machine("toms_storage:ts.storage_terminal", 1, CR("item_vault"))
 function radiant_coil(event) {
 event.remove({ id: CRD("mixing/chromatic_compound") })
 
-event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:small_refined_radiance_spring' })
-event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
+// event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:small_refined_radiance_spring' })
+// event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: '#forge:plates/refined_radiance' })
 	
 event.shaped(CRD('chromatic_compound'), ['S'], {S: CR('chromatic_compound')})
 event.shaped(CR('chromatic_compound'), ['S'], {S: CRD('chromatic_compound')})
