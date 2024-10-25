@@ -99,7 +99,15 @@ onEvent('recipes', event => {
 let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
 let ConversionRecipe = java('com.simibubi.create.compat.jei.ConversionRecipe')
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
-let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted'), 'phantasm:pream', 'phantasm:ebony', ]
+let wood_types = [
+    MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), 
+    BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), 
+    AP('twisted'), 
+	CRD('smoked'), CRD('spirit'), CRD('rose'), CRD('rubber'), 
+	FA('edelwood'), FA('cherrywood'), FA('mysterywood'),
+	'darkerdepths:petrified',
+    'phantasm:pream', 'phantasm:ebony', 
+]
 // let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'tin'] 
 
 function ifiniDeploying(output, input, tool) {
@@ -1972,7 +1980,14 @@ event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/br
 wood_types.forEach(wood => {
 	event.recipes.createCutting(['2x ' + wood + '_slab'], wood + '_planks').processingTime(50)
 })
-// tips这个待翻新
+
+// 兼容匠魂木头
+event.recipes.createCutting(['2x tconstruct:skyroot_planks_slab'], 'tconstruct:skyroot_planks').processingTime(50)
+event.recipes.createCutting(['2x tconstruct:bloodshroom_planks_slab'], 'tconstruct:bloodshroom_planks').processingTime(50)
+event.recipes.createCutting(['2x tconstruct:greenheart_planks_slab'], 'tconstruct:greenheart_planks').processingTime(50)
+// 兼容夸克木头
+event.recipes.createCutting(['2x quark:blossom_planks_slab'], 'quark:blossom_planks').processingTime(50)
+event.recipes.createCutting(['2x quark:azalea_planks_slab'], 'quark:azalea_planks').processingTime(50)
 
 // 无序合成
 event.shapeless(KJ('andesite_alloy_gear'), [
