@@ -323,7 +323,7 @@ knife(FD('flint_knife'), MC('flint'))
 knife(FD('iron_knife'), MC('iron_ingot'))
 knife(FD('golden_knife'), MC('gold_ingot'))
 knife(FD('diamond_knife'), MC('diamond'))
-knife(FD('netherite_knife'), MC('netherite_ingot'))
+// knife(FD('netherite_knife'), MC('netherite_ingot'))
 
 // 热力刷石机
 let bedrock_cobblegen = (adjacent, output) => {
@@ -4222,8 +4222,8 @@ event.remove({ input: "darkerdepths:aridrock_gold_ore" });
 event.remove({ input: "darkerdepths:aridrock_iron_ore" });
 event.remove({ input: "darkerdepths:limestone_gold_ore" });
 event.remove({ input: "darkerdepths:limestone_iron_ore" });
-event.remove({ input: "beyond_earth:hammer" });
 
+event.remove({ input: "beyond_earth:hammer" });
 event.remove({ output: "beyond_earth:hammer" });
 
 event.remove({ output: "create_dd:integrated_mechanism" });
@@ -4240,10 +4240,11 @@ event.remove({ id: "createbigcannons:melting/melt_steel_block" });
 event.remove({ id: "createbigcannons:melting/melt_steel_ingot" });
 event.remove({ id: "createbigcannons:melting/melt_steel_nugget" });
 
-const dontReplaceMe = {
-	
+event.remove({ id: "beyond_earth:desh_plate" });
+event.remove({ id: "beyond_earth:iron_plate" });
+
+const blackList = {
     not: [
-	//   { id: /.*yellow*./ },
       { id: "tconstruct:smeltery/casts/gold_casts/ingots" },
       { id: "tconstruct:smeltery/casts/gold_casts/nuggets" },
       { id: "tconstruct:smeltery/casts/gold_casts/rods" },
@@ -4262,7 +4263,7 @@ const dontReplaceMe = {
       { id: "minecraft:cut_copper_slab_from_copper_block_stonecutting" },
       { id: "minecraft:waxed_copper_block_from_honeycomb" },
       { id: "minecraft:waxed_cut_copper_from_honeycomb" },
-    ],
+    ]
 };
 
 let removeIO = (item) => {
@@ -4271,8 +4272,8 @@ let removeIO = (item) => {
 };
 
 let replaceIO = (tag, item) => {
-  event.replaceInput(dontReplaceMe, tag, item);
-  event.replaceOutput(dontReplaceMe, tag, item);
+  event.replaceInput(blackList, tag, item);
+  event.replaceOutput(blackList, tag, item);
 };
 
 let stone = Item.of(MC("cobblestone"), 1).withChance(.5);
