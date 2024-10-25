@@ -10,6 +10,8 @@ tooltip.add("create_dd:rubber_sapling", [`§6该品种树苗提供双倍树脂�
 
 tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
+tooltip.add("create_dd:infaice", [`§3⑨`]);
+
 let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} 格`])
     let main_assembly = (id, stage) => tooltip.add(id, [`§7主目标: ${stage == "4" ? "§6最终章" : "§6章节 " + stage}`, '§8思考一下如何自动化制作此物品'])
 	let bonus_assembly = (id, stage) => tooltip.add(id, [`§7附加目标: §6章节 ${stage}`])
