@@ -190,7 +190,9 @@ event.get('forge:ingots/bronze').add('create_dd:bronze_ingot')
 event.get('forge:gears/arcane_gold').add('kubejs:arcane_gold_gear')
 event.get('forge:gears').add('kubejs:arcane_gold_gear')
 
-})
+event.get('forge:raw_materials/silver').add('darkerdepths:raw_silver')
+
+})	
 
 onEvent('fluid.tags', event => {
 
