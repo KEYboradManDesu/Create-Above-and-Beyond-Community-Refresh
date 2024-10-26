@@ -291,6 +291,31 @@ MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singul
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))
 
+// 海洋之心
+event.shaped(MC("heart_of_the_sea"), [
+	'SSS',
+	'SMS',
+	'SSS'
+], {
+	M: AC("neptunium_ingot"),
+	S: TE("sapphire")
+})
+
+
+// 红宝石灵火转化
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'thermal:ruby' },
+	"result": { "item": 'minecraft:redstone_block'}
+})
+// 蓝宝石灵火转化
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'thermal:sapphire' },
+	"result": { "item": 'minecraft:diamond' }
+})
+
+// 原版红石转化
 event.custom({
 	"type": "occultism:spirit_fire",
 	"ingredient": { "item": 'thermal:cinnabar_ore' },
@@ -4316,6 +4341,26 @@ event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), limestone], "d
 event.recipes.createCrushing([Item.of(CR('crushed_raw_gold'), 1), aridrock], "darkerdepths:aridrock_gold_ore");
 event.recipes.createCrushing([Item.of(TE('sulfur'), 1).withChance(.15)], "biomesoplenty:brimstone");
 
+// 蓝宝石 和 红宝石 块合成
+event.shaped("thermal:ruby_block", [
+	'PPP',
+	'PPP',
+	'PPP'
+], {
+	P: "thermal:ruby"
+})
+event.shaped("9x thermal:ruby", ['P'], {P: "thermal:ruby_block"})
+
+event.shaped("thermal:sapphire_block", [
+	'PPP',
+	'PPP',
+	'PPP'
+], {
+	P: "thermal:sapphire"
+})
+event.shaped("9x thermal:sapphire", ['P'], {P: "thermal:sapphire_block"})
+
+
 // 蜂蜜
 event.remove({ id: "tconstruct:smeltery/entity_melting/bee" });
 event.remove({ id: "tconstruct:smeltery/melting/slime/honey_block" });
@@ -4369,6 +4414,9 @@ event.custom({
     }
   ]
 })
+
+// 粉碎末地石
+event.recipes.createMilling([Item.of('2x occultism:crushed_end_stone')], 'minecraft:end_stone').processingTime(100);
 
 // 硬化硝
 event.remove({ id: "createbigcannons:milling/alloy_nethersteel_cast_iron" });
@@ -4678,6 +4726,50 @@ unifyAllTheMetal(
     "thermal:diamond_dust",
     "tconstruct:molten_diamond",
     "thermal:diamond_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "ruby",
+    "thermal:ruby_ore",
+    "thermal:deepslate_ruby_ore",
+    "",
+    "",
+    "thermal:ruby_block",
+    "",
+    "",
+    "thermal:ruby",
+    "thermal:ruby_dust",
+    "",
+    "thermal:ruby_gear",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+);
+
+unifyAllTheMetal(
+    "sapphire",
+    "thermal:sapphire_ore",
+    "thermal:deepslate_sapphire_ore",
+    "",
+    "",
+    "thermal:sapphire_block",
+    "",
+    "",
+    "thermal:sapphire",
+    "thermal:sapphire_dust",
+    "",
+    "thermal:sapphire_gear",
     "",
     "",
     "",
