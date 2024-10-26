@@ -291,6 +291,20 @@ MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singul
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))
 
+// 暂时应对车床合成错乱的应对
+event.stonecutting(Item.of('vintageimprovements:convex_curving_head', '{Damage:0}'), Item.of('vintageimprovements:concave_curving_head', '{Damage:0}'))
+event.stonecutting(Item.of('vintageimprovements:concave_curving_head', '{Damage:0}'), Item.of('vintageimprovements:convex_curving_head', '{Damage:0}'))
+
+event.stonecutting('beyond_earth:engine_frame', 'beyond_earth:engine_fan')
+event.stonecutting('beyond_earth:engine_fan', 'beyond_earth:engine_frame')
+
+event.stonecutting('createdieselgenerators:pumpjack_bearing', 'createdieselgenerators:pumpjack_head')
+event.stonecutting('createdieselgenerators:pumpjack_bearing', 'createdieselgenerators:pumpjack_crank')
+event.stonecutting('createdieselgenerators:pumpjack_head', 'createdieselgenerators:pumpjack_bearing')
+event.stonecutting('createdieselgenerators:pumpjack_head', 'createdieselgenerators:pumpjack_crank')
+event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerators:pumpjack_bearing')
+event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerators:pumpjack_head')
+
 // 海洋之心
 event.shaped(MC("heart_of_the_sea"), [
 	'SSS',
