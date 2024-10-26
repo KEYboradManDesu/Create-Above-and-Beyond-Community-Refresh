@@ -1820,6 +1820,10 @@ event.remove({ id: TE('machines/smelter/smelter_alloy_bronze') })
 event.remove({ id: TE('machines/smelter/smelter_alloy_steel') })
 event.remove({ id: TE('compat/tconstruct/smelter_alloy_tconstruct_pigiron_ingot') })
 
+event.remove({ id: TE('invar_dust_3') })
+event.remove({ id: TE('bronze_dust_4') })
+event.remove({ id: TE('constantan_dust_2') })
+
 event.remove({ id: 'minecraft:netherite_ingot' })
 
 
