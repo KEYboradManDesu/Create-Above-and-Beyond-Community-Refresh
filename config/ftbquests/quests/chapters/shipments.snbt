@@ -4060,7 +4060,6 @@
 				"热心的交易员都会先来这里买一个交易机，这个机器可能会帮助你摆脱困境！"
 			]
 			dependencies: ["6AC1CED0D341150E"]
-			can_repeat: true
 			id: "4DFE4FD3B504AF4B"
 			tasks: [{
 				id: "3E2EAC7B2D274669"
@@ -4081,14 +4080,6 @@
 					type: "item"
 					auto: "no_toast"
 					item: "thermal:dynamo_stirling"
-				}
-				{
-					id: "61448EF131387AEF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
 				}
 			]
 		}
