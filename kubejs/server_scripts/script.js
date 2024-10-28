@@ -305,6 +305,8 @@ event.stonecutting('createdieselgenerators:pumpjack_head', 'createdieselgenerato
 event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerators:pumpjack_bearing')
 event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerators:pumpjack_head')
 
+event.blasting(Item.of('ae2:sky_stone_block'), 'beyond_earth:sky_stone').cookingTime(100)
+
 // 海洋之心
 event.shaped(MC("heart_of_the_sea"), [
 	'SSS',
