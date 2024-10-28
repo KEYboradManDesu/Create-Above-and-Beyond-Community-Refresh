@@ -884,39 +884,15 @@
 			id: "73473DC7269EC5B0"
 			tasks: [
 				{
-					id: "6ED8ECC31B62B4A9"
-					type: "item"
-					item: "beyond_earth:rocket_nose_cone"
-					consume_items: false
-				}
-				{
-					id: "0D907D631B901D35"
-					type: "item"
-					item: "beyond_earth:rocket_fin"
-					consume_items: false
-				}
-				{
 					id: "0D48307598BD2D81"
 					type: "item"
 					item: "beyond_earth:steel_tank"
 					consume_items: false
 				}
 				{
-					id: "155E056FB67FEA15"
-					type: "item"
-					item: "beyond_earth:compressed_steel"
-					consume_items: false
-				}
-				{
 					id: "347AB49A286633F2"
 					type: "item"
 					item: "beyond_earth:steel_engine"
-					consume_items: false
-				}
-				{
-					id: "40473B272757353C"
-					type: "item"
-					item: "createbigcannons:very_large_steel_cannon_layer"
 					consume_items: false
 				}
 			]

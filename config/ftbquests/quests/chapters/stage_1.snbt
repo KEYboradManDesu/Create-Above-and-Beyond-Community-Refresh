@@ -466,7 +466,11 @@
 			y: 10.0d
 			shape: "square"
 			subtitle: "步骤 9-1"
-			description: ["试着把提取器放置在一棵完整的树木旁然后等待，你将会得到&4树脂流体&r！"]
+			description: [
+				"试着把提取器放置在一棵完整的树木旁然后等待，你将会得到&4树脂流体&r！"
+				""
+				"&7小提示：&6橡胶树苗(rubber_sapling)&7种出来的树能提供两倍的树脂产量。"
+			]
 			dependencies: [
 				"3F45DFEF31838A00"
 				"681DACF11F193771"
