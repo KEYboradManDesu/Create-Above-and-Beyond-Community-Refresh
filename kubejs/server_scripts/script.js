@@ -317,7 +317,6 @@ event.shaped(MC("heart_of_the_sea"), [
 	S: TE("sapphire")
 })
 
-
 // 红宝石灵火转化
 event.custom({
 	"type": "occultism:spirit_fire",
@@ -358,6 +357,7 @@ sails('create_dd:freezing_sail', 1, MC('powder_snow_bucket'))
 event.blasting(TE('coal_coke'), MC('coal'))
 
 // 厨刀配方冲突解决
+event.replaceInput({ id: "rechiseled:chisel" }, MC("iron_ingot"), CR("iron_sheet"))
 let knife = (id, material) => {
 	event.remove({ output: id })
 	event.shaped(id, [
@@ -392,8 +392,8 @@ bedrock_cobblegen('minecraft:honey_block', CR("limestone"))
 bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 
 // 前期优化游戏体验
-event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, F('#plates/brass'), [CR('golden_sheet')])//黄铜手部件改金制手部件
-event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))//保险库
+event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, F('#plates/brass'), [CR('golden_sheet')])// 黄铜手部件改金制手部件
+event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
 
 // 储存标签Labels
 donutCraft(event, '8x labels:label', "#forge:dyes/black", MC("paper"))
@@ -402,7 +402,7 @@ donutCraft(event, '8x labels:label', "#forge:dyes/black", MC("paper"))
 donutCraft(event, MC("weeping_vines"), "forbidden_arcanus:rune", MC("twisting_vines"))
 donutCraft(event, MC("twisting_vines"), "forbidden_arcanus:rune", MC("weeping_vines"))
 
-//下界合金锯
+// 下界合金锯
 event.smithing(KJ("netherite_saw"), ('cb_microblock:diamond_saw'), MC("netherite_ingot"))
 
 //潜水靴
@@ -414,7 +414,7 @@ event.shaped(CR("copper_diving_boots"), [
 	P: MC("copper_ingot"),
 	S: TE("lead_ingot")
 })
-//铜背罐
+// 铜背罐
 event.shaped(CR("copper_backtank"), [
 	'PAP',
 	'PBP',
@@ -2589,18 +2589,23 @@ function zincMachine(event) {
 
 // event.remove({ id: TE('basalz_powder') })
 // event.remove({ id: TC('smeltery/casting/scorched/stone_from_magma') })
-event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
 // event.remove({ id: TC('smeltery/scorched/scorched_brick_kiln') })
 // event.remove({ id: TC('smeltery/scorched/scorched_brick') })
 // event.remove({ id: TC('smeltery/melting/scorched/grout') })
-event.remove({ id: TC('smeltery/melting/soul/sand') })
 // event.recipes.createMilling([Item.of(TE('basalz_powder'), 1)], TE("basalz_rod")).processingTime(300)
+event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
+event.remove({ id: TC('smeltery/melting/soul/sand') })
+event.remove({ id: CRD('sequenced_assembly/infernal_mechanism') })
+event.remove({ id: CRD('crafting/ember_alloy') })
 
 //焦黑炉核心
 donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
 
 event.recipes.createMixing(Fluid.of(TC("liquid_soul"), 500), [MC('twisting_vines'), MC('weeping_vines')]).heated()
 
+// 余烬合金
+event.recipes.createMixing(CRD('ember_alloy'), [CRD('smoked_planks'), CR('cinder_flour'), Fluid.of(TC("blazing_blood"), 50)]).heated()
+event.recipes.createMixing(CRD('ember_alloy'), [CRD('smoked_planks'), Fluid.of(TC("liquid_soul"), 250), Fluid.of(TC("blazing_blood"), 50)]).heated()
 
 //
 
@@ -2616,12 +2621,23 @@ event.recipes.createSequencedAssembly([
 	.loops(1)
 	.id('kubejs:infernal_mechanism')
 
+let t1 = KJ('incomplete_infernal_mechanism')
+event.recipes.createSequencedAssembly([
+	KJ('infernal_mechanism'),
+], CR('precision_mechanism'), [
+	event.recipes.createDeploying(t1, [t1, CRD('ember_alloy')]),
+	event.recipes.createDeploying(t1, [t1, CRD('ember_alloy')]),
+	event.recipes.createDeploying(t1, [t1, F('#saws')])
+]).transitionalItem(t1)
+	.loops(1)
+	.id('kubejs:infernal_mechanism1')
+
 event.shaped(KJ('zinc_machine'), [
 	'SSS',
 	'SCS',
 	'SSS'
 ], {
-	C: KJ('zinc_casing'),
+	C: [KJ('zinc_casing'), CRD('zinc_casing')],
 	S: KJ('infernal_mechanism')
 })
 
@@ -2773,8 +2789,9 @@ function radiant_coil(event) {
 event.remove({ id: CRD("mixing/chromatic_compound") })
 
 // event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:small_refined_radiance_spring' })
-// event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
-event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: '#forge:plates/refined_radiance' })
+event.recipes.createMechanicalCrafting(KJ('radiant_coil', 8), ['  B', ' A ', 'B  '], { A: ['vintageimprovements:refined_radiance_spring', 'create_dd:refined_radiance_sheet'], B: 'create_dd:shadow_steel' })
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
+event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'create_dd:refined_radiance_sheet' })
 	
 event.shaped(CRD('chromatic_compound'), ['S'], {S: CR('chromatic_compound')})
 event.shaped(CR('chromatic_compound'), ['S'], {S: CRD('chromatic_compound')})
@@ -4535,6 +4552,7 @@ replaceIO("create_dd:calculation_mechanism", "kubejs:calculation_mechanism");
 
 //
 
+event.replaceInput({ id: "create:milling/lapis_lazuli" }, MC("lapis_lazuli"), TE("lapis_dust"))
 
 event.replaceInput(MC("quartz"), AE2("#all_nether_quartz"));
 event.replaceInput(F("#gems/quartz"), AE2("#all_nether_quartz"));
