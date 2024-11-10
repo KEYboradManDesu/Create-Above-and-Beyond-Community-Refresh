@@ -196,6 +196,10 @@ event.remove({ id: TC('smeltery/melting/metal/gold/enchanted_apple') })
 event.remove({ id: CR('cutting/andesite_alloy') })
 event.remove({ id: TE('storage/beetroot_block') })
 event.remove({ id: TE('storage/potato_block') })
+event.remove({ id: TE('storage/apple_block') })
+event.remove({ output: Q('potato_crate') })
+event.remove({ output: Q('carrot_crate') })
+event.remove({ output: Q('beetroot_crate') })
 event.remove({ id: AE2('misc/grindstone_woodengear') })
 event.remove({ id: AE2('tools/misctools_entropy_manipulator') })
 event.remove({ id: TE('storage/carrot_block') })
@@ -306,6 +310,25 @@ event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerat
 event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerators:pumpjack_head')
 
 event.blasting(Item.of('ae2:sky_stone_block'), 'beyond_earth:sky_stone').cookingTime(100)
+
+// 玫瑰石英
+event.custom({
+	"type":"vintageimprovements:polishing",
+	"speedLimits": 1,
+	"ingredients": [
+		{
+			"item": "biomesoplenty:rose_quartz_shard"
+		}
+	],
+	"results": [
+		{
+			"item": "create:polished_rose_quartz",
+			"count": 1,
+			"chance": 0.2
+		}
+	],
+	"processingTime": 20
+})
 
 // 海洋之心
 event.shaped(MC("heart_of_the_sea"), [
