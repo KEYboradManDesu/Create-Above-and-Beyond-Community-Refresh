@@ -268,10 +268,28 @@
 				{
 					id: "2F334C3D67DE059C"
 					type: "item"
-					item: {
+					title: "异彩化合物"
+					icon: {
 						id: "create:chromatic_compound"
 						Count: 1b
 						tag: { }
+					}
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:chromatic_compound"
+									Count: 1b
+									tag: { }
+								}
+								{
+									id: "create_dd:chromatic_compound"
+									Count: 1b
+								}
+							]
+						}
 					}
 					consume_items: false
 				}
@@ -306,7 +324,14 @@
 				{
 					id: "7EF8C778FDE54DC1"
 					type: "item"
-					item: "create:refined_radiance"
+					title: "光辉石"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "forge:ingots/refined_radiance"
+						}
+					}
 					consume_items: false
 				}
 				{
@@ -700,7 +725,7 @@
 			description: [
 				"在你英勇击败末影龙后，通过&6折跃门&r前往外岛。"
 				""
-				"在那里，你能够采集到&6末影合金&r的原材料之一——&6梦兰浆果&r。进过精加工就可以变成机械动力的老朋友&6紫颂合金&r。"
+				"在那里，你能够采集到&6末影合金&r的原材料之一——&6梦兰浆果&r。进过精加工就可以变成&6末影合金&r。"
 			]
 			dependencies: ["05C7E580ED88B556"]
 			id: "794B3C10C6110CB5"
