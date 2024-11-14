@@ -192,6 +192,13 @@ event.get('forge:gears').add('kubejs:arcane_gold_gear')
 
 event.get('forge:raw_materials/silver').add('darkerdepths:raw_silver')
 
+event.get('kubejs:alien_stone')
+.add('beyond_earth:moon_stone')
+.add('beyond_earth:mars_stone')
+.add('beyond_earth:mercury_stone')
+.add('beyond_earth:venus_stone')
+.add('beyond_earth:glacio_stone')
+
 })	
 
 onEvent('fluid.tags', event => {
