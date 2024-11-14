@@ -1233,7 +1233,7 @@
 			tasks: [{
 				id: "07132D69A1BA37B5"
 				type: "stat"
-				title: "Breed 10 Animals"
+				title: "繁殖10次动物"
 				icon: "minecraft:wheat"
 				stat: "minecraft:animals_bred"
 				value: 10
