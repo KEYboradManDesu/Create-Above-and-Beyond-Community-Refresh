@@ -3112,6 +3112,7 @@ let ender_machine = (id, amount, other_ingredient) => {
 
 ender_machine("enderstorage:ender_chest", 1, MC('chest'))
 ender_machine("enderstorage:ender_tank", 1, CR('fluid_tank'))
+ender_machine("createutilities:void_battery", 1, "createaddition:modular_accumulator")
 ender_machine("portality:controller", 1, MC('diamond'))
 ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
@@ -3119,6 +3120,19 @@ ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
 ender_machine('kubejs:pipe_module_tier_3', 4)
 ender_machine('pipez:ultimate_upgrade', 4, CRD('integrated_circuit'))
 ender_machine('pipez:item_pipe', 8)
+
+event.remove({ id: "createutilities:shaped/void_chest" })
+event.remove({ id: "createutilities:shaped/void_tank" })
+event.remove({ id: "createutilities:shaped/void_motor" })
+event.remove({ id: "createutilities:shaped/graviton_tube" })
+
+event.recipes.thermal.smelter("createutilities:graviton_tube", ["createutilities:polished_amethyst", [TE("enderium_ingot"), TE("enderium_plate")]]).energy(2000)
+event.recipes.thermal.smelter("createutilities:void_motor", [KJ("enderium_machine"), ["create_dd:accelerator_motor", "create_dd:kinetic_motor"], "createutilities:graviton_tube"]).energy(4000)
+
+event.stonecutting(Item.of('createutilities:void_chest'), 'enderstorage:ender_chest')
+event.stonecutting(Item.of('enderstorage:ender_chest'), 'createutilities:void_chest')
+event.stonecutting(Item.of('createutilities:void_tank'), 'enderstorage:ender_tank')
+event.stonecutting(Item.of('enderstorage:ender_tank'), 'createutilities:void_tank')
 
 }
 
