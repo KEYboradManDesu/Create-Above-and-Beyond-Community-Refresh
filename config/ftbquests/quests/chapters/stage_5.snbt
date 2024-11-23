@@ -786,20 +786,12 @@
 			description: ["通过加热搅拌将水分离为其成分，就可以得到你需要的氧。"]
 			dependencies: ["6A156D11D983661D"]
 			id: "3AD7553F3C8593F9"
-			tasks: [
-				{
-					id: "1887BEF1D5E0336A"
-					type: "item"
-					item: "beyond_earth:oxygen_tank"
-					consume_items: false
-				}
-				{
-					id: "68DF42669BD15D28"
-					type: "item"
-					item: "beyond_earth:oxygen_loader"
-					consume_items: false
-				}
-			]
+			tasks: [{
+				id: "68DF42669BD15D28"
+				type: "item"
+				item: "beyond_earth:oxygen_loader"
+				consume_items: false
+			}]
 		}
 		{
 			title: "发射台结构"
