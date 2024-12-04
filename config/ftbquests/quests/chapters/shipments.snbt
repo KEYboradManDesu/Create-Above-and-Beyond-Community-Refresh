@@ -36,28 +36,18 @@
 			subtitle: "银币 <> 金币"
 			description: ["这个交易卡可以让你的交易机自动转换你放入的货币。"]
 			dependencies: ["6AC1CED0D341150E"]
+			can_repeat: true
 			id: "3B548F2C060C2229"
 			tasks: [{
 				id: "601161A1565C5161"
 				type: "item"
 				item: "thermal:silver_coin"
 			}]
-			rewards: [
-				{
-					id: "0A6DEF2E19943F9F"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_exchange_currencies_b"
-				}
-				{
-					id: "3D6C47FD645D7471"
-					type: "custom"
-					title: "Repeatable"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "0A6DEF2E19943F9F"
+				type: "item"
+				item: "kubejs:trade_card_exchange_currencies_b"
+			}]
 		}
 		{
 			title: "16x 泥土"
@@ -72,26 +62,15 @@
 			tasks: [{
 				id: "6E9B241F2C793A11"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7C2FABAAF623D734"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_dirt"
-				}
-				{
-					id: "04A59FE51676FEAB"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7C2FABAAF623D734"
+				type: "item"
+				item: "kubejs:trade_card_dirt"
+			}]
 		}
 		{
 			title: "16x 沙子"
@@ -106,26 +85,15 @@
 			tasks: [{
 				id: "3BDEC9C8ADB12929"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "164D9249C5F69D8A"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sand"
-				}
-				{
-					id: "78E3D4A02294AE6B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "164D9249C5F69D8A"
+				type: "item"
+				item: "kubejs:trade_card_sand"
+			}]
 		}
 		{
 			title: "16x 沙砾"
@@ -140,26 +108,15 @@
 			tasks: [{
 				id: "01322EECC1E1A57C"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4A889218E0450A2E"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_gravel"
-				}
-				{
-					id: "2C45C16E057537AD"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4A889218E0450A2E"
+				type: "item"
+				item: "kubejs:trade_card_gravel"
+			}]
 		}
 		{
 			title: "16x 黏土"
@@ -174,26 +131,15 @@
 			tasks: [{
 				id: "6C01735048A57496"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "64C8BFCBA00DF5D9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_clay"
-				}
-				{
-					id: "5B54802935708324"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "64C8BFCBA00DF5D9"
+				type: "item"
+				item: "kubejs:trade_card_clay"
+			}]
 		}
 		{
 			title: "16x 冰"
@@ -208,26 +154,15 @@
 			tasks: [{
 				id: "6613D8EB0A2B0100"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "0E2E23E106D51BB7"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_ice"
-				}
-				{
-					id: "591438EEA30CF2BF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "0E2E23E106D51BB7"
+				type: "item"
+				item: "kubejs:trade_card_ice"
+			}]
 		}
 		{
 			title: "16x 黑石"
@@ -242,26 +177,15 @@
 			tasks: [{
 				id: "11B1B3884103CA8B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "543610EA23568C16"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_blackstone"
-				}
-				{
-					id: "44EB2080DB6BCA62"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "543610EA23568C16"
+				type: "item"
+				item: "kubejs:trade_card_blackstone"
+			}]
 		}
 		{
 			title: "16x 砖泥"
@@ -276,26 +200,15 @@
 			tasks: [{
 				id: "363FC51494B5EEAF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4D664110A853A1FB"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_grout"
-				}
-				{
-					id: "0D79D270D732B853"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4D664110A853A1FB"
+				type: "item"
+				item: "kubejs:trade_card_grout"
+			}]
 		}
 		{
 			title: "16x 圆石"
@@ -310,26 +223,15 @@
 			tasks: [{
 				id: "3F0DB2807B709EBE"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "0F090DCDB39C646F"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_cobblestone"
-				}
-				{
-					id: "531035F548201FC9"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "0F090DCDB39C646F"
+				type: "item"
+				item: "kubejs:trade_card_cobblestone"
+			}]
 		}
 		{
 			title: "16x 花岗岩"
@@ -344,26 +246,15 @@
 			tasks: [{
 				id: "584EDF2A917D475E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1E13F295F89FE575"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_granite"
-				}
-				{
-					id: "517B8141C1C57A19"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1E13F295F89FE575"
+				type: "item"
+				item: "kubejs:trade_card_granite"
+			}]
 		}
 		{
 			title: "16x 闪长岩"
@@ -378,26 +269,15 @@
 			tasks: [{
 				id: "68C57DE64F3B0177"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7B222F66B8038FE4"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_diorite"
-				}
-				{
-					id: "6DE70D69915EB245"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7B222F66B8038FE4"
+				type: "item"
+				item: "kubejs:trade_card_diorite"
+			}]
 		}
 		{
 			title: "16x 安山岩"
@@ -412,26 +292,15 @@
 			tasks: [{
 				id: "02E95958369A369E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "75A76A453C911E00"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_andesite"
-				}
-				{
-					id: "67B66F1A1065F641"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "75A76A453C911E00"
+				type: "item"
+				item: "kubejs:trade_card_andesite"
+			}]
 		}
 		{
 			title: "16x 石灰岩"
@@ -446,26 +315,15 @@
 			tasks: [{
 				id: "3BB87388C33D8A94"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5C67CEC0921C9CC8"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_limestone"
-				}
-				{
-					id: "1CD72A3303667D5A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5C67CEC0921C9CC8"
+				type: "item"
+				item: "kubejs:trade_card_limestone"
+			}]
 		}
 		{
 			title: "16x 风化石灰岩"
@@ -480,26 +338,15 @@
 			tasks: [{
 				id: "7C2C155A0F3E74C4"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2A6AB573F7DF23A8"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_weathered_limestone"
-				}
-				{
-					id: "3FB218661FB6B1A1"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2A6AB573F7DF23A8"
+				type: "item"
+				item: "kubejs:trade_card_weathered_limestone"
+			}]
 		}
 		{
 			title: "16x 辉长岩"
@@ -514,26 +361,15 @@
 			tasks: [{
 				id: "4A441D4F83E98B1F"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1B4E1AC5EF1C18C8"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_gabbro"
-				}
-				{
-					id: "0E576B4816B4050A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1B4E1AC5EF1C18C8"
+				type: "item"
+				item: "kubejs:trade_card_gabbro"
+			}]
 		}
 		{
 			title: "16x 熔渣"
@@ -548,26 +384,15 @@
 			tasks: [{
 				id: "0E99523B67F85E7D"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "6766C23B9E7B7C75"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_scoria"
-				}
-				{
-					id: "6F71DDA7084A800F"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "6766C23B9E7B7C75"
+				type: "item"
+				item: "kubejs:trade_card_scoria"
+			}]
 		}
 		{
 			title: "16x 焦黑熔渣"
@@ -582,26 +407,15 @@
 			tasks: [{
 				id: "0663916659926B37"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "68637E6EF453223B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_scorchia"
-				}
-				{
-					id: "263D01E1820F4A3E"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "68637E6EF453223B"
+				type: "item"
+				item: "kubejs:trade_card_scorchia"
+			}]
 		}
 		{
 			title: "1x 黑曜石"
@@ -616,26 +430,15 @@
 			tasks: [{
 				id: "33CA08DBB7BDF6FC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2EAD2BB2DF376349"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_obsidian"
-				}
-				{
-					id: "5C4EDCBDE446D113"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2EAD2BB2DF376349"
+				type: "item"
+				item: "kubejs:trade_card_obsidian"
+			}]
 		}
 		{
 			title: "16x 枯死木"
@@ -650,26 +453,15 @@
 			tasks: [{
 				id: "3AA3341544BE4D10"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "117CE9A9D63E06FB"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_dead_log"
-				}
-				{
-					id: "28366C0BB523EF4C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "117CE9A9D63E06FB"
+				type: "item"
+				item: "kubejs:trade_card_dead_log"
+			}]
 		}
 		{
 			title: "16x 橡木"
@@ -685,26 +477,15 @@
 			tasks: [{
 				id: "38A164D474959DDC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "05512E70B9730AF1"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_oak_log"
-				}
-				{
-					id: "27FE001E1185085C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "05512E70B9730AF1"
+				type: "item"
+				item: "kubejs:trade_card_oak_log"
+			}]
 		}
 		{
 			title: "16x 白桦木"
@@ -719,26 +500,15 @@
 			tasks: [{
 				id: "27866BE263AE6107"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3A92E340FB62F084"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_birch_log"
-				}
-				{
-					id: "4351A53EC1F088D8"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3A92E340FB62F084"
+				type: "item"
+				item: "kubejs:trade_card_birch_log"
+			}]
 		}
 		{
 			title: "16x 云杉木"
@@ -753,26 +523,15 @@
 			tasks: [{
 				id: "337B565470BA9DAF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "646685C0E77E1DFC"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_spruce_log"
-				}
-				{
-					id: "21BB3B37936F5308"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "646685C0E77E1DFC"
+				type: "item"
+				item: "kubejs:trade_card_spruce_log"
+			}]
 		}
 		{
 			title: "16x 从林木"
@@ -787,26 +546,15 @@
 			tasks: [{
 				id: "20780381D988F13E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "044DEB4AB5C912A1"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_jungle_log"
-				}
-				{
-					id: "3A17C653D2328664"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "044DEB4AB5C912A1"
+				type: "item"
+				item: "kubejs:trade_card_jungle_log"
+			}]
 		}
 		{
 			title: "16x 金币合欢木"
@@ -821,26 +569,15 @@
 			tasks: [{
 				id: "60DD2E4ABAA388F1"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "47EC43265EF42655"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_acacia_log"
-				}
-				{
-					id: "7125C0429286A08C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "47EC43265EF42655"
+				type: "item"
+				item: "kubejs:trade_card_acacia_log"
+			}]
 		}
 		{
 			title: "16x 深色橡木"
@@ -855,26 +592,15 @@
 			tasks: [{
 				id: "184395D5CE46C0EC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4B1D4A5F8057D623"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_dark_oak_log"
-				}
-				{
-					id: "44D7CE03BD484657"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4B1D4A5F8057D623"
+				type: "item"
+				item: "kubejs:trade_card_dark_oak_log"
+			}]
 		}
 		{
 			title: "16x 绯红菌柄"
@@ -889,26 +615,15 @@
 			tasks: [{
 				id: "2E383A6BE627FE78"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "45472E906796CB07"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_crimson_stem"
-				}
-				{
-					id: "6ACD7262B67CD2C3"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "45472E906796CB07"
+				type: "item"
+				item: "kubejs:trade_card_crimson_stem"
+			}]
 		}
 		{
 			title: "16x 诡异菌柄"
@@ -923,26 +638,15 @@
 			tasks: [{
 				id: "4012391BCC424A70"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "59796628A063D47D"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_warped_stem"
-				}
-				{
-					id: "49A4E95FFD853EED"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "59796628A063D47D"
+				type: "item"
+				item: "kubejs:trade_card_warped_stem"
+			}]
 		}
 		{
 			title: "8x 铁锭"
@@ -957,26 +661,15 @@
 			tasks: [{
 				id: "2A2FBCA872CA4924"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "401AEE5BFB6A25B9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_iron_ingot"
-				}
-				{
-					id: "27507CF6437022C0"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "401AEE5BFB6A25B9"
+				type: "item"
+				item: "kubejs:trade_card_iron_ingot"
+			}]
 		}
 		{
 			title: "8x 锌锭"
@@ -991,26 +684,15 @@
 			tasks: [{
 				id: "361AA26ABD214088"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7BE003458124F59D"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_zinc_ingot"
-				}
-				{
-					id: "5A9454464355105C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7BE003458124F59D"
+				type: "item"
+				item: "kubejs:trade_card_zinc_ingot"
+			}]
 		}
 		{
 			title: "8x 铜锭"
@@ -1025,26 +707,15 @@
 			tasks: [{
 				id: "5961EAE75E1F3A12"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "76BF248BB07EA1D2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_copper_ingot"
-				}
-				{
-					id: "22FB938B992F7E66"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "76BF248BB07EA1D2"
+				type: "item"
+				item: "kubejs:trade_card_copper_ingot"
+			}]
 		}
 		{
 			title: "8x 镍锭"
@@ -1059,26 +730,15 @@
 			tasks: [{
 				id: "5790FA3E5CECE911"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1172E103AC71FEF8"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_nickel_ingot"
-				}
-				{
-					id: "15E7E15F43824EC9"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1172E103AC71FEF8"
+				type: "item"
+				item: "kubejs:trade_card_nickel_ingot"
+			}]
 		}
 		{
 			title: "8x 铅锭"
@@ -1093,26 +753,15 @@
 			tasks: [{
 				id: "4C7C3E0E4DB52422"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "568D10CEED19D991"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_lead_ingot"
-				}
-				{
-					id: "7C84948D6C02EDA7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "568D10CEED19D991"
+				type: "item"
+				item: "kubejs:trade_card_lead_ingot"
+			}]
 		}
 		{
 			title: "8x 金锭"
@@ -1127,26 +776,15 @@
 			tasks: [{
 				id: "615AD6644CE5DD03"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "630915E9087A071D"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_gold_ingot"
-				}
-				{
-					id: "4DA02E1831D27A5A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "630915E9087A071D"
+				type: "item"
+				item: "kubejs:trade_card_gold_ingot"
+			}]
 		}
 		{
 			title: "16x 安山合金"
@@ -1161,26 +799,15 @@
 			tasks: [{
 				id: "4211A254E949CCAA"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2D03AADCE0EF6235"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_andesite_alloy"
-				}
-				{
-					id: "051F544601248605"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2D03AADCE0EF6235"
+				type: "item"
+				item: "kubejs:trade_card_andesite_alloy"
+			}]
 		}
 		{
 			title: "8x 硅钢"
@@ -1195,26 +822,15 @@
 			tasks: [{
 				id: "59D460B0062FCD02"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7FDA0A2FE7C3CC29"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_silica_steel"
-				}
-				{
-					id: "20A44ED461BA79A6"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7FDA0A2FE7C3CC29"
+				type: "item"
+				item: "kubejs:trade_card_silica_steel"
+			}]
 		}
 		{
 			title: "8x 黄铜锭"
@@ -1230,26 +846,15 @@
 			tasks: [{
 				id: "43FB267C137D0322"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5C16E88B525EC658"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_brass_ingot"
-				}
-				{
-					id: "3C2FEB9F3592E82B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5C16E88B525EC658"
+				type: "item"
+				item: "kubejs:trade_card_brass_ingot"
+			}]
 		}
 		{
 			title: "4x 殷钢锭"
@@ -1264,26 +869,15 @@
 			tasks: [{
 				id: "086D9431EBF91286"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "72C975168FF3FE77"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_invar_ingot"
-				}
-				{
-					id: "337FDD30F386EF6F"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "72C975168FF3FE77"
+				type: "item"
+				item: "kubejs:trade_card_invar_ingot"
+			}]
 		}
 		{
 			title: "16x 煤炭"
@@ -1298,26 +892,15 @@
 			tasks: [{
 				id: "1AA5F0B4DB3E5009"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4A1B7342751C9DB3"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_coal"
-				}
-				{
-					id: "4540C7E96AC062BB"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4A1B7342751C9DB3"
+				type: "item"
+				item: "kubejs:trade_card_coal"
+			}]
 		}
 		{
 			title: "16x 燧石"
@@ -1333,26 +916,15 @@
 			tasks: [{
 				id: "146305E7F627E8BC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4B8D2056C6715C35"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_flint"
-				}
-				{
-					id: "4C52A59A14E58468"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4B8D2056C6715C35"
+				type: "item"
+				item: "kubejs:trade_card_flint"
+			}]
 		}
 		{
 			title: "4x 朱砂"
@@ -1367,26 +939,15 @@
 			tasks: [{
 				id: "02AE7C5161980F71"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "67FD14242C8646FB"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_cinnabar"
-				}
-				{
-					id: "6EBBC61EBF9C7D50"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "67FD14242C8646FB"
+				type: "item"
+				item: "kubejs:trade_card_cinnabar"
+			}]
 		}
 		{
 			title: "16x 红石粉"
@@ -1401,26 +962,15 @@
 			tasks: [{
 				id: "7532D29089CA6D7B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "638A809BD6D94A05"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_redstone_dust"
-				}
-				{
-					id: "17AAC057FD9ED9E7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "638A809BD6D94A05"
+				type: "item"
+				item: "kubejs:trade_card_redstone_dust"
+			}]
 		}
 		{
 			title: "1x 钻石"
@@ -1435,29 +985,18 @@
 			tasks: [{
 				id: "2B353B5173AB22BB"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "469E22F6E1737B47"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_diamond"
-				}
-				{
-					id: "18B0C631F07AA097"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "469E22F6E1737B47"
+				type: "item"
+				item: "kubejs:trade_card_diamond"
+			}]
 		}
 		{
-			title: "8x 青金币石"
+			title: "8x 青金石"
 			icon: "minecraft:lapis_lazuli"
 			disable_toast: true
 			x: 3.0d
@@ -1469,26 +1008,15 @@
 			tasks: [{
 				id: "42326FA79F6929AD"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3A7F7DC5F82077C4"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_lapis_lazuli"
-				}
-				{
-					id: "3A90A4F94B2CDAAA"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3A7F7DC5F82077C4"
+				type: "item"
+				item: "kubejs:trade_card_lapis_lazuli"
+			}]
 		}
 		{
 			title: "1x 绿宝石"
@@ -1503,26 +1031,15 @@
 			tasks: [{
 				id: "2D91F3B5D2336FBC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2D04038795D1D239"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_emerald"
-				}
-				{
-					id: "47C856F0150FB3AE"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2D04038795D1D239"
+				type: "item"
+				item: "kubejs:trade_card_emerald"
+			}]
 		}
 		{
 			title: "4x 硫磺"
@@ -1537,26 +1054,15 @@
 			tasks: [{
 				id: "2A8FD44E6A182ABF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1AC7CCF623BB1B3D"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sulfur"
-				}
-				{
-					id: "2B4F1C51113F0E71"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1AC7CCF623BB1B3D"
+				type: "item"
+				item: "kubejs:trade_card_sulfur"
+			}]
 		}
 		{
 			title: "4x 磷灰石"
@@ -1571,26 +1077,15 @@
 			tasks: [{
 				id: "54434E81FC178C48"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "42FDAF0A3775EC7A"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_apatite"
-				}
-				{
-					id: "3B919695CEB188FB"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "42FDAF0A3775EC7A"
+				type: "item"
+				item: "kubejs:trade_card_apatite"
+			}]
 		}
 		{
 			title: "4x 硝石"
@@ -1605,26 +1100,15 @@
 			tasks: [{
 				id: "3392350F9CAD6670"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "431995D6521F252F"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_niter"
-				}
-				{
-					id: "00307AEAD4E0FAB4"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "431995D6521F252F"
+				type: "item"
+				item: "kubejs:trade_card_niter"
+			}]
 		}
 		{
 			title: "8x 下界石英"
@@ -1639,26 +1123,15 @@
 			tasks: [{
 				id: "706DFF6DA78D2E04"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "042C926D56A6456A"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_nether_quartz"
-				}
-				{
-					id: "10CCF452B093420E"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "042C926D56A6456A"
+				type: "item"
+				item: "kubejs:trade_card_nether_quartz"
+			}]
 		}
 		{
 			title: "8x 赛特斯石英"
@@ -1673,26 +1146,15 @@
 			tasks: [{
 				id: "684C2EFD7187D7DC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "13590E587FFB61A9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_certus_quartz"
-				}
-				{
-					id: "55A4E75CB4661374"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "13590E587FFB61A9"
+				type: "item"
+				item: "kubejs:trade_card_certus_quartz"
+			}]
 		}
 		{
 			title: "8x 福鲁伊克斯石英"
@@ -1707,26 +1169,15 @@
 			tasks: [{
 				id: "7120ECDB16073555"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7F4C08C16A4C2D72"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_fluix_quartz"
-				}
-				{
-					id: "3FC671F7275F6AE3"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7F4C08C16A4C2D72"
+				type: "item"
+				item: "kubejs:trade_card_fluix_quartz"
+			}]
 		}
 		{
 			title: "6x 硫化橡胶"
@@ -1742,26 +1193,15 @@
 			tasks: [{
 				id: "20191434BCE55033"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1B699E3960B17BB2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_cured_rubber"
-				}
-				{
-					id: "61CFCC0925309594"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1B699E3960B17BB2"
+				type: "item"
+				item: "kubejs:trade_card_cured_rubber"
+			}]
 		}
 		{
 			title: "16x 脚手架"
@@ -1776,26 +1216,16 @@
 			tasks: [{
 				id: "6C6C5D3A5AEF1AE8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7167D88BA59A09E7"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_scaffolding"
-				}
-				{
-					id: "1E8227936E1F88B7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7167D88BA59A09E7"
+				type: "item"
+				exclude_from_claim_all: true
+				item: "kubejs:trade_card_scaffolding"
+			}]
 		}
 		{
 			title: "1x 羊毛"
@@ -1811,26 +1241,15 @@
 			tasks: [{
 				id: "15D8FC96C936536A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "046F65BD6B8F3A69"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_wool"
-				}
-				{
-					id: "7B3EF6170D16F085"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "046F65BD6B8F3A69"
+				type: "item"
+				item: "kubejs:trade_card_wool"
+			}]
 		}
 		{
 			title: "1x 海绵"
@@ -1845,26 +1264,15 @@
 			tasks: [{
 				id: "622B739024E9B206"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "22057A21C8B641D5"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sponge"
-				}
-				{
-					id: "2C11AC882B1315F9"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "22057A21C8B641D5"
+				type: "item"
+				item: "kubejs:trade_card_sponge"
+			}]
 		}
 		{
 			title: "1x 蜘蛛网"
@@ -1879,26 +1287,15 @@
 			tasks: [{
 				id: "12524A3DB7CFB7CC"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3F538EAC73C35CC1"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_cobweb"
-				}
-				{
-					id: "5776C0A502C6C3BD"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3F538EAC73C35CC1"
+				type: "item"
+				item: "kubejs:trade_card_cobweb"
+			}]
 		}
 		{
 			title: "1x 稻米"
@@ -1913,26 +1310,16 @@
 			tasks: [{
 				id: "102898A5DFF2FA18"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
+				consume_items: true
 			}]
-			rewards: [
-				{
-					id: "139AD66344D4EAF9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_rice"
-				}
-				{
-					id: "444695C7AA8A896F"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "139AD66344D4EAF9"
+				type: "item"
+				item: "kubejs:trade_card_rice"
+			}]
 		}
 		{
 			title: "32x 秸秆"
@@ -1948,26 +1335,15 @@
 			tasks: [{
 				id: "63D3B3146CCBA803"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "78607C92FD8E70A3"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_straw"
-				}
-				{
-					id: "2A296DDC1E12C98E"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "78607C92FD8E70A3"
+				type: "item"
+				item: "kubejs:trade_card_straw"
+			}]
 		}
 		{
 			title: "4x 夜光菇"
@@ -1982,26 +1358,15 @@
 			tasks: [{
 				id: "0C6E534393DFF80F"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "56BA56D1638E4C07"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_glowshroom"
-				}
-				{
-					id: "5433D95E6DAB80AF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "56BA56D1638E4C07"
+				type: "item"
+				item: "kubejs:trade_card_glowshroom"
+			}]
 		}
 		{
 			title: "4x 荆棘"
@@ -2016,26 +1381,15 @@
 			tasks: [{
 				id: "5C690253BED1D0F6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "396093C4AD9073AB"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_bramble"
-				}
-				{
-					id: "14EA0A82764F4B74"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "396093C4AD9073AB"
+				type: "item"
+				item: "kubejs:trade_card_bramble"
+			}]
 		}
 		{
 			title: "4x 大麦"
@@ -2050,26 +1404,15 @@
 			tasks: [{
 				id: "6D591DCF6890CB23"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "286015577874E822"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_barley"
-				}
-				{
-					id: "3398663761C0717C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "286015577874E822"
+				type: "item"
+				item: "kubejs:trade_card_barley"
+			}]
 		}
 		{
 			title: "4x 水草"
@@ -2084,26 +1427,15 @@
 			tasks: [{
 				id: "0564246B0B810C3D"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "21F16770C268ECAB"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_watergrass"
-				}
-				{
-					id: "3AAE19BD4DB43994"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "21F16770C268ECAB"
+				type: "item"
+				item: "kubejs:trade_card_watergrass"
+			}]
 		}
 		{
 			title: "4x 芦苇"
@@ -2118,26 +1450,16 @@
 			tasks: [{
 				id: "32F52BED54B3114E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
+				consume_items: true
 			}]
-			rewards: [
-				{
-					id: "3707239DC12D24C6"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_reed"
-				}
-				{
-					id: "178C8B0A72ABFEC3"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3707239DC12D24C6"
+				type: "item"
+				item: "kubejs:trade_card_reed"
+			}]
 		}
 		{
 			title: "4x 三叶草花瓣"
@@ -2152,26 +1474,15 @@
 			tasks: [{
 				id: "1846CC52D6176A5E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5AEE6773A0E69090"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_clover_petal"
-				}
-				{
-					id: "48D9083217941887"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5AEE6773A0E69090"
+				type: "item"
+				item: "kubejs:trade_card_clover_petal"
+			}]
 		}
 		{
 			title: "4x 西班牙苔藓"
@@ -2186,26 +1497,15 @@
 			tasks: [{
 				id: "709A7E93E426E2B0"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "55B39B9EF9CC4E2B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_spanish_moss"
-				}
-				{
-					id: "507307EA98BF948B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "55B39B9EF9CC4E2B"
+				type: "item"
+				item: "kubejs:trade_card_spanish_moss"
+			}]
 		}
 		{
 			title: "4x 柳树藤"
@@ -2221,26 +1521,15 @@
 			tasks: [{
 				id: "20B016CB70D08E2B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2A0CBB0737AF14C6"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_willow_vine"
-				}
-				{
-					id: "6072BBF091394C0B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2A0CBB0737AF14C6"
+				type: "item"
+				item: "kubejs:trade_card_willow_vine"
+			}]
 		}
 		{
 			title: "4x 香蒲"
@@ -2255,26 +1544,15 @@
 			tasks: [{
 				id: "756023833CB2D869"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2FEEA2731E78B393"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_cattail"
-				}
-				{
-					id: "18F7E22FB4D987B7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2FEEA2731E78B393"
+				type: "item"
+				item: "kubejs:trade_card_cattail"
+			}]
 		}
 		{
 			title: "4x 甘蔗"
@@ -2289,26 +1567,15 @@
 			tasks: [{
 				id: "3A3502C89E91F2D3"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "01CE27AB26F8A7A9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sugar_cane"
-				}
-				{
-					id: "37B929CFA9862C57"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "01CE27AB26F8A7A9"
+				type: "item"
+				item: "kubejs:trade_card_sugar_cane"
+			}]
 		}
 		{
 			title: "8x 海带"
@@ -2323,26 +1590,15 @@
 			tasks: [{
 				id: "5A32B477E3D5460A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "71C4D264A93728C9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_kelp"
-				}
-				{
-					id: "6733D76C1C667F1A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "71C4D264A93728C9"
+				type: "item"
+				item: "kubejs:trade_card_kelp"
+			}]
 		}
 		{
 			title: "8x 竹子"
@@ -2357,26 +1613,15 @@
 			tasks: [{
 				id: "112C4D8D843E9302"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1F26E5E2191A32EA"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_bamboo"
-				}
-				{
-					id: "202BA69D3880D6E2"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1F26E5E2191A32EA"
+				type: "item"
+				item: "kubejs:trade_card_bamboo"
+			}]
 		}
 		{
 			title: "8x 甜浆果"
@@ -2391,26 +1636,15 @@
 			tasks: [{
 				id: "0DFBF8AD7A352981"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7C1F7EC0691335A0"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sweet_berries"
-				}
-				{
-					id: "44A72E5903F70B06"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7C1F7EC0691335A0"
+				type: "item"
+				item: "kubejs:trade_card_sweet_berries"
+			}]
 		}
 		{
 			title: "4x 藤蔓"
@@ -2425,26 +1659,15 @@
 			tasks: [{
 				id: "368A869ABBD16EA5"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "584C664BF41CAD3A"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_vines"
-				}
-				{
-					id: "6576C6A8B0EE63F9"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "584C664BF41CAD3A"
+				type: "item"
+				item: "kubejs:trade_card_vines"
+			}]
 		}
 		{
 			title: "1x 树木肥料"
@@ -2459,26 +1682,15 @@
 			tasks: [{
 				id: "02088EC1EE62B35B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "72BEF6F5447CFBD2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_tree_fertilizer"
-				}
-				{
-					id: "70FD95B6C1545796"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "72BEF6F5447CFBD2"
+				type: "item"
+				item: "kubejs:trade_card_tree_fertilizer"
+			}]
 		}
 		{
 			title: "16x 抹灰"
@@ -2494,26 +1706,15 @@
 			tasks: [{
 				id: "3804E04ED496A517"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "615110F7D37AD5C9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_daub"
-				}
-				{
-					id: "439CF67E8821600D"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "615110F7D37AD5C9"
+				type: "item"
+				item: "kubejs:trade_card_daub"
+			}]
 		}
 		{
 			title: "16x 通透玻璃"
@@ -2528,26 +1729,15 @@
 			tasks: [{
 				id: "2B0200672CC0AE9B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "607BA7EE8B661EB9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_clear_glass"
-				}
-				{
-					id: "5ABB212C5F77B4E3"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "607BA7EE8B661EB9"
+				type: "item"
+				item: "kubejs:trade_card_clear_glass"
+			}]
 		}
 		{
 			title: "16x 铜砖块"
@@ -2562,26 +1752,15 @@
 			tasks: [{
 				id: "3ADD4B2667FCE6BD"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "26925EEB466FCEBD"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_copper_shingles"
-				}
-				{
-					id: "0A9854892CC48853"
-					type: "custom"
-					title: "Repeatable"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "26925EEB466FCEBD"
+				type: "item"
+				item: "kubejs:trade_card_copper_shingles"
+			}]
 		}
 		{
 			title: "32x 海藻砖块"
@@ -2596,26 +1775,15 @@
 			tasks: [{
 				id: "1949FB8AB7C640DA"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "72F40F26027377A2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_algal_bricks"
-				}
-				{
-					id: "46294ECFE64E5954"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "72F40F26027377A2"
+				type: "item"
+				item: "kubejs:trade_card_algal_bricks"
+			}]
 		}
 		{
 			title: "32x 橄榄石砖块"
@@ -2630,26 +1798,15 @@
 			tasks: [{
 				id: "7E59FBC4A6D63BB8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "2669A3F55CCF8B2F"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_olivestone_bricks"
-				}
-				{
-					id: "0093FAEADD7CB5AA"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2669A3F55CCF8B2F"
+				type: "item"
+				item: "kubejs:trade_card_olivestone_bricks"
+			}]
 		}
 		{
 			title: "32x 耀阳金币属块"
@@ -2664,26 +1821,15 @@
 			tasks: [{
 				id: "56DCD18E8E3A9A03"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "0DFC31E57BDB4997"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_sunmetal"
-				}
-				{
-					id: "4FEA0B11967ADB7A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "0DFC31E57BDB4997"
+				type: "item"
+				item: "kubejs:trade_card_sunmetal"
+			}]
 		}
 		{
 			title: "32x 金币属板块"
@@ -2698,26 +1844,15 @@
 			tasks: [{
 				id: "3D872AD091656AA0"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "407240E7B8D96014"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_plating_block"
-				}
-				{
-					id: "57251749078D9054"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "407240E7B8D96014"
+				type: "item"
+				item: "kubejs:trade_card_plating_block"
+			}]
 		}
 		{
 			title: "32x 扭曲木板"
@@ -2732,26 +1867,15 @@
 			tasks: [{
 				id: "00D969CBAB8FFE79"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3AFE4770CC64698B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_twisted_planks"
-				}
-				{
-					id: "1ACB55D05DE6E524"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3AFE4770CC64698B"
+				type: "item"
+				item: "kubejs:trade_card_twisted_planks"
+			}]
 		}
 		{
 			title: "32x 骨砖"
@@ -2766,26 +1890,15 @@
 			tasks: [{
 				id: "463E86D54496072A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "47264121457A25FA"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_osseous_bricks"
-				}
-				{
-					id: "4A11B3D2C71CA99A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "47264121457A25FA"
+				type: "item"
+				item: "kubejs:trade_card_osseous_bricks"
+			}]
 		}
 		{
 			title: "16x 焦黑石头"
@@ -2800,26 +1913,15 @@
 			tasks: [{
 				id: "4CEDF77A191739AD"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "361BBC16B4F08A61"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_seared_stone"
-				}
-				{
-					id: "1BCE2BA9F9A0F2F3"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "361BBC16B4F08A61"
+				type: "item"
+				item: "kubejs:trade_card_seared_stone"
+			}]
 		}
 		{
 			title: "16x 焦灼石"
@@ -2834,26 +1936,15 @@
 			tasks: [{
 				id: "3566569E8F42471C"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "657072F21D2DCC6B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_scorched_stone"
-				}
-				{
-					id: "49D052A897692692"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "657072F21D2DCC6B"
+				type: "item"
+				item: "kubejs:trade_card_scorched_stone"
+			}]
 		}
 		{
 			title: "1x 灯笼"
@@ -2868,26 +1959,15 @@
 			tasks: [{
 				id: "2B376B59A58266F1"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3191A48021BEC6F1"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_lantern"
-				}
-				{
-					id: "73CAABD5AA11148B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3191A48021BEC6F1"
+				type: "item"
+				item: "kubejs:trade_card_lantern"
+			}]
 		}
 		{
 			title: "1x 铜灯笼"
@@ -2902,26 +1982,15 @@
 			tasks: [{
 				id: "0A526CCAD0DB6824"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7D129E93BE0BFCD2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_copper_lantern"
-				}
-				{
-					id: "024790B6746E5445"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7D129E93BE0BFCD2"
+				type: "item"
+				item: "kubejs:trade_card_copper_lantern"
+			}]
 		}
 		{
 			title: "1x 黄铜灯笼"
@@ -2936,26 +2005,15 @@
 			tasks: [{
 				id: "7C839C164E22E3A6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "75AE2D96639929C8"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_brass_lantern"
-				}
-				{
-					id: "3429893F2E752D12"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "75AE2D96639929C8"
+				type: "item"
+				item: "kubejs:trade_card_brass_lantern"
+			}]
 		}
 		{
 			title: "1x 绯红灯笼"
@@ -2970,26 +2028,15 @@
 			tasks: [{
 				id: "3EEC0B0EB2A88162"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4342F803C01A6EA5"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_crimson_lantern"
-				}
-				{
-					id: "033A28610EAC0F85"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4342F803C01A6EA5"
+				type: "item"
+				item: "kubejs:trade_card_crimson_lantern"
+			}]
 		}
 		{
 			title: "4x 黏液球"
@@ -3004,26 +2051,15 @@
 			tasks: [{
 				id: "2DF41D6A19E09AB9"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "713906823E548803"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_slime_ball"
-				}
-				{
-					id: "598BF49BFC144461"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "713906823E548803"
+				type: "item"
+				item: "kubejs:trade_card_slime_ball"
+			}]
 		}
 		{
 			title: "4x 线"
@@ -3038,26 +2074,15 @@
 			tasks: [{
 				id: "2927E976FDB304F8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "345B211DB40DBB11"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_string"
-				}
-				{
-					id: "6C5CCA02F5FED5AF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "345B211DB40DBB11"
+				type: "item"
+				item: "kubejs:trade_card_string"
+			}]
 		}
 		{
 			title: "4x 羽毛"
@@ -3072,26 +2097,15 @@
 			tasks: [{
 				id: "6BA961D699B3FDA3"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "63E1E953F7CAB98C"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_feather"
-				}
-				{
-					id: "37292755165C5E70"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "63E1E953F7CAB98C"
+				type: "item"
+				item: "kubejs:trade_card_feather"
+			}]
 		}
 		{
 			title: "4x 火药"
@@ -3106,26 +2120,15 @@
 			tasks: [{
 				id: "7ACAFA189432B00A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "38695142E4B59CC4"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_gunpowder"
-				}
-				{
-					id: "22148E1488634CBC"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "38695142E4B59CC4"
+				type: "item"
+				item: "kubejs:trade_card_gunpowder"
+			}]
 		}
 		{
 			title: "4x 皮革"
@@ -3140,26 +2143,15 @@
 			tasks: [{
 				id: "0286870F1BE79497"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "032D7ABD29636F10"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_leather"
-				}
-				{
-					id: "23DCC79D518942FF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "032D7ABD29636F10"
+				type: "item"
+				item: "kubejs:trade_card_leather"
+			}]
 		}
 		{
 			title: "4x 墨囊"
@@ -3174,26 +2166,15 @@
 			tasks: [{
 				id: "7675965D810C1E19"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "537B313B38D38756"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_ink_sac"
-				}
-				{
-					id: "1080C7BC07C27040"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "537B313B38D38756"
+				type: "item"
+				item: "kubejs:trade_card_ink_sac"
+			}]
 		}
 		{
 			title: "1x 附魔之瓶"
@@ -3208,26 +2189,15 @@
 			tasks: [{
 				id: "4750E7C7A3FEBAE1"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1BF4346138DE8CF4"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_experience"
-				}
-				{
-					id: "773E101F64C7580F"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1BF4346138DE8CF4"
+				type: "item"
+				item: "kubejs:trade_card_experience"
+			}]
 		}
 		{
 			title: "1x 潜影壳"
@@ -3242,26 +2212,15 @@
 			tasks: [{
 				id: "3471CE4A77BD6A55"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7C91D1EEF60F0266"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_shulker_shell"
-				}
-				{
-					id: "2DEF24BECE0F65E8"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7C91D1EEF60F0266"
+				type: "item"
+				item: "kubejs:trade_card_shulker_shell"
+			}]
 		}
 		{
 			title: "4x 蜘蛛眼"
@@ -3277,26 +2236,15 @@
 			tasks: [{
 				id: "383952EA24985698"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "27B65184F7CB8523"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_spider_eye"
-				}
-				{
-					id: "6EA1065A43A05998"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "27B65184F7CB8523"
+				type: "item"
+				item: "kubejs:trade_card_spider_eye"
+			}]
 		}
 		{
 			title: "1x 末影珍珠"
@@ -3311,26 +2259,15 @@
 			tasks: [{
 				id: "270A97BF55AF9610"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "3F96F6F2B07E1E5A"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_ender_pearl"
-				}
-				{
-					id: "1B646802394707A0"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "3F96F6F2B07E1E5A"
+				type: "item"
+				item: "kubejs:trade_card_ender_pearl"
+			}]
 		}
 		{
 			title: "4x 腐肉"
@@ -3345,26 +2282,15 @@
 			tasks: [{
 				id: "097E8A04FAAE0667"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "357F64B88400B639"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_rotten_flesh"
-				}
-				{
-					id: "2BAD092674D664D8"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "357F64B88400B639"
+				type: "item"
+				item: "kubejs:trade_card_rotten_flesh"
+			}]
 		}
 		{
 			title: "1x 烈焰棒"
@@ -3379,26 +2305,15 @@
 			tasks: [{
 				id: "2B08E42331F8DF22"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "4ED967B8173AC4CF"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_blaze_rod"
-				}
-				{
-					id: "1810525458CC6789"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4ED967B8173AC4CF"
+				type: "item"
+				item: "kubejs:trade_card_blaze_rod"
+			}]
 		}
 		{
 			title: "4x 骨头"
@@ -3413,26 +2328,15 @@
 			tasks: [{
 				id: "73CB5C4A0A9585DF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1493A3FD0EA653EC"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_bone"
-				}
-				{
-					id: "718EACD21851664C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1493A3FD0EA653EC"
+				type: "item"
+				item: "kubejs:trade_card_bone"
+			}]
 		}
 		{
 			title: "4x 海晶碎片"
@@ -3447,26 +2351,15 @@
 			tasks: [{
 				id: "19A7642A03C1A325"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "340A9C260064C857"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_prismarine_shard"
-				}
-				{
-					id: "739F89BBCD389978"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "340A9C260064C857"
+				type: "item"
+				item: "kubejs:trade_card_prismarine_shard"
+			}]
 		}
 		{
 			title: "4x 海晶砂粒"
@@ -3481,26 +2374,15 @@
 			tasks: [{
 				id: "46A269C94A92FEED"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "691ABE416A068AA3"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_prismarine_crystals"
-				}
-				{
-					id: "438BC40EDF8E9C4E"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "691ABE416A068AA3"
+				type: "item"
+				item: "kubejs:trade_card_prismarine_crystals"
+			}]
 		}
 		{
 			title: "1x 女巫之帽"
@@ -3515,26 +2397,15 @@
 			tasks: [{
 				id: "025B7E86B9826C3A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "623EE4825653E5F6"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_witch_hat"
-				}
-				{
-					id: "1FE7D7DE520A1BC1"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "623EE4825653E5F6"
+				type: "item"
+				item: "kubejs:trade_card_witch_hat"
+			}]
 		}
 		{
 			title: "1x 僵尸之心"
@@ -3550,26 +2421,15 @@
 			tasks: [{
 				id: "710B220AF8D1CED6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5207019CD7FA775B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_zombie_heart"
-				}
-				{
-					id: "1A67C75351474C06"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5207019CD7FA775B"
+				type: "item"
+				item: "kubejs:trade_card_zombie_heart"
+			}]
 		}
 		{
 			title: "1x 鱿鱼嘴"
@@ -3584,26 +2444,15 @@
 			tasks: [{
 				id: "26C141EE0D0245B0"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5067BF13A90E14F9"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_squid_beak"
-				}
-				{
-					id: "39BB9203ADD710EF"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5067BF13A90E14F9"
+				type: "item"
+				item: "kubejs:trade_card_squid_beak"
+			}]
 		}
 		{
 			title: "1x 肋骨"
@@ -3618,26 +2467,15 @@
 			tasks: [{
 				id: "5784F7C4EC00A0BB"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "0C4B787F6140DEF2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_rib_bone"
-				}
-				{
-					id: "2ECD3608BFA1C785"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "0C4B787F6140DEF2"
+				type: "item"
+				item: "kubejs:trade_card_rib_bone"
+			}]
 		}
 		{
 			title: "1x 酶腺"
@@ -3652,26 +2490,15 @@
 			tasks: [{
 				id: "14037BAB588FBE58"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "5BC45552D76CE70C"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_catalyzing_gland"
-				}
-				{
-					id: "2E0BEFA1E26DF421"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "5BC45552D76CE70C"
+				type: "item"
+				item: "kubejs:trade_card_catalyzing_gland"
+			}]
 		}
 		{
 			title: "1x 螯角"
@@ -3686,26 +2513,15 @@
 			tasks: [{
 				id: "48C9F2DB7A9E4CEB"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "70CFE190E79DC55B"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_chelicerae"
-				}
-				{
-					id: "518455646CEE07AC"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "70CFE190E79DC55B"
+				type: "item"
+				item: "kubejs:trade_card_chelicerae"
+			}]
 		}
 		{
 			title: "1x 黏液珍珠"
@@ -3720,26 +2536,15 @@
 			tasks: [{
 				id: "214FFA104FE133F8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "199D1C764B4DAE99"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_slime_pearl"
-				}
-				{
-					id: "38A5195E6C1C10AE"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "199D1C764B4DAE99"
+				type: "item"
+				item: "kubejs:trade_card_slime_pearl"
+			}]
 		}
 		{
 			title: "1x 蝙蝠翅膀"
@@ -3754,26 +2559,15 @@
 			tasks: [{
 				id: "45BE45A79B80FCF6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "267CF7BAF0E215CD"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_bat_wing"
-				}
-				{
-					id: "0551170B231368C7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "267CF7BAF0E215CD"
+				type: "item"
+				item: "kubejs:trade_card_bat_wing"
+			}]
 		}
 		{
 			title: "1x 调灵肋骨"
@@ -3788,26 +2582,15 @@
 			tasks: [{
 				id: "4C786EBEED167630"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "40D1BA8AE6FCD135"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_withered_rib"
-				}
-				{
-					id: "3594F1B49BC364B8"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "40D1BA8AE6FCD135"
+				type: "item"
+				item: "kubejs:trade_card_withered_rib"
+			}]
 		}
 		{
 			title: "1x 熔火之心"
@@ -3822,26 +2605,15 @@
 			tasks: [{
 				id: "1609628ED4726033"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "717402268CF3F2BC"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_molten_core"
-				}
-				{
-					id: "13E545733DC5D5D7"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "717402268CF3F2BC"
+				type: "item"
+				item: "kubejs:trade_card_molten_core"
+			}]
 		}
 		{
 			title: "1x 风暴之眼"
@@ -3856,26 +2628,15 @@
 			tasks: [{
 				id: "7F0F27BCF34120E6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "190E2D049E934B8D"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_eye_of_the_storm"
-				}
-				{
-					id: "712793ACD2E9A164"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "190E2D049E934B8D"
+				type: "item"
+				item: "kubejs:trade_card_eye_of_the_storm"
+			}]
 		}
 		{
 			title: "1x 霜冻核心"
@@ -3890,26 +2651,15 @@
 			tasks: [{
 				id: "01FE0D29095E26A3"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "7F4A643D0E8B05DE"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_frozen_core"
-				}
-				{
-					id: "36B055C1E1539249"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "7F4A643D0E8B05DE"
+				type: "item"
+				item: "kubejs:trade_card_frozen_core"
+			}]
 		}
 		{
 			title: "1x 朦胧之心"
@@ -3924,7 +2674,7 @@
 			tasks: [{
 				id: "70D166BE3AD092C6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -3958,26 +2708,15 @@
 			tasks: [{
 				id: "711FBCBF31F05037"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "79492DA6ABA0D026"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_guardian_spike"
-				}
-				{
-					id: "0F41BE587482D862"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "79492DA6ABA0D026"
+				type: "item"
+				item: "kubejs:trade_card_guardian_spike"
+			}]
 		}
 		{
 			title: "1x 幻翼膜"
@@ -3992,26 +2731,15 @@
 			tasks: [{
 				id: "4C6D6B6FDD092D81"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "41A125770BE0AE2F"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_phantom_membrane"
-				}
-				{
-					id: "78DABB6B0C75D4A1"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "41A125770BE0AE2F"
+				type: "item"
+				item: "kubejs:trade_card_phantom_membrane"
+			}]
 		}
 		{
 			title: "1x 烈焰蛋糕"
@@ -4026,26 +2754,15 @@
 			tasks: [{
 				id: "7F154E4A98F8A588"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [
-				{
-					id: "1A4F55B2A56B0635"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:trade_card_blaze_cake"
-				}
-				{
-					id: "6358CC951A94861A"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1A4F55B2A56B0635"
+				type: "item"
+				item: "kubejs:trade_card_blaze_cake"
+			}]
 		}
 		{
 			title: "早期贸易"
@@ -4064,7 +2781,7 @@
 			tasks: [{
 				id: "3E2EAC7B2D274669"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]

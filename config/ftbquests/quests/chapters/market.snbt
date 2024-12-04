@@ -260,11 +260,13 @@
 				id: "772821832EE93341"
 				type: "item"
 				item: "thermal:gold_coin"
+				consume_items: true
 			}]
 			rewards: [{
 				id: "660F46969E3F00EF"
 				type: "item"
 				icon: { id: "thermal:silver_coin", Count: 64b }
+				team_reward: false
 				item: "thermal:silver_coin"
 				count: 64
 			}]
@@ -290,6 +292,7 @@
 			rewards: [{
 				id: "3EBAEA5F9183651B"
 				type: "item"
+				team_reward: false
 				item: "thermal:gold_coin"
 			}]
 		}
@@ -1104,7 +1107,6 @@
 				id: "0DFA30B6D63CAEB4"
 				type: "loot"
 				exclude_from_claim_all: true
-				table_id: 6807207932646717288L
 			}]
 		}
 		{
