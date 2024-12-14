@@ -1974,7 +1974,9 @@ event.shaped(MC("chest"), [
 let woodCanMakeChest = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), MC('warped'), 'quark:azalea', 'quark:blossom']
 let woodChest = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped', 'warped', 'azalea', 'blossom']
 for (let i = 0; i <= (woodCanMakeChest.length - 1); i++) {
-	event.recipes.create.itemApplication("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
+	//Fix: convert revertable_chests drop items
+	//event.recipes.create.itemApplication("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
+	event.shapeless("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
 }
 
 }

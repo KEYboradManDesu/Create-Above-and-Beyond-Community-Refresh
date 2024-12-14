@@ -8,7 +8,7 @@ tooltip.add("minecraft:deepslate_redstone_ore", [`§6原版红石矿石已被朱
 
 tooltip.add("create_dd:rubber_sapling", [`§6该品种树苗提供双倍树脂产量`]);
 
-tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
+//tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
 tooltip.add("create_dd:infaice", [`§3⑨`]);
 
