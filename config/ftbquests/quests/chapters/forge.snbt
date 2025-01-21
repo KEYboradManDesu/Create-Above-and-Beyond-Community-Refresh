@@ -1,0 +1,581 @@
+{
+	id: "66FDBA2F46C689DC"
+	group: "0810E42B2DD79973"
+	order_index: 5
+	filename: "forge"
+	title: "▶ 锻造"
+	icon: "create:brass_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "&6&l锻造合金"
+			icon: "create:brass_ingot"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"一个关于大部分合金的锻造导图。"
+				""
+				"多数矿物能够在&6工作盆&r中熔化为熔融态矿物，随后借助搅拌设备进行充分搅拌，进而制备成合金。"
+			]
+			size: 2.0d
+			id: "17A57579F590ACAC"
+			tasks: [{
+				id: "7C91B32674649BF0"
+				type: "checkmark"
+				title: "好的"
+			}]
+		}
+		{
+			x: -6.0d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "59A942442920C132"
+			tasks: [{
+				id: "1180E99B062EBF3E"
+				type: "item"
+				item: "create:zinc_ingot"
+				consume_items: false
+				match_nbt: true
+			}]
+		}
+		{
+			x: -5.0d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "3AF5C5159D86827F"
+			tasks: [{
+				id: "7FACC06E12B862E6"
+				type: "item"
+				item: "minecraft:copper_ingot"
+				consume_items: false
+				match_nbt: true
+			}]
+		}
+		{
+			x: -3.0d
+			y: 0.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"3AF5C5159D86827F"
+				"59A942442920C132"
+			]
+			id: "1B63E51CA5B3FE78"
+			tasks: [{
+				id: "71F82F894E0D8FD3"
+				type: "item"
+				item: "create:brass_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 5.0d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "38E04F0C1CD1CB64"
+			tasks: [{
+				id: "2759481E44EA79C5"
+				type: "item"
+				item: "create_dd:tin_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "1D3B36C5A2E32CF4"
+			tasks: [{
+				id: "6631CD1564BBC5A6"
+				type: "item"
+				item: "minecraft:copper_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"1D3B36C5A2E32CF4"
+				"38E04F0C1CD1CB64"
+			]
+			id: "13518DB2237EAF02"
+			tasks: [{
+				id: "2AF1C09A4B3F75FD"
+				type: "item"
+				item: "create_dd:bronze_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -3.0d
+			y: 2.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"6925EF4B0880BDAE"
+				"37D0B656CA2288D2"
+			]
+			id: "2EE3C5250C8418DE"
+			tasks: [{
+				id: "42C6FC07641E329B"
+				type: "item"
+				item: "tconstruct:rose_gold_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 3.0d
+			y: 2.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"4F9E9AD2FA51491F"
+				"2ECD3B001CBC4587"
+			]
+			id: "52BD5F858C31DD7E"
+			tasks: [{
+				id: "20F00154C30B0254"
+				type: "item"
+				item: "thermal:electrum_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -5.0d
+			y: 2.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "37D0B656CA2288D2"
+			tasks: [{
+				id: "4C2E03598982AA29"
+				type: "item"
+				item: "minecraft:copper_ingot"
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			x: -6.0d
+			y: 2.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "6925EF4B0880BDAE"
+			tasks: [{
+				id: "3FA30EFB470E9E7F"
+				type: "item"
+				item: "minecraft:gold_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 5.0d
+			y: 2.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "4F9E9AD2FA51491F"
+			tasks: [{
+				id: "197481D915AB2F60"
+				type: "item"
+				item: "minecraft:gold_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 2.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "2ECD3B001CBC4587"
+			tasks: [{
+				id: "3E01AA26239EF8B2"
+				type: "item"
+				item: "thermal:silver_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -6.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "6539829A06F21F65"
+			tasks: [{
+				id: "5F628478AB8DFAE9"
+				type: "item"
+				item: "minecraft:gold_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -5.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "0C907644FCAC99D0"
+			tasks: [{
+				id: "64175087C70955F9"
+				type: "item"
+				item: "minecraft:netherite_scrap"
+				consume_items: false
+			}]
+		}
+		{
+			x: -3.0d
+			y: 6.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"6539829A06F21F65"
+				"0C907644FCAC99D0"
+			]
+			id: "5F68E958A81FF460"
+			tasks: [{
+				id: "6406EFA69D346D3B"
+				type: "item"
+				item: "minecraft:netherite_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "12539AE0F13094A4"
+			tasks: [{
+				id: "3F21307CC7C0FF14"
+				type: "item"
+				item: "minecraft:iron_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 4.0d
+			dependencies: ["12539AE0F13094A4"]
+			id: "2F6B33091FFE8BDA"
+			tasks: [{
+				id: "505472CF2853BC16"
+				type: "item"
+				item: "createbigcannons:cast_iron_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			title: "蜂蜜或血"
+			x: 0.0d
+			y: 5.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "0C1E893E76D79BF4"
+			tasks: [{
+				id: "623AEA2866E054A4"
+				type: "item"
+				title: "蜂蜜或血"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "minecraft:honey_bottle"
+								Count: 1b
+							}
+							{
+								id: "tconstruct:blood_bottle"
+								Count: 1b
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 7.0d
+			dependencies: [
+				"0C1E893E76D79BF4"
+				"2F6B33091FFE8BDA"
+			]
+			id: "7B724714C39037FD"
+			tasks: [{
+				id: "5D0CCE80EC7CAEF0"
+				type: "item"
+				item: "tconstruct:pig_iron_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "30E719DACC9DC66F"
+			tasks: [{
+				id: "4B3F455C1EFFAE16"
+				type: "item"
+				item: "kubejs:coke_chunk"
+				consume_items: false
+			}]
+		}
+		{
+			x: 0.0d
+			y: 10.0d
+			dependencies: [
+				"7B724714C39037FD"
+				"30E719DACC9DC66F"
+			]
+			id: "157879194DC259E8"
+			tasks: [{
+				id: "0617F2D99F3740AB"
+				type: "item"
+				item: "create_dd:steel_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -3.0d
+			y: 4.0d
+			subtitle: "熔融流体搅拌，感应炉锻造"
+			dependencies: [
+				"1E04C7E83714441F"
+				"5C1C50DD0FB1EC4C"
+			]
+			id: "0A783AF345BD7C02"
+			tasks: [{
+				id: "770984930047E862"
+				type: "item"
+				item: "thermal:constantan_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 3.0d
+			y: 4.0d
+			subtitle: "辊压机锻造，感应炉锻造"
+			dependencies: [
+				"257F1E41DC652589"
+				"347241E02696DE8F"
+			]
+			id: "1E113EE0BC077DF1"
+			tasks: [{
+				id: "37199A9A91FAE8FA"
+				type: "item"
+				item: "thermal:invar_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -5.0d
+			y: 4.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "5C1C50DD0FB1EC4C"
+			tasks: [{
+				id: "445C18021AA25A9F"
+				type: "item"
+				item: "minecraft:copper_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -6.0d
+			y: 4.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "1E04C7E83714441F"
+			tasks: [{
+				id: "5D9F604267AB5C5B"
+				type: "item"
+				item: "thermal:nickel_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 5.0d
+			y: 4.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "257F1E41DC652589"
+			tasks: [{
+				id: "73A31774C6622527"
+				type: "item"
+				item: "thermal:nickel_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 4.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "347241E02696DE8F"
+			tasks: [{
+				id: "5F6196A57D3DD436"
+				type: "item"
+				item: "minecraft:iron_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -5.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "5D09D9C8DFBF8D4E"
+			tasks: [{
+				id: "3F26EE07CFD92F92"
+				type: "item"
+				item: "minecraft:netherite_scrap"
+				consume_items: false
+			}]
+		}
+		{
+			x: -6.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "730FBA921648BBEB"
+			tasks: [{
+				id: "5A8694FF57080416"
+				type: "item"
+				item: "tconstruct:cobalt_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: -3.0d
+			y: 8.0d
+			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			dependencies: [
+				"5D09D9C8DFBF8D4E"
+				"730FBA921648BBEB"
+			]
+			id: "7555A4B6DA3FD1DA"
+			tasks: [{
+				id: "64813C0856953D54"
+				type: "item"
+				item: "tconstruct:manyullyn_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 3.0d
+			y: 6.0d
+			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			dependencies: [
+				"1E33C45D1721C33E"
+				"70A96F7F02B910B5"
+				"299357828716849D"
+			]
+			id: "7634919C49D9F19D"
+			tasks: [{
+				id: "30A7E21E21F1E0E3"
+				type: "item"
+				item: "tconstruct:hepatizon_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "299357828716849D"
+			tasks: [{
+				id: "3486C9D5E7272C65"
+				type: "item"
+				item: "minecraft:copper_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 5.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "1E33C45D1721C33E"
+			tasks: [{
+				id: "1D614BC2E6F4A80E"
+				type: "item"
+				item: "tconstruct:cobalt_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 7.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "70A96F7F02B910B5"
+			tasks: [{
+				id: "068C54B44258A802"
+				type: "item"
+				item: "minecraft:quartz"
+				consume_items: false
+			}]
+		}
+		{
+			x: 3.0d
+			y: 8.0d
+			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			dependencies: [
+				"7A42FDF485FACEBD"
+				"497CE999920D8AAE"
+				"05A98041614C9F1B"
+			]
+			id: "3D194E59008AC469"
+			tasks: [{
+				id: "4227B7B51B979F9C"
+				type: "item"
+				item: "tconstruct:queens_slime_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "7A42FDF485FACEBD"
+			tasks: [{
+				id: "680A30D6479B3456"
+				type: "item"
+				item: "tconstruct:cobalt_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 5.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "497CE999920D8AAE"
+			tasks: [{
+				id: "794A0B25A37EFD2D"
+				type: "item"
+				item: "minecraft:gold_ingot"
+				consume_items: false
+			}]
+		}
+		{
+			x: 7.0d
+			y: 8.0d
+			hide_dependency_lines: true
+			dependencies: ["17A57579F590ACAC"]
+			id: "05A98041614C9F1B"
+			tasks: [{
+				id: "7473DC676FB03573"
+				type: "item"
+				item: "tconstruct:magma_bottle"
+				consume_items: false
+			}]
+		}
+	]
+	quest_links: [ ]
+}
