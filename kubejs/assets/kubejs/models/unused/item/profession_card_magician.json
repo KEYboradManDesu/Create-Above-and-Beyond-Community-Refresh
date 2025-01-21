@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "kubejs:item/profession_card_magic_0"
-	}
-}

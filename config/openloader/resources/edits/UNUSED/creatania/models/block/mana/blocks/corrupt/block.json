@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "minecraft:block/cube_all",
-	"textures": {
-		"all": "creatania:block/mana_block_corrupt"
-	}
-}

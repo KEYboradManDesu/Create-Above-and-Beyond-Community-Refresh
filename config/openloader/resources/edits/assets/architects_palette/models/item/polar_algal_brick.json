@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "architects_palette:item/polar_algal_brick"
-	}
-}
