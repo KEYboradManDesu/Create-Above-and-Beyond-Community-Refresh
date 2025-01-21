@@ -61,6 +61,7 @@ onEvent('recipes', event => {
 	firearm(event)
 	alloys(event)
 	chestFix(event)
+	afterMoon(event)
 
 	algalAndesite(event)
 	andesiteMachine(event)
@@ -311,6 +312,47 @@ event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerat
 
 event.blasting(Item.of('ae2:sky_stone_block'), 'beyond_earth:sky_stone').cookingTime(100)
 
+// 碎可可
+event.custom({
+	"type":"vintageimprovements:vibrating",
+	"ingredients": [ {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+	"results": [
+	{
+		"item": "create_confectionery:crushed_cocoa"
+	}
+	],
+  "processingTime": 300
+})
+
+// 熔融荧石
+event.custom({
+	"type": "tconstruct:melting",
+	"ingredient": {
+		"item": MC('glowstone_dust')
+	},
+	"result": {
+		"fluid": TE('glowstone'),
+		"amount": 250
+	},
+	"temperature": 300,
+	"time": 10
+})
+event.custom({
+	"type": "tconstruct:melting",
+	"ingredient": {
+		"item": MC('glowstone')
+	},
+	"result": {
+		"fluid": TE('glowstone'),
+		"amount": 1000
+	},
+	"temperature": 500,
+	"time": 90
+})
+
 // 玫瑰石英
 event.custom({
 	"type":"vintageimprovements:polishing",
@@ -415,8 +457,34 @@ bedrock_cobblegen('minecraft:honey_block', CR("limestone"))
 bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 
 // 前期优化游戏体验
-event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, F('#plates/brass'), [CR('golden_sheet')])// 黄铜手部件改金制手部件
 event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
+// 手部零件
+event.remove({ id: CRD("crafting/brass_hand") })
+event.remove({ id: CR("crafting/kinetics/brass_hand") })
+event.shaped(Item.of('create:brass_hand', "{CustomModelData:1,display:{Name:'[{\"text\":\"金制手部零件\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+	' S ',
+	'PPP',
+	' P '
+], {
+	P: CR("golden_sheet"),
+	S: CR("andesite_alloy")
+})
+event.shaped(Item.of('2x create:brass_hand', "{CustomModelData:2,display:{Name:'[{\"text\":\"青铜手部零件\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+	' S ',
+	'PPP',
+	' P '
+], {
+	P: CRD("bronze_sheet"),
+	S: CR("andesite_alloy")
+})
+event.shaped(Item.of('create:brass_hand', 2), [
+	' S ',
+	'PPP',
+	' P '
+], {
+	P: CR("brass_sheet"),
+	S: CR("andesite_alloy")
+})
 
 // 储存标签Labels
 donutCraft(event, '8x labels:label', "#forge:dyes/black", MC("paper"))
@@ -469,14 +537,14 @@ event.shaped(KJ("circuit_scrap", 2),
 event.recipes.createMilling(KJ("circuit_scrap"), F("#circuit_press"))
 
 event.replaceInput({ output: CR('adjustable_chain_gearshift') }, CR('electron_tube'), MC('redstone'))
-event.replaceInput({ id: CR("crafting/kinetics/filter") }, MC('#wool'), [IM('hemp_fabric'), MC('#wool')])//过滤器
-event.replaceInput({ id: CR("crafting/kinetics/attribute_filter") }, MC('#wool'), [IM('hemp_fabric'), MC('#wool')])//属性过滤器
-event.replaceInput({ id: "immersive_weathering:nulch_block" }, 'immersive_weathering:ash_layer_block', 'supplementaries:ash')//沃土
-event.replaceInput({ id: "immersive_weathering:mulch_block" }, 'immersive_weathering:ash_layer_block', 'supplementaries:ash')//地狱沃土
+event.replaceInput({ id: CR("crafting/kinetics/filter") }, MC('#wool'), [IM('hemp_fabric'), MC('#wool')])// 过滤器
+event.replaceInput({ id: CR("crafting/kinetics/attribute_filter") }, MC('#wool'), [IM('hemp_fabric'), MC('#wool')])// 属性过滤器
+event.replaceInput({ id: "immersive_weathering:nulch_block" }, 'immersive_weathering:ash_layer_block', 'supplementaries:ash')// 沃土
+event.replaceInput({ id: "immersive_weathering:mulch_block" }, 'immersive_weathering:ash_layer_block', 'supplementaries:ash')// 地狱沃土
 event.replaceOutput({ id: AC("tin_can_to_iron_nugget") }, MC('iron_nugget'), TE('tin_nugget'))
 event.replaceOutput({ id: AC("tin_can_to_iron_nugget_from_blasting") }, MC('iron_nugget'), TE('tin_nugget'))
-event.replaceInput({ id: CR("mechanical_crafting/wand_of_symmetry") }, MC('ender_pearl'), CR('refined_radiance'))//对称之杖
-event.replaceInput({ id: MC("hopper") }, F('#ingots/iron'), TE('lead_plate'))//漏斗
+event.replaceInput({ id: CR("mechanical_crafting/wand_of_symmetry") }, MC('ender_pearl'), CR('refined_radiance'))// 对称之杖
+event.replaceInput({ id: MC("hopper") }, F('#ingots/iron'), TE('lead_plate'))// 漏斗
 
 event.remove({ id: TE("augments/item_filter_augment") })
 event.shapeless(TE("item_filter_augment"), [CR("filter"), TE("lapis_gear")])
@@ -833,6 +901,7 @@ tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian
 tweak_casing('kubejs:fluix_casing', 'thermal:lead_ingot', 'minecraft:blackstone')
 tweak_casing('create_dd:refined_radiance_casing', 'create:refined_radiance', '#create_dd:glow_base')
 tweak_casing('create_dd:shadow_steel_casing', 'create:shadow_steel', '#forge:obsidian')
+tweak_casing('kubejs:creative_casing', 'architects_palette:unobtanium', '#kubejs:alien_stone')
 }
 
 function computercraft(event) {
@@ -852,7 +921,7 @@ event.shaped("computercraft:turtle_advanced", [
 	'S S'
 ], {
 	M: "computercraft:turtle_normal",
-	S: TE('netherite_plate')
+	S: 'thermal:netherite_nugget'
 })
 
 
@@ -878,7 +947,7 @@ event.shaped("computercraft:computer_advanced", [
 	'S S'
 ], {
 	M: "computercraft:computer_normal",
-	S: TE('netherite_plate')
+	S: 'thermal:netherite_nugget'
 })
 event.shaped("computercraft:computer_advanced", [
 	'SSS',
@@ -886,7 +955,7 @@ event.shaped("computercraft:computer_advanced", [
 	'S S'
 ], {
 	M: KJ('zinc_machine'),
-	S: TE('netherite_plate')
+	S: 'thermal:netherite_nugget'
 })
 //掌上电脑
 event.shaped("computercraft:pocket_computer_normal", [
@@ -904,7 +973,7 @@ event.shaped("computercraft:pocket_computer_advanced", [
 	'S S'
 ], {
 	M: "computercraft:pocket_computer_normal",
-	S: TE('netherite_plate')
+	S: 'thermal:netherite_nugget'
 })
 event.shaped("computercraft:pocket_computer_advanced", [
 	'SSS',
@@ -912,19 +981,14 @@ event.shaped("computercraft:pocket_computer_advanced", [
 	'SAS'
 ], {
 	M: KJ('zinc_machine'),
-	S: TE('netherite_plate'),
+	S: 'thermal:netherite_nugget',
 	A: MC('golden_apple'),
 })
-
-
 
 
 }
 
 function tomsstorage(event) {
-event.remove({ output: 'toms_storage:ts.wireless_terminal' })
-event.remove({ output: 'toms_storage:ts.adv_wireless_terminal' })
-	
 event.replaceInput({ id: "toms_storage:inventory_connector" }, MC("#planks"), CR("brass_ingot"))
 event.replaceInput({ id: "toms_storage:trim" }, MC("#planks"), CR("brass_ingot"))
 event.replaceInput({ id: "toms_storage:inventory_proxy" }, MC("#planks"), CR("brass_ingot"))
@@ -1016,17 +1080,16 @@ event.shaped("8x pipez:energy_pipe", [
 // 	M: 'mekanism:ingot_osmium'
 // })
 
-event.shaped("16x pipez:universal_pipe", [
-	' E ',
-	'ABC',
-	' D '
-], {
-	A: ['pipez:energy_pipe', TE('energy_duct')],
-	B: KJ('creative_casing'),
-	C: ['prettypipes:pipe', 'pipez:item_pipe'],
-	D: [CR('fluid_pipe'), TE('fluid_duct'), TE('fluid_duct_windowed')],
-	E: CRD('integrated_circuit')
-})
+// event.shaped("8x pipez:universal_pipe", [
+// 	'ACD',
+// 	'EBE',
+// ], {
+// 	A: ['pipez:energy_pipe', TE('energy_duct')],
+// 	B: KJ('creative_casing'),
+// 	C: ['prettypipes:pipe', 'pipez:item_pipe'],
+// 	D: [CR('fluid_pipe'), TE('fluid_duct'), TE('fluid_duct_windowed')],
+// 	E: CRD('integrated_circuit')
+// })
 
 event.shaped(TE("fluid_duct_windowed", 1), ['P'], {P: TE('fluid_duct')})
 event.shaped(TE("fluid_duct", 1), ['P'], {P: TE('fluid_duct_windowed')})
@@ -1034,7 +1097,20 @@ event.shaped(TE("fluid_duct", 1), ['P'], {P: TE('fluid_duct_windowed')})
 event.stonecutting(Item.of('thermal:energy_duct', 8), 'thermal:energy_cell_frame')
 event.stonecutting(Item.of('thermal:fluid_duct', 8), 'thermal:fluid_cell_frame')
 
+// 量化物品管道
+event.recipes.thermal.smelter("2x pipez:item_pipe", [KJ("abstruse_mechanism"), "2x prettypipes:pipe"]).energy(1250)
 
+// 创造管道
+event.shapeless("pipez:universal_pipe", [["pipez:item_pipe", "prettypipes:pipe", "pipez:energy_pipe", "create:fluid_pipe"], KJ("creative_casing")])
+event.recipes.create.itemApplication('pipez:universal_pipe', ['pipez:item_pipe', 'kubejs:creative_casing'])
+event.recipes.create.itemApplication('pipez:universal_pipe', ['pipez:energy_pipe', 'kubejs:creative_casing'])
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['create:fluid_pipe', 'kubejs:creative_casing']) // 灾难性的替换x1
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['prettypipes:pipe', 'kubejs:creative_casing']) // 灾难性的替换x2
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['pipez:gas_pipe', 'kubejs:creative_casing']) // 用不上
+
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['thermal:fluid_duct', 'kubejs:creative_casing']) // 这三比创造管道都强
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['thermal:fluid_duct_windowed', 'kubejs:creative_casing'])
+// event.recipes.create.itemApplication('pipez:universal_pipe', ['thermal:energy_duct', 'kubejs:creative_casing'])
 
 let module = (type, result) => {
 	event.remove({ output: PP(result) })
@@ -1073,6 +1149,7 @@ for (var i = 0; i < tiers.length; i++) {
 function leather(event) {
 //鞣制皮革
 donutCraft(event, '8x minecraft:leather', 'thermal:niter_dust', MC("rotten_flesh"))
+donutCraft(event, '8x minecraft:leather', 'occultism:tallow', MC("rotten_flesh"))
 
 //腐肉制取
 event.recipes.createHaunting([Item.of("minecraft:rotten_flesh")], '#forge:foods/meat/raw')
@@ -1974,10 +2051,93 @@ event.shaped(MC("chest"), [
 let woodCanMakeChest = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), MC('warped'), 'quark:azalea', 'quark:blossom']
 let woodChest = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped', 'warped', 'azalea', 'blossom']
 for (let i = 0; i <= (woodCanMakeChest.length - 1); i++) {
-	//Fix: convert revertable_chests drop items
-	//event.recipes.create.itemApplication("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
-	event.shapeless("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
+	event.recipes.create.itemApplication("quark:" + woodChest[i] + "_chest", [MC("chest"), (woodCanMakeChest[i] + "_planks")])
 }
+
+}
+
+function afterMoon(event) {
+
+// 外星石刷石机
+event.custom({ // 月石
+	"type": "thermal:rock_gen",
+	"adjacent": MC("packed_ice"),
+	"below": "beyond_earth:moon_stone",
+	"result": { "item": 'beyond_earth:moon_stone' }
+})
+event.custom({ // 火星石
+	"type": "thermal:rock_gen",
+	"adjacent": MC("packed_ice"),
+	"below": "beyond_earth:mars_stone",
+	"result": { "item": 'beyond_earth:mars_stone' }
+})
+event.custom({ // 水星石
+	"type": "thermal:rock_gen",
+	"adjacent": MC("packed_ice"),
+	"below": "beyond_earth:mercury_stone",
+	"result": { "item": 'beyond_earth:mercury_stone' }
+})
+event.custom({ // 霜原石
+	"type": "thermal:rock_gen",
+	"adjacent": MC("packed_ice"),
+	"below": "beyond_earth:glacio_stone",
+	"result": { "item": 'beyond_earth:glacio_stone' }
+})
+
+// 外星沙
+event.recipes.createMilling(["beyond_earth:moon_sand"], "beyond_earth:moon_stone").processingTime(200) // 月沙
+event.recipes.createMilling(["beyond_earth:mars_sand"], "beyond_earth:mars_stone").processingTime(200) // 火星沙
+event.recipes.createMilling(["beyond_earth:venus_sand"], "beyond_earth:venus_sandstone").processingTime(200) // 金星沙
+event.recipes.createMilling(["beyond_earth:venus_sand"], "beyond_earth:venus_stone").processingTime(200) // 金星沙
+event.recipes.createMilling(["beyond_earth:permafrost"], "beyond_earth:glacio_stone").processingTime(200) // 霜土
+
+// 外星沙洗涤
+event.recipes.createSplashing([Item.of("beyond_earth:cheese").withChance(0.25)], "beyond_earth:moon_sand") // 月沙
+event.recipes.createSplashing([Item.of("beyond_earth:ostrum_nugget").withChance(0.125)], "beyond_earth:mars_sand") // 火星沙
+event.recipes.createSplashing([Item.of("beyond_earth:calorite_nugget").withChance(0.125)], "beyond_earth:venus_sand") // 金星沙
+event.recipes.createSplashing([Item.of("beyond_earth:ice_shard").withChance(0.25)], "beyond_earth:permafrost") // 霜土
+
+// 月球奶酪转戴斯
+event.recipes.thermal.smelter("beyond_earth:desh_nugget", "beyond_earth:cheese")
+
+// 难得素
+event.remove({ id: AP('warping/unobtanium_from_netherite_ingot_warping') })
+event.custom({ // 戴斯
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "beyond_earth:desh_ingot"
+        }
+    ],
+    "result": {
+        "item": "architects_palette:unobtanium"
+    },
+    "dimension": "minecraft:the_nether"
+})
+event.custom({ // 紫金
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "beyond_earth:ostrum_ingot"
+        }
+    ],
+    "result": {
+        "item": "architects_palette:unobtanium"
+    },
+    "dimension": "minecraft:the_nether"
+})
+event.custom({ // 耐热金属
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "beyond_earth:calorite_ingot"
+        }
+    ],
+    "result": {
+        "item": "architects_palette:unobtanium"
+    },
+    "dimension": "minecraft:the_nether"
+})
 
 }
 
@@ -2003,9 +2163,10 @@ event.recipes.createCompacting([MC('dripstone_block')], [CR('limestone'), Fluid.
 event.recipes.createSplashing([Item.of(MC("dripstone_block"))], CRD('weathered_limestone'))
 
 event.remove({ output: AP('algal_brick') })
-event.smelting(AP('algal_brick'), AP('algal_blend')).xp(0).cookingTime(120)
+event.smelting(AP('algal_brick'), Item.of(AP('algal_blend'))).xp(0).cookingTime(120)
 event.remove({ id: AP('algal_blend') })
 
+// 海藻混合物
 event.shaped(Item.of(AP('algal_blend'), 4), [
 	'SS',
 	'AA'
@@ -2020,40 +2181,60 @@ event.shaped(Item.of(AP('algal_blend'), 4), [
 	A: 'minecraft:clay_ball',
 	S: ['minecraft:kelp', 'minecraft:seagrass']
 })
+
+// 安山合金
 event.shaped(Item.of(CR('andesite_alloy'), 2), [
 	'SS',
 	'AA'
 ], {
-	A: ['minecraft:andesite', MC('andesite')],
+	A: MC('andesite'),
 	S: AP('algal_brick')
 })
 event.shaped(Item.of(CR('andesite_alloy'), 2), [
 	'AA',
 	'SS'
 ], {
-	A: ['minecraft:andesite', MC('andesite')],
+	A: MC('andesite'),
 	S: AP('algal_brick')
 })
 
-// 双倍
-event.shaped(Item.of(AP('algal_blend'), 8), [
+// 合成栏海藻混合物双倍
+event.shaped(Item.of('8x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
 	'SS',
 	'AA'
 ], {
 	A: 'minecraft:clay_ball',
 	S: 'upgrade_aquatic:polar_kelp'
 })
-event.shaped(Item.of(AP('algal_blend'), 8), [
+event.shaped(Item.of('8x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
 	'AA',
 	'SS'
 ], {
 	A: 'minecraft:clay_ball',
 	S: 'upgrade_aquatic:polar_kelp'
+})
+
+// 合成栏安山合金双倍
+event.shaped(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+	'SS',
+	'AA'
+], {
+	A: CRD('aethersite'),
+	S: AP('algal_brick')
+})
+event.shaped(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+	'AA',
+	'SS'
+], {
+	A: CRD('aethersite'),
+	S: AP('algal_brick')
 })
 
 event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
-event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', MC('andesite')]])
-event.recipes.createMixing(Item.of(AP('algal_blend'), 8), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
+event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), MC('andesite')])
+// 动力搅拌双倍
+event.recipes.createMixing(Item.of('4x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
+event.recipes.createMixing(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [AP('algal_brick'), CRD('aethersite')])
 
 event.recipes.thermalPress("kubejs:andesite_alloy_gear", [
 	"create:andesite_alloy",
@@ -2897,6 +3078,7 @@ event.recipes.createMechanicalCrafting(Item.of(CR('crushing_wheel'), 2), [
 })
 
 event.recipes.createCrushing([Item.of(AE2("singularity")).withChance(1)], CR('crushing_wheel')).processingTime(250)
+event.recipes.createCrushing([Item.of(AE2("singularity")).withChance(1)], '#design_decor:crushing_wheels').processingTime(250)
 
 let dyes = [MC('orange_dye'), MC('magenta_dye'), MC('light_blue_dye'), MC('yellow_dye'), MC('lime_dye'), MC('pink_dye'), MC('cyan_dye'), MC('purple_dye'), MC('blue_dye'), MC('brown_dye'), MC('green_dye'), MC('red_dye')]
 event.recipes.createCompacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(AE2('quantum_entangled_singularity'), 1)])
@@ -3121,7 +3303,8 @@ ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
 ender_machine('kubejs:pipe_module_tier_3', 4)
 ender_machine('pipez:ultimate_upgrade', 4, CRD('integrated_circuit'))
-ender_machine('pipez:item_pipe', 8)
+ender_machine('pipez:item_pipe', 16)
+ender_machine("toms_storage:ts.wireless_terminal", 1, "toms_storage:ts.inventory_connector")
 
 event.remove({ id: "createutilities:shaped/void_chest" })
 event.remove({ id: "createutilities:shaped/void_tank" })
@@ -4524,6 +4707,44 @@ event.custom({
       "rate": "metal"
     }
   ]
+})
+
+// 铸铁熔融
+event.custom({
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/cast_iron"
+  },
+  "result": {
+    "fluid": "createbigcannons:molten_cast_iron",
+    "amount": 90
+  },
+  "temperature": 800,
+  "time": 90
+})
+event.custom({
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/cast_iron"
+  },
+  "result": {
+    "fluid": "createbigcannons:molten_cast_iron",
+    "amount": 10
+  },
+  "temperature": 800,
+  "time": 10
+})
+event.custom({
+  "type": "tconstruct:melting",
+  "ingredient": {
+   "tag": "createbigcannons:block_cast_iron"
+  },
+	"result": {
+  "fluid": "createbigcannons:molten_cast_iron",
+  "amount": 810
+  },
+  "temperature": 810,
+  "time": 810
 })
 
 // 粉碎末地石

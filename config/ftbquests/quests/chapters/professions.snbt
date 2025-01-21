@@ -783,75 +783,14 @@
 			can_repeat: true
 			id: "436DA1A1AB8C0734"
 			tasks: [{
-				id: "28EC11DE8335B74A"
+				id: "434AF907B41C5D19"
 				type: "item"
-				title: "Any Record"
+				title: "任意唱片"
 				item: {
-					id: "itemfilters:or"
+					id: "itemfilters:tag"
 					Count: 1b
 					tag: {
-						items: [
-							{
-								id: "minecraft:music_disc_blocks"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_chirp"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_far"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_mall"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_mellohi"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_stal"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_cat"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_ward"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_11"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_wait"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_pigstep"
-								Count: 1b
-							}
-							{
-								id: "endergetic:music_disc_kilobyte"
-								Count: 1b
-							}
-							{
-								id: "biomesoplenty:music_disc_wanderer"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_strad"
-								Count: 1b
-							}
-							{
-								id: "minecraft:music_disc_13"
-								Count: 1b
-							}
-						]
+						value: "minecraft:music_discs"
 					}
 				}
 			}]
@@ -1539,35 +1478,22 @@
 			id: "7C7B993FACB7E466"
 			tasks: [
 				{
-					id: "1885617E52051FD3"
-					type: "questsadditions:place"
-					title: "放置泥土"
-					block_type: 0
-					block: "minecraft:dirt"
-					value: 100L
-					replaced: "minecraft:air"
-					replace: false
-				}
-				{
-					id: "65BF4F81B36B221B"
-					type: "questsadditions:place"
+					id: "3EE01403F2449588"
+					type: "custom"
 					title: "放置圆石"
 					icon: "minecraft:cobblestone"
-					block_type: 0
-					block: "minecraft:stone"
-					value: 100L
-					replaced: "minecraft:air"
-					replace: false
 				}
 				{
-					id: "2469DE5A0EF04A50"
-					type: "questsadditions:break"
+					id: "251A2D458E887824"
+					type: "custom"
+					title: "放置泥土"
+					icon: "minecraft:dirt"
+				}
+				{
+					id: "6398A5D19BE51F07"
+					type: "custom"
 					title: "使用并拆毁脚手架"
 					icon: "minecraft:scaffolding"
-					block_type: 0
-					block: "minecraft:scaffolding"
-					value: 100L
-					checkItem: false
 				}
 			]
 			rewards: [{
@@ -1784,18 +1710,17 @@
 				}
 			]
 		}
-				{
+		{
 			title: "&6&l路途漫漫"
 			x: -5.0d
 			y: 0.0d
 			subtitle: "32 银币"
 			id: "38DCB9AD8BBDEA34"
 			tasks: [{
-				id: "14DD8DDE0199E93F"
-				type: "questsadditions:days"
+				id: "0F86A9C202CADA8B"
+				type: "custom"
 				title: "游玩5000天"
 				icon: "minecraft:clock"
-				days: 5000
 			}]
 			rewards: [{
 				id: "4F21C589F785CEDF"

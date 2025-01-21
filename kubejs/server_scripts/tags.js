@@ -199,6 +199,15 @@ event.get('kubejs:alien_stone')
 .add('beyond_earth:venus_stone')
 .add('beyond_earth:glacio_stone')
 
+event.get('minecraft:music_discs')
+.add('create_confectionery:the_bright_side')
+.add('alexsmobs:music_disc_thime')
+.add('alexsmobs:music_disc_daze')
+.add('integrated_stronghold:music_disc_forlorn')
+.add('integrated_stronghold:music_disc_sight')
+.add('idas:music_disc_calidum')
+.add('idas:music_disc_slither')
+
 })	
 
 onEvent('fluid.tags', event => {
