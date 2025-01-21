@@ -60,6 +60,9 @@ warning('thermal:fluid_duct')
 warning('thermal:fluid_duct_windowed')
 warning('createutilities:void_motor')
 warning('pipez:item_pipe')
+warning('pipez:universal_pipe')
+warning('toms_storage:ts.wireless_terminal')
+warning('toms_storage:ts.adv_wireless_terminal')
 
 })
 
