@@ -2,6 +2,8 @@
 global.cachedSeed = undefined
 global.cachedAlchemyData = {}
 
+global.commandData = {};
+
 function colourMap(c) {
     switch (c) {
         case "white": return [255, 255, 255]
@@ -381,6 +383,9 @@ function process(world, block, entity, face) {
         return
 
     let data = global.cachedAlchemyData[catCode]
+
+    global.correctSet = data.code;
+
     let unmatchedCorrectSet = data.code.slice()
     let unmatchedGuessedSet = guessedSet.slice()
     let result = [0, 0, 0]
@@ -424,6 +429,11 @@ function process(world, block, entity, face) {
     }
 
     result[0] = 4 - result[2] - result[1]
+
+    global.chaosCorrectSet = data.code
+    global.chaosGuessedSet = guessedSet
+    global.chaosResult = result
+    global.chaosRetain = retain
 
     console.log("Correct: " + data.code)
     console.log("Guessed: " + guessedSet)
@@ -602,4 +612,26 @@ onEvent('block.left_click', event => {
         world.server.runCommandSilent(`/playsound minecraft:entity.firework_rocket.blast block @a ${block.x} ${block.y} ${block.z} 0.55 0.5`)
 
 
+})
+
+onEvent('player.chat', event => {
+    if (event.message.startsWith('icantmakeit!')) {
+        if (global.chaosCorrectSet === undefined) {
+            event.player.tell('You should try at least once!')
+        } else {
+            if (event.player.isCreativeMode()) {
+                event.server.schedule(1, () => {
+                    event.player.tell(`Correct Substrates: ${global.chaosCorrectSet}`)
+                    event.player.tell(`Guessed Substrates: ${global.chaosGuessedSet}`)
+                    event.player.tell(`Result: ${global.chaosResult}`)
+                    event.player.tell(`Retain: ${global.chaosRetain}`)
+                })
+            } else {
+                event.server.schedule(1, () => {
+                    event.player.tell('You can only try out the results yourself.')
+                })
+            }
+
+        }
+    }
 })
