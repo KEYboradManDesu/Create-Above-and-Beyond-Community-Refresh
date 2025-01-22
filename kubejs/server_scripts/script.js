@@ -449,6 +449,20 @@ let bedrock_cobblegen = (adjacent, output) => {
 	})
 }
 
+let custom_cobblegen = (adjacent, output) => {
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": adjacent,
+		"result": { "item": output }
+	})
+}
+
+custom_cobblegen("create_dd:strawberry_milkshake", "create_dd:crimsite_cobble");//草莓奶昔和岩浆生成绯红岩圆石
+custom_cobblegen("create_dd:caramel_milkshake", "create_dd:veridium_cobble");//焦糖奶昔和岩浆生成辉绿岩圆石
+custom_cobblegen("create_dd:cream", "create_dd:asurine_cobble");//奶油和岩浆生成皓蓝圆石
+custom_cobblegen("create_dd:glowberry_milkshake", "create_dd:ochrum_cobble");//发光浆果奶昔和岩浆生成赭金砂圆石
+custom_cobblegen("create_dd:vanilla_milkshake", "create_dd:potassic_cobble");//香草奶昔和岩浆生成钾质岩圆石
+
 bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
 bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
 bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
