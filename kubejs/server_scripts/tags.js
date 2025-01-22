@@ -208,6 +208,11 @@ event.get('minecraft:music_discs')
 .add('idas:music_disc_calidum')
 .add('idas:music_disc_slither')
 
+event.get('kubejs:hand')
+.add('create:brass_hand')
+.add('kubejs:gloden_hand')
+.add('kubejs:bronze_hand')
+
 })	
 
 onEvent('fluid.tags', event => {

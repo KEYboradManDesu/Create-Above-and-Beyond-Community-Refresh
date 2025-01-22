@@ -36,7 +36,7 @@ number('Multiply', '×')
 number('Divide', '÷')
 number('Missingno', '#DIV/0')
 	
-//石英种子
+// 石英种子
 let Certus = {
 	id: 'Certus',
 	zhname: '赛特斯'
@@ -127,6 +127,10 @@ event.create('andesite_alloy_gear').texture("kubejs:item/andesite_alloy_gear").d
 event.create('andesite_alloy_ingot').texture("kubejs:item/andesite_alloy_classic").displayName('安山合金锭')
 event.create('arcane_gold_gear').texture("kubejs:item/arcane_gold_gear").displayName('神秘金齿轮')
 event.create('matter_plastics').texture("kubejs:item/matter_plastics").displayName('物质塑料').rarity(RARITY_UNCOMMON)
+event.create('gloden_hand').texture("kubejs:item/gloden_hand").displayName('金制手部零件')
+event.create('bronze_hand').texture("kubejs:item/bronze_hand").displayName('青铜手部零件')
+event.create('aethersite_alloy').texture("kubejs:item/aethersite_alloy").displayName('以太合金')
+event.create('polar_algal_blend').texture("kubejs:item/polar_algal_blend").displayName('极地海藻混合物')
 
 // 矿物
 event.create('crushed_raw_cobalt').texture("kubejs:item/ore/crushed_raw_cobalt").displayName('粉碎钴矿石')

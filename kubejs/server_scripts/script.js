@@ -459,9 +459,10 @@ bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 // 前期优化游戏体验
 event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
 // 手部零件
+event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 event.remove({ id: CRD("crafting/brass_hand") })
 event.remove({ id: CR("crafting/kinetics/brass_hand") })
-event.shaped(Item.of('create:brass_hand', "{CustomModelData:1,display:{Name:'[{\"text\":\"金制手部零件\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:gloden_hand', 1), [
 	' S ',
 	'PPP',
 	' P '
@@ -469,7 +470,7 @@ event.shaped(Item.of('create:brass_hand', "{CustomModelData:1,display:{Name:'[{\
 	P: CR("golden_sheet"),
 	S: CR("andesite_alloy")
 })
-event.shaped(Item.of('2x create:brass_hand', "{CustomModelData:2,display:{Name:'[{\"text\":\"青铜手部零件\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:bronze_hand', 2), [
 	' S ',
 	'PPP',
 	' P '
@@ -2201,14 +2202,14 @@ event.shaped(Item.of(CR('andesite_alloy'), 2), [
 })
 
 // 合成栏海藻混合物双倍
-event.shaped(Item.of('8x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:polar_algal_blend', 8), [
 	'SS',
 	'AA'
 ], {
 	A: 'minecraft:clay_ball',
 	S: 'upgrade_aquatic:polar_kelp'
 })
-event.shaped(Item.of('8x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:polar_algal_blend', 8), [
 	'AA',
 	'SS'
 ], {
@@ -2217,14 +2218,14 @@ event.shaped(Item.of('8x architects_palette:algal_blend', "{CustomModelData:1,di
 })
 
 // 合成栏安山合金双倍
-event.shaped(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:aethersite_alloy', 4), [
 	'SS',
 	'AA'
 ], {
 	A: CRD('aethersite'),
 	S: AP('algal_brick')
 })
-event.shaped(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [
+event.shaped(Item.of('kubejs:aethersite_alloy', 4), [
 	'AA',
 	'SS'
 ], {
@@ -2235,8 +2236,8 @@ event.shaped(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Na
 event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
 event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), MC('andesite')])
 // 动力搅拌双倍
-event.recipes.createMixing(Item.of('4x architects_palette:algal_blend', "{CustomModelData:1,display:{Name:'[{\"text\":\"极地海藻混合物\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
-event.recipes.createMixing(Item.of('4x create:andesite_alloy', "{CustomModelData:1,display:{Name:'[{\"text\":\"以太合金\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]'}}"), [AP('algal_brick'), CRD('aethersite')])
+event.recipes.createMixing(Item.of('kubejs:polar_algal_blend', 4), ['minecraft:clay_ball', 'upgrade_aquatic:polar_kelp'])
+event.recipes.createMixing(Item.of('kubejs:polar_algal_blend', 4), [AP('algal_brick'), CRD('aethersite')])
 
 event.recipes.thermalPress("kubejs:andesite_alloy_gear", [
 	"create:andesite_alloy",
@@ -2262,8 +2263,6 @@ event.custom({
 }
 
 function andesiteMachine(event) {
-
-event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 
 wood_types.forEach(wood => {
 	event.recipes.createCutting(['2x ' + wood + '_slab'], wood + '_planks').processingTime(50)
@@ -2370,7 +2369,7 @@ andesite_machine('waterstrainer:strainer_base', 1, MC('iron_bars'))
 andesite_machine('create:mechanical_mixer', 1, CR('whisk'))
 andesite_machine('create:mechanical_drill', 1, TE('drill_head'))
 andesite_machine('create:mechanical_saw', 1, TE('saw_blade'))
-andesite_machine('create:deployer', 1, CR('brass_hand'))
+andesite_machine('create:deployer', 1, KJ('#hand'))
 andesite_machine('create:mechanical_harvester', 2)
 andesite_machine('create:mechanical_plough', 2)
 andesite_machine('thermal:device_tree_extractor', 1, MC('bucket'))
