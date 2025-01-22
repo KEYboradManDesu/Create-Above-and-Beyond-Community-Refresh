@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"type": "kubejs:block/box/fluid_box"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 2],
+			"to": [16, 13, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 10]},
+			"faces": {
+				"north": {"uv": [0, 4, 4, 7.25], "texture": "#type"},
+				"east": {"uv": [11, 4, 14, 7.25], "texture": "#type"},
+				"south": {"uv": [7, 4, 11, 7.25], "texture": "#type"},
+				"west": {"uv": [4, 4, 7, 7.25], "texture": "#type"},
+				"up": {"uv": [4, 0, 7, 4], "rotation": 90, "texture": "#type"},
+				"down": {"uv": [4, 7.25, 7, 11.25], "rotation": 270, "texture": "#type"}
+			}
+		}
+	]
+}

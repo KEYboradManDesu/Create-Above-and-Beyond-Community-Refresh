@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "kubejs:item/tool/netherite_saw"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-40, -90, 0],
+			"translation": [0, 0, -3.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-40, 90, 0],
+			"translation": [0, 0, -3.25]
+		}
+	}
+}
