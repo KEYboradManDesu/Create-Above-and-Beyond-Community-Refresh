@@ -1809,7 +1809,7 @@
 			}]
 		}
 		{
-			title: "32x 耀阳金币属块"
+			title: "32x 耀阳金属块"
 			icon: "architects_palette:sunmetal_block"
 			disable_toast: true
 			x: 1.0d
