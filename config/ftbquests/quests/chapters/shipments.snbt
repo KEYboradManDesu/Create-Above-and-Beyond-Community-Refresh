@@ -54,7 +54,7 @@
 			icon: "minecraft:dirt"
 			disable_toast: true
 			x: -4.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "2 银币"
 			can_repeat: true
@@ -77,7 +77,7 @@
 			icon: "minecraft:sand"
 			disable_toast: true
 			x: -3.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -100,7 +100,7 @@
 			icon: "minecraft:gravel"
 			disable_toast: true
 			x: -2.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "2 银币"
 			can_repeat: true
@@ -123,7 +123,7 @@
 			icon: "minecraft:clay"
 			disable_toast: true
 			x: -1.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "6 银币"
 			can_repeat: true
@@ -146,7 +146,7 @@
 			icon: "minecraft:ice"
 			disable_toast: true
 			x: 0.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -169,7 +169,7 @@
 			icon: "minecraft:blackstone"
 			disable_toast: true
 			x: 1.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "12 银币"
 			can_repeat: true
@@ -192,7 +192,7 @@
 			icon: "tconstruct:grout"
 			disable_toast: true
 			x: 2.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "12 银币"
 			can_repeat: true
@@ -215,7 +215,7 @@
 			icon: "minecraft:cobblestone"
 			disable_toast: true
 			x: 3.0d
-			y: 0.0d
+			y: -1.0d
 			shape: "hexagon"
 			subtitle: "1 银币"
 			can_repeat: true
@@ -238,7 +238,7 @@
 			icon: "minecraft:granite"
 			disable_toast: true
 			x: -4.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -261,7 +261,7 @@
 			icon: "minecraft:diorite"
 			disable_toast: true
 			x: -3.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -284,7 +284,7 @@
 			icon: "minecraft:andesite"
 			disable_toast: true
 			x: -2.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -307,7 +307,7 @@
 			icon: "create:limestone"
 			disable_toast: true
 			x: -1.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -330,7 +330,7 @@
 			icon: "create_dd:weathered_limestone_asphalt_block"
 			disable_toast: true
 			x: 0.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -353,7 +353,7 @@
 			icon: "create_dd:gabbro"
 			disable_toast: true
 			x: 1.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -376,7 +376,7 @@
 			icon: "create:scoria"
 			disable_toast: true
 			x: 2.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -399,7 +399,7 @@
 			icon: "create:scorchia"
 			disable_toast: true
 			x: 3.0d
-			y: 1.0d
+			y: 0.0d
 			shape: "hexagon"
 			subtitle: "3 银币"
 			can_repeat: true
@@ -422,7 +422,7 @@
 			icon: "minecraft:obsidian"
 			disable_toast: true
 			x: -4.0d
-			y: 2.0d
+			y: 1.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -445,7 +445,7 @@
 			icon: "biomesoplenty:dead_log"
 			disable_toast: true
 			x: -4.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "2 银币"
 			can_repeat: true
@@ -468,7 +468,7 @@
 			icon: "minecraft:oak_log"
 			disable_toast: true
 			x: -3.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			dependency_requirement: "all_started"
@@ -492,7 +492,7 @@
 			icon: "minecraft:birch_log"
 			disable_toast: true
 			x: -2.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -515,7 +515,7 @@
 			icon: "minecraft:spruce_log"
 			disable_toast: true
 			x: -1.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -538,7 +538,7 @@
 			icon: "minecraft:jungle_log"
 			disable_toast: true
 			x: 0.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -561,7 +561,7 @@
 			icon: "minecraft:acacia_log"
 			disable_toast: true
 			x: 1.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -584,7 +584,7 @@
 			icon: "minecraft:dark_oak_log"
 			disable_toast: true
 			x: 2.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -607,7 +607,7 @@
 			icon: "minecraft:crimson_stem"
 			disable_toast: true
 			x: 3.0d
-			y: 4.0d
+			y: 3.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -630,7 +630,7 @@
 			icon: "minecraft:warped_stem"
 			disable_toast: true
 			x: -4.0d
-			y: 5.0d
+			y: 4.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -653,7 +653,7 @@
 			icon: "minecraft:iron_ingot"
 			disable_toast: true
 			x: -4.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -676,7 +676,7 @@
 			icon: "create:zinc_ingot"
 			disable_toast: true
 			x: -3.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -699,7 +699,7 @@
 			icon: "minecraft:copper_ingot"
 			disable_toast: true
 			x: -2.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -722,7 +722,7 @@
 			icon: "thermal:nickel_ingot"
 			disable_toast: true
 			x: -1.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "32 银币"
 			can_repeat: true
@@ -745,7 +745,7 @@
 			icon: "thermal:lead_ingot"
 			disable_toast: true
 			x: 0.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "32 银币"
 			can_repeat: true
@@ -768,7 +768,7 @@
 			icon: "minecraft:gold_ingot"
 			disable_toast: true
 			x: 1.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "48 银币"
 			can_repeat: true
@@ -791,7 +791,7 @@
 			icon: "create:andesite_alloy"
 			disable_toast: true
 			x: 2.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -814,7 +814,7 @@
 			icon: "moreminecarts:silica_steel"
 			disable_toast: true
 			x: 3.0d
-			y: 7.0d
+			y: 6.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -837,7 +837,7 @@
 			icon: "create:brass_ingot"
 			disable_toast: true
 			x: -4.0d
-			y: 8.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "48 银币"
 			dependency_requirement: "all_started"
@@ -861,7 +861,7 @@
 			icon: "thermal:invar_ingot"
 			disable_toast: true
 			x: -3.0d
-			y: 8.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "64 银币"
 			can_repeat: true
@@ -883,8 +883,8 @@
 			title: "16x 煤炭"
 			icon: "minecraft:coal"
 			disable_toast: true
-			x: -2.0d
-			y: 8.0d
+			x: -1.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			can_repeat: true
@@ -906,8 +906,8 @@
 			title: "16x 燧石"
 			icon: "minecraft:flint"
 			disable_toast: true
-			x: -1.0d
-			y: 8.0d
+			x: 0.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "4 银币"
 			dependency_requirement: "all_started"
@@ -930,8 +930,8 @@
 			title: "4x 朱砂"
 			icon: "thermal:cinnabar"
 			disable_toast: true
-			x: 0.0d
-			y: 8.0d
+			x: 1.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
 			can_repeat: true
@@ -953,8 +953,8 @@
 			title: "16x 红石粉"
 			icon: "minecraft:redstone"
 			disable_toast: true
-			x: 1.0d
-			y: 8.0d
+			x: 2.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -976,8 +976,8 @@
 			title: "1x 钻石"
 			icon: "minecraft:diamond"
 			disable_toast: true
-			x: 2.0d
-			y: 8.0d
+			x: 3.0d
+			y: 7.0d
 			shape: "hexagon"
 			subtitle: "2 金币"
 			can_repeat: true
@@ -999,7 +999,7 @@
 			title: "8x 青金石"
 			icon: "minecraft:lapis_lazuli"
 			disable_toast: true
-			x: 3.0d
+			x: -4.0d
 			y: 8.0d
 			shape: "hexagon"
 			subtitle: "32 银币"
@@ -1022,8 +1022,8 @@
 			title: "1x 绿宝石"
 			icon: "minecraft:emerald"
 			disable_toast: true
-			x: -4.0d
-			y: 9.0d
+			x: -3.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "64 银币"
 			can_repeat: true
@@ -1045,8 +1045,8 @@
 			title: "4x 硫磺"
 			icon: "thermal:sulfur"
 			disable_toast: true
-			x: -3.0d
-			y: 9.0d
+			x: -2.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -1068,8 +1068,8 @@
 			title: "4x 磷灰石"
 			icon: "thermal:apatite"
 			disable_toast: true
-			x: -2.0d
-			y: 9.0d
+			x: -1.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -1091,8 +1091,8 @@
 			title: "4x 硝石"
 			icon: "thermal:niter"
 			disable_toast: true
-			x: -1.0d
-			y: 9.0d
+			x: 0.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "8 银币"
 			can_repeat: true
@@ -1114,8 +1114,8 @@
 			title: "8x 下界石英"
 			icon: "minecraft:quartz"
 			disable_toast: true
-			x: 0.0d
-			y: 9.0d
+			x: 1.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "24 银币"
 			can_repeat: true
@@ -1137,8 +1137,8 @@
 			title: "8x 赛特斯石英"
 			icon: "ae2:certus_quartz_crystal"
 			disable_toast: true
-			x: 1.0d
-			y: 9.0d
+			x: 2.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "24 银币"
 			can_repeat: true
@@ -1160,8 +1160,8 @@
 			title: "8x 福鲁伊克斯石英"
 			icon: "ae2:fluix_crystal"
 			disable_toast: true
-			x: 2.0d
-			y: 9.0d
+			x: 3.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "32 银币"
 			can_repeat: true
@@ -1183,7 +1183,7 @@
 			title: "6x 硫化橡胶"
 			icon: "thermal:cured_rubber"
 			disable_toast: true
-			x: 3.0d
+			x: -4.0d
 			y: 9.0d
 			shape: "hexagon"
 			subtitle: "16 银币"
@@ -2799,6 +2799,28 @@
 					item: "thermal:dynamo_stirling"
 				}
 			]
+		}
+		{
+			title: "8x 锡锭"
+			icon: "create_dd:tin_ingot"
+			disable_toast: true
+			x: -2.0d
+			y: 7.0d
+			shape: "hexagon"
+			can_repeat: true
+			id: "068932DFF2A98AE1"
+			tasks: [{
+				id: "01FE4242D3811330"
+				type: "item"
+				icon: "thermal:silver_coin"
+				item: "thermal:silver_coin"
+				count: 10L
+			}]
+			rewards: [{
+				id: "35D28E43536EFF5A"
+				type: "item"
+				item: "kubejs:trade_card_tin_ingot"
+			}]
 		}
 	]
 	quest_links: [ ]
