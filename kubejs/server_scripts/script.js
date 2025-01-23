@@ -312,6 +312,21 @@ event.stonecutting('createdieselgenerators:pumpjack_crank', 'createdieselgenerat
 
 event.blasting(Item.of('ae2:sky_stone_block'), 'beyond_earth:sky_stone').cookingTime(100)
 
+// 熔渣配方冲突修复
+event.remove({ id: "vintageimprovements:crushing/scoria_recycling" })
+event.remove({ id: "vintageimprovements:crushing/scoria" })
+event.recipes.createSplashing([
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.30),
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.10),
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.5),
+], "create:scorchia")
+event.recipes.createSplashing([
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.30),
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.10),
+	Item.of("vintageimprovements:sulfur_chunk").withChance(0.5),
+], "#create:stone_types/scorchia")
+
+
 // 碎可可
 event.custom({
 	"type":"vintageimprovements:vibrating",
