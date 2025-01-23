@@ -326,6 +326,18 @@ event.recipes.createSplashing([
 	Item.of("vintageimprovements:sulfur_chunk").withChance(0.5),
 ], "#create:stone_types/scorchia")
 
+// 海藻混合物灵火转换
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'kubejs:polar_algal_blend' },
+	"result": { "item": 'architects_palette:algal_blend'}
+})
+// 以太合金灵火转换
+event.custom({
+	"type": "occultism:spirit_fire",
+	"ingredient": { "item": 'kubejs:aethersite_alloy' },
+	"result": { "item": 'create:andesite_alloy'}
+})
 
 // 碎可可
 event.custom({
