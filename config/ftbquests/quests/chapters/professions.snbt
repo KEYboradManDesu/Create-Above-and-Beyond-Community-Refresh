@@ -64,26 +64,16 @@
 			tasks: [{
 				id: "121ECE09FBC2490A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "556BBA8B09E4BA0C"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_mining"
-				}
-				{
-					id: "78B7B98BE67CCA84"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "556BBA8B09E4BA0C"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_mining"
+			}]
 		}
 		{
 			title: "农民"
@@ -152,26 +142,16 @@
 			tasks: [{
 				id: "40D5C78A3738FC5E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "4F0E97B8E88BF530"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_farming"
-				}
-				{
-					id: "4630E4354593D196"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "4F0E97B8E88BF530"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_farming"
+			}]
 		}
 		{
 			title: "木匠"
@@ -229,26 +209,16 @@
 			tasks: [{
 				id: "1D8BF49B36108A4D"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "570B46650865045E"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_carpentry"
-				}
-				{
-					id: "168DD43A1A6C846C"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "570B46650865045E"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_carpentry"
+			}]
 		}
 		{
 			title: "厨师"
@@ -270,26 +240,16 @@
 			tasks: [{
 				id: "7DB85322979AEF65"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "382E25CBB362EB84"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_cooking"
-				}
-				{
-					id: "402618EF59D8798B"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "382E25CBB362EB84"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_cooking"
+			}]
 		}
 		{
 			title: "石匠"
@@ -353,26 +313,16 @@
 			tasks: [{
 				id: "30824E76C57A8679"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "1617766BFFC620D2"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_masonry"
-				}
-				{
-					id: "0059672C40C04303"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "1617766BFFC620D2"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_masonry"
+			}]
 		}
 		{
 			title: "猎人"
@@ -430,26 +380,16 @@
 			tasks: [{
 				id: "3F3272C9BFC25003"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "242009705F048500"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_hunting"
-				}
-				{
-					id: "3EB7FB58B5D3D097"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "242009705F048500"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_hunting"
+			}]
 		}
 		{
 			title: "职业"
@@ -553,26 +493,16 @@
 			tasks: [{
 				id: "79BD40CF4A57DA36"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "70312C750F6E2115"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_fishing"
-				}
-				{
-					id: "4F7B79488825D2ED"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "70312C750F6E2115"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_fishing"
+			}]
 		}
 		{
 			title: "&7&l政府投资"
@@ -619,26 +549,16 @@
 			tasks: [{
 				id: "042431BBCD1966C4"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
-			rewards: [
-				{
-					id: "2E450774C09EF266"
-					type: "item"
-					auto: "enabled"
-					item: "kubejs:profession_card_smithing"
-				}
-				{
-					id: "5B00E0FDDDA7EEB0"
-					type: "custom"
-					title: "可重复"
-					icon: "thermal:machine_cycle_augment"
-					tags: ["reset"]
-					auto: "no_toast"
-				}
-			]
+			rewards: [{
+				id: "2E450774C09EF266"
+				type: "item"
+				auto: "disabled"
+				item: "kubejs:profession_card_smithing"
+			}]
 		}
 		{
 			title: "&7&l丰富的树苗收集"
