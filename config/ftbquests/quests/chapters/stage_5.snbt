@@ -585,7 +585,7 @@
 		}
 		{
 			title: "黑色黄金"
-			icon: "thermal:crude_oil_bucket"
+			icon: "createdieselgenerators:crude_oil_bucket"
 			x: -4.0d
 			y: 9.0d
 			shape: "circle"
@@ -603,7 +603,11 @@
 					tag: {
 						items: [
 							{
-								id: "kubejs:crude_oil_bucket"
+								id: "createdieselgenerators:crude_oil_bucket"
+								Count: 1b
+							}
+							{
+								id: "beyond_earth:oil_bucket"
 								Count: 1b
 							}
 							{
