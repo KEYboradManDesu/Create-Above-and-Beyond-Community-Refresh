@@ -1,0 +1,8 @@
+{
+  "combustionEfficiency": 0.7,
+  "numberOfPumps": 1,
+  "allowedPropellants": [
+    "creatingspace:methalox",
+    "ad_astra:fuel"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "adjacentDimensions": {
+    "ad_astra:mars_orbit": {
+        "deltaV": 400
+    }
+  },
+  "arrivalHeight": 200,
+  "orbitedBody": "sun",
+  "distanceToOrbitingBody": 2000
+}

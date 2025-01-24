@@ -1,0 +1,10 @@
+{
+  "adjacentDimensions": {
+  "ad_astra:moon_orbit": {
+      "deltaV": 300
+    }
+  },
+  "arrivalHeight": 200,
+  "orbitedBody": "minecraft:overworld",
+  "distanceToOrbitingBody": 400
+}

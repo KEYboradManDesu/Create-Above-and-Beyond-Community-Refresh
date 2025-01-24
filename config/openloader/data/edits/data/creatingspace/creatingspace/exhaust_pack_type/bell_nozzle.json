@@ -1,0 +1,19 @@
+{
+  "minExpansionRatio": 2,
+  "maxExpansionRatio": 100,
+  "allowedPropellants": [
+    "creatingspace:methalox",
+    "creatingspace:lh2lox",
+    "ad_astra:fuel"
+  ],
+  "slots": [
+    {
+      "x": 30,
+      "y": 30
+    },
+    {
+      "x": 90,
+      "y": 30
+    }
+  ]
+}

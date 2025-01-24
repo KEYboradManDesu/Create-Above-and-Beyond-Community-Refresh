@@ -1,0 +1,9 @@
+{
+  "propellantRatio": {
+    "ad_astra:fuel": 1
+  },
+  "maxIsp": 300,
+  "Cp": 5000,
+  "gamma": 1.1,
+  "M": 20
+}
