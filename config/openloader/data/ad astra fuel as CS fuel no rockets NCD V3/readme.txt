@@ -1,1 +1,0 @@
-from https://www.curseforge.com/minecraft/data-packs/ad-astra-creating-space-compatibility
