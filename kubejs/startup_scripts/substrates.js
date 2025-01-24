@@ -4,10 +4,6 @@ const RARITY_COMMON = "common"
 const RARITY_RARE = "rare"
 const RARITY_EPIC = "epic"
 
-StartupEvents.registry('item', event => {
-    event.create('smoke_mote').texture("kubejs:item/smoke_mote").displayName('微小烟云');
-});
-
 StartupEvents.registry("block", event => {
     // 混沌炼金注册
     // 原味CAB配方，熟悉的味道
