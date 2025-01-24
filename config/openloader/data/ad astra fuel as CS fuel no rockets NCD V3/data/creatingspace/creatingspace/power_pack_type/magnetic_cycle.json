@@ -1,0 +1,7 @@
+{
+  "combustionEfficiency": 0.9,
+  "numberOfPumps": 1,
+  "allowedPropellants": [
+    "creatingspace:metalic_hydrogen"
+  ]
+}

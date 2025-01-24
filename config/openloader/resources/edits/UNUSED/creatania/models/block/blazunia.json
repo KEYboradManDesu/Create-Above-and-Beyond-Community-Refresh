@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"particle": "creatania:block/blazunia",
+		"cross": "creatania:block/blazunia"
+	}
+}

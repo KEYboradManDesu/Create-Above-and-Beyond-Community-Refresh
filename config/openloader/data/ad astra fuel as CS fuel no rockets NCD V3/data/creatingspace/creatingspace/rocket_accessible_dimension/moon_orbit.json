@@ -1,0 +1,8 @@
+{
+  "adjacentDimensions": {
+  },
+  "arrivalHeight": 64,
+  "gravity": 0,
+  "orbitedBody": "creatingspace:the_moon",
+  "distanceToOrbitingBody": 10
+}

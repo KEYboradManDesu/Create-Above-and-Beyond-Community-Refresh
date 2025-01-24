@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "creatania:fluid/mana_flow"
+	}
+}

@@ -1,0 +1,82 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"ambientocclusion": false,
+	"textures": {
+		"3": "chickens:blocks/plain_face",
+		"4": "chickens:blocks/plain_face_2",
+		"particle": "chickens:blocks/plain_face"
+	},
+	"elements": [
+		{
+			"name": "Floor",
+			"from": [0, 0, 0],
+			"to": [16, 3, 16],
+			"faces": {
+				"north": {"uv": [0, 13, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 13, 16, 16], "texture": "#3"},
+				"south": {"uv": [0, 13, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 13, 16, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#4"}
+			}
+		},
+		{
+			"name": "Ceiling",
+			"from": [0, 13, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 3], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 3], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 3], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 3], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+			}
+		},
+		{
+			"name": "NW",
+			"from": [0, 3, 0],
+			"to": [3, 13, 3],
+			"faces": {
+				"north": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"east": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"south": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"west": {"uv": [0, 3, 3, 13], "texture": "#3"}
+			}
+		},
+		{
+			"name": "NE",
+			"from": [13, 3, 0],
+			"to": [16, 13, 3],
+			"faces": {
+				"north": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"east": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"south": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"west": {"uv": [0, 3, 3, 13], "texture": "#3"}
+			}
+		},
+		{
+			"name": "SE",
+			"from": [13, 3, 13],
+			"to": [16, 13, 16],
+			"faces": {
+				"north": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"east": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"south": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"west": {"uv": [13, 3, 16, 13], "texture": "#3"}
+			}
+		},
+		{
+			"name": "SW",
+			"from": [0, 3, 13],
+			"to": [3, 13, 16],
+			"faces": {
+				"north": {"uv": [13, 3, 16, 13], "texture": "#3"},
+				"east": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"south": {"uv": [0, 3, 3, 13], "texture": "#3"},
+				"west": {"uv": [13, 3, 16, 13], "texture": "#3"}
+			}
+		}
+	]
+}

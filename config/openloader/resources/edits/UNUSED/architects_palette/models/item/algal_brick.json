@@ -1,0 +1,9 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "architects_palette:item/algal_brick"
+  },
+	"overrides" :[
+		{"predicate":{"custom_model_data":1},"model":"architects_palette:item/polar_algal_brick"}
+	]
+}

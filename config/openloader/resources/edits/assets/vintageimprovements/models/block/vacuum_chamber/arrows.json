@@ -1,0 +1,67 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"4": "create:block/pump",
+		"particle": "create:block/pump"
+	},
+	"elements": [
+		{
+			"from": [8, 10.9, -0.5],
+			"to": [10, 12.9, 16.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8.35355, 13.25, 7.75]},
+			"faces": {
+				"north": {"uv": [16, 2, 14, 4], "texture": "#4"},
+				"east": {"uv": [15, 2, 16, 4], "texture": "#4"},
+				"south": {"uv": [14, 2, 16, 4], "texture": "#4"},
+				"west": {"uv": [14, 2, 15, 4], "texture": "#4"},
+				"down": {"uv": [14, 3, 16, 4], "texture": "#4"}
+			}
+		},
+		{
+			"from": [-0.5, 10.75, 7.5],
+			"to": [16.5, 12.75, 9.5],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8.35355, 13.25, 7.75]},
+			"faces": {
+				"north": {"uv": [14, 2, 15, 4], "texture": "#4"},
+				"east": {"uv": [16, 2, 14, 4], "texture": "#4"},
+				"south": {"uv": [15, 2, 16, 4], "texture": "#4"},
+				"west": {"uv": [14, 2, 16, 4], "texture": "#4"},
+				"down": {"uv": [14, 3, 16, 4], "rotation": 270, "texture": "#4"}
+			}
+		},
+		{
+			"from": [-0.5, 12.75, 5.5],
+			"to": [16.5, 14.75, 9.5],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8.35355, 13.25, 7.75]},
+			"faces": {
+				"north": {"uv": [12, 0, 13, 2], "texture": "#4"},
+				"east": {"uv": [16, 0, 12, 2], "texture": "#4"},
+				"south": {"uv": [15, 0, 16, 2], "texture": "#4"},
+				"west": {"uv": [12, 0, 16, 2], "texture": "#4"},
+				"up": {"uv": [12, 0, 16, 1], "rotation": 90, "texture": "#4"},
+				"down": {"uv": [12, 1, 16, 2], "rotation": 270, "texture": "#4"}
+			}
+		},
+		{
+			"from": [6, 12.9, -0.5],
+			"to": [10, 14.9, 16.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8.35355, 13.25, 7.75]},
+			"faces": {
+				"north": {"uv": [16, 0, 12, 2], "texture": "#4"},
+				"east": {"uv": [15, 0, 16, 2], "texture": "#4"},
+				"south": {"uv": [12, 0, 16, 2], "texture": "#4"},
+				"west": {"uv": [12, 0, 13, 2], "texture": "#4"},
+				"up": {"uv": [12, 0, 16, 1], "texture": "#4"},
+				"down": {"uv": [12, 1, 16, 2], "texture": "#4"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "arrows",
+			"origin": [3.35355, 25.25, 7.75],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

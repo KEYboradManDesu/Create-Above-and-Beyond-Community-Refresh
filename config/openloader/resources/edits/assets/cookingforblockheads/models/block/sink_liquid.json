@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "block/water_still",
+		"milk": "block/water_still"
+	},
+	"elements": [
+		{
+			"name": "Liquid_Milk",
+			"from": [2.5, 6.5, 2.5],
+			"to": [13.5, 11.5, 13.5],
+			"faces": {
+				"north": {"uv": [5.5, 10, 16.5, 15], "texture": "#milk", "tintindex": 0},
+				"east": {"uv": [5.5, 10, 16.5, 15], "texture": "#milk", "tintindex": 0},
+				"south": {"uv": [5.5, 10, 16.5, 15], "texture": "#milk", "tintindex": 0},
+				"west": {"uv": [5.5, 10, 16.5, 15], "texture": "#milk", "tintindex": 0},
+				"up": {"uv": [5.5, 5.5, 16.5, 16.5], "texture": "#milk", "tintindex": 0},
+				"down": {"uv": [16.5, 16.5, 5.5, 5.5], "texture": "#milk", "tintindex": 0}
+			}
+		}
+	]
+}

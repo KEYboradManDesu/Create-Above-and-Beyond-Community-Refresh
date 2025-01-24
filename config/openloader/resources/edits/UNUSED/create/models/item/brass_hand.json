@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create:item/brass_hand"
+  },
+	"overrides" :[
+		{"predicate":{"custom_model_data":1},"model":"create:item/golden_hand"},
+    {"predicate":{"custom_model_data":2},"model":"create:item/bronze_hand"}
+	]
+}
