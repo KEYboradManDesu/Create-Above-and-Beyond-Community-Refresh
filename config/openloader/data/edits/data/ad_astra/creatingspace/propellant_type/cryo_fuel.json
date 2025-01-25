@@ -1,0 +1,9 @@
+{
+  "propellantRatio": {
+    "ad_astra:cryo_fuel": 1
+  },
+  "maxIsp": 1500,
+  "Cp": 8000,
+  "gamma": 1.3,
+  "M": 8
+}

@@ -1,0 +1,8 @@
+{
+  "adjacentDimensions": {
+  },
+  "arrivalHeight": 200,
+  "gravity": 3.71,
+  "orbitedBody": "creatingspace:mars",
+  "distanceToOrbitingBody": 2000
+}

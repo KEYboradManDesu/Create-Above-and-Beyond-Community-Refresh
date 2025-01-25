@@ -1,0 +1,14 @@
+{
+  "adjacentDimensions": {
+    "ad_astra:moon_orbit": {
+      "deltaV": 1800
+    },
+    "ad_astra:earth_orbit": {
+      "deltaV": 2000
+    }
+  },
+  "arrivalHeight": 200,
+  "gravity": 1.6,
+  "orbitedBody": "sun",
+  "distanceToOrbitingBody": 400
+}

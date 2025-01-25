@@ -1,0 +1,10 @@
+{
+  "combustionEfficiency": 0.9,
+  "numberOfPumps": 1,
+  "allowedPropellants": [
+    "creatingspace:methalox",
+    "creatingspace:lh2lox",
+    "ad_astra:fuel",
+    "ad_astra:cryo_fuel"
+  ]
+}
