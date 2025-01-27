@@ -3,13 +3,13 @@
 	group: "0810E42B2DD79973"
 	order_index: 0
 	filename: "professions"
-	title: "&a▶ 公告栏"
+	title: "{quest.chapter.bulletin.name}"
 	icon: "minecraft:item_frame"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "矿工"
+			title: "{quest.bulletin.mining.title}"
 			icon: {
 				id: "tconstruct:pickaxe"
 				Count: 1b
@@ -56,7 +56,7 @@
 			x: -5.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖&6火成岩&f、&6金属矿石&f、&6宝石&f和各种矿工许可相关的物品。"]
+			description: ["{quest.bulletin.mining.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -76,7 +76,7 @@
 			}]
 		}
 		{
-			title: "农民"
+			title: "{quest.bulletin.farming.title}"
 			icon: {
 				id: "tconstruct:kama"
 				Count: 1b
@@ -134,7 +134,7 @@
 			x: -7.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖&6作物&f, &6花&f, &6蜂蜜&f和各种农场相关的物品。"]
+			description: ["{quest.bulletin.farming.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -154,7 +154,7 @@
 			}]
 		}
 		{
-			title: "木匠"
+			title: "{quest.bulletin.carpentry.title}"
 			icon: {
 				id: "tconstruct:hand_axe"
 				Count: 1b
@@ -201,7 +201,7 @@
 			x: -6.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖各种&6原木&f ，拥有木匠许可。"]
+			description: ["{quest.bulletin.carpentry.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -221,7 +221,7 @@
 			}]
 		}
 		{
-			title: "厨师"
+			title: "{quest.bulletin.chef.title}"
 			icon: {
 				id: "farmersdelight:golden_knife"
 				Count: 1b
@@ -232,7 +232,7 @@
 			x: -1.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖&6处理好的食物&f，拥有厨师许可。"]
+			description: ["{quest.bulletin.chef.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -252,7 +252,7 @@
 			}]
 		}
 		{
-			title: "石匠"
+			title: "{quest.bulletin.masonry.title}"
 			icon: {
 				id: "tconstruct:sledge_hammer"
 				Count: 1b
@@ -305,7 +305,7 @@
 			x: 0.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖大量&6建筑方块&f ，拥有石匠许可。"]
+			description: ["{quest.bulletin.masonry.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -325,7 +325,7 @@
 			}]
 		}
 		{
-			title: "猎人"
+			title: "{quest.bulletin.hunting.title}"
 			icon: {
 				id: "tconstruct:sword"
 				Count: 1b
@@ -372,7 +372,7 @@
 			x: -4.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖所有&6怪物掉落物&f ，拥有猎人许可。"]
+			description: ["{quest.bulletin.hunting.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -392,15 +392,15 @@
 			}]
 		}
 		{
-			title: "职业"
+			title: "{quest.bulletin.profession.title}"
 			icon: "minecraft:writable_book"
 			x: -3.0d
 			y: -8.0d
 			shape: "circle"
 			description: [
-				"从事某一&6职业&r可以为你提供稳定的收入来源。"
+				"{quest.bulletin.profession.text1}"
 				""
-				"在这里购买的职业卡片可以起到\"许可证\"的作用。它们能做的就是在交易站中解锁相应的配方。你可以从事很多个职业。"
+				"{quest.bulletin.profession.text2}"
 			]
 			dependencies: ["36E02479368EAF04"]
 			id: "59B17CA4AA6D0DD4"
@@ -410,14 +410,14 @@
 			}]
 		}
 		{
-			title: "公告栏"
+			title: "{quest.bulletin.introduce.title}"
 			icon: "minecraft:oak_sign"
 			x: -3.0d
 			y: -6.0d
 			shape: "hexagon"
 			description: [
-				"&6公告栏&r 提供了获取交易用货币的方式。"
-				"在那里，你可以完成各种任务，或购买一张职业许可证在交易机里获取货币。"
+				"{quest.bulletin.introduce.text1}"
+				"{quest.bulletin.introduce.text2}"
 			]
 			size: 2.0d
 			id: "36E02479368EAF04"
@@ -431,7 +431,7 @@
 			icon: "minecraft:oak_sapling"
 			x: -4.0d
 			y: -3.5d
-			subtitle: "25 银币"
+			subtitle: "25 {item.thermal.silver_coin}"
 			id: "41BB50843EF5EF10"
 			tasks: [
 				{
@@ -474,7 +474,7 @@
 			}]
 		}
 		{
-			title: "渔夫"
+			title: "{quest.bulletin.fishing.title}"
 			icon: {
 				id: "aquaculture:gold_fishing_rod"
 				Count: 1b
@@ -485,7 +485,7 @@
 			x: -0.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖&6鱼&f和地下&6宝藏&f，拥有渔夫许可。"]
+			description: ["{quest.bulletin.fishing.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -509,7 +509,7 @@
 			icon: "minecraft:book"
 			x: -2.0d
 			y: -3.0d
-			subtitle: "15 银币"
+			subtitle: "15 {item.thermal.silver_coin}"
 			description: ["写一封申请书，在里面阐述你值得被投资的原因。"]
 			id: "736FC31210F334F2"
 			tasks: [{
@@ -530,7 +530,7 @@
 			}]
 		}
 		{
-			title: "铁匠"
+			title: "{quest.bulletin.smithing.title}"
 			icon: {
 				id: "minecraft:golden_chestplate"
 				Count: 1b
@@ -541,7 +541,7 @@
 			x: 1.5d
 			y: -7.5d
 			shape: "hexagon"
-			description: ["售卖&6工具&f、&6护甲&f 等铁匠许可相关的物品。"]
+			description: ["{quest.bulletin.smithing.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["59B17CA4AA6D0DD4"]
 			can_repeat: true
@@ -565,7 +565,7 @@
 			icon: "biomesoplenty:flowering_oak_sapling"
 			x: -4.0d
 			y: -2.0d
-			subtitle: "45 银币"
+			subtitle: "45 {item.thermal.silver_coin}"
 			dependencies: ["41BB50843EF5EF10"]
 			id: "08DB1CFAE4555525"
 			tasks: [
@@ -613,7 +613,7 @@
 			icon: "thermal:sulfur"
 			x: -0.5d
 			y: -4.0d
-			subtitle: "25 银币"
+			subtitle: "25 {item.thermal.silver_coin}"
 			id: "128F1A9528CA4130"
 			tasks: [
 				{
@@ -655,7 +655,7 @@
 			icon: "thermal:ruby"
 			x: -0.5d
 			y: -2.5d
-			subtitle: "45 银币"
+			subtitle: "45 {item.thermal.silver_coin}"
 			dependencies: ["128F1A9528CA4130"]
 			id: "669D57A1E1B09CD8"
 			tasks: [
@@ -698,7 +698,7 @@
 			icon: "minecraft:music_disc_13"
 			x: -5.5d
 			y: -4.0d
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			description: ["友好的唱片收集者对任何唱片都很感兴趣。"]
 			can_repeat: true
 			id: "436DA1A1AB8C0734"
@@ -738,7 +738,7 @@
 			icon: "minecraft:granite"
 			x: 1.0d
 			y: -3.5d
-			subtitle: "25 银币"
+			subtitle: "25 {item.thermal.silver_coin}"
 			id: "2A9AAED667A95C6E"
 			tasks: [
 				{
@@ -785,7 +785,7 @@
 			icon: "minecraft:basalt"
 			x: 1.0d
 			y: -2.0d
-			subtitle: "45 银币"
+			subtitle: "45 {item.thermal.silver_coin}"
 			dependencies: ["2A9AAED667A95C6E"]
 			id: "7D92D05B4A67FD78"
 			tasks: [
@@ -838,7 +838,7 @@
 			title: "&7&l垃圾填埋"
 			x: 2.5d
 			y: -4.5d
-			subtitle: "15 银币"
+			subtitle: "15 {item.thermal.silver_coin}"
 			description: ["如果你平了一大块地，不妨把多余的泥土换成货币。"]
 			id: "1C5EA1173F4E592B"
 			tasks: [{
@@ -860,7 +860,7 @@
 			icon: "minecraft:carrot"
 			x: -7.0d
 			y: -3.5d
-			subtitle: "25 银币"
+			subtitle: "25 {item.thermal.silver_coin}"
 			id: "4D07666ECE75D9B5"
 			tasks: [
 				{
@@ -909,11 +909,11 @@
 			}]
 		}
 		{
-			title: "&7&l丰富的作物收集"
+			title: "{quest.bulletin.collect_more_crops.title}"
 			icon: "farmersdelight:rice_panicle"
 			x: -7.0d
 			y: -2.0d
-			subtitle: "45 银币"
+			subtitle: "45 {item.thermal.silver_coin}"
 			dependencies: ["4D07666ECE75D9B5"]
 			id: "3F2FB159F1B8875F"
 			tasks: [
@@ -963,11 +963,11 @@
 			}]
 		}
 		{
-			title: "&7&l原始人，起洞！"
+			title: "{quest.bulletin.collect_fossil.title}"
 			icon: "minecraft:bone"
 			x: -8.5d
 			y: -2.5d
-			subtitle: "55 银币"
+			subtitle: "55 {item.thermal.silver_coin}"
 			id: "7932D19BE114264A"
 			tasks: [
 				{
@@ -1005,7 +1005,7 @@
 			title: "&7&l亡灵杀手"
 			x: -2.0d
 			y: -1.0d
-			subtitle: "30 银币"
+			subtitle: "30 {item.thermal.silver_coin}"
 			id: "7C270AB26CD9AAB8"
 			tasks: [{
 				id: "0C72441783664753"
@@ -1026,7 +1026,7 @@
 			title: "&7&l亡灵杀手 II"
 			x: -0.5d
 			y: -0.5d
-			subtitle: "50 银币"
+			subtitle: "50 {item.thermal.silver_coin}"
 			id: "29B58A9EDA478E7D"
 			tasks: [{
 				id: "6C65780CF2751821"
@@ -1047,7 +1047,7 @@
 			title: "&7&l节肢杀手"
 			x: -3.5d
 			y: -0.5d
-			subtitle: "50 银币"
+			subtitle: "50 {item.thermal.silver_coin}"
 			id: "1AA2C3EECE1832EE"
 			tasks: [{
 				id: "60B3526FA0D6A2AF"
@@ -1068,7 +1068,7 @@
 			title: "&7&l商人的心头好"
 			x: -5.5d
 			y: -1.5d
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			id: "3F00084D9474C381"
 			tasks: [{
 				id: "2CA6E7602A5FBCF5"
@@ -1084,15 +1084,15 @@
 			}]
 		}
 		{
-			title: "&7&l牧场"
+			title: "{quest.bulletin.bred_animals.title}"
 			x: -9.0d
 			y: -1.0d
-			subtitle: "15 银币"
+			subtitle: "15 {item.thermal.silver_coin}"
 			id: "562696C1D01B2685"
 			tasks: [{
 				id: "07132D69A1BA37B5"
 				type: "stat"
-				title: "繁殖10次动物"
+				title: "{quest.bulletin.bred_animals.target1}"
 				icon: "minecraft:wheat"
 				stat: "minecraft:animals_bred"
 				value: 10
@@ -1110,7 +1110,7 @@
 			icon: "create:crushed_raw_gold"
 			x: 3.0d
 			y: -2.5d
-			subtitle: "30 银币"
+			subtitle: "30 {item.thermal.silver_coin}"
 			id: "39D56A2B01DBD865"
 			tasks: [
 				{
@@ -1168,7 +1168,7 @@
 			}]
 		}
 		{
-			title: "&7&l复仇"
+			title: "{quest.bulletin.kill_pillager.title}"
 			icon: {
 				id: "minecraft:crossbow"
 				Count: 1b
@@ -1178,8 +1178,8 @@
 			}
 			x: -9.0d
 			y: -4.0d
-			subtitle: "10 银币"
-			description: ["击败入侵者，你就会获得附近村庄的帮助。"]
+			subtitle: "10 {item.thermal.silver_coin}"
+			description: ["{quest.bulletin.kill_pillager.text1}"]
 			can_repeat: true
 			id: "76E3B76D47A1F889"
 			tasks: [
@@ -1280,7 +1280,7 @@
 			title: "&7&l保持体型"
 			x: 4.0d
 			y: -4.0d
-			subtitle: "60 银币"
+			subtitle: "60 {item.thermal.silver_coin}"
 			id: "2F2BA8C2AC2E0B93"
 			tasks: [{
 				id: "374CDBF68F90BDC9"
@@ -1309,7 +1309,7 @@
 			icon: "minecraft:spruce_sapling"
 			x: -3.0d
 			y: 1.0d
-			subtitle: "记得种回去！&r32银币"
+			subtitle: "记得种回去！&r32 {item.thermal.silver_coin}"
 			id: "3D46F5872613C87A"
 			tasks: [{
 				id: "305B8665F7A566F1"
@@ -1340,7 +1340,7 @@
 			icon: "minecraft:barrier"
 			x: -1.0d
 			y: 1.0d
-			subtitle: "到底该怎么下去呢？ &r1 金币"
+			subtitle: "到底该怎么下去呢？ &r1 {item.thermal.gold_coin}"
 			id: "48B93059B325B230"
 			tasks: [{
 				id: "169EFAAAE095C621"
@@ -1380,7 +1380,7 @@
 			]
 		}
 		{
-			title: "&7&l基建狂魔"
+			title: "{quest.bulletin.build_time.title}"
 			icon: {
 				id: "minecraft:scaffolding"
 				Count: 1b
@@ -1394,39 +1394,26 @@
 			x: -7.0d
 			y: 0.0d
 			shape: "square"
-			subtitle: "大兴土木！&r24银币"
+			subtitle: "{quest.bulletin.build_time.subtitle}&r24 {item.thermal.silver_coin}"
 			id: "7C7B993FACB7E466"
 			tasks: [
 				{
 					id: "1885617E52051FD3"
-					type: "questsadditions:place"
+					type: "custom"
 					title: "放置泥土"
-					block_type: 0
-					block: "minecraft:dirt"
-					value: 100L
-					replaced: "minecraft:air"
-					replace: false
+					icon: "minecraft:dirt"
 				}
 				{
 					id: "65BF4F81B36B221B"
-					type: "questsadditions:place"
+					type: "custom"
 					title: "放置圆石"
 					icon: "minecraft:cobblestone"
-					block_type: 0
-					block: "minecraft:stone"
-					value: 100L
-					replaced: "minecraft:air"
-					replace: false
 				}
 				{
 					id: "2469DE5A0EF04A50"
-					type: "questsadditions:break"
+					type: "custom"
 					title: "使用并拆毁脚手架"
 					icon: "minecraft:scaffolding"
-					block_type: 0
-					block: "minecraft:scaffolding"
-					value: 100L
-					checkItem: false
 				}
 			]
 			rewards: [{
@@ -1452,7 +1439,7 @@
 			x: 1.0d
 			y: 2.0d
 			shape: "square"
-			subtitle: "记得回家！ &r2 金币"
+			subtitle: "记得回家！ &r2 {item.thermal.gold_coin}"
 			id: "769CAC17CA1366FD"
 			tasks: [
 				{
@@ -1518,7 +1505,7 @@
 			x: 1.0d
 			y: 0.0d
 			shape: "square"
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			id: "4BF4C879E63527FE"
 			tasks: [{
 				id: "2DBA595DB41A6BDF"
@@ -1545,7 +1532,7 @@
 			x: 3.0d
 			y: 1.0d
 			shape: "square"
-			subtitle: "12 金币"
+			subtitle: "12 {item.thermal.gold_coin}"
 			dependencies: ["4F7A70041B67A348"]
 			size: 1.7d
 			id: "4D94E2619DDAADC4"
@@ -1611,7 +1598,7 @@
 			x: -2.0d
 			y: 3.0d
 			shape: "square"
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			id: "497CB9503F98E8FE"
 			tasks: [{
 				id: "063E4D8B2C3995B1"
@@ -1647,14 +1634,13 @@
 			title: "&6&l路途漫漫"
 			x: -5.0d
 			y: 0.0d
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			id: "38DCB9AD8BBDEA34"
 			tasks: [{
 				id: "14DD8DDE0199E93F"
-				type: "questsadditions:days"
+				type: "custom"
 				title: "游玩5000天"
 				icon: "minecraft:clock"
-				days: 5000
 			}]
 			rewards: [{
 				id: "4F21C589F785CEDF"
@@ -1665,16 +1651,17 @@
 			}]
 		}
 		{
-			title: "&8&l想不到写点什么了啊啊啊"
+			title: "{quest.bulletin.mysterious_button.title}"
 			x: -9.0d
 			y: 1.0d
 			shape: "square"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
+			description: ["{quest.bulletin.mysterious_button.text1}"]
 			id: "407425094BB67456"
 			tasks: [{
 				id: "59B44BF428654FB9"
 				type: "checkmark"
-				title: "？"
+				title: "{quest.bulletin.mysterious_button.target1}"
 			}]
 			rewards: [{
 				id: "488C26C5CE885086"
@@ -1690,7 +1677,7 @@
 			x: -5.0d
 			y: 2.0d
 			shape: "square"
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			description: ["就像回家一样~"]
 			id: "6CB9E439ED5293D3"
 			tasks: [{
@@ -1723,7 +1710,7 @@
 			]
 		}
 		{
-			title: "&b&l谁才是海王？"
+			title: "{quest.bulletin.neptunium_armor.title}"
 			icon: {
 				id: "aquaculture:neptunium_helmet"
 				Count: 1b
@@ -1733,8 +1720,8 @@
 			}
 			x: -7.0d
 			y: 2.0d
-			subtitle: "1 金币"
-			description: ["集齐海王套装。"]
+			subtitle: "1 {item.thermal.gold_coin}"
+			description: ["{quest.bulletin.neptunium_armor.text1}"]
 			id: "5B61DEB8EED4169F"
 			tasks: [
 				{
@@ -1805,7 +1792,7 @@
 			icon: "kubejs:crushed_desh_ore"
 			x: 3.0d
 			y: -1.0d
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			dependencies: ["39D56A2B01DBD865"]
 			id: "05FEB73D14D14A30"
 			tasks: [

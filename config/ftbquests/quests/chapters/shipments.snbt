@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 2
 	filename: "shipments"
-	title: "&a▶ 物流中心"
+	title: "{quest.chapter.logistics_center.name}"
 	icon: "thermal:machine_press"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -33,7 +33,7 @@
 			x: 1.5d
 			y: 13.25d
 			shape: "circle"
-			subtitle: "银币 <> 金币"
+			subtitle: "{item.thermal.silver_coin} <> {item.thermal.gold_coin}"
 			description: ["这个交易卡可以让你的交易机自动转换你放入的货币。"]
 			dependencies: ["6AC1CED0D341150E"]
 			can_repeat: true
@@ -50,13 +50,13 @@
 			}]
 		}
 		{
-			title: "16x 泥土"
+			title: "16x {block.minecraft.dirt}"
 			icon: "minecraft:dirt"
 			disable_toast: true
 			x: -4.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "2 银币"
+			subtitle: "2 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "76B34C945DB54981"
 			tasks: [{
@@ -73,13 +73,13 @@
 			}]
 		}
 		{
-			title: "16x 沙子"
+			title: "16x {block.minecraft.sand}"
 			icon: "minecraft:sand"
 			disable_toast: true
 			x: -3.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6F40F509FD53A8C2"
 			tasks: [{
@@ -96,13 +96,13 @@
 			}]
 		}
 		{
-			title: "16x 沙砾"
+			title: "16x {block.minecraft.gravel}"
 			icon: "minecraft:gravel"
 			disable_toast: true
 			x: -2.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "2 银币"
+			subtitle: "2 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "591BBEB53CBFBD72"
 			tasks: [{
@@ -119,13 +119,13 @@
 			}]
 		}
 		{
-			title: "16x 黏土"
+			title: "16x {block.minecraft.clay}"
 			icon: "minecraft:clay"
 			disable_toast: true
 			x: -1.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "6 银币"
+			subtitle: "6 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "647FA42D871AED8A"
 			tasks: [{
@@ -142,13 +142,13 @@
 			}]
 		}
 		{
-			title: "16x 冰"
+			title: "16x {block.minecraft.ice}"
 			icon: "minecraft:ice"
 			disable_toast: true
 			x: 0.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "13A26F958ECDB0D7"
 			tasks: [{
@@ -165,13 +165,13 @@
 			}]
 		}
 		{
-			title: "16x 黑石"
+			title: "16x {block.minecraft.blackstone}"
 			icon: "minecraft:blackstone"
 			disable_toast: true
 			x: 1.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "12 银币"
+			subtitle: "12 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "20054475C1465FA5"
 			tasks: [{
@@ -188,13 +188,13 @@
 			}]
 		}
 		{
-			title: "16x 砖泥"
+			title: "16x {block.tconstruct.grout}"
 			icon: "tconstruct:grout"
 			disable_toast: true
 			x: 2.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "12 银币"
+			subtitle: "12 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5094961D019ACB77"
 			tasks: [{
@@ -211,13 +211,13 @@
 			}]
 		}
 		{
-			title: "16x 圆石"
+			title: "16x {block.minecraft.cobblestone}"
 			icon: "minecraft:cobblestone"
 			disable_toast: true
 			x: 3.0d
 			y: -1.0d
 			shape: "hexagon"
-			subtitle: "1 银币"
+			subtitle: "1 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1CBB60BA78D631ED"
 			tasks: [{
@@ -234,13 +234,13 @@
 			}]
 		}
 		{
-			title: "16x 花岗岩"
+			title: "16x {block.minecraft.granite}"
 			icon: "minecraft:granite"
 			disable_toast: true
 			x: -4.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2C3A6B473EDCC64A"
 			tasks: [{
@@ -257,13 +257,13 @@
 			}]
 		}
 		{
-			title: "16x 闪长岩"
+			title: "16x {block.minecraft.diorite}"
 			icon: "minecraft:diorite"
 			disable_toast: true
 			x: -3.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "679A3857C00D849A"
 			tasks: [{
@@ -280,13 +280,13 @@
 			}]
 		}
 		{
-			title: "16x 安山岩"
+			title: "16x {block.minecraft.andesite}"
 			icon: "minecraft:andesite"
 			disable_toast: true
 			x: -2.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5B1A0D3A40B981E9"
 			tasks: [{
@@ -303,13 +303,13 @@
 			}]
 		}
 		{
-			title: "16x 石灰岩"
+			title: "16x {block.create.limestone}"
 			icon: "create:limestone"
 			disable_toast: true
 			x: -1.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "79A10C5B14D7B5C2"
 			tasks: [{
@@ -326,13 +326,13 @@
 			}]
 		}
 		{
-			title: "16x 风化石灰岩"
+			title: "16x {block.create_dd.weathered_limestone}"
 			icon: "create_dd:weathered_limestone_asphalt_block"
 			disable_toast: true
 			x: 0.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "092971DEBCCC3BB0"
 			tasks: [{
@@ -349,13 +349,13 @@
 			}]
 		}
 		{
-			title: "16x 辉长岩"
+			title: "16x {block.create_dd.gabbro}"
 			icon: "create_dd:gabbro"
 			disable_toast: true
 			x: 1.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5873D6DAF3363DBB"
 			tasks: [{
@@ -372,13 +372,13 @@
 			}]
 		}
 		{
-			title: "16x 熔渣"
+			title: "16x {block.create.scoria}"
 			icon: "create:scoria"
 			disable_toast: true
 			x: 2.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3CDEA21405FA6732"
 			tasks: [{
@@ -395,13 +395,13 @@
 			}]
 		}
 		{
-			title: "16x 焦黑熔渣"
+			title: "16x {block.create.scorchia}"
 			icon: "create:scorchia"
 			disable_toast: true
 			x: 3.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6C04CE6ADCC4711D"
 			tasks: [{
@@ -418,13 +418,13 @@
 			}]
 		}
 		{
-			title: "1x 黑曜石"
+			title: "1x {block.minecraft.obsidian}"
 			icon: "minecraft:obsidian"
 			disable_toast: true
 			x: -4.0d
 			y: 1.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7FD5B198E1347B33"
 			tasks: [{
@@ -441,13 +441,13 @@
 			}]
 		}
 		{
-			title: "16x 枯死木"
+			title: "16x {block.biomesoplenty.dead_log}"
 			icon: "biomesoplenty:dead_log"
 			disable_toast: true
 			x: -4.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "2 银币"
+			subtitle: "2 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "622A60C9DF945D3C"
 			tasks: [{
@@ -464,13 +464,13 @@
 			}]
 		}
 		{
-			title: "16x 橡木"
+			title: "16x {block.minecraft.oak_log}"
 			icon: "minecraft:oak_log"
 			disable_toast: true
 			x: -3.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "470BAF58C2F5DE18"
@@ -488,13 +488,13 @@
 			}]
 		}
 		{
-			title: "16x 白桦木"
+			title: "16x {block.minecraft.birch_log}"
 			icon: "minecraft:birch_log"
 			disable_toast: true
 			x: -2.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "20792B5CBCA9F646"
 			tasks: [{
@@ -511,13 +511,13 @@
 			}]
 		}
 		{
-			title: "16x 云杉木"
+			title: "16x {block.minecraft.spruce_log}"
 			icon: "minecraft:spruce_log"
 			disable_toast: true
 			x: -1.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "743605DD04D7ADA5"
 			tasks: [{
@@ -534,13 +534,13 @@
 			}]
 		}
 		{
-			title: "16x 从林木"
+			title: "16x {block.minecraft.jungle_log}"
 			icon: "minecraft:jungle_log"
 			disable_toast: true
 			x: 0.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3C6A717C4F34DF21"
 			tasks: [{
@@ -557,13 +557,13 @@
 			}]
 		}
 		{
-			title: "16x 金币合欢木"
+			title: "16x {block.minecraft.acacia_log}"
 			icon: "minecraft:acacia_log"
 			disable_toast: true
 			x: 1.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1947DBC29B33E3E7"
 			tasks: [{
@@ -580,13 +580,13 @@
 			}]
 		}
 		{
-			title: "16x 深色橡木"
+			title: "16x {block.minecraft.dark_oak_log}"
 			icon: "minecraft:dark_oak_log"
 			disable_toast: true
 			x: 2.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7F5D013FB2A8C20D"
 			tasks: [{
@@ -603,13 +603,13 @@
 			}]
 		}
 		{
-			title: "16x 绯红菌柄"
+			title: "16x {block.minecraft.crimson_stem}"
 			icon: "minecraft:crimson_stem"
 			disable_toast: true
 			x: 3.0d
 			y: 3.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "45A573622E522117"
 			tasks: [{
@@ -626,13 +626,13 @@
 			}]
 		}
 		{
-			title: "16x 诡异菌柄"
+			title: "16x {block.minecraft.warped_stem}"
 			icon: "minecraft:warped_stem"
 			disable_toast: true
 			x: -4.0d
 			y: 4.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "4BE5B70362CD0C1F"
 			tasks: [{
@@ -649,13 +649,13 @@
 			}]
 		}
 		{
-			title: "8x 铁锭"
+			title: "8x {item.minecraft.iron_ingot}"
 			icon: "minecraft:iron_ingot"
 			disable_toast: true
 			x: -4.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5F6DF276FE8BBDA5"
 			tasks: [{
@@ -672,13 +672,13 @@
 			}]
 		}
 		{
-			title: "8x 锌锭"
+			title: "8x {item.create.zinc_ingot}"
 			icon: "create:zinc_ingot"
 			disable_toast: true
 			x: -3.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2E35D9A37BF899B5"
 			tasks: [{
@@ -695,13 +695,13 @@
 			}]
 		}
 		{
-			title: "8x 铜锭"
+			title: "8x {item.minecraft.copper_ingot}"
 			icon: "minecraft:copper_ingot"
 			disable_toast: true
 			x: -2.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7B587713BF9553D7"
 			tasks: [{
@@ -718,13 +718,13 @@
 			}]
 		}
 		{
-			title: "8x 镍锭"
+			title: "8x {item.thermal.nickel_ingot}"
 			icon: "thermal:nickel_ingot"
 			disable_toast: true
 			x: -1.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "363711277EBBDC5D"
 			tasks: [{
@@ -741,13 +741,13 @@
 			}]
 		}
 		{
-			title: "8x 铅锭"
+			title: "8x {item.thermal.lead_ingot}"
 			icon: "thermal:lead_ingot"
 			disable_toast: true
 			x: 0.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "718A83FCC4EAD9FA"
 			tasks: [{
@@ -764,13 +764,13 @@
 			}]
 		}
 		{
-			title: "8x 金锭"
+			title: "8x {item.minecraft.gold_ingot}"
 			icon: "minecraft:gold_ingot"
 			disable_toast: true
 			x: 1.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "435EFC05F3183E88"
 			tasks: [{
@@ -787,13 +787,13 @@
 			}]
 		}
 		{
-			title: "16x 安山合金"
+			title: "16x {item.create.andesite_alloy}"
 			icon: "create:andesite_alloy"
 			disable_toast: true
 			x: 2.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2C720D89411862B8"
 			tasks: [{
@@ -810,13 +810,13 @@
 			}]
 		}
 		{
-			title: "8x 硅钢"
+			title: "8x {item.moreminecarts.silica_steel}"
 			icon: "moreminecarts:silica_steel"
 			disable_toast: true
 			x: 3.0d
 			y: 6.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "01F3EDC327B63908"
 			tasks: [{
@@ -833,13 +833,13 @@
 			}]
 		}
 		{
-			title: "8x 黄铜锭"
+			title: "8x {item.create.brass_ingot}"
 			icon: "create:brass_ingot"
 			disable_toast: true
 			x: -4.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "7BF31C5010B883FE"
@@ -857,13 +857,13 @@
 			}]
 		}
 		{
-			title: "4x 殷钢锭"
+			title: "4x {item.thermal.invar_ingot}"
 			icon: "thermal:invar_ingot"
 			disable_toast: true
 			x: -3.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "64 银币"
+			subtitle: "64 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "42BE8474B5EF5044"
 			tasks: [{
@@ -880,13 +880,13 @@
 			}]
 		}
 		{
-			title: "16x 煤炭"
+			title: "16x {item.minecraft.coal}"
 			icon: "minecraft:coal"
 			disable_toast: true
 			x: -1.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7729829F2BBE2A60"
 			tasks: [{
@@ -903,13 +903,13 @@
 			}]
 		}
 		{
-			title: "16x 燧石"
+			title: "16x {item.minecraft.flint}"
 			icon: "minecraft:flint"
 			disable_toast: true
 			x: 0.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "76D027FF740F9812"
@@ -927,13 +927,13 @@
 			}]
 		}
 		{
-			title: "4x 朱砂"
+			title: "4x {item.thermal.cinnabar}"
 			icon: "thermal:cinnabar"
 			disable_toast: true
 			x: 1.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1AC4E999EFB8B4C9"
 			tasks: [{
@@ -950,13 +950,13 @@
 			}]
 		}
 		{
-			title: "16x 红石粉"
+			title: "16x {item.minecraft.redstone}"
 			icon: "minecraft:redstone"
 			disable_toast: true
 			x: 2.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "4364C05A34B901C5"
 			tasks: [{
@@ -973,13 +973,13 @@
 			}]
 		}
 		{
-			title: "1x 钻石"
+			title: "1x {item.minecraft.diamond}"
 			icon: "minecraft:diamond"
 			disable_toast: true
 			x: 3.0d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "765803A6935AA314"
 			tasks: [{
@@ -996,13 +996,13 @@
 			}]
 		}
 		{
-			title: "8x 青金石"
+			title: "8x {item.minecraft.lapis_lazuli}"
 			icon: "minecraft:lapis_lazuli"
 			disable_toast: true
 			x: -4.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "03993CE3F61F6D0F"
 			tasks: [{
@@ -1019,13 +1019,13 @@
 			}]
 		}
 		{
-			title: "1x 绿宝石"
+			title: "1x {item.minecraft.emerald}"
 			icon: "minecraft:emerald"
 			disable_toast: true
 			x: -3.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "64 银币"
+			subtitle: "64 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1A32EAEF6E3221DC"
 			tasks: [{
@@ -1042,13 +1042,13 @@
 			}]
 		}
 		{
-			title: "4x 硫磺"
+			title: "4x {item.thermal.sulfur}"
 			icon: "thermal:sulfur"
 			disable_toast: true
 			x: -2.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "12A235A306B1DEEC"
 			tasks: [{
@@ -1065,13 +1065,13 @@
 			}]
 		}
 		{
-			title: "4x 磷灰石"
+			title: "4x {item.thermal.apatite}"
 			icon: "thermal:apatite"
 			disable_toast: true
 			x: -1.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3B736EA8D2124584"
 			tasks: [{
@@ -1088,13 +1088,13 @@
 			}]
 		}
 		{
-			title: "4x 硝石"
+			title: "4x {item.thermal.niter}"
 			icon: "thermal:niter"
 			disable_toast: true
 			x: 0.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7AC9ADA26F996EEA"
 			tasks: [{
@@ -1111,13 +1111,13 @@
 			}]
 		}
 		{
-			title: "8x 下界石英"
+			title: "8x {item.minecraft.quartz}"
 			icon: "minecraft:quartz"
 			disable_toast: true
 			x: 1.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "24 银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6BE83086A62D030F"
 			tasks: [{
@@ -1134,13 +1134,13 @@
 			}]
 		}
 		{
-			title: "8x 赛特斯石英"
+			title: "8x {item.ae2.certus_quartz_crystal}"
 			icon: "ae2:certus_quartz_crystal"
 			disable_toast: true
 			x: 2.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "24 银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "4ECE4563900E5DF7"
 			tasks: [{
@@ -1157,13 +1157,13 @@
 			}]
 		}
 		{
-			title: "8x 福鲁伊克斯石英"
+			title: "8x {item.ae2.fluix_crystal}"
 			icon: "ae2:fluix_crystal"
 			disable_toast: true
 			x: 3.0d
 			y: 8.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6DB6B9E4F5DD4E70"
 			tasks: [{
@@ -1180,13 +1180,13 @@
 			}]
 		}
 		{
-			title: "6x 硫化橡胶"
+			title: "6x {item.thermal.cured_rubber}"
 			icon: "thermal:cured_rubber"
 			disable_toast: true
 			x: -4.0d
 			y: 9.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "5B0A7A5BF8F83B01"
@@ -1204,13 +1204,13 @@
 			}]
 		}
 		{
-			title: "16x 脚手架"
+			title: "16x {block.minecraft.scaffolding}"
 			icon: "minecraft:scaffolding"
 			disable_toast: true
 			x: -2.0d
 			y: 11.0d
 			shape: "hexagon"
-			subtitle: "2 银币"
+			subtitle: "2 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "683446997D225C3A"
 			tasks: [{
@@ -1228,13 +1228,13 @@
 			}]
 		}
 		{
-			title: "1x 羊毛"
+			title: "1x {block.minecraft.white_wool}"
 			icon: "minecraft:white_wool"
 			disable_toast: true
 			x: -1.0d
 			y: 11.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "0A7CD5821B530E0C"
@@ -1252,13 +1252,13 @@
 			}]
 		}
 		{
-			title: "1x 海绵"
+			title: "1x {block.minecraft.sponge}"
 			icon: "minecraft:sponge"
 			disable_toast: true
 			x: 0.0d
 			y: 11.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "06818789DECB08C9"
 			tasks: [{
@@ -1275,13 +1275,13 @@
 			}]
 		}
 		{
-			title: "1x 蜘蛛网"
+			title: "1x {block.minecraft.cobweb}"
 			icon: "minecraft:cobweb"
 			disable_toast: true
 			x: 1.0d
 			y: 11.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "0A53EFEFDE8F15A2"
 			tasks: [{
@@ -1298,13 +1298,13 @@
 			}]
 		}
 		{
-			title: "1x 稻米"
+			title: "1x {block.farmersdelight.rice_bag}"
 			icon: "farmersdelight:rice_bag"
 			disable_toast: true
 			x: -4.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3A06CAA0F7AE02CA"
 			tasks: [{
@@ -1322,13 +1322,13 @@
 			}]
 		}
 		{
-			title: "32x 秸秆"
+			title: "32x {item.farmersdelight.straw}"
 			icon: "farmersdelight:straw"
 			disable_toast: true
 			x: -3.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "3213A37F09933E7B"
@@ -1346,13 +1346,13 @@
 			}]
 		}
 		{
-			title: "4x 夜光菇"
+			title: "4x {block.biomesoplenty.glowshroom}"
 			icon: "biomesoplenty:glowshroom"
 			disable_toast: true
 			x: -2.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "9 银币"
+			subtitle: "9 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7BC1807DFB6A5F5D"
 			tasks: [{
@@ -1369,13 +1369,13 @@
 			}]
 		}
 		{
-			title: "4x 荆棘"
+			title: "4x {block.biomesoplenty.bramble}"
 			icon: "biomesoplenty:bramble"
 			disable_toast: true
 			x: -1.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "9 银币"
+			subtitle: "9 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6A2BA6792687DBD8"
 			tasks: [{
@@ -1392,13 +1392,13 @@
 			}]
 		}
 		{
-			title: "4x 大麦"
+			title: "4x {block.biomesoplenty.barley}"
 			icon: "biomesoplenty:barley"
 			disable_toast: true
 			x: 0.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2199810ED41881DA"
 			tasks: [{
@@ -1415,13 +1415,13 @@
 			}]
 		}
 		{
-			title: "4x 水草"
+			title: "4x {block.biomesoplenty.watergrass}"
 			icon: "biomesoplenty:watergrass"
 			disable_toast: true
 			x: 1.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "775723DCF0244F95"
 			tasks: [{
@@ -1438,13 +1438,13 @@
 			}]
 		}
 		{
-			title: "4x 芦苇"
+			title: "4x {block.biomesoplenty.reed}"
 			icon: "biomesoplenty:reed"
 			disable_toast: true
 			x: 2.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "5 银币"
+			subtitle: "5 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3B1E4589B8ED4388"
 			tasks: [{
@@ -1462,13 +1462,13 @@
 			}]
 		}
 		{
-			title: "4x 三叶草花瓣"
+			title: "4x {block.biomesoplenty.huge_clover_petal}"
 			icon: "biomesoplenty:huge_clover_petal"
 			disable_toast: true
 			x: 3.0d
 			y: 16.0d
 			shape: "hexagon"
-			subtitle: "10 银币"
+			subtitle: "10 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6D19D61D71BAAE02"
 			tasks: [{
@@ -1485,13 +1485,13 @@
 			}]
 		}
 		{
-			title: "4x 西班牙苔藓"
+			title: "4x {block.biomesoplenty.spanish_moss}"
 			icon: "biomesoplenty:spanish_moss"
 			disable_toast: true
 			x: -4.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "7 银币"
+			subtitle: "7 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5D10B035CAB8D905"
 			tasks: [{
@@ -1508,13 +1508,13 @@
 			}]
 		}
 		{
-			title: "4x 柳树藤"
+			title: "4x {block.biomesoplenty.willow_vine}"
 			icon: "biomesoplenty:willow_vine"
 			disable_toast: true
 			x: -3.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "7 银币"
+			subtitle: "7 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "12A986CD72174B65"
@@ -1532,13 +1532,13 @@
 			}]
 		}
 		{
-			title: "4x 香蒲"
+			title: "4x {block.biomesoplenty.cattail}"
 			icon: "biomesoplenty:cattail"
 			disable_toast: true
 			x: -2.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "53943921517BA859"
 			tasks: [{
@@ -1555,13 +1555,13 @@
 			}]
 		}
 		{
-			title: "4x 甘蔗"
+			title: "4x {block.minecraft.sugar_cane}"
 			icon: "minecraft:sugar_cane"
 			disable_toast: true
 			x: -1.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2DF353EF6C8F5E86"
 			tasks: [{
@@ -1578,13 +1578,13 @@
 			}]
 		}
 		{
-			title: "8x 海带"
+			title: "8x {block.minecraft.kelp}"
 			icon: "minecraft:kelp"
 			disable_toast: true
 			x: 0.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "0AD0AB7FE3DF1E8F"
 			tasks: [{
@@ -1601,13 +1601,13 @@
 			}]
 		}
 		{
-			title: "8x 竹子"
+			title: "8x {block.minecraft.bamboo}"
 			icon: "minecraft:bamboo"
 			disable_toast: true
 			x: 1.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "5 银币"
+			subtitle: "5 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1901F164030D9AF5"
 			tasks: [{
@@ -1624,13 +1624,13 @@
 			}]
 		}
 		{
-			title: "8x 甜浆果"
+			title: "8x {item.minecraft.sweet_berries}"
 			icon: "minecraft:sweet_berries"
 			disable_toast: true
 			x: 2.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "11 银币"
+			subtitle: "11 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5BB7D44FAC3023AB"
 			tasks: [{
@@ -1647,13 +1647,13 @@
 			}]
 		}
 		{
-			title: "4x 藤蔓"
+			title: "4x {block.minecraft.vine}"
 			icon: "minecraft:vine"
 			disable_toast: true
 			x: 3.0d
 			y: 17.0d
 			shape: "hexagon"
-			subtitle: "7 银币"
+			subtitle: "7 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6B84FFD2DF517026"
 			tasks: [{
@@ -1670,13 +1670,13 @@
 			}]
 		}
 		{
-			title: "1x 树木肥料"
+			title: "1x {item.create.tree_fertilizer}"
 			icon: "create:tree_fertilizer"
 			disable_toast: true
 			x: -4.0d
 			y: 18.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "0A4B01C8C65DA6D7"
 			tasks: [{
@@ -1693,13 +1693,13 @@
 			}]
 		}
 		{
-			title: "16x 抹灰"
+			title: "16x {block.supplementaries.daub}"
 			icon: "supplementaries:daub"
 			disable_toast: true
 			x: -4.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "5 银币"
+			subtitle: "5 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "38547A3C14E41316"
@@ -1717,13 +1717,13 @@
 			}]
 		}
 		{
-			title: "16x 通透玻璃"
+			title: "16x {block.tconstruct.clear_glass}"
 			icon: "tconstruct:clear_glass"
 			disable_toast: true
 			x: -3.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "4 银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "6517975C2F73E144"
 			tasks: [{
@@ -1740,13 +1740,13 @@
 			}]
 		}
 		{
-			title: "16x 铜砖块"
+			title: "16x {block.create.copper_shingles}"
 			icon: "create:copper_shingles"
 			disable_toast: true
 			x: -2.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1A2E4E06037E009A"
 			tasks: [{
@@ -1763,13 +1763,13 @@
 			}]
 		}
 		{
-			title: "32x 海藻砖块"
+			title: "32x {block.architects_palette.algal_bricks}"
 			icon: "architects_palette:algal_bricks"
 			disable_toast: true
 			x: -1.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "6 银币"
+			subtitle: "6 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "011F64B48766234B"
 			tasks: [{
@@ -1786,13 +1786,13 @@
 			}]
 		}
 		{
-			title: "32x 橄榄石砖块"
+			title: "32x {block.architects_palette.olivestone_bricks}"
 			icon: "architects_palette:olivestone_bricks"
 			disable_toast: true
 			x: 0.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1369288AF4AA1C54"
 			tasks: [{
@@ -1809,13 +1809,13 @@
 			}]
 		}
 		{
-			title: "32x 耀阳金属块"
+			title: "32x {block.architects_palette.sunmetal_block}"
 			icon: "architects_palette:sunmetal_block"
 			disable_toast: true
 			x: 1.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5AAC971253527990"
 			tasks: [{
@@ -1832,13 +1832,13 @@
 			}]
 		}
 		{
-			title: "32x 金币属板块"
+			title: "32x {block.architects_palette.plating_block}"
 			icon: "architects_palette:plating_block"
 			disable_toast: true
 			x: 2.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "32686E77DC9B6130"
 			tasks: [{
@@ -1855,13 +1855,13 @@
 			}]
 		}
 		{
-			title: "32x 扭曲木板"
+			title: "32x {block.architects_palette.twisted_planks}"
 			icon: "architects_palette:twisted_planks"
 			disable_toast: true
 			x: 3.0d
 			y: 20.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "460E47F0AF64670A"
 			tasks: [{
@@ -1878,13 +1878,13 @@
 			}]
 		}
 		{
-			title: "32x 骨砖"
+			title: "32x {block.architects_palette.osseous_bricks}"
 			icon: "architects_palette:osseous_bricks"
 			disable_toast: true
 			x: -4.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "1BEDDAEBB575FD57"
 			tasks: [{
@@ -1901,13 +1901,13 @@
 			}]
 		}
 		{
-			title: "16x 焦黑石头"
+			title: "16x {block.tconstruct.seared_stone}"
 			icon: "tconstruct:seared_stone"
 			disable_toast: true
 			x: -3.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "296BDAB91E36C9BD"
 			tasks: [{
@@ -1924,13 +1924,13 @@
 			}]
 		}
 		{
-			title: "16x 焦灼石"
+			title: "16x {block.tconstruct.scorched_stone}"
 			icon: "tconstruct:scorched_stone"
 			disable_toast: true
 			x: -2.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "45C2B36EF70C9474"
 			tasks: [{
@@ -1947,13 +1947,13 @@
 			}]
 		}
 		{
-			title: "1x 灯笼"
+			title: "1x {block.minecraft.lantern}"
 			icon: "minecraft:lantern"
 			disable_toast: true
 			x: -1.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "1 银币"
+			subtitle: "1 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5199CE2CA6E2D6E4"
 			tasks: [{
@@ -1970,13 +1970,13 @@
 			}]
 		}
 		{
-			title: "1x 铜灯笼"
+			title: "1x {block.supplementaries.copper_lantern}"
 			icon: "supplementaries:copper_lantern"
 			disable_toast: true
 			x: 0.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "1 银币"
+			subtitle: "1 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3AD056C107685DD4"
 			tasks: [{
@@ -1993,13 +1993,13 @@
 			}]
 		}
 		{
-			title: "1x 黄铜灯笼"
+			title: "1x {block.supplementaries.brass_lantern}"
 			icon: "supplementaries:brass_lantern"
 			disable_toast: true
 			x: 1.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "1 银币"
+			subtitle: "1 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5FC92909B3C27C66"
 			tasks: [{
@@ -2016,13 +2016,13 @@
 			}]
 		}
 		{
-			title: "1x 绯红灯笼"
+			title: "1x {block.supplementaries.crimson_lantern}"
 			icon: "supplementaries:crimson_lantern"
 			disable_toast: true
 			x: 2.0d
 			y: 21.0d
 			shape: "hexagon"
-			subtitle: "1 银币"
+			subtitle: "1 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "466F0C83A8070151"
 			tasks: [{
@@ -2039,13 +2039,13 @@
 			}]
 		}
 		{
-			title: "4x 黏液球"
+			title: "4x {item.minecraft.slime_ball}"
 			icon: "minecraft:slime_ball"
 			disable_toast: true
 			x: -4.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "24 银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "17A42178A07F41BA"
 			tasks: [{
@@ -2062,13 +2062,13 @@
 			}]
 		}
 		{
-			title: "4x 线"
+			title: "4x {item.minecraft.string}"
 			icon: "minecraft:string"
 			disable_toast: true
 			x: -3.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "5 银币"
+			subtitle: "5 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "5BA122717743CCAD"
 			tasks: [{
@@ -2085,13 +2085,13 @@
 			}]
 		}
 		{
-			title: "4x 羽毛"
+			title: "4x {item.minecraft.feather}"
 			icon: "minecraft:feather"
 			disable_toast: true
 			x: -2.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "6 银币"
+			subtitle: "6 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2C6D3E2213E35021"
 			tasks: [{
@@ -2108,13 +2108,13 @@
 			}]
 		}
 		{
-			title: "4x 火药"
+			title: "4x {item.minecraft.gunpowder}"
 			icon: "minecraft:gunpowder"
 			disable_toast: true
 			x: -1.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "7 银币"
+			subtitle: "7 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3594397F81D2F710"
 			tasks: [{
@@ -2131,13 +2131,13 @@
 			}]
 		}
 		{
-			title: "4x 皮革"
+			title: "4x {item.minecraft.leather}"
 			icon: "minecraft:leather"
 			disable_toast: true
 			x: 0.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "0032DBF483D4B69C"
 			tasks: [{
@@ -2154,13 +2154,13 @@
 			}]
 		}
 		{
-			title: "4x 墨囊"
+			title: "4x {item.minecraft.ink_sac}"
 			icon: "minecraft:ink_sac"
 			disable_toast: true
 			x: 1.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "234F96EC1C394A5C"
 			tasks: [{
@@ -2177,13 +2177,13 @@
 			}]
 		}
 		{
-			title: "1x 附魔之瓶"
+			title: "1x {item.minecraft.experience_bottle}"
 			icon: "minecraft:experience_bottle"
 			disable_toast: true
 			x: 2.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "2BC38456ECADE99C"
 			tasks: [{
@@ -2200,13 +2200,13 @@
 			}]
 		}
 		{
-			title: "1x 潜影壳"
+			title: "1x {item.minecraft.shulker_shell}"
 			icon: "minecraft:shulker_shell"
 			disable_toast: true
 			x: 3.0d
 			y: 23.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "2A05322B8AF0C078"
 			tasks: [{
@@ -2223,13 +2223,13 @@
 			}]
 		}
 		{
-			title: "4x 蜘蛛眼"
+			title: "4x {item.minecraft.spider_eye}"
 			icon: "minecraft:spider_eye"
 			disable_toast: true
 			x: -4.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "10 银币"
+			subtitle: "10 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "5D2A341D38465BBB"
@@ -2247,13 +2247,13 @@
 			}]
 		}
 		{
-			title: "1x 末影珍珠"
+			title: "1x {item.minecraft.ender_pearl}"
 			icon: "minecraft:ender_pearl"
 			disable_toast: true
 			x: -3.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "307DC6F9DE8A8609"
 			tasks: [{
@@ -2270,13 +2270,13 @@
 			}]
 		}
 		{
-			title: "4x 腐肉"
+			title: "4x {item.minecraft.rotten_flesh}"
 			icon: "minecraft:rotten_flesh"
 			disable_toast: true
 			x: -2.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "3 银币"
+			subtitle: "3 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "69429F71232BB4FE"
 			tasks: [{
@@ -2293,13 +2293,13 @@
 			}]
 		}
 		{
-			title: "1x 烈焰棒"
+			title: "1x {item.minecraft.blaze_rod}"
 			icon: "minecraft:blaze_rod"
 			disable_toast: true
 			x: -1.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "20 银币"
+			subtitle: "20 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "7327A44EA87DF113"
 			tasks: [{
@@ -2316,13 +2316,13 @@
 			}]
 		}
 		{
-			title: "4x 骨头"
+			title: "4x {item.minecraft.bone}"
 			icon: "minecraft:bone"
 			disable_toast: true
 			x: 0.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "8 银币"
+			subtitle: "8 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "22B42BE49873B295"
 			tasks: [{
@@ -2339,13 +2339,13 @@
 			}]
 		}
 		{
-			title: "4x 海晶碎片"
+			title: "4x {item.minecraft.prismarine_shard}"
 			icon: "minecraft:prismarine_shard"
 			disable_toast: true
 			x: 1.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "4F76C962A107E2DB"
 			tasks: [{
@@ -2362,13 +2362,13 @@
 			}]
 		}
 		{
-			title: "4x 海晶砂粒"
+			title: "4x {item.minecraft.prismarine_crystals}"
 			icon: "minecraft:prismarine_crystals"
 			disable_toast: true
 			x: 2.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "24 银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "60A6B7378E975270"
 			tasks: [{
@@ -2385,13 +2385,13 @@
 			}]
 		}
 		{
-			title: "1x 女巫之帽"
+			title: "1x {item.reliquary.witch_hat_unformatted}"
 			icon: "reliquary:witch_hat"
 			disable_toast: true
 			x: 3.0d
 			y: 24.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "6DB175AFFCA417E7"
 			tasks: [{
@@ -2408,13 +2408,13 @@
 			}]
 		}
 		{
-			title: "1x 僵尸之心"
+			title: "1x {item.reliquary.zombie_heart}"
 			icon: "reliquary:zombie_heart"
 			disable_toast: true
 			x: -4.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			dependency_requirement: "all_started"
 			can_repeat: true
 			id: "66B5619CEF7053CC"
@@ -2432,13 +2432,13 @@
 			}]
 		}
 		{
-			title: "1x 鱿鱼嘴"
+			title: "1x {item.reliquary.squid_beak}"
 			icon: "reliquary:squid_beak"
 			disable_toast: true
 			x: -3.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3700B8EF527A77FC"
 			tasks: [{
@@ -2455,13 +2455,13 @@
 			}]
 		}
 		{
-			title: "1x 肋骨"
+			title: "1x {item.reliquary.rib_bone}"
 			icon: "reliquary:rib_bone"
 			disable_toast: true
 			x: -2.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3CFC888AF2F969E6"
 			tasks: [{
@@ -2478,13 +2478,13 @@
 			}]
 		}
 		{
-			title: "1x 酶腺"
+			title: "1x {item.reliquary.catalyzing_gland}"
 			icon: "reliquary:catalyzing_gland"
 			disable_toast: true
 			x: -1.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "30C5031938C0661D"
 			tasks: [{
@@ -2501,13 +2501,13 @@
 			}]
 		}
 		{
-			title: "1x 螯角"
+			title: "1x {item.reliquary.chelicerae}"
 			icon: "reliquary:chelicerae"
 			disable_toast: true
 			x: 0.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "32 银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "3537A77A8BE91138"
 			tasks: [{
@@ -2524,13 +2524,13 @@
 			}]
 		}
 		{
-			title: "1x 黏液珍珠"
+			title: "1x {item.reliquary.slime_pearl}"
 			icon: "reliquary:slime_pearl"
 			disable_toast: true
 			x: 1.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "162EB465FC0E1092"
 			tasks: [{
@@ -2547,13 +2547,13 @@
 			}]
 		}
 		{
-			title: "1x 蝙蝠翅膀"
+			title: "1x {item.reliquary.bat_wing}"
 			icon: "reliquary:bat_wing"
 			disable_toast: true
 			x: 2.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "2CD60FEE35148824"
 			tasks: [{
@@ -2570,13 +2570,13 @@
 			}]
 		}
 		{
-			title: "1x 调灵肋骨"
+			title: "1x {item.reliquary.withered_rib}"
 			icon: "reliquary:withered_rib"
 			disable_toast: true
 			x: 3.0d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "36E552AEE9583F23"
 			tasks: [{
@@ -2593,13 +2593,13 @@
 			}]
 		}
 		{
-			title: "1x 熔火之心"
+			title: "1x {item.reliquary.molten_core}"
 			icon: "reliquary:molten_core"
 			disable_toast: true
 			x: -4.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "31724BB8485088AF"
 			tasks: [{
@@ -2616,13 +2616,13 @@
 			}]
 		}
 		{
-			title: "1x 风暴之眼"
+			title: "1x {item.reliquary.eye_of_the_storm}"
 			icon: "reliquary:eye_of_the_storm"
 			disable_toast: true
 			x: -3.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "7332DE914CBB2BC6"
 			tasks: [{
@@ -2639,13 +2639,13 @@
 			}]
 		}
 		{
-			title: "1x 霜冻核心"
+			title: "1x {item.reliquary.frozen_core}"
 			icon: "reliquary:frozen_core"
 			disable_toast: true
 			x: -2.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "4D17346C248B64B5"
 			tasks: [{
@@ -2662,13 +2662,13 @@
 			}]
 		}
 		{
-			title: "1x 朦胧之心"
+			title: "1x {item.reliquary.nebulous_heart}"
 			icon: "reliquary:nebulous_heart"
 			disable_toast: true
 			x: -1.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "7052D91E9290C14F"
 			tasks: [{
@@ -2696,13 +2696,13 @@
 			]
 		}
 		{
-			title: "1x 守卫者之刺"
+			title: "1x {item.reliquary.guardian_spike}"
 			icon: "reliquary:guardian_spike"
 			disable_toast: true
 			x: 0.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "1 金币"
+			subtitle: "1 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "79C7E774424ADBF6"
 			tasks: [{
@@ -2719,13 +2719,13 @@
 			}]
 		}
 		{
-			title: "1x 幻翼膜"
+			title: "1x {item.minecraft.phantom_membrane}"
 			icon: "minecraft:phantom_membrane"
 			disable_toast: true
 			x: 1.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "48 银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "24CFA1C9DE4F0341"
 			tasks: [{
@@ -2742,13 +2742,13 @@
 			}]
 		}
 		{
-			title: "1x 烈焰蛋糕"
+			title: "1x {item.create.blaze_cake}"
 			icon: "create:blaze_cake"
 			disable_toast: true
 			x: 2.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "16 银币"
+			subtitle: "16 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "02B2E34913F16409"
 			tasks: [{
@@ -2770,7 +2770,7 @@
 			x: -2.5d
 			y: 13.25d
 			shape: "circle"
-			subtitle: "30 银币"
+			subtitle: "30 {item.thermal.silver_coin}"
 			description: [
 				"达到黄铜阶段需要做出很多努力！"
 				""
@@ -2801,12 +2801,13 @@
 			]
 		}
 		{
-			title: "8x 锡锭"
+			title: "8x {item.thermal.tin_ingot}"
 			icon: "create_dd:tin_ingot"
 			disable_toast: true
 			x: -2.0d
 			y: 7.0d
 			shape: "hexagon"
+			subtitle: "48 {item.thermal.silver_coin}"
 			can_repeat: true
 			id: "068932DFF2A98AE1"
 			tasks: [{

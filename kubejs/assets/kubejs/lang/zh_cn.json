@@ -372,5 +372,129 @@
 "item.kubejs.trade_card_phantom_membrane":"§6产品铭牌：§r幻翼膜",
 "item.kubejs.trade_card_blaze_cake":"§6产品铭牌：§r烈焰蛋糕",
 
-"tip.kubejs.repeatable":"可重复"
+"tip.kubejs.repeatable":"可重复",
+"item.reliquary.witch_hat_unformatted":"女巫之帽",
+
+"quest.chaptergroup.tools.name":"&f&l 工具箱",
+"quest.chaptergroup.tech_tree.name":"&f&l 科技树",
+
+"quest.chapter.welcome.name":"&8 向着星辰与深渊",
+"quest.chapter.thanks.name":"&8 特别感谢",
+"quest.chapter.bulletin.name":"&a▶ 公告栏",
+"quest.chapter.market.name":"&a▶ 市场",
+"quest.chapter.logistics_center.name":"&a▶ 物流中心",
+"quest.chapter.utilities.name":"▶ 护肝员",
+"quest.chapter.metallurgy.name":"▶ 冶金",
+"quest.chapter.smithing.name":"▶ 锻造",
+"quest.chapter.overview.name":"&a▶ 纵览",
+"quest.chapter.challenges.name":"&d▶ 挑战",
+"quest.chapter.stage_1.name":"&f&l1&r 扬帆起航",
+"quest.chapter.stage_2.name":"&f&l2&r 初入门道",
+"quest.chapter.stage_3.name":"&f&l3&r 异彩净化",
+"quest.chapter.stage_4.name":"&f&l4&r 进入盒子",
+"quest.chapter.stage_4a.name":"&f&l4a&r 混沌炼金",
+"quest.chapter.stage_5.name":"&f&l5&r 简单运算",
+
+"quest.welcome.introduce.title":"&f&l无限潜能",
+"quest.welcome.introduce.subtitle":"一路顺风",
+"quest.welcome.introduce.text1":"这是为你准备的世界。我们希望你能徜徉在机械动力等模组的无限可能中，更希望你能玩得开心！",
+"quest.welcome.introduce.text2":"&7尽情挥洒创意吧！The World Awaits!          &o（整个世界都将为你敞开！）&r",
+
+"quest.welcome.about_quests.title":"&f&l按需供应",
+"quest.welcome.about_quests.subtitle":"图灵测试",
+"quest.welcome.about_quests.text1":"任务系统可以帮助你使用&3交易&r模组和&6科技线&r模组对你的工厂进行深度定制。",
+"quest.welcome.about_quests.text2":"当然，这完全不是必要的——你可以随意创造和发挥，但任务系统也许能在你每次迷失的时候将你拉回正轨，并给你些小奖励。",
+
+"quest.welcome.first.title":"&f&l壹",
+"quest.welcome.first.subtitle":"简介",
+"quest.welcome.first.text1":"世界天翻地覆！准备创造最完美的机械工厂吧！",
+"quest.welcome.first.text2":"&7如果你没有足够的勇气的话，不要冲太快。",
+
+"quest.welcome.second.title":"&f&l贰",
+"quest.welcome.second.subtitle":"有志者事竟成",
+"quest.welcome.second.text1":"走向深空的路上，有几近半百的全新发明等着你。",
+"quest.welcome.second.text2":"你将会解锁成千上万用途各异的零件，并需要把它们组装成精密而又庞大的机器。不要害怕失败，否则你将一事无成。",
+"quest.welcome.second.text3":"&7你也可以成为工业革命的先驱！",
+
+"quest.welcome.second.title":"&f&l叁",
+"quest.welcome.second.subtitle":"技术爆炸",
+"quest.welcome.second.text1":"你的工厂将会制造出精密的智能构件并组装出惊人的航天器，一飞冲天！",
+"quest.welcome.second.text2":"每个人的每一步都会是不同的，但它们同样重要。如果你恰好有个优秀的世界生成种子，有些事可能会事半功倍！",
+"quest.welcome.second.text3":"&7尽兴的同时也要保持自信。",
+
+"quest.welcome.forth.title":"&f&l肆",
+"quest.welcome.forth.subtitle":"换种口味",
+"quest.welcome.forth.text1":"不想总被死板的科技束缚？",
+"quest.welcome.forth.text2":"在这里，你还可以通过完成任务募集资金，还可以寻求其他玩家的帮助。",
+"quest.welcome.forth.text3":"你获得的银币可以在&6市集&r购买许多东西，例如资源、特殊物品和建筑方块...也许合理使用它们能加快进度！",
+
+"quest.welcome.quest_overview.title":"&6&l任务内容",
+"quest.welcome.quest_overview.text1":"&5&l「成就」&r     不断地达成&5成就&r可以振奋人心！",
+"quest.welcome.quest_overview.text2":"&5这些成就和Minecraft的进度不太一样。他们会更加困难，也更加...奇怪。",
+"quest.welcome.quest_overview.text3":"&6&l「市集」&r     你可以在&6市集&r购物。",
+"quest.welcome.quest_overview.text4":"&6就和逛商场一样，不过我们包邮。",
+"quest.welcome.quest_overview.text5":"&7&l「科技树」&r   &7科技树&r会指导你一步步发展科技。",
+"quest.welcome.quest_overview.text6":"&7这里的所有任务都为你整理好了，保证考虑周全。随着你对这个世界的探索脚步不断前进，你会解锁更多有趣的任务和成就。&8&m当然，还有隐藏任务。&r&7不过你不必被限制在条框中，自由发挥才是真正的乐趣所在！",
+
+"quest.welcome.start.title":"&f&l走你！",
+"quest.welcome.start.text1":"现在你对你的任务目标有了清楚的了解。从这里你将开始你全新的征程，祝好运！记得时常备份！",
+
+"quest.thanks.list.title":"&l&c感&a谢&b游&f玩！",
+"quest.thanks.list.subtitle":"&l&n制作人员表",
+"quest.thanks.list.text1":"&7原著   &fSimibubi，&fYjn024",
+"quest.thanks.list.text2":"&7编著   &fKeyBoardManDesu，Gl0w1amp",
+"quest.thanks.list.text3":"&9&l&o这个整合包没有结束，现在，创造你想创造的吧！",
+
+"quest.bulletin.introduce.title":"公告栏",
+"quest.bulletin.introduce.text1":"&6公告栏&r 提供了获取交易用货币的方式。",
+"quest.bulletin.introduce.text2":"在那里，你可以完成各种任务，或购买一张职业许可证在交易机里获取货币。",
+
+"quest.bulletin.profession.title":"职业",
+"quest.bulletin.profession.text1":"从事某一&6职业&r可以为你提供稳定的收入来源。",
+"quest.bulletin.profession.text2":"在这里购买的职业卡片可以起到\"许可证\"的作用。它们能做的就是在交易站中解锁相应的配方。你可以从事很多个职业。",
+
+"quest.bulletin.farming.title":"农民",
+"quest.bulletin.farming.text1":"售卖&6作物&f, &6花&f, &6蜂蜜&f和各种农场相关的物品。",
+
+"quest.bulletin.carpentry.title":"木匠",
+"quest.bulletin.carpentry.text1":"售卖各种&6原木&f，拥有木匠许可。",
+
+"quest.bulletin.mining.title":"矿工",
+"quest.bulletin.mining.text1":"售卖&6火成岩&f、&6金属矿石&f、&6宝石&f和各种矿工许可相关的物品。",
+
+"quest.bulletin.hunting.title":"猎人",
+"quest.bulletin.hunting.text1":"售卖所有&6怪物掉落物&f，拥有猎人许可。",
+
+"quest.bulletin.chef.title":"厨师",
+"quest.bulletin.chef.text1":"售卖&6处理好的食物&f，拥有厨师许可。",
+
+"quest.bulletin.fishing.title":"渔夫",
+"quest.bulletin.fishing.text1":"售卖&6鱼&f和地下&6宝藏&f，拥有渔夫许可。",
+
+"quest.bulletin.masonry.title":"石匠",
+"quest.bulletin.masonry.text1":"售卖大量&6建筑方块&f ，拥有石匠许可。",
+
+"quest.bulletin.smithing.title":"铁匠",
+"quest.bulletin.smithing.text1":"售卖&6工具&f、&6护甲&f 等铁匠许可相关的物品。",
+
+"quest.bulletin.kill_pillager.title":"&7&l复仇",
+"quest.bulletin.kill_pillager.text1":"击败入侵者，你就会获得附近村庄的帮助。",
+
+"quest.bulletin.collect_fossil.title":"&7&l原始人，起洞！",
+
+"quest.bulletin.bred_animals.title":"&7&l牧场",
+"quest.bulletin.bred_animals.target1":"繁殖10次动物",
+
+"quest.bulletin.mysterious_button.title":"&7&l神秘按钮",
+"quest.bulletin.mysterious_button.target1":"按下按钮",
+"quest.bulletin.mysterious_button.text1":"按下这个按钮，&6你将获得 64 银币&f，但是其中 60 银币将用于支付其运输费用",
+
+"quest.bulletin.collect_crops.title":"&7&l作物收集",
+"quest.bulletin.collect_more_crops.title":"&7&l丰富的作物收集",
+
+"quest.bulletin.build_time.title":"&7&l基建狂魔",
+"quest.bulletin.build_time.subtitle":"大兴土木！",
+
+"quest.bulletin.neptunium_armor.title":"&b&l谁才是海王？",
+"quest.bulletin.neptunium_armor.text1":"集齐海王套装。"
 }
