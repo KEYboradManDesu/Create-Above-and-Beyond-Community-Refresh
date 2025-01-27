@@ -3,7 +3,7 @@
 	group: ""
 	order_index: 1
 	filename: "thanks"
-	title: "&8 特别感谢"
+	title: "{quest.chapter.thanks.name}"
 	icon: {
 		id: "minecraft:writable_book"
 		Count: 1b
@@ -17,15 +17,15 @@
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [{
-		title: "&l&c感&a谢&b游&f玩！"
+		title: "{quest.thanks.list.title}"
 		x: -9.0d
 		y: -7.0d
 		shape: "circle"
-		subtitle: "&l&n制作人员表"
+		subtitle: "{quest.thanks.list.subtitle}"
 		description: [
-			"&7原著   &fSimibubi，&fYjn024"
-			"&7编著   &fKeyBoardManDesu，Gl0w1amp"
-			"&9&l&o这个整合包没有结束，现在，创造你想创造的吧！"
+			"{quest.thanks.list.text1}"
+			"{quest.thanks.list.text2}"
+			"{quest.thanks.list.text3}"
 		]
 		dependencies: ["7494ABC1DCFC7F69"]
 		hide: true

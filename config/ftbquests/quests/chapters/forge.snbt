@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 5
 	filename: "forge"
-	title: "▶ 锻造"
+	title: "{quest.chapter.smithing.name}"
 	icon: "create:brass_ingot"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false

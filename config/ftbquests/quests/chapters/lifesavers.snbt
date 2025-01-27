@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 3
 	filename: "lifesavers"
-	title: "▶ 护肝员"
+	title: "{quest.chapter.utilities.name}"
 	icon: "minecraft:totem_of_undying"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false

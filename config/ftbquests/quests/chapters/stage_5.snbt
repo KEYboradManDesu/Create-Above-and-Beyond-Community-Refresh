@@ -3,7 +3,7 @@
 	group: "331B6409EF6A7840"
 	order_index: 7
 	filename: "stage_5"
-	title: "&f&l5&r 简单运算"
+	title: "{quest.chapter.stage_5.name}"
 	icon: "kubejs:computation_matrix"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false

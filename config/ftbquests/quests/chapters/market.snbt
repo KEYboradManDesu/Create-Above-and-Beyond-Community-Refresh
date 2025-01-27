@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 1
 	filename: "market"
-	title: "&a▶ 市场"
+	title: "{quest.chapter.market.name}"
 	icon: "minecraft:chest"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -13,7 +13,7 @@
 			icon: "minecraft:cyan_bed"
 			x: -9.5d
 			y: -1.5d
-			subtitle: "10银币"
+			subtitle: "10 {item.thermal.silver_coin}"
 			description: ["这是你的住所，日落之前就得准备好。"]
 			id: "5D17CB247942013A"
 			tasks: [{
@@ -51,7 +51,7 @@
 			}
 			x: -8.5d
 			y: -6.5d
-			subtitle: "2金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			description: ["购买这个小工具来让制作&6动力构件&r的工具消耗降到最低。"]
 			hide_dependency_lines: true
 			can_repeat: true
@@ -120,7 +120,7 @@
 			}
 			x: -7.0d
 			y: -6.5d
-			subtitle: "2金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			description: ["购买这个小工具来让制作&6精密构件&r的工具消耗降到最低。"]
 			can_repeat: true
 			id: "72CACE8F0E4701B1"
@@ -181,7 +181,7 @@
 			}
 			x: -5.0d
 			y: -6.5d
-			subtitle: "3金币"
+			subtitle: "3 {item.thermal.gold_coin}"
 			description: ["购买这个小工具来让制作&6感应构件&r的工具消耗降到最低。"]
 			can_repeat: true
 			id: "43FC566E833BE834"
@@ -251,7 +251,7 @@
 			x: -4.0d
 			y: -4.0d
 			shape: "circle"
-			subtitle: "金币 -> 银币"
+			subtitle: "{item.thermal.gold_coin} -> {item.thermal.silver_coin}"
 			description: ["你可以在这里将金币换回成1组银币。"]
 			dependencies: ["0F870BEA235D662D"]
 			can_repeat: true
@@ -277,7 +277,7 @@
 			x: -8.0d
 			y: -4.0d
 			shape: "circle"
-			subtitle: "银币 -> 金币"
+			subtitle: "{item.thermal.silver_coin} -> {item.thermal.gold_coin}"
 			description: ["有一些交易需要金币，每个金币都等于1组银币。"]
 			dependencies: ["0F870BEA235D662D"]
 			can_repeat: true
@@ -301,7 +301,7 @@
 			icon: "farmersdelight:steak_and_potatoes"
 			x: -8.0d
 			y: -2.0d
-			subtitle: "10银币"
+			subtitle: "10 {item.thermal.silver_coin}"
 			description: ["有时候你需要给自己和你的伙伴一顿好吃的。"]
 			id: "09DC2E2BE2BE32F4"
 			tasks: [{
@@ -350,7 +350,7 @@
 			icon: "minecraft:dirt"
 			x: -6.0d
 			y: 0.0d
-			subtitle: "15银币"
+			subtitle: "15 {item.thermal.silver_coin}"
 			description: ["你可以尽早买一些泥土作为你的地基。"]
 			id: "4B01606CE7AF3121"
 			tasks: [{
@@ -395,7 +395,7 @@
 			}
 			x: -9.0d
 			y: 0.0d
-			subtitle: "50银币"
+			subtitle: "50 {item.thermal.silver_coin}"
 			description: ["这个神秘的东西给你了一个看似无穷无尽的深度的谜盒。作为专家的你知道这一定是有限的，但什么在最底下呆着呢？"]
 			id: "09EA580B3D32FEEB"
 			tasks: [{
@@ -522,7 +522,7 @@
 			icon: "minecraft:shulker_box"
 			x: -4.5d
 			y: -0.5d
-			subtitle: "55银币"
+			subtitle: "55 {item.thermal.silver_coin}"
 			description: ["它像个背包，但很漂亮。"]
 			id: "4FD46F841CCD59F8"
 			tasks: [{
@@ -561,7 +561,7 @@
 			}
 			x: -2.5d
 			y: 1.5d
-			subtitle: "25 银币"
+			subtitle: "25 {item.thermal.silver_coin}"
 			description: ["“我在一间路旁被遗弃的作坊里找到了这个，你想要买它吗？”"]
 			id: "0CCF34BF1C5829AE"
 			tasks: [{
@@ -595,7 +595,7 @@
 			icon: "minecraft:totem_of_undying"
 			x: -3.0d
 			y: 0.0d
-			subtitle: "60银币"
+			subtitle: "60 {item.thermal.silver_coin}"
 			id: "6D9F2FBEB7CC5195"
 			tasks: [{
 				id: "165B9A886A26BCC8"
@@ -656,7 +656,7 @@
 			}
 			x: -3.5d
 			y: -6.5d
-			subtitle: "4金币"
+			subtitle: "4 {item.thermal.gold_coin}"
 			description: ["购买这个小工具来让制作&6运算构件&r的工具消耗降到最低。"]
 			can_repeat: true
 			id: "00D6DD6AE8E3C014"
@@ -707,7 +707,7 @@
 			icon: "ae2:silicon_press"
 			x: -1.0d
 			y: 2.0d
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			description: ["真正的信息专家不会出去很长时间，但还好必要的电脑部件可以在这里直接购买到你的背包里！"]
 			id: "4BAC95CCC72369AD"
 			tasks: [{
@@ -729,7 +729,7 @@
 			icon: "buddycards:buddycard_pack_mystery"
 			x: 0.5d
 			y: 1.5d
-			subtitle: "2 金币"
+			subtitle: "2 {item.thermal.gold_coin}"
 			description: ["集卡的乐趣。"]
 			can_repeat: true
 			id: "093FB7B7FEC6B886"
@@ -752,7 +752,7 @@
 			icon: "thermal:explosive_grenade"
 			x: -12.5d
 			y: -1.5d
-			subtitle: "32银币"
+			subtitle: "32 {item.thermal.silver_coin}"
 			description: ["一个热力膨胀武器小测试。"]
 			id: "1CC29991D5F248CA"
 			tasks: [{
@@ -794,7 +794,7 @@
 			icon: "biomesoplenty:glowflower"
 			x: -2.5d
 			y: -1.5d
-			subtitle: "24银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			description: ["做好除虫。"]
 			id: "42384DE39AA48976"
 			tasks: [{
@@ -842,7 +842,7 @@
 			icon: "minecraft:painting"
 			x: -9.5d
 			y: 1.5d
-			subtitle: "24银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			id: "61B040CD0832EFC0"
 			tasks: [{
 				id: "6404722100F1DEF7"
@@ -907,7 +907,7 @@
 			icon: "minecraft:minecart"
 			x: -11.0d
 			y: 2.0d
-			subtitle: "24银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			id: "117587D824D23D69"
 			tasks: [{
 				id: "06C835DB602D6F9F"
@@ -948,7 +948,7 @@
 			icon: "minecraft:tropical_fish"
 			x: -13.0d
 			y: 0.0d
-			subtitle: "24银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			id: "2D75D1864FB1EF75"
 			tasks: [{
 				id: "3AA788B63B6A73EF"
@@ -994,7 +994,7 @@
 			icon: "minecraft:oak_leaves"
 			x: 1.0d
 			y: 0.0d
-			subtitle: "24 银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			description: ["对你的建筑外表不满意？没关系，树叶解决一切！"]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
@@ -1048,7 +1048,7 @@
 			icon: "minecraft:bee_nest"
 			x: -1.0d
 			y: -2.0d
-			subtitle: "48银币"
+			subtitle: "48 {item.thermal.silver_coin}"
 			description: ["嗡-嗡嗡-嗡"]
 			id: "003E0D1CE60B166A"
 			tasks: [
@@ -1093,7 +1093,7 @@
 			icon: "minecraft:oak_sapling"
 			x: -11.0d
 			y: -2.0d
-			subtitle: "4银币"
+			subtitle: "4 {item.thermal.silver_coin}"
 			description: ["树苗盲盒，涵盖了这个世界的大部分树苗。"]
 			id: "7760D0FCCFCE2C6B"
 			tasks: [{
@@ -1114,7 +1114,7 @@
 			icon: "create:blaze_burner"
 			x: -7.5d
 			y: 1.0d
-			subtitle: "24银币"
+			subtitle: "24 {item.thermal.silver_coin}"
 			description: ["应该没人愿意在下界到处晃荡吧？这个小玩意可以帮助你快速找到下界要塞。"]
 			id: "3B408BE68E229FD2"
 			tasks: [{
