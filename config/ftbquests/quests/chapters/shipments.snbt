@@ -9,15 +9,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&f&l物流中心"
+			title: "{quest.logistics_center.introduce.title}"
 			icon: "thermal:machine_press"
 			x: -0.5d
 			y: 13.25d
 			shape: "hexagon"
 			description: [
-				"&6交易列表&r是一个自动使用货币兑换资源的场所。你可以在这里买到交易机上使用的兑换卡。&6交易列表&r是一个自动使用货币兑换资源的场所。你可以在这里买到交易机上使用的兑换卡。"
+				"{quest.logistics_center.introduce.text1}"
 				""
-				"兑换卡需要先支付一点钱，但是当你获得了兑换卡你就可以无限使用钱币兑换你需要的物品了！"
+				"{quest.logistics_center.introduce.text2}"
 			]
 			size: 2.0d
 			id: "6AC1CED0D341150E"
@@ -28,13 +28,13 @@
 			}]
 		}
 		{
-			title: "自动交换"
+			title: "{quest.logistics_center.exchange.title}"
 			icon: { id: "thermal:gold_coin", Count: 2b }
 			x: 1.5d
 			y: 13.25d
 			shape: "circle"
 			subtitle: "{item.thermal.silver_coin} <> {item.thermal.gold_coin}"
-			description: ["这个交易卡可以让你的交易机自动转换你放入的货币。"]
+			description: ["{quest.logistics_center.exchange.text1}"]
 			dependencies: ["6AC1CED0D341150E"]
 			can_repeat: true
 			id: "3B548F2C060C2229"
@@ -2765,16 +2765,16 @@
 			}]
 		}
 		{
-			title: "早期贸易"
+			title: "{quest.logistics_center.trader.title}"
 			icon: "thermal:machine_press"
 			x: -2.5d
 			y: 13.25d
 			shape: "circle"
 			subtitle: "30 {item.thermal.silver_coin}"
 			description: [
-				"达到黄铜阶段需要做出很多努力！"
+				"{quest.logistics_center.trader.text1}"
 				""
-				"热心的交易员都会先来这里买一个交易机，这个机器可能会帮助你摆脱困境！"
+				"{quest.logistics_center.trader.text2}"
 			]
 			dependencies: ["6AC1CED0D341150E"]
 			id: "4DFE4FD3B504AF4B"

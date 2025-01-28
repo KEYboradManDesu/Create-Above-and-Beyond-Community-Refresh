@@ -10,15 +10,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "制作矿石处理工厂："
+			title: "{quest.metallurgy.introduce.title}"
 			icon: "minecraft:raw_gold"
 			x: -9.0d
 			y: -4.0d
 			shape: "circle"
 			description: [
-				"一个关于大部分矿物从原矿到锭的处理导图。"
+				"{quest.metallurgy.introduce.text1}"
 				""
-				"每个原矿的处理效率由每一步比值的乘积决定。"
+				"{quest.metallurgy.introduce.text2}"
 			]
 			id: "6B03056FA21424C0"
 			tasks: [{
@@ -27,7 +27,7 @@
 			}]
 		}
 		{
-			title: "挖掘工具"
+			title: "{quest.metallurgy.mining.title}"
 			icon: {
 				id: "minecraft:iron_pickaxe"
 				Count: 1b
@@ -46,7 +46,7 @@
 			}]
 		}
 		{
-			title: "I：粉碎"
+			title: "{quest.metallurgy.crushed_ore.title}"
 			icon: "create:crushed_raw_gold"
 			x: -9.0d
 			y: -2.0d
@@ -63,7 +63,7 @@
 			}]
 		}
 		{
-			title: "时运"
+			title: "{quest.metallurgy.fortune.title}"
 			icon: {
 				id: "minecraft:golden_pickaxe"
 				Count: 1b
@@ -86,7 +86,7 @@
 			}]
 		}
 		{
-			title: "磨粉"
+			title: "{quest.metallurgy.pulverizing.title}"
 			icon: "thermal:machine_pulverizer"
 			x: -3.0d
 			y: -1.0d
@@ -99,7 +99,7 @@
 			}]
 		}
 		{
-			title: "II：粉"
+			title: "{quest.metallurgy.dust.title}"
 			icon: "thermal:gold_dust"
 			x: -9.0d
 			y: 0.0d
@@ -117,7 +117,7 @@
 			}]
 		}
 		{
-			title: "IIIb：熔融金属"
+			title: "{quest.metallurgy.molten_metal.title}"
 			icon: "tconstruct:molten_gold_bucket"
 			x: -8.5d
 			y: 2.0d
@@ -136,7 +136,7 @@
 			}]
 		}
 		{
-			title: "IIIa：粒"
+			title: "{quest.metallurgy.nugget.title}"
 			icon: "minecraft:gold_nugget"
 			x: -9.5d
 			y: 2.0d
@@ -156,7 +156,7 @@
 			}]
 		}
 		{
-			title: "熔炼"
+			title: "{quest.metallurgy.smelting.title}"
 			icon: "minecraft:furnace"
 			x: -11.0d
 			y: -1.0d
@@ -169,7 +169,7 @@
 			}]
 		}
 		{
-			title: "粉碎"
+			title: "{quest.metallurgy.crushing.title}"
 			icon: "create:crushing_wheel"
 			x: -5.0d
 			y: -1.0d
@@ -182,7 +182,7 @@
 			}]
 		}
 		{
-			title: "研磨"
+			title: "{quest.metallurgy.milling.title}"
 			icon: "create:millstone"
 			x: -7.0d
 			y: -1.0d
@@ -195,7 +195,7 @@
 			}]
 		}
 		{
-			title: "超级加热搅拌"
+			title: "{quest.metallurgy.heated_mixing.title}"
 			icon: "create:mechanical_mixer"
 			x: -3.0d
 			y: 1.0d
@@ -209,7 +209,7 @@
 			}]
 		}
 		{
-			title: "动力压缩"
+			title: "{quest.metallurgy.machine_compressing.title}"
 			icon: "create:mechanical_press"
 			x: -11.0d
 			y: 3.0d
@@ -222,7 +222,7 @@
 			}]
 		}
 		{
-			title: "感应熔炼"
+			title: "{quest.metallurgy.machine_smelting.title}"
 			icon: "thermal:machine_smelter"
 			x: -13.0d
 			y: -1.0d
@@ -236,7 +236,7 @@
 			}]
 		}
 		{
-			title: "熔化"
+			title: "{quest.metallurgy.melting.title}"
 			icon: "tconstruct:smeltery_controller"
 			x: -7.0d
 			y: 1.0d
@@ -249,7 +249,7 @@
 			}]
 		}
 		{
-			title: "IV：锭"
+			title: "{quest.metallurgy.ingot.title}"
 			icon: "minecraft:gold_ingot"
 			x: -9.0d
 			y: 4.0d
@@ -267,7 +267,7 @@
 			}]
 		}
 		{
-			title: "浇筑成锭"
+			title: "{quest.metallurgy.casting.title}"
 			icon: "tconstruct:seared_table"
 			x: -7.0d
 			y: 3.0d
@@ -280,7 +280,7 @@
 			}]
 		}
 		{
-			title: "抽屉压缩"
+			title: "{quest.metallurgy.drawer_compressing.title}"
 			icon: "storagedrawers:compacting_drawers_3"
 			x: -13.0d
 			y: 3.0d
@@ -293,7 +293,7 @@
 			}]
 		}
 		{
-			title: "熔炼粉末"
+			title: "{quest.metallurgy.smelting.title}"
 			icon: "minecraft:furnace"
 			x: -13.0d
 			y: 1.0d
@@ -306,7 +306,7 @@
 			}]
 		}
 		{
-			title: "洗涤"
+			title: "{quest.metallurgy.splashing.title}"
 			icon: "create:encased_fan"
 			x: -15.0d
 			y: 1.0d
@@ -319,7 +319,7 @@
 			}]
 		}
 		{
-			title: "熔铸炉熔化"
+			title: "{quest.metallurgy.advanced_melting.title}"
 			icon: "tconstruct:foundry_controller"
 			x: -5.0d
 			y: 1.0d
@@ -332,6 +332,7 @@
 			}]
 		}
 		{
+			title: "{quest.metallurgy.blasting.title}"
 			icon: "minecraft:blast_furnace"
 			x: -11.0d
 			y: 1.0d

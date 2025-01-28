@@ -297,12 +297,12 @@
 			}]
 		}
 		{
-			title: "共进晚餐"
+			title: "{quest.market.feast.title}"
 			icon: "farmersdelight:steak_and_potatoes"
 			x: -8.0d
 			y: -2.0d
 			subtitle: "10 {item.thermal.silver_coin}"
-			description: ["有时候你需要给自己和你的伙伴一顿好吃的。"]
+			description: ["{quest.market.feast.text1}"]
 			id: "09DC2E2BE2BE32F4"
 			tasks: [{
 				id: "6235F365D702DF2B"
@@ -346,12 +346,12 @@
 			]
 		}
 		{
-			title: "地基建造"
+			title: "{quest.market.dirt.title}"
 			icon: "minecraft:dirt"
 			x: -6.0d
 			y: 0.0d
 			subtitle: "15 {item.thermal.silver_coin}"
-			description: ["你可以尽早买一些泥土作为你的地基。"]
+			description: ["{quest.market.dirt.text1}"]
 			id: "4B01606CE7AF3121"
 			tasks: [{
 				id: "188BEC2BA245DB13"
@@ -518,12 +518,12 @@
 			}]
 		}
 		{
-			title: "末影背包"
+			title: "{quest.market.shulker_box.title}"
 			icon: "minecraft:shulker_box"
 			x: -4.5d
 			y: -0.5d
 			subtitle: "55 {item.thermal.silver_coin}"
-			description: ["它像个背包，但很漂亮。"]
+			description: ["{quest.market.shulker_box.text1}"]
 			id: "4FD46F841CCD59F8"
 			tasks: [{
 				id: "709557A517B0143F"
@@ -551,7 +551,7 @@
 			]
 		}
 		{
-			title: "工具箱"
+			title: "{quest.market.tinker_box.title}"
 			icon: {
 				id: "tconstruct:creative_slot"
 				Count: 1b
@@ -562,7 +562,7 @@
 			x: -2.5d
 			y: 1.5d
 			subtitle: "25 {item.thermal.silver_coin}"
-			description: ["“我在一间路旁被遗弃的作坊里找到了这个，你想要买它吗？”"]
+			description: ["{quest.market.tinker_box.text1}"]
 			id: "0CCF34BF1C5829AE"
 			tasks: [{
 				id: "32ACF7B1C0BD9D97"
@@ -591,7 +591,7 @@
 			}]
 		}
 		{
-			title: "奖命！"
+			title: "{quest.market.totem_of_undying.title}"
 			icon: "minecraft:totem_of_undying"
 			x: -3.0d
 			y: 0.0d
@@ -611,12 +611,12 @@
 			}]
 		}
 		{
-			title: "生物在哪里？"
+			title: "{quest.market.haunted_bell.title}"
 			icon: "create:haunted_bell"
 			x: -4.0d
 			y: 2.0d
 			subtitle: "45银币"
-			description: ["正如介绍所说：这个有魔力的钟可以探测周围光照不足的地方。交易含有可以让钟被诅咒的营火，真是赚到了！"]
+			description: ["{quest.market.haunted_bell.text1}"]
 			id: "4B52A04818075900"
 			tasks: [{
 				id: "4FB1B4787D648565"
@@ -703,12 +703,12 @@
 			}]
 		}
 		{
-			title: "模板压印"
+			title: "{quest.market.circuit_scrap.title}"
 			icon: "ae2:silicon_press"
 			x: -1.0d
 			y: 2.0d
 			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["真正的信息专家不会出去很长时间，但还好必要的电脑部件可以在这里直接购买到你的背包里！"]
+			description: ["{quest.market.circuit_scrap.text1}"]
 			id: "4BAC95CCC72369AD"
 			tasks: [{
 				id: "3D328A6D69E64EDA"
@@ -725,12 +725,12 @@
 			}]
 		}
 		{
-			title: "昂贵的兴趣"
+			title: "{quest.market.buddycard.title}"
 			icon: "buddycards:buddycard_pack_mystery"
 			x: 0.5d
 			y: 1.5d
 			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["集卡的乐趣。"]
+			description: ["{quest.market.buddycard.text1}"]
 			can_repeat: true
 			id: "093FB7B7FEC6B886"
 			tasks: [{
@@ -790,12 +790,12 @@
 			]
 		}
 		{
-			title: "园丁起始包"
+			title: "{quest.market.gardening.title}"
 			icon: "biomesoplenty:glowflower"
 			x: -2.5d
 			y: -1.5d
 			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["做好除虫。"]
+			description: ["{quest.market.gardening.text1}"]
 			id: "42384DE39AA48976"
 			tasks: [{
 				id: "05BB5DFA82280C0C"
@@ -990,12 +990,12 @@
 			]
 		}
 		{
-			title: "即时美学"
+			title: "{quest.market.leaves.title}"
 			icon: "minecraft:oak_leaves"
 			x: 1.0d
 			y: 0.0d
 			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["对你的建筑外表不满意？没关系，树叶解决一切！"]
+			description: ["{quest.market.leaves.text1}"]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
 				id: "06028A67C6DCCD00"
@@ -1044,12 +1044,12 @@
 			]
 		}
 		{
-			title: "不，不是蜜蜂！"
+			title: "{quest.market.bee.title}"
 			icon: "minecraft:bee_nest"
 			x: -1.0d
 			y: -2.0d
 			subtitle: "48 {item.thermal.silver_coin}"
-			description: ["嗡-嗡嗡-嗡"]
+			description: ["{quest.market.bee.text1}"]
 			id: "003E0D1CE60B166A"
 			tasks: [
 				{
@@ -1110,12 +1110,12 @@
 			}]
 		}
 		{
-			title: "堡垒定位"
+			title: "{quest.market.structures_compass.title}"
 			icon: "create:blaze_burner"
 			x: -7.5d
 			y: 1.0d
 			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["应该没人愿意在下界到处晃荡吧？这个小玩意可以帮助你快速找到下界要塞。"]
+			description: ["{quest.market.structures_compass.text1}"]
 			id: "3B408BE68E229FD2"
 			tasks: [{
 				id: "2D0391D0E7E9C6AB"
