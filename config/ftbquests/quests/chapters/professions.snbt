@@ -427,7 +427,7 @@
 			}]
 		}
 		{
-			title: "&7&l树苗收集"
+			title: "{quest.bulletin.collect_saplings.title}"
 			icon: "minecraft:oak_sapling"
 			x: -4.0d
 			y: -3.5d
@@ -505,12 +505,12 @@
 			}]
 		}
 		{
-			title: "&7&l政府投资"
+			title: "{quest.bulletin.written_book.title}"
 			icon: "minecraft:book"
 			x: -2.0d
 			y: -3.0d
 			subtitle: "15 {item.thermal.silver_coin}"
-			description: ["写一封申请书，在里面阐述你值得被投资的原因。"]
+			description: ["{quest.bulletin.written_book.text1}"]
 			id: "736FC31210F334F2"
 			tasks: [{
 				id: "7D2F867FD8A5A68A"
@@ -561,7 +561,7 @@
 			}]
 		}
 		{
-			title: "&7&l丰富的树苗收集"
+			title: "{quest.bulletin.collect_more_saplings.title}"
 			icon: "biomesoplenty:flowering_oak_sapling"
 			x: -4.0d
 			y: -2.0d
@@ -609,7 +609,7 @@
 			}]
 		}
 		{
-			title: "&7&l矿物收集"
+			title: "{quest.bulletin.collect_crystal_ores.title}"
 			icon: "thermal:sulfur"
 			x: -0.5d
 			y: -4.0d
@@ -651,7 +651,7 @@
 			}]
 		}
 		{
-			title: "&7&l丰富的矿物收集"
+			title: "{quest.bulletin.collect_more_crystal_ores.title}"
 			icon: "thermal:ruby"
 			x: -0.5d
 			y: -2.5d
@@ -694,12 +694,12 @@
 			}]
 		}
 		{
-			title: "&7&l信号丢失"
+			title: "{quest.bulletin.music_disc.title}"
 			icon: "minecraft:music_disc_13"
 			x: -5.5d
 			y: -4.0d
 			subtitle: "32 {item.thermal.silver_coin}"
-			description: ["友好的唱片收集者对任何唱片都很感兴趣。"]
+			description: ["{quest.bulletin.music_disc.text1}"]
 			can_repeat: true
 			id: "436DA1A1AB8C0734"
 			tasks: [{
@@ -734,7 +734,7 @@
 			]
 		}
 		{
-			title: "&7&l火成岩样本采集"
+			title: "{quest.bulletin.collect_igneous.title}"
 			icon: "minecraft:granite"
 			x: 1.0d
 			y: -3.5d
@@ -781,7 +781,7 @@
 			}]
 		}
 		{
-			title: "&7&l丰富的火成岩样本采集"
+			title: "{quest.bulletin.collect_more_igneous.title}"
 			icon: "minecraft:basalt"
 			x: 1.0d
 			y: -2.0d
@@ -835,11 +835,11 @@
 			}]
 		}
 		{
-			title: "&7&l垃圾填埋"
+			title: "{quest.bulletin.dirt.title}"
 			x: 2.5d
 			y: -4.5d
 			subtitle: "15 {item.thermal.silver_coin}"
-			description: ["如果你平了一大块地，不妨把多余的泥土换成货币。"]
+			description: ["{quest.bulletin.dirt.text1}"]
 			id: "1C5EA1173F4E592B"
 			tasks: [{
 				id: "0A99B239D9EA5B0B"
@@ -856,7 +856,7 @@
 			}]
 		}
 		{
-			title: "&7&l作物收集"
+			title: "{quest.bulletin.collect_crops.title}"
 			icon: "minecraft:carrot"
 			x: -7.0d
 			y: -3.5d
@@ -1002,7 +1002,7 @@
 			}]
 		}
 		{
-			title: "&7&l亡灵杀手"
+			title: "{quest.bulletin.kill_zombie.title}"
 			x: -2.0d
 			y: -1.0d
 			subtitle: "30 {item.thermal.silver_coin}"
@@ -1023,7 +1023,7 @@
 			}]
 		}
 		{
-			title: "&7&l亡灵杀手 II"
+			title: "{quest.bulletin.kill_skeleton.title}"
 			x: -0.5d
 			y: -0.5d
 			subtitle: "50 {item.thermal.silver_coin}"
@@ -1044,7 +1044,7 @@
 			}]
 		}
 		{
-			title: "&7&l节肢杀手"
+			title: "{quest.bulletin.kill_spider.title}"
 			x: -3.5d
 			y: -0.5d
 			subtitle: "50 {item.thermal.silver_coin}"
@@ -1065,7 +1065,7 @@
 			}]
 		}
 		{
-			title: "&7&l商人的心头好"
+			title: "{quest.bulletin.globe.title}"
 			x: -5.5d
 			y: -1.5d
 			subtitle: "2 {item.thermal.gold_coin}"
@@ -1106,7 +1106,7 @@
 			}]
 		}
 		{
-			title: "&7&l矿物收集"
+			title: "{quest.bulletin.collect_metal_ores.title}"
 			icon: "create:crushed_raw_gold"
 			x: 3.0d
 			y: -2.5d
@@ -1277,7 +1277,7 @@
 			]
 		}
 		{
-			title: "&7&l保持体型"
+			title: "{quest.bulletin.jump.title}"
 			x: 4.0d
 			y: -4.0d
 			subtitle: "60 {item.thermal.silver_coin}"
@@ -1305,11 +1305,11 @@
 			}]
 		}
 		{
-			title: "&6&l原始积累"
+			title: "{quest.bulletin.craft_planks.title}"
 			icon: "minecraft:spruce_sapling"
 			x: -3.0d
 			y: 1.0d
-			subtitle: "记得种回去！&r32 {item.thermal.silver_coin}"
+			subtitle: "{quest.bulletin.craft_planks.subtitle}&r32 {item.thermal.silver_coin}"
 			id: "3D46F5872613C87A"
 			tasks: [{
 				id: "305B8665F7A566F1"
@@ -1336,11 +1336,11 @@
 			}]
 		}
 		{
-			title: "&f&l到达世界最高层！"
+			title: "{quest.bulletin.arrive_the_top.title}"
 			icon: "minecraft:barrier"
 			x: -1.0d
 			y: 1.0d
-			subtitle: "到底该怎么下去呢？ &r1 {item.thermal.gold_coin}"
+			subtitle: "{quest.bulletin.arrive_the_top.subtitle}&r1 {item.thermal.gold_coin}"
 			id: "48B93059B325B230"
 			tasks: [{
 				id: "169EFAAAE095C621"
@@ -1398,22 +1398,39 @@
 			id: "7C7B993FACB7E466"
 			tasks: [
 				{
-					id: "1885617E52051FD3"
-					type: "custom"
-					title: "放置泥土"
-					icon: "minecraft:dirt"
+					id: "77FB5BC8EBA34E9E"
+					type: "questsadditions:place"
+					block_type: 0
+					block: "minecraft:dirt"
+					value: 2048L
+					replaced: "minecraft:air"
+					replace: false
 				}
 				{
-					id: "65BF4F81B36B221B"
-					type: "custom"
-					title: "放置圆石"
-					icon: "minecraft:cobblestone"
+					id: "2F27E50B19531F11"
+					type: "questsadditions:place"
+					block_type: 0
+					block: "minecraft:cobblestone"
+					value: 4096L
+					replaced: "minecraft:air"
+					replace: false
 				}
 				{
-					id: "2469DE5A0EF04A50"
-					type: "custom"
-					title: "使用并拆毁脚手架"
-					icon: "minecraft:scaffolding"
+					id: "732C7F15844ADAB0"
+					type: "questsadditions:place"
+					block_type: 0
+					block: "minecraft:scaffolding"
+					value: 1024L
+					replaced: "minecraft:air"
+					replace: false
+				}
+				{
+					id: "01C3EEEC8E9C8F66"
+					type: "questsadditions:break"
+					block_type: 0
+					block: "minecraft:scaffolding"
+					value: 1024L
+					checkItem: false
 				}
 			]
 			rewards: [{
@@ -1425,7 +1442,7 @@
 			}]
 		}
 		{
-			title: "&5&l探索所有维度"
+			title: "{quest.bulletin.explore_all_dimensions.title}"
 			icon: {
 				id: "minecraft:netherite_pickaxe"
 				Count: 1b
@@ -1439,55 +1456,55 @@
 			x: 1.0d
 			y: 2.0d
 			shape: "square"
-			subtitle: "记得回家！ &r2 {item.thermal.gold_coin}"
+			subtitle: "{quest.bulletin.explore_all_dimensions.subtitle}&r2 {item.thermal.gold_coin}"
 			id: "769CAC17CA1366FD"
 			tasks: [
 				{
 					id: "56406DC1EB23D39A"
 					type: "dimension"
-					title: "&5下界"
+					title: "{quest.bulletin.explore_all_dimensions.target1}"
 					icon: "minecraft:netherrack"
 					dimension: "minecraft:the_nether"
 				}
 				{
 					id: "666EC6A82E1DBFD7"
 					type: "dimension"
-					title: "&3末地"
+					title: "{quest.bulletin.explore_all_dimensions.target2}"
 					icon: "minecraft:end_stone"
 					dimension: "minecraft:the_end"
 				}
 				{
 					id: "0CFF8BC4326BEC18"
 					type: "dimension"
-					title: "月球"
+					title: "{quest.bulletin.explore_all_dimensions.target3}"
 					icon: "beyond_earth:moon_globe"
 					dimension: "beyond_earth:moon"
 				}
 				{
 					id: "6251549098DF50E3"
 					type: "dimension"
-					title: "水星"
+					title: "{quest.bulletin.explore_all_dimensions.target4}"
 					icon: "beyond_earth:mercury_globe"
 					dimension: "beyond_earth:mercury"
 				}
 				{
 					id: "5AB19492CE1F8E2E"
 					type: "dimension"
-					title: "火星"
+					title: "{quest.bulletin.explore_all_dimensions.target5}"
 					icon: "beyond_earth:mars_globe"
 					dimension: "beyond_earth:mars"
 				}
 				{
 					id: "33D98D55520B34BE"
 					type: "dimension"
-					title: "冰霜星"
+					title: "{quest.bulletin.explore_all_dimensions.target6}"
 					icon: "beyond_earth:glacio_globe"
 					dimension: "beyond_earth:glacio"
 				}
 				{
 					id: "114EDF482383D47D"
 					type: "dimension"
-					title: "金星"
+					title: "{quest.bulletin.explore_all_dimensions.target7}"
 					icon: "beyond_earth:venus_globe"
 					dimension: "beyond_earth:venus"
 				}
@@ -1501,7 +1518,7 @@
 			}]
 		}
 		{
-			title: "&8&l储存空间"
+			title: "{quest.bulletin.enter_containment.title}"
 			x: 1.0d
 			y: 0.0d
 			shape: "square"
@@ -1527,7 +1544,7 @@
 			}]
 		}
 		{
-			title: "&l星辰大海"
+			title: "{quest.bulletin.complete_all_mods.title}"
 			icon: "minecraft:red_glazed_terracotta"
 			x: 3.0d
 			y: 1.0d
@@ -1540,7 +1557,7 @@
 				{
 					id: "20DA4D5551E78BC0"
 					type: "advancement"
-					title: "&2通关Minecraft"
+					title: "{quest.bulletin.complete_all_mods.target1}"
 					icon: "minecraft:grass_block"
 					disable_toast: true
 					advancement: "minecraft:end/respawn_dragon"
@@ -1549,7 +1566,7 @@
 				{
 					id: "4CD7A603CEE226FE"
 					type: "advancement"
-					title: "&d完成太空探索"
+					title: "{quest.bulletin.complete_all_mods.target2}"
 					icon: {
 						id: "beyond_earth:rocket_t1"
 						Count: 1b
@@ -1562,7 +1579,7 @@
 				{
 					id: "33CBBC9CE221D956"
 					type: "advancement"
-					title: "&6完成机械动力"
+					title: "{quest.bulletin.complete_all_mods.target3}"
 					icon: "create:yellow_seat"
 					disable_toast: true
 					advancement: "create:long_travel"
@@ -1571,7 +1588,7 @@
 				{
 					id: "40EFC4C905FD6B5F"
 					type: "advancement"
-					title: "&e完成农夫乐事"
+					title: "{quest.bulletin.complete_all_mods.target4}"
 					icon: "farmersdelight:stove"
 					disable_toast: true
 					advancement: "farmersdelight:main/master_chef"
@@ -1594,7 +1611,7 @@
 			]
 		}
 		{
-			title: "&d&l你这是在干什么⁈"
+			title: "{quest.bulletin.flight.title}"
 			x: -2.0d
 			y: 3.0d
 			shape: "square"
@@ -1631,7 +1648,7 @@
 			]
 		}
 		{
-			title: "&6&l路途漫漫"
+			title: "{quest.bulletin.game_time.title}"
 			x: -5.0d
 			y: 0.0d
 			subtitle: "32 {item.thermal.silver_coin}"
@@ -1672,13 +1689,13 @@
 			}]
 		}
 		{
-			title: "&3&l到达世界最底层！"
+			title: "{quest.bulletin.nether.title}"
 			icon: "minecraft:warped_nylium"
 			x: -5.0d
 			y: 2.0d
 			shape: "square"
 			subtitle: "1 {item.thermal.gold_coin}"
-			description: ["就像回家一样~"]
+			description: ["{quest.bulletin.nether.text1}"]
 			id: "6CB9E439ED5293D3"
 			tasks: [{
 				id: "460F3FE4058A9CCF"
@@ -1788,7 +1805,7 @@
 			]
 		}
 		{
-			title: "&7&l外星矿物收集"
+			title: "{quest.bulletin.collect_more_metal_ores.title}"
 			icon: "kubejs:crushed_desh_ore"
 			x: 3.0d
 			y: -1.0d

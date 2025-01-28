@@ -9,12 +9,12 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "失眠"
+			title: "{quest.market.bed.title}"
 			icon: "minecraft:cyan_bed"
 			x: -9.5d
 			y: -1.5d
 			subtitle: "10 {item.thermal.silver_coin}"
-			description: ["这是你的住所，日落之前就得准备好。"]
+			description: ["{quest.market.bed.text1}"]
 			id: "5D17CB247942013A"
 			tasks: [{
 				id: "0783860FB502A201"
@@ -30,7 +30,7 @@
 			}]
 		}
 		{
-			title: "绝妙发明：锯断一切"
+			title: "{quest.market.enchanted_saw.title}"
 			icon: {
 				id: "kubejs:netherite_saw"
 				Count: 1b
@@ -52,7 +52,7 @@
 			x: -8.5d
 			y: -6.5d
 			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["购买这个小工具来让制作&6动力构件&r的工具消耗降到最低。"]
+			description: ["{quest.market.enchanted_saw.text1}"]
 			hide_dependency_lines: true
 			can_repeat: true
 			id: "4F953BACF4D1C151"
@@ -90,8 +90,8 @@
 							id: "minecraft:mending"
 						}]
 						display: {
-							Lore: ["[\"千万不要在物品栏中合成\"]"]
-							Name: "[\"附魔手锯\"]"
+							Lore: ["{\"translate\":\"tip.enchanted_saw.description\",\"italic\":false}"]
+							Name: "{\"translate\":\"tip.enchanted_saw.name\",\"italic\":false}"
 						}
 						Damage: 0
 						Modifier: "forbidden_arcanus:eternal"
@@ -100,7 +100,7 @@
 			}]
 		}
 		{
-			title: "绝妙发明：不可能出问题"
+			title: "{quest.market.enchanted_screwdriver.title}"
 			icon: {
 				id: "projectred_core:screwdriver"
 				Count: 1b
@@ -121,7 +121,7 @@
 			x: -7.0d
 			y: -6.5d
 			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["购买这个小工具来让制作&6精密构件&r的工具消耗降到最低。"]
+			description: ["{quest.market.enchanted_screwdriver.text1}"]
 			can_repeat: true
 			id: "72CACE8F0E4701B1"
 			tasks: [
@@ -158,7 +158,7 @@
 							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "[\"附魔螺丝刀\"]"
+							Name: "{\"translate\":\"tip.enchanted_screwdriver.name\",\"italic\":false}"
 						}
 						Damage: 0
 						Modifier: "forbidden_arcanus:eternal"
@@ -167,7 +167,7 @@
 			}]
 		}
 		{
-			title: "绝妙发明：磁之力"
+			title: "{quest.market.enchanted_resonator.title}"
 			icon: {
 				id: "kubejs:chromatic_resonator"
 				Count: 1b
@@ -182,7 +182,7 @@
 			x: -5.0d
 			y: -6.5d
 			subtitle: "3 {item.thermal.gold_coin}"
-			description: ["购买这个小工具来让制作&6感应构件&r的工具消耗降到最低。"]
+			description: ["{quest.market.enchanted_resonator.text1}"]
 			can_repeat: true
 			id: "43FC566E833BE834"
 			tasks: [
@@ -219,7 +219,7 @@
 							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "[\"附魔异彩共鸣器\"]"
+							Name: "{\"translate\":\"tip.enchanted_resonator.name\",\"italic\":false}"
 						}
 						Damage: 0
 						Modifier: "forbidden_arcanus:eternal"
@@ -228,15 +228,15 @@
 			}]
 		}
 		{
-			title: "&f&l市场"
+			title: "{quest.market.introduce.title}"
 			icon: "minecraft:chest"
 			x: -6.0d
 			y: -4.0d
 			shape: "hexagon"
 			description: [
-				"&6市场&r让你可以买到一些有意思或有用的物品和工具"
+				"{quest.market.introduce.text1}"
 				""
-				"稍微逛逛，我相信你会找到有用的商品的。"
+				"{quest.market.introduce.text2}"
 			]
 			size: 2.0d
 			id: "0F870BEA235D662D"
@@ -246,13 +246,13 @@
 			}]
 		}
 		{
-			title: "手动兑换"
-			icon: { id: "thermal:silver_coin", Count: 16b }
+			title: "{quest.market.silver_coin.title}"
+			icon: { id: "thermal:silver_coin", Count: 64b }
 			x: -4.0d
 			y: -4.0d
 			shape: "circle"
 			subtitle: "{item.thermal.gold_coin} -> {item.thermal.silver_coin}"
-			description: ["你可以在这里将金币换回成1组银币。"]
+			description: ["{quest.market.silver_coin.text1}"]
 			dependencies: ["0F870BEA235D662D"]
 			can_repeat: true
 			id: "5326F6482C45D22A"
@@ -272,13 +272,13 @@
 			}]
 		}
 		{
-			title: "手动兑换"
-			icon: { id: "thermal:gold_coin", Count: 16b }
+			title: "{quest.market.gold_coin.title}"
+			icon: "thermal:gold_coin"
 			x: -8.0d
 			y: -4.0d
 			shape: "circle"
 			subtitle: "{item.thermal.silver_coin} -> {item.thermal.gold_coin}"
-			description: ["有一些交易需要金币，每个金币都等于1组银币。"]
+			description: ["{quest.market.gold_coin.text1}"]
 			dependencies: ["0F870BEA235D662D"]
 			can_repeat: true
 			id: "1A566C74B1F7F050"
@@ -382,7 +382,7 @@
 			]
 		}
 		{
-			title: "耐心测试"
+			title: "{quest.market.patience_test.title}"
 			icon: {
 				id: "minecraft:barrel"
 				Count: 1b
@@ -396,7 +396,7 @@
 			x: -9.0d
 			y: 0.0d
 			subtitle: "50 {item.thermal.silver_coin}"
-			description: ["这个神秘的东西给你了一个看似无穷无尽的深度的谜盒。作为专家的你知道这一定是有限的，但什么在最底下呆着呢？"]
+			description: ["{quest.market.patience_test.text1}"]
 			id: "09EA580B3D32FEEB"
 			tasks: [{
 				id: "3EA558277444F605"
@@ -417,72 +417,72 @@
 							Items: [
 								{
 									Slot: 11b
-									id: "minecraft:paper"
 									Count: 1b
+									id: "minecraft:paper"
 									tag: {
 										RepairCost: 0
 										display: {
 											bold: 0b
-											Name: "{\"italic\": false, \"text\":\"挑战者，欢迎你\"}"
+											Name: "{\"translate\":\"tip.kubejs.patience_test_text1\",\"italic\":false}"
 										}
 									}
 								}
 								{
 									Slot: 15b
-									id: "minecraft:barrel"
 									Count: 1b
+									id: "minecraft:barrel"
 									tag: {
 										BlockEntityTag: {
 											Items: [
 												{
 													Slot: 3b
-													id: "minecraft:paper"
 													Count: 1b
+													id: "minecraft:paper"
 													tag: {
 														RepairCost: 0
 														display: {
-															Name: "{\"italic\": false, \"text\":\"你得开几个箱子\"}"
+															Name: "{\"italic\": false, \"translate\":\"tip.kubejs.patience_test_text2\"}"
 														}
 													}
 												}
 												{
 													Slot: 23b
-													id: "minecraft:barrel"
 													Count: 1b
+													id: "minecraft:barrel"
 													tag: {
 														BlockEntityTag: {
 															Items: [
 																{
 																	Slot: 11b
-																	id: "minecraft:barrel"
 																	Count: 1b
+																	id: "minecraft:barrel"
 																	tag: {
 																		BlockEntityTag: {
 																			LootTable: "custom:chests/patience_1"
 																		}
 																		display: {
-																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"text\":\"传说中的奖品在底下等着你……\"}"]
+																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
 																		}
 																	}
 																}
 																{
 																	Slot: 13b
-																	id: "minecraft:paper"
 																	Count: 1b
+																	id: "minecraft:paper"
 																	tag: {
 																		RepairCost: 0
 																		display: {
-																			Name: "{\"italic\": false, \"text\":\"祝你好运，底下等你！\"}"
+																			Name: "{\"italic\": false, \"translate\":\"tip.kubejs.patience_test_text3\"}"
 																		}
 																	}
 																}
 																{
 																	Slot: 14b
-																	id: "minecraft:apple"
 																	Count: 1b
+																	id: "minecraft:apple"
 																	tag: {
 																		display: {
-																			Name: "{\"italic\": false, \"text\":\"奖励一个苹果\"}"
+																			Name: "{\"italic\": false, \"translate\": \"tip.kubejs.patience_test_apple\"}"
 																		}
 																	}
 																}
@@ -490,7 +490,7 @@
 															id: "minecraft:barrel"
 														}
 														display: {
-															Lore: ["{\"text\": \"传说中的奖品在底下等着你……\",\"italic\": true,\"color\": \"gray\"}"]
+															Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 														}
 													}
 												}
@@ -498,21 +498,21 @@
 											id: "minecraft:barrel"
 										}
 										display: {
-											Lore: ["{\"text\": \"传说中的奖品在底下等着你……\",\"italic\": true,\"color\": \"gray\"}"]
+											Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 										}
 									}
 								}
 							]
 							id: "minecraft:barrel"
 						}
-						display: {
-							Lore: ["{\"italic\":true,\"color\":\"gray\",\"text\":\"传说中的奖品在底下等着你……\"}"]
-							Name: "{\"italic\":false,\"text\":\"耐心测试\",\"color\":\"dark_purple\"}"
-						}
 						Enchantments: [{
 							lvl: 1s
 							id: "minecraft:unbreaking"
 						}]
+						display: {
+							Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
+							Name: "{\"italic\":false,\"translate\":\"tip.kubejs.patience_test_name\",\"color\":\"dark_purple\"}"
+						}
 					}
 				}
 			}]
@@ -639,7 +639,7 @@
 			]
 		}
 		{
-			title: "绝妙发明：Windows更新补丁"
+			title: "{quest.market.enchanted_flash_drive.title}"
 			icon: {
 				id: "kubejs:flash_drive"
 				Count: 1b
@@ -657,7 +657,7 @@
 			x: -3.5d
 			y: -6.5d
 			subtitle: "4 {item.thermal.gold_coin}"
-			description: ["购买这个小工具来让制作&6运算构件&r的工具消耗降到最低。"]
+			description: ["{quest.market.enchanted_flash_drive.text1}"]
 			can_repeat: true
 			id: "00D6DD6AE8E3C014"
 			tasks: [
@@ -694,7 +694,7 @@
 							id: "minecraft:mending"
 						}]
 						display: {
-							Name: "[\"附魔闪存盘\"]"
+							Name: "{\"translate\":\"tip.enchanted_flash_drive.name\",\"italic\":false}"
 						}
 						Damage: 0
 						Modifier: "forbidden_arcanus:eternal"
@@ -748,12 +748,12 @@
 			}]
 		}
 		{
-			title: "玩炸药"
+			title: "{quest.market.grenades.title}"
 			icon: "thermal:explosive_grenade"
 			x: -12.5d
 			y: -1.5d
 			subtitle: "32 {item.thermal.silver_coin}"
-			description: ["一个热力膨胀武器小测试。"]
+			description: ["{quest.market.grenades.text1}"]
 			id: "1CC29991D5F248CA"
 			tasks: [{
 				id: "2BF8F9E5070C6122"
@@ -838,7 +838,7 @@
 			]
 		}
 		{
-			title: "粉刷匠起始包"
+			title: "{quest.market.painting.title}"
 			icon: "minecraft:painting"
 			x: -9.5d
 			y: 1.5d
@@ -903,7 +903,7 @@
 			]
 		}
 		{
-			title: "铁路起始包"
+			title: "{quest.market.minecart.title}"
 			icon: "minecraft:minecart"
 			x: -11.0d
 			y: 2.0d
@@ -944,7 +944,7 @@
 			]
 		}
 		{
-			title: "宠物主起始包"
+			title: "{quest.market.pet_taming.title}"
 			icon: "minecraft:tropical_fish"
 			x: -13.0d
 			y: 0.0d
@@ -1089,12 +1089,12 @@
 			]
 		}
 		{
-			title: "我爱植树"
+			title: "{quest.market.saplings.title}"
 			icon: "minecraft:oak_sapling"
 			x: -11.0d
 			y: -2.0d
 			subtitle: "4 {item.thermal.silver_coin}"
-			description: ["树苗盲盒，涵盖了这个世界的大部分树苗。"]
+			description: ["{quest.market.saplings.text1}"]
 			id: "7760D0FCCFCE2C6B"
 			tasks: [{
 				id: "6AEDD26D0FFF8963"
