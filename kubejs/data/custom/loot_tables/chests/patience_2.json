@@ -12,7 +12,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "难以置信。",
+                "translate":"tip.kubejs.patience_test_text31",
                 "italic": false
               }
             },
@@ -20,7 +20,7 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "text": "你不知道你有多么幸运。",
+                  "translate":"tip.kubejs.patience_test_text32",
                   "color": "gray",
                   "italic": false
                 }
