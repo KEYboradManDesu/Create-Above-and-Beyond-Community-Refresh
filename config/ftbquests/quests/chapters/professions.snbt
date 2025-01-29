@@ -1345,7 +1345,7 @@
 			tasks: [{
 				id: "169EFAAAE095C621"
 				type: "location"
-				title: "到达255层的高度"
+				title: "{tip.kubejs.arrive_the_top}"
 				icon: "minecraft:ladder"
 				dimension: "minecraft:overworld"
 				ignore_dimension: true
@@ -1527,7 +1527,7 @@
 			tasks: [{
 				id: "2DBA595DB41A6BDF"
 				type: "dimension"
-				title: "&8进入储存空间"
+				title: "{tip.kubejs.enter_containment}"
 				icon: {
 					id: "ftbquests:custom_icon"
 					Count: 1b
