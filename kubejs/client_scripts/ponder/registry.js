@@ -1,10 +1,9 @@
-onEvent("ponder.registry", event => {
-
+onEvent("ponder.registry", (event) => {
     event.create("kubejs:ponder_laser_lamp")
+		.tag("kubejs:ponder")
         .scene("alchemy_setup", "混沌炼金","kubejs:laser_alchemy", (scene, util) => {
-            scene.configureBasePlate(0, 0, 5);
-            scene.showBasePlate();
-            scene.idle(10)
+            scene.showBasePlate()
+            scene.idle(20)
 
             let largeCog = util.select.position(5, 0, 2)
             let deployerSingle = util.select.position(4, 1, 3)
@@ -67,7 +66,7 @@ onEvent("ponder.registry", event => {
                         Mode: "PUNCH"
                     }
                 ]
-            });
+            })
             scene.overlay.showText(50)
                 .text("使用扳手将其设置为击打模式")
                 .colored(PonderPalette.GREEN)
@@ -91,7 +90,7 @@ onEvent("ponder.registry", event => {
             scene.idle(30)
             scene.world.toggleRedstonePower(lamp)
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25);
+            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -101,7 +100,7 @@ onEvent("ponder.registry", event => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25);
+            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
             scene.world.toggleRedstonePower(lamp)
             // scene.effects.indicateRedstone(util.grid.at(4, 2, 4))
@@ -137,7 +136,7 @@ onEvent("ponder.registry", event => {
 
             scene.world.toggleRedstonePower(lamp)
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25);
+            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -147,7 +146,7 @@ onEvent("ponder.registry", event => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25);
+            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
 
             scene.overlay.showControls(new PonderInput(util.vector.centerOf(2, 1, 0), PonderPointing.DOWN)
