@@ -384,6 +384,33 @@
 "tip.kubejs.enter_containment":"&8进入储存空间",
 "tip.kubejs.toolbox":"工具箱",
 "tip.kubejs.has_item":"含有物品",
+"tip.kubejs.any_toolbox":"任意工具箱",
+"tip.kubejs.any_exchanger":"任意交换器",
+"tip.kubejs.any_wand":"任意建筑手杖",
+"tip.kubejs.any_illumar":"任意荧光粉",
+"tip.kubejs.any_storage_drawer":"任意抽屉",
+"tip.kubejs.any_metal_barrel":"任意金属桶",
+"tip.kubejs.fluid_unit":"【以粒为单位】",
+"tip.kubejs.any_log":"任意原木",
+"tip.kubejs.unlock_stage_1":"&6解锁第一章",
+"tip.kubejs.finish_stage_1":"&f完成第一章 &7主线",
+"tip.kubejs.unlock_stage_1a":"&4解锁第一章 &7支线",
+"tip.kubejs.finish_stage_1a":"&4完成第一章 &7支线",
+"tip.kubejs.unlock_stage_2":"&6解锁第二章",
+"tip.kubejs.finish_stage_2":"&f完成第二章 &7主线",
+"tip.kubejs.unlock_stage_2a":"&2解锁第二章 &7支线",
+"tip.kubejs.finish_stage_2a":"&2完成第二章 &7支线",
+"tip.kubejs.unlock_stage_3":"&6解锁第三章",
+"tip.kubejs.finish_stage_3":"&f完成第三章 &7主线",
+"tip.kubejs.unlock_stage_3a":"&3解锁第三章 &7支线",
+"tip.kubejs.finish_stage_3a":"&3完成第三章 &7支线",
+"tip.kubejs.unlock_stage_4":"&6解锁第四章",
+"tip.kubejs.unlock_stage_4a":"&6解锁第四章附属",
+"tip.kubejs.finish_stage_4":"&f完成第四章 &7主线",
+"tip.kubejs.unlock_stage_5":"&6解锁&5第五章",
+"tip.kubejs.unlock_challenage":"&6解锁&5挑战章",
+"tip.kubejs.sure":"好的",
+"tip.kubejs.unlock_thanks":"解锁 特别感谢",
 
 "quest.chaptergroup.tools.name":"&f&l 工具箱",
 "quest.chaptergroup.tech_tree.name":"&f&l 科技树",
@@ -814,6 +841,7 @@
 "quest.overview.sidebar.title":"&7具体任务细节可以在左侧边栏选择查看。",
 
 "quest.overview.introduce.title":"&a&l一切都要从那棵树说起...",
+"quest.overview.introduce.subtitle":"砍伐一棵树",
 "quest.overview.introduce.text1":"&a欢迎来到纵览。&r你可以随时在这里查看团队的科技树发展进度并解锁全新任务。如你所见，我会一直指引着你们直到你们离开这里走向更远——你们对大陆的探索将会在那时告一段落，但等着你们的远不止这些。旅途开始了！&a向着Minecraft科技时代的绝巘之峰勇敢地攀登吧！&r",
 
 "quest.overview.basic_machines.title":"&f&l准备得当",
@@ -910,5 +938,21 @@
 "quest.overview.stage_5_finish.subtitle":"&6最终章",
 "quest.overview.stage_5_finish.text1":"&o这也许只是你的一小步，却是&9全人类&r的一大步。",
 "quest.overview.stage_5_finish.text2":"&o我能陪你走到这里是我的荣幸。看到了你们的飞速发展，我的使命也就圆满完成了。&9真正的旅途才刚刚开始，我们明日再见。&r",
-"quest.overview.stage_5_finish.text3":"&9&l&o世界很大，生活更大。"
+"quest.overview.stage_5_finish.text3":"&9&l&o世界很大，生活更大。",
+
+"quest.challenge.introduce.title":"&d&l挑战",
+"quest.challenge.introduce.subtitle":"&d挑战自我",
+"quest.challenge.introduce.text1":"&d欢迎来到挑战章节！&r",
+"quest.challenge.introduce.text2":"这里的任务将仅仅作为&6可选的&r的挑战任务。",
+"quest.challenge.introduce.text3":"&6积极出谋划策吧！&r",
+
+"quest.challenge.bullet.title":"&2&l军火大亨",
+"quest.challenge.bullet.subtitle":"火药的味道",
+"quest.challenge.bullet.text1":"能够武装整个世界的弹药产线。",
+
+"quest.challenge.chocolate.title":"&6&l查理的巧克力工厂",
+"quest.challenge.chocolate.subtitle":"梦幻世界",
+"quest.challenge.chocolate.text1":"想象一片由巧克力制成的大海。",
+
+"tip.kubejs.automated":"自动生产"
 }
