@@ -1,9 +1,7 @@
 # Create: Above and Beyond Community Refresh Modpack
 # 永无止境：超越常新 整合包
 > [!IMPORTANT]
-> This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.
-> [!IMPORTANT]
-> 本整合包目前处于开发阶段，您可以使用 git clone 命令下载预览版本。请注意，当前状态并不反映整合包的最终质量。
+> This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.<br>本整合包目前处于开发阶段，您可以使用 git clone 命令下载预览版本。请注意，当前状态并不反映整合包的最终质量。
 ## Create: Above and Beyond 1.18.2 Community Refreshed version
 ## 永无止境：超越常新 整合包 1.18.2版本
 这是一个基于**机械动力：永无止境（CAB）**和 **[CABF] Cabricality** 的整合包，在 **Forge 1.18.2** 运行。此整合包在机械动力：永无止境的启发下，重置并实现了全部的游戏流程。在此欢迎每一个挑战者，并发自内心地希望你们徜徉在 Minecraft 的游戏世界中！
