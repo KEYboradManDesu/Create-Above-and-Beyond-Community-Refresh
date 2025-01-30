@@ -2,6 +2,7 @@
 # 永无止境：超越常新 整合包
 > [!IMPORTANT]
 > This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.
+> [!IMPORTANT]
 > 本整合包目前处于开发阶段，您可以使用 git clone 命令下载预览版本。请注意，当前状态并不反映整合包的最终质量。
 ## Create: Above and Beyond 1.18.2 Community Refreshed version
 ## 永无止境：超越常新 整合包 1.18.2版本
