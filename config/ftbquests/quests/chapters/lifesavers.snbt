@@ -70,7 +70,7 @@
 			tasks: [{
 				id: "5E687A6CBD96D0EF"
 				type: "item"
-				title: "任意工具箱"
+				title: "{tip.kubejs.any_toolbox}"
 				icon: "create:blue_toolbox"
 				item: {
 					id: "itemfilters:tag"
@@ -114,7 +114,7 @@
 			tasks: [{
 				id: "039DD9EBD46B2C23"
 				type: "item"
-				title: "任意建筑手杖"
+				title: "{tip.kubejs.any_wand}"
 				item: {
 					id: "itemfilters:or"
 					Count: 1b
@@ -420,6 +420,7 @@
 			tasks: [{
 				id: "4701A6A44DD82687"
 				type: "item"
+				title: "{tip.kubejs.any_metal_barrel}"
 				item: {
 					id: "itemfilters:or"
 					Count: 1b
@@ -461,7 +462,7 @@
 			tasks: [{
 				id: "4BE344E1F204A43D"
 				type: "item"
-				title: "Any Storage Drawer"
+				title: "{tip.kubejs.any_storage_drawer}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -509,7 +510,7 @@
 				{
 					id: "4366D5155A8F65EA"
 					type: "item"
-					title: "任意荧光粉"
+					title: "{tip.kubejs.any_illumar}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -557,7 +558,7 @@
 			tasks: [{
 				id: "4BE0CCD6F383D961"
 				type: "item"
-				title: "Any Exchanger"
+				title: "{tip.kubejs.any_exchanger}"
 				item: {
 					id: "itemfilters:or"
 					Count: 1b

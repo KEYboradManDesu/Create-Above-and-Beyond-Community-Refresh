@@ -14,14 +14,14 @@
 			x: -14.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "砍伐一棵树"
+			subtitle: "{quest.overview.introduce.subtitle}"
 			description: ["{quest.overview.introduce.text1}"]
 			size: 2.0d
 			id: "75FB28B253B14876"
 			tasks: [{
 				id: "7F88BABEC9889C76"
 				type: "item"
-				title: "任何 原木"
+				title: "{tip.kubejs.any_log}"
 				icon: "minecraft:oak_log"
 				item: {
 					id: "itemfilters:tag"
@@ -120,7 +120,7 @@
 			tasks: [{
 				id: "5A8DF2D8553904BF"
 				type: "checkmark"
-				title: "&6解锁第一章"
+				title: "{tip.kubejs.unlock_stage_1}"
 			}]
 		}
 		{
@@ -143,7 +143,7 @@
 			tasks: [{
 				id: "1122F026DE28AF0F"
 				type: "item"
-				title: "&f完成第一章 &7主线"
+				title: "{tip.kubejs.finish_stage_1}"
 				item: "kubejs:kinetic_mechanism"
 				count: 64L
 				consume_items: false
@@ -166,7 +166,7 @@
 			tasks: [{
 				id: "681DACF11F193771"
 				type: "checkmark"
-				title: "&4解锁第一章 &7支线"
+				title: "{tip.kubejs.unlock_stage_1a}"
 			}]
 		}
 		{
@@ -187,7 +187,7 @@
 			tasks: [{
 				id: "334D8AFF8C50C12B"
 				type: "item"
-				title: "&4完成第一章 &7支线"
+				title: "{tip.kubejs.finish_stage_1a}"
 				item: "kubejs:sealed_mechanism"
 				count: 64L
 				consume_items: false
@@ -211,7 +211,7 @@
 			tasks: [{
 				id: "28C41C062843C2CA"
 				type: "checkmark"
-				title: "&6解锁第二章"
+				title: "{tip.kubejs.unlock_stage_2}"
 			}]
 		}
 		{
@@ -233,7 +233,7 @@
 			tasks: [{
 				id: "5F9AFF953C18BCA1"
 				type: "item"
-				title: "&f完成第二章 &7主线"
+				title: "{tip.kubejs.finish_stage_2}"
 				item: "create:precision_mechanism"
 				count: 64L
 				consume_items: false
@@ -255,7 +255,7 @@
 			tasks: [{
 				id: "21753CBB528EAADF"
 				type: "checkmark"
-				title: "&2解锁第二章 &7支线"
+				title: "{tip.kubejs.unlock_stage_2a}"
 			}]
 		}
 		{
@@ -277,7 +277,7 @@
 			tasks: [{
 				id: "07155023816FE9A5"
 				type: "item"
-				title: "&2完成第二章 &7支线"
+				title: "{tip.kubejs.finish_stage_2a}"
 				item: "kubejs:infernal_mechanism"
 				count: 64L
 				consume_items: false
@@ -303,7 +303,7 @@
 			tasks: [{
 				id: "2F6FEDBB1BDCB36C"
 				type: "checkmark"
-				title: "&6解锁第三章"
+				title: "{tip.kubejs.unlock_stage_3}"
 			}]
 		}
 		{
@@ -323,7 +323,7 @@
 			tasks: [{
 				id: "008542DDF1A41CE3"
 				type: "item"
-				title: "&f完成第三章 &7主线"
+				title: "{tip.kubejs.finish_stage_3}"
 				item: "kubejs:inductive_mechanism"
 				count: 64L
 				consume_items: false
@@ -345,7 +345,7 @@
 			tasks: [{
 				id: "722CA19434E722FB"
 				type: "checkmark"
-				title: "&3解锁第三章 &7支线"
+				title: "{tip.kubejs.unlock_stage_3a}"
 			}]
 		}
 		{
@@ -360,7 +360,7 @@
 			tasks: [{
 				id: "6028CFF33AF50481"
 				type: "item"
-				title: "&3完成第三章 &7支线"
+				title: "{tip.kubejs.finish_stage_3a}"
 				item: "kubejs:abstruse_mechanism"
 				count: 64L
 				consume_items: false
@@ -386,7 +386,7 @@
 			tasks: [{
 				id: "74CFD83C501C4952"
 				type: "checkmark"
-				title: "&6解锁第四章"
+				title: "{tip.kubejs.unlock_stage_4}"
 			}]
 		}
 		{
@@ -412,7 +412,7 @@
 			tasks: [{
 				id: "331691FDB0F1DCCB"
 				type: "item"
-				title: "&f完成第四章 &7主线"
+				title: "{tip.kubejs.finish_stage_4}"
 				item: "kubejs:calculation_mechanism"
 				count: 64L
 				consume_items: false
@@ -438,7 +438,7 @@
 			tasks: [{
 				id: "251A91F6C21AEAFB"
 				type: "checkmark"
-				title: "&6解锁&5第五章"
+				title: "{tip.kubejs.unlock_stage_5}"
 			}]
 		}
 		{
@@ -459,7 +459,7 @@
 			tasks: [{
 				id: "638DC41EF1C7C493"
 				type: "checkmark"
-				title: "&6解锁&5挑战章"
+				title: "{tip.kubejs.unlock_challenage}"
 			}]
 		}
 		{
@@ -481,7 +481,7 @@
 			tasks: [{
 				id: "75F9C570E6B95343"
 				type: "checkmark"
-				title: "&6解锁第四章附属"
+				title: "{tip.kubejs.unlock_stage_4a}"
 			}]
 		}
 	]
