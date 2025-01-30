@@ -705,7 +705,7 @@
 			tasks: [{
 				id: "434AF907B41C5D19"
 				type: "item"
-				title: "任意唱片"
+				title: "{tip.kubejs.any_music_disc}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -726,7 +726,7 @@
 				{
 					id: "7FF7001764116001"
 					type: "custom"
-					title: "可重复"
+					title: "{tip.kubejs.repeatable}"
 					icon: "thermal:machine_cycle_augment"
 					tags: ["reset"]
 					auto: "no_toast"
@@ -1259,7 +1259,7 @@
 				{
 					id: "0D666C3C352901FA"
 					type: "custom"
-					title: "Clear Bad Omen"
+					title: "{tip.kubejs.clear_bad_omen}"
 					icon: "biomesoplenty:wildflower"
 					tags: ["bad_omen"]
 					team_reward: false
@@ -1268,7 +1268,7 @@
 				{
 					id: "77DE41861FF4DDCB"
 					type: "custom"
-					title: "可重复"
+					title: "{tip.kubejs.repeatable}"
 					icon: "thermal:machine_cycle_augment"
 					tags: ["reset"]
 					team_reward: true
@@ -1314,7 +1314,7 @@
 			tasks: [{
 				id: "305B8665F7A566F1"
 				type: "item"
-				title: "合成4096块木板"
+				title: "{tip.kubejs.planks}"
 				icon: "minecraft:oak_planks"
 				item: {
 					id: "itemfilters:tag"
@@ -1345,7 +1345,7 @@
 			tasks: [{
 				id: "169EFAAAE095C621"
 				type: "location"
-				title: "到达255层的高度"
+				title: "{tip.kubejs.arrive_the_top}"
 				icon: "minecraft:ladder"
 				dimension: "minecraft:overworld"
 				ignore_dimension: true
@@ -1527,7 +1527,7 @@
 			tasks: [{
 				id: "2DBA595DB41A6BDF"
 				type: "dimension"
-				title: "&8进入储存空间"
+				title: "{tip.kubejs.enter_containment}"
 				icon: {
 					id: "ftbquests:custom_icon"
 					Count: 1b
@@ -1620,7 +1620,7 @@
 			tasks: [{
 				id: "063E4D8B2C3995B1"
 				type: "stat"
-				title: "&d飞行距离"
+				title: "{tip.kubejs.flight}"
 				icon: {
 					id: "minecraft:elytra"
 					Count: 1b
@@ -1656,7 +1656,7 @@
 			tasks: [{
 				id: "14DD8DDE0199E93F"
 				type: "custom"
-				title: "游玩5000天"
+				title: "{tip.kubejs.game_time}"
 				icon: "minecraft:clock"
 			}]
 			rewards: [{
@@ -1700,7 +1700,7 @@
 			tasks: [{
 				id: "460F3FE4058A9CCF"
 				type: "dimension"
-				title: "探索 下界"
+				title: "{tip.kubejs.nether}"
 				icon: "minecraft:nether_gold_ore"
 				dimension: "minecraft:the_nether"
 			}]

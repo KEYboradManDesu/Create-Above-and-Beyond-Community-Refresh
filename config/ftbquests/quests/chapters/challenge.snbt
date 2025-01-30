@@ -9,18 +9,18 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&d&l挑战"
+			title: "{quest.challenge.introduce.title}"
 			icon: "minecraft:enchanting_table"
 			x: 0.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "&d挑战自我"
+			subtitle: "{quest.challenge.introduce.subtitle}"
 			description: [
-				"&d欢迎来到挑战章节！&r"
+				"{quest.challenge.introduce.text1}"
 				""
-				"这里的任务将仅仅作为&6可选的&r的挑战任务。"
+				"{quest.challenge.introduce.text2}"
 				""
-				"&6积极出谋划策吧！&r"
+				"{quest.challenge.introduce.text3}"
 			]
 			dependencies: ["638DC41EF1C7C493"]
 			hide: true
@@ -30,23 +30,23 @@
 				{
 					id: "35C83EAF34860A67"
 					type: "checkmark"
-					title: "好的"
+					title: "{tip.kubejs.sure}"
 				}
 				{
 					id: "7494ABC1DCFC7F69"
 					type: "checkmark"
-					title: "解锁 特别感谢"
+					title: "{tip.kubejs.unlock_thanks}"
 				}
 			]
 		}
 		{
-			title: "&2&l军火大亨"
+			title: "{quest.challenge.bullet.title}"
 			icon: "cgm:advanced_bullet"
 			x: -1.0d
 			y: 2.0d
 			shape: "square"
-			subtitle: "火药的味道"
-			description: ["能够武装整个世界的弹药产线。"]
+			subtitle: "{quest.challenge.bullet.subtitle}"
+			description: ["{quest.challenge.bullet.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["58E321BA4B90929F"]
 			optional: true
@@ -83,7 +83,7 @@
 				{
 					id: "526C86E7908E437D"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 			rewards: [{
@@ -94,12 +94,12 @@
 			}]
 		}
 		{
-			title: "&6&l查理的巧克力工厂"
+			title: "{quest.challenge.chocolate.title}"
 			icon: "create:bar_of_chocolate"
 			x: 1.0d
 			y: 2.0d
-			subtitle: "梦幻世界"
-			description: ["想象一片由巧克力制成的大海。"]
+			subtitle: "{quest.challenge.chocolate.subtitle}"
+			description: ["{quest.challenge.chocolate.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["58E321BA4B90929F"]
 			optional: true
@@ -114,7 +114,7 @@
 				{
 					id: "457570ABE5AECC38"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}

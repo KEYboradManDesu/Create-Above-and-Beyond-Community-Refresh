@@ -583,8 +583,8 @@
 							id: "minecraft:chest"
 						}
 						display: {
-							Lore: ["{\"text\":\"含有物品\",\"color\":\"gray\",\"italic\":\"false\"}"]
-							Name: "{\"text\":\"工具箱\",\"italic\":false}"
+							Lore: ["{\"translate\":\"tip.kubejs.has_item\",\"color\":\"gray\",\"italic\":\"false\"}"]
+							Name: "{\"translate\":\"tip.kubejs.toolbox\",\"italic\":false}"
 						}
 					}
 				}
@@ -1062,7 +1062,7 @@
 				{
 					id: "3CCE09D1715B54C7"
 					type: "item"
-					title: "任意 花"
+					title: "{tip.kubejs.any_flower}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b

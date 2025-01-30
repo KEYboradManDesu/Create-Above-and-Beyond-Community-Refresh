@@ -9,15 +9,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&6&l锻造合金"
+			title: "{quest.smithing.introduce.title}"
 			icon: "create:brass_ingot"
 			x: 0.0d
 			y: 0.0d
 			shape: "hexagon"
 			description: [
-				"一个关于大部分合金的锻造导图。"
+				"{quest.smithing.introduce.text1}"
 				""
-				"多数矿物能够在&6工作盆&r中熔化为熔融态矿物，随后借助搅拌设备进行充分搅拌，进而制备成合金。"
+				"{quest.smithing.introduce.text2}"
 			]
 			size: 2.0d
 			id: "17A57579F590ACAC"
@@ -28,6 +28,7 @@
 			}]
 		}
 		{
+			title: "{item.create.zinc_ingot}"
 			x: -6.0d
 			y: 0.0d
 			hide_dependency_lines: true
@@ -42,6 +43,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.copper_ingot}"
 			x: -5.0d
 			y: 0.0d
 			hide_dependency_lines: true
@@ -56,9 +58,10 @@
 			}]
 		}
 		{
+			title: "{item.create.brass_ingot}"
 			x: -3.0d
 			y: 0.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"3AF5C5159D86827F"
 				"59A942442920C132"
@@ -72,6 +75,7 @@
 			}]
 		}
 		{
+			title: "{item.create_dd.tin_ingot}"
 			x: 5.0d
 			y: 0.0d
 			hide_dependency_lines: true
@@ -85,6 +89,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.copper_ingot}"
 			x: 6.0d
 			y: 0.0d
 			hide_dependency_lines: true
@@ -98,9 +103,10 @@
 			}]
 		}
 		{
+			title: "{item.create_dd.bronze_ingot}"
 			x: 3.0d
 			y: 0.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"1D3B36C5A2E32CF4"
 				"38E04F0C1CD1CB64"
@@ -114,9 +120,10 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.rose_gold_ingot}"
 			x: -3.0d
 			y: 2.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"6925EF4B0880BDAE"
 				"37D0B656CA2288D2"
@@ -130,9 +137,10 @@
 			}]
 		}
 		{
+			title: "{item.thermal.electrum_ingot}"
 			x: 3.0d
 			y: 2.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"4F9E9AD2FA51491F"
 				"2ECD3B001CBC4587"
@@ -146,6 +154,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.copper_ingot}"
 			x: -5.0d
 			y: 2.0d
 			hide_dependency_lines: true
@@ -160,6 +169,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.gold_ingot}"
 			x: -6.0d
 			y: 2.0d
 			hide_dependency_lines: true
@@ -173,6 +183,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.gold_ingot}"
 			x: 5.0d
 			y: 2.0d
 			hide_dependency_lines: true
@@ -186,6 +197,7 @@
 			}]
 		}
 		{
+			title: "{item.thermal.silver_ingot}"
 			x: 6.0d
 			y: 2.0d
 			hide_dependency_lines: true
@@ -199,6 +211,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.gold_ingot}"
 			x: -6.0d
 			y: 6.0d
 			hide_dependency_lines: true
@@ -212,6 +225,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.netherite_scrap}"
 			x: -5.0d
 			y: 6.0d
 			hide_dependency_lines: true
@@ -225,9 +239,10 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.netherite_ingot}"
 			x: -3.0d
 			y: 6.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"6539829A06F21F65"
 				"0C907644FCAC99D0"
@@ -241,6 +256,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.iron_ingot}"
 			x: 0.0d
 			y: 2.0d
 			hide_dependency_lines: true
@@ -254,8 +270,10 @@
 			}]
 		}
 		{
+			title: "{item.createbigcannons.cast_iron_ingot}"
 			x: 0.0d
 			y: 4.0d
+			subtitle: "{quest.smithing.blasting.title}"
 			dependencies: ["12539AE0F13094A4"]
 			id: "2F6B33091FFE8BDA"
 			tasks: [{
@@ -266,7 +284,7 @@
 			}]
 		}
 		{
-			title: "蜂蜜或血"
+			title: "{quest.smithing.honey_or_blood.title}"
 			x: 0.0d
 			y: 5.0d
 			hide_dependency_lines: true
@@ -296,8 +314,10 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.pig_iron_ingot}"
 			x: 0.0d
 			y: 7.0d
+			subtitle: "{quest.smithing.fluid_mixing.title}"
 			dependencies: [
 				"0C1E893E76D79BF4"
 				"2F6B33091FFE8BDA"
@@ -311,6 +331,7 @@
 			}]
 		}
 		{
+			title: "{item.kubejs.coke_chunk}"
 			x: 0.0d
 			y: 8.0d
 			hide_dependency_lines: true
@@ -324,8 +345,10 @@
 			}]
 		}
 		{
+			title: "{item.create_dd.steel_ingot}"
 			x: 0.0d
 			y: 10.0d
+			subtitle: "{quest.smithing.fluid_mixing.title}"
 			dependencies: [
 				"7B724714C39037FD"
 				"30E719DACC9DC66F"
@@ -339,9 +362,10 @@
 			}]
 		}
 		{
+			title: "{item.thermal.constantan_ingot}"
 			x: -3.0d
 			y: 4.0d
-			subtitle: "熔融流体搅拌，感应炉锻造"
+			subtitle: "{quest.smithing.fluid_mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"1E04C7E83714441F"
 				"5C1C50DD0FB1EC4C"
@@ -355,9 +379,10 @@
 			}]
 		}
 		{
+			title: "{item.thermal.invar_ingot}"
 			x: 3.0d
 			y: 4.0d
-			subtitle: "辊压机锻造，感应炉锻造"
+			subtitle: "{quest.smithing.compressing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}"
 			dependencies: [
 				"257F1E41DC652589"
 				"347241E02696DE8F"
@@ -371,6 +396,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.copper_ingot}"
 			x: -5.0d
 			y: 4.0d
 			hide_dependency_lines: true
@@ -384,6 +410,7 @@
 			}]
 		}
 		{
+			title: "{item.thermal.nickel_ingot}"
 			x: -6.0d
 			y: 4.0d
 			hide_dependency_lines: true
@@ -397,6 +424,7 @@
 			}]
 		}
 		{
+			title: "{item.thermal.nickel_ingot}"
 			x: 5.0d
 			y: 4.0d
 			hide_dependency_lines: true
@@ -410,6 +438,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.iron_ingot}"
 			x: 6.0d
 			y: 4.0d
 			hide_dependency_lines: true
@@ -423,6 +452,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.netherite_scrap}"
 			x: -5.0d
 			y: 8.0d
 			hide_dependency_lines: true
@@ -436,6 +466,7 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.cobalt_ingot}"
 			x: -6.0d
 			y: 8.0d
 			hide_dependency_lines: true
@@ -449,9 +480,10 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.manyullyn_ingot}"
 			x: -3.0d
 			y: 8.0d
-			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			subtitle: "{quest.smithing.mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}{quest.smithing.split.title}{quest.smithing.melting.title}"
 			dependencies: [
 				"5D09D9C8DFBF8D4E"
 				"730FBA921648BBEB"
@@ -465,9 +497,10 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.hepatizon_ingot}"
 			x: 3.0d
 			y: 6.0d
-			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			subtitle: "{quest.smithing.mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}{quest.smithing.split.title}{quest.smithing.melting.title}"
 			dependencies: [
 				"1E33C45D1721C33E"
 				"70A96F7F02B910B5"
@@ -482,6 +515,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.copper_ingot}"
 			x: 6.0d
 			y: 6.0d
 			hide_dependency_lines: true
@@ -495,6 +529,7 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.cobalt_ingot}"
 			x: 5.0d
 			y: 6.0d
 			hide_dependency_lines: true
@@ -508,6 +543,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.quartz}"
 			x: 7.0d
 			y: 6.0d
 			hide_dependency_lines: true
@@ -521,9 +557,10 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.queens_slime_ingot}"
 			x: 3.0d
 			y: 8.0d
-			subtitle: "混合搅拌，感应炉锻造，治炼炉合金"
+			subtitle: "{quest.smithing.mixing.title}{quest.smithing.split.title}{quest.smithing.machine_smelting.title}{quest.smithing.split.title}{quest.smithing.melting.title}"
 			dependencies: [
 				"7A42FDF485FACEBD"
 				"497CE999920D8AAE"
@@ -538,6 +575,7 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.cobalt_ingot}"
 			x: 6.0d
 			y: 8.0d
 			hide_dependency_lines: true
@@ -551,6 +589,7 @@
 			}]
 		}
 		{
+			title: "{item.minecraft.gold_ingot}"
 			x: 5.0d
 			y: 8.0d
 			hide_dependency_lines: true
@@ -564,6 +603,7 @@
 			}]
 		}
 		{
+			title: "{item.tconstruct.magma_bottle}"
 			x: 7.0d
 			y: 8.0d
 			hide_dependency_lines: true

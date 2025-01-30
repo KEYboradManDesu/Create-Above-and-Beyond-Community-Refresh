@@ -122,7 +122,7 @@
 			x: -8.5d
 			y: 2.0d
 			shape: "circle"
-			subtitle: "【以粒为单位】"
+			subtitle: "{tip.kubejs.fluid_unit}"
 			dependencies: [
 				"18EDB4CD525CE110"
 				"715BBD0DF0136FF1"
