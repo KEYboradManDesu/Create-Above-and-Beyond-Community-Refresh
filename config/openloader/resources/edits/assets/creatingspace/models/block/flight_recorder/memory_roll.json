@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"2": "creatingspace:block/flight_recorder/axis",
+		"3": "creatingspace:block/flight_recorder/axis_top",
+		"particle": "creatingspace:block/flight_recorder/axis"
+	},
+	"elements": [
+		{
+			"name": "Axis",
+			"from": [6, 6, 0],
+			"to": [10, 10, 16],
+			"faces": {
+				"north": {"uv": [6, 6, 10, 10], "rotation": 180, "texture": "#3"},
+				"east": {"uv": [6, 0, 10, 16], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [6, 6, 10, 10], "texture": "#3"},
+				"west": {"uv": [6, 0, 10, 16], "rotation": 270, "texture": "#2"},
+				"up": {"uv": [6, 0, 10, 16], "texture": "#2"},
+				"down": {"uv": [6, 0, 10, 16], "rotation": 180, "texture": "#2"}
+			}
+		}
+	]
+}

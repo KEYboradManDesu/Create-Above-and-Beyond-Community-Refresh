@@ -1,7 +1,7 @@
 {
   "ad_astra:earth_orbit": "地球轨道",
   "ad_astra:moon_orbit": "月球轨道",
-  "ad_astra:the_moon": "月球",
+  "ad_astra:moon": "月球",
   "ad_astra:mars": "火星",
   "ad_astra:mars_orbit": "火星轨道",
   "ad_astra:venus": "金星",
@@ -20,6 +20,9 @@
   "propellant_type.ad_astra.fuel": "燃油",
   "propellant_type.ad_astra.cryo_fuel": "凛冰燃料",
   
+  "item.creatingspace.exhaust_pack":"火箭喷嘴",
+  "item.creatingspace.power_pack":"火箭动力包",
+
   "block.creatingspace.rocket_engineer_table": "火箭工程师工作台",
   "block.creatingspace.rocket_engineer_table.tooltip.summary" : "用于制作引擎蓝图的工作台。",
   "block.creatingspace.rocket_engine": "火箭引擎",
