@@ -1,0 +1,1 @@
+The texture of the Angel-Ring comes from the AzureDooms-Angel-Ring. https://github.com/AzureDoom/Doom-Angel-Ring
