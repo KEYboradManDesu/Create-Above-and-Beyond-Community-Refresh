@@ -2668,7 +2668,7 @@
 			x: -1.0d
 			y: 26.0d
 			shape: "hexagon"
-			subtitle: "1 {item.thermal.gold_coin}"
+			subtitle: "2 {item.thermal.gold_coin}"
 			can_repeat: true
 			id: "7052D91E9290C14F"
 			tasks: [{

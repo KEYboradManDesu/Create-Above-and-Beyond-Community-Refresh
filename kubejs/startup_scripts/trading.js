@@ -572,7 +572,7 @@ onEvent('item.registry', event => {
 		simple("Molten Core", RQ('molten_core', 1), 48, S, 0xED7102, 0xFAFC58)
 		simple("Eye of the Storm", RQ('eye_of_the_storm', 1), 2, G, 0xFCD607, 0x96FC52)
 		simple("Frozen Core", RQ('frozen_core', 1), 48, S, 0x008DC2, 0x7571FB)
-		simple("Nebulous Heart", RQ('nebulous_heart', 1), 1, G, 0x6200A0, 0xE500C3)
+		simple("Nebulous Heart", RQ('nebulous_heart', 1), 2, G, 0x6200A0, 0xE500C3)
 		simple("Guardian Spike", RQ('guardian_spike', 1), 1, G, 0x7F4215, 0xE29964)
 		simple("Phantom Membrane", MC('phantom_membrane', 1), 48, S, 0x6E506B, 0xC1B79F)
 		simple("Blaze Cake", CR('blaze_cake', 1), 16, S, 0x834141, 0xFCE083)
