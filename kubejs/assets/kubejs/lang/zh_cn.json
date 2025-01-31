@@ -375,7 +375,7 @@
 "tip.kubejs.clear_bad_omen":"清除 不祥之兆 效果",
 "item.reliquary.witch_hat_unformatted":"女巫之帽",
 "tip.kubejs.any_music_disc":"任意唱片",
-"tip.kubejs.any_flower":"任意 花",
+"tip.kubejs.any_flower":"任意花",
 "tip.kubejs.game_time":"游玩5000天",
 "tip.kubejs.nether":"探索下界",
 "tip.kubejs.planks":"合成4096块木板",
@@ -411,6 +411,13 @@
 "tip.kubejs.unlock_challenage":"&6解锁&5挑战章",
 "tip.kubejs.sure":"好的",
 "tip.kubejs.unlock_thanks":"解锁 特别感谢",
+"tip.kubejs.place_dirt":"放置泥土",
+"tip.kubejs.place_cobblestone":"放置圆石",
+"tip.kubejs.break_scaffolding":"使用并拆毁脚手架",
+"tip.kubejs.any_stripped_log":"任意去皮原木",
+"tip.kubejs.any_planks":"任意木板",
+"tip.kubejs.any_wooden_slab":"任意木台阶",
+"tip.kubejs.automatic_extraction":"自动提取",
 
 "quest.chaptergroup.tools.name":"&f&l 工具箱",
 "quest.chaptergroup.tech_tree.name":"&f&l 科技树",
@@ -524,7 +531,7 @@
 
 "quest.bulletin.mysterious_button.title":"&7&l神秘按钮",
 "quest.bulletin.mysterious_button.target1":"按下按钮",
-"quest.bulletin.mysterious_button.text1":"按下这个按钮，&6你将获得 8 银币&f，但是其中 4 银币将用于支付其运输费用",
+"quest.bulletin.mysterious_button.text1":"按下这个按钮，你将获得我们捐赠的 &68 银币&f，请在收货后支付 4 银币作为运输费用",
 
 "quest.bulletin.collect_crops.title":"&7&l作物收集",
 "quest.bulletin.collect_more_crops.title":"&7&l丰富的作物收集",
@@ -954,5 +961,99 @@
 "quest.challenge.chocolate.subtitle":"梦幻世界",
 "quest.challenge.chocolate.text1":"想象一片由巧克力制成的大海。",
 
-"tip.kubejs.automated":"自动生产"
+"tip.kubejs.automated":"自动生产",
+"tip.kubejs.completed":"已完成",
+
+"quest.stage_1.introduce.title":"&6&l扬帆起航",
+"quest.stage_1.introduce.subtitle":"&6第一章",
+"quest.stage_1.introduce.target1":"&6开始！",
+"quest.stage_1.introduce.text1":"&6欢迎来到科技树！&r",
+"quest.stage_1.introduce.text2":"这些任务告诉你接下来的生产线应该如何制作，跟随指引即可以满足工厂的充足材料供应。任务间的连接线代表了&6生产/处理&r不同材料时的顺序。",
+"quest.stage_1.introduce.text3":"&6积极出谋划策吧！&r",
+
+"quest.stage_1.about_advanced_machine.title":"旁门左道...",
+"quest.stage_1.about_advanced_machine.text1":"也许你并不想死板地跟着任务前进，没有问题。你可以选择只建造你想要的机械，甚至全部由双手完成而留下时间去探索，有余力的你还可以试试发掘新的制造方法或使用高阶材料来简化生产流程。但别忘了，这些可不能是你偷工减料的理由。",
+"quest.stage_1.about_advanced_machine.text2":"&7玩的开心才最重要！",
+
+"quest.stage_1.logs.title":"钢铁之“森”",
+"quest.stage_1.logs.subtitle":"步骤 1",
+"quest.stage_1.logs.text1":"首先，你需要木头，很多木头以及更多的木头。从大自然一昧地索取总不是个长久的办法，你最好赶快实现木材的自给自足和充足供应。",
+"quest.stage_1.logs.text2":"合成一些&6动力锯&r试试，它们可是伐木好手。",
+"quest.stage_1.logs.text3":"&7每当你能够自动生产某一物品时，就可以点击上方“自动生产”复选框以继续下一任务了。",
+
+"quest.stage_1.bedrock.title":"黄金“石”代",
+"quest.stage_1.bedrock.subtitle":"步骤 2",
+"quest.stage_1.bedrock.text1":"收集安山岩可是件累活。不过万幸的是，&6基岩&r可以让上方的岩浆和水迅速变成安山岩...和其他怪石。",
+"quest.stage_1.bedrock.text2":"&6动力钻头&r可以有效地代替你手中的镐子。",
+
+"quest.stage_1.dripstone.title":"浸出液",
+"quest.stage_1.dripstone.subtitle":"步骤 3",
+"quest.stage_1.dripstone.text1":"把&6石灰岩&r和&6水&r混合并压制就可以批量生产滴水石块了，而后者则可以被磨制成粘土球。",
+
+"quest.stage_1.kelp.title":"海底宫殿...",
+"quest.stage_1.kelp.subtitle":"步骤 4",
+"quest.stage_1.kelp.text1":"海带是&6安山合金&r的必要原材料，而后者正是你第一条生产线上的主角，同时也是许多机械的必要原料之一。",
+"quest.stage_1.kelp.text2":"海带可以轻易地被&6动力收割机&r收集。",
+
+"quest.stage_1.rope_pulley.title":"安山电梯↑↓",
+"quest.stage_1.rope_pulley.subtitle":"步骤 5",
+"quest.stage_1.rope_pulley.text1":"你可能需要一种更加合理的方式来利用空间。",
+
+"quest.stage_1.clay_ball.title":"磨坊主的工具",
+"quest.stage_1.clay_ball.subtitle":"步骤 6-1",
+"quest.stage_1.clay_ball.text1":"&6石磨&r可以将滴水石块处理成粘土球。",
+
+"quest.stage_1.algal_blend.title":"泡个“藻”",
+"quest.stage_1.algal_blend.subtitle":"步骤 6-2",
+"quest.stage_1.algal_blend.text1":"快来搓碟！将海带和黏土球放到&6动力搅拌器&r下的工作盆中并提供动力，把它们搅拌均匀。",
+
+"quest.stage_1.algal_brick.title":"波力海苔",
+"quest.stage_1.algal_brick.subtitle":"步骤 6-3",
+"quest.stage_1.algal_brick.text1":"你需要将上一步产出的海藻混合物烧制成为更坚硬的海藻砖。熔炉确实很好用，但为什么不考虑一下不需要燃料的岩浆和&6鼓风机&r的组合呢？",
+
+"quest.stage_1.andesite_alloy.title":"如果“藻”知道...",
+"quest.stage_1.andesite_alloy.subtitle":"步骤 6-4",
+"quest.stage_1.andesite_alloy.title":"没错！你需要将它们再次搅拌——不过这回的主角变成了&6海藻砖&r和你辛苦运上来的&6安山岩圆石。&r",
+
+"quest.stage_1.stripped_log.title":"削去外皮",
+"quest.stage_1.stripped_log.subtitle":"步骤 7-1",
+"quest.stage_1.stripped_log.text1":"面向上方的&6动力锯&r则可以进一步处理原木...",
+
+"quest.stage_1.planks.title":"再次切割",
+"quest.stage_1.planks.subtitle":"步骤 7-2",
+"quest.stage_1.planks.text1":"...继续处理...",
+
+"quest.stage_1.wooden_slab.title":"刀法精湛",
+"quest.stage_1.wooden_slab.subtitle":"步骤 7-3",
+"quest.stage_1.wooden_slab.text1":"...再来一次，把它们切割成一切构件的基础材料。",
+"quest.stage_1.wooden_slab.text2":"&7记得在动力锯的过滤槽中放入这一步需要处理的物品，不然你猜不到它们会输出什么。",
+
+"quest.stage_1.kinetic_mechanism.title":"扭一扭，按一按",
+"quest.stage_1.kinetic_mechanism.subtitle":"步骤 8",
+"quest.stage_1.kinetic_mechanism.text1":"将搅拌好的&6安山合金&r华丽地安装到&6木质台阶&r上，优雅地收尾你的第一条生产线。",
+
+"quest.stage_1.andesite_machine.title":"&f&l第一章完成！",
+"quest.stage_1.andesite_machine.subtitle":"恭喜！现在你可以自动生产&6动力构件&r了，你的工厂已然初具雏形！不要错过这个完美的契机，继续向前努力！",
+"quest.stage_1.andesite_machine.text1":"再回顾一遍你的生产线，是否有些地方的构造不太合理？或者有些瓶颈你还没有发现？抑或是有什么可以更加优化的地方？",
+"quest.stage_1.andesite_machine.text2":"&7要知道，如果你的安山岩生产机构极其高效，沙子的供应却不足，那你的安山合金产量也不会高到哪去...这可是会被人笑话的！",
+
+"quest.stage_1.extractor.title":"不要砍尽劈绝",
+"quest.stage_1.extractor.subtitle":"步骤 9-1",
+"quest.stage_1.extractor.text1":"试着把提取器放置在一棵完整的树木旁然后等待，你将会得到&4树脂流体&r！",
+"quest.stage_1.extractor.text2":"&7小提示：&6橡胶树苗(rubber_sapling)&7种出来的树能提供两倍的树脂产量。",
+
+"quest.stage_1.rubber.title":"阿姨，压一压",
+"quest.stage_1.rubber.subtitle":"步骤 9-2",
+"quest.stage_1.rubber.text1":"用流体管道和动力泵将&4树脂流体&r泵到工作盆中，再用辊压机使其压制成型。",
+
+"quest.stage_1.cured_rubber.title":"火焰固化剂",
+"quest.stage_1.cured_rubber.subtitle":"步骤 9-3",
+"quest.stage_1.cured_rubber.text1":"最后一步，用火焰洗礼刚刚成型的&4固态橡胶，&r使其硫化！",
+"quest.stage_1.cured_rubber.text2":"Bon Appétit!&7&o（祝你胃口好！）&r",
+
+"quest.stage_1.sealed_mechanism.title":"快把缺口缝上",
+"quest.stage_1.sealed_mechanism.text1":"这一步很简单，以至于你完全可以用双手来完成。如果你想自动生产，晚些时候再用&4动力合成器&r替换你的工作台也无妨。",
+
+"quest.stage_1.copper_machine.title":"&4&l第一章支线完成！",
+"quest.stage_1.copper_machine.text1":"好样的，现在你有足够的&4气密构件&r了！以后你肯定会感谢你自己的！"
 }

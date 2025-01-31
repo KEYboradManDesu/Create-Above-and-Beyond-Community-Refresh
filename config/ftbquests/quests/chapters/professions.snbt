@@ -1400,6 +1400,7 @@
 				{
 					id: "77FB5BC8EBA34E9E"
 					type: "questsadditions:place"
+					title: "{tip.kubejs.place_dirt}"
 					block_type: 0
 					block: "minecraft:dirt"
 					value: 2048L
@@ -1409,6 +1410,7 @@
 				{
 					id: "2F27E50B19531F11"
 					type: "questsadditions:place"
+					title: "{tip.kubejs.place_cobblestone}"
 					block_type: 0
 					block: "minecraft:cobblestone"
 					value: 4096L
@@ -1416,17 +1418,9 @@
 					replace: false
 				}
 				{
-					id: "732C7F15844ADAB0"
-					type: "questsadditions:place"
-					block_type: 0
-					block: "minecraft:scaffolding"
-					value: 1024L
-					replaced: "minecraft:air"
-					replace: false
-				}
-				{
 					id: "01C3EEEC8E9C8F66"
 					type: "questsadditions:break"
+					title: "{tip.kubejs.break_scaffolding}"
 					block_type: 0
 					block: "minecraft:scaffolding"
 					value: 1024L
@@ -1654,10 +1648,10 @@
 			subtitle: "32 {item.thermal.silver_coin}"
 			id: "38DCB9AD8BBDEA34"
 			tasks: [{
-				id: "14DD8DDE0199E93F"
-				type: "custom"
+				id: "05D20AFA36D61491"
+				type: "questsadditions:days"
 				title: "{tip.kubejs.game_time}"
-				icon: "minecraft:clock"
+				days: 5000
 			}]
 			rewards: [{
 				id: "4F21C589F785CEDF"
