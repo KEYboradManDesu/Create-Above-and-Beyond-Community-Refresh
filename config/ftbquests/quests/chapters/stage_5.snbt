@@ -59,6 +59,7 @@
 				"73473DC7269EC5B0"
 				"6A156D11D983661D"
 				"13E3B63C2D69BBC9"
+				"146AB3E314AA39B3"
 			]
 			size: 2.0d
 			id: "47965C310D9847DC"
@@ -930,10 +931,7 @@
 			y: 10.0d
 			shape: "circle"
 			description: ["精炼油可以被加工成航天燃油。"]
-			dependencies: [
-				"25B76A897D97C9F1"
-				"47965C310D9847DC"
-			]
+			dependencies: ["25B76A897D97C9F1"]
 			id: "146AB3E314AA39B3"
 			tasks: [{
 				id: "589110962F215DA7"
