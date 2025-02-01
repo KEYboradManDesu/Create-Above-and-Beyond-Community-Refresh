@@ -47,6 +47,9 @@ onEvent('item.registry', event => {
 	global.professions = []
 	global.transactions = []
 
+	event.create("blank_card")
+			.texture("kubejs:item/trade/blank_card")
+
 	let profession = (name, c1, c2, transactions) => {
 		let id = name.toLowerCase().replace("'", "").split(' ').join('_')
 		global.professions.push(id)

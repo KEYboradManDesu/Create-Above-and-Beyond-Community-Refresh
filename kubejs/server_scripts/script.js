@@ -4576,6 +4576,8 @@ let trade = (card_id, ingredient, output) => {
 		],
 		energy: 1000
 	})
+
+	event.custom(ifiniDeploying(Ingredient.of(card_id).toJson(), 'kubejs:blank_card', Ingredient.of(card_id).toJson()))
 }
 
 global.trades.forEach(element => {
@@ -4591,6 +4593,17 @@ global.professions.forEach(element => {
 			trade(KJ('profession_card_' + element), transaction.in, transaction.out)
 		})
 });
+
+// 空白铭牌
+let bc = CRD('tin_sheet')
+event.recipes.createSequencedAssembly([
+	KJ('blank_card', 4),
+], F('#plates/tin'), [
+	event.recipes.createCutting(bc, bc)
+]).transitionalItem(bc)
+	.loops(3)
+	.id('kubejs:blank_card')
+
 }
 
 function unify(event) {

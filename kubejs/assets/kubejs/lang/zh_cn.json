@@ -232,6 +232,8 @@
 "block.kubejs.accellerator_glowstone":"§6荧石§r稳定剂",
 "block.kubejs.accellerator_redstone":"§c红石§r稳定剂",
 
+"item.kubejs.blank_card":"§6空白铭牌",
+
 "item.kubejs.profession_card_farming":"§6职业铭牌：§r农民",
 "item.kubejs.profession_card_carpentry":"§6职业铭牌：§r木匠",
 "item.kubejs.profession_card_mining":"§6职业铭牌：§r矿工",
