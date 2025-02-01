@@ -3138,7 +3138,7 @@ for (let index = 0; index < colors.length; index++) {
 	var element = colors[index];
 if (index == colors.length - 1)
 	continue;
-event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(KJ('waste'), 250)], AE2(element + '_paint_ball'))
+event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(CRD('chromatic_waste'), 250)], AE2(element + '_paint_ball'))
 }
 
 event.recipes.createMechanicalCrafting(CRD('chromatic_compound'), [
