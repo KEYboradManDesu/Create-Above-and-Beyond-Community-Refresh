@@ -1,5 +1,5 @@
 onEvent("ponder.registry", (event) => {
-	e.create("tconstruct:smeltery_controller")
+	event.create("tconstruct:smeltery_controller")
 		.tag("kubejs:ponder")
 		.scene("kubejs:smeltery", "冶炼炉", "kubejs:smeltery", (scene) => {
 			// 显示底盘
