@@ -968,7 +968,7 @@
 
 "quest.stage_1.introduce.title":"&6&l扬帆起航",
 "quest.stage_1.introduce.subtitle":"&6第一章",
-"quest.stage_1.introduce.target1":"&6开始！",
+"tip.kubejs.start":"&6开始！",
 "quest.stage_1.introduce.text1":"&6欢迎来到科技树！&r",
 "quest.stage_1.introduce.text2":"这些任务告诉你接下来的生产线应该如何制作，跟随指引即可以满足工厂的充足材料供应。任务间的连接线代表了&6生产/处理&r不同材料时的顺序。",
 "quest.stage_1.introduce.text3":"&6积极出谋划策吧！&r",
@@ -1057,5 +1057,130 @@
 "quest.stage_1.sealed_mechanism.text1":"这一步很简单，以至于你完全可以用双手来完成。如果你想自动生产，晚些时候再用&4动力合成器&r替换你的工作台也无妨。",
 
 "quest.stage_1.copper_machine.title":"&4&l第一章支线完成！",
-"quest.stage_1.copper_machine.text1":"好样的，现在你有足够的&4气密构件&r了！以后你肯定会感谢你自己的！"
+"quest.stage_1.copper_machine.text1":"好样的，现在你有足够的&4气密构件&r了！以后你肯定会感谢你自己的！",
+
+"quest.stage_2.introduce.title":"&6&l初入门道",
+"quest.stage_2.introduce.subtitle":"&6第二章",
+"quest.stage_2.introduce.text1":"这一章节自动化的目标是&6电子管&r，把它安装在&6动力构件&r上就可以升往下一级别。",
+"quest.stage_2.introduce.text2":"&6积极发挥创意！&r",
+
+"quest.stage_2.brass.title":"炼丹炉",
+"quest.stage_2.brass.subtitle":"步骤 10",
+"quest.stage_2.brass.text1":"这台装置并不严格是生产线中的一部分，但它举足轻重。",
+"quest.stage_2.brass.text2":"通过灵活使用&6冶炼炉、动力搅拌器&r和&6流体管道，&r你可以锻造出许多合金，&6黄铜&r便是其中之一。",
+"quest.stage_2.brass.text3":"你可以在&6工作盆&r中加热并搅拌&6铜&r和&6锌&r制造&6黄铜。&r如果要制造其它合金，则需要用到&6冶炼炉。&r",
+"quest.stage_2.brass.text4":"如果你不想搞得太麻烦，可以尝试制作一个输入金属锭→输出合金锭的半自动机械装置，够你用了。",
+
+"quest.stage_2.sky_dust.title":"逆熵陨石",
+"quest.stage_2.sky_dust.subtitle":"步骤 11",
+"quest.stage_2.sky_dust.text1":"你可以无限压榨它。这些&6陨石&r尽管数次粉身碎骨却并不会失去质量？迈尔的棺材板压不住啦！",
+"quest.stage_2.sky_dust.text2":"四处转转，也许你就能找到一个巨坑，那正是陨石坠落的迹象。如果你找不到，试试让&6陨石罗盘&r为你指路。",
+"quest.stage_2.sky_dust.text3":"&7安资都害怕你压榨陨石的样子。",
+
+"quest.stage_2.water.title":"农夫山泉",
+"quest.stage_2.water.text1":"第二章的装置需要充足的水源供应。也许你可以考虑建在水源地旁并使用&6流体管道&r和&6流体泵&r建造流体运输网络以满足需求。",
+
+"quest.stage_2.sand.title":"砂流之庭",
+"quest.stage_2.sand.text1":"首先，我们需要沙子以&6合成赛特斯石英种子&r。但当你制作出一些&6精密构件&r后，就可以用&6动力合成器&r代替这一步骤了。",
+
+"quest.stage_2.certus_seed.title":"种下希望...",
+"quest.stage_2.certus_seed.subtitle":"步骤 12-1",
+"quest.stage_2.certus_seed.text1":"这片石英也太小了。往里面注水或许能把它变大...",
+"quest.stage_2.certus_seed.text2":"如果你不想等待石英种子在水中泡几小时，你可以合成一些&6注液器&r来加速进程。",
+
+"quest.stage_2.certus_crystal.title":"千年孤独",
+"quest.stage_2.certus_crystal.subtitle":"步骤 12-2",
+"quest.stage_2.certus_crystal.text1":"你见证了它们的成长！当然，别忘了及时用一些&6赛特斯石英水晶&r重新合成&6赛特斯石英种子&r以使不断循环成为可能。",
+
+"quest.stage_2.charged_certus.title":"循环能源",
+"quest.stage_2.charged_certus.subtitle":"步骤 13",
+"quest.stage_2.charged_certus.text1":"稍稍改造一下你的&6充能器，&r让它能够循环不断地给装置13-2所需要的&6赛特斯石英水晶&r充能。",
+"quest.stage_2.charged_certus.text2":"应用能源2的&6充能器&r或CC:A的&6特斯拉线圈&r似乎是个不错的选择，你可以用&6斯特林能源炉&r为其提供临时能源。",
+
+"quest.stage_2.centrifuge.title":"超大规格",
+"quest.stage_2.centrifuge.subtitle":"步骤 13-A",
+"quest.stage_2.centrifuge.text1":"使用&6离心机&r来大规模生产你需要的流体。",
+"quest.stage_2.centrifuge.text2":"&7注意：&6离心机&7在运作时无法输入输出物品。",
+
+"quest.stage_2.sky_stone_flowing.title":"陨石莫吉托",
+"quest.stage_2.sky_stone_flowing.subtitle":"步骤 14-1",
+"quest.stage_2.sky_stone_flowing.text1":"将这种易溶于水的粉末与&6水&r搅拌，或许能获得有趣的流体...",
+
+"quest.stage_2.redstone_flowing.title":"感电",
+"quest.stage_2.redstone_flowing.subtitle":"步骤 14-2",
+"quest.stage_2.redstone_flowing.text1":"&6充能赛特斯石英水晶&r所蕴含的能量足以让流体中的分子破裂，原子重组，得到&6熔融红石。&r",
+"quest.stage_2.redstone_flowing.text2":"&7失去能量的&6赛特斯石英水晶&7并不会消失，你可以将它再次充能。",
+
+"quest.stage_2.rose_quartz.title":"搞颜色",
+"quest.stage_2.rose_quartz.subtitle":"步骤 14-3",
+"quest.stage_2.rose_quartz.text1":"最后一个&6动力搅拌器&r会用&6熔融红石&r对平平无奇的&6赛特斯石英水晶&r进行一次彻头彻尾的改造，仿佛为其注入了新的活力...",
+"quest.stage_2.rose_quartz.text2":"&7&o（矿物学家们，对不起了）",
+
+"quest.stage_2.cobblestone.title":"熨烫工艺",
+"quest.stage_2.cobblestone.subtitle":"步骤 15-1",
+"quest.stage_2.cobblestone.text1":"你可以从&6圆石&r中源源不断地提取铁，不过这一过程极为缓慢。",
+"quest.stage_2.cobblestone.text2":"先放置一些&6动力钻头&r来破坏和收集刷石机产出的圆石。",
+
+"quest.stage_2.gravel.title":"高级缝纫术",
+"quest.stage_2.gravel.subtitle":"步骤 15-2",
+"quest.stage_2.gravel.text1":"先把&6圆石&r磨制成&6沙砾。&r",
+
+"quest.stage_2.iron_nugget.title":"微量元素",
+"quest.stage_2.iron_nugget.subtitle":"步骤 15-3",
+"quest.stage_2.iron_nugget.text1":"用&6鼓风机&r洗涤&6沙砾&r也许能让其中的燧石和铁粒重见天日。",
+
+"quest.stage_2.molten_iron.title":"呜哇，化掉啦",
+"quest.stage_2.molten_iron.subtitle":"步骤 15-4",
+"quest.stage_2.molten_iron.text1":"把&6铁粒&r扔进你的高温熔炼设备里以生产熔融铁。匠魂的&6冶炼炉&r是最优选择。",
+
+"quest.stage_2.electron_tube.title":"第二面墙",
+"quest.stage_2.electron_tube.subtitle":"步骤 15-5",
+"quest.stage_2.electron_tube.text1":"将几滴炽热的&6熔融铁&r注入&6玫瑰石英，&r盘虬在石英内的铁一旦冷却，&6电子管&r那精密的电路就形成了。",
+
+"quest.stage_2.screwdriver.title":"武装到牙齿！",
+"quest.stage_2.screwdriver.text1":"多贮存些&2螺丝刀&r是个好习惯。",
+"quest.stage_2.screwdriver.text2":"&7像&2手锯&7一样，它们消耗得很慢，所以不必制造自动生产线。",
+
+"quest.stage_2.precision_mechanism.title":"继续部署",
+"quest.stage_2.precision_mechanism.subtitle":"步骤 16",
+"quest.stage_2.precision_mechanism.text1":"在&6动力构件&r上安装电子管就可以批量生产&6精密构件&r了，你的第二条生产线就此结束！",
+
+"quest.stage_2.salvage.title":"Oh-Scarp！",
+"quest.stage_2.salvage.subtitle":"",
+"quest.stage_2.salvage.text1":"最不想看到的事情还是发生了，你的生产线出现了&6残次品&r。虽然损毁率很低，但是小小的异常也会导致生产的停滞。",
+"quest.stage_2.salvage.text2":"&7利用好&6黄铜隧道&7，它们能有效的过滤传送带上的物品。",
+
+"quest.stage_2.brass_machine.title":"&f&l第二章完成！",
+"quest.stage_2.brass_machine.subtitle":"恭喜！你现在不用再为&6精密构件&r供应不足而发愁了！自豪地想想你是如何克服所有困难的吧！",
+"quest.stage_2.brass_machine.text1":"&7在对生产线上的不足之处进行简要休整后，让我们继续在&a纵览&7中解锁更多内容！",
+
+"quest.stage_2.twisting_vines.title":"两面包夹芝士 I",
+"quest.stage_2.twisting_vines.subtitle":"步骤 17-1",
+"quest.stage_2.twisting_vines.text1":"&2酷热构件&r难以驾驭，而生产它们更是需要足够的灵魂精华。幸运的是，生长在&2下界&r的&2缠怨藤&r正以灵魂作为养料。",
+"quest.stage_2.twisting_vines.text2":"&2缠怨藤&r向上生长，你可以用&2动力收割机&r收割它们，就像收割海带那样。",
+
+"quest.stage_2.weeping_vines.title":"两面包夹芝士 II",
+"quest.stage_2.weeping_vines.subtitle":"步骤 17-2",
+"quest.stage_2.weeping_vines.text1":"&2垂泪藤&r向下生长，但你照样可以用&2动力收割机&r来收割。",
+"quest.stage_2.weeping_vines.text2":"&7如果你嫌烦的话，可以尝试用一套装置同时收集两种藤蔓。",
+
+"quest.stage_2.liquid_soul.title":"灵魂朗姆酒",
+"quest.stage_2.liquid_soul.subtitle":"步骤 17-3",
+"quest.stage_2.liquid_soul.text1":"把所有藤蔓放进&2工作盆&r中，然后搅拌...",
+
+"quest.stage_2.blaze_burner.title":"炎之律者",
+"quest.stage_2.blaze_burner.text1":"这是你第一次接触这么高的温度——你需要一个&2烈焰人燃烧室&r来使材料达到足够的温度！对着&2烈焰人&r或&2烈焰人刷怪笼&r使用&2烈焰人燃烧室&r就可以将它们收入囊中。",
+
+"quest.stage_2.lava.title":"使鬼推磨",
+"quest.stage_2.lava.subtitle":"步骤 18-1",
+"quest.stage_2.lava.text1":"每生产一个&2锌机器&r总计需要&224桶熔岩。&r你也许感觉这并不环保，但是仅仅将一个&2软管滑轮&r伸入熔岩湖就能够解决燃眉之急。",
+
+"quest.stage_2.infernal_mechanism.title":"疯狂星期四",
+"quest.stage_2.infernal_mechanism.subtitle":"步骤 18-2",
+"quest.stage_2.infernal_mechanism.text1":"向&2精密构件&r不断浇筑特定流体就能够将其升格为&2酷热构件！&r",
+"quest.stage_2.infernal_mechanism.text2":"再次重申，将这些支线的生产自动化并不是什么紧迫要务。因为在后续的生产中，支线产物并不是必要的。",
+"quest.stage_2.infernal_mechanism.text3":"&7一个将&2精密构件&7转换为&2酷热构件&7的半自动化机器就已经足够了。相信我，你不会想要那么多&2酷热构件&7的。",
+
+"quest.stage_2.zinc_machine.title":"&2&l第二章支线完成！",
+"quest.stage_2.zinc_machine.text1":"宛如天工！你完成了下界带来的许多困难挑战，这肯定给予了你继续前进的莫大信心！"
 }
