@@ -1,10 +1,4 @@
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	brassMachine(event)
-})
-
-function brassMachine(event) {
 
     event.remove({ output: AE2("sky_dust") })
     event.recipes.create.milling([AE2('sky_dust'), AE2('sky_stone_block')], AE2('sky_stone_block')).processingTime(1000)
@@ -71,4 +65,4 @@ function brassMachine(event) {
     event.smithing('createdieselgenerators:huge_diesel_engine', 'createdieselgenerators:large_diesel_engine', 'create_dd:reinforcement_plating')
     event.recipes.create.mechanical_crafting('createdieselgenerators:huge_diesel_engine', "AB", { A: 'createdieselgenerators:large_diesel_engine', B: 'create_dd:reinforcement_plating' })
 
-}
+})

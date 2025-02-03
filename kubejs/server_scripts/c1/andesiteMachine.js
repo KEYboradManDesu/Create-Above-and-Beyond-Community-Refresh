@@ -2,10 +2,6 @@
 require('../common.js');
 
 ServerEvents.recipes(event => {
-	andesiteMachine(event)
-})
-
-function andesiteMachine(event) {
 
     wood_types.forEach(wood => {
         event.recipes.create.cutting(['2x ' + wood + '_slab'], wood + '_planks').processingTime(50)
@@ -135,4 +131,4 @@ function andesiteMachine(event) {
     event.remove({ output: 'create_dd:bronze_drill' })
     event.smithing('create_dd:bronze_drill', 'create:mechanical_drill', 'create_dd:bronze_casing')
     event.recipes.create.mechanical_crafting('create_dd:bronze_drill', "AB", { A: 'create:mechanical_drill', B: 'create_dd:bronze_casing' })
-}
+})

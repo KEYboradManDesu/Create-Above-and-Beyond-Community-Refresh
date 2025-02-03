@@ -1,12 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    alloys(event)
-})
-
-function alloys(event) {
-
     event.remove({ id: TC('smeltery/alloys/molten_bronze') })
     event.remove({ id: TC('smeltery/alloys/molten_brass') })
     event.remove({ id: TC('smeltery/alloys/molten_invar') })
@@ -144,4 +136,4 @@ function alloys(event) {
         TE('silver_coin', 9)
     ]).superheated().processingTime(300)
 
-}
+})

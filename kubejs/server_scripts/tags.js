@@ -1,8 +1,4 @@
 // Priority: 900
-
-// 引用common.js
-require('./common.js');
-
 console.info('Starting to load KubeJS tags...')
 
 ServerEvents.tags('item', event => {

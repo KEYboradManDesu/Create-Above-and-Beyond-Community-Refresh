@@ -1,12 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    projectRed(event)
-})
-
-function projectRed(event) {
-
     event.custom({
         "type": "tconstruct:melting",
         "ingredient": {
@@ -150,4 +142,4 @@ function projectRed(event) {
     p_circuit("stacking_latch")
     p_circuit("segment_display")
     p_circuit("dec_randomizer")
-}
+})

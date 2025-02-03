@@ -1,11 +1,5 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    madMath(event)
-})
 
-function madMath(event) {
     event.remove({ output: TE('chiller_ball_cast') })
     event.remove({ output: TE('chiller_rod_cast') })
     event.remove({ output: TE('chiller_ingot_cast') })
@@ -163,4 +157,4 @@ function madMath(event) {
             }
         }
     }
-}
+})

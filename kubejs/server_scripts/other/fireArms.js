@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	fireArms(event)
-})
-
-function fireArms(event) {
     event.remove({ mod: ('cgm') })
     event.custom({
         "type": "vintageimprovements:turning",
@@ -553,4 +546,4 @@ function fireArms(event) {
             "item": "cgm:bazooka"
         }
     })
-}
+})

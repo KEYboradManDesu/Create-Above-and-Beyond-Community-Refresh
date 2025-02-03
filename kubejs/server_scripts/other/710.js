@@ -1,14 +1,6 @@
 // Bug outpost spotted!
 
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    terminids(event)
-})
-
-function terminids(event) {
-
     // 沥青沙
     event.recipes.create.crushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("sand")).withChance(0.25)], TE("oil_sand"))
     event.recipes.create.crushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("red_sand")).withChance(0.25)], TE("oil_red_sand"))
@@ -223,4 +215,4 @@ function terminids(event) {
     //event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
     //event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
 
-}
+})

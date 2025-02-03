@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	zincMachine(event)
-})
-
-function zincMachine(event) {
 
     event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
     event.remove({ id: TC('smeltery/melting/soul/sand') })
@@ -121,4 +114,4 @@ function zincMachine(event) {
         ]
     })
 
-}
+})

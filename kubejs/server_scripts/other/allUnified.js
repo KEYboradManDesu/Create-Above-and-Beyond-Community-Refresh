@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	unifiedRecipes(event)
-})
-
-function unifiedRecipes(event) {
 
     event.remove({ input: "darkerdepths:aridrock_gold_ore" });
     event.remove({ input: "darkerdepths:aridrock_iron_ore" });
@@ -1267,7 +1260,7 @@ function unifiedRecipes(event) {
 		""  //熔融流体副产物
 	);
 
-}
+})
 
 const processing = (obj, event) => {
 	CreatePlate(obj.name, obj.plate, obj.ingot, event);

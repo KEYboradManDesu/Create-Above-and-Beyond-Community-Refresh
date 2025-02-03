@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    alchemy(event)
-})
-
-function alchemy(event) {
 
     event.recipes.thermal.pyrolyzer([MC("charcoal", 2), Fluid.of(TE('creosote'), 50)], MC("#logs")).energy(1000)
     event.recipes.thermal.pyrolyzer([TE("coal_coke"), Fluid.of(TE('creosote'), 50)], MC("charcoal")).energy(2000)
@@ -262,4 +255,4 @@ function alchemy(event) {
         ],
         "result": [{ "item": "kubejs:accellerator_glowstone" }]
     })
-}
+})

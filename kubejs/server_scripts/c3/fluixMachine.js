@@ -1,12 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	fluixMachine(event)
-})
-
-function fluixMachine(event) {
-
     event.shaped(KJ('flash_drive'), [
         'SCA'
     ], {
@@ -61,4 +53,4 @@ function fluixMachine(event) {
     event.replaceInput({ id: AE2("network/crafting/patterns_blank") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
     event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [F("#gems/certus_quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
 
-}
+})

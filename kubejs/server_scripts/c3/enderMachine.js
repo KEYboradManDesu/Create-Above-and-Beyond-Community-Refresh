@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    enderMachine(event)
-})
-
-function enderMachine(event) {
 
     // event.remove({ id: TE("machine/crucible/crucible_ender_pearl") })
     // event.recipes.createMixing(Fluid.of(TE("ender"), 360), [Fluid.of('tconstruct:molten_silver', 90), Fluid.of('tconstruct:ender_slime', 1000)]).heated()
@@ -154,4 +147,4 @@ function enderMachine(event) {
     event.stonecutting(Item.of('createutilities:void_tank'), 'enderstorage:ender_tank')
     event.stonecutting(Item.of('enderstorage:ender_tank'), 'createutilities:void_tank')
 
-}
+})

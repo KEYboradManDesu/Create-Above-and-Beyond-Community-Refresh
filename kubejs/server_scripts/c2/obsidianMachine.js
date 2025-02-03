@@ -1,13 +1,5 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	obsidianMachine(event)
-})
-
-function obsidianMachine(event) {
-
-    // 坚固板
+   // 坚固板
     event.remove({ id: 'create:sequenced_assembly/sturdy_sheet' })
 
     let ss = 'create:unprocessed_obsidian_sheet'
@@ -77,4 +69,4 @@ function obsidianMachine(event) {
     obsidian_machine(CR("track_observer"), 1, MC("observer"))
     obsidian_machine(CR("controls"), 1, MC("lever"))
     obsidian_machine("toms_storage:ts.storage_terminal", 1, CR("item_vault"))
-}
+})

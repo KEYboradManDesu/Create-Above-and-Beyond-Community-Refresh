@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	recipeTweaks(event)
-})
-
-function recipeTweaks(event) {
 
     // rei显示神秘转化
     MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singularity', 'ae2:quantum_entangled_singularity'))
@@ -425,4 +418,4 @@ function recipeTweaks(event) {
         "temperature": 790,
         "time": 40
     })
-}
+})

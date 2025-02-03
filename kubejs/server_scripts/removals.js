@@ -1,15 +1,7 @@
-// Load common functions
-require('./common.js');
-
 // Start of unwantedRecipes
 console.info('Removing unwanted recipes...')
 
 ServerEvents.recipes(event => {
-    unwantedRecipes(event)
-})
-
-function unwantedRecipes(event) {
-
     event.remove({ output: '#forge:coins' })
     event.remove({ output: AE2('grindstone') })
     event.remove({ output: AE2('vibration_chamber') })
@@ -134,5 +126,4 @@ function unwantedRecipes(event) {
 
     // No more FREE INDUSTRIAL IRON BLOCKS :(
     event.remove({ output: CR('industrial_iron_block'), type: 'minecraft:stonecutting' })
-
-}
+})

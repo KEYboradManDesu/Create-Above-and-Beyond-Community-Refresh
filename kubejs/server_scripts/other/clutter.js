@@ -1,9 +1,6 @@
 // This js is meant to place all the clutter code that doesn't fit anywhere else
 // They are usually small tweaks or additions that don't need their own file
 
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
 	// Change recipes here
 	beforeNuke(event)

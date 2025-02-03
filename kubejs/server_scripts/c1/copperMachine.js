@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	copperMachine(event)
-})
-
-function copperMachine(event) {
 
     let t = KJ('incomplete_sealed_mechanism')
     event.recipes.create.sequenced_assembly([
@@ -105,4 +98,4 @@ function copperMachine(event) {
         ]
     })
 
-}
+})

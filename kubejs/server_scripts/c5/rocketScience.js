@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-	rocketScience(event)
-})
-
-function rocketScience(event) {
     event.remove({ output: 'beyond_earth:solar_panel' })
     event.remove({ output: 'beyond_earth:coal_generator' })
     event.remove({ output: 'beyond_earth:compressor' })
@@ -394,4 +387,4 @@ function rocketScience(event) {
     })
 
 
-}
+})

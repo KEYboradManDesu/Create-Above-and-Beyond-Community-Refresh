@@ -1,6 +1,3 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
     electronTube(event)
     circuits(event)

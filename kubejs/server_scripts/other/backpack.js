@@ -1,11 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    backpack(event)
-})
-
-function backpack(event) {
     // 初级背包
     event.remove({ output: 'sophisticatedbackpacks:backpack' })
     event.shaped('sophisticatedbackpacks:backpack', [
@@ -141,4 +134,4 @@ function backpack(event) {
             "item": "sophisticatedbackpacks:diamond_backpack"
         }
     })
-}
+})

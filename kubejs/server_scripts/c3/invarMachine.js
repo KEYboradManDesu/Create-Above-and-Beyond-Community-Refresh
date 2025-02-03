@@ -1,12 +1,4 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
-    invarMachine(event)
-})
-
-function invarMachine(event) {
-
     let chop = (type, output) => {
         event.custom({
             "type": "farmersdelight:cutting",
@@ -165,4 +157,4 @@ function invarMachine(event) {
     // invar_machine(TE('machine_insolator'), 1, MC('dirt'))
 
     event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingots/iron"), TE("lead_plate"))
-}
+})

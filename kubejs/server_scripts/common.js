@@ -6,6 +6,8 @@
 // Remember this file is enabled only if you have it required in the start of your script file!
 // e.g. `require('./common.js')`
 
+// Temporary replacement for ProbeJS
+
 // MOD Shortcuts
 let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
 let AE2 = (id, x) => MOD("ae2", id, x)
