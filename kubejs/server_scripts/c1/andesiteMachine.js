@@ -1,6 +1,3 @@
-// Load common functions
-require('../common.js');
-
 ServerEvents.recipes(event => {
 
     wood_types.forEach(wood => {
