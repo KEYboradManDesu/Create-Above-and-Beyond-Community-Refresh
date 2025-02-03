@@ -9,18 +9,18 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&6&l异彩净化"
+			title: "{quest.stage_3.introduce.title}"
 			icon: "create:precision_mechanism"
 			x: -1.440476190476197d
 			y: -0.9999999999999964d
 			shape: "hexagon"
-			subtitle: "&6第三章"
+			subtitle: "{quest.stage_3.introduce.subtitle}"
 			description: [
-				"在批量生产&6光辉线圈&r的路上，你会遇到更加困难的挑战。"
+				"{quest.stage_3.introduce.text1}"
 				""
-				"再一次拿起扳手、挎起工具箱，为你的工厂开辟新地界吧！"
+				"{quest.stage_3.introduce.text2}"
 				""
-				"&6创造最伟大！&r"
+				"{quest.stage_3.introduce.text3}"
 			]
 			dependencies: ["780E8AE86250C73D"]
 			hide: true
@@ -29,7 +29,7 @@
 			tasks: [{
 				id: "2236686383D4E61B"
 				type: "checkmark"
-				title: "&6开始！"
+				title: "{tip.kubejs.start}"
 			}]
 			rewards: [{
 				id: "296358DF5AEC671C"
@@ -38,16 +38,16 @@
 			}]
 		}
 		{
-			title: "我说，“要有光”"
+			title: "{quest.stage_3.beacon.title}"
 			icon: "minecraft:torch"
 			x: -6.440476190476197d
 			y: 3.523809523809522d
 			shape: "circle"
-			subtitle: "装置 27"
+			subtitle: "{quest.stage_3.beacon.subtitle}"
 			description: [
-				"&6光辉石&r的生产需要一条&6信标光柱。&r"
+				"{quest.stage_3.beacon.text1}"
 				""
-				"选择一种你喜爱的方式并做好充足准备。"
+				"{quest.stage_3.beacon.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -55,22 +55,23 @@
 			tasks: [{
 				id: "7FB92D9DB34672AE"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "选择困难症"
+			title: "{quest.stage_3.dye.title}"
 			icon: "minecraft:rose_bush"
 			x: 0.059523809523803095d
 			y: 7.023809523809522d
-			subtitle: "步骤 25"
-			description: ["你首先需要选择一种颜料以生产&6异彩奇点。&r选择哪种颜色都可以，除了&f白色&7（其实还有灰和黑&r。&r"]
+			subtitle: "{quest.stage_3.dye.subtitle}"
+			description: ["{quest.stage_3.dye.text1}"]
 			dependencies: ["402F89CABF6BCDA4"]
 			id: "27C191346BB14D9D"
 			tasks: [
 				{
 					id: "6C47C95A06683D71"
 					type: "item"
-					title: "除白色外的染料"
+					title: "{tip.kubejs.any_dye_except_white}"
 					item: {
 						id: "itemfilters:or"
 						Count: 1b
@@ -144,19 +145,19 @@
 				{
 					id: "32E697E9386ABF17"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "&c光谱校正&r"
+			title: "{quest.stage_3.paint_ball_red.title}"
 			x: -0.7904761904761965d
 			y: 9.023809523809522d
 			shape: "circle"
 			description: [
-				"通过粉碎&6异彩奇点，&r你有概率获得一些&c染色球（红色）。&r"
+				"{quest.stage_3.paint_ball_red.text1}"
 				""
-				"你并不需要&c红色染色球&r来生产&6异彩化合物，&r试着放入&6分液池&r以校正它的光谱。"
+				"{quest.stage_3.paint_ball_red.text2}"
 			]
 			dependencies: ["2CCD84D55DE71EB2"]
 			id: "3B421C8F7947E542"
@@ -168,14 +169,14 @@
 			}]
 		}
 		{
-			title: "&e光谱校正&r"
+			title: "{quest.stage_3.paint_ball_yellow.title}"
 			x: -1.940476190476197d
 			y: 9.023809523809522d
 			shape: "circle"
 			description: [
-				"通过粉碎&6异彩奇点，&r你同样有概率获得一些&e染色球（黄色）。&r."
+				"{quest.stage_3.paint_ball_yellow.text1}"
 				""
-				"就像红色的一样，&e黄色染色球&r也需要被再次分液以校正光谱。"
+				"{quest.stage_3.paint_ball_yellow.text2}"
 			]
 			dependencies: [
 				"2CCD84D55DE71EB2"
@@ -190,11 +191,11 @@
 			}]
 		}
 		{
-			title: "&a光谱校正&r"
+			title: "{quest.stage_3.paint_ball_green.title}"
 			x: -2.940476190476197d
 			y: 8.523809523809522d
 			shape: "circle"
-			description: ["你需要继续改变光谱频率。"]
+			description: ["{quest.stage_3.paint_ball_green.text1}"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"381F8F373605BB97"
@@ -208,11 +209,11 @@
 			}]
 		}
 		{
-			title: "&1光谱校正&r"
+			title: "{quest.stage_3.paint_ball_blue.title}"
 			x: -3.440476190476197d
 			y: 7.523809523809522d
 			shape: "circle"
-			description: ["就快完成了！&1蓝色染色球&r只需再进行一次分液就可以投入使用了。"]
+			description: ["{quest.stage_3.paint_ball_blue.text1}"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"6A76E65324F0ACC0"
@@ -226,12 +227,12 @@
 			}]
 		}
 		{
-			title: "&d光谱校正&r"
+			title: "{quest.stage_3.paint_ball_magenta.title}"
 			icon: "ae2:magenta_paint_ball"
 			x: -3.440476190476197d
 			y: 6.373809523809522d
-			subtitle: "步骤 26-2"
-			description: ["&d品红色染色球&r拥有制造&6异彩化合物&r所需的精华。你有几率在粉碎&6异彩奇点&r时直接获得它们，但大多数还是通过光谱校正得到的。"]
+			subtitle: "{quest.stage_3.paint_ball_magenta.subtitle}"
+			description: ["{quest.stage_3.paint_ball_magenta.text1}"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"302FCD205CC2F708"
@@ -247,12 +248,12 @@
 				{
 					id: "57D6B7FD5E974F33"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "颜色精炼"
+			title: "{quest.stage_3.chromatic_compound.title}"
 			icon: {
 				id: "create:chromatic_compound"
 				Count: 1b
@@ -260,15 +261,15 @@
 			}
 			x: -4.940476190476197d
 			y: 6.373809523809522d
-			subtitle: "装置 26-3"
-			description: ["再次使用&6动力合成器&r以合成&6异彩化合物！&r"]
+			subtitle: "{quest.stage_3.chromatic_compound.subtitle}"
+			description: ["{quest.stage_3.chromatic_compound.text1}"]
 			dependencies: ["3BE15AA5C237AB80"]
 			id: "7B23C933D76458BA"
 			tasks: [
 				{
 					id: "2F334C3D67DE059C"
 					type: "item"
-					title: "异彩化合物"
+					title: "{item.create.chromatic_compound}"
 					icon: {
 						id: "create:chromatic_compound"
 						Count: 1b
@@ -296,24 +297,24 @@
 				{
 					id: "27A8B7785CAB07C8"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "A1高闪"
+			title: "{quest.stage_3.refined_radiance.title}"
 			icon: "create:refined_radiance"
 			x: -6.440476190476197d
 			y: 6.373809523809522d
-			subtitle: "步骤 28-1"
+			subtitle: "{quest.stage_3.refined_radiance.subtitle}"
 			description: [
-				"当&6异彩化合物&r作为物品掉落的时候，它会汲取身旁的光源并进一步转化为&6光辉石&r。你有以下三种方式可以选择："
+				"{quest.stage_3.refined_radiance.text1}"
 				""
-				"- 在物品形态的&6异彩化合物&r旁边不断放置&6光源方块&r（两者间无遮挡）。"
+				"{quest.stage_3.refined_radiance.text2}"
 				""
-				"- 将物品形态的&6异彩化合物&r和物品形态的&6光源方块&r放到一起（两者间无遮挡）。"
+				"{quest.stage_3.refined_radiance.text3}"
 				""
-				"- 将物品形态的&6异彩化合物&r扔进&6信标光柱&r中。"
+				"{quest.stage_3.refined_radiance.text4}"
 			]
 			dependencies: [
 				"3025B5861FE17ADF"
@@ -337,17 +338,17 @@
 				{
 					id: "2DC30322D81D9999"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "霓虹灯光"
+			title: "{quest.stage_3.radiant_coil.title}"
 			icon: "kubejs:radiant_coil"
 			x: -3.940476190476197d
 			y: 11.023809523809522d
-			subtitle: "步骤 28-3"
-			description: ["第二步，你需要一个&6动力合成器&r将压制好的&6光辉板&r切割并卷起，熠熠生辉的&6光辉线圈&r就做好了。"]
+			subtitle: "{quest.stage_3.radiant_coil.subtitle}"
+			description: ["{quest.stage_3.radiant_coil.text1}"]
 			dependencies: ["410FF28B63E0FC0C"]
 			id: "626A7D9947D82B89"
 			tasks: [
@@ -360,17 +361,17 @@
 				{
 					id: "27C737E08A9027A5"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "石之海"
+			title: "{quest.stage_3.cobblestone.title}"
 			icon: "minecraft:cobblestone"
 			x: -1.440476190476197d
 			y: 1.023809523809522d
-			subtitle: "步骤 20-1"
-			description: ["鹅卵石可真是廉价啊（笑"]
+			subtitle: "{quest.stage_3.cobblestone.subtitle}"
+			description: ["{quest.stage_3.cobblestone.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "5C277D27606F64DA"
@@ -391,17 +392,17 @@
 				{
 					id: "36BD580312C8177B"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "有效载荷"
+			title: "{quest.stage_3.inductive_mechanism.title}"
 			icon: "kubejs:inductive_mechanism"
 			x: -1.440476190476197d
 			y: 11.523809523809522d
-			subtitle: "步骤 29"
-			description: ["你知道现在应该干什么了吧。是时候将&6精密构件&r升级一下了！"]
+			subtitle: "{quest.stage_3.inductive_mechanism.subtitle}"
+			description: ["{quest.stage_3.inductive_mechanism.text1}"]
 			dependencies: [
 				"59D2104DB6AE93FD"
 				"626A7D9947D82B89"
@@ -417,7 +418,7 @@
 				{
 					id: "057A05C13C55ABC4"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 			rewards: [{
@@ -429,14 +430,14 @@
 			}]
 		}
 		{
-			title: "&f&l第三章完成！&r"
+			title: "{quest.stage_3.invar_machine.title}"
 			x: -1.440476190476197d
 			y: 13.523809523809522d
 			shape: "hexagon"
 			description: [
-				"好耶！&6超频构件&r正在被源源不断地生产！全新的技术和魔法之门将为你打开！"
+				"{quest.stage_3.invar_machine.text1}"
 				""
-				"&7当你认为你的生产线已经万无一失时，去&a纵览&7解锁新的目标吧！"
+				"{quest.stage_3.invar_machine.text2}"
 			]
 			dependencies: ["6CBA3D97CAD5DB63"]
 			size: 2.0d
@@ -469,14 +470,14 @@
 			]
 		}
 		{
-			title: "全面侵入"
+			title: "{quest.stage_3.singularity.title}"
 			icon: "ae2:singularity"
 			x: -1.440476190476197d
 			y: 4.023809523809522d
-			subtitle: "步骤 20-3"
+			subtitle: "{quest.stage_3.singularity.subtitle}"
 			description: [
-				"当你使用&6粉碎轮&r粉碎&6粉碎轮&r时，一种奇特的现象产生了...也许我们可以稍加利用..."
-				"&7是A粉碎轮粉碎了B粉碎轮，还是B粉碎轮粉碎的A粉碎轮..."
+				"{quest.stage_3.singularity.text1}"
+				"{quest.stage_3.singularity.text2}"
 			]
 			dependencies: ["7AAE71F57FB89BCC"]
 			id: "2C81D358594C4352"
@@ -490,23 +491,23 @@
 				{
 					id: "56AF74BE0C7708C3"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "切尔诺贝利"
+			title: "{quest.stage_3.entangled_singularity.title}"
 			icon: "ae2:quantum_entangled_singularity"
 			x: -1.440476190476197d
 			y: 5.523809523809522d
-			subtitle: "步骤 24"
+			subtitle: "{quest.stage_3.entangled_singularity.subtitle}"
 			description: [
-				"你将亲手打造出这一工厂片区的核心装置：爆炸反应堆。"
+				"{quest.stage_3.entangled_singularity.text1}"
 				""
-				"要制造&6光辉线圈，&r你必须先让&6奇点&r和&6末影粉&r同时参与一次次的可控爆炸才行。希望你能想出一种万全的方法，使反应堆能够在三种材料的供应下稳定运转..."
+				"{quest.stage_3.entangled_singularity.text2}"
 				""
-				"注意，&6奇点&r和&6末影粉&r需要以1:1的比率供应。他们并不需要离得特别近，且一次爆炸可以同时转换多组物品。最终产物会在&6奇点&r所在位置生成。"
-				"&7由于产物的堆叠规则为2个每组，所以你需要精细控制物品输入数量...抽屉用处不大。"
+				"{quest.stage_3.entangled_singularity.text3}"
+				"{quest.stage_3.entangled_singularity.text4}"
 			]
 			dependencies: [
 				"02B2E249421FAE58"
@@ -524,17 +525,17 @@
 				{
 					id: "43C489A6D520F1AA"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "不要在这里下国际象棋"
+			title: "{quest.stage_3.tnt.title}"
 			icon: "minecraft:tnt"
 			x: 0.059523809523803095d
 			y: 4.023809523809522d
-			subtitle: "步骤 23-2"
-			description: ["用&6动力合成器&r来造些易爆品吧！在合成&6TNT&r时，你需要重复在不相邻的格子中分别放入&6沙子&r和&6火药。&r这时，一些&6动力臂&r或许能派上大用场。"]
+			subtitle: "{quest.stage_3.tnt.subtitle}"
+			description: ["{quest.stage_3.tnt.text1}"]
 			dependencies: [
 				"5F9BA7BA46D2E5B8"
 				"050A20198A80CF1A"
@@ -550,20 +551,20 @@
 				{
 					id: "2AD912C0E25F5D65"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "你需要煮点药"
+			title: "{quest.stage_3.gunpowder.title}"
 			icon: "minecraft:gunpowder"
 			x: 1.559523809523803d
 			y: 4.023809523809522d
-			subtitle: "步骤 22-2"
+			subtitle: "{quest.stage_3.gunpowder.subtitle}"
 			description: [
-				"加工这些绿色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
+				"{quest.stage_3.gunpowder.text1}"
 				""
-				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
+				"{quest.stage_3.gunpowder.text2}"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -581,17 +582,17 @@
 				{
 					id: "34EFEE60A6755C01"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "无法自拔"
+			title: "{quest.stage_3.sand.title}"
 			icon: "minecraft:sand"
 			x: 0.059523809523803095d
 			y: 1.023809523809522d
-			subtitle: "步骤 23-1"
-			description: ["你需要更多沙子以制造反应堆中必须的炸药。可今非昔比的你有了粉碎轮，使这一切变得如此简单。"]
+			subtitle: "{quest.stage_3.sand.subtitle}"
+			description: ["{quest.stage_3.sand.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "5F9BA7BA46D2E5B8"
@@ -605,20 +606,20 @@
 				{
 					id: "2A3EAC60765E5C7A"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "炒粉"
+			title: "{quest.stage_3.ender_dust.title}"
 			icon: "ae2:ender_dust"
 			x: 1.559523809523803d
 			y: 5.523809523809522d
-			subtitle: "步骤 22-3"
+			subtitle: "{quest.stage_3.ender_dust.subtitle}"
 			description: [
-				"加工这些紫色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
+				"{quest.stage_3.ender_dust.text1}"
 				""
-				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
+				"{quest.stage_3.ender_dust.text2}"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -636,17 +637,17 @@
 				{
 					id: "37A6393C0AD6E861"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "染上星空的颜色"
+			title: "{quest.stage_3.dye_entangled_singularity.title}"
 			icon: "kubejs:dye_entangled_singularity"
 			x: -1.440476190476197d
 			y: 7.023809523809522d
-			subtitle: "步骤 26-1"
-			description: ["将&6量子缠绕态奇点&r与染料混合以探索颜色的究极奥秘！有了它，我们才能够着手制作&6异彩化合物。&r"]
+			subtitle: "{quest.stage_3.dye_entangled_singularity.subtitle}"
+			description: ["{quest.stage_3.dye_entangled_singularity.text1}"]
 			dependencies: [
 				"27C191346BB14D9D"
 				"5A199B898D41A309"
@@ -662,16 +663,16 @@
 				{
 					id: "4B4BDAA9DFB0518A"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "&3&l第三章支线完成！"
+			title: "{quest.stage_3.enderium_machine.title}"
 			x: -1.440476190476197d
 			y: 21.023809523809522d
 			shape: "hexagon"
-			description: ["无可比拟的空间移动技术正被你捧在手中！在你庞大的工厂中，一定有某处可以利用它们进一步提高效率。看你的了！"]
+			description: ["{quest.stage_3.enderium_machine.text1}"]
 			dependencies: ["6DBEF7A11890ADF8"]
 			size: 2.0d
 			id: "4EDD9A8F14E48EAE"
@@ -703,11 +704,12 @@
 			]
 		}
 		{
-			title: "注入林魂"
+			title: "{quest.stage_3.abstruse_mechanism.title}"
 			x: -1.440476190476197d
 			y: 19.023809523809522d
 			shape: "circle"
-			description: ["然后，在&6冶炼炉&r中使用&6熔融末影合金&r升级你的&6超频构件...&r"]
+			subtitle: "{quest.stage_3.abstruse_mechanism.text1}"
+			description: ["{quest.stage_3.abstruse_mechanism.text2}"]
 			dependencies: ["7B080B5C87247EA1"]
 			id: "6DBEF7A11890ADF8"
 			tasks: [{
@@ -718,14 +720,15 @@
 			}]
 		}
 		{
-			title: "折跃探险"
+			title: "{quest.stage_3.hanging_pream_leaves.title}"
 			x: 0.059523809523803095d
 			y: 17.523809523809522d
 			shape: "circle"
+			subtitle: "{quest.stage_3.hanging_pream_leaves.subtitle}"
 			description: [
-				"在你英勇击败末影龙后，通过&6折跃门&r前往外岛。"
+				"{quest.stage_3.hanging_pream_leaves.text1}"
 				""
-				"在那里，你能够采集到&6末影合金&r的原材料之一——&6梦兰浆果&r。进过精加工就可以变成&6末影合金&r。"
+				"{quest.stage_3.hanging_pream_leaves.text2}"
 			]
 			dependencies: ["05C7E580ED88B556"]
 			id: "794B3C10C6110CB5"
@@ -737,12 +740,12 @@
 			}]
 		}
 		{
-			title: "暗紫循环"
+			title: "{quest.stage_3.insolator.title}"
 			icon: "phantasm:pream_berry"
 			x: 0.059523809523803095d
 			y: 19.523809523809522d
 			shape: "circle"
-			description: ["感谢&6热力&r技术，现在你可以循环生产&6梦兰浆果&r了。这样一来，稳定生产&6末影合金&r也就不再成问题。"]
+			description: ["{quest.stage_3.insolator.text1}"]
 			dependencies: ["794B3C10C6110CB5"]
 			id: "1CCDA748B237F6F5"
 			tasks: [{
@@ -759,14 +762,15 @@
 			}]
 		}
 		{
-			title: "外星合金"
+			title: "{quest.stage_3.enderium.title}"
 			x: -1.440476190476197d
 			y: 18.023809523809522d
 			shape: "circle"
+			subtitle: "{quest.stage_3.enderium.subtitle}"
 			description: [
-				"地外合金"
+				"{quest.stage_3.enderium.text1}"
 				""
-				"首先，使用&6末影粉（或末影珍珠）&r以及&6紫颂紫金&r加固&6银锭。&r"
+				"{quest.stage_3.enderium.text2}"
 			]
 			dependencies: [
 				"0D146AD9FE774F8B"
@@ -782,11 +786,12 @@
 			}]
 		}
 		{
-			title: "一键三连"
+			title: "{quest.stage_3.silver_coin.title}"
 			x: -2.940476190476197d
 			y: 15.023809523809522d
 			shape: "circle"
-			description: ["带着不舍你必须将你手中的&6银币&r丢进&6治炼炉&r以获得稳定的熔融银来源。&2(此操作不可逆！)"]
+			subtitle: "{quest.stage_3.silver_coin.subtitle}"
+			description: ["{quest.stage_3.silver_coin.text1}"]
 			hide_dependency_lines: true
 			dependencies: [
 				"2BB2C7B95E3C89AE"
@@ -802,12 +807,13 @@
 			}]
 		}
 		{
-			title: "化作雪白的灰"
+			title: "{quest.stage_3.molten_silver.title}"
 			icon: "tconstruct:molten_silver_bucket"
 			x: -1.440476190476197d
 			y: 15.523809523809522d
 			shape: "circle"
-			description: ["把你手中的贵金属银投入&6冶炼炉&r中以继续...。"]
+			subtitle: "{quest.stage_3.molten_silver.subtitle}"
+			description: ["{quest.stage_3.molten_silver.text1}"]
 			dependencies: ["38B063C8DE71E86D"]
 			id: "0C11EC34D5FA508B"
 			tasks: [{
@@ -818,12 +824,12 @@
 			}]
 		}
 		{
-			title: "此行未终"
+			title: "{quest.stage_3.the_end.title}"
 			icon: "minecraft:end_portal_frame"
 			x: 0.059523809523803095d
 			y: 15.023809523809522d
 			shape: "circle"
-			description: ["空间移动的秘密就在&6末地之门&r的另一端..."]
+			description: ["{quest.stage_3.the_end.text1}"]
 			hide_dependency_lines: true
 			dependencies: [
 				"6CBA3D97CAD5DB63"
@@ -834,19 +840,19 @@
 			tasks: [{
 				id: "7F87F035900FE4EA"
 				type: "dimension"
-				title: "访问 末地"
+				title: "{quest.stage_3.the_end.target1}"
 				icon: "minecraft:end_portal_frame"
 				dimension: "minecraft:the_end"
 			}]
 		}
 		{
-			title: "武装到头发！"
+			title: "{quest.stage_3.resonator.title}"
 			x: 0.059523809523803095d
 			y: 11.523809523809522d
 			shape: "circle"
 			description: [
-				"还是那句话，多贮存些&6共鸣器&r是个好习惯。"
-				"&7不必要自动生产它们。"
+				"{quest.stage_3.resonator.text1}"
+				"{quest.stage_3.resonator.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["626A7D9947D82B89"]
@@ -865,12 +871,12 @@
 			}]
 		}
 		{
-			title: "木棍次日达"
+			title: "{quest.stage_3.stick.title}"
 			icon: "minecraft:stick"
 			x: -2.940476190476197d
 			y: 1.023809523809522d
-			subtitle: "步骤 19"
-			description: ["下面材料的生产需要许多木棍。你可以选择重新采集木棍，或从你的&6【步骤 1】&r中拿取一些。"]
+			subtitle: "{quest.stage_3.stick.subtitle}"
+			description: ["{quest.stage_3.stick.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "194B973EAF17809C"
@@ -884,20 +890,20 @@
 				{
 					id: "435C3E443BCC9176"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "那一天，人类终于回想起了..."
+			title: "{quest.stage_3.crushing_wheel.title}"
 			icon: "create:crushing_wheel"
 			x: -1.440476190476197d
 			y: 2.523809523809522d
-			subtitle: "步骤 20-2"
+			subtitle: "{quest.stage_3.crushing_wheel.subtitle}"
 			description: [
-				"下一步，我们需要&6粉碎轮。&r不过不仅要用作机器，还要用作原料。"
+				"{quest.stage_3.crushing_wheel.text1}"
 				""
-				"一面&6动力合成器&r墙可能会迅速阻碍你工厂里的其它基建结构。确保为它们留出足够的空间。"
+				"{quest.stage_3.crushing_wheel.text2}"
 			]
 			dependencies: [
 				"194B973EAF17809C"
@@ -914,34 +920,35 @@
 				{
 					id: "764E76A93ED07203"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "光盘行动"
-			icon: "tconstruct:molten_ender_bucket"
+			title: "{quest.stage_3.waste.title}"
+			icon: "create_dd:chromatic_waste_bucket"
 			x: 0.5595238095238031d
 			y: 9.023809523809522d
 			shape: "circle"
-			description: ["分液的过程会产生大量流体副产物，你需要在生产线被堵塞之前及时处理它们。"]
+			description: ["{quest.stage_3.waste.text1}"]
 			dependencies: ["3B421C8F7947E542"]
 			id: "2C40901DB42DD8F8"
 			tasks: [{
 				id: "7058D1CE264D6769"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "煎点化肥"
+			title: "{quest.stage_3.bone_meal.title}"
 			icon: "minecraft:bone_meal"
 			x: 1.559523809523803d
 			y: 7.023809523809522d
-			subtitle: "步骤 22-4"
+			subtitle: "{quest.stage_3.bone_meal.subtitle}"
 			description: [
-				"加工这些蓝色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
+				"{quest.stage_3.bone_meal.text1}"
 				""
-				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
+				"{quest.stage_3.bone_meal.text2}"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -959,17 +966,17 @@
 				{
 					id: "4002627D52C3A616"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "神秘生物量"
+			title: "{quest.stage_3.fern_paste.title}"
 			icon: "kubejs:sky_slimy_fern_paste"
 			x: 3.559523809523803d
 			y: 4.023809523809522d
-			subtitle: "装置 22-1"
-			description: ["把多余的叶片粉碎，好戏即将开场。"]
+			subtitle: "{quest.stage_3.fern_paste.subtitle}"
+			description: ["{quest.stage_3.fern_paste.text1}"]
 			dependencies: ["38D19F4EC634F33B"]
 			id: "3D1EEB596FDBE4E7"
 			tasks: [
@@ -994,24 +1001,24 @@
 				{
 					id: "088AEBDC24CE4864"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "阴魂不散"
+			title: "{quest.stage_3.slime_fern_leaf.title}"
 			icon: "kubejs:sky_slimy_fern_leaf"
 			x: 3.559523809523803d
 			y: 2.523809523809522d
-			subtitle: "装置 21"
+			subtitle: "{quest.stage_3.slime_fern_leaf.subtitle}"
 			description: [
-				"当接触到&6灵火&r时，&6史莱姆蕨叶片&r可以在一瞬间重新生长为蕨。就像之前的&6赛特斯石英种子&r循环一样，我们也许可以对这一特点加以利用。"
+				"{quest.stage_3.slime_fern_leaf.text1}"
 				""
-				"这一循环相当简单：使用&6机械手&r将每个&6史莱姆蕨&r切成两片叶片，再用&6灵魂火&r将其中之一缠魂。所有颜色的&6史莱姆蕨&r最好以相同速度循环。"
+				"{quest.stage_3.slime_fern_leaf.text2}"
 				""
-				"将&6魔鬼之梦果实&r扔在地上，然后用一个打火石在扔出去的位置点火，就可以产生灵火。"
+				"{quest.stage_3.slime_fern_leaf.text3}"
 				""
-				"&7啊，留一些用作备份总不是什么坏事。"
+				"{quest.stage_3.slime_fern_leaf.text4}"
 			]
 			dependencies: ["01BE1A7FCE79C63D"]
 			id: "38D19F4EC634F33B"
@@ -1037,20 +1044,20 @@
 				{
 					id: "40B23393B8A6D2E8"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "通天之路"
+			title: "{quest.stage_3.refined_radiance_sheet.title}"
 			icon: "create_dd:refined_radiance_sheet"
 			x: -5.940476190476197d
 			y: 9.023809523809522d
-			subtitle: "步骤 28-2"
+			subtitle: "{quest.stage_3.refined_radiance_sheet.subtitle}"
 			description: [
-				"主要工作已经完成！你只需要最后两步就能生产&6光辉线圈&r了。"
+				"{quest.stage_3.refined_radiance_sheet.text1}"
 				""
-				"第一步，你需要一个&6动力辊压机。&r"
+				"{quest.stage_3.refined_radiance_sheet.text2}"
 			]
 			dependencies: ["286510750C333C1F"]
 			id: "410FF28B63E0FC0C"
@@ -1064,22 +1071,23 @@
 				{
 					id: "01ED5CC9483E3953"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "昂贵砖块"
+			title: "{quest.stage_3.silver_ingot.title}"
 			x: -1.440476190476197d
 			y: 16.523809523809522d
 			shape: "circle"
-			description: ["将你的&6熔融银&r铸成方块，并欣赏它的光泽..."]
+			subtitle: "{quest.stage_3.silver_ingot.subtitle}"
+			description: ["{quest.stage_3.silver_ingot.text1}"]
 			dependencies: ["0C11EC34D5FA508B"]
 			id: "0D146AD9FE774F8B"
 			tasks: [{
 				id: "7A7EE0DF809CEDC8"
 				type: "item"
-				title: "Silver Ingot"
+				title: "{item.thermal.silver_ingot}"
 				icon: "thermal:silver_ingot"
 				item: {
 					id: "itemfilters:tag"
@@ -1092,11 +1100,12 @@
 			}]
 		}
 		{
-			title: "加花"
+			title: "{quest.stage_3.ender_dust.title}"
 			x: -2.940476190476197d
 			y: 17.523809523809522d
 			shape: "circle"
-			description: ["从你的反应堆拿点&6末影粉&r来。如果你怕生产线被堵塞，使用末影珍珠也是可以的。"]
+			subtitle: "{quest.stage_3.ender_dust.subtitle}"
+			description: ["{quest.stage_3.ender_dust.text1}"]
 			hide_dependency_lines: true
 			dependencies: [
 				"2BB2C7B95E3C89AE"
@@ -1112,15 +1121,15 @@
 			}]
 		}
 		{
-			title: "利姆露大人的恩惠"
+			title: "{quest.stage_3.slime_fern.title}"
 			icon: "tconstruct:sky_slime_fern"
 			x: 3.559523809523803d
 			y: 1.023809523809522d
 			shape: "circle"
 			description: [
-				"如果你想与怪物们友好相处，那也许你可以试试使用&6史莱姆蕨&r来生产&6火药、骨粉&r和&6末影粉...&r"
+				"{quest.stage_3.slime_fern.text1}"
 				""
-				"何不漫游大陆，寻找植被中异常鲜艳的颜色呢？别忘了带把剪刀。"
+				"{quest.stage_3.slime_fern.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -1147,30 +1156,31 @@
 			]
 		}
 		{
-			title: "失去高光"
+			title: "{quest.stage_3.paint_ball_black.title}"
 			icon: "ae2:black_paint_ball"
 			x: -3.440476190476197d
 			y: 5.023809523809522d
 			shape: "circle"
-			description: ["呃，对&6染色球&r的光谱进行过度校正只会使其失去颜色，无法继续处理。"]
+			description: ["{quest.stage_3.paint_ball_black.text1}"]
 			dependencies: ["3BE15AA5C237AB80"]
 			id: "03B7909623F97843"
 			tasks: [{
 				id: "07521D1C50A8B75F"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "其实我更喜欢折磨怪物"
+			title: "{quest.stage_3.alternative.title}"
 			icon: "minecraft:zombie_head"
 			x: 3.559523809523803d
 			y: 5.523809523809522d
 			shape: "circle"
-			subtitle: "步骤 可替代 21 和 22"
+			subtitle: "{quest.stage_3.alternative.subtitle}"
 			description: [
-				"如果你不想搞那么麻烦，几个刷怪塔就可以解决一切。"
+				"{quest.stage_3.alternative.text1}"
 				""
-				"勾选“使用刷怪塔”以跳过&6史莱姆蕨&r机器。"
+				"{quest.stage_3.alternative.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -1178,20 +1188,20 @@
 			tasks: [{
 				id: "53728BDEA8F1938C"
 				type: "checkmark"
-				title: "检查标记"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "控制产量"
+			title: "{quest.stage_3.stockpile_switch.title}"
 			x: -3.440476190476197d
 			y: -0.976190476190478d
 			shape: "circle"
 			description: [
-				"接下来的几个装置都需要在物品形态（掉落物形态）处理部分材料，然而这些操作都无法自动进行止损（例如掉落物的拥堵并不会使传送带上的物品停下）。手动增加止损机构和缓冲区因此成为了必要操作。"
+				"{quest.stage_3.stockpile_switch.text1}"
 				""
-				"更具体来说：当输出缓冲区内的物品个数达到设定值的75%时，停止材料生产；当它不足25%时，重新开始材料生产。这类机构能够防止物品到处散落，从而节约库存。"
+				"{quest.stage_3.stockpile_switch.text2}"
 				""
-				"&6存量转信器&r正是为此而设计的。"
+				"{quest.stage_3.stockpile_switch.text3}"
 			]
 			dependencies: ["397232F676CB621B"]
 			id: "472FB03D0E5A38D6"
@@ -1209,22 +1219,23 @@
 			}]
 		}
 		{
-			title: "动力锤"
+			title: "{quest.stage_3.invar.title}"
 			icon: "thermal:invar_ingot"
 			x: 0.5595238095238031d
 			y: -0.976190476190478d
 			shape: "circle"
-			subtitle: "步骤 30"
+			subtitle: "{quest.stage_3.invar.subtitle}"
 			description: [
-				"除了&6超频构件，&r你还需要用&6殷钢&r（某种铁镍合金）制造&6殷钢机器&r才能完成&6机器方块&r的制造。"
+				"{quest.stage_3.invar.text1}"
 				""
-				"由于精炼&6殷钢&r的过程漫长而又枯燥，所以你可能需要建造一条自动生产线..."
+				"{quest.stage_3.invar.text2}"
 			]
 			dependencies: ["397232F676CB621B"]
 			id: "26A1E68DA7ACB025"
 			tasks: [{
 				id: "428A5B60D9C268BD"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 	]
