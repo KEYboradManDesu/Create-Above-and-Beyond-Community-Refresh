@@ -1513,5 +1513,65 @@
 
 "quest.stage_4.silicon_4a.title":"拆包",
 "quest.stage_4.silicon_4a.subtitle":"步骤 39-A",
-"quest.stage_4.silicon_4a.text1":"使用&6提取机(锯木机)&r将&6硅&r从罐子中提取出来。"
+"quest.stage_4.silicon_4a.text1":"使用&6提取机(锯木机)&r将&6硅&r从罐子中提取出来。",
+
+"quest.stage_4a.introduce.title":"&6&l第三道路",
+"quest.stage_4a.introduce.text1":"炼金镭射提供了另一种硅的生产方法，更模糊但更有效。",
+"quest.stage_4a.introduce.text2":"发现每个反应物的秘密以找到混沌催化剂的正确配方。",
+"quest.stage_4a.introduce.text3":"一旦找到了正确的配方，混沌催化剂不仅可以将一种材料转化成硅，还可以从微不足道的材料中提取出更多有价值的材料。",
+
+"quest.stage_4a.encapsulate_decapsulate.title":"密封 - 拆封",
+"quest.stage_4a.encapsulate_decapsulate.text1":"除了炼金镭射，你还需要一些其他的机器。",
+"quest.stage_4a.encapsulate_decapsulate.text2":"-&6流体灌装机&r使用熔融玻璃来从资源中提取反应物。",
+"quest.stage_4a.encapsulate_decapsulate.text3":"-&6反应物提取机(锯木机)&r可以反转此过程。",
+"quest.stage_4a.encapsulate_decapsulate.text4":"-&6离心机&r用来分析炼金混合物，根据一些规则来推测正确的混合配方。",
+
+"quest.stage_4a.laser_lamp.title":"炼金镭射",
+"quest.stage_4a.laser_lamp.text1":"&6炼金镭射&r在炼金实验中起着核心作用。",
+"quest.stage_4a.laser_lamp.text2":"镭射是获得催化剂或寻找其正确配方的唯一途径，另一个用途就是将混沌催化剂用于特定反应物，将其嬗变成另一种物质。",
+"quest.stage_4a.laser_lamp.text3":"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。",
+"quest.stage_4a.laser_lamp.text4":"&6 /c ponder kubejs:ponder_laser_lamp",
+
+"quest.stage_4a.accellerator.title":"没头没脑",
+"quest.stage_4a.accellerator.text1":"荧石和红石促成剂可以放在漏斗矿车的第五个槽位参与炼金镭射的催化剂配方，这是完全可选的。",
+"quest.stage_4a.accellerator.text2":"这可能会为你提供关于正确配方的额外提示。",
+
+"quest.stage_4a.igneous.text1":"如果此任务被解锁，说明你找到了所有火成种类的反应物。",
+"quest.stage_4a.igneous.text2":"火成催化剂可以通过将火成种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+"quest.stage_4a.igneous.text3":"建议牢记所有结果，以这种方式找到正确配方，通常会需要6次以上。",
+
+"quest.stage_4a.herbal.text1":"如果此任务被解锁，说明你找到了所有草本种类的反应物。",
+"quest.stage_4a.herbal.text2":"草本催化剂可以通过将草本种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.volatile.text1":"如果此任务被解锁，说明你找到了所有不稳定种类的反应物。",
+"quest.stage_4a.volatile.text2":"不稳定催化剂可以通过将不稳定种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.crystal.text1":"如果此任务被解锁，说明你找到了所有晶化种类的反应物。",
+"quest.stage_4a.crystal.text2":"晶化催化剂可以通过将晶化种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.metal.text1":"如果此任务被解锁，说明你找到了所有金属种类的反应物。",
+"quest.stage_4a.metal.text2":"金属催化剂可以通过将金属种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.gem.text1":"如果此任务被解锁，说明你找到了所有宝石种类的反应物。",
+"quest.stage_4a.gem.text2":"宝石催化剂可以通过将宝石种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.silver.text1":"你的银币似乎也有对应的反应物，不过你可别想着用银锭做银币。",
+
+"quest.stage_4a.chaos.title":"终代码",
+"quest.stage_4a.chaos.text1":"如果此任务被解锁，说明你找到了所有种类的反应物。",
+"quest.stage_4a.chaos.text2":"终极催化剂由四种不同的催化剂混合制成，很大程度上取决于催化剂的发现方式和其试剂制成的方式。",
+"quest.stage_4a.chaos.text3":"&7（查看催化剂的JEI信息栏获取更多信息）",
+
+"quest.stage_4a.silicon.title":"重大发现",
+"quest.stage_4a.silicon.text1":"有了&6混沌催化剂&r后，你就可以开始进行各种反应物的配对了。",
+"quest.stage_4a.silicon.text2":"只需要将混沌催化剂和几罐同种反应物（嬗变是有损耗的）放入漏斗矿车中，然后找到一种催化剂变成了哪一种催化剂。在这个过程中催化剂不会被消耗。",
+"quest.stage_4a.silicon.text3":"其中一个反应物会转变成硅反应物，如果你发现了这个配方，那么就可以想想如何自动化了。",
+
+"quest.stage_4a.transmutating.title":"可控混沌",
+"quest.stage_4a.transmutating.text1":"步骤 31-A",
+"quest.stage_4a.transmutating.text2":"有了嬗变配方后，你就可以着手搭建一个使用炼金镭射无限制硅的生产线了。",
+"quest.stage_4a.transmutating.text3":"注意，&6试剂嬗变配方取决于你的世界种子&r，这也是任务中没有列出合成的原因，一些必要的反应物的配方可以在JEI中查看。",
+
+"quest.stage_4a.completed.title":"&f&l扭曲小径&r",
+"quest.stage_4a.completed.text1":"现在你有&6硅反应物&r的生产线了，你可以回到第四章，在第四章某位找到一个切入点将你的硅产线按插进去。"
 }
