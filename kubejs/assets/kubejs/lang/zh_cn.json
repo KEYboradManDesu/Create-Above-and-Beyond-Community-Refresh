@@ -1094,7 +1094,7 @@
 
 "quest.stage_2.charged_certus.title":"循环能源",
 "quest.stage_2.charged_certus.subtitle":"步骤 13",
-"quest.stage_2.charged_certus.text1":"稍稍改造一下你的&6充能器，&r让它能够循环不断地给装置13-2所需要的&6赛特斯石英水晶&r充能。",
+"quest.stage_2.charged_certus.text1":"稍稍改造一下你的&6充能器，&r让它能够循环不断地给步骤13-2所需要的&6赛特斯石英水晶&r充能。",
 "quest.stage_2.charged_certus.text2":"应用能源2的&6充能器&r或CC:A的&6特斯拉线圈&r似乎是个不错的选择，你可以用&6斯特林能源炉&r为其提供临时能源。",
 
 "quest.stage_2.centrifuge.title":"超大规格",
@@ -1182,5 +1182,336 @@
 "quest.stage_2.infernal_mechanism.text3":"&7一个将&2精密构件&7转换为&2酷热构件&7的半自动化机器就已经足够了。相信我，你不会想要那么多&2酷热构件&7的。",
 
 "quest.stage_2.zinc_machine.title":"&2&l第二章支线完成！",
-"quest.stage_2.zinc_machine.text1":"宛如天工！你完成了下界带来的许多困难挑战，这肯定给予了你继续前进的莫大信心！"
+"quest.stage_2.zinc_machine.text1":"宛如天工！你完成了下界带来的许多困难挑战，这肯定给予了你继续前进的莫大信心！",
+
+"quest.stage_3.introduce.title":"&6&l异彩净化",
+"quest.stage_3.introduce.subtitle":"&6第三章",
+"quest.stage_3.introduce.text1":"在批量生产&6光辉线圈&r的路上，你会遇到更加困难的挑战。",
+"quest.stage_3.introduce.text2":"再一次拿起扳手、挎起工具箱，为你的工厂开辟新地界吧！",
+"quest.stage_3.introduce.text3":"&6创造最伟大！&r",
+
+"quest.stage_3.stockpile_switch.title":"控制产量",
+"quest.stage_3.stockpile_switch.text1":"接下来的几个装置都需要在物品形态（掉落物形态）处理部分材料，然而这些操作都无法自动进行止损（例如掉落物的拥堵并不会使传送带上的物品停下）。手动增加止损机构和缓冲区因此成为了必要操作。",
+"quest.stage_3.stockpile_switch.text2":"更具体来说：当输出缓冲区内的物品个数达到设定值的75%时，停止材料生产；当它不足25%时，重新开始材料生产。这类机构能够防止物品到处散落，从而节约库存。",
+"quest.stage_3.stockpile_switch.text3":"&6存量转信器&r正是为此而设计的。",
+
+"quest.stage_3.invar.title":"动力锤",
+"quest.stage_3.invar.subtitle":"步骤 30",
+"quest.stage_3.invar.text1":"除了&6超频构件，&r你还需要用&6殷钢&r（某种铁镍合金）制造&6殷钢机器&r才能完成&6机器方块&r的制造。",
+"quest.stage_3.invar.text2":"由于精炼&6殷钢&r的过程漫长而又枯燥，所以你可能需要建造一条自动生产线...",
+
+"quest.stage_3.stick.title":"木棍次日达",
+"quest.stage_3.stick.subtitle":"步骤 19",
+"quest.stage_3.stick.text1":"下面材料的生产需要许多木棍。你可以选择重新采集木棍，或从你的&6【步骤 1】&r中拿取一些。",
+
+"quest.stage_3.cobblestone.title":"石之海",
+"quest.stage_3.cobblestone.subtitle":"步骤 20-1",
+"quest.stage_3.cobblestone.text1":"鹅卵石可真是廉价啊（笑",
+
+"quest.stage_3.crushing_wheel.title":"那一天，人类终于回想起了...",
+"quest.stage_3.crushing_wheel.subtitle":"步骤 20-2",
+"quest.stage_3.crushing_wheel.text1":"下一步，我们需要&6粉碎轮。&r不过不仅要用作机器，还要用作原料。",
+"quest.stage_3.crushing_wheel.text2":"一面&6动力合成器&r墙可能会迅速阻碍你工厂里的其它基建结构。确保为它们留出足够的空间。",
+
+"quest.stage_3.singularity.title":"全面侵入",
+"quest.stage_3.singularity.subtitle":"步骤 20-3",
+"quest.stage_3.singularity.text1":"当你使用&6粉碎轮&r粉碎&6粉碎轮&r时，一种奇特的现象产生了...也许我们可以稍加利用...",
+"quest.stage_3.singularity.text2":"&7是A粉碎轮粉碎了B粉碎轮，还是B粉碎轮粉碎的A粉碎轮...",
+
+"quest.stage_3.slime_fern.title":"利姆露大人的恩惠",
+"quest.stage_3.slime_fern.text1":"如果你想与怪物们友好相处，那也许你可以试试使用&6史莱姆蕨&r来生产&6火药、骨粉&r和&6末影粉...&r",
+"quest.stage_3.slime_fern.text2":"何不漫游大陆，寻找植被中异常鲜艳的颜色呢？别忘了带把剪刀。",
+
+"quest.stage_3.slime_fern_leaf.title":"阴魂不散",
+"quest.stage_3.slime_fern_leaf.subtitle":"步骤 21",
+"quest.stage_3.slime_fern_leaf.text1":"当接触到&6灵火&r时，&6史莱姆蕨叶片&r可以在一瞬间重新生长为蕨。就像之前的&6赛特斯石英种子&r循环一样，我们也许可以对这一特点加以利用。",
+"quest.stage_3.slime_fern_leaf.text2":"这一循环相当简单：使用&6机械手&r将每个&6史莱姆蕨&r切成两片叶片，再用&6灵火&r将其中之一缠魂。所有颜色的&6史莱姆蕨&r最好以相同速度循环。",
+"quest.stage_3.slime_fern_leaf.text3":"将&6魔鬼之梦果实&r扔在地上，然后用一个打火石在扔出去的位置点火，就可以产生灵火。",
+"quest.stage_3.slime_fern_leaf.text4":"&7啊，留一些用作备份总不是什么坏事。",
+
+"quest.stage_3.fern_paste.title":"神秘生物量",
+"quest.stage_3.fern_paste.subtitle":"步骤 22-1",
+"quest.stage_3.fern_paste.text1":"把多余的叶片粉碎，好戏即将开场。",
+
+"quest.stage_3.gunpowder.title":"你需要煮点药",
+"quest.stage_3.gunpowder.subtitle":"步骤 22-2",
+"quest.stage_3.gunpowder.text1":"加工这些绿色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。",
+"quest.stage_3.gunpowder.text2":"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。",
+
+"quest.stage_3.ender_dust.title":"炒粉",
+"quest.stage_3.ender_dust.subtitle":"步骤 22-3",
+"quest.stage_3.ender_dust.text1":"加工这些紫色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。",
+"quest.stage_3.ender_dust.text2":"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。",
+
+"quest.stage_3.bone_meal.title":"煎点化肥",
+"quest.stage_3.bone_meal.subtitle":"步骤 22-4",
+"quest.stage_3.bone_meal.text1":"加工这些蓝色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。",
+"quest.stage_3.bone_meal.text2":"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。",
+
+"quest.stage_3.alternative.title":"其实我更喜欢折磨怪物",
+"quest.stage_3.alternative.subtitle":"步骤 22-A",
+"quest.stage_3.alternative.text1":"如果你不想搞那么麻烦，几个刷怪塔就可以解决一切。",
+"quest.stage_3.alternative.text2":"勾选“使用刷怪塔”以跳过&6史莱姆蕨&r机器。",
+
+"quest.stage_3.sand.title":"无法自拔",
+"quest.stage_3.sand.subtitle":"步骤 23-1",
+"quest.stage_3.sand.text1":"你需要更多沙子以制造反应堆中必须的炸药。可今非昔比的你有了粉碎轮，使这一切变得如此简单。",
+
+"quest.stage_3.tnt.title":"不要在这里下国际象棋",
+"quest.stage_3.tnt.subtitle":"步骤 23-2",
+"quest.stage_3.tnt.text1":"用&6动力合成器&r来造些易爆品吧！在合成&6TNT&r时，你需要重复在不相邻的格子中分别放入&6沙子&r和&6火药。&r这时，一些&6动力臂&r或许能派上大用场。",
+
+"quest.stage_3.entangled_singularity.title":"切尔诺贝利",
+"quest.stage_3.entangled_singularity.subtitle":"步骤 24",
+"quest.stage_3.entangled_singularity.text1":"你将亲手打造出这一工厂片区的核心装置：爆炸反应堆。",
+"quest.stage_3.entangled_singularity.text2":"要制造&6光辉线圈，&r你必须先让&6奇点&r和&6末影粉&r同时参与一次次的可控爆炸才行。希望你能想出一种万全的方法，使反应堆能够在三种材料的供应下稳定运转...",
+"quest.stage_3.entangled_singularity.text3":"注意，&6奇点&r和&6末影粉&r需要以1:1的比率供应。他们并不需要离得特别近，且一次爆炸可以同时转换多组物品。最终产物会在&6奇点&r所在位置生成。",
+"quest.stage_3.entangled_singularity.text4":"&7由于产物的堆叠规则为2个每组，所以你需要精细控制物品输入数量...抽屉用处不大。",
+
+"quest.stage_3.dye.title":"选择困难症",
+"quest.stage_3.dye.subtitle":"步骤 25",
+"quest.stage_3.dye.text1":"你首先需要选择一种颜料以生产&6异彩奇点&r。选择哪种颜色都可以，除了&f白色&7。（其实还有灰色和黑色）&r",
+
+"tip.kubejs.any_dye_except_white":"除白色外的染料",
+
+"quest.stage_3.dye_entangled_singularity.title":"染上星空的颜色",
+"quest.stage_3.dye_entangled_singularity.subtitle":"步骤 26-1",
+"quest.stage_3.dye_entangled_singularity.text1":"将&6量子缠绕态奇点&r与染料混合以探索颜色的究极奥秘！有了它，我们才能够着手制作&6异彩化合物。&r",
+
+"quest.stage_3.paint_ball_red.title":"&c光谱校正&r",
+"quest.stage_3.paint_ball_red.text1":"通过粉碎&6异彩奇点，&r你有概率获得一些&c红色染色球。&r",
+"quest.stage_3.paint_ball_red.text2":"你并不需要&c红色染色球&r来生产&6异彩化合物，&r试着放入&6分液池&r以校正它的光谱。",
+
+"quest.stage_3.paint_ball_yellow.title":"&e光谱校正&r",
+"quest.stage_3.paint_ball_yellow.text1":"通过粉碎&6异彩奇点，&r你同样有概率获得一些&e染色球（黄色）。&r.",
+"quest.stage_3.paint_ball_yellow.text2":"就像红色的一样，&e黄色染色球&r也需要被再次分液以校正光谱。",
+
+"quest.stage_3.paint_ball_green.title":"&a光谱校正&r",
+"quest.stage_3.paint_ball_green.text1":"你需要继续改变光谱频率。",
+
+"quest.stage_3.paint_ball_blue.title":"&1光谱校正&r",
+"quest.stage_3.paint_ball_blue.text1":"就快完成了！&1蓝色染色球&r只需再进行一次分液就可以投入使用了。",
+
+"quest.stage_3.paint_ball_magenta.title":"&d光谱校正&r",
+"quest.stage_3.paint_ball_magenta.subtitle":"步骤 26-2",
+"quest.stage_3.paint_ball_magenta.text1":"&d品红色染色球&r拥有制造&6异彩化合物&r所需的精华。你有几率在粉碎&6异彩奇点&r时直接获得它们，但大多数还是通过光谱校正得到的。",
+
+"quest.stage_3.waste.title":"光盘行动",
+"quest.stage_3.waste.text1":"分液的过程会产生大量流体副产物，你需要在生产线被堵塞之前及时处理它们。",
+
+"quest.stage_3.paint_ball_black.title":"失去高光",
+"quest.stage_3.paint_ball_black.text1":"呃，对&6染色球&r的光谱进行过度校正只会使其失去颜色，无法继续处理。",
+
+"quest.stage_3.chromatic_compound.title":"颜色精炼",
+"quest.stage_3.chromatic_compound.subtitle":"步骤 26-3",
+"quest.stage_3.chromatic_compound.text1":"再次使用&6动力合成器&r以合成&6异彩化合物！&r",
+
+"quest.stage_3.beacon.title":"我说，“要有光”",
+"quest.stage_3.beacon.subtitle":"步骤 27",
+"quest.stage_3.beacon.text1":"&6光辉石&r的生产需要一条&6信标光柱。&r",
+"quest.stage_3.beacon.text2":"选择一种你喜爱的方式并做好充足准备。",
+
+"quest.stage_3.refined_radiance.title":"A1高闪",
+"quest.stage_3.refined_radiance.subtitle":"步骤 28-1",
+"quest.stage_3.refined_radiance.text1":"当&6异彩化合物&r作为物品掉落的时候，它会汲取身旁的光源并进一步转化为&6光辉石&r。你有以下三种方式可以选择：",
+"quest.stage_3.refined_radiance.text2":"- 在物品形态的&6异彩化合物&r旁边不断放置&6光源方块&r（两者间无遮挡）。",
+"quest.stage_3.refined_radiance.text3":"- 将物品形态的&6异彩化合物&r和物品形态的&6光源方块&r放到一起（两者间无遮挡）。",
+"quest.stage_3.refined_radiance.text4":"- 将物品形态的&6异彩化合物&r扔进&6信标光柱&r中。",
+
+"quest.stage_3.refined_radiance_sheet.title":"通天之路",
+"quest.stage_3.refined_radiance_sheet.subtitle":"步骤 28-2",
+"quest.stage_3.refined_radiance_sheet.text1":"主要工作已经完成！你只需要最后两步就能生产&6光辉线圈&r了。",
+"quest.stage_3.refined_radiance_sheet.text2":"第一步，你需要一个&6动力辊压机。&r",
+
+"quest.stage_3.radiant_coil.title":"霓虹灯光",
+"quest.stage_3.radiant_coil.subtitle":"步骤 28-3",
+"quest.stage_3.radiant_coil.text1":"第二步，你需要一个&6动力合成器&r将压制好的&6光辉板&r切割并卷起，熠熠生辉的&6光辉线圈&r就做好了。",
+
+"quest.stage_3.inductive_mechanism.title":"有效载荷",
+"quest.stage_3.inductive_mechanism.subtitle":"步骤 29",
+"quest.stage_3.inductive_mechanism.text1":"你知道现在应该干什么了吧。是时候将&6精密构件&r升级一下了！",
+
+"quest.stage_3.resonator.title":"武装到头发！",
+"quest.stage_3.resonator.text1":"还是那句话，多贮存些&6共鸣器&r是个好习惯。",
+"quest.stage_3.resonator.text2":"&7不必要自动生产它们。",
+
+"quest.stage_3.invar_machine.title":"&f&l第三章完成！&r",
+"quest.stage_3.invar_machine.text1":"好耶！&6超频构件&r正在被源源不断地生产！全新的技术和魔法之门将为你打开！",
+"quest.stage_3.invar_machine.text2":"&7当你认为你的生产线已经万无一失时，去&a纵览&7解锁新的目标吧！",
+
+"quest.stage_3.silver_coin.title":"一键三连",
+"quest.stage_3.silver_coin.subtitle":"步骤 30-1",
+"quest.stage_3.silver_coin.text1":"带着不舍你必须将你手中的&6银币&r丢进&6治炼炉&r以获得稳定的熔融银来源。&2(此操作不可逆！)",
+
+"quest.stage_3.molten_silver.title":"化作雪白的灰",
+"quest.stage_3.molten_silver.subtitle":"步骤 30-2",
+"quest.stage_3.molten_silver.text1":"把你手中的贵金属银投入&6冶炼炉&r中以继续...。",
+
+"quest.stage_3.silver_ingot.title":"昂贵砖块",
+"quest.stage_3.silver_ingot.subtitle":"步骤 30-3",
+"quest.stage_3.silver_ingot.text1":"将你的&6熔融银&r铸成方块，并欣赏它的光泽...",
+
+"quest.stage_3.ender_dust.title":"加花",
+"quest.stage_3.ender_dust.subtitle":"步骤 30-4",
+"quest.stage_3.ender_dust.text1":"从你的反应堆拿点&6末影粉&r来。如果你怕生产线被堵塞，使用末影珍珠也是可以的。",
+
+"quest.stage_3.hanging_pream_leaves.title":"折跃探险",
+"quest.stage_3.hanging_pream_leaves.subtitle":"步骤 30-5",
+"quest.stage_3.hanging_pream_leaves.text1":"在你英勇击败末影龙后，通过&6折跃门&r前往外岛。",
+"quest.stage_3.hanging_pream_leaves.text2":"在那里，你能够采集到&6末影合金&r的原材料之一——&6梦兰浆果&r。进过精加工就可以变成&6末影合金&r。",
+
+"quest.stage_3.the_end.title":"此行未终",
+"quest.stage_3.the_end.text1":"空间移动的秘密就在&6末地之门&r的另一端...",
+"quest.stage_3.the_end.target1":"访问 末地",
+
+"quest.stage_3.insolator.title":"暗紫循环",
+"quest.stage_3.insolator.text1":"感谢&6热力&r技术，现在你可以循环生产&6梦兰浆果&r了。这样一来，稳定生产&6末影合金&r也就不再成问题。",
+
+"quest.stage_3.enderium.title":"外星合金",
+"quest.stage_3.enderium.subtitle":"步骤 30-6",
+"quest.stage_3.enderium.text1":"地外合金",
+"quest.stage_3.enderium.text2":"首先，使用&6末影粉（或末影珍珠）&r以及&6紫颂紫金&r加固&6银锭。&r",
+
+"quest.stage_3.abstruse_mechanism.title":"注入灵魂",
+"quest.stage_3.abstruse_mechanism.text1":"步骤 30-7",
+"quest.stage_3.abstruse_mechanism.text2":"然后，在&6冶炼炉&r中使用&6熔融末影合金&r升级你的&6超频构件...&r",
+
+"quest.stage_3.enderium_machine.title":"&3&l第三章支线完成！",
+"quest.stage_3.enderium_machine.text1":"无可比拟的空间移动技术正被你捧在手中！在你庞大的工厂中，一定有某处可以利用它们进一步提高效率。看你的了！",
+
+"quest.stage_4.introduce.title":"&6&l进入盒子",
+"quest.stage_4.introduce.subtitle":"&6第四章",
+"quest.stage_4.introduce.text1":"下一步就是生产&6硅板&r了。已知道路中的一种就是将无数的物品、流体和能量不断地与紧凑的&6殷钢机器&r相结合。",
+"quest.stage_4.introduce.text2":"就像前几个章节一样，你需要先进行充足的材料准备。",
+
+"quest.stage_4.redstone_flux.title":"新型能量",
+"quest.stage_4.redstone_flux.text1":"接下来的生产线会消耗很多通量能量，确保你找到了合适的发电方式并能够随时增加发电规模，以便后续使用。",
+
+"quest.stage_4.laser_lamp.title":"炼金镭射",
+"quest.stage_4.laser_lamp.text1":"&6炼金辐射&r在这个章节中起核心作用。",
+"quest.stage_4.laser_lamp.text2":"它涉及使用高能光线和催化剂将物质转化成另一种物质，而红石计划的&6笼灯&r就能满足这些要求。",
+"quest.stage_4.laser_lamp.text3":"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。",
+"quest.stage_4.laser_lamp.text4":"&6 /c ponder kubejs:ponder_laser_lamp",
+
+"quest.stage_4.sand.title":"寄点沙子过来",
+"quest.stage_4.sand.subtitle":"步骤 31-1",
+"quest.stage_4.sand.text1":"是时候提高你的沙子产量了，因为它们富含&6硅！&r",
+
+"quest.stage_4.sand_ball.title":"团团转",
+"quest.stage_4.sand_ball.subtitle":"步骤 31-2",
+"quest.stage_4.sand_ball.text1":"首先，将块状沙子洗净并提制作成湿的沙球。",
+"quest.stage_4.sand_ball.text2":"因为沙球很容易坍塌，所以它们不能堆叠在一起。采用了热力技术的流体转置器拥有足够的精度来稳定生产它们。",
+
+"quest.stage_4.rough_sand.title":"仍需打磨",
+"quest.stage_4.rough_sand.subtitle":"步骤 31-3",
+"quest.stage_4.rough_sand.text1":"将&6沙球&r扔到&6分液池&r中，分离出其中的砂质物。",
+
+"quest.stage_4.fine_sand.title":"搅和搅和",
+"quest.stage_4.fine_sand.text1":"在将&6沙球&r筛成&6沙块&r的过程中不可避免地产生了副产品。不过先别急着扔掉，我们以后还会用到这些流体...",
+
+"quest.stage_4.basalt.title":"赛博石矿",
+"quest.stage_4.basalt.subtitle":"步骤 32-1",
+"quest.stage_4.basalt.text1":"从&6玄武岩&r中分离出微量的惰性&6玄武粉末&r是一种低成本的方案。但前提是，你要有用不完的&6玄武岩&r才行。",
+
+"quest.stage_4.basalz_rod.title":"高温射线",
+"quest.stage_4.basalz_rod.subtitle":"步骤 32-2",
+"quest.stage_4.basalz_rod.text1":"&6通量磁铁&r能够将&6玄武碎片&r从&6玄武岩&r中提取出来，等待进一步的处理。",
+
+"quest.stage_4.flux_magnet.title":"通量充能",
+"quest.stage_4.flux_magnet.subtitle":"步骤 32-3",
+"quest.stage_4.flux_magnet.text1":"为了生成玄武岩精华，矿车里的通量磁铁必须被充能。",
+"quest.stage_4.flux_magnet.text2":"因此，这个装置必须将磁铁从矿车卸载器运到能量灌注机中充能。",
+
+"quest.stage_4.basalz_powder.title":"玄武岩磨粉",
+"quest.stage_4.basalz_powder.subtitle":"步骤 33-1",
+"quest.stage_4.basalz_powder.text1":"在准备加工之前，玄武岩精华需要进行一些提炼。",
+
+"quest.stage_4.earth_charge.title":"集中热量",
+"quest.stage_4.earth_charge.subtitle":"步骤 33-2",
+"quest.stage_4.earth_charge.text1":"将一些处理好的&6玄武粉末&r压制成密度更高的&6岩荷弹&r吧。",
+
+"quest.stage_4.purified_sand.title":"晶化沙",
+"quest.stage_4.purified_sand.subtitle":"步骤 33-3",
+"quest.stage_4.purified_sand.text1":"用裂岩弹富集沙子碎块会产生晶化沙子。至此，距离达到电路所需的硅含量不需要太多的加工了。",
+
+"quest.stage_4.logs.title":"行将就木",
+"quest.stage_4.logs.subtitle":"步骤 34-1",
+"quest.stage_4.logs.text1":"在原地建造一个全新的树场是件值得考虑的事。它可以使你包括&6硅板&r在内的后续生产方便许多。",
+
+"quest.stage_4.charcoal.title":"热解炉 I",
+"quest.stage_4.charcoal.subtitle":"步骤 34-2",
+"quest.stage_4.charcoal.text1":"并不强制需要使用热解炉生产木炭，但是在原木供应有限的情况下值得使用这个方法来增加产量。",
+
+"quest.stage_4.coal_coke.title":"热解炉 II",
+"quest.stage_4.coal_coke.subtitle":"步骤 34-3",
+"quest.stage_4.coal_coke.text1":"将&6木炭&r进行更加复杂的处理即可制造&6焦炭，&r它不仅是优秀的固体燃料，更是提纯&6硅&r的必要材料。",
+
+"quest.stage_4.creosote.title":"炭汁",
+"quest.stage_4.creosote.text1":"杂酚油是热解时的副产物，它可以被用作额外的燃料，涂在木板上可以起到防腐的作用。",
+
+"quest.stage_4.coke_chunk.title":"高压水枪",
+"quest.stage_4.coke_chunk.subtitle":"步骤 35",
+"quest.stage_4.coke_chunk.text1":"将&6动力锯&r和水结合，可以将&6焦炭&r切割为小块，以增加催化时的接触表面积。",
+
+"quest.stage_4.silicon_compound.title":"调酒师",
+"quest.stage_4.silicon_compound.subtitle":"步骤 36",
+"quest.stage_4.silicon_compound.text1":"将&6高纯沙、小块焦炭&r和&6细沙流体&r混合搅拌，就可以从其中提纯出&6硅&r了。",
+
+"quest.stage_4.snowball.title":"雪球机",
+"quest.stage_4.snowball.subtitle":"步骤 37",
+"quest.stage_4.snowball.text1":"&6殷钢机器&r使得从水中制造&6雪球&r不再是难事。也许我们应该为下一位不速之客预留些雪球订单...",
+
+"quest.stage_4.blizz_rod.title":"寒冷射线",
+"quest.stage_4.blizz_rod.subtitle":"步骤 38-1",
+"quest.stage_4.blizz_rod.text1":"当充能的熵变机械臂遇到雪球时，雪球会变为活化的冰雪精华。",
+
+"quest.stage_4.entropy_manipulator.title":"熵变充能",
+"quest.stage_4.entropy_manipulator.subtitle":"步骤 38-2",
+"quest.stage_4.entropy_manipulator.text1":"为了生成冰霜精华，熵变机械臂必须被充能。",
+"quest.stage_4.entropy_manipulator.text2":"请确保它在下一次使用前已被充能。",
+
+"quest.stage_4.blizz_powder.title":"冰雪磨粉",
+"quest.stage_4.blizz_powder.subtitle":"步骤 39-1",
+"quest.stage_4.blizz_powder.text1":"跟先前一样，任何精华变得可用之前都需要一些提炼。",
+
+"quest.stage_4.ice_charge.title":"集中寒冷",
+"quest.stage_4.ice_charge.subtitle":"步骤 39-2",
+"quest.stage_4.ice_charge.text1":"继续将&6暴雪粉末&r压制成为&6瀑冰弹。&r",
+
+"quest.stage_4.silicon.title":"终极归纳",
+"quest.stage_4.silicon.subtitle":"步骤 39-3",
+"quest.stage_4.silicon.text1":"在&6冶炼炉&r中将两者再次结合，就可以提纯出一小块高质量的&6硅&r了。",
+
+"quest.stage_4.printed_silicon.title":"压模电路",
+"quest.stage_4.printed_silicon.subtitle":"步骤 40-1",
+"quest.stage_4.printed_silicon.text1":"使用&6机械手&r将&6硅&r压模成&6硅板。&r你需要的&6硅压印模板&r可以在自然生成的陨石内部找到。",
+
+"quest.stage_4.calculation_mechanism.title":"整装待发",
+"quest.stage_4.calculation_mechanism.subtitle":"步骤 40-2",
+"quest.stage_4.calculation_mechanism.text1":"你还需要最后三个&6机械手&r将构件升级...",
+
+"quest.stage_4.flash_drive.title":"全身武装",
+"quest.stage_4.flash_drive.text1":"使用闪存盘可以更方便地装配运算构件。",
+"quest.stage_4.flash_drive.text2":"你需要一些&6闪存&r以制造&6智能构件。&r",
+"quest.stage_4.flash_drive.text3":"&7保管好贵重物品！",
+
+"quest.stage_4.calculation_machine.title":"&f&l第四章完成！&r",
+"quest.stage_4.calculation_machine.text1":"终于走到这一步了！你工厂中所有的传统流水线都已组装完成，让我们一起步入智能时代吧！",
+"quest.stage_4.calculation_machine.text2":"概览中打开了新选项，只要你准备好了。",
+
+"quest.stage_4.printed_processor.title":"电路快递 I",
+"quest.stage_4.printed_processor.subtitle":"步骤 41-1",
+"quest.stage_4.printed_processor.text1":"组装&6各式ME电路板&r还需要一些额外操作，也许你可以制造一条半自动化流水线。",
+
+"quest.stage_4.processor.title":"电路速递 II",
+"quest.stage_4.processor.subtitle":"步骤 41-2",
+"quest.stage_4.processor.text1":"组装它们并不是轻而易举就能完成的事，但看着它们运行很有趣。",
+
+"quest.stage_4.finish_4a.title":"&6&l伟大发现",
+"quest.stage_4.finish_4a.text1":"秘密方式已经被研究出来，从现在开始，获取&6计算构件&r已经变得微不足道了。",
+"quest.stage_4.finish_4a.target1":"&3完成第四章附属",
+
+"quest.stage_4.silicon_4a.title":"拆包",
+"quest.stage_4.silicon_4a.subtitle":"步骤 39-A",
+"quest.stage_4.silicon_4a.text1":"使用&6提取机(锯木机)&r将&6硅&r从罐子中提取出来。"
 }

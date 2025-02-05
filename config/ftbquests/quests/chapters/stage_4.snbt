@@ -9,16 +9,16 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&6&l进入盒子"
+			title: "{quest.stage_4.introduce.title}"
 			icon: "kubejs:inductive_mechanism"
 			x: 1.0d
 			y: -2.5d
 			shape: "hexagon"
-			subtitle: "&6第四章"
+			subtitle: "{quest.stage_4.introduce.subtitle}"
 			description: [
-				"下一步就是生产&6硅板&r了。已知道路中的一种就是将无数的物品、流体和能量不断地与紧凑的&6殷钢机器&r相结合。"
+				"{quest.stage_4.introduce.text1}"
 				""
-				"就像前几个章节一样，你需要先进行充足的材料准备。"
+				"{quest.stage_4.introduce.text2}"
 			]
 			dependencies: ["74CFD83C501C4952"]
 			hide: true
@@ -27,7 +27,7 @@
 			tasks: [{
 				id: "0C162B64EE377FC8"
 				type: "checkmark"
-				title: "&6开始！"
+				title: "{tip.kubejs.start}"
 			}]
 			rewards: [{
 				id: "01697377D270DD3C"
@@ -36,12 +36,12 @@
 			}]
 		}
 		{
-			title: "整装待发"
+			title: "{quest.stage_4.calculation_mechanism.title}"
 			icon: "kubejs:calculation_mechanism"
 			x: 1.0d
 			y: 7.5d
-			subtitle: "步骤 40-2"
-			description: ["你还需要最后三个&6机械手&r将构件升级..."]
+			subtitle: "{quest.stage_4.calculation_mechanism.subtitle}"
+			description: ["{quest.stage_4.calculation_mechanism.text1}"]
 			dependencies: [
 				"1BF8F3CC8BEBB620"
 				"71D90A1E5D53FC0A"
@@ -57,19 +57,19 @@
 				{
 					id: "48B114D2C0F51F6D"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "&f&l第四章完成！&r"
+			title: "{quest.stage_4.calculation_machine.title}"
 			x: 1.0d
 			y: 9.5d
 			shape: "hexagon"
 			description: [
-				"终于走到这一步了！你工厂中所有的传统流水线都已组装完成，让我们一起步入智能时代吧！"
+				"{quest.stage_4.calculation_machine.text1}"
 				""
-				"概览中打开了新选项，只要你准备好了。"
+				"{quest.stage_4.calculation_machine.text2}"
 			]
 			dependencies: ["6824055533465010"]
 			size: 2.0d
@@ -104,12 +104,12 @@
 			]
 		}
 		{
-			title: "寄点沙子过来"
+			title: "{quest.stage_4.sand.title}"
 			icon: "minecraft:sand"
 			x: -1.0d
 			y: -0.5d
-			subtitle: "装置 31-1"
-			description: ["是时候提高你的沙子产量了，因为它们富含&6硅！&r"]
+			subtitle: "{quest.stage_4.sand.subtitle}"
+			description: ["{quest.stage_4.sand.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "22202C87352242D6"
@@ -123,20 +123,20 @@
 				{
 					id: "58353DEAB0670141"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "团团转"
+			title: "{quest.stage_4.sand_ball.title}"
 			icon: "kubejs:sand_ball"
 			x: -1.0d
 			y: 0.5d
-			subtitle: "装置 31-2"
+			subtitle: "{quest.stage_4.sand_ball.subtitle}"
 			description: [
-				"首先，将块状沙子洗净并提制作成湿的沙子球。"
+				"{quest.stage_4.sand_ball.text1}"
 				""
-				"因为沙子球很容易坍塌，所以它们不能堆叠在一起。采用了热力技术的流体转置器拥有足够的精度来稳定生产它们。"
+				"{quest.stage_4.sand_ball.text2}"
 			]
 			dependencies: ["22202C87352242D6"]
 			id: "42F1A649D86DB86D"
@@ -150,31 +150,32 @@
 				{
 					id: "36183F0BBDAA8DB8"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "搅和搅和"
+			title: "{quest.stage_4.fine_sand.title}"
 			icon: "kubejs:fine_sand_bucket"
 			x: 1.0d
 			y: 1.5d
 			shape: "circle"
-			description: ["在将&6沙球&r筛成&6粗沙&r的过程中不可避免地产生了副产品。不过先别急着扔掉，我们以后还会用到这些流体..."]
+			description: ["{quest.stage_4.fine_sand.text1}"]
 			dependencies: ["42F1A649D86DB86D"]
 			id: "4412F3B2827606E4"
 			tasks: [{
 				id: "5C23F9DBF4F2F484"
 				type: "checkmark"
+				title: "{tip.kubejs.automated}"
 			}]
 		}
 		{
-			title: "仍需打磨"
+			title: "{quest.stage_4.rough_sand.title}"
 			icon: "kubejs:rough_sand"
 			x: -1.0d
 			y: 1.5d
-			subtitle: "装置 31-3"
-			description: ["将&6沙球&r扔到&6分液池&r中，分离出其中的砂质物。"]
+			subtitle: "{quest.stage_4.rough_sand.subtitle}"
+			description: ["{quest.stage_4.rough_sand.text1}"]
 			dependencies: ["42F1A649D86DB86D"]
 			id: "0F5AA5DF001DCDF5"
 			tasks: [
@@ -187,17 +188,17 @@
 				{
 					id: "589AB5A61CD95E2F"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "晶化沙"
+			title: "{quest.stage_4.purified_sand.title}"
 			icon: "kubejs:purified_sand"
 			x: -1.0d
 			y: 3.0d
-			subtitle: "装置 33-3"
-			description: ["用裂岩弹富集沙子碎块会产生晶化沙子。至此，距离达到电路所需的硅含量不需要太多的加工了。"]
+			subtitle: "{quest.stage_4.purified_sand.subtitle}"
+			description: ["{quest.stage_4.purified_sand.text1}"]
 			dependencies: [
 				"60A8B4C736CE3226"
 				"0F5AA5DF001DCDF5"
@@ -213,17 +214,17 @@
 				{
 					id: "2BE9DD7F346679E2"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "热解炉 I"
+			title: "{quest.stage_4.charcoal.title}"
 			icon: "minecraft:charcoal"
 			x: 3.0d
 			y: 0.5d
-			subtitle: "步骤 34-2"
-			description: ["并不强制需要使用热解炉生产木炭，但是在原木供应有限的情况下值得使用这个方法来增加产量。"]
+			subtitle: "{quest.stage_4.charcoal.subtitle}"
+			description: ["{quest.stage_4.charcoal.text1}"]
 			dependencies: ["46820FBDDDEE491E"]
 			id: "3249CD08992F2BCD"
 			tasks: [
@@ -236,16 +237,17 @@
 				{
 					id: "760709B05A0FEF11"
 					type: "checkmark"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "热解炉 II"
+			title: "{quest.stage_4.coal_coke.title}"
 			icon: "thermal:coal_coke"
 			x: 3.0d
 			y: 1.5d
-			subtitle: "步骤 34-3"
-			description: ["将&6木炭&r进行更加复杂的处理即可制造&6焦炭，&r它不仅是优秀的固体燃料，更是提纯&6硅&r的必要材料。"]
+			subtitle: "{quest.stage_4.coal_coke.subtitle}"
+			description: ["{quest.stage_4.coal_coke.text1}"]
 			dependencies: ["3249CD08992F2BCD"]
 			id: "1A383F96B312D1B8"
 			tasks: [
@@ -258,17 +260,17 @@
 				{
 					id: "4960B920CCF3C186"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "高压水枪"
+			title: "{quest.stage_4.coke_chunk.title}"
 			icon: "kubejs:coke_chunk"
 			x: 3.0d
 			y: 3.0d
-			subtitle: "步骤 35"
-			description: ["将&6动力锯&r和水结合，可以将&6焦炭&r切割为小块，以增加催化时的接触表面积。"]
+			subtitle: "{quest.stage_4.coke_chunk.subtitle}"
+			description: ["{quest.stage_4.coke_chunk.text1}"]
 			dependencies: ["1A383F96B312D1B8"]
 			id: "16F920C2AF2FA2E0"
 			tasks: [
@@ -281,17 +283,17 @@
 				{
 					id: "44D36B403AA26E97"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "调酒师"
+			title: "{quest.stage_4.silicon_compound.title}"
 			icon: "kubejs:silicon_compound"
 			x: 1.0d
 			y: 4.0d
-			subtitle: "装置 36"
-			description: ["将&6高纯砂、小块焦炭&r和&6细砂流体&r混合搅拌，就可以从其中提纯出&6硅&r了。"]
+			subtitle: "{quest.stage_4.silicon_compound.subtitle}"
+			description: ["{quest.stage_4.silicon_compound.text1}"]
 			dependencies: [
 				"343050A40A3AB1F0"
 				"4412F3B2827606E4"
@@ -308,17 +310,17 @@
 				{
 					id: "2F239D4D9BB9B47A"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "集中热量"
+			title: "{quest.stage_4.earth_charge.title}"
 			icon: "thermal:earth_charge"
 			x: -3.0d
 			y: 3.0d
-			subtitle: "装置 33-2"
-			description: ["将一些处理好的&6玄武粉末&r压制成密度更高的&6岩荷弹&r吧。"]
+			subtitle: "{quest.stage_4.earth_charge.subtitle}"
+			description: ["{quest.stage_4.earth_charge.text1}"]
 			dependencies: ["5799B4124EE20DB1"]
 			id: "60A8B4C736CE3226"
 			tasks: [
@@ -331,17 +333,17 @@
 				{
 					id: "21545C0F55D9D8C8"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "玄武岩磨粉"
+			title: "{quest.stage_4.basalz_powder.title}"
 			icon: "thermal:basalz_powder"
 			x: -3.0d
 			y: 2.0d
-			subtitle: "装置 33-1"
-			description: ["在准备加工之前，玄武岩精华需要进行一些提炼。"]
+			subtitle: "{quest.stage_4.basalz_powder.subtitle}"
+			description: ["{quest.stage_4.basalz_powder.text1}"]
 			dependencies: ["6C4CB8F616A9C3DF"]
 			id: "5799B4124EE20DB1"
 			tasks: [
@@ -354,17 +356,17 @@
 				{
 					id: "05969082F437FCA9"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "高温射线"
+			title: "{quest.stage_4.basalz_rod.title}"
 			icon: "thermal:basalz_rod"
 			x: -3.0d
 			y: 0.5d
-			subtitle: "装置 33-2"
-			description: ["&6通量磁铁&r能够将&6玄武碎片&r从&6玄武岩&r中提取出来，等待进一步的处理。"]
+			subtitle: "{quest.stage_4.basalz_rod.subtitle}"
+			description: ["{quest.stage_4.basalz_rod.text1}"]
 			dependencies: ["0B602ED47A0195A4"]
 			id: "6C4CB8F616A9C3DF"
 			tasks: [
@@ -377,17 +379,17 @@
 				{
 					id: "7DF47F688E5C795C"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "赛博石矿"
+			title: "{quest.stage_4.basalt.title}"
 			icon: "minecraft:basalt"
 			x: -3.0d
 			y: -1.0d
-			subtitle: "装置 32-1"
-			description: ["从&6玄武岩&r中分离出微量的惰性&6玄武粉末&r是一种低成本的方案。但前提是，你要有用不完的&6玄武岩&r才行。"]
+			subtitle: "{quest.stage_4.basalt.subtitle}"
+			description: ["{quest.stage_4.basalt.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "0B602ED47A0195A4"
@@ -401,12 +403,12 @@
 				{
 					id: "738E569981496B56"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "通量充能"
+			title: "{quest.stage_4.flux_magnet.title}"
 			icon: {
 				id: "thermal:flux_magnet"
 				Count: 1b
@@ -414,11 +416,11 @@
 			}
 			x: -4.0d
 			y: 1.0d
-			subtitle: "装置 32-3"
+			subtitle: "{quest.stage_4.flux_magnet.subtitle}"
 			description: [
-				"为了生成玄武岩精华，矿车里的通量磁铁必须被充能。"
+				"{quest.stage_4.flux_magnet.text1}"
 				""
-				"因此，这个装置必须将磁铁从矿车卸载器运到能量灌注机中充能。"
+				"{quest.stage_4.flux_magnet.text2}"
 			]
 			dependencies: ["0B602ED47A0195A4"]
 			id: "58B534C4AEB4139D"
@@ -436,17 +438,17 @@
 				{
 					id: "11A074DF1CA99AD3"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "雪球机"
+			title: "{quest.stage_4.snowball.title}"
 			icon: "minecraft:snowball"
 			x: 5.0d
 			y: -1.0d
-			subtitle: "装置 37"
-			description: ["&6殷钢机器&r使得从水中制造&6雪球&r不再是难事。也许我们应该为下一位不速之客预留些雪球订单..."]
+			subtitle: "{quest.stage_4.snowball.subtitle}"
+			description: ["{quest.stage_4.snowball.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "4B34B52092BA32BE"
@@ -460,20 +462,20 @@
 				{
 					id: "193D8F8FEC7F864B"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "熵变充能"
+			title: "{quest.stage_4.entropy_manipulator.title}"
 			icon: "ae2:entropy_manipulator"
 			x: 6.0d
 			y: 3.0d
-			subtitle: "步骤 38-2"
+			subtitle: "{quest.stage_4.entropy_manipulator.subtitle}"
 			description: [
-				"为了生成冰霜精华，熵变机械臂必须被充能。"
+				"{quest.stage_4.entropy_manipulator.text1}"
 				""
-				"请确保它在下一次使用前已被充能。"
+				"{quest.stage_4.entropy_manipulator.text2}"
 			]
 			dependencies: ["4B34B52092BA32BE"]
 			id: "6D1519B746E032FB"
@@ -487,17 +489,17 @@
 				{
 					id: "49EAB67814570219"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "寒冷射线"
+			title: "{quest.stage_4.blizz_rod.title}"
 			icon: "thermal:blizz_rod"
 			x: 5.0d
 			y: 2.5d
-			subtitle: "装置 38-1"
-			description: ["当充能的熵变机械臂遇到雪球时，雪球会变为活化的冰雪精华。"]
+			subtitle: "{quest.stage_4.blizz_rod.subtitle}"
+			description: ["{quest.stage_4.blizz_rod.text1}"]
 			dependencies: ["4B34B52092BA32BE"]
 			id: "0AE7FAEBD5F86D9C"
 			tasks: [
@@ -510,17 +512,17 @@
 				{
 					id: "518D5675C9D1757D"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "冰雪磨粉"
+			title: "{quest.stage_4.blizz_powder.title}"
 			icon: "thermal:blizz_powder"
 			x: 5.0d
 			y: 4.0d
-			subtitle: "装置 39-1"
-			description: ["跟先前一样，任何精华变得可用之前都需要一些提炼。"]
+			subtitle: "{quest.stage_4.blizz_powder.subtitle}"
+			description: ["{quest.stage_4.blizz_powder.text1}"]
 			dependencies: ["0AE7FAEBD5F86D9C"]
 			id: "01B0A6236A5073D1"
 			tasks: [
@@ -533,17 +535,17 @@
 				{
 					id: "5CA556BB4614DD06"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "集中寒冷"
+			title: "{quest.stage_4.ice_charge.title}"
 			icon: "thermal:ice_charge"
 			x: 5.0d
 			y: 5.0d
-			subtitle: "装置 39-2"
-			description: ["继续将&6暴雪粉末&r压制成为&6冰荷弹。&r"]
+			subtitle: "{quest.stage_4.ice_charge.subtitle}"
+			description: ["{quest.stage_4.ice_charge.text1}"]
 			dependencies: ["01B0A6236A5073D1"]
 			id: "4732465116D723EE"
 			tasks: [
@@ -556,17 +558,17 @@
 				{
 					id: "220B89A9B897FA67"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "终极归纳"
+			title: "{quest.stage_4.silicon.title}"
 			icon: "ae2:silicon"
 			x: 3.0d
 			y: 5.0d
-			subtitle: "装置 39-3"
-			description: ["在&6冶炼炉&r中将两者再次结合，就可以提纯出一小块高质量的&6硅&r了。"]
+			subtitle: "{quest.stage_4.silicon.subtitle}"
+			description: ["{quest.stage_4.silicon.text1}"]
 			dependencies: [
 				"2268AFAF6E9AB5E2"
 				"4732465116D723EE"
@@ -582,17 +584,17 @@
 				{
 					id: "097EDCB9CFF9F686"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "压模电路"
+			title: "{quest.stage_4.printed_silicon.title}"
 			icon: "ae2:printed_silicon"
 			x: 1.0d
 			y: 6.0d
-			subtitle: "步骤 40-1"
-			description: ["使用&6机械手&r将&6硅&r压模成&6硅板。&r你需要的&6硅压印模板&r可以在自然生成的陨石内部找到。"]
+			subtitle: "{quest.stage_4.printed_silicon.subtitle}"
+			description: ["{quest.stage_4.printed_silicon.text1}"]
 			dependencies: [
 				"067C5FDA4709F195"
 				"354DB8B136C6B310"
@@ -609,18 +611,18 @@
 				{
 					id: "29B41D9EDCFC60DE"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "行将就木"
+			title: "{quest.stage_4.logs.title}"
 			icon: "minecraft:oak_log"
 			x: 3.0d
 			y: -0.5d
 			shape: "square"
-			subtitle: "步骤 34-1"
-			description: ["在原地建造一个全新的树场是件值得考虑的事。它可以使你包括&6硅板&r在内的后续生产方便许多。"]
+			subtitle: "{quest.stage_4.logs.subtitle}"
+			description: ["{quest.stage_4.logs.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "46820FBDDDEE491E"
@@ -628,7 +630,7 @@
 				{
 					id: "0AA0DEB1A87DA675"
 					type: "item"
-					title: "任意原木"
+					title: "{tip.kubejs.any_log}"
 					icon: "minecraft:oak_log"
 					item: {
 						id: "itemfilters:tag"
@@ -642,19 +644,19 @@
 				{
 					id: "72BA1D3BD545CBE6"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "全身武装"
+			title: "{quest.stage_4.flash_drive.title}"
 			x: -0.5d
 			y: 7.5d
 			shape: "circle"
 			description: [
-				"使用闪存盘可以更方便地装配运算构件。"
-				"你需要一些&6闪存&r以制造&6智能构件。&r"
-				"&7保管好贵重物品！"
+				"{quest.stage_4.flash_drive.text1}"
+				"{quest.stage_4.flash_drive.text2}"
+				"{quest.stage_4.flash_drive.text3}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["71D90A1E5D53FC0A"]
@@ -673,25 +675,26 @@
 			}]
 		}
 		{
-			title: "炭汁"
+			title: "{quest.stage_4.creosote.title}"
 			icon: "thermal:creosote_bucket"
 			x: 4.0d
 			y: 1.0d
 			shape: "circle"
-			description: ["杂酚油是热解时的副产物，它可以被用作额外的燃料，涂在木板上可以起到防腐的作用。"]
+			description: ["{quest.stage_4.creosote.text1}"]
 			dependencies: ["3249CD08992F2BCD"]
 			id: "33674138F4866C18"
 			tasks: [{
 				id: "224ACB0727C6F84E"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "电路快递 I"
+			title: "{quest.stage_4.printed_processor.title}"
 			x: 3.0d
 			y: 9.5d
-			subtitle: "装置 41-1"
-			description: ["组装&6各式ME电路板&r还需要一些额外操作，也许你可以制造一条半自动化流水线。"]
+			subtitle: "{quest.stage_4.printed_processor.subtitle}"
+			description: ["{quest.stage_4.printed_processor.text1}"]
 			dependencies: ["28DAED70768C6A50"]
 			id: "24C48CFAAD71B230"
 			tasks: [
@@ -716,11 +719,11 @@
 			]
 		}
 		{
-			title: "电路速递 II"
+			title: "{quest.stage_4.processor.title}"
 			x: 4.0d
 			y: 9.5d
-			subtitle: "装置 41-2"
-			description: ["组装它们并不是轻而易举就能完成的事，但看着它们运行很有趣。"]
+			subtitle: "{quest.stage_4.processor.subtitle}"
+			description: ["{quest.stage_4.processor.text1}"]
 			dependencies: ["24C48CFAAD71B230"]
 			id: "2B8F1D804107EB8C"
 			tasks: [
@@ -745,26 +748,27 @@
 			]
 		}
 		{
-			title: "新型能量"
+			title: "{quest.stage_4.redstone_flux.title}"
 			icon: "thermal:dynamo_magmatic"
 			x: -1.0d
 			y: -2.5d
 			shape: "circle"
-			description: ["接下来的生产线会消耗很多通量能量，确保你找到了合适的发电方式并能够随时增加发电规模，以便后续使用。"]
+			description: ["{quest.stage_4.redstone_flux.text1}"]
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "13B197C90F9812C8"
 			tasks: [{
 				id: "4C687EF00A44ED1E"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "&6&l伟大发现"
+			title: "{quest.stage_4.finish_4a.title}"
 			icon: "kubejs:failed_alchemy_0"
 			x: -3.0d
 			y: 5.0d
 			shape: "hexagon"
-			description: ["秘密方式已经被研究出来，从现在开始，获取&6计算构件&r已经变得微不足道了。"]
+			description: ["{quest.stage_4.finish_4a.text1}"]
 			dependencies: ["3B431AAADE8845FA"]
 			hide: true
 			size: 1.5d
@@ -772,17 +776,17 @@
 			tasks: [{
 				id: "3E71EB06044BC368"
 				type: "custom"
-				title: "&3完成第四章附属"
+				title: "{quest.stage_4.finish_4a.target1}"
 				icon: "kubejs:substrate_chaos"
 			}]
 		}
 		{
-			title: "拆包"
+			title: "{quest.stage_4.silicon_4a.title}"
 			icon: "ae2:silicon"
 			x: -1.0d
 			y: 5.0d
-			subtitle: "装置 39-A"
-			description: ["使用&6提取机(锯木机)&r将&6硅&r从罐子中提取出来。"]
+			subtitle: "{quest.stage_4.silicon_4a.subtitle}"
+			description: ["{quest.stage_4.silicon_4a.text1}"]
 			dependencies: ["4921355FCFE7DF2A"]
 			id: "354DB8B136C6B310"
 			tasks: [
@@ -795,31 +799,31 @@
 				{
 					id: "130EB1E9E50BF8A9"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "炼金镭射"
+			title: "{quest.stage_4.laser_lamp.title}"
 			icon: "kubejs:ponder_laser_lamp_on"
 			x: 3.0d
 			y: -2.5d
 			shape: "circle"
 			description: [
-				"&6炼金辐射&r在这个章节中起核心作用。"
+				"{quest.stage_4.laser_lamp.text1}"
 				""
-				"它涉及使用高能光线和催化剂将物质转化成另一种物质，而红石计划的&6笼灯&r就能满足这些要求。"
+				"{quest.stage_4.laser_lamp.text2}"
 				""
-				"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。"
+				"{quest.stage_4.laser_lamp.text3}"
 				""
-				"&6 /c ponder kubejs:ponder_laser_lamp"
+				"{quest.stage_4.laser_lamp.text4}"
 			]
 			dependencies: ["4B80A801A5BE4A01"]
 			id: "21D063D2676E498F"
 			tasks: [{
 				id: "31946A8474A2EA26"
 				type: "checkmark"
-				title: "好的"
+				title: "{tip.kubejs.sure}"
 			}]
 			rewards: [{
 				id: "6B9CEF7FDB1276C4"
