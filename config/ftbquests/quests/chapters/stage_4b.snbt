@@ -9,17 +9,17 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&6&l第三道路"
+			title: "{quest.stage_4a.introduce.title}"
 			icon: "kubejs:inductive_mechanism"
 			x: 1.75d
 			y: 2.0d
 			shape: "hexagon"
 			description: [
-				"炼金镭射提供了另一种硅的生产方法，更模糊但更有效。"
+				"{quest.stage_4a.introduce.text1}"
 				""
-				"发现每个反应物的秘密以找到混沌催化剂的正确配方。"
+				"{quest.stage_4a.introduce.text2}"
 				""
-				"一旦找到了正确的配方，混沌催化剂不仅可以将一种材料转化成硅，还可以从微不足道的材料中提取出更多有价值的材料。"
+				"{quest.stage_4a.introduce.text3}"
 			]
 			dependencies: ["75F9C570E6B95343"]
 			hide: true
@@ -28,6 +28,7 @@
 			tasks: [{
 				id: "38B2DFD6233E49FD"
 				type: "checkmark"
+				title: "{tip.kubejs.start}"
 			}]
 			rewards: [{
 				id: "4AF4A93C5D5FB6DD"
@@ -36,18 +37,18 @@
 			}]
 		}
 		{
-			title: "Encapsulate - Decapsulate"
+			title: "{quest.stage_4a.encapsulate_decapsulate.title}"
 			x: -0.25d
 			y: 2.0d
 			shape: "circle"
 			description: [
-				"除了炼金镭射，你还需要一些其他的机器。"
+				"{quest.stage_4a.encapsulate_decapsulate.text1}"
 				""
-				"-&6流体灌装机&r使用熔融玻璃来从资源中提取反应物。"
+				"{quest.stage_4a.encapsulate_decapsulate.text2}"
 				""
-				"-&6反应物提取机(锯木机)&r可以反转此过程。"
+				"{quest.stage_4a.encapsulate_decapsulate.text3}"
 				""
-				"-&6离心机&r用来分析凡品炼金混合物，根据一些规则来推测正确的混合配方。"
+				"{quest.stage_4a.encapsulate_decapsulate.text4}"
 			]
 			dependencies: ["05446225038D260A"]
 			id: "42B615F7BECA6E58"
@@ -545,11 +546,11 @@
 			y: 7.0d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有火成种类的反应物。"
+				"{quest.stage_4a.igneous.text1}"
 				""
-				"火成催化剂可以通过将火成种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.igneous.text2}"
 				""
-				"建议牢记所有结果，以这种方式找到正确配方，通常会需要6次以上。"
+				"{quest.stage_4a.igneous.text3}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -573,9 +574,9 @@
 			y: 6.5d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有草本种类的反应物。"
+				"{quest.stage_4a.herbal.text1}"
 				""
-				"草本催化剂可以通过将草本种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.herbal.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -599,9 +600,9 @@
 			y: 6.25d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有不稳定种类的反应物。"
+				"{quest.stage_4a.volatile.text1}"
 				""
-				"不稳定催化剂可以通过将不稳定种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.volatile.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -625,9 +626,9 @@
 			y: 6.25d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有晶化种类的反应物。"
+				"{quest.stage_4a.crystal.text1}"
 				""
-				"晶化催化剂可以通过将晶化种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.crystal.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -651,9 +652,9 @@
 			y: 6.5d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有金属种类的反应物。"
+				"{quest.stage_4a.metal.text1}"
 				""
-				"金属催化剂可以通过将金属种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.metal.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -677,9 +678,9 @@
 			y: 7.0d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有宝石种类的反应物。"
+				"{quest.stage_4a.gem.text1}"
 				""
-				"宝石催化剂可以通过将宝石种类的4种任意反应物组合制作。&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.gem.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -699,15 +700,15 @@
 			}]
 		}
 		{
-			title: "终代码"
+			title: "{quest.stage_4a.chaos.title}"
 			x: 1.75d
 			y: 7.5d
 			shape: "circle"
 			description: [
-				"如果此任务被解锁，说明你找到了所有种类的反应物。"
+				"{quest.stage_4a.chaos.text1}"
 				""
-				"终极催化剂由四种不同的催化剂混合制成，很大程度上取决于催化剂的发现方式和其试剂制成的方式。"
-				"&7（查看催化剂的JEI信息栏获取更多信息）"
+				"{quest.stage_4a.chaos.text2}"
+				"{quest.stage_4a.chaos.text3}"
 			]
 			dependencies: [
 				"3EB5CD9776DF0E63"
@@ -726,16 +727,16 @@
 			}]
 		}
 		{
-			title: "重大发现"
+			title: "{quest.stage_4a.silicon.title}"
 			x: 1.0d
 			y: 8.5d
 			shape: "circle"
 			description: [
-				"有了&6混沌催化剂&r后，你就可以开始进行各种反应物的配对了。"
+				"{quest.stage_4a.silicon.text1}"
 				""
-				"只需要将混沌催化剂和几罐同种反应物（嬗变是有损耗的）放入漏斗矿车中，然后找到一种催化剂变成了哪一种催化剂。在这个过程中催化剂不会被消耗。"
+				"{quest.stage_4a.silicon.text2}"
 				""
-				"其中一个反应物会转变成硅反应物，如果你发现了这个配方，那么就可以想想如何自动化了。"
+				"{quest.stage_4a.silicon.text3}"
 			]
 			dependencies: ["7A9AA27029185035"]
 			id: "6FDC8DA2FDED5FDD"
@@ -747,26 +748,26 @@
 			}]
 		}
 		{
-			title: "炼金镭射"
+			title: "{quest.stage_4a.laser_lamp.title}"
 			icon: "kubejs:ponder_laser_lamp_on"
 			x: 3.75d
 			y: 2.0d
 			shape: "circle"
 			description: [
-				"&6炼金镭射&r在炼金实验中起着核心作用。"
+				"{quest.stage_4a.laser_lamp.text1}"
 				""
-				"镭射是获得催化剂或寻找其正确配方的唯一途径，另一个用途就是将混沌催化剂用于特定反应物，将其嬗变成另一种物质。"
+				"{quest.stage_4a.laser_lamp.text2}"
 				""
-				"你可以通过JEI或输入下面的指令查看炼金镭射的搭建方式。"
+				"{quest.stage_4a.laser_lamp.text3}"
 				""
-				"&6 /c ponder kubejs:ponder_laser_lamp"
+				"{quest.stage_4a.laser_lamp.text4}"
 			]
 			dependencies: ["05446225038D260A"]
 			id: "1D1D1FEAF49C5E11"
 			tasks: [{
 				id: "04CC23968DBD8CC9"
 				type: "checkmark"
-				title: "好的"
+				title: "{tip.kubejs.sure}"
 			}]
 			rewards: [{
 				id: "2EC9684867CC5066"
@@ -779,48 +780,49 @@
 			}]
 		}
 		{
-			title: "可控混沌"
+			title: "{quest.stage_4a.transmutating.title}"
 			icon: "minecraft:hopper_minecart"
 			x: 2.5d
 			y: 9.0d
-			subtitle: "装置 31-A"
+			subtitle: "{quest.stage_4a.transmutating.text1}"
 			description: [
-				"有了嬗变配方后，你就可以着手搭建一个使用炼金镭射无限制硅的生产线了。"
+				"{quest.stage_4a.transmutating.text2}"
 				""
-				"注意，&6试剂嬗变配方取决于你的世界种子&r，这也是任务中没有列出合成的原因，一些必要的反应物的配方可以在JEI中查看。"
+				"{quest.stage_4a.transmutating.text3}"
 			]
 			dependencies: ["6FDC8DA2FDED5FDD"]
 			id: "630DA0C83959E9D8"
 			tasks: [{
 				id: "3E080B5561AD314E"
 				type: "checkmark"
-				title: "Automated"
+				title: "{tip.kubejs.automated}"
 			}]
 		}
 		{
-			title: "&f&l扭曲小径&r"
+			title: "{quest.stage_4a.completed.title}"
 			icon: "create:warped_window_pane"
 			x: 1.75d
 			y: 11.0d
 			shape: "hexagon"
-			description: ["现在你有&6硅反应物&r的生产线了，你可以回到第四章，在第四章某尾找到一个切入点将你的硅产线按插进去。"]
+			description: ["{quest.stage_4a.completed.text1}"]
 			dependencies: ["630DA0C83959E9D8"]
 			size: 2.0d
 			id: "3B431AAADE8845FA"
 			tasks: [{
 				id: "7201E3A86096F5CF"
 				type: "checkmark"
+				title: "{tip.kubejs.sure}"
 			}]
 		}
 		{
-			title: "没头没脑"
+			title: "{quest.stage_4a.accellerator.title}"
 			x: -6.5d
 			y: 5.0d
 			shape: "circle"
 			description: [
-				"荧石和红石促成剂可以放在漏斗矿车的第五个槽位参与炼金镭射的催化剂配方，这是完全可选的。"
+				"{quest.stage_4a.accellerator.text1}"
 				""
-				"这可能会为你提供关于正确配方的额外提示。"
+				"{quest.stage_4a.accellerator.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
@@ -845,7 +847,7 @@
 			x: 10.0d
 			y: 5.0d
 			shape: "circle"
-			description: ["你的银币似乎也有对应的反应物，不过你可别想着用银锭做银币。"]
+			description: ["{quest.stage_4a.silver.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
 			id: "566E72AE7D580917"
