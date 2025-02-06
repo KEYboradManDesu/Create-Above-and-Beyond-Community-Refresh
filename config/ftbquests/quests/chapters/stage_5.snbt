@@ -9,18 +9,18 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "&6&l简单运算"
+			title: "{quest.stage_5.introduce.title}"
 			icon: "kubejs:calculation_mechanism"
 			x: 4.0d
 			y: 16.5d
 			shape: "hexagon"
-			subtitle: "&6第五章"
+			subtitle: "{quest.stage_5.introduce.subtitle}"
 			description: [
-				"欢迎来到殖民外星的最后一步：建造数据中心。这需要什么？——成千上万的数学计算！"
+				"{quest.stage_5.introduce.text1}"
 				""
-				"但是不要怕，作为一个发明家，你可以让你的发明来为你完成所有事情。"
+				"{quest.stage_5.introduce.text2}"
 				""
-				"将你的运算构件的逻辑浇筑成2种数字，再运算其它8种数字。建议使用数字化的ME系统管理，但这并非强制要求。"
+				"{quest.stage_5.introduce.text3}"
 			]
 			dependencies: ["251A91F6C21AEAFB"]
 			hide: true
@@ -29,7 +29,7 @@
 			tasks: [{
 				id: "1F6009A328AA0184"
 				type: "checkmark"
-				title: "&6开始！"
+				title: "{tip.kubejs.start}"
 			}]
 			rewards: [{
 				id: "0397D214E0A6CC89"
@@ -38,17 +38,17 @@
 			}]
 		}
 		{
-			title: "&f&l第六章完成！&r"
+			title: "{quest.stage_5.finish.title}"
 			icon: "beyond_earth:earth_globe"
 			x: 1.0d
 			y: 8.75d
 			shape: "hexagon"
 			description: [
-				"当一切就绪、计算矩阵编程完毕时，你可以开始组装导航电脑了，然后给你的飞船装上了。"
+				"{quest.stage_5.finish.text1}"
 				""
-				"花一点时间合成一个旗帜，代表你去月球的太空计划。这面旗帜就上的图案可以像原版一样自己更改。"
+				"{quest.stage_5.finish.text2}"
 				""
-				"找一个好时候，坐在已经组装好的飞船上，然后按下空格键。"
+				"{quest.stage_5.finish.text3}"
 			]
 			dependencies: [
 				"6BA9A176EDA001A3"
@@ -67,7 +67,7 @@
 				{
 					id: "4418C7A289B17158"
 					type: "item"
-					title: "任意旗帜"
+					title: "{tip.kubejs.any_flag}"
 					icon: {
 						id: "supplementaries:flag_gray"
 						Count: 1b
@@ -180,7 +180,7 @@
 				{
 					id: "651374A7A3486148"
 					type: "advancement"
-					title: "制作 一阶火箭"
+					title: "{tip.kubejs.rocket}"
 					icon: "beyond_earth:steel_engine"
 					advancement: "beyond_earth:rocket_advancement"
 					criterion: ""
@@ -193,19 +193,19 @@
 			}]
 		}
 		{
-			title: "计算轨道"
+			title: "{quest.stage_5.matrix.title}"
 			x: 1.0d
 			y: 10.5d
 			shape: "circle"
-			subtitle: "步骤 45"
+			subtitle: "{quest.stage_5.matrix.subtitle}"
 			description: [
-				"为了制作导航电脑，你需要很多数字。"
+				"{quest.stage_5.matrix.text1}"
 				""
-				"在数字离开物流运算系统之前，请确保每种数字都是以相同数量输出的。黄铜隧道可以轻松解决这个问题。"
+				"{quest.stage_5.matrix.text2}"
 				""
-				"现在，每一个数字都要被冶炼炉被熔化成液态。当一个冶炼炉中有10种数字时，它们会组合编码成一种导航电脑需要的逻辑状态。一旦有了足够的这种具象的混合物，它就可以铸造为强大的计算矩阵。"
+				"{quest.stage_5.matrix.text3}"
 				""
-				"导航电脑需要8个计算矩阵才能工作。按照你的数据中心和构件流水线，这可能需要一段时间。"
+				"{quest.stage_5.matrix.text4}"
 			]
 			dependencies: [
 				"42B5C0102B22F389"
@@ -225,12 +225,12 @@
 				id: "2C98415D43457049"
 				type: "item"
 				item: "kubejs:computation_matrix"
-				count: 8L
+				count: 2L
 				consume_items: false
 			}]
 		}
 		{
-			title: "处理能量"
+			title: "{quest.stage_5.raw_logic.title}"
 			icon: {
 				id: "thermal:fluid_cell"
 				Count: 1b
@@ -259,8 +259,8 @@
 			x: 1.0d
 			y: 16.5d
 			shape: "square"
-			subtitle: "步骤 42"
-			description: ["为了给机械计算器提供数字和运算符，所有的运算构件必须熔化成具象且可被处理的图形化能量。"]
+			subtitle: "{quest.stage_5.raw_logic.subtitle}"
+			description: ["{quest.stage_5.raw_logic.text1}"]
 			dependencies: ["5D0454F977C4F080"]
 			size: 1.5d
 			id: "70D563EF30E9CB97"
@@ -274,7 +274,7 @@
 				{
 					id: "406AAC43EBD44F6A"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -282,11 +282,11 @@
 			icon: "kubejs:three"
 			x: -0.5d
 			y: 14.5d
-			subtitle: "步骤 43-1"
+			subtitle: "{quest.stage_5.three.subtitle}"
 			description: [
-				"作为两种可直接获得的数字之一，“3”可以通过未加工的逻辑浇筑获得。它可以和“8”以及别的运算符来计算出0~9中剩下的所有数字。"
+				"{quest.stage_5.three.text1}"
 				""
-				"这个浇筑过程可能会很快成为瓶颈，因为大多数运算取决于这里生成的数字。确保这些数字可以流畅地运输。"
+				"{quest.stage_5.three.text2}"
 			]
 			dependencies: ["70D563EF30E9CB97"]
 			id: "5550A3E383EFEC90"
@@ -300,7 +300,7 @@
 				{
 					id: "61DEC75D20A61088"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -308,11 +308,11 @@
 			icon: "kubejs:eight"
 			x: 2.5d
 			y: 14.5d
-			subtitle: "步骤 43-3"
+			subtitle: "{quest.stage_5.eight.subtitle}"
 			description: [
-				"第二种可以直接获得的数字是“8”，它也可以使用液态逻辑浇筑获得。"
+				"{quest.stage_5.eight.text1}"
 				""
-				"从现在开始，你需要计划如何算出其它数字，以怎样何消耗本降到最低。请记住，每个增加的计算步骤最终都会增加最终需要运算构件的数量。"
+				"{quest.stage_5.eight.text2}"
 			]
 			dependencies: ["70D563EF30E9CB97"]
 			id: "3126DE83A6741671"
@@ -326,7 +326,7 @@
 				{
 					id: "4DAD021C66AB2A27"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -334,8 +334,8 @@
 			icon: "kubejs:zero"
 			x: 4.5d
 			y: 12.5d
-			subtitle: "步骤 44-8"
-			description: ["3-3、2-2、8-8……？总共有39种方法算出0。这真是一个艰难的决定！"]
+			subtitle: "{quest.stage_5.zero.subtitle}"
+			description: ["{quest.stage_5.zero.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -352,7 +352,7 @@
 				{
 					id: "3413FA802F33F4BF"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -360,8 +360,8 @@
 			icon: "kubejs:one"
 			x: -2.5d
 			y: 12.5d
-			subtitle: "步骤 44-1"
-			description: ["3-2、4÷4、8-7……？一共有21种方法算出1。你会选择什么？"]
+			subtitle: "{quest.stage_5.one.subtitle}"
+			description: ["{quest.stage_5.one.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -378,7 +378,7 @@
 				{
 					id: "402FD7973EC66AEA"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -386,8 +386,8 @@
 			icon: "kubejs:two"
 			x: -1.5d
 			y: 12.5d
-			subtitle: "步骤 44-2"
-			description: ["3-1、8÷4、1+1……？总共有17种方式算出2。你最喜欢什么？"]
+			subtitle: "{quest.stage_5.two.subtitle}"
+			description: ["{quest.stage_5.two.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -404,7 +404,7 @@
 				{
 					id: "14D9C52366D6AF27"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -412,8 +412,8 @@
 			icon: "kubejs:four"
 			x: -0.5d
 			y: 12.5d
-			subtitle: "步骤 44-3"
-			description: ["6-2、2×2、3+1……？一共有16种方式算出4。请作出明智的选择。"]
+			subtitle: "{quest.stage_5.four.subtitle}"
+			description: ["{quest.stage_5.four.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -430,7 +430,7 @@
 				{
 					id: "3662CA8BEE33E02D"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -438,8 +438,8 @@
 			icon: "kubejs:five"
 			x: 0.5d
 			y: 12.5d
-			subtitle: "步骤 44-4"
-			description: ["3+2、6-1、8-3……？一共有14种方式算出5。你想怎么做？"]
+			subtitle: "{quest.stage_5.five.subtitle}"
+			description: ["{quest.stage_5.five.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -456,7 +456,7 @@
 				{
 					id: "4963498277C8A578"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -464,8 +464,8 @@
 			icon: "kubejs:six"
 			x: 1.5d
 			y: 12.5d
-			subtitle: "步骤 44-5"
-			description: ["3×2、3+3、8-2……？一共有16种方式算出6。祝你一切顺利。"]
+			subtitle: "{quest.stage_5.six.subtitle}"
+			description: ["{quest.stage_5.six.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -482,7 +482,7 @@
 				{
 					id: "3E69BC01E47532D1"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -490,8 +490,8 @@
 			icon: "kubejs:seven"
 			x: 2.5d
 			y: 12.5d
-			subtitle: "步骤 44-6"
-			description: ["9-2、4+3、8-1……？总共有14种方式算出7。手气不错？"]
+			subtitle: "{quest.stage_5.seven.subtitle}"
+			description: ["{quest.stage_5.seven.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -508,7 +508,7 @@
 				{
 					id: "44A10C4B490D3C62"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
@@ -516,8 +516,8 @@
 			icon: "kubejs:nine"
 			x: 3.5d
 			y: 12.5d
-			subtitle: "步骤 44-7"
-			description: ["3×3、4+5、8+1……？一共有15种方式算出9。选择权在你。"]
+			subtitle: "{quest.stage_5.nine.subtitle}"
+			description: ["{quest.stage_5.nine.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
@@ -534,20 +534,20 @@
 				{
 					id: "5521427D5BAF2771"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "升级垃圾桶"
+			title: "{quest.stage_5.matter_ball.title}"
 			icon: "ae2:matter_ball"
 			x: 1.0d
 			y: 4.0d
-			subtitle: "步骤 41"
+			subtitle: "{quest.stage_5.matter_ball.subtitle}"
 			description: [
-				"火箭设备是由轻质且坚固的材料——物质塑料制成的。物质球可以在物质聚合器中产生。"
+				"{quest.stage_5.matter_ball.text1}"
 				""
-				"首先，将一个1K ME存储元件放入物质聚合器，将物质聚合器的配方设置为“物质球模式”，再给它提供你拥有的最多的物品。请不要将那些贵重的东西扔进去，因为它们都会被消耗。"
+				"{quest.stage_5.matter_ball.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
@@ -567,11 +567,12 @@
 			]
 		}
 		{
-			title: "昂贵砖块 II"
+			title: "{quest.stage_5.matter_plastics.title}"
 			x: 1.0d
 			y: 5.5d
 			shape: "circle"
-			description: ["在超级加热时压缩物质球就会得到物质塑料。你会需要一些的。"]
+			subtitle: "{quest.stage_5.matter_plastics.subtitle}"
+			description: ["{quest.stage_5.matter_plastics.text1}"]
 			dependencies: [
 				"6F750A66D0A559DE"
 				"3CBED6B591BCEDEA"
@@ -585,19 +586,19 @@
 			}]
 		}
 		{
-			title: "黑色黄金"
+			title: "{quest.stage_5.crude_oil.title}"
 			icon: "createdieselgenerators:crude_oil_bucket"
 			x: -4.0d
 			y: 9.0d
 			shape: "circle"
-			description: ["为了给火箭提供动力，我们需要一些强力的燃料。你可以使用&6原油探测器&r寻找原油的来源，它不容错过。"]
+			description: ["{quest.stage_5.crude_oil.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "4761DAE59CDD93AF"
 			tasks: [{
 				id: "69EE10F8CDFF7980"
 				type: "item"
-				title: "任意原油桶"
+				title: "{tip.kubejs.any_crude_oil}"
 				item: {
 					id: "itemfilters:or"
 					Count: 1b
@@ -622,11 +623,12 @@
 			}]
 		}
 		{
-			title: "烃分馏机 I"
+			title: "{quest.stage_5.heavy_oil.title}"
 			x: -3.0d
 			y: 9.0d
 			shape: "circle"
-			description: ["原油可以在流体精炼机中被精炼为重油。"]
+			subtitle: "{quest.stage_5.heavy_oil.subtitle}"
+			description: ["{quest.stage_5.heavy_oil.text1}"]
 			dependencies: ["4761DAE59CDD93AF"]
 			id: "2BD76CB3F8BC215E"
 			tasks: [{
@@ -637,11 +639,12 @@
 			}]
 		}
 		{
-			title: "烃分馏机 II"
+			title: "{quest.stage_5.light_oil.title}"
 			x: -3.0d
 			y: 10.0d
 			shape: "circle"
-			description: ["把原油精炼为重油时，轻油将会作为副产物出现。"]
+			subtitle: "{quest.stage_5.light_oil.subtitle}"
+			description: ["{quest.stage_5.light_oil.text1}"]
 			dependencies: ["4761DAE59CDD93AF"]
 			id: "26DD1CA6A8D4E249"
 			tasks: [{
@@ -652,12 +655,12 @@
 			}]
 		}
 		{
-			title: "烃分馏机 III"
+			title: "{quest.stage_5.gasoline_and_diesel.title}"
 			x: -2.0d
 			y: 10.0d
 			shape: "circle"
-			subtitle: "装置 46"
-			description: ["重油和轻油都可以被精炼为精炼燃油。"]
+			subtitle: "{quest.stage_5.gasoline_and_diesel.subtitle}"
+			description: ["{quest.stage_5.gasoline_and_diesel.text1}"]
 			dependencies: [
 				"2BD76CB3F8BC215E"
 				"26DD1CA6A8D4E249"
@@ -680,14 +683,15 @@
 			]
 		}
 		{
-			title: "高热甜点"
+			title: "{quest.stage_5.blaze_cake.title}"
 			x: 2.5d
 			y: 4.5d
 			shape: "circle"
+			subtitle: "{quest.stage_5.blaze_cake.subtitle}"
 			description: [
-				"制作物质塑料需要极高的温度，甚至于目前最先进的殷钢机械都达不到其所需。但是，你的烈焰人朋友可能很乐意帮你这个忙……"
+				"{quest.stage_5.blaze_cake.text1}"
 				""
-				"关键是他可能想要点好处。"
+				"{quest.stage_5.blaze_cake.text2}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
@@ -700,7 +704,7 @@
 			}]
 		}
 		{
-			title: "宇航服"
+			title: "{quest.stage_5.space_suit.title}"
 			icon: {
 				id: "beyond_earth:oxygen_mask"
 				Count: 1b
@@ -711,7 +715,8 @@
 			x: -2.0d
 			y: 7.0d
 			shape: "circle"
-			description: ["如果你想在落地之后活下来，一套特殊的宇航服是必要的。如果你有多余的下界合金，你可以考虑给宇航服加固下。"]
+			subtitle: "{quest.stage_5.space_suit.subtitle}"
+			description: ["{quest.stage_5.space_suit.text1}"]
 			dependencies: ["6A156D11D983661D"]
 			id: "6BA9A176EDA001A3"
 			tasks: [
@@ -766,11 +771,12 @@
 			]
 		}
 		{
-			title: "记得呼吸"
+			title: "{quest.stage_5.oxygen_distributor.title}"
 			x: 2.4261904761904702d
 			y: 9.590476190476195d
 			shape: "circle"
-			description: ["为了让你在太空中有喘息之地，一个空间站是必要的。"]
+			subtitle: "{quest.stage_5.oxygen_distributor.subtitle}"
+			description: ["{quest.stage_5.oxygen_distributor.text1}"]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "462CE0A4C80442FB"
@@ -782,13 +788,13 @@
 			}]
 		}
 		{
-			title: "电解"
+			title: "{quest.stage_5.oxygen_loader.title}"
 			icon: "beyond_earth:oxygen_loader"
 			x: -0.5d
 			y: 7.0d
 			shape: "circle"
-			subtitle: "步骤 48"
-			description: ["通过加热搅拌将水分离为其成分，就可以得到你需要的氧。"]
+			subtitle: "{quest.stage_5.oxygen_loader.subtitle}"
+			description: ["{quest.stage_5.oxygen_loader.text1}"]
 			dependencies: ["6A156D11D983661D"]
 			id: "3AD7553F3C8593F9"
 			tasks: [{
@@ -799,17 +805,16 @@
 			}]
 		}
 		{
-			title: "发射台结构"
+			title: "{quest.stage_5.launch_pad.title}"
 			icon: "beyond_earth:rocket_launch_pad"
 			x: 1.0d
 			y: 7.0d
 			shape: "circle"
-			subtitle: "步骤 49"
+			subtitle: "{quest.stage_5.launch_pad.subtitle}"
 			description: [
-				"火箭的发射台需要特殊的材料和加固构成。"
+				"{quest.stage_5.launch_pad.text1}"
 				""
-				""
-				"使用时，需要搭建成3x3的正方形，结构正确时中心方块会凸起。"
+				"{quest.stage_5.launch_pad.text2}"
 			]
 			dependencies: ["6A156D11D983661D"]
 			id: "4800892E1E70648D"
@@ -822,12 +827,12 @@
 			}]
 		}
 		{
-			title: "运算符"
+			title: "{quest.stage_5.characters.title}"
 			icon: "kubejs:plus"
 			x: 1.0d
 			y: 15.0d
-			subtitle: "步骤 43-2"
-			description: ["没有运算符，数据中心的数字就无法组合到一起而产生其它的数字。你需要为你的计算装置自动提供任何它们需要的运算符。"]
+			subtitle: "{quest.stage_5.characters.subtitle}"
+			description: ["{quest.stage_5.characters.text1}"]
 			dependencies: ["70D563EF30E9CB97"]
 			id: "4E85C8A2EEEB57C3"
 			tasks: [
@@ -858,21 +863,21 @@
 				{
 					id: "26517C9D1C3D8269"
 					type: "checkmark"
-					title: "已自动化"
+					title: "{tip.kubejs.automated}"
 				}
 			]
 		}
 		{
-			title: "飞船"
+			title: "{quest.stage_5.rocket.title}"
 			icon: "beyond_earth:steel_tank"
 			x: 2.5d
 			y: 7.0d
 			shape: "circle"
-			subtitle: "步骤 &b50"
+			subtitle: "{quest.stage_5.rocket.subtitle}"
 			description: [
-				"当你的发射台准备就绪，是时候搭建你的飞船了，其中最重要的是下界钢防火层。"
+				"{quest.stage_5.rocket.text1}"
 				""
-				"尽你最大的努力，毕竟这是你的最终目标。"
+				"{quest.stage_5.rocket.text2}"
 			]
 			dependencies: [
 				"6A156D11D983661D"
@@ -903,7 +908,8 @@
 			x: 4.0d
 			y: 7.0d
 			shape: "circle"
-			description: ["外星代步工具。"]
+			subtitle: "{quest.stage_5.rover.subtitle}"
+			description: ["{quest.stage_5.rover.text1}"]
 			dependencies: ["6A156D11D983661D"]
 			optional: true
 			id: "13E3B63C2D69BBC9"
@@ -921,16 +927,17 @@
 				{
 					id: "0C395B7D50CDFD7F"
 					type: "checkmark"
-					title: "确认"
+					title: "{tip.kubejs.sure}"
 				}
 			]
 		}
 		{
-			title: "烃分馏机 IV"
+			title: "{quest.stage_5.fuel.title}"
 			x: -1.0d
 			y: 10.0d
 			shape: "circle"
-			description: ["精炼油可以被加工成航天燃油。"]
+			subtitle: "{quest.stage_5.fuel.subtitle}"
+			description: ["{quest.stage_5.fuel.text1}"]
 			dependencies: ["25B76A897D97C9F1"]
 			id: "146AB3E314AA39B3"
 			tasks: [{
