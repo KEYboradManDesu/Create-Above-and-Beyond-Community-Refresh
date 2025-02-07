@@ -567,7 +567,7 @@ onEvent('block.left_click', event => {
         let aabb = AABB.CUBE.move(x+2*face.x, y+2*face.y, z+2*face.z).inflate(2 * face.x, 2 * face.y, 2 * face.z)
         world.getEntitiesWithin(aabb).forEach(entity => {
             if (!entity.type.equals("minecraft:hopper_minecart")) {
-                if (!entity.type.equals("minecraft:item"))
+                if (!["minecraft:item","minecraft:experience_orb"].includes(entity.type))
                     entity.attack("magic", 6)
                 return
             }
