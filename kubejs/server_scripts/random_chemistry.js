@@ -71,6 +71,7 @@ var cat = 0
 var digit = 0
 var digit2 = 0
 
+const FACES={"up":0,"down":1,"south":2,"north":3,"east":4,"west":5}
 function process(world, block, entity, face) {
 
     if (global.cachedSeed != world.getSeed()) {
@@ -558,8 +559,7 @@ onEvent('block.left_click', event => {
         if(pow&&invert||!pow&&!invert) return
 
         let side=laser.entityData.parts[0].side
-        let faces={"up":0,"down":1,"south":2,"north":3,"east":4,"west":5}
-        if(faces[face]!=side) return
+        if(FACES[face]!=side) return
 
         let x = laser.x
         let y = laser.y
