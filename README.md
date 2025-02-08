@@ -1,24 +1,34 @@
 # Create: Above and Beyond Community Refresh Modpack
-# 永无止境：超越常新 整合包
 > [!IMPORTANT]
-> This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.<br>本整合包目前处于开发阶段，您可以使用 git clone 命令下载预览版本。请注意，当前状态并不反映整合包的最终质量。
+> This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.
 
 > [!WARNING]
-> This branch will NOT work for now.<br>此分支目前无法正常游玩。
+> This branch will NOT work for now.
+
+English / [简体中文](README_zh.md)
+
 ## Create: Above and Beyond 1.20.1 Community Refreshed version
-## 永无止境：超越常新 整合包 1.20.1版本
-这是一个基于 **机械动力：永无止境（CAB）** 和 **[CABF] Cabricality** 的整合包，在 **Forge 1.20.1** 运行。此整合包在机械动力：永无止境的启发下，重置并实现了全部的游戏流程。在此欢迎每一个挑战者，并发自内心地希望你们徜徉在 Minecraft 的游戏世界中！
-在这里，你可以跟随任务的指引，通过机械动力和主流科技模组建造属于自己的工厂！从山谷中徘徊走向空间站里遨游，技术发展的可能性由你决定！你和月球之间有大约 50 个机械装置。数以千计的机器与零件将被送入不断增长的自动化工厂，祝你探索下一层级的科技。
-前往太空的每个步骤都是不同的，有些步骤甚至根据世界种子而有所不同。
-厌倦了重复劳动？从各种差事或你选择的职业中挣得硬币。自动化交易过程，或是召集其他玩家帮你完成任务。之后你能从市场中买到各种资源、珍品和建筑方块。
-### 发现新的挑战
-度过缓慢而激人奋进的早期后，随着第一个主要产物实现完全自动化，发展的步伐开始加速。
-交错的传送带网络，搅拌和清洗水晶，控制爆炸，染色物质变化，向矿车发射激光，捣鼓数字，以及其他等等并不简便而又新奇的自动化任务等你挑战。
-作为额外内容，化学研究和嬗变能带你发现独属于你的世界种子的秘密配方！
-### 贸易和专精
-各种各样的物品可以买卖，这是整合包中显著改变游戏体验的机制。
-选择职业并完成差事，将让你可以购买自己偏爱的资源而不是干烦人的苦工。交易机制可通过任务界面访问，并且允许精妙的自动化。
-### 额外的努力
-整合包添加了大量的方块、物品和流体，以及为机械和材料之间提供新的交互方式的自定义脚本。
-此外，一些模组获得了新的纹理，来让他们整体上协调一致。
-## 协议声明：本项目使用 GPL-3.0 协议。
+
+This is a modpack based on **Create: Above and Beyond (CAB)** and **[CABF] Cabricality**, running on **Forge 1.20.1**. This modpack resets and implements the entire game process inspired by Create: Above and Beyond. We welcome every challenger and sincerely hope you enjoy the world of Minecraft!
+
+Here, you can follow the guidance of tasks and build your own factory using Create and mainstream tech mods! From wandering in the valleys to traveling in space stations, the possibilities of technological development are up to you! There are about 50 mechanical devices between you and the moon. Thousands of machines and parts will be sent into the ever-growing automated factory, wishing you to explore the next level of technology.
+
+Each step towards space is different, and some steps even vary depending on the world seed.
+
+Tired of repetitive labor? Earn coins from various chores or professions of your choice. Automate the trading process or gather other players to help you complete tasks. You can then buy various resources, treasures, and building blocks from the market.
+
+### Discover New Challenges
+
+After a slow and exciting early stage, the pace of development begins to accelerate as the first major product is fully automated. Interwoven conveyor networks, mixing and washing crystals, controlling explosions, dyeing material changes, firing lasers at minecarts, tinkering with digits, and other novel automation tasks await your challenge.
+
+As an additional content, chemical research and transmutation can lead you to discover the secret recipes unique to your world seed!
+
+### Trade and Specialization
+
+A variety of items can be bought and sold, which is a significant game-changing mechanism in the modpack. Choosing a profession and completing chores will allow you to buy your preferred resources instead of doing tedious work. The trading mechanism can be accessed through the task interface and allows for intricate automation.
+
+### Extra Efforts
+
+The modpack adds a large number of blocks, items, and fluids, as well as custom scripts that provide new interactions between machines and materials. Additionally, some mods have received new textures to make them more cohesive overall.
+
+## License: This project uses the GPL-3.0 license.
