@@ -1030,7 +1030,7 @@
 
 "quest.stage_1.andesite_alloy.title":"如果“藻”知道...",
 "quest.stage_1.andesite_alloy.subtitle":"步骤 6-4",
-"quest.stage_1.andesite_alloy.title":"没错！你需要将它们再次搅拌——不过这回的主角变成了&6海藻砖&r和你辛苦运上来的&6安山岩圆石。&r",
+"quest.stage_1.andesite_alloy.text1":"没错！你需要将它们再次搅拌——不过这回的主角变成了&6海藻砖&r和你辛苦运上来的&6安山岩圆石。&r",
 
 "quest.stage_1.stripped_log.title":"削去外皮",
 "quest.stage_1.stripped_log.subtitle":"步骤 7-1",
@@ -1366,9 +1366,9 @@
 "quest.stage_3.silver_ingot.subtitle":"步骤 30-3",
 "quest.stage_3.silver_ingot.text1":"将你的&6熔融银&r铸成方块，并欣赏它的光泽...",
 
-"quest.stage_3.ender_dust.title":"加花",
-"quest.stage_3.ender_dust.subtitle":"步骤 30-4",
-"quest.stage_3.ender_dust.text1":"从你的反应堆拿点&6末影粉&r来。如果你怕生产线被堵塞，使用末影珍珠也是可以的。",
+"quest.stage_3.ender_dust2.title":"加花",
+"quest.stage_3.ender_dust2.subtitle":"步骤 30-4",
+"quest.stage_3.ender_dust2.text1":"从你的反应堆拿点&6末影粉&r来。如果你怕生产线被堵塞，使用末影珍珠也是可以的。",
 
 "quest.stage_3.hanging_pream_leaves.title":"折跃探险",
 "quest.stage_3.hanging_pream_leaves.subtitle":"步骤 30-5",
@@ -1708,5 +1708,22 @@
 "quest.stage_5.finish.title":"&f&l第六章完成！&r",
 "quest.stage_5.finish.text1":"当一切就绪、计算矩阵编程完毕时，你可以开始组装导航电脑了，然后给你的飞船装上了。",
 "quest.stage_5.finish.text2":"花一点时间合成一个旗帜，代表你去月球的太空计划。这面旗帜就上的图案可以像原版一样自己更改。",
-"quest.stage_5.finish.text3":"找一个好时候，坐在已经组装好的飞船上，然后按下空格键。"
+"quest.stage_5.finish.text3":"找一个好时候，坐在已经组装好的飞船上，然后按下空格键。",
+
+"tooltip.kubejs.sink":"§a小时候家里的水槽忘了关，现在村里成亚特兰蒂斯了",
+"tooltip.kubejs.redstone_ore":"§6原版红石矿石已被朱砂矿石替代",
+"tooltip.kubejs.rubber_sapling":"§6该品种树苗提供双倍树脂产量",
+"tooltip.kubejs.chromatic_compound":"§6更稳定的化合物（能合成烈焰黄铜和过载合金）",
+"tooltip.kubejs.main_mechanism":"§8思考一下如何自动化制作此物品",
+"tooltip.kubejs.stage_1":"§7主目标: §6章节 1",
+"tooltip.kubejs.stage_1a":"§7附加目标: §6章节 1A",
+"tooltip.kubejs.stage_2":"§7主目标: §6章节 2",
+"tooltip.kubejs.stage_2a":"§7附加目标: §6章节 2A",
+"tooltip.kubejs.stage_2b":"§7附加目标: §6章节 2B",
+"tooltip.kubejs.stage_3":"§7主目标: §6章节 3",
+"tooltip.kubejs.stage_3a":"§7附加目标: §6章节 3A",
+"tooltip.kubejs.stage_4":"§7主目标: §6最终章",
+"tooltip.kubejs.slot":"格",
+"tooltip.kubejs.not_consumed":"§7在§7装配线§7中不消耗，仅消耗耐久",
+"tooltip.kubejs.warning":"§3该物品的性质可能会破坏机械动力基本基调，请酌情使用。"
 }
