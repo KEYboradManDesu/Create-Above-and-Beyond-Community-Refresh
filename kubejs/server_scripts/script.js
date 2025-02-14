@@ -35,6 +35,7 @@ let PR_I = (id, x) => MOD("projectred_illumination", id, x)
 let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
+let CRC = (id, x) => MOD("create_connected", id, x)
 
 settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
@@ -499,6 +500,7 @@ bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 
 // 前期优化游戏体验
 event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
+event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron'), TE('lead_plate'))
 // 手部零件
 event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 event.remove({ id: CRD("crafting/brass_hand") })
@@ -774,6 +776,15 @@ event.shaped('waterstrainer:strainer_fisherman_reinforced', [
 	M: FD('canvas'),
 	S: MC('bamboo')
 })
+event.recipes.createMixing([BOP('mud')], [MC('dirt'), Fluid.of(MC("water"), 200)])
+event.recipes.createMixing([MC('end_stone')], [MC('cobblestone'), Fluid.of(TE("ender"), 50),OC('crushed_end_stone')])
+event.custom({
+	"type": "thermal:rock_gen",
+	"adjacent": "minecraft:blue_ice",
+	"below": "minecraft:magma_block",
+	"result": { "item": "expcaves:lavastone" }
+})
+event.recipes.createMilling([Item.of('biomesoplenty:black_sand')], 'expcaves:lavastone')
 }
 
 function project_red(event) {
