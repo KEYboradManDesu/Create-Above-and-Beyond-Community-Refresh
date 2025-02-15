@@ -33,6 +33,7 @@ let PR_I = (id, x) => MOD("projectred_illumination", id, x)
 let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
+let CRC = (id, x) => MOD("create_connected", id, x)
 
 console.info('Starting to load KubeJS tags...')
 
