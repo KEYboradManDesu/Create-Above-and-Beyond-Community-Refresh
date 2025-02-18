@@ -505,6 +505,8 @@ event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron')
 event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 event.remove({ id: CRD("crafting/brass_hand") })
 event.remove({ id: CR("crafting/kinetics/brass_hand") })
+event.remove({output:TC("coin_sand_cast")})
+event.remove({output:TC("coin_red_sand_cast")})
 event.shaped(Item.of('kubejs:gloden_hand', 1), [
 	' S ',
 	'PPP',
@@ -1326,6 +1328,8 @@ event.custom({
 	  "item": "sophisticatedbackpacks:gold_backpack"
 	}
 })
+event.remove({id:"thermal:machines/smelter/smelter_tin_armor"})
+event.remove({id:"thermal:machines/smelter/smelter_tin_tools"})
 //钻石背包
 event.remove({ output: 'sophisticatedbackpacks:diamond_backpack' })
 event.custom({
@@ -3316,10 +3320,25 @@ event.remove({ id: TE("machines/smelter/smelter_alloy_enderium") })
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", MC("ender_pearl")]).energy(10000)
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", AE2("ender_dust", 4)]).energy(10000)
 event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
+event.recipes.thermal.smelter("3x create_dd:tin_ingot",["#forge:armor/tin"]).energy(3200)
+event.recipes.thermal.smelter(CRD("tin_ingot"),["#forge:tools/tin"]).energy(3200)
+event.remove({id:"reliquary:alkahestry/crafting/tin_ingot"})
+event.custom({
+"type": "reliquary:alkahestry_crafting",
+"charge": 32,
+"ingredient": {
+"item": "create_dd:tin_ingot"
+},
+"result_count": 2
+})
+event.remove({id:"thermal:storage/tin_block"})
+event.remove({id:"thermal:storage/tin_nugget_from_ingot"})
+event.recipes.thermal.crystallizer("thermal:sapphire", [Fluid.of('minecraft:water', 2000), 'thermal:sapphire_dust'])
+event.recipes.thermal.crystallizer("thermal:ruby", [Fluid.of('minecraft:water', 2000), 'thermal:ruby_dust'])
 
 event.remove({ id: TE("enderium_dust_2") })
 event.shapeless(TE('enderium_dust'), [
-	TE('silver_dust'), 
+	TE('silver_dust'),
 	AE2('ender_dust'),
 	AE2('ender_dust'),
 	AE2('ender_dust'),
@@ -4836,7 +4855,7 @@ event.recipes.createMilling(["thermal:apatite_dust"], "#forge:gems/apatite").pro
 replaceIO("#forge:dusts/quartz", "thermal:quartz_dust");
 event.recipes.createMilling(["thermal:quartz_dust"], "#forge:gems/quartz").processingTime(200);
 
-// 福禄伊克斯石英粉
+// 福鲁伊克斯石英粉
 replaceIO("#forge:dusts/fluix", "ae2:fluix_dust");
 event.recipes.createMilling(["ae2:fluix_dust"], "#forge:gems/fluix").processingTime(200);
 
