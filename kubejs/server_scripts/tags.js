@@ -226,7 +226,10 @@ event.get("supplementaries:hourglass_dusts")
 .add("kubejs:desh_dust")
 .add("kubejs:ostrum_dust")
 .add("kubejs:calorite_dust")
+})
 
+onEvent('block.tags',event=>{
+	event.get("create:windmill_sails").add("#thermal:rockwool")
 })
 
 onEvent('fluid.tags', event => {

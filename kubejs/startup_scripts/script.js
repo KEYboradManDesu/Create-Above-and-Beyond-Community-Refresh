@@ -132,7 +132,8 @@ event.create('crushed_calorite_ore').texture("kubejs:item/ore/crushed_calorite_o
 // 混合物
 event.create('silicon_compound').texture("kubejs:item/compound/silicon_compound")
 event.create('nickel_compound').texture("kubejs:item/compound/nickel_compound")
-event.create('invar_compound', 'create:sequenced_assembly').texture("kubejs:item/compound/invar_compound")
+event.create('invar_compound').texture("kubejs:item/compound/invar_compound")
+event.create('processing_invar_compound', 'create:sequenced_assembly').texture("kubejs:item/compound/invar_compound")
 
 // 背包
 event.create('sewing_spool').texture("kubejs:item/backpack/sewing_spool").maxDamage(12)

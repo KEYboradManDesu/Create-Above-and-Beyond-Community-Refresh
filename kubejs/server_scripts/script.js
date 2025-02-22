@@ -3104,7 +3104,7 @@ event.recipes.createSequencedAssembly([
 	TE('invar_ingot'),
 ], KJ('invar_compound'), [
 	event.recipes.createPressing(s, s)
-]).transitionalItem(s)
+]).transitionalItem(KJ('processing_invar_compound'))
 	.loops(16)
 	.id('kubejs:invar')
 event.custom({
@@ -3195,6 +3195,11 @@ event.shaped(KJ('chromatic_resonator'), [
 	L: TE('lead_ingot'),
 	S: '#forge:gems/sapphire'
 })
+
+event.shaped(CR('white_sail'),[
+	'RS',
+	'SA'
+],{R:'#thermal:rockwool',S:'minecraft:stick',A:'create:andesite_alloy'})
 
 let invar_machine = (id, amount, other_ingredient) => {
 	event.remove({ output: id })

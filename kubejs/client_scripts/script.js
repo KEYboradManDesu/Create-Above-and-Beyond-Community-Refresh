@@ -101,4 +101,6 @@ onEvent('rei.add.items', event => {
     event.hide(`occultism:silver_ingot`)
     event.hide(`occultism:silver_nugget`)
     event.hide(`occultism:silver_block`)
+    event.hide(`thermal:charcoal_block`)
+    event.hide(`quark:charcoal_block`)
   })
