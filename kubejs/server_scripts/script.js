@@ -35,7 +35,6 @@ let PR_I = (id, x) => MOD("projectred_illumination", id, x)
 let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
-let CRC = (id, x) => MOD("create_connected", id, x)
 
 settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
@@ -500,13 +499,10 @@ bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 
 // 前期优化游戏体验
 event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
-event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron'), TE('lead_plate'))
 // 手部零件
 event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 event.remove({ id: CRD("crafting/brass_hand") })
 event.remove({ id: CR("crafting/kinetics/brass_hand") })
-event.remove({output:TC("coin_sand_cast")})
-event.remove({output:TC("coin_red_sand_cast")})
 event.shaped(Item.of('kubejs:gloden_hand', 1), [
 	' S ',
 	'PPP',
@@ -778,15 +774,6 @@ event.shaped('waterstrainer:strainer_fisherman_reinforced', [
 	M: FD('canvas'),
 	S: MC('bamboo')
 })
-event.recipes.createMixing([BOP('mud')], [MC('dirt'), Fluid.of(MC("water"), 200)])
-event.recipes.createMixing([MC('end_stone')], [MC('cobblestone'), Fluid.of(TE("ender"), 50),OC('crushed_end_stone')])
-event.custom({
-	"type": "thermal:rock_gen",
-	"adjacent": "minecraft:blue_ice",
-	"below": "minecraft:magma_block",
-	"result": { "item": "expcaves:lavastone" }
-})
-event.recipes.createMilling([Item.of('biomesoplenty:black_sand')], 'expcaves:lavastone')
 }
 
 function project_red(event) {
@@ -1328,8 +1315,6 @@ event.custom({
 	  "item": "sophisticatedbackpacks:gold_backpack"
 	}
 })
-event.remove({id:"thermal:machines/smelter/smelter_tin_armor"})
-event.remove({id:"thermal:machines/smelter/smelter_tin_tools"})
 //钻石背包
 event.remove({ output: 'sophisticatedbackpacks:diamond_backpack' })
 event.custom({
@@ -3104,7 +3089,7 @@ event.recipes.createSequencedAssembly([
 	TE('invar_ingot'),
 ], KJ('invar_compound'), [
 	event.recipes.createPressing(s, s)
-]).transitionalItem(KJ('processing_invar_compound'))
+]).transitionalItem(s)
 	.loops(16)
 	.id('kubejs:invar')
 event.custom({
@@ -3195,11 +3180,6 @@ event.shaped(KJ('chromatic_resonator'), [
 	L: TE('lead_ingot'),
 	S: '#forge:gems/sapphire'
 })
-
-event.shaped(CR('white_sail'),[
-	'RS',
-	'SA'
-],{R:'#thermal:rockwool',S:'minecraft:stick',A:'create:andesite_alloy'})
 
 let invar_machine = (id, amount, other_ingredient) => {
 	event.remove({ output: id })
@@ -3325,25 +3305,10 @@ event.remove({ id: TE("machines/smelter/smelter_alloy_enderium") })
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", MC("ender_pearl")]).energy(10000)
 event.recipes.thermal.smelter(TE("enderium_ingot"), [TE("silver_ingot"), "phantasm:hanging_pream_berry", AE2("ender_dust", 4)]).energy(10000)
 event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
-event.recipes.thermal.smelter("3x create_dd:tin_ingot",["#forge:armor/tin"]).energy(3200)
-event.recipes.thermal.smelter(CRD("tin_ingot"),["#forge:tools/tin"]).energy(3200)
-event.remove({id:"reliquary:alkahestry/crafting/tin_ingot"})
-event.custom({
-"type": "reliquary:alkahestry_crafting",
-"charge": 32,
-"ingredient": {
-"item": "create_dd:tin_ingot"
-},
-"result_count": 2
-})
-event.remove({id:"thermal:storage/tin_block"})
-event.remove({id:"thermal:storage/tin_nugget_from_ingot"})
-event.recipes.thermal.crystallizer("thermal:sapphire", [Fluid.of('minecraft:water', 2000), 'thermal:sapphire_dust'])
-event.recipes.thermal.crystallizer("thermal:ruby", [Fluid.of('minecraft:water', 2000), 'thermal:ruby_dust'])
 
 event.remove({ id: TE("enderium_dust_2") })
 event.shapeless(TE('enderium_dust'), [
-	TE('silver_dust'),
+	TE('silver_dust'), 
 	AE2('ender_dust'),
 	AE2('ender_dust'),
 	AE2('ender_dust'),
@@ -4860,7 +4825,7 @@ event.recipes.createMilling(["thermal:apatite_dust"], "#forge:gems/apatite").pro
 replaceIO("#forge:dusts/quartz", "thermal:quartz_dust");
 event.recipes.createMilling(["thermal:quartz_dust"], "#forge:gems/quartz").processingTime(200);
 
-// 福鲁伊克斯石英粉
+// 福禄伊克斯石英粉
 replaceIO("#forge:dusts/fluix", "ae2:fluix_dust");
 event.recipes.createMilling(["ae2:fluix_dust"], "#forge:gems/fluix").processingTime(200);
 

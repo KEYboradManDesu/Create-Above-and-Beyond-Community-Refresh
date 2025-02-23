@@ -71,7 +71,6 @@ var cat = 0
 var digit = 0
 var digit2 = 0
 
-const FACES={"up":0,"down":1,"south":2,"north":3,"east":4,"west":5}
 function process(world, block, entity, face) {
 
     if (global.cachedSeed != world.getSeed()) {
@@ -548,26 +547,38 @@ onEvent('block.left_click', event => {
         let te = laser.getEntity()
         if (!te)
             return
+        // 需要重置
+        //let nbt = Utils.newMap().toNBT()
+        /*let nbt = te.fullNBT
+        console.log("TE: " + te)
+        console.log("NBT: " + nbt)
+        let parts = nbt.getList("parts", 10)
+        let valid = false
+        let color = ""
+        if (parts) {
+            parts.forEach(part => {
+                if (!part.id.endsWith("_cage_light"))
+                    return
+                if (part.pow == part.id.contains("inverted"))
+                    return
+                if (part.side != face.getOpposite().ordinal())
+                    return
+                valid = true
+                color = part.id.replace("_inverted", "").replace("_cage_light", "").replace("projectred-illumination:", "")
+            })
+        }
 
-        let invert
-
-        if(laser.entityData.parts[0].id.endsWith("inverted_cage_light")) invert=true
-        else if(laser.entityData.parts[0].id.endsWith("cage_light")) invert=false
-        else return
-
-        let pow=laser.entityData.parts[0].pow
-        if(pow&&invert||!pow&&!invert) return
-
-        let side=laser.entityData.parts[0].side
-        if(FACES[face]!=side) return
+        if (!valid)
+            return
+        */
 
         let x = laser.x
         let y = laser.y
         let z = laser.z
-        let aabb = AABB.CUBE.move(x+2*face.x, y+2*face.y, z+2*face.z).inflate(2 * face.x, 2 * face.y, 2 * face.z)
+        let aabb = AABB.CUBE.move(x, y, z).inflate(4 * face.x, 4 * face.y, 4 * face.z)
         world.getEntitiesWithin(aabb).forEach(entity => {
             if (!entity.type.equals("minecraft:hopper_minecart")) {
-                if (!["minecraft:item","minecraft:experience_orb"].includes(entity.type))
+                if (!entity.type.equals("minecraft:item"))
                     entity.attack("magic", 6)
                 return
             }

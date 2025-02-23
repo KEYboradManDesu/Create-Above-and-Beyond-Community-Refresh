@@ -33,7 +33,6 @@ let PR_I = (id, x) => MOD("projectred_illumination", id, x)
 let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
-let CRC = (id, x) => MOD("create_connected", id, x)
 
 console.info('Starting to load KubeJS tags...')
 
@@ -214,23 +213,7 @@ event.get('kubejs:hand')
 .add('kubejs:gloden_hand')
 .add('kubejs:bronze_hand')
 
-event.get("forge:ingots/tin").remove("thermal:tin_ingot")
-event.get("forge:ingots/silver").remove("occultism:silver_ingot")
-event.get("forge:nuggets/silver").remove("occultism:silver_nugget")
-event.get("forge:storage_blocks/silver").remove("occultism:silver_block")
-event.get("supplementaries:hourglass_dusts")
-.add("kubejs:brass_dust")
-.add("kubejs:cobalt_dust")
-.add("kubejs:zinc_dust")
-.add("kubejs:rune_dust")
-.add("kubejs:desh_dust")
-.add("kubejs:ostrum_dust")
-.add("kubejs:calorite_dust")
-})
-
-onEvent('block.tags',event=>{
-	event.get("create:windmill_sails").add("#thermal:rockwool")
-})
+})	
 
 onEvent('fluid.tags', event => {
 

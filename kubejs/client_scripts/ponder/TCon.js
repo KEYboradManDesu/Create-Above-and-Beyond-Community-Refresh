@@ -107,7 +107,6 @@ onEvent("ponder.registry", (event) => {
 		})
 
 	event.create("tconstruct:foundry_controller")
-		.tag("kubejs:ponder")
 		.scene("kubejs:scorched", "熔铸炉", "kubejs:scorched", (scene) => {
 			// 显示场景底盘
 			scene.showBasePlate()

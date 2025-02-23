@@ -1,41 +1,45 @@
 
 onEvent('item.tooltip', tooltip => {
-tooltip.add("cookingforblockheads:sink", Text.translate("tooltip.kubejs.sink"))
 
-tooltip.add("minecraft:redstone_ore", Text.translate("tooltip.kubejs.redstone_ore"));
-tooltip.add("minecraft:deepslate_redstone_ore", Text.translate("tooltip.kubejs.redstone_ore"));
+tooltip.add("cookingforblockheads:sink", [`§a小时候家里的水槽忘了关，现在村里成亚特兰蒂斯了`]);
 
-tooltip.add("create_dd:rubber_sapling", Text.translate("tooltip.kubejs.rubber_sapling"));
+tooltip.add("minecraft:redstone_ore", [`§6原版红石矿石已被朱砂矿石替代`]);
+tooltip.add("minecraft:deepslate_redstone_ore", [`§6原版红石矿石已被朱砂矿石替代`]);
+
+tooltip.add("create_dd:rubber_sapling", [`§6该品种树苗提供双倍树脂产量`]);
 
 //tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
-tooltip.add("create_dd:chromatic_compound", Text.translate("tooltip.kubejs.chromatic_compound"));
+tooltip.add("create_dd:infaice", [`§3⑨`]);
 
-let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} ${Text.translate("tooltip.kubejs.slot")}`])
-let main_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`),Text.translate("tooltip.kubejs.main_mechanism")])
-let bonus_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`)])
-let not_consumed = (id) => tooltip.add(id, [Text.translate("tooltip.kubejs.not_consumed")])
-let warning = (id) => tooltip.add(id, [Text.translate("tooltip.kubejs.warning")])
+tooltip.add("create_dd:chromatic_compound", [`§6更稳定的化合物（能合成烈焰黄铜和过载合金）`]);
 
-holds('copper', 5 * 9)
-holds('iron', 6 * 9)
-holds('silver', 8 * 9)
-holds('gold', 9 * 9)
-holds('obsidian', 12 * 9)
-holds('diamond', 12 * 9)
-holds('crystal', 12 * 9)
-holds('netherite', 15 * 9)
+let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} 格`])
+    let main_assembly = (id, stage) => tooltip.add(id, [`§7主目标: ${stage == "4" ? "§6最终章" : "§6章节 " + stage}`, '§8思考一下如何自动化制作此物品'])
+	let bonus_assembly = (id, stage) => tooltip.add(id, [`§7附加目标: §6章节 ${stage}`])
+	let not_consumed = (id) => tooltip.add(id, [`§7在§7装配线§7中不消耗，仅消耗耐久`])
+	let warning = (id) => tooltip.add(id, [`§3该物品的性质可能会破坏机械动力基本基调，请酌情使用。`])
+	
+	holds('copper', 5 * 9)
+	holds('iron', 6 * 9)
+	holds('silver', 8 * 9)
+	holds('gold', 9 * 9)
+	holds('obsidian', 12 * 9)
+	holds('diamond', 12 * 9)
+	holds('crystal', 12 * 9)
+	holds('netherite', 15 * 9)
+//
 
 //第一章
 main_assembly('kubejs:kinetic_mechanism', "1")
-bonus_assembly('kubejs:sealed_mechanism', "1a")
+bonus_assembly('kubejs:sealed_mechanism', "1A")
 //第二章
 main_assembly('create:precision_mechanism', "2")
-bonus_assembly('kubejs:infernal_mechanism', "2a") 
-bonus_assembly('kubejs:sturdy_mechanism', "2a")
+bonus_assembly('kubejs:infernal_mechanism', "2A") 
+bonus_assembly('kubejs:sturdy_mechanism', "2A") 
 //第三章
 main_assembly('kubejs:inductive_mechanism', "3")
-bonus_assembly('kubejs:abstruse_mechanism', "3a")
+bonus_assembly('kubejs:abstruse_mechanism', "3A")
 //第四章
 main_assembly('kubejs:calculation_mechanism', "4")
 
