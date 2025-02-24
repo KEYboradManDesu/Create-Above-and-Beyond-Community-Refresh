@@ -9,9 +9,7 @@ tooltip.add("create_dd:rubber_sapling", Text.translate("tooltip.kubejs.rubber_sa
 
 //tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
-tooltip.add("create_dd:chromatic_compound", Text.translate("tooltip.kubejs.chromatic_compound"));
-
-let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} ${Text.translate("tooltip.kubejs.slot")}`])
+let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots}`, Text.translate("tooltip.kubejs.slot")])
 let main_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`),Text.translate("tooltip.kubejs.main_mechanism")])
 let bonus_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`)])
 let not_consumed = (id) => tooltip.add(id, [Text.translate("tooltip.kubejs.not_consumed")])

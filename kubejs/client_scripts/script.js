@@ -103,4 +103,7 @@ onEvent('rei.add.items', event => {
     event.hide(`occultism:silver_block`)
     event.hide(`thermal:charcoal_block`)
     event.hide(`quark:charcoal_block`)
+    event.hide(`waterstrainer:strainer_survivalist_solid`)
+    event.hide(`waterstrainer:strainer_survivalist_reinforced`)
+    event.hide(`waterstrainer:strainer_fisherman_solid`)
   })
