@@ -184,7 +184,7 @@ event.remove({ id: "grapplemod:rocketdoublemotorhook" })
 event.remove({ id: "grapplemod:magnethook" })
 event.remove({ id: "grapplemod:rockethook" })
 event.remove({ id: "randomium:duplicate" })
-event.remove({ id: "forbidden_arcanus:eternal_stella" })
+event.remove({ output: "forbidden_arcanus:eternal_stella" })
 event.remove({ id: OC('miner/ores/redstone_ore') })
 event.remove({ id: OC('miner/ores/silver_ore') })
 event.remove({ id: MC('diorite') })
@@ -294,8 +294,8 @@ function tweaks(event) {
 
 // rei显示神秘转化
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singularity', 'ae2:quantum_entangled_singularity'))
-MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
-MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))
+/*MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
+MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))*/
 
 // 暂时应对车床合成错乱的应对
 event.stonecutting(Item.of('vintageimprovements:convex_curving_head', '{Damage:0}'), Item.of('vintageimprovements:concave_curving_head', '{Damage:0}'))
@@ -501,6 +501,7 @@ bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 // 前期优化游戏体验
 event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
 event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron'), TE('lead_plate'))
+
 // 手部零件
 event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, '#forge:plates/brass', CR('golden_sheet'))
 event.remove({ id: CRD("crafting/brass_hand") })
@@ -3055,9 +3056,7 @@ event.remove({ id: CRD("mixing/chromatic_compound") })
 event.recipes.createMechanicalCrafting(KJ('radiant_coil', 8), ['  B', ' A ', 'B  '], { A: ['vintageimprovements:refined_radiance_spring', 'create_dd:refined_radiance_sheet'], B: 'create_dd:shadow_steel' })
 event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'vintageimprovements:refined_radiance_spring' })
 event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'create_dd:refined_radiance_sheet' })
-	
-event.shaped(CRD('chromatic_compound'), ['S'], {S: CR('chromatic_compound')})
-event.shaped(CR('chromatic_compound'), ['S'], {S: CRD('chromatic_compound')})
+
 event.shaped(CRD('refined_radiance'), ['S'], {S: CR('refined_radiance')})
 event.shaped(CR('refined_radiance'), ['S'], {S: CRD('refined_radiance')})
 event.shaped(CRD('shadow_steel'), ['S'], {S: CR('shadow_steel')})
@@ -4915,7 +4914,7 @@ replaceIO("#forge:storage_blocks/charcoal", "mekanism:block_charcoal");
 replaceIO("#forge:coal_coke", "thermal:coal_coke");
 replaceIO("#forge:fuels/bio", "createaddition:biomass");
 replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
-replaceIO('create_dd:chromatic_compound', 'create:chromatic_compound');
+replaceIO('create:chromatic_compound','create_dd:chromatic_compound');
 replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
 replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
 
