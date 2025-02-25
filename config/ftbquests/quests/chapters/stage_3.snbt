@@ -267,31 +267,9 @@
 			id: "7B23C933D76458BA"
 			tasks: [
 				{
-					id: "2F334C3D67DE059C"
+					id: "19B49EF053AA97F1"
 					type: "item"
-					title: "{item.create.chromatic_compound}"
-					icon: {
-						id: "create:chromatic_compound"
-						Count: 1b
-						tag: { }
-					}
-					item: {
-						id: "itemfilters:or"
-						Count: 1b
-						tag: {
-							items: [
-								{
-									id: "create:chromatic_compound"
-									Count: 1b
-									tag: { }
-								}
-								{
-									id: "create_dd:chromatic_compound"
-									Count: 1b
-								}
-							]
-						}
-					}
+					item: "create_dd:chromatic_compound"
 					consume_items: false
 				}
 				{
