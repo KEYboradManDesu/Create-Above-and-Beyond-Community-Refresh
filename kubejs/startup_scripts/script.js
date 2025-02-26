@@ -148,6 +148,14 @@ event.create('incomplete_basic_bullet', 'create:sequenced_assembly').texture("al
 event.create('incomplete_complex_bullet', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_complex_bullet")
 event.create('incomplete_shell', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_shell")
 event.create('unarmed_missile', 'create:sequenced_assembly').texture("alloyedguns:item/unarmed_missile")
+
+event.create("deployed_cell").texture("kubejs:item/deployed_cell").unstackable().glow()
+event.create("deployed_disk").texture("kubejs:item/deployed_disk").unstackable()
+event.create("incomplete_steel_support",'create:sequenced_assembly')
+event.create("incomplete_encased_steel_engine",'create:sequenced_assembly')
+event.create("incomplete_encased_desh_engine",'create:sequenced_assembly')
+event.create("incomplete_encased_ostrum_engine",'create:sequenced_assembly')
+event.create("incomplete_encased_calorite_engine",'create:sequenced_assembly')
 })
 
 onEvent('block.registry', event => {
@@ -165,6 +173,27 @@ event.create('invar_casing').material('metal').hardness(3.0).tagBlock("create:wr
 event.create('fluix_casing').material('metal').hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 event.create('matter_casing').material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 event.create('creative_casing').material('stone').hardness(-1.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+
+event.create("steel_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+event.create("desh_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+event.create("ostrum_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+event.create("calorite_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+
+event.create("encased_steel_fuel_tanks").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_steel_engine").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_desh_fuel_tanks").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_desh_engine").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_ostrum_fuel_tanks").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_ostrum_engine").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_calorite_fuel_tanks").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+event.create("encased_calorite_engine").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+
+event.create("rocket_loading_computer").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock=>{let yaw=callblock.player.yaw;let facing;if(yaw>=-45&&yaw<45){facing="north"}else if(yaw>=45&&yaw<135){facing="east"}else if(yaw>=-135&&yaw<-45){facing="west"}else{facing="south"};callblock.set(BlockProperties.HORIZONTAL_FACING,facing)})
+event.create("matrix_computer").material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock=>{let yaw=callblock.player.yaw;let facing;if(yaw>=-45&&yaw<45){facing="north"}else if(yaw>=45&&yaw<135){facing="east"}else if(yaw>=-135&&yaw<-45){facing="west"}else{facing="south"};callblock.set(BlockProperties.HORIZONTAL_FACING,facing)})
+
+event.create("signal_transmission_antenna").material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").box(.4375,0,.4375,.5625,1,.5625,false)
 
 // 机器
 let machine = (name, layer, material) => {
