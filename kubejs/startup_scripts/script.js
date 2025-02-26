@@ -149,13 +149,15 @@ event.create('incomplete_complex_bullet', 'create:sequenced_assembly').texture("
 event.create('incomplete_shell', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_shell")
 event.create('unarmed_missile', 'create:sequenced_assembly').texture("alloyedguns:item/unarmed_missile")
 
-event.create("deployed_cell").texture("kubejs:item/deployed_cell").unstackable().glow()
-event.create("deployed_disk").texture("kubejs:item/deployed_disk").unstackable()
+event.create("deployed_cell").texture("kubejs:item/deployed_cell").unstackable().glow(true)
+event.create("deployed_disk").texture("kubejs:item/deployed_disk").unstackable().glow(true)
 event.create("incomplete_steel_support",'create:sequenced_assembly')
 event.create("incomplete_encased_steel_engine",'create:sequenced_assembly')
 event.create("incomplete_encased_desh_engine",'create:sequenced_assembly')
 event.create("incomplete_encased_ostrum_engine",'create:sequenced_assembly')
 event.create("incomplete_encased_calorite_engine",'create:sequenced_assembly')
+event.create("incomplete_rocket_computer",'create:sequenced_assembly')
+event.create("incomplete_signal_transmission_antenna",'create:sequenced_assembly')
 })
 
 onEvent('block.registry', event => {
