@@ -956,7 +956,7 @@ tweak_casing('kubejs:invar_casing', 'thermal:invar_ingot', 'minecraft:basalt')
 tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian')
 tweak_casing('kubejs:fluix_casing', 'thermal:lead_ingot', 'minecraft:blackstone')
 tweak_casing('create_dd:refined_radiance_casing', 'create:refined_radiance', '#create_dd:glow_base')
-tweak_casing('create_dd:shadow_steel_casing', 'create:shadow_steel', '#forge:obsidian')
+tweak_casing('create_dd:shadow_steel_casing', 'create_dd:shadow_steel', '#forge:obsidian')
 tweak_casing('kubejs:creative_casing', 'architects_palette:unobtanium', '#kubejs:alien_stone')
 }
 
@@ -1384,7 +1384,7 @@ smithAndMechCraft("metalbarrels:iron_barrel", MC("barrel"), "moreminecarts:silic
 smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
 smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
 smithAndMechCraft("metalbarrels:diamond_barrel", MC("barrel"), F("#ingots/refined_radiance"))
-smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), F("#ingots/shadow_steel"))
+smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), CRD("shadow_steel"))
 
 event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])
 event.shapeless("metalbarrels:wood_to_iron", ["metalbarrels:iron_barrel"])
@@ -3059,8 +3059,8 @@ event.recipes.createMechanicalCrafting(KJ('radiant_coil'), ['A'], { A: 'create_d
 
 event.shaped(CRD('refined_radiance'), ['S'], {S: CR('refined_radiance')})
 event.shaped(CR('refined_radiance'), ['S'], {S: CRD('refined_radiance')})
-event.shaped(CRD('shadow_steel'), ['S'], {S: CR('shadow_steel')})
-event.shaped(CR('shadow_steel'), ['S'], {S: CRD('shadow_steel')})
+/*event.shaped(CRD('shadow_steel'), ['S'], {S: CR('shadow_steel')})
+event.shaped(CR('shadow_steel'), ['S'], {S: CRD('shadow_steel')})*/
 
 }
 
@@ -3558,6 +3558,50 @@ event.replaceInput({ id: AE2("network/cells/spatial_components") }, AE2("enginee
 event.replaceInput({ id: AE2("network/crafting/patterns_blank") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
 event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [F("#gems/certus_quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
 
+event.recipes.createSequencedAssembly("kubejs:steel_support","kubejs:matter_plastics",[
+	event.recipes.createDeploying("kubejs:incomplete_steel_support",["kubejs:incomplete_steel_support","create_dd:steel_sheet"]),
+	event.recipes.createCutting("kubejs:incomplete_steel_support","kubejs:incomplete_steel_support"),
+	event.recipes.createCutting("kubejs:incomplete_steel_support","kubejs:incomplete_steel_support")
+]).transitionalItem("kubejs:incomplete_steel_support").loops(1)
+
+event.recipes.createSequencedAssembly("kubejs:desh_support","beyond_earth:desh_plate",[
+	event.recipes.createCutting("kubejs:incomplete_desh_support","kubejs:incomplete_desh_support")
+]).transitionalItem("kubejs:incomplete_desh_support").loops(2)
+
+event.recipes.createSequencedAssembly("kubejs:ostrum_support","beyond_earth:compressed_ostrum",[
+	event.recipes.createCutting("kubejs:incomplete_ostrum_support","kubejs:incomplete_ostrum_support")
+]).transitionalItem("kubejs:incomplete_ostrum_support").loops(4)
+
+event.recipes.createSequencedAssembly("kubejs:calorite_support","beyond_earth:compressed_calorite",[
+	event.recipes.createCutting("kubejs:incomplete_calorite_support","kubejs:incomplete_calorite_support")
+]).transitionalItem("kubejs:incomplete_calorite_support").loops(4)
+
+event.recipes.create.itemApplication("kubejs:encased_steel_fuel_tank",["kubejs:matter_casing","beyond_earth:steel_tank"])
+event.recipes.create.itemApplication("kubejs:encased_desh_fuel_tank",["kubejs:matter_casing","beyond_earth:desh_tank",])
+event.recipes.create.itemApplication("kubejs:encased_ostrum_fuel_tank",["kubejs:matter_casing","beyond_earth:ostrum_tank"])
+event.recipes.create.itemApplication("kubejs:encased_calorite_fuel_tank",["kubejs:matter_casing","beyond_earth:calorite_tank"])
+
+event.recipes.createMechanicalCrafting('kubejs:guide_computer', [
+	'PPPPP',
+	'PMMMP',
+	'GM MG',
+	'PMMMP',
+	'PPCPP'
+], {
+	P: 'kubejs:matter_plastics',
+	M: 'kubejs:computation_matrix',
+	G: 'thermal:diamond_gear',
+	C: 'ae2:controller'
+})
+
+event.shapeless("kubejs:deployed_disk",["kubejs:deployed_cell","ae2:item_cell_housing"])
+event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer","ae2:controller",[
+	event.recipes.createDeploying("kubejs:incomplete_rocket_computer",["kubejs:incomplete_rocket_computer","kubejs:deployed_disk"]),
+	event.recipes.createDeploying("kubejs:incomplete_rocket_computer",["kubejs:incomplete_rocket_computer","create_dd:overcharge_alloy_sheet"]),
+	event.recipes.createDeploying("kubejs:incomplete_rocket_computer",["kubejs:incomplete_rocket_computer","kubejs:matter_plastics"])
+]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
+
+MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k","kubejs:deployed_cell"))
 }
 
 function madMaths(event) {
@@ -4915,8 +4959,9 @@ replaceIO("#forge:coal_coke", "thermal:coal_coke");
 replaceIO("#forge:fuels/bio", "createaddition:biomass");
 replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
 replaceIO('create:chromatic_compound','create_dd:chromatic_compound');
-replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
-replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
+replaceIO('create:refined_radiance','create_dd:refined_radiance');
+replaceIO('create:shadow_steel','create_dd:shadow_steel');
+replaceIO('#forge:ingots/shadow_steel','create_dd:shadow_steel');
 
 event.remove({ output: "thermal:cinnabar_dust" });
 
@@ -5803,7 +5848,7 @@ unifyAllTheMetal(
     "",
     "",
     "create_dd:shadow_steel_block",
-    "create:shadow_steel",
+    "create_dd:shadow_steel",
     "",
     "",
     "",
