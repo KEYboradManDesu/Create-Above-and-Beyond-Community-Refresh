@@ -3602,6 +3602,37 @@ event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer","ae2:cont
 ]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
 
 MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k","kubejs:deployed_cell"))
+
+event.recipes.createSequencedAssembly("kubejs:encased_steel_engine","kubejs:matter_casing",[
+	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine",["kubejs:incomplete_encased_steel_engine","beyond_earth:steel_engine"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine",["kubejs:incomplete_encased_steel_engine","thermal:diamond_gear"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine",["kubejs:incomplete_encased_steel_engine","thermal:diamond_gear"])
+]).transitionalItem("kubejs:incomplete_encased_steel_engine").loops(1)
+
+event.recipes.createSequencedAssembly("kubejs:encased_desh_engine","kubejs:matter_casing",[
+	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine",["kubejs:incomplete_encased_desh_engine","beyond_earth:desh_engine"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine",["kubejs:incomplete_encased_desh_engine","beyond_earth:desh_plate"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine",["kubejs:incomplete_encased_desh_engine","beyond_earth:desh_plate"])
+]).transitionalItem("kubejs:incomplete_encased_desh_engine").loops(1)
+
+event.recipes.createSequencedAssembly("kubejs:encased_ostrum_engine","kubejs:matter_casing",[
+	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine",["kubejs:incomplete_encased_ostrum_engine","beyond_earth:ostrum_engine"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine",["kubejs:incomplete_encased_ostrum_engine","beyond_earth:compressed_ostrum"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine",["kubejs:incomplete_encased_ostrum_engine","beyond_earth:compressed_ostrum"])
+]).transitionalItem("kubejs:incomplete_encased_ostrum_engine").loops(1)
+
+event.recipes.createSequencedAssembly("kubejs:encased_calorite_engine","kubejs:matter_casing",[
+	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine",["kubejs:incomplete_encased_calorite_engine","beyond_earth:calorite_engine"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine",["kubejs:incomplete_encased_calorite_engine","beyond_earth:compressed_calorite"]),
+	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine",["kubejs:incomplete_encased_calorite_engine","beyond_earth:compressed_calorite"]),
+]).transitionalItem("kubejs:incomplete_encased_calorite_engine").loops(1)
+
+event.recipes.createSequencedAssembly("kubejs:signal_transmission_antenna","vintageimprovements:steel_rod",[
+	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna",["kubejs:incomplete_signal_transmission_antenna","createaddition:gold_wire"]),
+	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna",["kubejs:incomplete_signal_transmission_antenna","#ae2:glass_cable"]),
+	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna",["kubejs:incomplete_signal_transmission_antenna","ae2:logic_processor"]),
+	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna",["kubejs:incomplete_signal_transmission_antenna","ae2:fluix_pearl"])
+]).transitionalItem("kubejs:incomplete_signal_transmission_antenna").loops(1)
 }
 
 function madMaths(event) {
@@ -6844,4 +6875,99 @@ onEvent('entity.spawned', event => {
 	float_and_lights(event, KJ("small_radiant_spring"))
 	float_and_lights(event, KJ("radiant_spring"))
 	float_and_lights(event, KJ("shadow_rod"))
+})
+
+function getPos(facing, x, y, z) {
+    const rotations = {
+        "north": [x, y, z],
+        "south": [-x, y, -z],
+        "west": [z, y, -x],
+        "east": [-z, y, x]
+    };
+    return rotations[facing] || [x, y, z];
+}
+const rockets=[
+    {
+        tier:1,
+        parts:[
+            [0, -1, -1, "kubejs:encased_steel_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:steel_support"], [1, -1, -2, "kubejs:steel_support"],
+            [-1, -1, -2, "kubejs:steel_support"], [-1, -1, 0, "kubejs:steel_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_steel_fuel_tank"],
+            [0, 1, -2, "kubejs:encased_steel_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
+            [1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
+            [0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
+            [1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+    },{
+        tier:2,
+        parts:[
+            [0, -1, -1, "kubejs:encased_desh_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:desh_support"], [1, -1, -2, "kubejs:desh_support"],
+            [-1, -1, -2, "kubejs:desh_support"], [-1, -1, 0, "kubejs:desh_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_desh_fuel_tank"],
+            [0, 1, -2, "kubejs:encased_desh_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
+            [1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
+            [0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
+            [1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+    },{
+        tier:3,
+        parts:[
+            [0, -1, -1, "kubejs:encased_ostrum_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:ostrum_support"], [1, -1, -2, "kubejs:ostrum_support"],
+            [-1, -1, -2, "kubejs:ostrum_support"], [-1, -1, 0, "kubejs:ostrum_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_ostrum_fuel_tank"],
+            [0, 1, -2, "kubejs:encased_ostrum_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
+            [1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
+            [0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
+            [1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+    },{
+        tier:4,
+        parts:[
+            [0, -1, -1, "kubejs:encased_calorite_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:calorite_support"], [1, -1, -2, "kubejs:calorite_support"],
+            [-1, -1, -2, "kubejs:calorite_support"], [-1, -1, 0, "kubejs:calorite_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_calorite_fuel_tank"],
+            [0, 1, -2, "kubejs:encased_calorite_fuel_tank"], [-1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [-1, 1, -1, "kubejs:matter_casing"],
+            [1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
+            [-1, 3, -1, "kubejs:matter_casing"], [1, 3, -1, "kubejs:matter_casing"], [0, 3, 0, "kubejs:matter_casing"], [0, 3, -2, "kubejs:matter_casing"],
+            [-1, 4, -1, "kubejs:matter_casing"], [1, 4, -1, "kubejs:matter_casing"], [0, 4, 0, "kubejs:matter_casing"], [0, 4, -2, "kubejs:matter_casing"],
+            [0, 5, -1, "kubejs:matter_casing"], [0, 6, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
+            [1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"], [0, 3, -1, "minecraft:air"], [0, 4, -1, "minecraft:air"]]
+    }
+]
+onEvent("block.right_click", event => {
+    if (!(event.getItem().hasTag("forge:wrenches"))) return;
+    if (event.getPlayer().isCrouching()) return
+    let block = event.getBlock()
+    if (block.id != "kubejs:rocket_loading_computer") return;
+    let facing = block.getProperties().facing
+    let rocketTier = 0
+    for (let rocket of rockets) {
+        let isValid = true;
+        for (let part of rocket.parts) {
+            let pos = getPos(facing, part[0], part[1], part[2]);
+            let checkBlock = block.offset(pos[0], pos[1], pos[2]);
+
+            if (part[3].startsWith("#")) {
+                if (!checkBlock.hasTag(part[3].replace("#", ""))) {
+                    isValid = false;
+                    break;
+                }
+            } else if (checkBlock.id !== part[3]) {
+                isValid = false;
+                break;
+            }
+        }
+
+        if (isValid) {
+            rocketTier = rocket.tier;
+            break;
+        }
+    }
+    if (!rocketTier) return;
+    
+    for(let part of rockets[rocketTier-1].parts){
+        let pos = getPos(facing, part[0], part[1], part[2]);
+        block.offset(pos[0],pos[1],pos[2]).set("air")
+    }
+    block.set("air")
+
+    let centerPos=getPos(facing,0,0,-1)
+    let itemEntity=block.offset(centerPos[0],centerPos[1],centerPos[2]).createEntity("item")
+    itemEntity.item = Item.of(`beyond_earth:rocket_t${rocketTier}`)
+    itemEntity.item.count = 1
+    itemEntity.motionY = 0.25
+    itemEntity.spawn()
 })
