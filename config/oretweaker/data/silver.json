@@ -1,0 +1,24 @@
+{
+  "oreConfig": [
+    {
+      "ore": "thermai:silver_ore",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "thermal:deepslate_silver_ore",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    }
+  ]
+}
