@@ -4580,9 +4580,12 @@ function rocketScience(event) {
 		F: '#forge:chests'
 	})
 
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier1", })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier2", })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier3", })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier4", })
 	// 一级火箭
-	/*event.remove({ id: "beyond_earth:nasa_workbenching/tier1", })
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
+	/*event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
 		'  G  ',
 		' AYA ',
 		' YEY ',
@@ -4603,7 +4606,6 @@ function rocketScience(event) {
 	})
 
 	// 二级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier2", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
 		'  G  ',
 		' AYA ',
@@ -4625,7 +4627,6 @@ function rocketScience(event) {
 	})
 
 	// 三级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier3", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
 		'  G  ',
 		' AYA ',
@@ -4647,7 +4648,6 @@ function rocketScience(event) {
 	})
 
 	// 四级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier4", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
 		'  G  ',
 		' AYA ',
