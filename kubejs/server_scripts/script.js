@@ -6960,8 +6960,11 @@ onEvent("block.right_click", event => {
 
 	for (let part of rockets[rocketTier - 1].parts) {
 		let pos = getPos(facing, part[0], part[1], part[2]);
-		block.offset(pos[0], pos[1], pos[2]).set("air")
+		let consumeBlock=block.offset(pos[0], pos[1], pos[2])
+		for(let i=0;i<13;i++)event.server.runCommandSilent(`particle minecraft:block ${consumeBlock.id} ${consumeBlock.x} ${consumeBlock.y} ${consumeBlock.z} 0 1 0 0.08 2 force`)
+		consumeBlock.set("air")
 	}
+	for(let i=0;i<13;i++)event.server.runCommandSilent(`particle minecraft:block ${block.id} ${block.x} ${block.y} ${block.z} 0 1 0 0.08 2 force`)
 	block.set("air")
 
 	let centerPos = getPos(facing, 0, 0, -1)
@@ -6970,4 +6973,5 @@ onEvent("block.right_click", event => {
 	itemEntity.item.count = 1
 	itemEntity.motionY = 0.25
 	itemEntity.spawn()
+	event.server.runCommandSilent(`playsound minecraft:block.metal.break block @a ${block.x} ${block.y} ${block.z} 0.55 0.5`)
 })
