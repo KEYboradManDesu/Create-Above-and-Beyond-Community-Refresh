@@ -3633,6 +3633,9 @@ function fluixMachine(event) {
 		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:logic_processor"]),
 		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:fluix_pearl"])
 	]).transitionalItem("kubejs:incomplete_signal_transmission_antenna").loops(1)
+
+	event.remove({id:"wormhole:basic_energy_cell"})
+	event.remove({id:"wormhole:advanced_energy_cell"})
 }
 
 function madMaths(event) {
@@ -6961,10 +6964,10 @@ onEvent("block.right_click", event => {
 	for (let part of rockets[rocketTier - 1].parts) {
 		let pos = getPos(facing, part[0], part[1], part[2]);
 		let consumeBlock=block.offset(pos[0], pos[1], pos[2])
-		for(let i=0;i<13;i++)event.server.runCommandSilent(`particle minecraft:block ${consumeBlock.id} ${consumeBlock.x} ${consumeBlock.y} ${consumeBlock.z} 0 1 0 0.08 2 force`)
+		event.server.runCommandSilent(`particle minecraft:block ${consumeBlock.id} ${consumeBlock.x} ${consumeBlock.y} ${consumeBlock.z} 0 1 0 0.08 16 force`)
 		consumeBlock.set("air")
 	}
-	for(let i=0;i<13;i++)event.server.runCommandSilent(`particle minecraft:block ${block.id} ${block.x} ${block.y} ${block.z} 0 1 0 0.08 2 force`)
+	event.server.runCommandSilent(`particle minecraft:block ${block.id} ${block.x} ${block.y} ${block.z} 0 1 0 0.08 16 force`)
 	block.set("air")
 
 	let centerPos = getPos(facing, 0, 0, -1)
