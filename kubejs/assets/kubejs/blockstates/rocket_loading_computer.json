@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kubejs:block/rocket_loading_computer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "kubejs:block/rocket_loading_computer"
+    },
+    "facing=south": {
+      "model": "kubejs:block/rocket_loading_computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/rocket_loading_computer",
+      "y": 270
+    }
+  }
+}
