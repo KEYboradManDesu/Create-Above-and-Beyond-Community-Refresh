@@ -240,7 +240,7 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('machine/pulverizer/pulverizer_electrum_ingot_to_dust') })
 	event.remove({ id: TE('parts/electrum_gear') })
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
-	event.remove({ id: 'portality:generator' })
+	//event.remove({ id: 'portality:generator' })
 
 	// event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 	// event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
@@ -3373,7 +3373,7 @@ function enderMachine(event) {
 	ender_machine("enderstorage:ender_chest", 1, MC('chest'))
 	ender_machine("enderstorage:ender_tank", 1, CR('fluid_tank'))
 	ender_machine("createutilities:void_battery", 1, "createaddition:modular_accumulator")
-	ender_machine("portality:controller", 1, MC('diamond'))
+	//ender_machine("portality:controller", 1, MC('diamond'))
 	ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 	ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 	ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
@@ -3636,6 +3636,32 @@ function fluixMachine(event) {
 
 	event.remove({id:"wormhole:basic_energy_cell"})
 	event.remove({id:"wormhole:advanced_energy_cell"})
+	event.remove({id:"wormhole:coal_generator"})
+
+	event.smithing('wormhole:basic_energy_cell', 'wormhole:portal_frame', 'createaddition:modular_accumulator')
+	event.recipes.createMechanicalCrafting('wormhole:basic_energy_cell', "AB", { A: 'wormhole:portal_frame', B:  'createaddition:modular_accumulator'})
+	event.shaped('wormhole:advanced_energy_cell',[" G ","CEC"," W "],{G:'minecraft:glowstone_dust',C:'createaddition:capacitor',E:'wormhole:basic_energy_cell',W:['createaddition:gold_wire','createaddition:electrum_wire']})
+
+	event.remove({id:"wormhole:portal_frame"})
+	event.smithing('2x wormhole:portal_frame', MC('obsidian'), MC('quartz'))
+	event.recipes.createMechanicalCrafting('2x wormhole:portal_frame', "AB", { A: MC('obsidian'), B:  MC('quartz')})
+
+	event.remove({id:"wormhole:target_device"})
+	event.smithing('wormhole:target_device', 'kubejs:inductive_mechanism',MC("compass"))
+	event.recipes.createMechanicalCrafting('wormhole:target_device', "AB", { A: 'kubejs:inductive_mechanism', B:  MC("compass")})
+
+	event.remove({id:'wormhole:advanced_target_device'})
+	event.shaped('wormhole:advanced_target_device',[" P ","IDI"," G "],{P:'ae2:logic_processor',D:'wormhole:target_device',G:'minecraft:glowstone_dust',I:'thermal:invar_plate'})
+
+	event.remove({id:'wormhole:advanced_target_cell'})
+	event.remove({id:'wormhole:basic_target_cell'})
+	event.remove({id:'wormhole:portal_stabilizer'})
+
+	event.smithing('wormhole:portal_stabilizer', 'kubejs:enderium_machine','minecraft:lapis_lazuli')
+	event.recipes.createMechanicalCrafting('wormhole:portal_stabilizer', "AB", { A: 'kubejs:enderium_machine', B:  'minecraft:lapis_lazuli'})
+
+	event.shaped('wormhole:basic_target_cell',["WFT"],{T:'create:electron_tube',F:'wormhole:portal_frame',W:['createaddition:gold_wire','createaddition:electrum_wire']})
+	event.shaped('wormhole:advanced_target_cell',[" C ","IBI"," G "],{C:'ae2:cell_component_4k',I:'thermal:invar_plate',G:'minecraft:glowstone_dust',B:'wormhole:basic_target_cell'})
 }
 
 function madMaths(event) {
