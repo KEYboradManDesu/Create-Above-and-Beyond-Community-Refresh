@@ -956,7 +956,7 @@ function casing(event) {
 	tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian')
 	tweak_casing('kubejs:fluix_casing', 'thermal:lead_ingot', 'minecraft:blackstone')
 	tweak_casing('create_dd:refined_radiance_casing', 'create:refined_radiance', '#create_dd:glow_base')
-	tweak_casing('create_dd:shadow_steel_casing', 'create:shadow_steel', '#forge:obsidian')
+	tweak_casing('create_dd:shadow_steel_casing', 'create_dd:shadow_steel', '#forge:obsidian')
 	tweak_casing('kubejs:creative_casing', 'architects_palette:unobtanium', '#kubejs:alien_stone')
 }
 
@@ -1384,7 +1384,7 @@ function barrels(event) {
 	smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
 	smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
 	smithAndMechCraft("metalbarrels:diamond_barrel", MC("barrel"), F("#ingots/refined_radiance"))
-	smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), F("#ingots/shadow_steel"))
+	smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), CRD("shadow_steel"))
 
 	event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])
 	event.shapeless("metalbarrels:wood_to_iron", ["metalbarrels:iron_barrel"])
@@ -3059,8 +3059,8 @@ function radiant_coil(event) {
 
 	event.shaped(CRD('refined_radiance'), ['S'], { S: CR('refined_radiance') })
 	event.shaped(CR('refined_radiance'), ['S'], { S: CRD('refined_radiance') })
-	event.shaped(CRD('shadow_steel'), ['S'], { S: CR('shadow_steel') })
-	event.shaped(CR('shadow_steel'), ['S'], { S: CRD('shadow_steel') })
+	/*event.shaped(CRD('shadow_steel'), ['S'], {S: CR('shadow_steel')})
+	event.shaped(CR('shadow_steel'), ['S'], {S: CRD('shadow_steel')})*/
 
 }
 
@@ -3381,7 +3381,6 @@ function enderMachine(event) {
 	ender_machine('pipez:ultimate_upgrade', 4, CRD('integrated_circuit'))
 	ender_machine('pipez:item_pipe', 16)
 	ender_machine("toms_storage:ts.wireless_terminal", 1, "toms_storage:ts.inventory_connector")
-	ender_machine('wormhole:portal_stabilizer', 1, MC('lapis_lazuli'))
 
 	event.remove({ id: "createutilities:shaped/void_chest" })
 	event.remove({ id: "createutilities:shaped/void_tank" })
@@ -3635,31 +3634,34 @@ function fluixMachine(event) {
 		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:fluix_pearl"])
 	]).transitionalItem("kubejs:incomplete_signal_transmission_antenna").loops(1)
 
-	event.remove({ id: "wormhole:basic_energy_cell" })
-	event.remove({ id: "wormhole:advanced_energy_cell" })
-	event.remove({ id: "wormhole:coal_generator" })
+	event.remove({id:"wormhole:basic_energy_cell"})
+	event.remove({id:"wormhole:advanced_energy_cell"})
+	event.remove({id:"wormhole:coal_generator"})
 
 	event.smithing('wormhole:basic_energy_cell', 'wormhole:portal_frame', 'createaddition:modular_accumulator')
-	event.recipes.createMechanicalCrafting('wormhole:basic_energy_cell', "AB", { A: 'wormhole:portal_frame', B: 'createaddition:modular_accumulator' })
-	event.shaped('wormhole:advanced_energy_cell', [" G ", "CEC", " W "], { G: 'minecraft:glowstone_dust', C: 'createaddition:capacitor', E: 'wormhole:basic_energy_cell', W: ['createaddition:gold_wire', 'createaddition:electrum_wire'] })
+	event.recipes.createMechanicalCrafting('wormhole:basic_energy_cell', "AB", { A: 'wormhole:portal_frame', B:  'createaddition:modular_accumulator'})
+	event.shaped('wormhole:advanced_energy_cell',[" G ","CEC"," W "],{G:'minecraft:glowstone_dust',C:'createaddition:capacitor',E:'wormhole:basic_energy_cell',W:['createaddition:gold_wire','createaddition:electrum_wire']})
 
-	event.remove({ id: "wormhole:portal_frame" })
+	event.remove({id:"wormhole:portal_frame"})
 	event.smithing('2x wormhole:portal_frame', MC('obsidian'), MC('quartz'))
-	event.recipes.createMechanicalCrafting('2x wormhole:portal_frame', "AB", { A: MC('obsidian'), B: MC('quartz') })
+	event.recipes.createMechanicalCrafting('2x wormhole:portal_frame', "AB", { A: MC('obsidian'), B:  MC('quartz')})
 
-	event.remove({ id: "wormhole:target_device" })
-	event.smithing('wormhole:target_device', 'kubejs:inductive_mechanism', MC("compass"))
-	event.recipes.createMechanicalCrafting('wormhole:target_device', "AB", { A: 'kubejs:inductive_mechanism', B: MC("compass") })
+	event.remove({id:"wormhole:target_device"})
+	event.smithing('wormhole:target_device', 'kubejs:inductive_mechanism',MC("compass"))
+	event.recipes.createMechanicalCrafting('wormhole:target_device', "AB", { A: 'kubejs:inductive_mechanism', B:  MC("compass")})
 
-	event.remove({ id: 'wormhole:advanced_target_device' })
-	event.shaped('wormhole:advanced_target_device', [" P ", "IDI", " G "], { P: 'ae2:logic_processor', D: 'wormhole:target_device', G: 'minecraft:glowstone_dust', I: 'thermal:invar_plate' })
+	event.remove({id:'wormhole:advanced_target_device'})
+	event.shaped('wormhole:advanced_target_device',[" P ","IDI"," G "],{P:'ae2:logic_processor',D:'wormhole:target_device',G:'minecraft:glowstone_dust',I:'thermal:invar_plate'})
 
-	event.remove({ id: 'wormhole:advanced_target_cell' })
-	event.remove({ id: 'wormhole:basic_target_cell' })
-	event.remove({ id: 'wormhole:portal_stabilizer' })
+	event.remove({id:'wormhole:advanced_target_cell'})
+	event.remove({id:'wormhole:basic_target_cell'})
+	event.remove({id:'wormhole:portal_stabilizer'})
 
-	event.shaped('wormhole:basic_target_cell', ["WFT"], { T: 'create:electron_tube', F: 'wormhole:portal_frame', W: ['createaddition:gold_wire', 'createaddition:electrum_wire'] })
-	event.shaped('wormhole:advanced_target_cell', [" C ", "IBI", " G "], { C: 'ae2:cell_component_4k', I: 'thermal:invar_plate', G: 'minecraft:glowstone_dust', B: 'wormhole:basic_target_cell' })
+	event.smithing('wormhole:portal_stabilizer', 'kubejs:enderium_machine','minecraft:lapis_lazuli')
+	event.recipes.createMechanicalCrafting('wormhole:portal_stabilizer', "AB", { A: 'kubejs:enderium_machine', B:  'minecraft:lapis_lazuli'})
+
+	event.shaped('wormhole:basic_target_cell',["WFT"],{T:'create:electron_tube',F:'wormhole:portal_frame',W:['createaddition:gold_wire','createaddition:electrum_wire']})
+	event.shaped('wormhole:advanced_target_cell',[" C ","IBI"," G "],{C:'ae2:cell_component_4k',I:'thermal:invar_plate',G:'minecraft:glowstone_dust',B:'wormhole:basic_target_cell'})
 }
 
 function madMaths(event) {
@@ -4296,9 +4298,10 @@ function oil(event) {
 		],
 		"energy": 8000
 	})
-	// 移除Create: Diesel Generators的植物油冲突配方
+  
+  // 移除Create: Diesel Generators的植物油冲突配方
 	event.remove({ id: "createdieselgenerators:plant_oil" });
-
+  
 	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
 	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
 
@@ -4609,9 +4612,12 @@ function rocketScience(event) {
 		F: '#forge:chests'
 	})
 
-	// 一级火箭
 	event.remove({ id: "beyond_earth:nasa_workbenching/tier1", })
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier2", })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier3", })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier4", })
+	// 一级火箭
+	/*event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
 		'  G  ',
 		' AYA ',
 		' YEY ',
@@ -4632,7 +4638,6 @@ function rocketScience(event) {
 	})
 
 	// 二级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier2", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
 		'  G  ',
 		' AYA ',
@@ -4654,7 +4659,6 @@ function rocketScience(event) {
 	})
 
 	// 三级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier3", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
 		'  G  ',
 		' AYA ',
@@ -4676,7 +4680,6 @@ function rocketScience(event) {
 	})
 
 	// 四级火箭
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier4", })
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
 		'  G  ',
 		' AYA ',
@@ -4696,7 +4699,7 @@ function rocketScience(event) {
 		D: 'beyond_earth:calorite_engine',
 		E: '#thermal:glass/hardened',
 		Y: casing
-	})
+	})*/
 
 
 }
@@ -5019,8 +5022,9 @@ function unify(event) {
 	replaceIO("#forge:fuels/bio", "createaddition:biomass");
 	replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
 	replaceIO('create:chromatic_compound', 'create_dd:chromatic_compound');
-	replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
-	replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
+	replaceIO('create:refined_radiance', 'create_dd:refined_radiance');
+	replaceIO('create:shadow_steel', 'create_dd:shadow_steel');
+	replaceIO('#forge:ingots/shadow_steel', 'create_dd:shadow_steel');
 
 	event.remove({ output: "thermal:cinnabar_dust" });
 
@@ -5907,7 +5911,7 @@ function unify(event) {
 		"",
 		"",
 		"create_dd:shadow_steel_block",
-		"create:shadow_steel",
+		"create_dd:shadow_steel",
 		"",
 		"",
 		"",
@@ -6988,7 +6992,7 @@ onEvent("block.right_click", event => {
 
 	for (let part of rockets[rocketTier - 1].parts) {
 		let pos = getPos(facing, part[0], part[1], part[2]);
-		let consumeBlock = block.offset(pos[0], pos[1], pos[2])
+		let consumeBlock=block.offset(pos[0], pos[1], pos[2])
 		event.server.runCommandSilent(`particle minecraft:block ${consumeBlock.id} ${consumeBlock.x} ${consumeBlock.y} ${consumeBlock.z} 0 1 0 0.08 16 force`)
 		consumeBlock.set("air")
 	}
