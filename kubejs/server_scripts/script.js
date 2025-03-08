@@ -289,7 +289,7 @@ function unwantedRecipes(event) {
 
 	event.remove({ id: "wormhole:basic_energy_cell" })
 	event.remove({ id: "wormhole:advanced_energy_cell" })
-	event.remove({ id: "wormhole:coal_generator" })	
+	event.remove({ id: "wormhole:coal_generator" })
 	event.remove({ id: "wormhole:portal_frame" })
 	event.remove({ id: "wormhole:target_device" })
 	event.remove({ id: 'wormhole:advanced_target_device' })
@@ -964,7 +964,7 @@ function casing(event) {
 	tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian')
 	tweak_casing('kubejs:fluix_casing', 'thermal:lead_ingot', 'minecraft:blackstone')
 	tweak_casing('create_dd:refined_radiance_casing', 'create:refined_radiance', '#create_dd:glow_base')
-	tweak_casing('create_dd:shadow_steel_casing', 'create:shadow_steel', '#forge:obsidian')
+	tweak_casing('create_dd:shadow_steel_casing', 'create_dd:shadow_steel', '#forge:obsidian')
 	tweak_casing('kubejs:creative_casing', 'architects_palette:unobtanium', '#kubejs:alien_stone')
 }
 
@@ -1392,7 +1392,7 @@ function barrels(event) {
 	smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
 	smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
 	smithAndMechCraft("metalbarrels:diamond_barrel", MC("barrel"), F("#ingots/refined_radiance"))
-	smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), F("#ingots/shadow_steel"))
+	smithAndMechCraft("metalbarrels:obsidian_barrel", MC("barrel"), CRD("shadow_steel"))
 
 	event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])
 	event.shapeless("metalbarrels:wood_to_iron", ["metalbarrels:iron_barrel"])
@@ -3067,8 +3067,8 @@ function radiant_coil(event) {
 
 	event.shaped(CRD('refined_radiance'), ['S'], { S: CR('refined_radiance') })
 	event.shaped(CR('refined_radiance'), ['S'], { S: CRD('refined_radiance') })
-	event.shaped(CRD('shadow_steel'), ['S'], { S: CR('shadow_steel') })
-	event.shaped(CR('shadow_steel'), ['S'], { S: CRD('shadow_steel') })
+	/*event.shaped(CRD('shadow_steel'), ['S'], { S: CR('shadow_steel') })
+	event.shaped(CR('shadow_steel'), ['S'], { S: CRD('shadow_steel') })*/
 
 }
 
@@ -4528,10 +4528,10 @@ function rocketScience(event) {
 		E: 'beyond_earth:steel_tank',
 		F: '#forge:chests'
 	})
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier1"})
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier2"})
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier3"})
-	event.remove({ id: "beyond_earth:nasa_workbenching/tier4"})
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier1" })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier2" })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier3" })
+	event.remove({ id: "beyond_earth:nasa_workbenching/tier4" })
 
 	// 一级火箭
 	/*
@@ -5019,8 +5019,9 @@ function unify(event) {
 	replaceIO("#forge:fuels/bio", "createaddition:biomass");
 	replaceIO("thermal:tea", "farmersrespite:green_tea_leaves");
 	replaceIO('create:chromatic_compound', 'create_dd:chromatic_compound');
-	replaceIO('create_dd:refined_radiance', 'create:refined_radiance');
-	replaceIO('create_dd:shadow_steel', 'create:shadow_steel');
+	replaceIO('create:refined_radiance', 'create_dd:refined_radiance');
+	replaceIO('create:shadow_steel', 'create_dd:shadow_steel');
+	replaceIO('#forge:ingots/shadow_steel', 'create_dd:shadow_steel');
 
 	event.remove({ output: "thermal:cinnabar_dust" });
 
@@ -5907,7 +5908,7 @@ function unify(event) {
 		"",
 		"",
 		"create_dd:shadow_steel_block",
-		"create:shadow_steel",
+		"create_dd:shadow_steel",
 		"",
 		"",
 		"",
