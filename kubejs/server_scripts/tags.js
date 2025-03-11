@@ -1,5 +1,5 @@
-// This part should fix some compatibility issues.
-// Maybe mod-shortcuts.js is not loaded yet when this script is executed. 
+// priority: 1000
+
 let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
 let AE2 = (id, x) => MOD("ae2", id, x)
 let TE = (id, x) => MOD("thermal", id, x)
