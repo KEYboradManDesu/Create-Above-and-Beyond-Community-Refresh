@@ -1,0 +1,31 @@
+
+#configs for both server and clients
+[General]
+	#
+	#The mode of the filter, either blacklist or whitelist, default is blacklist
+	#Allowed Values: blacklist, whitelist
+	filterMode = "blacklist"
+	#
+	#A list of structures that the compass will not search in blacklist mode or will only search in whitelist mode, specified by resource location, supporting regex.
+	#Ex: ["minecraft:stronghold", "quark:big_dungeon"]
+	filter = ["integrated_api:*"]
+	#
+	#The pseudo maximum searching radius.
+	#If the distance to the structure exceeds this value, HUD would display 'Not Found'
+	#Range: 20.0 ~ 20000.0
+	MaxSearchRadius = 5000.0
+	#
+	#The real maximum searching radius used by the underlying method (no idea how it works.)
+	#If you still couldn't find a structure with a big enough MaxSearchRadius, increase this one.
+	#If you think searching makes the server slow, decrease this one.
+	#Range: 1 ~ 128
+	RealRadius = 64
+	#
+	#HUD information detail level.
+	#0: Nothing.
+	#1+: Structure and Dimension name.
+	#2+: Distance to the structure.
+	#3: Position of the structure and distance in x/y/z axis.
+	#Range: 0 ~ 3
+	HUD_Level = 3
+
