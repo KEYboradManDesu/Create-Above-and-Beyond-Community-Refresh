@@ -6351,6 +6351,26 @@ const FiuldNugget = (nugget, fluid, event) => {
 const FiuldBlock = (block, gem, ingot, fluid, event) => {
 	if (block === "" || fluid === "") return;
 
+	if (block === "minecraft:quartz_block") {
+        event.custom({
+            "type": "createbigcannons:melting",
+            "ingredients": [
+                {
+                    "item": block
+                }
+            ],
+            "results": [
+                {
+                    "fluid": fluid,
+                    "amount": 400
+                }
+            ],
+            "processingTime": 1620,
+            "heatRequirement": "heated"
+        });
+        return;
+    }
+	
 	if (gem !== "") {
 		event.custom({
 			"type": "createbigcannons:melting",
@@ -6657,11 +6677,13 @@ const Blocks = (name, item, fluid, gem, event) => {
 		type: "tconstruct:casting_basin",
 	});
 
-	event.recipes
-		.tconstructCastingBasin(Item.of(item), fluid, gem ? 900 : 810)
-		.noCast()
-		.coolingTime(200)
-		.id(`unify:tconstruct/storage_block/${name}`);
+	if (name !== "quartz") {
+		event.recipes
+			.tconstructCastingBasin(Item.of(item), fluid, gem ? 900 : 810)
+			.noCast()
+			.coolingTime(200)
+			.id(`unify:tconstruct/storage_block/${name}`);
+	}
 };
 
 // 锭
