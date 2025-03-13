@@ -226,6 +226,8 @@ onEvent('item.tags', event => {
 		.add("kubejs:desh_dust")
 		.add("kubejs:ostrum_dust")
 		.add("kubejs:calorite_dust")
+	
+	event.get('randomium:blacklist').add('create:minecart_contraption')
 })
 
 onEvent('block.tags', event => {
