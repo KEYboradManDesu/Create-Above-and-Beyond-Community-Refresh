@@ -87,6 +87,7 @@ onEvent('recipes', event => {
 	fluixMachine(event)
 
 	madMaths(event)
+	maggots(event)
 
 	alchemy(event)
 
@@ -3718,6 +3719,21 @@ function madMaths(event) {
 			}
 		}
 	}
+}
+
+function maggots(event) {
+	event.custom({
+		"type": "tconstruct:melting",
+		"ingredient": {
+			"item": "alexsmobs:maggot"
+		},
+		"result": {
+			"fluid": "tconstruct:blood",
+			"amount": 10
+		},
+		"temperature": 50,
+		"time": 5
+	})
 }
 
 function alchemy(event) {
