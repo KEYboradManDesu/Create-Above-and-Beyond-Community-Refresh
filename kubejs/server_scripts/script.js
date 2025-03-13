@@ -4211,7 +4211,7 @@ function oil(event) {
 		"energy": 8000
 	})
 	// 移除Create: Diesel Generators的植物油冲突配方
-	event.remove({ id: "createdieselgenerators:plant_oil" });
+	event.remove({ id: "createdieselgenerators:compacting/plant_oil" });
 
 	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
 	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
