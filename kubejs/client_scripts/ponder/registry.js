@@ -1,7 +1,7 @@
 onEvent("ponder.registry", (event) => {
     event.create("kubejs:ponder_laser_lamp")
-		.tag("kubejs:ponder")
-        .scene("alchemy_setup", "混沌炼金","kubejs:laser_alchemy", (scene, util) => {
+        .tag("kubejs:ponder")
+        .scene("alchemy_setup", "{kubejs.ponder.alchemy_setup.header}", "kubejs:laser_alchemy", (scene, util) => {
             scene.showBasePlate()
             scene.idle(20)
 
@@ -17,7 +17,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(15)
 
             scene.overlay.showText(50)
-                .text("从殷钢机器开始")
+                .text("{kubejs.ponder.alchemy_setup.text_1}")
                 .pointAt(util.vector.topOf(2, 1, 3))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
@@ -25,7 +25,7 @@ onEvent("ponder.registry", (event) => {
 
             scene.world.showSection(light, Facing.south)
             scene.overlay.showText(50)
-                .text("安装任何颜色的镭射灯")
+                .text("{kubejs.ponder.alchemy_setup.text_2}")
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
@@ -40,7 +40,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(15)
 
             scene.overlay.showText(40)
-                .text("确保灯已激活")
+                .text("{kubejs.ponder.alchemy_setup.text_3}")
                 .colored(PonderPalette.GREEN)
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .placeNearTarget()
@@ -51,7 +51,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(15)
 
             scene.overlay.showText(60)
-                .text("放置一个以殷钢机器为目标的机械手")
+                .text("{kubejs.ponder.alchemy_setup.text_4}")
                 .pointAt(util.vector.topOf(4, 1, 3))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
@@ -68,7 +68,7 @@ onEvent("ponder.registry", (event) => {
                 ]
             })
             scene.overlay.showText(50)
-                .text("使用扳手将其设置为击打模式")
+                .text("{kubejs.ponder.alchemy_setup.text_5}")
                 .colored(PonderPalette.GREEN)
                 .pointAt(util.vector.topOf(4, 1, 3))
                 .placeNearTarget()
@@ -82,7 +82,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(60)
             scene.overlay.showText(50)
                 .attachKeyFrame()
-                .text("每当机械手激活时...")
+                .text("{kubejs.ponder.alchemy_setup.text_6}")
                 .pointAt(util.vector.topOf(4, 1, 3))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
@@ -106,7 +106,7 @@ onEvent("ponder.registry", (event) => {
             // scene.effects.indicateRedstone(util.grid.at(4, 2, 4))
 
             scene.overlay.showText(50)
-                .text("...镭射灯将发出高能光束")
+                .text("{kubejs.ponder.alchemy_setup.text_7}")
                 .colored(PonderPalette.GREEN)
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .placeNearTarget()
@@ -119,7 +119,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(20)
             scene.overlay.showText(80)
                 .attachKeyFrame()
-                .text("被光束击中的漏斗矿车将处理其包含的物品")
+                .text("{kubejs.ponder.alchemy_setup.text_8}")
                 .pointAt(util.vector.centerOf(2, 1, 0))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()

@@ -1,9 +1,9 @@
 {
   "kubejs.ponder.alchemy_setup.header": "渾沌煉金",
-  "kubejs.ponder.alchemy_setup.text_1": "從不變鋼機器開始",
+  "kubejs.ponder.alchemy_setup.text_1": "從不變鋼機殼開始",
   "kubejs.ponder.alchemy_setup.text_2": "安裝任何顏色的雷射燈",
   "kubejs.ponder.alchemy_setup.text_3": "確保燈已經開啟",
-  "kubejs.ponder.alchemy_setup.text_4": "放置一個以不變鋼機器為目標的機械手",
+  "kubejs.ponder.alchemy_setup.text_4": "放置一個以不變鋼機殼為目標的機械手",
   "kubejs.ponder.alchemy_setup.text_5": "使用扳手將其設定為敲擊模式",
   "kubejs.ponder.alchemy_setup.text_6": "每當機械手敲擊時…",
   "kubejs.ponder.alchemy_setup.text_7": "…雷射燈將發出高能光束",
