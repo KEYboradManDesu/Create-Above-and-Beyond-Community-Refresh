@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "kubejs:block/matter_casing",
+    "front": "kubejs:block/rocket_loading_computer",
+    "side": "kubejs:block/matter_casing"
+  }
+}
