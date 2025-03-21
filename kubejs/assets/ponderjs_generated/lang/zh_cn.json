@@ -7,5 +7,25 @@
   "kubejs.ponder.alchemy_setup.text_5": "使用扳手将其设置为击打模式",
   "kubejs.ponder.alchemy_setup.text_6": "每当机械手激活时...",
   "kubejs.ponder.alchemy_setup.text_7": "...镭射灯将发出高能光束",
-  "kubejs.ponder.alchemy_setup.text_8": "被光束击中的漏斗矿车将处理其包含的物品"
+  "kubejs.ponder.alchemy_setup.text_8": "被光束击中的漏斗矿车将处理其包含的物品",
+
+  "kubejs.ponder.smeltery.header": "冶炼炉",
+  "kubejs.ponder.smeltery.text_1": "§b底部由最大为11x11的\n§b矩形焦黑砖块构成",
+  "kubejs.ponder.smeltery.text_2": "第二层任意方向我们依次放上\n§b燃料储罐\n§b冶炼炉控制器\n§b排液口",
+  "kubejs.ponder.smeltery.text_3": "§b焦黑储罐",
+  "kubejs.ponder.smeltery.text_4": "§b冶炼炉控制器",
+  "kubejs.ponder.smeltery.text_5": "§b焦黑排液口",
+  "kubejs.ponder.smeltery.text_6": "§b剩余的面用焦黑砖块补上\n§b同时将浇筑口也放到排液口前",
+  "kubejs.ponder.smeltery.text_7": "§b此外,我们也可以用砖块继续搭高",
+  "kubejs.ponder.smeltery.text_8": "§c记得给储罐加上燃料哦",
+
+  "kubejs.ponder.scorched.header": "熔铸炉",
+  "kubejs.ponder.scorched.text_1": "§b底部由最大为16x16的\n§b矩形焦褐砖块构成",
+  "kubejs.ponder.scorched.text_2": "第二层任意方向我们依次放上\n§b熔铸炉控制器\n§b燃料储罐\n§b焦褐排液口",
+  "kubejs.ponder.scorched.text_3": "§b熔铸炉控制器",
+  "kubejs.ponder.scorched.text_4": "§b焦褐储罐",
+  "kubejs.ponder.scorched.text_5": "§b焦褐排液口",
+  "kubejs.ponder.scorched.text_6": "§b剩余的面用焦褐砖块补上\n§b同时将浇筑口也放到排液口前",
+  "kubejs.ponder.scorched.text_7": "§b此外,我们也可以用砖块继续搭高",
+  "kubejs.ponder.scorched.text_8": "§c记得给储罐加上燃料哦"
 }
