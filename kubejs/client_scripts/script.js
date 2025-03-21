@@ -1,6 +1,6 @@
 // priority: 0
 
-console.info('Hello, World! (You will see this line every time client resources reload)')
+console.info('Client script load phase...');
 
 onEvent('rei.add.items', event => {
     event.add(Item.of('create:refined_radiance'));
