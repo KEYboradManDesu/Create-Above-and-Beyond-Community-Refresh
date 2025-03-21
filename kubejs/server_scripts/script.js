@@ -748,7 +748,71 @@ function tweaks(event) {
 		"temperature": 790,
 		"time": 40
 	})
+	function striping(input,output){
+		event.custom({
+			"type": "farmersdelight:cutting",
+			"ingredients": [{
+				"item": input
+			}],
+			"tool": {
+				"type": "farmersdelight:tool_action",
+				"action": "axe_strip"
+			},
+			"result": [{
+				"item": output
+			},{
+				"item": "farmersdelight:tree_bark"
+			}],
+			"sound": "minecraft:item.axe.strip"
+		})
+	}
+	striping('tconstruct:bloodshroom_log','tconstruct:stripped_bloodshroom_log')
+	striping('tconstruct:skyroot_log','tconstruct:stripped_skyroot_log')
+	striping('tconstruct:greenheart_log','tconstruct:greenheart_log')
+	striping('forbidden_arcanus:mysterywood_log','forbidden_arcanus:stripped_mysterywood_log')
+	striping('forbidden_arcanus:cherrywood_log','forbidden_arcanus:stripped_cherrywood_log')
+	striping('create_dd:spirit_log','create_dd:stripped_spirit_log')
+	striping('create_dd:smoked_log','create_dd:stripped_smoked_log')
+	striping('biomesoplenty:hellbark_log','biomesoplenty:stripped_hellbark_log')
+	striping('biomesoplenty:umbran_log','biomesoplenty:stripped_umbran_log')
+	striping('biomesoplenty:magic_log','biomesoplenty:stripped_magic_log')
+	striping('biomesoplenty:dead_log','biomesoplenty:stripped_dead_log')
+	striping('biomesoplenty:willow_log','biomesoplenty:stripped_willow_log')
+	striping('biomesoplenty:palm_log','biomesoplenty:stripped_palm_log')
+	striping('biomesoplenty:jacaranda_log','biomesoplenty:stripped_jacaranda_log')
+	striping('biomesoplenty:mahogany_log','biomesoplenty:stripped_mahogany_log')
+	striping('biomesoplenty:cherry_log','biomesoplenty:stripped_cherry_log')
+	striping('biomesoplenty:redwood_log','biomesoplenty:stripped_redwood_log')
+	striping('biomesoplenty:fir_log','biomesoplenty:stripped_fir_log')
+	striping('architects_palette:twisted_log','architects_palette:stripped_twisted_log')
+	striping('create_dd:rose_log','create_dd:stripped_rose_log')
+	striping('tconstruct:bloodshroom_wood','tconstruct:stripped_bloodshroom_wood')
+	striping('tconstruct:skyroot_wood','tconstruct:stripped_skyroot_wood')
+	striping('tconstruct:greenheart_wood','tconstruct:greenheart_wood')
+	striping('forbidden_arcanus:mysterywood_wood','forbidden_arcanus:stripped_mysterywood_wood')
+	striping('forbidden_arcanus:cherrywood_wood','forbidden_arcanus:stripped_cherrywood_wood')
+	striping('create_dd:spirit_wood','create_dd:stripped_spirit_wood')
+	striping('create_dd:smoked_wood','create_dd:stripped_smoked_wood')
+	striping('biomesoplenty:hellbark_wood','biomesoplenty:stripped_hellbark_wood')
+	striping('biomesoplenty:umbran_wood','biomesoplenty:stripped_umbran_wood')
+	striping('biomesoplenty:magic_wood','biomesoplenty:stripped_magic_wood')
+	striping('biomesoplenty:dead_wood','biomesoplenty:stripped_dead_wood')
+	striping('biomesoplenty:willow_wood','biomesoplenty:stripped_willow_wood')
+	striping('biomesoplenty:palm_wood','biomesoplenty:stripped_palm_wood')
+	striping('biomesoplenty:jacaranda_wood','biomesoplenty:stripped_jacaranda_wood')
+	striping('biomesoplenty:mahogany_wood','biomesoplenty:stripped_mahogany_wood')
+	striping('biomesoplenty:cherry_wood','biomesoplenty:stripped_cherry_wood')
+	striping('biomesoplenty:redwood_wood','biomesoplenty:stripped_redwood_wood')
+	striping('biomesoplenty:fir_wood','biomesoplenty:stripped_fir_wood')
+	striping('architects_palette:twisted_wood','architects_palette:stripped_twisted_wood')
+	striping('create_dd:rose_wood','create_dd:stripped_rose_wood')
 }
+
+onEvent('recipes.compostables',event=>{
+	event.add('kubejs:earth_slimy_fern_leaf',0.3)
+	event.add('kubejs:ender_slimy_fern_leaf',0.3)
+	event.add('kubejs:sky_slimy_fern_leaf',0.3)
+})
 
 function waterstrainer(event) {
 	event.remove({ id: 'waterstrainer:string_mesh' })
