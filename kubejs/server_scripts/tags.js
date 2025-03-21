@@ -101,7 +101,7 @@ onEvent('item.tags', event => {
 	event.get('forge:sewing_spool').add(KJ('sewing_spool'))
 
 	//为高贵的石磨献上手磨的美
-	event.get('forge:tools/knives').add('create:millstone')
+	event.get('forge:tools/knives').add('#design_decor:millstones')
 
 	event.get('thermal:crafting/dies').add('#forge:trade_cards')
 	event.get('thermal:crafting/dies').add('#forge:profession_cards')
