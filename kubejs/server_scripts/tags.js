@@ -143,7 +143,7 @@ onEvent('item.tags', event => {
 		.add("culinaryconstruct:food_bowl")
 		.add("patchouli:guide_book")
 		.add("randomium:randomium")
-		.add("portality:generator")
+		// .add("portality:generator")
 		.add("kubejs:ponder_laser_lamp_on")
 		.add("kubejs:ponder_laser_lamp")
 		.add("chiselsandbits:block_bit")
