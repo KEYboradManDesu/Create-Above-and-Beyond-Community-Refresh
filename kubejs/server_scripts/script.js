@@ -63,6 +63,7 @@ onEvent('recipes', event => {
 	alloys(event)
 	chestFix(event)
 	afterMoon(event)
+	regeneration(event)
 
 	algalAndesite(event)
 	andesiteMachine(event)
@@ -476,37 +477,6 @@ function tweaks(event) {
 	knife(FD('diamond_knife'), MC('diamond'))
 	// knife(FD('netherite_knife'), MC('netherite_ingot'))
 
-	// 热力刷石机
-	let bedrock_cobblegen = (adjacent, output) => {
-		event.custom({
-			"type": "thermal:rock_gen",
-			"adjacent": adjacent,
-			"below": "minecraft:bedrock",
-			"result": { "item": output }
-		})
-	}
-
-	let custom_cobblegen = (adjacent, output) => {
-		event.custom({
-			"type": "thermal:rock_gen",
-			"adjacent": adjacent,
-			"result": { "item": output }
-		})
-	}
-
-	custom_cobblegen("create_dd:strawberry_milkshake", "create_dd:crimsite_cobble");//草莓奶昔和岩浆生成绯红岩圆石
-	custom_cobblegen("create_dd:caramel_milkshake", "create_dd:veridium_cobble");//焦糖奶昔和岩浆生成辉绿岩圆石
-	custom_cobblegen("create_dd:cream", "create_dd:asurine_cobble");//奶油和岩浆生成皓蓝圆石
-	custom_cobblegen("create_dd:glowberry_milkshake", "create_dd:ochrum_cobble");//发光浆果奶昔和岩浆生成赭金砂圆石
-	custom_cobblegen("create_dd:vanilla_milkshake", "create_dd:potassic_cobble");//香草奶昔和岩浆生成钾质岩圆石
-
-	bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
-	bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
-	bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
-	bedrock_cobblegen(AP("packed_ice_pillar"), MC("dripstone_block"))
-	bedrock_cobblegen('minecraft:honey_block', CR("limestone"))
-	bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
-
 	// 前期优化游戏体验
 	event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
 	event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron'), TE('lead_plate'))
@@ -852,15 +822,6 @@ function waterstrainer(event) {
 		M: FD('canvas'),
 		S: MC('bamboo')
 	})
-	event.recipes.createMixing([BOP('mud')], [MC('dirt'), Fluid.of(MC("water"), 200)])
-	event.recipes.createMixing([MC('end_stone')], [MC('cobblestone'), Fluid.of(TE("ender"), 50), OC('crushed_end_stone')])
-	event.custom({
-		"type": "thermal:rock_gen",
-		"adjacent": "minecraft:blue_ice",
-		"below": "minecraft:magma_block",
-		"result": { "item": "expcaves:lavastone" }
-	})
-	event.recipes.createMilling([Item.of('biomesoplenty:black_sand')], 'expcaves:lavastone')
 }
 
 function project_red(event) {
@@ -2217,6 +2178,13 @@ function afterMoon(event) {
 		"result": { "item": 'beyond_earth:glacio_stone' }
 	})
 
+	event.custom({ // 金星石
+		"type": "thermal:rock_gen",
+		"adjacent": MC("packed_ice"),
+		"below": "beyond_earth:venus_stone",
+		"result": { "item": 'beyond_earth:venus_stone' }
+	})
+
 	// 外星沙
 	event.recipes.createMilling(["beyond_earth:moon_sand"], "beyond_earth:moon_stone").processingTime(200) // 月沙
 	event.recipes.createMilling(["beyond_earth:mars_sand"], "beyond_earth:mars_stone").processingTime(200) // 火星沙
@@ -2271,6 +2239,75 @@ function afterMoon(event) {
 		},
 		"dimension": "minecraft:the_nether"
 	})
+
+}
+
+function regeneration(event) {
+
+// 热力刷石机
+let bedrock_cobblegen = (adjacent, output) => {
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": adjacent,
+		"below": "minecraft:bedrock",
+		"result": { "item": output }
+	})
+}
+
+let custom_cobblegen = (adjacent, output) => {
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": adjacent,
+		"result": { "item": output }
+	})
+}
+
+custom_cobblegen("create_dd:strawberry_milkshake", "create_dd:crimsite_cobble");//草莓奶昔和岩浆生成绯红岩圆石
+custom_cobblegen("create_dd:caramel_milkshake", "create_dd:veridium_cobble");//焦糖奶昔和岩浆生成辉绿岩圆石
+custom_cobblegen("create_dd:cream", "create_dd:asurine_cobble");//奶油和岩浆生成皓蓝圆石
+custom_cobblegen("create_dd:glowberry_milkshake", "create_dd:ochrum_cobble");//发光浆果奶昔和岩浆生成赭金砂圆石
+custom_cobblegen("create_dd:vanilla_milkshake", "create_dd:potassic_cobble");//香草奶昔和岩浆生成钾质岩圆石
+
+bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
+bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
+bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
+bedrock_cobblegen(AP("packed_ice_pillar"), MC("dripstone_block"))
+bedrock_cobblegen('minecraft:honey_block', CR("limestone"))
+bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
+	
+// 沙子洗涤
+event.recipes.createSplashing([// 白沙
+	Item.of('thermal:quartz_dust').withChance(0.25)
+], 'biomesoplenty:white_sand')
+
+event.recipes.createSplashing([// 橙沙
+	Item.of('thermal:quartz_dust').withChance(0.25),
+	Item.of('minecraft:iron_nugget').withChance(0.125)
+], 'biomesoplenty:orange_sand')
+
+event.recipes.createSplashing([// 黑沙
+	Item.of('thermal:quartz_dust').withChance(0.25),
+	Item.of('vintageimprovements:vanadium_nugget').withChance(0.125)
+], 'biomesoplenty:black_sand')
+
+event.recipes.createMixing(['biomesoplenty:white_sand'], ['thermal:quartz_dust', 'minecraft:sand'])
+event.recipes.createMixing(['biomesoplenty:orange_sand'], ['minecraft:iron_nugget', 'biomesoplenty:white_sand'])
+
+event.recipes.createMixing([BOP('mud')], [MC('dirt'), Fluid.of(MC("water"), 200)])
+
+event.recipes.createMixing([MC('end_stone')], ['#forge:cobblestone', Fluid.of(TC("molten_ender"), 50), OC('crushed_end_stone')])
+event.recipes.createMixing([MC('end_stone')], ['#forge:cobblestone', Fluid.of(TE("ender"), 50), OC('crushed_end_stone')])
+
+event.custom({
+	"type": "thermal:rock_gen",
+	"adjacent": "minecraft:blue_ice",
+	"below": "minecraft:magma_block",
+	"result": { "item": "expcaves:lavastone" }
+})
+
+event.recipes.createMilling([Item.of('biomesoplenty:black_sand')], 'expcaves:lavastone')
+
+event.recipes.createCompacting(['biomesoplenty:brimstone'], ['#forge:cobblestone', TE('sulfur')])
 
 }
 
@@ -4614,7 +4651,7 @@ function rocketScience(event) {
 	event.remove({ id: "beyond_earth:nasa_workbenching/tier4" })
 
 	// 一级火箭
-	/*
+
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
 		'  G  ',
 		' AYA ',
@@ -4633,10 +4670,10 @@ function rocketScience(event) {
 		D: 'beyond_earth:steel_engine',
 		E: '#thermal:glass/hardened',
 		Y: casing
-	})*/
+	})
 
 	// 二级火箭
-	/*
+
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
 		'  G  ',
 		' AYA ',
@@ -4656,10 +4693,10 @@ function rocketScience(event) {
 		E: '#thermal:glass/hardened',
 		Y: casing
 	})
-	*/
+
 
 	// 三级火箭
-	/*
+
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
 		'  G  ',
 		' AYA ',
@@ -4679,10 +4716,10 @@ function rocketScience(event) {
 		E: '#thermal:glass/hardened',
 		Y: casing
 	})
-	*/
+
 
 	// 四级火箭
-	/*
+
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
 		'  G  ',
 		' AYA ',
@@ -4703,82 +4740,82 @@ function rocketScience(event) {
 		E: '#thermal:glass/hardened',
 		Y: casing
 	})
-	*/
-	event.recipes.createSequencedAssembly("kubejs:steel_support", "kubejs:matter_plastics", [
-		event.recipes.createDeploying("kubejs:incomplete_steel_support", ["kubejs:incomplete_steel_support", "create_dd:steel_sheet"]),
-		event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support"),
-		event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support")
-	]).transitionalItem("kubejs:incomplete_steel_support").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:desh_support", "beyond_earth:desh_plate", [
-		event.recipes.createCutting("kubejs:incomplete_desh_support", "kubejs:incomplete_desh_support")
-	]).transitionalItem("kubejs:incomplete_desh_support").loops(2)
+	// event.recipes.createSequencedAssembly("kubejs:steel_support", "kubejs:matter_plastics", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_steel_support", ["kubejs:incomplete_steel_support", "create_dd:steel_sheet"]),
+	// 	event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support"),
+	// 	event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support")
+	// ]).transitionalItem("kubejs:incomplete_steel_support").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:ostrum_support", "beyond_earth:compressed_ostrum", [
-		event.recipes.createCutting("kubejs:incomplete_ostrum_support", "kubejs:incomplete_ostrum_support")
-	]).transitionalItem("kubejs:incomplete_ostrum_support").loops(4)
+	// event.recipes.createSequencedAssembly("kubejs:desh_support", "beyond_earth:desh_plate", [
+	// 	event.recipes.createCutting("kubejs:incomplete_desh_support", "kubejs:incomplete_desh_support")
+	// ]).transitionalItem("kubejs:incomplete_desh_support").loops(2)
 
-	event.recipes.createSequencedAssembly("kubejs:calorite_support", "beyond_earth:compressed_calorite", [
-		event.recipes.createCutting("kubejs:incomplete_calorite_support", "kubejs:incomplete_calorite_support")
-	]).transitionalItem("kubejs:incomplete_calorite_support").loops(4)
+	// event.recipes.createSequencedAssembly("kubejs:ostrum_support", "beyond_earth:compressed_ostrum", [
+	// 	event.recipes.createCutting("kubejs:incomplete_ostrum_support", "kubejs:incomplete_ostrum_support")
+	// ]).transitionalItem("kubejs:incomplete_ostrum_support").loops(4)
 
-	event.recipes.create.itemApplication("kubejs:encased_steel_fuel_tank", ["kubejs:matter_casing", "beyond_earth:steel_tank"])
-	event.recipes.create.itemApplication("kubejs:encased_desh_fuel_tank", ["kubejs:matter_casing", "beyond_earth:desh_tank",])
-	event.recipes.create.itemApplication("kubejs:encased_ostrum_fuel_tank", ["kubejs:matter_casing", "beyond_earth:ostrum_tank"])
-	event.recipes.create.itemApplication("kubejs:encased_calorite_fuel_tank", ["kubejs:matter_casing", "beyond_earth:calorite_tank"])
+	// event.recipes.createSequencedAssembly("kubejs:calorite_support", "beyond_earth:compressed_calorite", [
+	// 	event.recipes.createCutting("kubejs:incomplete_calorite_support", "kubejs:incomplete_calorite_support")
+	// ]).transitionalItem("kubejs:incomplete_calorite_support").loops(4)
 
-	event.recipes.createMechanicalCrafting('kubejs:guide_computer', [
-		'PPPPP',
-		'PMMMP',
-		'GM MG',
-		'PMMMP',
-		'PPCPP'
-	], {
-		P: 'kubejs:matter_plastics',
-		M: 'kubejs:computation_matrix',
-		G: 'thermal:diamond_gear',
-		C: 'ae2:controller'
-	})
+	// event.recipes.create.itemApplication("kubejs:encased_steel_fuel_tank", ["kubejs:matter_casing", "beyond_earth:steel_tank"])
+	// event.recipes.create.itemApplication("kubejs:encased_desh_fuel_tank", ["kubejs:matter_casing", "beyond_earth:desh_tank",])
+	// event.recipes.create.itemApplication("kubejs:encased_ostrum_fuel_tank", ["kubejs:matter_casing", "beyond_earth:ostrum_tank"])
+	// event.recipes.create.itemApplication("kubejs:encased_calorite_fuel_tank", ["kubejs:matter_casing", "beyond_earth:calorite_tank"])
 
-	event.shapeless("kubejs:deployed_disk", ["kubejs:deployed_cell", "ae2:item_cell_housing"])
-	event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer", "ae2:controller", [
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:deployed_disk"]),
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "create_dd:overcharge_alloy_sheet"]),
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:matter_plastics"])
-	]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
+	// event.recipes.createMechanicalCrafting('kubejs:guide_computer', [
+	// 	'PPPPP',
+	// 	'PMMMP',
+	// 	'GM MG',
+	// 	'PMMMP',
+	// 	'PPCPP'
+	// ], {
+	// 	P: 'kubejs:matter_plastics',
+	// 	M: 'kubejs:computation_matrix',
+	// 	G: 'thermal:diamond_gear',
+	// 	C: 'ae2:controller'
+	// })
 
-	MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k", "kubejs:deployed_cell"))
+	// event.shapeless("kubejs:deployed_disk", ["kubejs:deployed_cell", "ae2:item_cell_housing"])
+	// event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer", "ae2:controller", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:deployed_disk"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "create_dd:overcharge_alloy_sheet"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:matter_plastics"])
+	// ]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:encased_steel_engine", "kubejs:matter_casing", [
-		event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "beyond_earth:steel_engine"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "thermal:diamond_gear"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "thermal:diamond_gear"])
-	]).transitionalItem("kubejs:incomplete_encased_steel_engine").loops(1)
+	// MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k", "kubejs:deployed_cell"))
 
-	event.recipes.createSequencedAssembly("kubejs:encased_desh_engine", "kubejs:matter_casing", [
-		event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_engine"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_plate"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_plate"])
-	]).transitionalItem("kubejs:incomplete_encased_desh_engine").loops(1)
+	// event.recipes.createSequencedAssembly("kubejs:encased_steel_engine", "kubejs:matter_casing", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "beyond_earth:steel_engine"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "thermal:diamond_gear"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "thermal:diamond_gear"])
+	// ]).transitionalItem("kubejs:incomplete_encased_steel_engine").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:encased_ostrum_engine", "kubejs:matter_casing", [
-		event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:ostrum_engine"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:compressed_ostrum"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:compressed_ostrum"])
-	]).transitionalItem("kubejs:incomplete_encased_ostrum_engine").loops(1)
+	// event.recipes.createSequencedAssembly("kubejs:encased_desh_engine", "kubejs:matter_casing", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_engine"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_plate"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_desh_engine", ["kubejs:incomplete_encased_desh_engine", "beyond_earth:desh_plate"])
+	// ]).transitionalItem("kubejs:incomplete_encased_desh_engine").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:encased_calorite_engine", "kubejs:matter_casing", [
-		event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:calorite_engine"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:compressed_calorite"]),
-		event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:compressed_calorite"]),
-	]).transitionalItem("kubejs:incomplete_encased_calorite_engine").loops(1)
+	// event.recipes.createSequencedAssembly("kubejs:encased_ostrum_engine", "kubejs:matter_casing", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:ostrum_engine"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:compressed_ostrum"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_ostrum_engine", ["kubejs:incomplete_encased_ostrum_engine", "beyond_earth:compressed_ostrum"])
+	// ]).transitionalItem("kubejs:incomplete_encased_ostrum_engine").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:signal_transmission_antenna", "vintageimprovements:steel_rod", [
-		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "createaddition:gold_wire"]),
-		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "#ae2:glass_cable"]),
-		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:logic_processor"]),
-		event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:fluix_pearl"])
-	]).transitionalItem("kubejs:incomplete_signal_transmission_antenna").loops(1)
+	// event.recipes.createSequencedAssembly("kubejs:encased_calorite_engine", "kubejs:matter_casing", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:calorite_engine"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:compressed_calorite"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_encased_calorite_engine", ["kubejs:incomplete_encased_calorite_engine", "beyond_earth:compressed_calorite"]),
+	// ]).transitionalItem("kubejs:incomplete_encased_calorite_engine").loops(1)
+
+	// event.recipes.createSequencedAssembly("kubejs:signal_transmission_antenna", "vintageimprovements:steel_rod", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "createaddition:gold_wire"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "#ae2:glass_cable"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:logic_processor"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_signal_transmission_antenna", ["kubejs:incomplete_signal_transmission_antenna", "ae2:fluix_pearl"])
+	// ]).transitionalItem("kubejs:incomplete_signal_transmission_antenna").loops(1)
 }
 
 function trading(event) {
