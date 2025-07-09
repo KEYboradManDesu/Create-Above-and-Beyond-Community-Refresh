@@ -1,0 +1,12 @@
+{
+  "structure.integrated_api.advanced_distance_jigsaw_structure": "先进的远距离拼图结构",
+  "structure.integrated_api.advanced_jigsaw_structure": "先进的拼图结构",
+  "structure.integrated_api.end_jigsaw_structure": "末端拼图结构",
+  "structure.integrated_api.generic_structure": "通用结构",
+  "structure.integrated_api.iceandfire_structure": "冰与火结构",
+  "structure.integrated_api.nether_structure": "下界结构",
+  "structure.integrated_api.over_lava_nether_structure": "熔岩之上下界结构",
+  "structure.integrated_api.underground_structure": "地下结构",
+
+  "structure.integrated_stronghold.stronghold": "地牢"
+}

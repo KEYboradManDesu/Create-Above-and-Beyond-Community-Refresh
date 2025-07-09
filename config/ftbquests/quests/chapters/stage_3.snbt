@@ -445,6 +445,12 @@
 					item: "thermal:invar_ingot"
 					random_bonus: 4
 				}
+				{
+					id: "3CBF1D612456D99C"
+					type: "item"
+					item: "buddycardsexp:buddycard_pack_create"
+					count: 2
+				}
 			]
 		}
 		{

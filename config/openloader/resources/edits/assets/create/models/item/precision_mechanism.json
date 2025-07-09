@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create:item/precision_mechanism"
+  },
+	"overrides" :[
+		{"predicate":{"custom_model_data":1},"model":"create:item/enderium_precision_mechanism"}
+	]
+}

@@ -7,6 +7,8 @@ onEvent('item.tooltip', tooltip => {
 
 	tooltip.add("create_dd:rubber_sapling", Text.translate("tooltip.kubejs.rubber_sapling"));
 
+	tooltip.add("beyond_earth:ice_shard", Text.translate("tooltip.kubejs.ice_shard"));
+
 	//tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
 	let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots}`, Text.translate("tooltip.kubejs.slot")])

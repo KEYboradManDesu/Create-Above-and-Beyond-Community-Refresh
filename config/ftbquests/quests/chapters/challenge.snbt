@@ -42,9 +42,9 @@
 		{
 			title: "{quest.challenge.bullet.title}"
 			icon: "cgm:advanced_bullet"
-			x: -1.0d
-			y: 2.0d
-			shape: "square"
+			x: -2.0d
+			y: 0.0d
+			shape: "hexagon"
 			subtitle: "{quest.challenge.bullet.subtitle}"
 			description: ["{quest.challenge.bullet.text1}"]
 			hide_dependency_lines: true
@@ -96,8 +96,9 @@
 		{
 			title: "{quest.challenge.chocolate.title}"
 			icon: "create:bar_of_chocolate"
-			x: 1.0d
-			y: 2.0d
+			x: 2.0d
+			y: 0.0d
+			shape: "hexagon"
 			subtitle: "{quest.challenge.chocolate.subtitle}"
 			description: ["{quest.challenge.chocolate.text1}"]
 			hide_dependency_lines: true
@@ -117,6 +118,37 @@
 					title: "{tip.kubejs.automated}"
 				}
 			]
+		}
+		{
+			title: "{quest.challenge.creative.title}"
+			icon: "kubejs:creative_card"
+			x: 0.0d
+			y: -2.0d
+			shape: "hexagon"
+			subtitle: "{quest.challenge.creative.subtitle}"
+			description: [
+				"{quest.challenge.creative.text1}"
+				""
+				"{quest.challenge.creative.text2}"
+				""
+				"{quest.challenge.creative.text3}"
+			]
+			hide_dependency_lines: true
+			dependencies: ["58E321BA4B90929F"]
+			optional: true
+			id: "657693918A79B7A4"
+			tasks: [{
+				id: "72B3935AB0FABA16"
+				type: "checkmark"
+				title: "好的"
+			}]
+			rewards: [{
+				id: "72C3D07498F7E463"
+				type: "command"
+				title: "{tip.kubejs.creative}"
+				icon: "kubejs:creative_card"
+				command: "/give @p kubejs:creative_card"
+			}]
 		}
 	]
 	quest_links: [ ]

@@ -103,8 +103,12 @@ onEvent('item.tags', event => {
 	//为高贵的石磨献上手磨的美
 	event.get('forge:tools/knives').add('#design_decor:millstones')
 
-	event.get('thermal:crafting/dies').add('#forge:trade_cards')
-	event.get('thermal:crafting/dies').add('#forge:profession_cards')
+	event.get('thermal:crafting/dies')
+		.add('#forge:trade_cards')
+		.add('#forge:profession_cards')
+	    .add('kubejs:ae2_supply_card')
+		.add('kubejs:creative_card')
+
 	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(F("#circuit_press"))
 
 	event.get('create:upright_on_belt')
@@ -237,5 +241,16 @@ onEvent('block.tags', event => {
 onEvent('fluid.tags', event => {
 
 	event.get('forge:crude_oil').add('beyond_earth:oil')
+
+})
+
+onEvent('entity.tags', event => {
+
+	event.get('forbidden_arcanus:quantum_catcher_blacklisted')
+		.add('alexsmobs:centipede_tail')
+		.add('alexsmobs:centipede_body')
+		.add('alexsmobs:centipede_head')
+		.add('alexsmobs:cachalot_whale')
+		.add('alexsmobs:giant_squid')
 
 })

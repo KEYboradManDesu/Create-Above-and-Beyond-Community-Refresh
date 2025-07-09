@@ -101,6 +101,12 @@
 					count: 6
 					random_bonus: 12
 				}
+				{
+					id: "6865BCC1D30BBFC2"
+					type: "item"
+					item: "buddycardsexp:buddycard_pack_create"
+					count: 2
+				}
 			]
 		}
 		{
@@ -788,6 +794,7 @@
 			subtitle: "{quest.stage_4.silicon_4a.subtitle}"
 			description: ["{quest.stage_4.silicon_4a.text1}"]
 			dependencies: ["4921355FCFE7DF2A"]
+			hide: true
 			id: "354DB8B136C6B310"
 			tasks: [
 				{

@@ -1,0 +1,19 @@
+{
+    "structure.repurposed_structures.advanced_jigsaw_structure": "先进拼图结构",
+    "structure.repurposed_structures.buriable_structure": "掩埋结构",
+    "structure.repurposed_structures.city_nether_structure": "下界城结构",
+    "structure.repurposed_structures.generic_jigsaw_structure": "通用拼图结构",
+    "structure.repurposed_structures.generic_nether_jigsaw_structure": "通用下界拼图结构",
+    "structure.repurposed_structures.generic_underground_jigsaw_structure": "通用地下拼图结构",
+    "structure.repurposed_structures.land_based_end_structure": "陆基末端结构",
+    "structure.repurposed_structures.mansion_structure": "大厦结构",
+    "structure.repurposed_structures.mineshaft_end": "矿区末端",
+    "structure.repurposed_structures.mineshaft_generic": "通用矿区",
+    "structure.repurposed_structures.mineshaft_nether_generic": "通用下界矿区",
+    "structure.repurposed_structures.monument_generic": "通用山区",
+    "structure.repurposed_structures.monument_nether": "下界山区",
+    "structure.repurposed_structures.shipwreck_end_structure": "沉船末端结构",
+    "structure.repurposed_structures.shipwreck_nether_structure": "下界沉船结构",
+    "structure.repurposed_structures.stronghold_end": "地牢末端",
+    "structure.repurposed_structures.stronghold_nether": "下界地牢"
+}

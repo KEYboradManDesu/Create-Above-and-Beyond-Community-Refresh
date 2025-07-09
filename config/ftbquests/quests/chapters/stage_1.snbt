@@ -464,6 +464,104 @@
 					item: "minecraft:iron_ingot"
 					random_bonus: 4
 				}
+				{
+					id: "62087A9A8ECD34A2"
+					type: "item"
+					item: "buddycardsexp:buddycard_pack_create"
+					count: 4
+				}
+				{
+					id: "7664ABA57525E721"
+					type: "item"
+					item: {
+						id: "metalbarrels:copper_barrel"
+						Count: 1b
+						tag: {
+							BlockEntityTag: {
+								inv: {
+									Size: 45
+									Items: [
+										{
+											Slot: 1
+											id: "create:brass_tunnel"
+											Count: 1b
+										}
+										{
+											Slot: 2
+											id: "create:fluid_pipe"
+											Count: 2b
+										}
+										{
+											Slot: 4
+											id: "create:gearbox"
+											Count: 3b
+										}
+										{
+											Slot: 7
+											id: "create:rose_quartz"
+											Count: 2b
+										}
+										{
+											Slot: 12
+											id: "create:brass_funnel"
+											Count: 1b
+										}
+										{
+											Slot: 15
+											id: "create:mechanical_pump"
+											Count: 1b
+										}
+										{
+											Slot: 19
+											id: "create:gearbox"
+											Count: 2b
+										}
+										{
+											Slot: 22
+											id: "create:brass_funnel"
+											Count: 1b
+										}
+										{
+											Slot: 24
+											id: "create:gearbox"
+											Count: 2b
+										}
+										{
+											Slot: 25
+											id: "create:brass_tunnel"
+											Count: 1b
+										}
+										{
+											Slot: 28
+											id: "create:fluid_pipe"
+											Count: 1b
+										}
+										{
+											Slot: 32
+											id: "create:fluid_pipe"
+											Count: 1b
+										}
+										{
+											Slot: 39
+											id: "create:rose_quartz"
+											Count: 2b
+										}
+										{
+											Slot: 44
+											id: "create:brown_toolbox"
+											Count: 1b
+										}
+									]
+								}
+								ForgeCaps: { }
+								id: "metalbarrels:copper_tile"
+							}
+							display: {
+								Lore: ["\"(+NBT)\""]
+							}
+						}
+					}
+				}
 			]
 		}
 		{

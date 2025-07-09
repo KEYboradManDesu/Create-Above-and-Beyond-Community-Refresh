@@ -26,6 +26,7 @@
 			"{quest.thanks.list.text1}"
 			"{quest.thanks.list.text2}"
 			"{quest.thanks.list.text3}"
+			"{quest.thanks.list.text4}"
 		]
 		dependencies: ["7494ABC1DCFC7F69"]
 		hide: true

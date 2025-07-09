@@ -64,6 +64,7 @@ onEvent('recipes', event => {
 	chestFix(event)
 	afterMoon(event)
 	regeneration(event)
+	beer(event)
 
 	algalAndesite(event)
 	andesiteMachine(event)
@@ -93,6 +94,10 @@ onEvent('recipes', event => {
 	alchemy(event)
 
 	trading(event)
+
+	ae2_supply(event)
+
+	creative_items(event)
 
 	oil(event)
 	rocketScience(event)
@@ -298,6 +303,8 @@ function unwantedRecipes(event) {
 	event.remove({ id: 'wormhole:advanced_target_cell' })
 	event.remove({ id: 'wormhole:basic_target_cell' })
 	event.remove({ id: 'wormhole:portal_stabilizer' })
+
+	event.remove({ output: 'exchangers:bee_exchanger' })
 }
 
 function tweaks(event) {
@@ -479,6 +486,13 @@ function tweaks(event) {
 
 	// 前期优化游戏体验
 	event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
+	event.shaped(Item.of('create_connected:item_silo', 2), [ // 纵向保险库
+		'SPS',
+	], {
+		P: 'create_dd:overburden_casing',
+		S: CR("iron_sheet")
+	})
+	
 	event.replaceInput({ id: CRC("crafting/kinetics/item_silo") }, F('#plates/iron'), TE('lead_plate'))
 
 	// 手部零件
@@ -1682,7 +1696,7 @@ function firearm(event) {
 
 
 	// 手榴弹
-	let g = 'minecraft:glass_bottle'
+	let g = 'kubejs:incomplete_grenade'
 	event.recipes.createSequencedAssembly([
 		Item.of('cgm:grenade', 2),
 	], 'minecraft:glass_bottle', [
@@ -1694,7 +1708,7 @@ function firearm(event) {
 
 
 	// 闪光弹
-	let g1 = 'minecraft:glass_bottle'
+	let g1 = 'kubejs:incomplete_stun_grenade'
 	event.recipes.createSequencedAssembly([
 		Item.of('cgm:stun_grenade', 2),
 	], 'minecraft:glass_bottle', [
@@ -1704,7 +1718,7 @@ function firearm(event) {
 		.loops(1)
 		.id('kubejs:stun_grenade')
 
-	let g2 = 'minecraft:glass_bottle'
+	let g2 = 'kubejs:incomplete_stun_grenade'
 	event.recipes.createSequencedAssembly([
 		Item.of('cgm:stun_grenade', 2),
 	], 'minecraft:glass_bottle', [
@@ -2311,6 +2325,565 @@ event.recipes.createCompacting(['biomesoplenty:brimstone'], ['#forge:cobblestone
 
 }
 
+function beer(event) {
+
+// 矿工麦酒
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 3000,
+  "results": [
+    {
+      "fluid": "drinkbeer:miner_pale_ale",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 2800,
+  "results": [
+    {
+      "fluid": "drinkbeer:miner_pale_ale",
+      "amount": 1000
+    }
+  ]
+})
+
+// 烈焰黑啤
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:blaze_stout",
+      "amount": 1000
+    }
+  ],
+  "heatRequirement": "heated"
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 5400,
+  "results": [
+    {
+      "fluid": "drinkbeer:blaze_stout",
+      "amount": 1000
+    }
+  ],
+  "heatRequirement": "heated"
+})
+
+// 烈焰牛奶黑啤
+event.remove({ id: 'drinkbeer:beer_mug_blaze_milk_stout' })
+event.custom({
+  "type": "drinkbeer:brewing",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:wheat"
+      },
+      {
+        "tag": "forge:crops/wheat"
+      }
+    ],
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "fluid": {
+    "name": "minecraft:milk",
+    "amount": 1000
+  },
+
+  "brewing_time": 18000,
+  "result": {
+    "name": "drinkbeer:blaze_milk_stout",
+    "amount": 1000
+  }
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "fluid": "minecraft:milk",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 9000,
+  "results": [
+    {
+      "fluid": "drinkbeer:blaze_milk_stout",
+      "amount": 1000
+    }
+  ],
+  "heatRequirement": "heated"
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "fluid": "minecraft:milk",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 8000,
+  "results": [
+    {
+      "fluid": "drinkbeer:blaze_milk_stout",
+      "amount": 1000
+    }
+  ],
+  "heatRequirement": "heated"
+})
+
+// 苹果拉比克
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:apple"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:apple_lambic",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:apple"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 5400,
+  "results": [
+    {
+      "fluid": "drinkbeer:apple_lambic",
+      "amount": 1000
+    }
+  ]
+})
+
+// 甜浆果克里克
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:sweet_berry_kriek",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 5400,
+  "results": [
+    {
+      "fluid": "drinkbeer:sweet_berry_kriek",
+      "amount": 1000
+    }
+  ]
+})
+
+// 哈儿的冰镇淡啤酒
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:ice"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 4000,
+  "results": [
+    {
+      "fluid": "drinkbeer:haars_icy_pale_lager",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:ice"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 3500,
+  "results": [
+    {
+      "fluid": "drinkbeer:haars_icy_pale_lager",
+      "amount": 1000
+    }
+  ]
+})
+
+// 南瓜格瓦斯
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+	{
+      "item": "minecraft:bread"
+    },
+	{
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:pumpkin_kvass",
+      "amount": 1000
+    }
+  ]
+})
+
+// 月夜狼嚎格瓦斯
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+	{
+      "item": "minecraft:bread"
+    },
+	{
+      "item": "minecraft:bone"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:night_howl_kvass",
+      "amount": 1000
+    }
+  ]
+})
+
+// 泡沫粉红蛋奶酒
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:beetroot"
+    },
+	{
+      "tag": "forge:eggs"
+    },
+    {
+      "fluid": "minecraft:milk",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 6000,
+  "results": [
+    {
+      "fluid": "drinkbeer:frothy_pink_egg_nog",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:beetroot"
+    },
+	{
+      "tag": "forge:eggs"
+    },
+    {
+      "fluid": "minecraft:milk",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 5800,
+  "results": [
+    {
+      "fluid": "drinkbeer:frothy_pink_egg_nog",
+      "amount": 1000
+    }
+  ]
+})
+
+// 凋零黑啤
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:nether_wart"
+    },
+	{
+      "item": "minecraft:wither_rose"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 12000,
+  "results": [
+    {
+      "fluid": "drinkbeer:wither_stout",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:nether_wart"
+    },
+	{
+      "item": "minecraft:wither_rose"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 10000,
+  "results": [
+    {
+      "fluid": "drinkbeer:wither_stout",
+      "amount": 1000
+    }
+  ]
+})
+
+// 苏打矿泉水
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "minecraft:coal"
+    },
+	{
+      "item": "minecraft:coal"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 1200,
+  "results": [
+    {
+      "fluid": "drinkbeer:seltzer",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "minecraft:coal"
+    },
+	{
+      "item": "minecraft:coal"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 1100,
+  "results": [
+    {
+      "fluid": "drinkbeer:seltzer",
+      "amount": 1000
+    }
+  ]
+})
+}
+
 function algalAndesite(event) {
 	event.remove({ id: TC('compat/create/andesite_alloy_iron') })
 	event.remove({ id: CR('crafting/materials/andesite_alloy') })
@@ -2892,6 +3465,32 @@ function brassMachine(event) {
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:precision_mechanism')
+
+	let t1 = CR('incomplete_precision_mechanism')
+	event.recipes.createSequencedAssembly([
+		Item.of(CR("precision_mechanism")).withChance(0.45),
+		Item.of(KJ("broken_precision_mechanism")).withChance(0.55),
+	], CR('golden_sheet'), [
+		event.recipes.createDeploying(t1, [t1, CR('electron_tube')]),
+		event.recipes.createDeploying(t1, [t1, F('#screwdrivers')])
+	]).transitionalItem(t1)
+		.loops(2)
+		.id('kubejs:precision_mechanism1')
+
+	// 双倍
+	let t2 = CR('incomplete_precision_mechanism')
+	event.recipes.createSequencedAssembly([
+		Item.of('create:precision_mechanism', '{CustomModelData:1}'),
+	], KJ('kinetic_mechanism'), [
+		event.recipes.createDeploying(t2, [t2, ('createutilities:graviton_tube')]),
+		event.recipes.createDeploying(t2, [t2, F('#screwdrivers')])
+	]).transitionalItem(t2)
+		.loops(1)
+		.id('kubejs:precision_mechanism2')
+
+	event.recipes.createMilling(["2x create:electron_tube"], KJ("broken_precision_mechanism")).processingTime(300)
+	event.recipes.thermal.smelter("2x create:electron_tube", ["kubejs:broken_precision_mechanism"]).energy(500)
+
 
 	event.shaped(KJ('brass_machine'), [
 		'SSS',
@@ -3498,7 +4097,7 @@ function enderMachine(event) {
 	event.remove({ id: "createutilities:shaped/void_motor" })
 	event.remove({ id: "createutilities:shaped/graviton_tube" })
 
-	event.recipes.thermal.smelter("createutilities:graviton_tube", ["createutilities:polished_amethyst", [TE("enderium_ingot"), TE("enderium_plate")]]).energy(2000)
+	event.recipes.thermal.smelter("createutilities:graviton_tube", [["createutilities:polished_amethyst", "phantasm:void_crystal_spike_tip", "phantasm:crystal_spike_tip"], [TE("enderium_ingot"), TE("enderium_plate")]]).energy(2000)
 	event.recipes.thermal.smelter("createutilities:void_motor", [KJ("enderium_machine"), ["create_dd:accelerator_motor", "create_dd:kinetic_motor"], "createutilities:graviton_tube"]).energy(4000)
 
 	event.stonecutting(Item.of('createutilities:void_chest'), 'enderstorage:ender_chest')
@@ -3940,6 +4539,7 @@ function alchemy(event) {
 
 	event.recipes.thermal.numismatic_fuel(TE('silver_coin')).energy(100000)
 	event.recipes.thermal.numismatic_fuel(TE('gold_coin')).energy(6400000)
+	event.recipes.thermal.numismatic_fuel('beyond_earth:ice_shard').energy(2000000)
 
 	event.remove({ id: TE("machine/pyrolyzer/pyrolyzer_logs") })
 	event.remove({ id: CR("crushing/obsidian") })
@@ -4861,6 +5461,339 @@ function trading(event) {
 
 }
 
+function ae2_supply(event) {
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create:andesite_casing'),
+				Ingredient.of('kubejs:ae2_supply_card'),
+			],
+			result: [
+				Item.of('kubejs:matter_casing', 64)
+			],
+			energy: 1000
+})
+
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('kubejs:andesite_machine'),
+				Ingredient.of('kubejs:ae2_supply_card'),
+			],
+			result: [
+				Item.of('ae2:controller')
+			],
+			energy: 1000
+})
+
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('ae2:printed_calculation_processor'),
+				Ingredient.of('kubejs:ae2_supply_card'),
+			],
+			result: [
+				Item.of('ae2:calculation_processor')
+			],
+			energy: 1000
+})
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('ae2:printed_logic_processor'),
+				Ingredient.of('kubejs:ae2_supply_card'),
+			],
+			result: [
+				Item.of('ae2:logic_processor')
+			],
+			energy: 1000
+})
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('ae2:printed_engineering_processor'),
+				Ingredient.of('kubejs:ae2_supply_card'),
+			],
+			result: [
+				Item.of('ae2:engineering_processor')
+			],
+			energy: 1000
+})
+}
+
+function creative_items(event) {
+
+// 创造流体储罐
+switchCraft(event, "create:creative_fluid_tank","create_connected:creative_fluid_vessel")
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create:fluid_tank'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('create:creative_fluid_tank')
+			],
+			energy: 100000000
+})
+
+// 创造弹药箱
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('createbigcannons:autocannon_ammo_container'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('createbigcannons:creative_autocannon_ammo_container')
+			],
+			energy: 500000
+})
+
+// 创造板条箱
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('#forge:chests/wooden'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('create:creative_crate')
+			],
+			energy: 100000000
+})
+
+// 创造马达
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create_dd:accelerator_motor'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('create:creative_motor')
+			],
+			energy: 100000000
+})
+
+// 创造发电机
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('#thermal:dynamos'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('createaddition:creative_energy')
+			],
+			energy: 500000000
+})
+
+// 创造机壳
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create:andesite_casing'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('kubejs:creative_casing', 32)
+			],
+			energy: 500000
+})
+
+// 创造万用管道
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				[Ingredient.of('prettypipes:pipe'),Ingredient.of('create:fluid_pipe'),Ingredient.of('pipez:energy_pipe'),Ingredient.of('pipez:item_pipe'),],
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('pipez:universal_pipe', 32)
+			],
+			energy: 500000
+})
+
+// 创造抽屉升级
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('storagedrawers:upgrade_template'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('storagedrawers:creative_vending_upgrade')
+			],
+			energy: 100000000
+})
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('storagedrawers:obsidian_storage_upgrade'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('storagedrawers:creative_storage_upgrade')
+			],
+			energy: 100000000
+})
+
+// 创造管道升级
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create_dd:integrated_circuit'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('pipez:infinity_upgrade')
+			],
+			energy: 500000
+})
+
+//// 热力膨胀升级
+// 创造通量升级
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('thermal:rf_coil_augment'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('thermal:rf_coil_creative_augment')
+			],
+			energy: 100000000
+})
+// 创造储罐升级
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('thermal:fluid_tank_augment'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('thermal:fluid_tank_creative_augment')
+			],
+			energy: 100000000
+})
+// 创造通量提效
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('thermal:machine_efficiency_augment'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('thermal:machine_efficiency_creative_augment')
+			],
+			energy: 100000000
+})
+// 创造回收室
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('thermal:machine_catalyst_augment'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('thermal:machine_catalyst_creative_augment')
+			],
+			energy: 100000000
+})
+
+//// 创造储存盘
+// 物品
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('ae2:item_cell_housing'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('ae2:creative_item_cell')
+			],
+			energy: 100000000
+})
+// 流体
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('ae2:fluid_cell_housing'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('ae2:creative_fluid_cell')
+			],
+			energy: 100000000
+})
+
+// 创造卡套
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('buddycards:grading_sleeve'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('buddycards:creative_grading_sleeve')
+			],
+			energy: 500000
+})
+
+//// 匠魂创造升级
+// 升级槽
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('minecraft:iron_ingot'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('tconstruct:creative_slot', '{slot:"upgrades"}')
+			],
+			energy: 100000000
+})
+// 防御槽
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('minecraft:copper_ingot'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('tconstruct:creative_slot', '{slot:"defense"}')
+			],
+			energy: 100000000
+})
+// 灵魂槽
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('minecraft:gold_ingot'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('tconstruct:creative_slot', '{slot:"souls"}')
+			],
+			energy: 100000000
+})
+// 能力槽
+event.custom({
+			type: 'thermal:press',
+			ingredients: [
+				Ingredient.of('create:zinc_ingot'),
+				Ingredient.of('kubejs:creative_card'),
+			],
+			result: [
+				Item.of('tconstruct:creative_slot', '{slot:"abilities"}')
+			],
+			energy: 100000000
+})
+
+
+}
+
 function unify(event) {
 
 	event.remove({ input: "darkerdepths:aridrock_gold_ore" });
@@ -5121,6 +6054,18 @@ function unify(event) {
 	replaceIO("create_dd:calculation_mechanism", "kubejs:calculation_mechanism");
 
 	//
+
+	// 额外的矿石合成
+	event.stonecutting(Item.of('tconstruct:cobalt_ore'), Item.of('tconstruct:raw_cobalt'))
+	event.stonecutting(Item.of('beyond_earth:moon_iron_ore'), Item.of('minecraft:raw_iron'))
+	event.stonecutting(Item.of('beyond_earth:mercury_iron_ore'), Item.of('minecraft:raw_iron'))
+	event.stonecutting(Item.of('beyond_earth:mars_iron_ore'), Item.of('minecraft:raw_iron'))
+	event.stonecutting(Item.of('beyond_earth:glacio_iron_ore'), Item.of('minecraft:raw_iron'))
+	event.stonecutting(Item.of('beyond_earth:venus_gold_ore'), Item.of('minecraft:raw_gold'))
+	event.stonecutting(Item.of('beyond_earth:glacio_copper_ore'), Item.of('minecraft:raw_copper'))
+	event.stonecutting(Item.of('beyond_earth:moon_desh_ore'), Item.of('beyond_earth:raw_desh'))
+	event.stonecutting(Item.of('beyond_earth:mars_ostrum_ore'), Item.of('beyond_earth:raw_ostrum'))
+	event.stonecutting(Item.of('beyond_earth:venus_calorite_ore'), Item.of('beyond_earth:raw_calorite'))
 
 	event.replaceInput({ id: "create:milling/lapis_lazuli" }, MC("lapis_lazuli"), TE("lapis_dust"))
 
@@ -5691,7 +6636,7 @@ function unify(event) {
 	unifyAllTheMetal(
 		"nickel",
 		"thermal:nickel_ore",
-		"thermal:deepslate_lead_ore",
+		"thermal:deepslate_nickel_ore",
 		"thermal:raw_nickel",
 		"thermal:raw_nickel_block",
 		"thermal:nickel_block",
@@ -5866,7 +6811,7 @@ function unify(event) {
 
 	unifyAllTheMetal(
 		"cobalt",
-		"tconstruct:cobalt_ore",
+		"",
 		"",
 		"tconstruct:raw_cobalt",
 		"tconstruct:raw_cobalt_block",
@@ -6155,6 +7100,8 @@ const processing = (obj, event) => {
 
 	Crusheds(obj.name, obj.crushed, obj.gem, obj.ore, obj.deepslateOre, obj.rawOre, obj.rawOreBlock, event);
 
+	Raws(obj.name, obj.ore, obj.deepslateOre, obj.rawOre, event);
+
 	Dusts(obj.name, obj.crushed, obj.gem, obj.ingot, obj.dust, event);
 
 	Blocks(obj.name, obj.block, obj.fluid, obj.gem, event);
@@ -6436,7 +7383,7 @@ const FiuldDust = (name, dust, gem, ingot, fluid, fluid_byproduct, event) => {
 				"fluid": fluid,
 				"amount": gem ? 100 : 90
 			},
-			"temperature": 500,
+			"temperature": 1000,
 			"time": 30
 		});
 
@@ -6829,6 +7776,19 @@ const Crusheds = (name, crushed, gem, ore, deepslateOre, rawOre, rawOreBlock, ev
 	}
 };
 
+// 原矿
+const Raws = (name, ore, deepslateOre, rawOre, event) => {
+	if (rawOre === "") return;
+
+	if (ore) {
+		event.stonecutting(Item.of(ore), Item.of(rawOre))
+	}
+
+	if (deepslateOre) {
+		event.stonecutting(Item.of(deepslateOre), Item.of(rawOre))
+	}
+};
+
 // 粉
 
 const Dusts = (name, crushed, gem, ingot, dust, event) => {
@@ -7022,8 +7982,7 @@ const nuggets = (name, nugget, crushed, dust, byproduct, event) => {
 
 		event.recipes.createSplashing([Item.of(nugget, 2)], dust)
 
-		event.smelting(Item.of(nugget, 1), dust).cookingTime(40)
-		event.blasting(Item.of(nugget, 2), dust).cookingTime(40)
+		event.smelting(Item.of(nugget, 2), dust).cookingTime(40)
 	}
 };
 

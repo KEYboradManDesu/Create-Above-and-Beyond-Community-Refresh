@@ -507,6 +507,12 @@
 					item: "create:brass_ingot"
 					random_bonus: 4
 				}
+				{
+					id: "58FD91E5AF10BE0A"
+					type: "item"
+					item: "buddycardsexp:buddycard_pack_create"
+					count: 2
+				}
 			]
 		}
 		{

@@ -484,6 +484,39 @@
 				title: "{tip.kubejs.unlock_stage_4a}"
 			}]
 		}
+		{
+			title: "{quest.overview.supply.title}"
+			icon: "ae2:smooth_sky_stone_chest"
+			x: -16.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "{quest.overview.supply.subtitle}"
+			description: [
+				"{quest.overview.supply.text1}"
+				""
+				"{quest.overview.supply.text2}"
+				""
+				"{quest.overview.supply.text3}"
+			]
+			dependencies: ["75FB28B253B14876"]
+			optional: true
+			id: "6D427507B53F82D3"
+			tasks: [{
+				id: "11191EA376B0ED9B"
+				type: "checkmark"
+				title: "好的"
+			}]
+			rewards: [{
+				id: "7B9C6E6B05FFAD22"
+				type: "command"
+				title: "{tip.kubejs.supply}"
+				icon: "kubejs:ae2_supply_card"
+				team_reward: true
+				auto: "disabled"
+				command: "/give @p kubejs:ae2_supply_card"
+				player_command: true
+			}]
+		}
 	]
 	quest_links: [ ]
 }

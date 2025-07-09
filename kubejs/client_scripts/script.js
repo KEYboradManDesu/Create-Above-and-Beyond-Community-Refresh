@@ -106,4 +106,6 @@ onEvent('rei.add.items', event => {
     event.hide(`waterstrainer:strainer_survivalist_solid`)
     event.hide(`waterstrainer:strainer_survivalist_reinforced`)
     event.hide(`waterstrainer:strainer_fisherman_solid`)
+    event.hide(`exchangers:bee_exchanger`)
+    event.hide(`beyond_earth:nasa_workbench`)
   })

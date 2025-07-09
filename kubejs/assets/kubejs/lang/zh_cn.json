@@ -42,6 +42,7 @@
 
 "item.kubejs.kinetic_mechanism":"动力构件",
 "item.kubejs.sealed_mechanism":"密封构件",
+"item.kubejs.broken_precision_mechanism":"精密构件（已损毁）",
 "item.kubejs.sturdy_mechanism":"坚实构件",
 "item.kubejs.infernal_mechanism":"酷热构件",
 "item.kubejs.inductive_mechanism":"感应构件",
@@ -104,6 +105,8 @@
 "item.kubejs.bronze_hand":"青铜手部零件",
 "item.kubejs.aethersite_alloy":"以太合金",
 "item.kubejs.polar_algal_blend":"极地海藻混合物",
+"item.kubejs.ae2_supply_card":"AE2补给卡",
+"item.kubejs.creative_card":"§d创造物品卡§r",
 
 "item.kubejs.crushed_raw_cobalt":"粉碎钴矿石",
 "item.kubejs.crushed_desh_ore":"粉碎戴斯矿石",
@@ -125,6 +128,8 @@
 "item.kubejs.incomplete_complex_bullet":"复合弹药（未完成）",
 "item.kubejs.incomplete_shell":"霰弹（未完成）",
 "item.kubejs.unarmed_missile":"导弹（待组装）",
+"item.kubejs.incomplete_grenade":"手榴弹（未完成）",
+"item.kubejs.incomplete_stun_grenade":"闪光弹（未完成）",
 
 "block.kubejs.ponder_laser_lamp":"镭射灯",
 "block.kubejs.ponder_laser_lamp_on":"镭射灯",
@@ -867,6 +872,12 @@
 "quest.overview.introduce.title":"&a&l一切都要从那棵树说起...",
 "quest.overview.introduce.subtitle":"砍伐一棵树",
 "quest.overview.introduce.text1":"&a欢迎来到纵览。&r你可以随时在这里查看团队的科技树发展进度并解锁全新任务。如你所见，我会一直指引着你们直到你们离开这里走向更远——你们对大陆的探索将会在那时告一段落，但等着你们的远不止这些。旅途开始了！&a向着Minecraft科技时代的绝巘之峰勇敢地攀登吧！&r",
+
+"quest.overview.supply.title":"&f&l被遗忘的箱子",
+"quest.overview.supply.subtitle":"前人的遗物",
+"quest.overview.supply.text1":"你在探险时发现了一座废弃工厂，工厂早已被岁月侵蚀，昏暗的灯光下，灰尘在空气中缓缓浮动。",
+"quest.overview.supply.text2":"穿过堆积如山的破旧机械，你的脚步在寂静中格外清晰。突然，角落里一个漆黑的石制箱子引起了你的注意。它半掩在油布下，锁扣已经被撬开，仿佛有人匆忙翻动过。箱体上模糊的标签依稀能辨认出“&6&l智能计算机&r”的字样，但具体内容已被涂黑。",
+"tip.kubejs.supply":"获得AE2初始物资补给卡[需要开启作弊]",
 
 "quest.overview.basic_machines.title":"&f&l准备得当",
 "quest.overview.basic_machines.subtitle":"没有这些你可上不了路",
@@ -1679,11 +1690,11 @@
 
 "quest.stage_5.space_suit.title":"宇航服",
 "quest.stage_5.space_suit.subtitle":"步骤 47-1",
-"quest.stage_5.space_suit.text1":"如果你想在落地之后活下来，一套特殊的宇航服是必要的。如果你有多余的下界合金，你可以考虑给宇航服加固下。",
+"quest.stage_5.space_suit.text1":"如果你想在外太空幸存下来，一套特殊的宇航服是必要的。如果你有多余的下界合金，你可以考虑给宇航服加固成下界合金版本。",
 
 "quest.stage_5.oxygen_distributor.title":"记得呼吸",
 "quest.stage_5.oxygen_distributor.subtitle":"步骤 47-2",
-"quest.stage_5.oxygen_distributor.text1":"为了让你在太空中有喘息之地，一个空间站是必要的。",
+"quest.stage_5.oxygen_distributor.text1":"假如你要搭建外星基地，氧气气泡分解器是必要的。为它充能并供应氧气，它就能为周围提供氧气。",
 
 "quest.stage_5.oxygen_loader.title":"电解",
 "quest.stage_5.oxygen_loader.subtitle":"步骤 48",
@@ -1706,13 +1717,14 @@
 "tip.kubejs.rocket":"制作 一阶火箭",
 
 "quest.stage_5.finish.title":"&f&l第六章完成！&r",
-"quest.stage_5.finish.text1":"当一切就绪、计算矩阵编程完毕时，你可以开始组装导航电脑了，然后给你的飞船装上了。",
+"quest.stage_5.finish.text1":"当一切就绪、计算矩阵编程完毕时，你可以准备开始发射火箭了，手持火箭右键发射平台将火箭放置在发射平台上，Shift+右键火箭打开火箭燃料Gui，将燃油桶放入以为火箭填装燃油。",
 "quest.stage_5.finish.text2":"花一点时间合成一个旗帜，代表你去月球的太空计划。这面旗帜就上的图案可以像原版一样自己更改。",
-"quest.stage_5.finish.text3":"找一个好时候，坐在已经组装好的飞船上，然后按下空格键。",
+"quest.stage_5.finish.text3":"找一个好时候，坐在飞船上，然后按下空格键。",
 
 "tooltip.kubejs.sink":"§a小时候家里的水槽忘了关，现在村里成亚特兰蒂斯了",
 "tooltip.kubejs.redstone_ore":"§6原版红石矿石已被朱砂矿石替代",
 "tooltip.kubejs.rubber_sapling":"§6该品种树苗提供双倍树脂产量",
+"tooltip.kubejs.ice_shard":"§6高纯固态氦-3，掌中驱动百年文明，无染的强大能源",
 "tooltip.kubejs.main_mechanism":"§8思考一下如何自动化制作此物品",
 "tooltip.kubejs.stage_1":"§7主目标: §6章节 1",
 "tooltip.kubejs.stage_1a":"§7附加目标: §6章节 1A",
