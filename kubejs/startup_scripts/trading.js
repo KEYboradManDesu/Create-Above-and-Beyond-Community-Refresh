@@ -38,6 +38,7 @@ let CRCO = (id, x) => MOD("create_confectionery", id, x)
 let TCO = (id, x) => MOD("tools_complement", id, x)
 let CGM = (id, x) => MOD("cgm", id, x)
 let CRB = (id, x) => MOD("createbigcannons", id, x)
+let BR = (id, x) => MOD("drinkbeer", id, x)
 //
 
 
@@ -271,7 +272,17 @@ onEvent('item.registry', event => {
 		{ in: CRCO('gingerbread_man', 16), out: S(8) },
 		{ in: CRCO('hot_chocolate_bottle', 8), out: S(4) },
 		{ in: CRCO('soothing_hot_chocolate', 8), out: S(8) },
-		{ in: CRCO('marshmallow', 16), out: S(4) }
+		{ in: CRCO('marshmallow', 16), out: S(4) },
+		{ in: BR('beer_mug', 16), out: S(16) },
+		{ in: BR('beer_mug_blaze_stout', 16), out: S(20) },
+		{ in: BR('beer_mug_apple_lambic', 16), out: S(16) },
+		{ in: BR('beer_mug_sweet_berry_kriek', 16), out: S(16) },
+		{ in: BR('beer_mug_haars_icy_pale_lager', 16), out: S(18) },
+		{ in: BR('beer_mug_pumpkin_kvass', 16), out: S(16) },
+		{ in: BR('beer_mug_night_howl_kvass', 16), out: S(14) },
+		{ in: BR('beer_mug_frothy_pink_eggnog', 16), out: S(18) },
+		{ in: BR('beer_mug_wither_stout', 16), out: S(32) },
+		{ in: BR('beer_mug_seltzer', 16), out: S(14) }
 	])
 
 	let quota = 8
