@@ -1,12 +1,27 @@
 {
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
-	"parent": "block/orientable",
+	"parent": "block/block",
 	"textures": {
-		"top": "kubejs:block/rocket/machine_end",
-		"front": "kubejs:block/rocket/guidancecomputer",
-		"side": "kubejs:block/rocket/machine"
+		"1": "kubejs:block/rocket/encased_desh_fuel_tank/desh_fueltank",
+		"2": "kubejs:block/rocket/encased_desh_fuel_tank/desh_fueltank_top",
+		"particle": "kubejs:block/rocket/encased_desh_fuel_tank/desh_fueltank_top"
 	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-8, 8, -8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [75, 45, 0],

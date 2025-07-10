@@ -1,0 +1,7 @@
+{
+	"ctm": {
+		"ctm_version": 1,
+		"type": "ctm",
+		"textures": [ "kubejs:block/rocket/encased_desh_fuel_tank/desh_fueltank_ctm" ]
+	}
+}

@@ -275,6 +275,7 @@ onEvent('item.registry', event => {
 		{ in: CRCO('marshmallow', 16), out: S(4) },
 		{ in: BR('beer_mug', 16), out: S(16) },
 		{ in: BR('beer_mug_blaze_stout', 16), out: S(20) },
+		{ in: BR('beer_mug_blaze_milk_stout', 16), out: S(20) },
 		{ in: BR('beer_mug_apple_lambic', 16), out: S(16) },
 		{ in: BR('beer_mug_sweet_berry_kriek', 16), out: S(16) },
 		{ in: BR('beer_mug_haars_icy_pale_lager', 16), out: S(18) },
