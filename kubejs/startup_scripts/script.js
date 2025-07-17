@@ -155,18 +155,18 @@ onEvent('item.registry', event => {
 	event.create('incomplete_stun_grenade', 'create:sequenced_assembly').texture("alloyedguns:item/incomplete_stun_grenade")
 	
 	// 火箭相关
-	event.create("deployed_cell").texture("kubejs:item/deployed_cell").unstackable().glow(true)
-	event.create("deployed_disk").texture("kubejs:item/deployed_disk").unstackable().glow(true)
-	event.create("incomplete_steel_support", 'create:sequenced_assembly')
-	event.create("incomplete_desh_support", 'create:sequenced_assembly')
-	event.create("incomplete_ostrum_support", 'create:sequenced_assembly')
-	event.create("incomplete_calorite_support", 'create:sequenced_assembly')
-	event.create("incomplete_encased_steel_engine", 'create:sequenced_assembly')
-	event.create("incomplete_encased_desh_engine", 'create:sequenced_assembly')
-	event.create("incomplete_encased_ostrum_engine", 'create:sequenced_assembly')
-	event.create("incomplete_encased_calorite_engine", 'create:sequenced_assembly')
-	event.create("incomplete_rocket_computer", 'create:sequenced_assembly')
-	event.create("incomplete_signal_transmission_antenna", 'create:sequenced_assembly')
+	// event.create("deployed_cell").texture("kubejs:item/deployed_cell").unstackable().glow(true)
+	// event.create("deployed_disk").texture("kubejs:item/deployed_disk").unstackable().glow(true)
+	// event.create("incomplete_steel_support", 'create:sequenced_assembly')
+	// event.create("incomplete_desh_support", 'create:sequenced_assembly')
+	// event.create("incomplete_ostrum_support", 'create:sequenced_assembly')
+	// event.create("incomplete_calorite_support", 'create:sequenced_assembly')
+	event.create("incomplete_encased_steel_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_steel_engine")
+	event.create("incomplete_encased_desh_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_desh_engine")
+	event.create("incomplete_encased_ostrum_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_ostrum_engine")
+	event.create("incomplete_encased_calorite_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_calorite_engine")
+	event.create("incomplete_rocket_computer", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_rocket_computer")
+	event.create("incomplete_signal_transmission_antenna", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_signal_transmission_antenna")
 })
 
 onEvent('block.registry', event => {
@@ -207,25 +207,25 @@ onEvent('block.registry', event => {
 	// machine('Inductive', "translucent", "lantern")
 
 	// 火箭相关
-	event.create("steel_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
-	event.create("desh_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
-	event.create("ostrum_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
-	event.create("calorite_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+	// event.create("steel_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+	// event.create("desh_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+	// event.create("ostrum_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
+	// event.create("calorite_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
 
 	event.create("encased_steel_fuel_tank").model('kubejs:block/encased_steel_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	event.create("encased_desh_fuel_tank").model('kubejs:block/encased_desh_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	event.create("encased_ostrum_fuel_tank").model('kubejs:block/encased_ostrum_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	event.create("encased_calorite_fuel_tank").model('kubejs:block/encased_calorite_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 
-	event.create("signal_transmission_antenna").material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").box(.4375, 0, .4375, .5625, 1, .5625, false)
+	event.create("signal_transmission_antenna").model('kubejs:block/signal_transmission_antenna').material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(0, 0, 0, 16, 16, 16, true)
 
 	event.create("encased_steel_engine").model('kubejs:block/encased_steel_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
 	event.create("encased_desh_engine").model('kubejs:block/encased_desh_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
 	event.create("encased_ostrum_engine").model('kubejs:block/encased_ostrum_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
 	event.create("encased_calorite_engine").model('kubejs:block/encased_calorite_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
 
-	event.create("rocket_loading_computer").model('kubejs:block/rocket_loading_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
+	// event.create("rocket_loading_computer").model('kubejs:block/rocket_loading_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	// .property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
 	event.create("guide_computer").model('kubejs:block/guide_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
 

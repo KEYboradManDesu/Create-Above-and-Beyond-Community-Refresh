@@ -5255,113 +5255,113 @@ function rocketScience(event) {
 
 	// 一级火箭
 
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
-		'  G  ',
-		' AYA ',
-		' YEY ',
-		' SES ',
-		' YEY ',
-		'GYYYG',
-		'ABMBA',
-		'A D A'
-	], {
-		A: plastic,
-		M: controller,
-		G: gear,
-		S: matrix,
-		B: 'beyond_earth:steel_tank',
-		D: 'beyond_earth:steel_engine',
-		E: '#thermal:glass/hardened',
-		Y: casing
-	})
+	// event.recipes.createMechanicalCrafting("beyond_earth:rocket_t1", [
+	// 	'  G  ',
+	// 	' AYA ',
+	// 	' YEY ',
+	// 	' SES ',
+	// 	' YEY ',
+	// 	'GYYYG',
+	// 	'ABMBA',
+	// 	'A D A'
+	// ], {
+	// 	A: plastic,
+	// 	M: controller,
+	// 	G: gear,
+	// 	S: matrix,
+	// 	B: 'beyond_earth:steel_tank',
+	// 	D: 'beyond_earth:steel_engine',
+	// 	E: '#thermal:glass/hardened',
+	// 	Y: casing
+	// })
 
-	// 二级火箭
+	// // 二级火箭
 
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
-		'  G  ',
-		' AYA ',
-		' YEY ',
-		' SES ',
-		' YEY ',
-		'GYYYG',
-		'ABMBA',
-		'A D A'
-	], {
-		A: plastic,
-		M: controller,
-		G: 'beyond_earth:desh_plate',
-		S: matrix,
-		B: 'beyond_earth:desh_tank',
-		D: 'beyond_earth:desh_engine',
-		E: '#thermal:glass/hardened',
-		Y: casing
-	})
-
-
-	// 三级火箭
-
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
-		'  G  ',
-		' AYA ',
-		' YEY ',
-		' SES ',
-		' YEY ',
-		'GYYYG',
-		'ABMBA',
-		'A D A'
-	], {
-		A: plastic,
-		M: controller,
-		G: 'beyond_earth:compressed_ostrum',
-		S: matrix,
-		B: 'beyond_earth:ostrum_tank',
-		D: 'beyond_earth:ostrum_engine',
-		E: '#thermal:glass/hardened',
-		Y: casing
-	})
+	// event.recipes.createMechanicalCrafting("beyond_earth:rocket_t2", [
+	// 	'  G  ',
+	// 	' AYA ',
+	// 	' YEY ',
+	// 	' SES ',
+	// 	' YEY ',
+	// 	'GYYYG',
+	// 	'ABMBA',
+	// 	'A D A'
+	// ], {
+	// 	A: plastic,
+	// 	M: controller,
+	// 	G: 'beyond_earth:desh_plate',
+	// 	S: matrix,
+	// 	B: 'beyond_earth:desh_tank',
+	// 	D: 'beyond_earth:desh_engine',
+	// 	E: '#thermal:glass/hardened',
+	// 	Y: casing
+	// })
 
 
-	// 四级火箭
+	// // 三级火箭
 
-	event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
-		'  G  ',
-		' AYA ',
-		' YYY ',
-		' YEY ',
-		' SES ',
-		' YEY ',
-		'GYYYG',
-		'ABMBA',
-		'A D A'
-	], {
-		A: plastic,
-		M: controller,
-		G: 'beyond_earth:compressed_calorite',
-		S: matrix,
-		B: 'beyond_earth:calorite_tank',
-		D: 'beyond_earth:calorite_engine',
-		E: '#thermal:glass/hardened',
-		Y: casing
-	})
+	// event.recipes.createMechanicalCrafting("beyond_earth:rocket_t3", [
+	// 	'  G  ',
+	// 	' AYA ',
+	// 	' YEY ',
+	// 	' SES ',
+	// 	' YEY ',
+	// 	'GYYYG',
+	// 	'ABMBA',
+	// 	'A D A'
+	// ], {
+	// 	A: plastic,
+	// 	M: controller,
+	// 	G: 'beyond_earth:compressed_ostrum',
+	// 	S: matrix,
+	// 	B: 'beyond_earth:ostrum_tank',
+	// 	D: 'beyond_earth:ostrum_engine',
+	// 	E: '#thermal:glass/hardened',
+	// 	Y: casing
+	// })
+
+
+	// // 四级火箭
+
+	// event.recipes.createMechanicalCrafting("beyond_earth:rocket_t4", [
+	// 	'  G  ',
+	// 	' AYA ',
+	// 	' YYY ',
+	// 	' YEY ',
+	// 	' SES ',
+	// 	' YEY ',
+	// 	'GYYYG',
+	// 	'ABMBA',
+	// 	'A D A'
+	// ], {
+	// 	A: plastic,
+	// 	M: controller,
+	// 	G: 'beyond_earth:compressed_calorite',
+	// 	S: matrix,
+	// 	B: 'beyond_earth:calorite_tank',
+	// 	D: 'beyond_earth:calorite_engine',
+	// 	E: '#thermal:glass/hardened',
+	// 	Y: casing
+	// })
 
 	// 新火箭合成
-	event.recipes.createSequencedAssembly("kubejs:steel_support", "kubejs:matter_plastics", [
-		event.recipes.createDeploying("kubejs:incomplete_steel_support", ["kubejs:incomplete_steel_support", "create_dd:steel_sheet"]),
-		event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support"),
-		event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support")
-	]).transitionalItem("kubejs:incomplete_steel_support").loops(1)
+	// event.recipes.createSequencedAssembly("kubejs:steel_support", "kubejs:matter_plastics", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_steel_support", ["kubejs:incomplete_steel_support", "create_dd:steel_sheet"]),
+	// 	event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support"),
+	// 	event.recipes.createCutting("kubejs:incomplete_steel_support", "kubejs:incomplete_steel_support")
+	// ]).transitionalItem("kubejs:incomplete_steel_support").loops(1)
 
-	event.recipes.createSequencedAssembly("kubejs:desh_support", "beyond_earth:desh_plate", [
-		event.recipes.createCutting("kubejs:incomplete_desh_support", "kubejs:incomplete_desh_support")
-	]).transitionalItem("kubejs:incomplete_desh_support").loops(2)
+	// event.recipes.createSequencedAssembly("kubejs:desh_support", "beyond_earth:desh_plate", [
+	// 	event.recipes.createCutting("kubejs:incomplete_desh_support", "kubejs:incomplete_desh_support")
+	// ]).transitionalItem("kubejs:incomplete_desh_support").loops(2)
 
-	event.recipes.createSequencedAssembly("kubejs:ostrum_support", "beyond_earth:compressed_ostrum", [
-		event.recipes.createCutting("kubejs:incomplete_ostrum_support", "kubejs:incomplete_ostrum_support")
-	]).transitionalItem("kubejs:incomplete_ostrum_support").loops(4)
+	// event.recipes.createSequencedAssembly("kubejs:ostrum_support", "beyond_earth:compressed_ostrum", [
+	// 	event.recipes.createCutting("kubejs:incomplete_ostrum_support", "kubejs:incomplete_ostrum_support")
+	// ]).transitionalItem("kubejs:incomplete_ostrum_support").loops(4)
 
-	event.recipes.createSequencedAssembly("kubejs:calorite_support", "beyond_earth:compressed_calorite", [
-		event.recipes.createCutting("kubejs:incomplete_calorite_support", "kubejs:incomplete_calorite_support")
-	]).transitionalItem("kubejs:incomplete_calorite_support").loops(4)
+	// event.recipes.createSequencedAssembly("kubejs:calorite_support", "beyond_earth:compressed_calorite", [
+	// 	event.recipes.createCutting("kubejs:incomplete_calorite_support", "kubejs:incomplete_calorite_support")
+	// ]).transitionalItem("kubejs:incomplete_calorite_support").loops(4)
 
 	event.recipes.create.itemApplication("kubejs:encased_steel_fuel_tank", ["kubejs:matter_casing", "beyond_earth:steel_tank"])
 	event.recipes.create.itemApplication("kubejs:encased_desh_fuel_tank", ["kubejs:matter_casing", "beyond_earth:desh_tank",])
@@ -5381,14 +5381,14 @@ function rocketScience(event) {
 		C: 'ae2:controller'
 	})
 
-	event.shapeless("kubejs:deployed_disk", ["kubejs:deployed_cell", "ae2:item_cell_housing"])
-	event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer", "ae2:controller", [
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:deployed_disk"]),
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "create_dd:overcharge_alloy_sheet"]),
-		event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:matter_plastics"])
-	]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
+	// event.shapeless("kubejs:deployed_disk", ["kubejs:deployed_cell", "ae2:item_cell_housing"])
+	// event.recipes.createSequencedAssembly("kubejs:rocket_loading_computer", "ae2:controller", [
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:deployed_disk"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "create_dd:overcharge_alloy_sheet"]),
+	// 	event.recipes.createDeploying("kubejs:incomplete_rocket_computer", ["kubejs:incomplete_rocket_computer", "kubejs:matter_plastics"])
+	// ]).transitionalItem("kubejs:incomplete_rocket_computer").loops(1)
 
-	MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k", "kubejs:deployed_cell"))
+	// MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create("ae2:cell_component_16k", "kubejs:deployed_cell"))
 
 	event.recipes.createSequencedAssembly("kubejs:encased_steel_engine", "kubejs:matter_casing", [
 		event.recipes.createDeploying("kubejs:incomplete_encased_steel_engine", ["kubejs:incomplete_encased_steel_engine", "beyond_earth:steel_engine"]),
@@ -8021,8 +8021,8 @@ const rockets = [
 	{
 		tier: 1,
 		parts: [
-			[0, -1, -1, "kubejs:encased_steel_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:steel_support"], [1, -1, -2, "kubejs:steel_support"],
-			[-1, -1, -2, "kubejs:steel_support"], [-1, -1, 0, "kubejs:steel_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_steel_fuel_tank"],
+			[0, -1, -1, "kubejs:encased_steel_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
+			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_steel_fuel_tank"],
 			[0, 1, -2, "kubejs:encased_steel_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
 			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
 			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
@@ -8030,8 +8030,8 @@ const rockets = [
 	}, {
 		tier: 2,
 		parts: [
-			[0, -1, -1, "kubejs:encased_desh_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:desh_support"], [1, -1, -2, "kubejs:desh_support"],
-			[-1, -1, -2, "kubejs:desh_support"], [-1, -1, 0, "kubejs:desh_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_desh_fuel_tank"],
+			[0, -1, -1, "kubejs:encased_desh_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
+			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_desh_fuel_tank"],
 			[0, 1, -2, "kubejs:encased_desh_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
 			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
 			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
@@ -8039,8 +8039,8 @@ const rockets = [
 	}, {
 		tier: 3,
 		parts: [
-			[0, -1, -1, "kubejs:encased_ostrum_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:ostrum_support"], [1, -1, -2, "kubejs:ostrum_support"],
-			[-1, -1, -2, "kubejs:ostrum_support"], [-1, -1, 0, "kubejs:ostrum_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_ostrum_fuel_tank"],
+			[0, -1, -1, "kubejs:encased_ostrum_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
+			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_ostrum_fuel_tank"],
 			[0, 1, -2, "kubejs:encased_ostrum_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
 			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
 			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
@@ -8048,8 +8048,8 @@ const rockets = [
 	}, {
 		tier: 4,
 		parts: [
-			[0, -1, -1, "kubejs:encased_calorite_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "kubejs:calorite_support"], [1, -1, -2, "kubejs:calorite_support"],
-			[-1, -1, -2, "kubejs:calorite_support"], [-1, -1, 0, "kubejs:calorite_support"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_calorite_fuel_tank"],
+			[0, -1, -1, "kubejs:encased_calorite_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
+			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_calorite_fuel_tank"],
 			[0, 1, -2, "kubejs:encased_calorite_fuel_tank"], [-1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [-1, 1, -1, "kubejs:matter_casing"],
 			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
 			[-1, 3, -1, "kubejs:matter_casing"], [1, 3, -1, "kubejs:matter_casing"], [0, 3, 0, "kubejs:matter_casing"], [0, 3, -2, "kubejs:matter_casing"],
@@ -8062,7 +8062,7 @@ onEvent("block.right_click", event => {
 	if (!(event.getItem().hasTag("forge:wrenches"))) return;
 	if (event.getPlayer().isCrouching()) return
 	let block = event.getBlock()
-	if (block.id != "kubejs:rocket_loading_computer") return;
+	if (block.id != "kubejs:guide_computer") return;
 	let facing = block.getProperties().facing
 	let rocketTier = 0
 	for (let rocket of rockets) {
