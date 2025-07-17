@@ -8012,8 +8012,8 @@ function getPos(facing, x, y, z) {
 	const rotations = {
 		"north": [x, y, z],
 		"south": [-x, y, -z],
-		"west": [z, y, -x],
-		"east": [-z, y, x]
+		"west": [-z, y, x],
+		"east": [z, y, -x]
 	};
 	return rotations[facing] || [x, y, z];
 }
@@ -8021,41 +8021,119 @@ const rockets = [
 	{
 		tier: 1,
 		parts: [
-			[0, -1, -1, "kubejs:encased_steel_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
-			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_steel_fuel_tank"],
-			[0, 1, -2, "kubejs:encased_steel_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
-			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
-			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
-			[1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+			// 第一层
+			[1, -2, 0, "#minecraft:climbable"], [0, -2, 0, "kubejs:encased_steel_engine"], [-1, -2, 0, "#minecraft:climbable"],
+			[1, -2, -1, "kubejs:encased_steel_engine"], [0, -2, -1, "minecraft:air"], [-1, -2, -1, "kubejs:encased_steel_engine"],
+			[1, -2, -2, "#minecraft:climbable"], [0, -2, -2, "kubejs:encased_steel_engine"], [-1, -2, -2, "#minecraft:climbable"],
+			// 第二层
+			[1, -1, 0, "#minecraft:climbable"], [0, -1, 0, "kubejs:encased_steel_fuel_tank"], [-1, -1, 0, "#minecraft:climbable"],
+			[1, -1, -1, "kubejs:encased_steel_fuel_tank"], [0, -1, -1, "kubejs:encased_steel_fuel_tank"], [-1, -1, -1, "kubejs:encased_steel_fuel_tank"],
+			[1, -1, -2, "#minecraft:climbable"], [0, -1, -2, "kubejs:encased_steel_fuel_tank"], [-1, -1, -2, "#minecraft:climbable"],
+			// 第三层
+			[1, 0, 0, "#minecraft:climbable"], [-1, 0, 0, "#minecraft:climbable"],
+			[1, 0, -1, "kubejs:matter_casing"], [0, 0, -1, "#create:seats"], [-1, 0, -1, "kubejs:matter_casing"],
+			[1, 0, -2, "#minecraft:climbable"], [0, 0, -2, "kubejs:matter_casing"], [-1, 0, -2, "#minecraft:climbable"],
+			// 第四层
+			[1, 1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [-1, 1, 0, "#minecraft:climbable"],
+			[1, 1, -1, "kubejs:matter_casing"], [0, 1, -1, "minecraft:air"], [-1, 1, -1, "kubejs:matter_casing"],
+			[1, 1, -2, "#minecraft:climbable"], [0, 1, -2, "kubejs:matter_casing"], [-1, 1, -2, "#minecraft:climbable"],
+			// 第五层
+			[1, 2, 0, "#minecraft:climbable"], [0, 2, 0, "kubejs:matter_casing"], [-1, 2, 0, "#minecraft:climbable"],
+			[1, 2, -1, "kubejs:matter_casing"], [0, 2, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"],
+			[1, 2, -2, "#minecraft:climbable"], [0, 2, -2, "kubejs:matter_casing"], [-1, 2, -2, "#minecraft:climbable"],
+			// 第六层
+			[0, 3, -1, "kubejs:matter_casing"],
+			// 第七层
+			[0, 4, -1, "kubejs:signal_transmission_antenna"]
+		]
 	}, {
 		tier: 2,
 		parts: [
-			[0, -1, -1, "kubejs:encased_desh_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
-			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_desh_fuel_tank"],
-			[0, 1, -2, "kubejs:encased_desh_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
-			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
-			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
-			[1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+			// 第一层
+			[1, -2, 0, "#minecraft:climbable"], [0, -2, 0, "kubejs:encased_desh_engine"], [-1, -2, 0, "#minecraft:climbable"],
+			[1, -2, -1, "kubejs:encased_desh_engine"], [0, -2, -1, "minecraft:air"], [-1, -2, -1, "kubejs:encased_desh_engine"],
+			[1, -2, -2, "#minecraft:climbable"], [0, -2, -2, "kubejs:encased_desh_engine"], [-1, -2, -2, "#minecraft:climbable"],
+			// 第二层
+			[1, -1, 0, "#minecraft:climbable"], [0, -1, 0, "kubejs:encased_desh_fuel_tank"], [-1, -1, 0, "#minecraft:climbable"],
+			[1, -1, -1, "kubejs:encased_desh_fuel_tank"], [0, -1, -1, "kubejs:encased_desh_fuel_tank"], [-1, -1, -1, "kubejs:encased_desh_fuel_tank"],
+			[1, -1, -2, "#minecraft:climbable"], [0, -1, -2, "kubejs:encased_desh_fuel_tank"], [-1, -1, -2, "#minecraft:climbable"],
+			// 第三层
+			[1, 0, 0, "#minecraft:climbable"], [-1, 0, 0, "#minecraft:climbable"],
+			[1, 0, -1, "kubejs:matter_casing"], [0, 0, -1, "#create:seats"], [-1, 0, -1, "kubejs:matter_casing"],
+			[1, 0, -2, "#minecraft:climbable"], [0, 0, -2, "kubejs:matter_casing"], [-1, 0, -2, "#minecraft:climbable"],
+			// 第四层
+			[1, 1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [-1, 1, 0, "#minecraft:climbable"],
+			[1, 1, -1, "kubejs:matter_casing"], [0, 1, -1, "minecraft:air"], [-1, 1, -1, "kubejs:matter_casing"],
+			[1, 1, -2, "#minecraft:climbable"], [0, 1, -2, "kubejs:matter_casing"], [-1, 1, -2, "#minecraft:climbable"],
+			// 第五层
+			[1, 2, 0, "#minecraft:climbable"], [0, 2, 0, "kubejs:matter_casing"], [-1, 2, 0, "#minecraft:climbable"],
+			[1, 2, -1, "kubejs:matter_casing"], [0, 2, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"],
+			[1, 2, -2, "#minecraft:climbable"], [0, 2, -2, "kubejs:matter_casing"], [-1, 2, -2, "#minecraft:climbable"],
+			// 第六层
+			[0, 3, -1, "kubejs:matter_casing"],
+			// 第七层
+			[0, 4, -1, "kubejs:signal_transmission_antenna"]
+		]
 	}, {
 		tier: 3,
 		parts: [
-			[0, -1, -1, "kubejs:encased_ostrum_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
-			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_ostrum_fuel_tank"],
-			[0, 1, -2, "kubejs:encased_ostrum_fuel_tank"], [-1, 0, -1, "kubejs:matter_casing"], [1, 0, -1, "kubejs:matter_casing"], [-1, 1, -1, "kubejs:matter_casing"],
-			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
-			[0, 3, -1, "kubejs:matter_casing"], [0, 4, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
-			[1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"]]
+			// 第一层
+			[1, -2, 0, "#minecraft:climbable"], [0, -2, 0, "kubejs:encased_ostrum_engine"], [-1, -2, 0, "#minecraft:climbable"],
+			[1, -2, -1, "kubejs:encased_ostrum_engine"], [0, -2, -1, "minecraft:air"], [-1, -2, -1, "kubejs:encased_ostrum_engine"],
+			[1, -2, -2, "#minecraft:climbable"], [0, -2, -2, "kubejs:encased_ostrum_engine"], [-1, -2, -2, "#minecraft:climbable"],
+			// 第二层
+			[1, -1, 0, "#minecraft:climbable"], [0, -1, 0, "kubejs:encased_ostrum_fuel_tank"], [-1, -1, 0, "#minecraft:climbable"],
+			[1, -1, -1, "kubejs:encased_ostrum_fuel_tank"], [0, -1, -1, "kubejs:encased_ostrum_fuel_tank"], [-1, -1, -1, "kubejs:encased_ostrum_fuel_tank"],
+			[1, -1, -2, "#minecraft:climbable"], [0, -1, -2, "kubejs:encased_ostrum_fuel_tank"], [-1, -1, -2, "#minecraft:climbable"],
+			// 第三层
+			[1, 0, 0, "#minecraft:climbable"], [-1, 0, 0, "#minecraft:climbable"],
+			[1, 0, -1, "kubejs:matter_casing"], [0, 0, -1, "#create:seats"], [-1, 0, -1, "kubejs:matter_casing"],
+			[1, 0, -2, "#minecraft:climbable"], [0, 0, -2, "kubejs:matter_casing"], [-1, 0, -2, "#minecraft:climbable"],
+			// 第四层
+			[1, 1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [-1, 1, 0, "#minecraft:climbable"],
+			[1, 1, -1, "kubejs:matter_casing"], [0, 1, -1, "minecraft:air"], [-1, 1, -1, "kubejs:matter_casing"],
+			[1, 1, -2, "#minecraft:climbable"], [0, 1, -2, "kubejs:matter_casing"], [-1, 1, -2, "#minecraft:climbable"],
+			// 第五层
+			[1, 2, 0, "#minecraft:climbable"], [0, 2, 0, "kubejs:matter_casing"], [-1, 2, 0, "#minecraft:climbable"],
+			[1, 2, -1, "kubejs:matter_casing"], [0, 2, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"],
+			[1, 2, -2, "#minecraft:climbable"], [0, 2, -2, "kubejs:matter_casing"], [-1, 2, -2, "#minecraft:climbable"],
+			// 第六层
+			[0, 3, -1, "kubejs:matter_casing"],
+			// 第七层
+			[0, 4, -1, "kubejs:signal_transmission_antenna"]
+		]
 	}, {
 		tier: 4,
 		parts: [
-			[0, -1, -1, "kubejs:encased_calorite_engine"], [0, 0, -1, "#create:seats"], [1, -1, 0, "#minecraft:climbable"], [1, -1, -2, "#minecraft:climbable"],
-			[-1, -1, -2, "#minecraft:climbable"], [-1, -1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [0, 0, -2, "kubejs:encased_calorite_fuel_tank"],
-			[0, 1, -2, "kubejs:encased_calorite_fuel_tank"], [-1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [1, 0, -1, "kubejs:encased_calorite_fuel_tank"], [-1, 1, -1, "kubejs:matter_casing"],
-			[1, 1, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"], [1, 2, -1, "kubejs:matter_casing"], [0, 2, 0, "kubejs:matter_casing"], [0, 2, -2, "kubejs:matter_casing"],
-			[-1, 3, -1, "kubejs:matter_casing"], [1, 3, -1, "kubejs:matter_casing"], [0, 3, 0, "kubejs:matter_casing"], [0, 3, -2, "kubejs:matter_casing"],
-			[-1, 4, -1, "kubejs:matter_casing"], [1, 4, -1, "kubejs:matter_casing"], [0, 4, 0, "kubejs:matter_casing"], [0, 4, -2, "kubejs:matter_casing"],
-			[0, 5, -1, "kubejs:matter_casing"], [0, 6, -1, "kubejs:signal_transmission_antenna"], [0, -1, 0, "minecraft:air"], [0, -1, -2, "minecraft:air"], [-1, -1, -1, "minecraft:air"],
-			[1, -1, -1, "minecraft:air"], [0, 1, -1, "minecraft:air"], [0, 2, -1, "minecraft:air"], [0, 3, -1, "minecraft:air"], [0, 4, -1, "minecraft:air"]]
+			// 第一层
+			[1, -3, 0, "#minecraft:climbable"], [0, -3, 0, "kubejs:encased_calorite_engine"], [-1, -3, 0, "#minecraft:climbable"],
+			[1, -3, -1, "kubejs:encased_calorite_engine"], [0, -3, -1, "minecraft:air"], [-1, -3, -1, "kubejs:encased_calorite_engine"],
+			[1, -3, -2, "#minecraft:climbable"], [0, -3, -2, "kubejs:encased_calorite_engine"], [-1, -3, -2, "#minecraft:climbable"],
+			// 第二层
+			[1, -2, 0, "#minecraft:climbable"], [0, -2, 0, "kubejs:encased_calorite_fuel_tank"], [-1, -2, 0, "#minecraft:climbable"],
+			[1, -2, -1, "kubejs:encased_calorite_fuel_tank"], [0, -2, -1, "kubejs:encased_calorite_fuel_tank"], [-1, -2, -1, "kubejs:encased_calorite_fuel_tank"],
+			[1, -2, -2, "#minecraft:climbable"], [0, -2, -2, "kubejs:encased_calorite_fuel_tank"], [-1, -2, -2, "#minecraft:climbable"],
+			// 第三层
+			[1, -1, 0, "#minecraft:climbable"], [0, -1, 0, "kubejs:encased_calorite_fuel_tank"], [-1, -1, 0, "#minecraft:climbable"],
+			[1, -1, -1, "kubejs:encased_calorite_fuel_tank"], [0, -1, -1, "kubejs:encased_calorite_fuel_tank"], [-1, -1, -1, "kubejs:encased_calorite_fuel_tank"],
+			[1, -1, -2, "#minecraft:climbable"], [0, -1, -2, "kubejs:encased_calorite_fuel_tank"], [-1, -1, -2, "#minecraft:climbable"],
+			// 第四层
+			[1, 0, 0, "#minecraft:climbable"], [-1, 0, 0, "#minecraft:climbable"],
+			[1, 0, -1, "kubejs:matter_casing"], [0, 0, -1, "#create:seats"], [-1, 0, -1, "kubejs:matter_casing"],
+			[1, 0, -2, "#minecraft:climbable"], [0, 0, -2, "kubejs:matter_casing"], [-1, 0, -2, "#minecraft:climbable"],
+			// 第五层
+			[1, 1, 0, "#minecraft:climbable"], [0, 1, 0, "#thermal:glass/hardened"], [-1, 1, 0, "#minecraft:climbable"],
+			[1, 1, -1, "kubejs:matter_casing"], [0, 1, -1, "minecraft:air"], [-1, 1, -1, "kubejs:matter_casing"],
+			[1, 1, -2, "#minecraft:climbable"], [0, 1, -2, "kubejs:matter_casing"], [-1, 1, -2, "#minecraft:climbable"],
+			// 第六层
+			[1, 2, 0, "#minecraft:climbable"], [0, 2, 0, "kubejs:matter_casing"], [-1, 2, 0, "#minecraft:climbable"],
+			[1, 2, -1, "kubejs:matter_casing"], [0, 2, -1, "kubejs:matter_casing"], [-1, 2, -1, "kubejs:matter_casing"],
+			[1, 2, -2, "#minecraft:climbable"], [0, 2, -2, "kubejs:matter_casing"], [-1, 2, -2, "#minecraft:climbable"],
+			// 第七层
+			[0, 3, -1, "kubejs:matter_casing"],
+			// 第八层
+			[0, 4, -1, "kubejs:signal_transmission_antenna"]
+		]
 	}
 ]
 onEvent("block.right_click", event => {
