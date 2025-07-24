@@ -206,12 +206,12 @@ onEvent('item.tags', event => {
 
 	event.get('minecraft:music_discs')
 		.add('create_confectionery:the_bright_side')
-		.add('alexsmobs:music_disc_thime')
-		.add('alexsmobs:music_disc_daze')
+		// .add('alexsmobs:music_disc_thime')
+		// .add('alexsmobs:music_disc_daze')
 		.add('integrated_stronghold:music_disc_forlorn')
 		.add('integrated_stronghold:music_disc_sight')
-		.add('idas:music_disc_calidum')
-		.add('idas:music_disc_slither')
+		// .add('idas:music_disc_calidum')
+		// .add('idas:music_disc_slither')
 
 	event.get('kubejs:hand')
 		.add('create:brass_hand')
@@ -244,13 +244,13 @@ onEvent('fluid.tags', event => {
 
 })
 
-onEvent('entity.tags', event => {
+// onEvent('entity.tags', event => {
 
-	event.get('forbidden_arcanus:quantum_catcher_blacklisted')
-		.add('alexsmobs:centipede_tail')
-		.add('alexsmobs:centipede_body')
-		.add('alexsmobs:centipede_head')
-		.add('alexsmobs:cachalot_whale')
-		.add('alexsmobs:giant_squid')
+// 	event.get('forbidden_arcanus:quantum_catcher_blacklisted')
+// 		.add('alexsmobs:centipede_tail')
+// 		.add('alexsmobs:centipede_body')
+// 		.add('alexsmobs:centipede_head')
+// 		.add('alexsmobs:cachalot_whale')
+// 		.add('alexsmobs:giant_squid')
 
-})
+// })
