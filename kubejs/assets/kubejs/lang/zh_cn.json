@@ -1748,7 +1748,7 @@
 
 "quest.stage_5.rocket.title":"飞船",
 "quest.stage_5.rocket.subtitle":"步骤 &b50",
-"quest.stage_5.rocket.text1":"火箭是模块化的多方块结构，通过思索火箭相关物品可查看相关搭建教程。",
+"quest.stage_5.rocket.text1":"火箭是模块化的多方块结构，通过思索火箭引导计算器可查看相关搭建教程。",
 "quest.stage_5.rocket.text2":"尽你最大的努力，毕竟这是你的最终目标。",
 "quest.stage_5.rocket.text3":"通过下方指令可直接思索火箭搭建。",
 "quest.stage_5.rocket.text4":"&6 /c ponder kubejs:guide_computer",
