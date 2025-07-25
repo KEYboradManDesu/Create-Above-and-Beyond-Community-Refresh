@@ -1,5 +1,5 @@
 onEvent("ponder.registry", (event) => {
-    event.create("#kubejs:rocket")
+    event.create("kubejs:guide_computer")
         .tag("kubejs:rocket")
         .scene("kubejs:rocket_1-3", "{kubejs.ponder.rocket_1-3.header}", "kubejs:rocket1-3", (scene) => {
             // 显示地基
