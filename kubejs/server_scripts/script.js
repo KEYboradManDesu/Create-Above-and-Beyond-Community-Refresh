@@ -105,8 +105,6 @@ onEvent('recipes', event => {
 	unify(event)
 })
 
-let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
-let ConversionRecipe = java('com.simibubi.create.compat.jei.ConversionRecipe')
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let wood_types = [
 	MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'),
@@ -308,11 +306,6 @@ function unwantedRecipes(event) {
 }
 
 function tweaks(event) {
-
-	// rei显示神秘转化
-	MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singularity', 'ae2:quantum_entangled_singularity'))
-	/*MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
-	MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))*/
 
 	// 暂时应对车床合成错乱的应对
 	event.stonecutting(Item.of('vintageimprovements:convex_curving_head', '{Damage:0}'), Item.of('vintageimprovements:concave_curving_head', '{Damage:0}'))

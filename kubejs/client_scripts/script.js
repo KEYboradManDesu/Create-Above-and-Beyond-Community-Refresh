@@ -2,6 +2,15 @@
 
 console.info('Client script load phase...');
 
+let MysteriousItemConversionCategory = java('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
+let ConversionRecipe = java('com.simibubi.create.compat.jei.ConversionRecipe')
+
+// rei显示神秘转化
+MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('ae2:singularity', 'ae2:quantum_entangled_singularity'))
+// MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:shadow_steel'))
+// MysteriousItemConversionCategory.RECIPES.add(ConversionRecipe.create('create:chromatic_compound', 'create:refined_radiance'))
+
+
 onEvent('rei.add.items', event => {
     event.add(Item.of('create:refined_radiance'));
     event.add(Item.of('create:shadow_steel'));
