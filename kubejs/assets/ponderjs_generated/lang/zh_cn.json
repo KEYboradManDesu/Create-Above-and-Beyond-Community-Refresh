@@ -27,5 +27,19 @@
   "kubejs.ponder.scorched.text_5": "§b焦褐排液口",
   "kubejs.ponder.scorched.text_6": "§b剩余的面用焦褐砖块补上\n§b同时将浇筑口也放到排液口前",
   "kubejs.ponder.scorched.text_7": "§b此外,我们也可以用砖块继续搭高",
-  "kubejs.ponder.scorched.text_8": "§c记得给储罐加上燃料哦"
+  "kubejs.ponder.scorched.text_8": "§c记得给储罐加上燃料哦",
+
+  "kubejs.ponder.guide_computer_4.header": "四阶火箭搭建",
+  "kubejs.ponder.guide_computer_4.text_1": "注意火箭引导计算器的朝向",
+  "kubejs.ponder.guide_computer_4.text_2": "在四周放上任何材质的脚手架",
+  "kubejs.ponder.guide_computer_4.text_3": "用任何锤子或扳手右键敲击火箭引导计算器，进行最后的完善",
+  "kubejs.ponder.guide_computer_4.text_4": "火箭会转化为掉落物形式，将它捡起，开始你的星际航行吧！",
+  "kubejs.ponder.rocket_1-3.header": "一至三阶火箭搭建",
+  "kubejs.ponder.rocket_1-3.text_1": "注意火箭引导计算器的朝向",
+  "kubejs.ponder.rocket_1-3.text_2": "在四周放上任何材质的脚手架",
+  "kubejs.ponder.rocket_1-3.text_3": "二阶火箭需要将所有钢制引擎壳体和钢制燃料储罐替换成戴斯材质",
+  "kubejs.ponder.rocket_1-3.text_4": "三阶火箭同理，替换成紫金材质即可",
+  "kubejs.ponder.rocket_1-3.text_5": "用任何锤子或扳手右键敲击火箭引导计算器，进行最后的完善",
+  "kubejs.ponder.rocket_1-3.text_6": "火箭会转化为掉落物形式，将它捡起，开始你的星际航行吧！"
+
 }

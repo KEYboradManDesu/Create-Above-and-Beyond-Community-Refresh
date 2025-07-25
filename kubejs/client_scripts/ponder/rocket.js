@@ -1,7 +1,7 @@
 onEvent("ponder.registry", (event) => {
     event.create("#kubejs:rocket")
         .tag("kubejs:rocket")
-        .scene("kubejs:rocket_1-3", "一至三阶火箭搭建", "kubejs:rocket1-3", (scene) => {
+        .scene("kubejs:rocket_1-3", "{kubejs.ponder.rocket_1-3.header}", "kubejs:rocket1-3", (scene) => {
             // 显示地基
             scene.showBasePlate()
             
@@ -30,7 +30,7 @@ onEvent("ponder.registry", (event) => {
             scene.world.showSection([2, 3, 2], Direction.DOWN)
             scene.idle(15)
             scene.world.showSection([2, 3, 1], Direction.DOWN)
-            scene.text(50, "注意火箭引导计算器的朝向", [2, 3.5, 1])
+            scene.text(50, "{kubejs.ponder.rocket_1-3.text_1}", [2, 3.5, 1])
             scene.idle(15)
             scene.world.showSection([3, 3, 2], Direction.NORTH)
             scene.world.showSection([2, 3, 3], Direction.NORTH)
@@ -71,7 +71,7 @@ onEvent("ponder.registry", (event) => {
             scene.world.showSection([3, 5, 1, 3, 1, 1], Direction.DOWN)
             scene.idle(10)
             scene.world.showSection([1, 5, 1, 1, 1, 1], Direction.DOWN)
-            scene.text(50, "在四周放上任何材质的脚手架").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.rocket_1-3.text_2}").attachKeyFrame()
             scene.idleSeconds(3)
 
             
@@ -100,7 +100,7 @@ onEvent("ponder.registry", (event) => {
             scene.world.setBlocks([2, 2, 1], "kubejs:encased_desh_fuel_tank")
             scene.idle(25)
             scene.world.showSection([3, 3, 1, 1, 8, 3], Direction.DOWN)
-            scene.text(50, "二阶火箭需要将所有钢制引擎壳体和钢制燃料储罐替换成戴斯材质").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.rocket_1-3.text_3}").attachKeyFrame()
             scene.idleSeconds(2)
 
             // 三阶火箭替换
@@ -127,7 +127,7 @@ onEvent("ponder.registry", (event) => {
             scene.world.setBlocks([2, 2, 1], "kubejs:encased_ostrum_fuel_tank")
             scene.idle(25)
             scene.world.showSection([3, 3, 1, 1, 8, 3], Direction.DOWN)
-            scene.text(50, "三阶火箭同理，替换成紫金材质即可").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.rocket_1-3.text_4}").attachKeyFrame()
             scene.idleSeconds(4)
 
             
@@ -135,12 +135,12 @@ onEvent("ponder.registry", (event) => {
             scene.showControls(30, [2, 3.5, 1], "left") // 在右方创建一个向左指的框, 时长为 30 Tick
 	                .rightClick() // 在框内显示 鼠标右键 的图示
 	                .withWrench() // 在框内显示 机械动力的扳手 的图示
-            scene.text(50, "用任何锤子或扳手右键敲击火箭引导计算器，进行最后的完善").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.rocket_1-3.text_5}").attachKeyFrame()
             scene.idleSeconds(2)
             scene.world.setBlocks([0, 9, 0, 4, 1, 4], "minecraft:air")// 坐标, Item飞出去的方向(下面的代码是朝下, 也就是掉落)以及Item Id
             scene.idle(10)
             scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "beyond_earth:rocket_t3")
-            scene.text(80, "火箭会转化为掉落物形式，将它捡起，开始你的星际航行吧！").attachKeyFrame()
+            scene.text(80, "{kubejs.ponder.rocket_1-3.text_6}").attachKeyFrame()
             
 
 
@@ -184,7 +184,7 @@ onEvent("ponder.registry", (event) => {
             scene.world.showSection([2, 4, 2], Direction.DOWN)
             scene.idle(15)
             scene.world.showSection([2, 4, 1], Direction.DOWN)
-            scene.text(50, "注意火箭引导计算器的朝向", [2, 4.5, 1])
+            scene.text(50, "{kubejs.ponder.guide_computer_4.text_1}", [2, 4.5, 1])
             scene.idle(15)
             scene.world.showSection([3, 4, 2], Direction.NORTH)
             scene.world.showSection([2, 4, 3], Direction.NORTH)
@@ -225,19 +225,19 @@ onEvent("ponder.registry", (event) => {
             scene.world.showSection([3, 6, 1, 3, 1, 1], Direction.DOWN)
             scene.idle(10)
             scene.world.showSection([1, 6, 1, 1, 1, 1], Direction.DOWN)
-            scene.text(50, "在四周放上任何材质的脚手架").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.guide_computer_4.text_2}").attachKeyFrame()
             scene.idleSeconds(3)
 
             //右键提示
             scene.showControls(30, [2, 4.5, 1], "left") // 在右方创建一个向左指的框, 时长为 30 Tick
 	                .rightClick() // 在框内显示 鼠标右键 的图示
 	                .withWrench() // 在框内显示 机械动力的扳手 的图示
-            scene.text(50, "用任何锤子或扳手右键敲击火箭引导计算器，进行最后的完善").attachKeyFrame()
+            scene.text(50, "{kubejs.ponder.guide_computer_4.text_3}").attachKeyFrame()
             scene.idleSeconds(2)
             scene.world.setBlocks([0, 9, 0, 4, 1, 4], "minecraft:air")// 坐标, Item飞出去的方向(下面的代码是朝下, 也就是掉落)以及Item Id
             scene.idle(10)
             scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "beyond_earth:rocket_t4")
-            scene.text(80, "火箭会转化为掉落物形式，将它捡起，开始你的星际航行吧！").attachKeyFrame()
+            scene.text(80, "{kubejs.ponder.guide_computer_4.text_4}").attachKeyFrame()
         })
 
 
