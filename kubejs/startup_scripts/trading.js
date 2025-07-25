@@ -137,7 +137,17 @@ onEvent('item.registry', event => {
 		{ in: BOP('magic_log', 64), out: S(3) },
 		{ in: MC('crimson_stem', 64), out: S(4) },
 		{ in: MC('warped_stem', 64), out: S(4) },
-		{ in: BOP('hellbark_log', 64), out: S(8) }
+		{ in: BOP('hellbark_log', 64), out: S(8) },
+		{ in: BOP('fir_log', 64), out: S(8) },
+		{ in: BOP('redwood_log', 64), out: S(8) },
+		{ in: BOP('cherry_log', 64), out: S(8) },
+		{ in: BOP('umbran_log', 64), out: S(8) },
+		{ in: BOP('mahogany_log', 64), out: S(8) },
+		{ in: BOP('palm_log', 64), out: S(8) },
+		{ in: BOP('jacaranda_log', 64), out: S(8) },
+		{ in: BOP('willow_log', 64), out: S(8) },
+		{ in: BOP('dead_log', 64), out: S(8) },
+		{ in: BOP('magic_log', 64), out: S(8) }
 	])
 
 	profession("Mining", 0x1C1124, 0x88FFF7, [

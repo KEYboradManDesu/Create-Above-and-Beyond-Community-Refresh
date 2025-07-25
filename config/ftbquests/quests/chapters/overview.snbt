@@ -497,6 +497,9 @@
 				"{quest.overview.supply.text2}"
 				""
 				"{quest.overview.supply.text3}"
+				""
+				"{quest.overview.supply.text4}"
+				"{quest.overview.supply.text5}"
 			]
 			dependencies: ["75FB28B253B14876"]
 			optional: true

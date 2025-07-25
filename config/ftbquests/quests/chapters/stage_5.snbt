@@ -869,7 +869,11 @@
 		}
 		{
 			title: "{quest.stage_5.rocket.title}"
-			icon: "beyond_earth:steel_tank"
+			icon: {
+				id: "beyond_earth:rocket_t1"
+				Count: 1b
+				tag: { }
+			}
 			x: 2.5d
 			y: 7.0d
 			shape: "circle"
@@ -878,6 +882,9 @@
 				"{quest.stage_5.rocket.text1}"
 				""
 				"{quest.stage_5.rocket.text2}"
+				""
+				"{quest.stage_5.rocket.text3}"
+				"{quest.stage_5.rocket.text4}"
 			]
 			dependencies: [
 				"6A156D11D983661D"
@@ -886,18 +893,64 @@
 			id: "73473DC7269EC5B0"
 			tasks: [
 				{
-					id: "0D48307598BD2D81"
+					id: "4F5AC76FDE591398"
 					type: "item"
-					item: "beyond_earth:steel_tank"
+					item: "kubejs:guide_computer"
 					consume_items: false
 				}
 				{
-					id: "347AB49A286633F2"
+					id: "0CCAE2CC1C3DFB5E"
 					type: "item"
-					item: "beyond_earth:steel_engine"
+					item: "kubejs:encased_steel_engine"
+					count: 4L
 					consume_items: false
 				}
+				{
+					id: "70B43D040019842B"
+					type: "item"
+					item: "kubejs:encased_steel_fuel_tank"
+					count: 5L
+					consume_items: false
+				}
+				{
+					id: "2D45FA91EC566E4F"
+					type: "item"
+					item: "kubejs:matter_casing"
+					count: 12L
+					consume_items: false
+				}
+				{
+					id: "36ECAED65F123F30"
+					type: "item"
+					item: "thermal:obsidian_glass"
+					consume_items: false
+				}
+				{
+					id: "140CC27CF777D174"
+					type: "item"
+					item: "kubejs:signal_transmission_antenna"
+					consume_items: false
+				}
+				{
+					id: "1BDB76306D84C5C8"
+					type: "item"
+					title: "任意 脚手架"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "minecraft:climbable"
+						}
+					}
+					count: 20L
+					match_nbt: false
+				}
 			]
+			rewards: [{
+				id: "3545A2F4AD994980"
+				type: "item"
+				item: "beyond_earth:fuel_bucket"
+			}]
 		}
 		{
 			icon: {

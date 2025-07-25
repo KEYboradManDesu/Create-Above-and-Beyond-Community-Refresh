@@ -206,12 +206,12 @@ onEvent('item.tags', event => {
 
 	event.get('minecraft:music_discs')
 		.add('create_confectionery:the_bright_side')
-		.add('alexsmobs:music_disc_thime')
-		.add('alexsmobs:music_disc_daze')
+		// .add('alexsmobs:music_disc_thime')
+		// .add('alexsmobs:music_disc_daze')
 		.add('integrated_stronghold:music_disc_forlorn')
 		.add('integrated_stronghold:music_disc_sight')
-		.add('idas:music_disc_calidum')
-		.add('idas:music_disc_slither')
+		// .add('idas:music_disc_calidum')
+		// .add('idas:music_disc_slither')
 
 	event.get('kubejs:hand')
 		.add('create:brass_hand')
@@ -232,6 +232,24 @@ onEvent('item.tags', event => {
 		.add("kubejs:calorite_dust")
 	
 	event.get('randomium:blacklist').add('create:minecart_contraption')
+
+	event.get('kubejs:rocket')
+		.add('beyond_earth:rocket_t1')
+		.add('beyond_earth:rocket_t2')
+		.add('beyond_earth:rocket_t3')
+		.add('beyond_earth:rocket_t4')
+		.add('kubejs:encased_steel_engine')
+		.add('kubejs:encased_desh_engine')
+		.add('kubejs:encased_ostrum_engine')
+		.add('kubejs:encased_calorite_engine')
+		.add('kubejs:encased_steel_fuel_tank')
+		.add('kubejs:encased_desh_fuel_tank')
+		.add('kubejs:encased_ostrum_fuel_tank')
+		.add('kubejs:encased_calorite_fuel_tank')
+		.add('kubejs:matter_casing')
+		.add('kubejs:signal_transmission_antenna')
+		.add('kubejs:guide_computer')
+		.add('#minecraft:climbable')
 })
 
 onEvent('block.tags', event => {
@@ -244,13 +262,13 @@ onEvent('fluid.tags', event => {
 
 })
 
-onEvent('entity.tags', event => {
+// onEvent('entity.tags', event => {
 
-	event.get('forbidden_arcanus:quantum_catcher_blacklisted')
-		.add('alexsmobs:centipede_tail')
-		.add('alexsmobs:centipede_body')
-		.add('alexsmobs:centipede_head')
-		.add('alexsmobs:cachalot_whale')
-		.add('alexsmobs:giant_squid')
+// 	event.get('forbidden_arcanus:quantum_catcher_blacklisted')
+// 		.add('alexsmobs:centipede_tail')
+// 		.add('alexsmobs:centipede_body')
+// 		.add('alexsmobs:centipede_head')
+// 		.add('alexsmobs:cachalot_whale')
+// 		.add('alexsmobs:giant_squid')
 
-})
+// })

@@ -131,6 +131,36 @@
 "item.kubejs.incomplete_grenade":"手榴弹（未完成）",
 "item.kubejs.incomplete_stun_grenade":"闪光弹（未完成）",
 
+"item.kubejs.deployed_cell":"部署元件外壳",
+"item.kubejs.deployed_disk":"部署元件",
+"item.kubejs.incomplete_steel_support":"钢质支撑框架（未完成）",
+"item.kubejs.incomplete_desh_support":"戴斯支撑框架（未完成）",
+"item.kubejs.incomplete_ostrum_support":"紫金支撑框架（未完成）",
+"item.kubejs.incomplete_calorite_support":"耐热金属支撑框架（未完成）",
+"item.kubejs.incomplete_encased_steel_engine":"钢制引擎壳体（未完成）",
+"item.kubejs.incomplete_encased_desh_engine":"戴斯引擎壳体（未完成）",
+"item.kubejs.incomplete_encased_ostrum_engine":"紫金引擎壳体（未完成）",
+"item.kubejs.incomplete_encased_calorite_engine":"耐热金属引擎壳体（未完成）",
+"item.kubejs.incomplete_rocket_computer":"火箭引导计算机（未完成）",
+"item.kubejs.incomplete_signal_transmission_antenna":"信号发射天线（未完成）",
+
+"block.kubejs.steel_support":"钢质支撑框架",
+"block.kubejs.desh_support":"戴斯支撑框架",
+"block.kubejs.ostrum_support":"紫金支撑框架",
+"block.kubejs.calorite_support":"耐热金属支撑框架",
+"block.kubejs.encased_steel_engine":"钢制引擎壳体",
+"block.kubejs.encased_steel_fuel_tank":"钢制燃料储罐",
+"block.kubejs.encased_desh_engine":"戴斯引擎壳体",
+"block.kubejs.encased_desh_fuel_tank":"戴斯燃料储罐",
+"block.kubejs.encased_ostrum_engine":"紫金引擎壳体",
+"block.kubejs.encased_ostrum_fuel_tank":"紫金燃料储罐",
+"block.kubejs.encased_calorite_engine":"耐热金属引擎壳体",
+"block.kubejs.encased_calorite_fuel_tank":"耐热金属燃料储罐",
+"block.kubejs.signal_transmission_antenna":"信号发射天线",
+
+"block.kubejs.rocket_loading_computer":"火箭装载计算机",
+"block.kubejs.guide_computer":"火箭引导计算机",
+
 "block.kubejs.ponder_laser_lamp":"镭射灯",
 "block.kubejs.ponder_laser_lamp_on":"镭射灯",
 
@@ -507,9 +537,10 @@
 
 "quest.thanks.list.title":"&l&c感&a谢&b游&f玩！",
 "quest.thanks.list.subtitle":"&l&n制作人员表",
-"quest.thanks.list.text1":"&7原著   &fSimibubi，&fYjn024",
-"quest.thanks.list.text2":"&7编著   &fKeyBoardManDesu，Gl0w1amp",
-"quest.thanks.list.text3":"&9&l&o这个整合包没有结束，现在，创造你想创造的吧！",
+"quest.thanks.list.text1":"&7原著 &fSimibubi，&fYjn024",
+"quest.thanks.list.text2":"&7编著 &fKeyBoardManDesu，Gl0w1amp，XiaoLaoHus",
+"quest.thanks.list.text3":"&7特别鸣谢 &fcleep5564，Qi-Month，以及玩游戏的你！",
+"quest.thanks.list.text4":"&9&l&o这个整合包没有结束，现在，创造你想创造的吧！",
 
 "quest.bulletin.introduce.title":"公告栏",
 "quest.bulletin.introduce.text1":"&6公告栏&r 提供了获取交易用货币的方式。",
@@ -878,6 +909,9 @@
 "quest.overview.supply.text1":"你在探险时发现了一座废弃工厂，工厂早已被岁月侵蚀，昏暗的灯光下，灰尘在空气中缓缓浮动。",
 "quest.overview.supply.text2":"穿过堆积如山的破旧机械，你的脚步在寂静中格外清晰。突然，角落里一个漆黑的石制箱子引起了你的注意。它半掩在油布下，锁扣已经被撬开，仿佛有人匆忙翻动过。箱体上模糊的标签依稀能辨认出“&6&l智能计算机&r”的字样，但具体内容已被涂黑。",
 "tip.kubejs.supply":"获得AE2初始物资补给卡[需要开启作弊]",
+"quest.overview.supply.text3":"你可以通过输入下面的指令来重复获得该物品。",
+"quest.overview.supply.text4":"&6注：改物品为作弊道具，用于前期跳科技用。",
+"quest.overview.supply.text5":"&6 /give @p kubejs:ae2_supply_card",
 
 "quest.overview.basic_machines.title":"&f&l准备得当",
 "quest.overview.basic_machines.subtitle":"没有这些你可上不了路",
@@ -988,6 +1022,13 @@
 "quest.challenge.chocolate.title":"&6&l查理的巧克力工厂",
 "quest.challenge.chocolate.subtitle":"梦幻世界",
 "quest.challenge.chocolate.text1":"想象一片由巧克力制成的大海。",
+
+"quest.challenge.creative.title":"&5&l创造物品",
+"quest.challenge.creative.subtitle":"无限的力量",
+"quest.challenge.creative.text1":"收集足以撕裂星核的能量，锻造终极造物——代价是掏空整片星域。选择毁灭，还是新生？",
+"quest.challenge.creative.text2":"你可以通过输入下面的指令来重复获得该物品。",
+"quest.challenge.creative.text3":"&6 /give @p kubejs:creative_card",
+"tip.kubejs.creative":"获得创造物品卡[需要开启作弊]",
 
 "tip.kubejs.automated":"自动生产",
 "tip.kubejs.completed":"已完成",
@@ -1707,8 +1748,10 @@
 
 "quest.stage_5.rocket.title":"飞船",
 "quest.stage_5.rocket.subtitle":"步骤 &b50",
-"quest.stage_5.rocket.text1":"当你的发射台准备就绪，是时候搭建你的飞船了，其中最重要的是下界钢防火层。",
+"quest.stage_5.rocket.text1":"火箭是模块化的多方块结构，通过思索火箭相关物品可查看相关搭建教程。",
 "quest.stage_5.rocket.text2":"尽你最大的努力，毕竟这是你的最终目标。",
+"quest.stage_5.rocket.text3":"通过下方指令可直接思索火箭搭建。",
+"quest.stage_5.rocket.text4":"&6 /c ponder kubejs:guide_computer",
 
 "quest.stage_5.rover.subtitle":"步骤 50-A",
 "quest.stage_5.rover.text1":"外星代步工具。",
@@ -1737,4 +1780,8 @@
 "tooltip.kubejs.slot":"格",
 "tooltip.kubejs.not_consumed":"§7在§7装配线§7中不消耗，仅消耗耐久",
 "tooltip.kubejs.warning":"§3该物品的性质可能会破坏机械动力基本基调，请酌情使用。"
+
+
+
+
 }
