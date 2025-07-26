@@ -1643,6 +1643,7 @@
 		}
 		{
 			title: "{quest.bulletin.game_time.title}"
+			icon: "minecraft:clock"
 			x: -5.0d
 			y: 0.0d
 			subtitle: "32 {item.thermal.silver_coin}"
@@ -1651,6 +1652,7 @@
 				id: "05D20AFA36D61491"
 				type: "questsadditions:days"
 				title: "{tip.kubejs.game_time}"
+				icon: "minecraft:clock"
 				days: 5000
 			}]
 			rewards: [{
