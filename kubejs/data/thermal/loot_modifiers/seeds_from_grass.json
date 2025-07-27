@@ -1,0 +1,40 @@
+{
+  "type": "thermal:seeds_from_grass",
+  "conditions": [
+    {
+      "condition": "minecraft:alternative",
+      "terms": [
+        {
+          "condition": "block_state_property",
+          "block": "minecraft:grass"
+        },
+        {
+          "condition": "block_state_property",
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "condition": "block_state_property",
+          "block": "minecraft:fern"
+        },
+        {
+          "condition": "block_state_property",
+          "block": "minecraft:large_fern"
+        }
+      ]
+    }
+  ],
+  "seeds": [
+    "thermal:amaranth_seeds",
+    "thermal:barley_seeds",
+    "thermal:bell_pepper_seeds",
+    "thermal:corn_seeds",
+    "thermal:eggplant_seeds",
+    "thermal:green_bean_seeds",
+    "thermal:peanut_seeds",
+    "thermal:radish_seeds",
+    "thermal:rice_seeds",
+    "thermal:sadiroot_seeds",
+    "thermal:spinach_seeds",
+    "thermal:strawberry_seeds"
+  ]
+}

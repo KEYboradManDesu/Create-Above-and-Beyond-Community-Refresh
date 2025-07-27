@@ -89,7 +89,7 @@ onEvent('recipes', event => {
 	fluixMachine(event)
 
 	madMaths(event)
-	maggots(event)
+	// maggots(event)
 
 	alchemy(event)
 
@@ -478,6 +478,8 @@ function tweaks(event) {
 	// knife(FD('netherite_knife'), MC('netherite_ingot'))
 
 	// 前期优化游戏体验
+	event.replaceInput({ id: Q("building/crafting/oak_ladder") }, MC('oak_planks'), MC('#planks'))// 木梯子
+
 	event.replaceInput({ id: CR("crafting/kinetics/item_vault") }, F('#plates/iron'), TE('lead_plate'))// 保险库
 	event.shaped(Item.of('create_connected:item_silo', 2), [ // 纵向保险库
 		'SPS',
@@ -2357,6 +2359,50 @@ event.custom({
     },
 	{
       "item": "create:wheat_flour"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 2800,
+  "results": [
+    {
+      "fluid": "drinkbeer:miner_pale_ale",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+	{
+      "item": "thermal:hops"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "processingTime": 3000,
+  "results": [
+    {
+      "fluid": "drinkbeer:miner_pale_ale",
+      "amount": 1000
+    }
+  ]
+})
+event.custom({
+  "type": "createdieselgenerators:basin_fermenting",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+    },
+	{
+      "item": "thermal:hops"
     },
     {
       "fluid": "minecraft:water",
@@ -4438,20 +4484,20 @@ function madMaths(event) {
 	}
 }
 
-function maggots(event) {
-	event.custom({
-		"type": "tconstruct:melting",
-		"ingredient": {
-			"item": "alexsmobs:maggot"
-		},
-		"result": {
-			"fluid": "tconstruct:blood",
-			"amount": 10
-		},
-		"temperature": 50,
-		"time": 5
-	})
-}
+// function maggots(event) {
+// 	event.custom({
+// 		"type": "tconstruct:melting",
+// 		"ingredient": {
+// 			"item": "alexsmobs:maggot"
+// 		},
+// 		"result": {
+// 			"fluid": "tconstruct:blood",
+// 			"amount": 10
+// 		},
+// 		"temperature": 50,
+// 		"time": 5
+// 	})
+// }
 
 function alchemy(event) {
 
@@ -6050,7 +6096,29 @@ function unify(event) {
 	replaceIO("create_dd:inductive_mechanism", "kubejs:kinetic_mechanism");
 	replaceIO("create_dd:calculation_mechanism", "kubejs:calculation_mechanism");
 
+	// 番茄相关
+	event.remove({ id: "thermal:machines/insolator/insolator_tomato" });
+	event.remove({ output: "thermal:tomato_block" });
+	replaceIO("#forge:crops/tomato", "farmersdelight:tomato");
+	replaceIO("#forge:seeds/tomato", "farmersdelight:tomato_seeds");
+
+	// 大米相关
+	event.remove({ output: "thermal:rice_block" });
+	replaceIO("#forge:crops/rice", "farmersdelight:rice");
+
+	// 亚麻相关
+	event.remove({ output: "thermal:flax_block" });
+	replaceIO("#forge:crops/flax", "farmersdelight:flax");
+
+	// 洋葱相关
+	event.remove({ output: "thermal:onion_block" });
+	replaceIO("#forge:crops/onion", "farmersdelight:onion");
+
+
+	
 	//
+
+
 
 	// 额外的矿石合成
 	event.stonecutting(Item.of('tconstruct:cobalt_ore'), Item.of('tconstruct:raw_cobalt'))
