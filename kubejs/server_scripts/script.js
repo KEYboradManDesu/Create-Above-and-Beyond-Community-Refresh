@@ -6045,6 +6045,7 @@ function unify(event) {
 	event.recipes.createMilling(["thermal:sulfur_dust"], "#forge:gems/sulfur").processingTime(200);
 
 	// 硝粉
+	event.remove({ output: "vintageimprovements:sulfur_block" });
 	replaceIO("#forge:dusts/saltpeter", "thermal:niter_dust");
 	event.recipes.createMilling(["thermal:niter_dust"], "#forge:gems/niter").processingTime(200);
 
@@ -6108,7 +6109,7 @@ function unify(event) {
 
 	// 亚麻相关
 	event.remove({ output: "thermal:flax_block" });
-	replaceIO("#forge:crops/flax", "farmersdelight:flax");
+	replaceIO("#forge:crops/flax", "supplementaries:flax");
 
 	// 洋葱相关
 	event.remove({ output: "thermal:onion_block" });
@@ -6151,6 +6152,8 @@ function unify(event) {
 	replaceIO('#forge:ingots/shadow_steel', 'create_dd:shadow_steel');
 
 	event.remove({ output: "thermal:cinnabar_dust" });
+
+	event.remove({ output: "occultism:silver_ingot" });
 
 	function unifyAllTheMetal(
 		name,
